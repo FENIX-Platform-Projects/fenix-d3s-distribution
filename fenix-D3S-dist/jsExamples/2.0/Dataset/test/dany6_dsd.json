@@ -1,0 +1,24 @@
+{
+  "rid" : "66_305",
+  "datasources" : [ "D3S" ],
+      "contextSystem" : "demo1",
+      "columns" : [ {
+        "dataType" : "year",
+        "title" : {
+          "EN" : "t"
+        },
+        "values":{"timeList":[]},
+        "subject" : "time",
+        "key" : true,
+        "id" : "DIMENSION0"
+      }, {
+        "dataType" : "number",
+        "title" : {
+          "EN" : "v"
+        },
+        "subject" : "value",
+        "key" : false,
+        "id" : "VALUE0"
+      } ]
+}
+

@@ -175,7 +175,8 @@ public class SurveyEnergyProcess extends org.fao.fenix.d3p.process.Process<Energ
         column.getDomain().setCodes(new LinkedList<OjCodeList>());
         column.getDomain().getCodes().add(umCodeList);
         dsd.getColumns().add(column);
-        metadata.setDsd(languages!=null && languages.length>0 ? dsd.extend(languages) : dsd);
+        if (languages!=null && languages.length>0)
+            dsd.extend(false, languages);
 
         return metadata;
     }

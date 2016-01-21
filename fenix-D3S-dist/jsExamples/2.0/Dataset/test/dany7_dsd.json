@@ -1,0 +1,58 @@
+{
+  "datasources": [
+    "D3S"
+  ],
+  "contextSystem": "demo1",
+  "rid": "63_203",
+  "columns": [
+    {
+      "dataType": "year",
+      "key": true,
+      "id": "DIMENSION0",
+      "title": {
+        "EN": "t"
+      },
+      "values": {
+        "timeList": []
+      },
+      "subject": "time"
+    },
+    {
+      "dataType": "number",
+      "key": false,
+      "id": "VALUE0",
+      "title": {
+        "EN": "v"
+      },
+      "subject": "value"
+    },
+    {
+      "dataType": "code",
+      "key": true,
+      "id": "DIMENSION1",
+      "title": {
+        "EN": "Gaul"
+      },
+      "values": {
+        "codes": [
+          {
+            "idCodeList": "GAUL0",
+            "version": "2014",
+            "codes": []
+          }
+        ]
+      },
+      "domain": {
+        "codes": [
+          {
+            "version": "2014",
+            "idCodeList": "GAUL0",
+            "extendedName": {
+              "EN": "Global administrative unit layer country level"}
+          }
+        ]
+      },
+      "subject":"geo"
+    }
+  ]
+}

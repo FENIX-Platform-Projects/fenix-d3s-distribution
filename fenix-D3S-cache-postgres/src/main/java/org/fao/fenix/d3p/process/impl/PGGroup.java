@@ -110,7 +110,7 @@ public class PGGroup extends org.fao.fenix.d3p.process.StatefulProcess<GroupPara
         //Support labels into DSD
         Language[] languages = DatabaseStandards.getLanguageInfo();
         if (languages!=null && languages.length>0)
-            dsd.extend(languages);
+            dsd.extend(false, languages);
         //Return dsd
         return dsd;
     }
