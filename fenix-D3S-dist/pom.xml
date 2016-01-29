@@ -127,6 +127,11 @@
            <artifactId>fenix-D3S-export</artifactId>
            <version>${project.version}</version>
        </dependency>
+       <dependency>
+           <groupId>org.fao.fenix</groupId>
+           <artifactId>fenix-D3S-sdmx</artifactId>
+           <version>${project.version}</version>
+       </dependency>
 
        <!-- D3P integration -->
         <dependency>
