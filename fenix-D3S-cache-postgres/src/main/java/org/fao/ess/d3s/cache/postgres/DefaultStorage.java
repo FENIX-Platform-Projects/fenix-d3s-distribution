@@ -523,10 +523,7 @@ public class DefaultStorage extends PostgresStorage {
 
         //Add pagination
         if (pagination!=null)
-            if (pagination.toH2SQLWhereCondition()!=null && (orderingSQL==null || orderingSQL.trim().length()==0) && (whereContitionSQL==null || whereContitionSQL.trim().length()==0))
-                query.append(" WHERE ").append(pagination.toH2SQLWhereCondition());
-            else
-                query.append(' ').append(pagination.toH2SQL());
+            query.append(' ').append(pagination.toH2SQL());
 
         //Add for update option
         if (forUpdate)
