@@ -15,9 +15,9 @@ import java.sql.SQLException;
 import java.util.Map;
 
 public abstract class PostgresStorage implements DatasetStorage {
-    private boolean initialized = false;
-    private PGPoolingDataSource pool;
     @Inject private FileUtils fileUtils;
+
+    private boolean initialized = false;
 
 
 
@@ -44,23 +44,6 @@ public abstract class PostgresStorage implements DatasetStorage {
 
             initialized = true;
         }
-    }
-
-    private void initPool(String host, String port, String database, String usr, String psw, int maxConnections) {
-        pool = new PGPoolingDataSource();
-        if (maxConnections>0) {
-            pool.setMaxConnections(maxConnections);
-            pool.setInitialConnections(Math.min(100,maxConnections));
-        } else {
-            pool.setInitialConnections(100);
-        }
-
-        pool.setDataSourceName("D3S_Dataset_Cache_L1");
-        pool.setServerName(host);
-        pool.setPortNumber(port!=null && port.trim().length()>0 ? Integer.parseInt(port) : 5432);
-        pool.setDatabaseName(database);
-        pool.setUser(usr);
-        pool.setPassword(psw);
     }
 
     private void runScript(String resourceFilePath) throws IOException, SQLException {
@@ -91,25 +74,59 @@ public abstract class PostgresStorage implements DatasetStorage {
 
 
 
-    //SHUTDOWN FLOW
-    @Override
-    public void close() {
-        if (pool!=null)
-            pool.close();
+    //CONNECTION MANAGEMENT
+    /*
+    private PGPoolingDataSource pool;
+    private void initPool(String host, String port, String database, String usr, String psw, int maxConnections) {
+        pool = new PGPoolingDataSource();
+        if (maxConnections>0) {
+            pool.setMaxConnections(maxConnections);
+            pool.setInitialConnections(Math.min(100,maxConnections));
+        } else {
+            pool.setInitialConnections(100);
+        }
+
+        pool.setDataSourceName("D3S_Dataset_Cache_L1");
+        pool.setServerName(host);
+        pool.setPortNumber(port!=null && port.trim().length()>0 ? Integer.parseInt(port) : 5432);
+        pool.setDatabaseName(database);
+        pool.setUser(usr);
+        pool.setPassword(psw);
     }
 
-
-    //Standard utils
     @Override
     public Connection getConnection() throws SQLException {
         Connection connection = pool.getConnection();
         connection.setAutoCommit(false);
         return connection;
     }
+    @Override
+    public void close() {
+        if (pool!=null)
+            pool.close();
+    }
+
+*/
+    private String url, usr, psw;
+    private void initPool(String host, String port, String database, String usr, String psw, int maxConnections) {
+        this.url = "jdbc:postgresql://"+host+':'+(port!=null && port.trim().length()>0 ? port : "5432")+'/'+database;
+        this.usr = usr;
+        this.psw = psw;
+    }
+
+    @Override
+    public Connection getConnection() throws SQLException {
+        Connection connection = DriverManager.getConnection(url,usr,psw);
+        connection.setAutoCommit(false);
+        return connection;
+    }
+    @Override
+    public void close() {
+    }
 
     static {
         try {
-            Class.forName(org.h2.Driver.class.getName());
+            Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
