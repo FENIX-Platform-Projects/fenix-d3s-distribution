@@ -141,13 +141,8 @@
         "id" : "channelcode",
         "title" : { "EN" : "Channel of delivery" },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_channel", "version" : "2015", "level" : 1 } ] },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_channels", "version" : "2015", "level" : 1 } ] },
         "key": true
-      },
-      {
-        "id" : "channelname",
-        "title" : { "EN" : "Channel of delivery name" },
-        "dataType" : "text"
       },
       {
         "id" : "channelreportedname",
@@ -169,7 +164,7 @@
         "subject" : "geo",
         "title" : { "EN" : "GAUL Country" },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "level" : 1 } ] } ,
+        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014","level" : 1 } ] } ,
         "key": true
       },
       {
