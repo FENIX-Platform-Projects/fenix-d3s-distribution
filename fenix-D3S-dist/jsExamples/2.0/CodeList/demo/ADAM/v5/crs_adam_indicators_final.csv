@@ -1,0 +1,112 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ], 
+      "idCodeList": "IANAcharacterSet", 
+      "version": null
+   }, 
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null, 
+            "emailAddress": null, 
+            "phone ": null
+         }, 
+         "name": null, 
+         "organization": {
+            "EN": "Food and Agriculture Organization (FAO)"
+         }, 
+         "organizationUnit": null, 
+         "role": null
+      }
+   ], 
+   "dsd": {
+      "contextSystem": "adam"
+   }, 
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ], 
+      "idCodeList": "ISO639-2", 
+      "version": "1998"
+   }, 
+   "languageDetails": null, 
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ], 
+            "idCodeList": "CL_CONF_STATUS", 
+            "version": "1.0"
+         }
+      }
+   }, 
+   "meContent": {
+      "description": {
+         "EN": "Global country related indicators from various sources."
+      }, 
+      "keywords": [
+         "crs", 
+         "code", 
+         "codes"
+      ], 
+      "resourceRepresentationType": "codelist", 
+      "seCodeList": {
+         "numberOfLevels": "1", 
+         "typeOfCodeList": "list"
+      }, 
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "06"
+               }
+            ], 
+            "idCodeList": "FENIX_Subjects", 
+            "version": "1.0"
+         }
+      }
+   }, 
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ], 
+      "idCodeList": "ISO639-2", 
+      "version": "1998"
+   }, 
+   "metadataStandardName": "FENIX metadata", 
+   "metadataStandardVersion": "1.0", 
+   "title": {
+      "EN": "ADAM Global Indicators"
+   }, 
+   "uid": "crs_adam_indicators", 
+   "version": "2015"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+descriptionColumnIndex_EN=4
+
+--data--
+@NY.GNP.ATLS.CD@GNI, Atlas method (current US$)@World Bank (WB): GNI (formerly GNP) is the sum of value added by all resident producers plus any product taxes (less subsidies) not included in the valuation of output plus net receipts of primary income (compensation of employees and property income) from abroad. Data are in current U.S. dollars. GNI, calculated in national currency, is usually converted to U.S. dollars at official exchange rates for comparisons across economies, although an alternative rate is used when the official exchange rate is judged to diverge by an exceptionally large margin from the rate actually applied in international transactions. To smooth fluctuations in prices and exchange rates, a special Atlas method of conversion is used by the World Bank. This applies a conversion factor that averages the exchange rate for a given year and the two preceding years, adjusted for differences in rates of inflation between the country, and through 2000, the G-5 countries (France, Germany, Japan, the United Kingdom, and the United States). From 2001, these countries include the Euro area, Japan, the United Kingdom, and the United States.
+@NY.GNP.PCAP.CD@GNI per capita, Atlas method (current US$)@World Bank (WB): GNI per capita (formerly GNP per capita) is the gross national income, converted to U.S. dollars using the World Bank Atlas method, divided by the midyear population. GNI is the sum of value added by all resident producers plus any product taxes (less subsidies) not included in the valuation of output plus net receipts of primary income (compensation of employees and property income) from abroad. GNI, calculated in national currency, is usually converted to U.S. dollars at official exchange rates for comparisons across economies, although an alternative rate is used when the official exchange rate is judged to diverge by an exceptionally large margin from the rate actually applied in international transactions. To smooth fluctuations in prices and exchange rates, a special Atlas method of conversion is used by the World Bank. This applies a conversion factor that averages the exchange rate for a given year and the two preceding years, adjusted for differences in rates of inflation between the country, and through 2000, the G-5 countries (France, Germany, Japan, the United Kingdom, and the United States). From 2001, these countries include the Euro area, Japan, the United Kingdom, and the United States.
+@NODA@Net ODA@OECD DAC: Official development assistance (ODA) is defined as government aid designed to promote the economic development and welfare of developing countries. Loans and credits for military purposes are excluded. Aid may be provided bilaterally, from donor to recipient, or channelled through a multilateral development agency such as the United Nations or the World Bank. Aid includes grants, "soft" loans (where the grant element is at least 25% of the total) and the provision of technical assistance. The OECD maintains a list of developing countries and territories; only aid to these countries counts as ODA. The list is periodically updated and currently contains over 150 countries or territories with per capita incomes below USD 12 276 in 2010. A long-standing United Nations target is that developed countries should devote 0.7% of their gross national income to ODA. This indicator is measured as a percentage of gross national income and million USD constant prices, using 2012 base year.
+@ODA.GNI@ODA over GNI@Calculated
+@POP.TOT@Population, total@The FAOSTAT Population module contains time series data on population, by sex and urban/rural. The series consist of both estimates and projections for different periods as available from the original sources, namely:  Population data refers to the World Population Prospects: The 2015 Revision from the UN Population Division. Urban/rural population data refers to the World Urbanization Prospects: The 2014 Revision from the UN Population Division.
+@RUR.POP.PERC@% of Rural Population@The FAOSTAT Population module contains time series data on population, by sex and urban/rural. The series consist of both estimates and projections for different periods as available from the original sources, namely:  Population data refers to the World Population Prospects: The 2015 Revision from the UN Population Division. Urban/rural population data refers to the World Urbanization Prospects: The 2014 Revision from the UN Population Division.
+@AGRI.LAND.PERC@% of Agricultural land@Agricultural area as a % of land area from FAOStat
+@NET.ODA.REC@Net ODA received (current US$)@Calculated
+@NET.ODA.REC.PC@Net ODA received per capita (current US$)@Calculated
+@DT.ODA.ODAT.GN.ZS@Net ODA received (% of GNI)@World Bank (WB): Net official development assistance (ODA) consists of disbursements of loans made on concessional terms (net of repayments of principal) and grants by official agencies of the members of the Development Assistance Committee (DAC), by multilateral institutions, and by non-DAC countries to promote economic development and welfare in countries and territories in the DAC list of ODA recipients. It includes loans with a grant element of at least 25 percent (calculated at a rate of discount of 10 percent).
+@SI.POV.GINI@GINI Index@World Bank (WB): Gini index measures the extent to which the distribution of income (or, in some cases, consumption expenditure) among individuals or households within an economy deviates from a perfectly equal distribution. A Lorenz curve plots the cumulative percentages of total income received against the cumulative number of recipients, starting with the poorest individual or household. The Gini index measures the area between the Lorenz curve and a hypothetical line of absolute equality, expressed as a percentage of the maximum area under the line. Thus a Gini index of 0 represents perfect equality, while an index of 100 implies perfect inequality.

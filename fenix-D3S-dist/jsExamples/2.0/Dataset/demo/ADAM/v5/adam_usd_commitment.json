@@ -1,0 +1,245 @@
+{
+  "uid" : "adam_usd_commitment",
+  "title" : {
+    "EN" : "OECD Commitment data"
+  },
+  "meContent" : {
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd" : {
+    "contextSystem" : "adam",
+    "datasources" : ["adam"],
+    "columns" : [
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year" },
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "donorcode",
+        "title" : { "EN" : "Donor" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2015", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "agencycode",
+        "title" : { "EN" : "Agency" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_agencies", "version" : "2015", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "crsid",
+        "title" : { "EN" : "Creditor Reporting System (CRS) ID" },
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "projectnumber",
+        "title" : { "EN" : "Project number" },
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2015", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "regioncode",
+        "title" : { "EN" : "Region" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_regions_countries", "version" : "2015", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "incomegroupcode",
+        "title" : { "EN" : "Income group code" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_income_groups", "version" : "2015", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "flowcode",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2015", "level" : 2 } ] },
+        "key": true
+      },
+      {
+        "id" : "bimulticode",
+        "title" : { "EN" : "Character of resource flows" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_bimulti", "version" : "2015", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "flowcategory",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2015", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "financetypecode",
+        "title" : { "EN" : "Type of finance" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_finance_types", "version" : "2015", "level" : 2 } ] },
+        "key": true
+      },
+      {
+        "id" : "aidtypecode",
+        "title" : { "EN" : "Type of aid" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_aid_types", "version" : "2015", "level" : 2 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "value",
+        "subject" : "value",
+        "title" : { "EN" : "Commitment Constant (USD Mil)" },
+        "dataType" : "number"
+      },
+      {
+        "id" : "currencycode",
+        "title" : { "EN" : "Currency code" },
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "projectshortdescription",
+        "title" : { "EN" : "Short description of project" },
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "projecttitle",
+        "title" : { "EN" : "Project title" },
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "Sub-sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2015", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "sectorcode",
+        "title" : { "EN" : "Sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_sectors", "version" : "2015", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "channelcode",
+        "title" : { "EN" : "Channel of delivery" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_channel", "version" : "2015", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "channelname",
+        "title" : { "EN" : "Channel of delivery name" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "channelreportedname",
+        "title" : { "EN" : "Channel of delivery reported name" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "geography",
+        "title" : { "EN" : "Geography" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "projectlongdescription",
+        "title" : { "EN" : "Project long description" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "gaul0",
+        "subject" : "geo",
+        "title" : { "EN" : "GAUL Country" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "un_continent_code",
+        "title" : { "EN" : "UN Continent" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "continent",
+        "title" : { "EN" : "UN Continent name" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "un_region_code",
+        "title" : { "EN" : "UN Region" },
+         "dataType" : "text"
+      },
+      {
+        "id" : "un_region",
+        "title" : { "EN" : "UN Region name" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "dac_member",
+         "title" : { "EN" : "OECD Donor Country" },
+         "dataType" : "text"
+      },
+      {
+        "id" : "channelcategory_code",
+        "title" : { "EN" : "Channel category" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_channels", "version" : "2015", "level" : 1 } ] },
+        "dataType" : "code"
+      },
+      {
+        "id" : "channelsubcategory_code",
+        "title" : { "EN" : "Channel subcategory" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_channels", "version" : "2015", "level" : 2 } ] },
+        "dataType" : "code"
+      },
+      {
+        "id" : "parentsector_code",
+        "title" : { "EN" : "Parent sector" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2015", "level" : 1 } ] },
+        "dataType" : "code"
+      },
+      {
+        "id" : "subsector_code",
+        "title" : { "EN" : "Sub sector" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2015", "level" : 2 } ] },
+        "dataType" : "code"
+      },
+      {
+        "id" : "unitcode",
+        "subject" : "um",
+        "title" : { "EN" : "Measurement unit" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2015", "level" : 1 } ] },
+        "dataType" : "code"
+      },
+      {
+        "id" : "flowamountcode",
+        "title" : { "EN" : "Flow amount type" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_amounts", "version" : "2015", "level" : 1 } ] }
+      },
+      {
+        "id" : "matching_row_idx",
+        "title" : { "EN" : "Matching row identifier" },
+        "dataType" : "text",
+        "key": true
+      }
+    ]
+  }
+}

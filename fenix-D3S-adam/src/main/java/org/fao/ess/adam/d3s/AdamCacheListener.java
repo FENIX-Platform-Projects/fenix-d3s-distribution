@@ -18,20 +18,44 @@ public class AdamCacheListener implements DatasetCacheListener {
         datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, purposecode, recipientcode, year)");
         datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, purposecode, recipientcode, donorcode, year)");
 */
-        //Generic indexes
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, sectorcode, year)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, sectorcode, donorcode)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, sectorcode, recipientcode)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, purposecode, year)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, purposecode, donorcode)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, purposecode, recipientcode)");
-        //Compare-Analyze page
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, year, purposecode)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, year, sectorcode)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, year, donorcode)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, year, recipientcode)");
-        datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (flowcode, year, channelcode)");
+        String uid = datasetInfo.getMetadata().getUid();
 
+        if (
+                "adam_usd_commitment_defl".equals(uid)
+                || "adam_usd_disbursement".equals(uid)
+                || "adam_usd_disbursement_defl".equals(uid)
+            ) {
+            //Generic indexes
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, sectorcode, year)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, sectorcode, donorcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, sectorcode, recipientcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, purposecode, year)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, purposecode, donorcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, purposecode, recipientcode)");
+            //Compare-Analyze page
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, purposecode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, sectorcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, donorcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, recipientcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, channelcode)");
+        } else if ( "adam_usd_commitment".equals(uid) ) {
+            //Generic indexes
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, parentsector_code, year)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, parentsector_code, donorcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, parentsector_code, recipientcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, purposecode, year)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, purposecode, donorcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, purposecode, recipientcode)");
+            //Compare-Analyze page
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, purposecode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, parentsector_code)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, donorcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, recipientcode)");
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (flowcode, year, channelsubcategory_code)");
+        } else if ( "adam_country_indicators".equals(uid) ) {
+            //Generic indexes
+            datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (countrycode)");
+        }
         return false;
     }
 
