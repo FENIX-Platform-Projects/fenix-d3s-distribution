@@ -1,0 +1,77 @@
+[
+  {
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "flowcode": {
+          "codes": [
+            {
+              "uid": "crs_flow_types",
+              "version": "2015",
+              "codes": [
+                "10_12",
+                "10_11",
+                "10_13",
+                "10_19"
+              ]
+            }
+          ]
+        },
+        "sectorcode": {
+          "codes": [
+            {
+              "uid": "crs_sectors",
+              "version": "2015",
+              "codes": [
+                "600"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "pggroup",
+    "parameters": {
+      "by": [
+        "gaul0"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "pgfirst"
+        },
+        {
+          "columns": [
+            "unitname"
+          ],
+          "rule": "pgfirst"
+        }
+      ]
+    }
+  },
+  {
+    "name": "select",
+    "parameters": {
+      "query": "WHERE gaul0<>?",
+      "queryParameters": [ { "value": "NA" } ]
+    }
+  }
+]

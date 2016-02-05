@@ -2,4 +2,4 @@ JAVA_OPTS="-server -Xmx2g -Djna.nosys=true -XX:+HeapDumpOnOutOfMemoryError -Djav
 ORIENTDB_SETTINGS="-Dprofiler.enabled=true -Dorientdb.www.path="database/www""
 LOG_SETTINGS="-Dlog4j.configuration="file:config/logging/log4j.properties""
 
-java $JAVA_OPTS $ORIENTDB_SETTINGS -jar lib/d3s.jar &
+java $JAVA_OPTS $ORIENTDB_SETTINGS $LOG_SETTINGS -jar lib/d3s.jar &
