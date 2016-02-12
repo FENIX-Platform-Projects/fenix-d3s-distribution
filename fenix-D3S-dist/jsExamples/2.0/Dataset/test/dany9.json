@@ -1,0 +1,120 @@
+{
+  "metadata" : {
+    "title": {
+      "EN": "DanCodedCol"
+    },
+    "dsd": {
+      "datasources": [
+        "D3S"
+      ],
+      "contextSystem": "demo1",
+      "columns": [
+        {
+          "dataType": "year",
+          "title": {
+            "EN": "year"
+          },
+          "values": {
+            "timeList": [
+              2016,
+              2017,
+              2000,
+              2018
+            ]
+          },
+          "subject": "time",
+          "key": true,
+          "id": "DIMENSION0"
+        },
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "Code"
+          },
+          "values": {
+            "codes": [
+              {
+                "version": "2014",
+                "codes": [
+                  {
+                    "code": "1"
+                  },
+                  {
+                    "code": "5"
+                  },
+                  {
+                    "code": "10"
+                  }
+                ],
+                "idCodeList": "GAUL0"
+              }
+            ]
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2014",
+                "idCodeList": "GAUL0"
+              }
+            ]
+          },
+          "subject": "geo",
+          "key": true,
+          "id": "DIMENSION1"
+        },
+        {
+          "dataType": "number",
+          "title": {
+            "EN": "value"
+          },
+          "subject": "value",
+          "key": false,
+          "id": "VALUE0"
+        }
+      ]
+    },
+    "uid": "D3S_42924430614140479129161161075148361250",
+    "meContent": {
+      "resourceRepresentationType": "dataset"
+    },
+    "contacts": [
+      {
+        "organization": {
+          "EN": "fff"
+        },
+        "contactInfo": {
+          "phone": "666"
+        }
+      }
+    ],
+    "characterSet": {
+      "codes": [
+        {
+          "code": "106"
+        }
+      ],
+      "idCodeList": "IANAcharacterSet"
+    },
+    "metadataStandardName": "FENIX",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+      "version": "1998",
+      "codes": [
+        {
+          "code": "eng"
+        }
+      ],
+      "idCodeList": "ISO639-2"
+    },
+    "language": {
+      "version": "1998",
+      "codes": [
+        {
+          "code": "eng"
+        }
+      ],
+      "idCodeList": "ISO639-2"
+    }
+  },
+  "data" : [[2016,"1",4]]
+}
