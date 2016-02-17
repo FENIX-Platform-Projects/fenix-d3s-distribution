@@ -1,0 +1,282 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ], 
+      "idCodeList": "IANAcharacterSet", 
+      "version": null
+   }, 
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null, 
+            "emailAddress": null, 
+            "phone ": null
+         }, 
+         "name": null, 
+         "organization": {
+            "EN": "Organisation for Economic Co-operation and Development (OECD)"
+         }, 
+         "organizationUnit": null, 
+         "role": null
+      }
+   ], 
+   "dsd": {
+      "contextSystem": "adam"
+   }, 
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ], 
+      "idCodeList": "ISO639-2", 
+      "version": "1998"
+   }, 
+   "languageDetails": null, 
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ], 
+            "idCodeList": "CL_CONF_STATUS", 
+            "version": "1.0"
+         }
+      }
+   }, 
+   "meContent": {
+      "description": {
+         "EN": "OECD Creditor Reporting System (CRS) code list for Un Regions Recipients"
+      }, 
+      "keywords": [
+         "crs", 
+         "code", 
+         "codes"
+      ], 
+      "resourceRepresentationType": "codelist", 
+      "seCodeList": {
+         "numberOfLevels": "3", 
+         "typeOfCodeList": "tree"
+      }, 
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "06"
+               }
+            ], 
+            "idCodeList": "FENIX_Subjects", 
+            "version": "1.0"
+         }
+      }
+   }, 
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ], 
+      "idCodeList": "ISO639-2", 
+      "version": "1998"
+   }, 
+   "metadataStandardName": "FENIX metadata", 
+   "metadataStandardVersion": "1.0", 
+   "title": {
+      "EN": "OECD Un Regions Recipients"
+   }, 
+   "uid": "crs_un_regions_recipients", 
+   "version": "2016"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@002@Africa
+002@014@Eastern Africa
+014@228@Burundi
+014@233@Comoros
+014@274@Djibouti
+014@271@Eritrea
+014@238@Ethiopia
+014@248@Kenya
+014@252@Madagascar
+014@253@Malawi
+014@257@Mauritius
+014@258@Mayotte
+014@259@Mozambique
+014@266@Rwanda
+014@270@Seychelles
+014@273@Somalia
+014@279@South Sudan
+014@282@Tanzania
+014@285@Uganda
+014@288@Zambia
+014@265@Zimbabwe
+002@017@Middle Africa
+017@225@Angola
+017@229@Cameroon
+017@231@Central African Republic
+017@232@Chad
+017@234@Congo
+017@235@Democratic Republic of the Congo
+017@245@Equatorial Guinea
+017@239@Gabon
+017@268@Sao Tome and Principe
+002@015@Northern Africa
+015@130@Algeria
+015@142@Egypt
+015@133@Libya
+015@136@Morocco
+015@278@Sudan
+015@139@Tunisia
+002@018@Southern Africa
+018@227@Botswana
+018@249@Lesotho
+018@275@Namibia
+018@218@South Africa
+018@280@Swaziland
+002@011@Western Africa
+011@236@Benin
+011@287@Burkina Faso
+011@230@Cabo Verde
+011@247@CÃ´te d'Ivoire
+011@240@Gambia
+011@241@Ghana
+011@243@Guinea
+011@244@Guinea-Bissau
+011@251@Liberia
+011@255@Mali
+011@256@Mauritania
+011@260@Niger
+011@261@Nigeria
+011@276@Saint Helena
+011@269@Senegal
+011@272@Sierra Leone
+011@283@Togo
+@019@Americas
+019@029@Caribbean
+029@376@Anguilla
+029@377@Antigua and Barbuda
+029@329@Barbados
+029@338@Cuba
+029@378@Dominica
+029@340@Dominican Republic
+029@381@Grenada
+029@349@Haiti
+029@354@Jamaica
+029@385@Montserrat
+029@382@Saint Kitts and Nevis
+029@383@Saint Lucia
+029@384@Saint Vincent and the Grenadines
+029@375@Trinidad and Tobago
+029@387@Turks and Caicos Islands
+019@013@Central America
+013@352@Belize
+013@336@Costa Rica
+013@342@El Salvador
+013@347@Guatemala
+013@351@Honduras
+013@358@Mexico
+013@364@Nicaragua
+013@366@Panama
+019@005@South America
+005@425@Argentina
+005@428@Bolivia
+005@431@Brazil
+005@434@Chile
+005@437@Colombia
+005@440@Ecuador
+005@446@Guyana
+005@451@Paraguay
+005@454@Peru
+005@457@Suriname
+005@460@Uruguay
+005@463@Venezuela
+@142@Asia
+142@143@Central Asia
+143@613@Kazakhstan
+143@614@Kyrgyzstan
+143@615@Tajikistan
+143@616@Turkmenistan
+143@617@Uzbekistan
+142@030@Eastern Asia
+030@730@China (People's Republic of)
+030@740@Democratic People's Republic of Korea
+030@753@Mongolia
+142@035@South-Eastern Asia
+035@728@Cambodia
+035@738@Indonesia
+035@745@Lao People's Democratic Republic
+035@751@Malaysia
+035@635@Myanmar
+035@755@Philippines
+035@764@Thailand
+035@765@Timor-Leste
+035@769@Viet Nam
+142@034@Southern Asia
+034@625@Afghanistan
+034@666@Bangladesh
+034@630@Bhutan
+034@645@India
+034@540@Iran
+034@655@Maldives
+034@660@Nepal
+034@665@Pakistan
+034@640@Sri Lanka
+142@145@Western Asia
+145@610@Armenia
+145@611@Azerbaijan
+145@530@Bahrain
+145@612@Georgia
+145@543@Iraq
+145@549@Jordan
+145@555@Lebanon
+145@558@Oman
+145@566@Saudi Arabia
+145@573@Syrian Arab Republic
+145@55@Turkey
+145@550@West Bank and Gaza Strip
+145@580@Yemen
+@150@Europe
+150@151@Eastern Europe
+151@86@Belarus
+151@93@Moldova
+151@85@Ukraine
+150@039@Southern Europe
+039@71@Albania
+039@64@Bosnia and Herzegovina
+039@62@Croatia
+039@66@Former Yugoslav Republic of Macedonia
+039@57@Kosovo
+039@45@Malta
+039@65@Montenegro
+039@63@Serbia
+039@61@Slovenia
+039@88@States Ex-Yugoslavia
+@009@Oceania
+009@054@Melanesia
+054@832@Fiji
+054@862@Papua New Guinea
+054@866@Solomon Islands
+054@854@Vanuatu
+009@057@Micronesia
+057@836@Kiribati
+057@859@Marshall Islands
+057@860@Micronesia
+057@845@Nauru
+057@861@Palau
+009@061@Polynesia
+061@831@Cook Islands
+061@856@Niue
+061@880@Samoa
+061@868@Tokelau
+061@870@Tonga
+061@872@Tuvalu
+061@876@Wallis and Futuna

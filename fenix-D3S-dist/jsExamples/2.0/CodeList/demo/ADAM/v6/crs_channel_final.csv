@@ -1,0 +1,274 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ], 
+      "idCodeList": "IANAcharacterSet", 
+      "version": null
+   }, 
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null, 
+            "emailAddress": null, 
+            "phone ": null
+         }, 
+         "name": null, 
+         "organization": {
+            "EN": "Organisation for Economic Co-operation and Development (OECD)"
+         }, 
+         "organizationUnit": null, 
+         "role": null
+      }
+   ], 
+   "dsd": {
+      "contextSystem": "adam"
+   }, 
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ], 
+      "idCodeList": "ISO639-2", 
+      "version": "1998"
+   }, 
+   "languageDetails": null, 
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ], 
+            "idCodeList": "CL_CONF_STATUS", 
+            "version": "1.0"
+         }
+      }
+   }, 
+   "meContent": {
+      "description": {
+         "EN": "OECD Creditor Reporting System (CRS) code list for Channel S"
+      }, 
+      "keywords": [
+         "crs", 
+         "code", 
+         "codes"
+      ], 
+      "resourceRepresentationType": "codelist", 
+      "seCodeList": {
+         "numberOfLevels": "1", 
+         "typeOfCodeList": "list"
+      }, 
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "02"
+               }
+            ], 
+            "idCodeList": "FENIX_Subjects", 
+            "version": "1.0"
+         }
+      }
+   }, 
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ], 
+      "idCodeList": "ISO639-2", 
+      "version": "1998"
+   }, 
+   "metadataStandardName": "FENIX metadata", 
+   "metadataStandardVersion": "1.0", 
+   "title": {
+      "EN": "OECD Channel"
+   }, 
+   "uid": "crs_channel", 
+   "version": "2016"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@44006@Advance Market Commitments
+@47101@Africa Rice Centre
+@46002@African Development Bank
+@46003@African Development Fund
+@46022@African Export Import Bank
+@21045@African Medical and Research Foundation
+@47005@African Union (excluding peacekeeping facilities)
+@46008@Andean Development Corporation
+@46004@Asian Development Bank
+@46005@Asian Development Fund
+@47003@Association of South East Asian Nations: Economic Co-operation
+@47069@Bioversity International
+@46006@Black Sea Trade and Development Bank
+@47011@Caribbean Community Secretariat
+@46009@Caribbean Development Bank
+@46020@Central African States Development Bank
+@46007@Central American Bank for Economic Integration
+@41147@Central Emergency Response Fund
+@47018@Centre for International Forestry Research
+@47015@CGIAR Fund
+@30008@Cities Alliance
+@47134@Clean Technology Fund
+@47010@Commonwealth Agency for Public Administration and Management
+@41101@Convention to Combat Desertification
+@47138@Council of Europe
+@46024@Council of Europe Development Bank
+@21029@Doctors Without Borders
+@46023@Eastern and Southern African Trade and Development Bank
+@41106@Economic and Social Commission for Asia and the Pacific
+@41105@Economic and Social Commission for Western Asia
+@41103@Economic Commission for Africa
+@41104@Economic Commission for Latin America and the Caribbean
+@47034@Economic Community of West African States
+@47035@Environmental Development Action in the Third World
+@46015@European Bank for Reconstruction and Development
+@46018@European Bank for Reconstruction and Development - ETC
+@46017@European Bank for Reconstruction and Development - TFs - All Countries
+@46016@European Bank for Reconstruction and Development - TFs - ODA countries only
+@46019@European Bank for Reconstruction and Development - WBJTF
+@42001@European Commission - Development Share of Budget
+@42003@European Commission - EDF
+@30016@European Fund for Southeast Europe
+@42004@European Investment Bank
+@21043@European Parliamentarians for Africa
+@31004@Extractive Industries Transparency Initiative International Secretariat
+@41301@Food and Agricultural Organisation
+@47041@Food and Fertilizer Technology Centre
+@30007@Global Alliance for ICT and Development
+@30001@Global Alliance for Improved Nutrition
+@47122@Global Alliance for Vaccines and Immunization
+@30012@Global Climate Partnership Fund
+@47043@Global Crop Diversity Trust
+@31001@Global Development Network
+@30003@Global e-Schools and Communities Initiative
+@30015@Global Energy Efficiency and Renewable Energy Fund
+@47129@Global Environment Facility - LDCF
+@47130@Global Environment Facility - SCCF
+@47044@Global Environment Facility Trust Fund
+@47045@Global Fund to Fight AIDS, Tuberculosis and Malaria
+@47136@Global Green Growth Institute
+@31002@Global Knowledge Partnership
+@30004@Global Water Partnership
+@46012@Inter-American Development Bank
+@46013@Inter-American Development Bank FSO
+@30005@International AIDS Vaccine Initiative
+@41107@International Atomic Energy Agency
+@41312@International Atomic Energy Agency - Assessed
+@44001@International Bank for Reconstruction and Development
+@47051@International Centre for Agricultural Research in Dry Areas
+@47055@International Centre for Development Oriented Research in Agriculture
+@47053@International Centre for Diarrhoeal Disease Research, Bangladesh
+@21017@International Centre for Trade and Sustainable Development
+@47017@International Centre for Tropical Agriculture
+@47054@International Centre of Insect Physiology and Ecology
+@21016@International Committee of the Red Cross
+@47057@International Crop Research for Semi-Arid Tropics
+@44002@International Development Association
+@44003@International Development Association - HIPC
+@44007@International Development Association - MDRI
+@30010@International drug purchase facility
+@21018@International Federation of Red Cross and Red Crescent Societies
+@44004@International Finance Corporation
+@47107@International Finance Facility for Immunisation
+@51001@International Food Policy Research Institute
+@41108@International Fund for Agricultural Development
+@21020@International HIV/AIDS Alliance
+@47062@International Institute of Tropical Agriculture
+@41144@International Labour Organisation
+@41302@International Labour Organisation - Assessed
+@31003@International Land Coalition
+@47063@International Livestock Research Institute
+@47020@International Maize and Wheat Improvement Centre
+@41145@International Maritime Organization
+@43003@International Monetary Fund - EPCA - ENDA
+@43002@International Monetary Fund - PRG - HIPC
+@43004@International Monetary Fund - PRG - MDRI
+@43001@International Monetary Fund - PRGT
+@47066@International Organisation for Migration
+@47046@International Organisation of the Francophonie
+@30006@International Partnership on Microbicides
+@21023@International Planned Parenthood Federation
+@47021@International Potato Centre
+@47070@International Rice Research Institute
+@47071@International Seed Testing Association
+@41303@International Telecommunications Union
+@21034@International Union Against Tuberculosis and Lung Disease
+@30011@International Union for the Conservation of Nature
+@47075@International Water Management Institute
+@41110@Joint United Nations Programme on HIV/AIDS
+@30013@Microfinance Enhancement Facility
+@47078@Montreal Protocol
+@44005@Multilateral Investment Guarantee Agency
+@47128@Nordic Development Fund
+@47079@Organisation of American States
+@47131@Organization for Security and Co-operation in Europe
+@47083@Pan-American Health Organisation
+@21032@Population Services International
+@30014@Regional Micro, Small and Medium Enterprise Investment Fund for Sub-Saharan Africa
+@21056@Renewable Energy and Energy Efficiency Partnership
+@30017@SANAD Fund for Micro, Small and Medium Enterprises
+@47096@Secretariat of the Pacific Community
+@30009@Small Arms Survey
+@47089@Southern African Development Community
+@47135@Strategic Climate Fund
+@41305@United Nations
+@41111@United Nations Capital Development Fund
+@41122@United Nations Children’s Fund
+@41112@United Nations Conference on Trade and Development
+@41142@United Nations Democracy Fund
+@41310@United Nations Department of Peacekeeping Operations
+@41148@United Nations Department of Political Affairs
+@41114@United Nations Development Programme
+@41314@United Nations Economic Commission for Europe
+@41304@United Nations Educational, Scientific and Cultural Organisation
+@41146@United Nations Entity for Gender Equality and the Empowerment of Women
+@41116@United Nations Environment Programme
+@41316@United Nations Framework Convention on Climate Change
+@41313@United Nations High Commissioner for Human Rights
+@41120@United Nations Human Settlement Programme
+@41123@United Nations Industrial Development Organisation
+@41125@United Nations Institute for Training and Research
+@41315@United Nations International Strategy for Disaster Reduction
+@41126@United Nations Mine Action Service
+@41127@United Nations Office of Co-ordination of Humanitarian Affairs
+@41121@United Nations Office of the United Nations High Commissioner for Refugees
+@41128@United Nations Office on Drugs and Crime
+@41311@United Nations Peacebuilding Fund
+@41141@United Nations Peacebuilding Fund
+@41119@United Nations Population Fund
+@41130@United Nations Relief and Works Agency for Palestine Refugees in the Near East
+@41129@United Nations Research Institute for Social Development
+@41131@United Nations System Staff College
+@41132@United Nations System Standing Committee on Nutrition
+@41134@United Nations University
+@41137@United Nations Voluntary Fund for Technical Co-operation in the Field of Human Rights
+@41138@United Nations Voluntary Fund for Victims of Torture
+@41136@United Nations Voluntary Fund on Disability
+@41135@United Nations Volunteers
+@41306@Universal Postal Union
+@47099@University of the South Pacific
+@46021@West African Development Bank
+@47056@World AgroForestry Centre
+@41140@World Food Programme
+@41143@World Health Organisation
+@41307@World Health Organisation - Assessed
+@41308@World Intellectual Property Organisation
+@47103@World Maritime University
+@41309@World Meteorological Organisation
+@45002@World Trade Organisation - ACWL
+@45003@World Trade Organisation - DDAGTF
+@45001@World Trade Organisation - ITC
+@47008@World Vegetable Centre
+@47104@WorldFish Centre
+@
