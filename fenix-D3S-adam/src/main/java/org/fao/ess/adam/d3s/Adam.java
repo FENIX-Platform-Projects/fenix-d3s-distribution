@@ -44,8 +44,11 @@ public class Adam extends WDSDatasetDao {
             return new LinkedList<Object[]>().iterator();
 
         Connection connection = dataSource.getConnection();
+        connection.setAutoCommit(false);
+        Statement statement = connection.createStatement(java.sql.ResultSet.TYPE_FORWARD_ONLY, java.sql.ResultSet.CONCUR_READ_ONLY);
+        statement.setFetchSize(1000);
         return new DataIterator(
-                connection.createStatement().executeQuery(buildQuery(columns, topic)),
+                statement.executeQuery(buildQuery(columns, topic)),
                 connection,
                 null,
                 buildNulls(columns)

@@ -1,6 +1,7 @@
 package org.fao.ess.d3s.cache.postgres;
 
 import org.fao.fenix.commons.find.dto.filter.*;
+import org.fao.fenix.commons.utils.CSVWriter;
 import org.fao.fenix.commons.utils.Order;
 import org.fao.fenix.commons.utils.Page;
 import org.fao.fenix.commons.utils.database.DataIterator;
@@ -9,8 +10,13 @@ import org.fao.fenix.d3s.cache.dto.dataset.Column;
 import org.fao.fenix.d3s.cache.dto.dataset.Table;
 import org.fao.fenix.d3s.cache.dto.dataset.Type;
 import org.fao.fenix.d3s.cache.storage.StorageName;
+import org.postgresql.PGConnection;
+import org.postgresql.copy.CopyIn;
+import org.postgresql.copy.CopyManager;
 
 import javax.inject.Singleton;
+import java.io.PushbackReader;
+import java.io.StringWriter;
 import java.sql.*;
 import java.util.*;
 import java.util.Date;
@@ -217,32 +223,10 @@ public class DefaultStorage extends PostgresStorage {
             //Check primary key availability
             boolean hasPrimaryKey = connection.getMetaData().getPrimaryKeys(null,null,getTableName(tableName)).next();
 
-            //Build query
-            StringBuilder query = new StringBuilder(overwrite || !hasPrimaryKey ? "INSERT INTO " : "MERGE INTO ").append(getTableName(tableName)).append(" (");
-
-            for (Column column : structure)
-                query.append(column.getName()).append(',');
-            query.setLength(query.length()-1);
-
-            query.append(") VALUES (");
-            for (int count = structure.length; count>0; count--)
-                query.append("?,");
-            query.setLength(query.length()-1);
-            query.append(')');
-
-            //Prepare store session
-            PreparedStatement statement = connection.prepareStatement(query.toString());
-            size = size>0 ? size : Integer.MAX_VALUE;
-            int count = 0;
-
-            //Store data
-            for (; count<size && data.hasNext(); count++) {
-                Object[] row = data.next();
-                for (int i=0; i<columnsType.length; i++)
-                    statement.setObject(i+1,row[i],columnsType[i]);
-                statement.addBatch();
-            }
-            statement.executeBatch();
+            //Insert data
+            int count = overwrite || !hasPrimaryKey ?
+                    insertData(connection,tableName,structure,columnsType,data,size):
+                    mergeData(connection,tableName,structure,columnsType,data,size);
 
             //Update status
             status.setStatus(data.hasNext() ? StoreStatus.Status.loading : StoreStatus.Status.ready);
@@ -271,6 +255,62 @@ public class DefaultStorage extends PostgresStorage {
         }
 
         return status;
+    }
+
+    private int insertData(Connection connection, String tableName, Column[] structure, int[] columnsType, Iterator<Object[]> data, int size) throws Exception {
+        //Build query
+        StringBuilder query = new StringBuilder("COPY ").append(getTableName(tableName)).append(" FROM STDIN WITH CSV DELIMITER ';' QUOTE '\"' ENCODING 'UTF8'");
+
+        //Prepare store session
+        CopyManager cpManager = ((PGConnection)connection).getCopyAPI();
+        CopyIn copier = cpManager.copyIn(query.toString());
+        size = size>0 ? size : Integer.MAX_VALUE;
+        int count = 0;
+
+        //Store data
+        while (count<size && data.hasNext()) {
+            StringWriter buffer = new StringWriter();
+            CSVWriter csvWriter = new CSVWriter(buffer,';',true,false,true,null,null,null);
+            count += csvWriter.write(data, Math.min(MAX_PAGE_SIZE,size));
+
+            byte[] csvData = buffer.toString().getBytes();
+            copier.writeToCopy(csvData,0,csvData.length);
+        }
+
+        copier.flushCopy();
+        copier.endCopy();
+
+        return count;
+    }
+    private int mergeData(Connection connection, String tableName, Column[] structure, int[] columnsType, Iterator<Object[]> data, int size) throws Exception {
+        //Build query
+        StringBuilder query = new StringBuilder("MERGE INTO ").append(getTableName(tableName)).append(" (");
+
+        for (Column column : structure)
+            query.append(column.getName()).append(',');
+        query.setLength(query.length()-1);
+
+        query.append(") VALUES (");
+        for (int count = structure.length; count>0; count--)
+            query.append("?,");
+        query.setLength(query.length()-1);
+        query.append(')');
+
+        //Prepare store session
+        PreparedStatement statement = connection.prepareStatement(query.toString());
+        size = size>0 ? size : Integer.MAX_VALUE;
+        int count = 0;
+
+        //Store data
+        for (; count<size && data.hasNext(); count++) {
+            Object[] row = data.next();
+            for (int i=0; i<columnsType.length; i++)
+                statement.setObject(i+1,row[i],columnsType[i]);
+            statement.addBatch();
+        }
+        statement.executeBatch();
+
+        return count;
     }
 
 
@@ -545,7 +585,37 @@ public class DefaultStorage extends PostgresStorage {
 
 
 
+/*    private int insertData_old(Connection connection, String tableName, Column[] structure, int[] columnsType, Iterator<Object[]> data, int size) throws Exception {
+        //Build query
+        StringBuilder query = new StringBuilder("INSERT INTO ").append(getTableName(tableName)).append(" (");
 
+        for (Column column : structure)
+            query.append(column.getName()).append(',');
+        query.setLength(query.length()-1);
+
+        query.append(") VALUES (");
+        for (int count = structure.length; count>0; count--)
+            query.append("?,");
+        query.setLength(query.length()-1);
+        query.append(')');
+
+        //Prepare store session
+        PreparedStatement statement = connection.prepareStatement(query.toString());
+        size = size>0 ? size : Integer.MAX_VALUE;
+        int count = 0;
+
+        //Store data
+        for (; count<size && data.hasNext(); count++) {
+            Object[] row = data.next();
+            for (int i=0; i<columnsType.length; i++)
+                statement.setObject(i+1,row[i],columnsType[i]);
+            statement.addBatch();
+        }
+        statement.executeBatch();
+
+        return count;
+    }
+*/
 
 
 
