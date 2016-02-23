@@ -429,6 +429,6 @@ shortTitleColumnIndex_FR=6
 51000@47008@World Vegetable Centre@Centre international de cultures maraîchères@AVRDC@AVRDC
 51000@47104@WorldFish Centre@Centre international pour l’aménagement des ressources bioaquatiques@WorldFish Centre@WorldFish Centre
 50000@52000@Other@Autre@@
-@NA_Channel_Category@Channel category not available@@@
-NA_Channel_Category@NA_Channel_Subcategory@Channel sub category not available@@@
-NA_Channel_Subcategory@NA@Channel not available@@@
+@NA_Channel_Category@Unspecified Channel parent category@@@
+NA_Channel_Category@NA_Channel_Subcategory@Unspecified Channel parent sub-category@@@
+NA_Channel_Subcategory@NA@Unspecified Channel of delivery@@@

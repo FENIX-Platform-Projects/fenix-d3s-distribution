@@ -99,10 +99,10 @@ titleColumnIndex_EN=3
 
 --data--
 @1012@Adaptation Fund
+@914@AfDF (African Dev.Fund)
 @625@Afghanistan
 @298@Africa, regional
 @913@African Development Bank [AfDB]
-@914@African Development Fund [AfDF]
 @71@Albania
 @130@Algeria
 @498@America, regional
@@ -179,11 +179,11 @@ titleColumnIndex_EN=3
 @4@France
 @239@Gabon
 @240@Gambia
+@811@GEF
 @612@Georgia
 @5@Germany
 @241@Ghana
 @1311@Global Alliance for Vaccines and Immunization [GAVI]
-@811@Global Environment Facility [GEF]
 @1312@Global Fund
 @1313@Global Green Growth Institute [GGGI]
 @40@Greece
@@ -196,6 +196,7 @@ titleColumnIndex_EN=3
 @351@Honduras
 @75@Hungary
 @20@Iceland
+@905@IDA
 @912@IDB Special Fund
 @988@IFAD
 @958@IMF (Concessional Trust Funds)
@@ -203,7 +204,6 @@ titleColumnIndex_EN=3
 @738@Indonesia
 @909@Inter-American Development Bank [IDB]
 @901@International Bank for Reconstruction and Development [IBRD]
-@905@International Development Association [IDA]
 @903@International Finance Corporation [IFC]
 @540@Iran
 @543@Iraq

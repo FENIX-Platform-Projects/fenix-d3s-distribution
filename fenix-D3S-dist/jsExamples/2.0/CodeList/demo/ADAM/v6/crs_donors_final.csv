@@ -99,12 +99,12 @@ titleColumnIndex_EN=3
 
 --data--
 @1012@Adaptation Fund
+@914@AfDF (African Dev.Fund)
 @913@African Development Bank [AfDB]
-@914@African Development Fund [AfDF]
 @953@Arab Bank for Economic Development in Africa [BADEA]
 @921@Arab Fund [AFESD]
-@915@AsDB (Asian Dev. Bank)
 @916@AsDB Special Funds
+@915@Asian Development Bank [AsDB]
 @801@Australia
 @1@Austria
 @2@Belgium
@@ -128,12 +128,12 @@ titleColumnIndex_EN=3
 @40@Greece
 @75@Hungary
 @20@Iceland
+@905@IDA
 @912@IDB Special Fund
 @988@IFAD
 @958@IMF (Concessional Trust Funds)
 @909@Inter-American Development Bank [IDB]
 @901@International Bank for Reconstruction and Development [IBRD]
-@905@International Development Association [IDA]
 @903@International Finance Corporation [IFC]
 @21@Ireland
 @976@Islamic Development Bank [IsDB]

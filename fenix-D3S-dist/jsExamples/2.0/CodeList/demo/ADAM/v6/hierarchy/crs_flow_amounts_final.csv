@@ -102,5 +102,5 @@ descriptionColumnIndex_EN=5
 --data--
 @adam_usd_commitment@Commitment Current Prices (USD Mil)@Commitment Current Prices@
 @adam_usd_disbursement@Disbursement Current Prices (USD Mil)@Disbursement Current Prices@
-@usd_commitment_defl@Commitment Constant Prices for 2014 (USD Mil)@Commitment Constant Prices (2014)@Deflated amounts
-@usd_disbursement_defl@Disbursement Constant Prices for 2014 (USD Mil)@Disbursement Constant Prices (2014)@Deflated amounts
+@adam_usd_commitment_defl@Commitment Constant Prices for 2014 (USD Mil)@Commitment Constant Prices (2014)@Deflated amounts
+@adam_usd_disbursement_defl@Disbursement Constant Prices for 2014 (USD Mil)@Disbursement Constant Prices (2014)@Deflated amounts
