@@ -4,38 +4,38 @@
          {
             "code": "106"
          }
-      ], 
-      "idCodeList": "IANAcharacterSet", 
+      ],
+      "idCodeList": "IANAcharacterSet",
       "version": null
-   }, 
+   },
    "contacts": [
       {
          "contactInfo": {
-            "address": null, 
-            "emailAddress": null, 
+            "address": null,
+            "emailAddress": null,
             "phone ": null
-         }, 
-         "name": null, 
+         },
+         "name": null,
          "organization": {
             "EN": "Organisation for Economic Co-operation and Development (OECD)"
-         }, 
-         "organizationUnit": null, 
+         },
+         "organizationUnit": null,
          "role": null
       }
-   ], 
+   ],
    "dsd": {
       "contextSystem": "adam"
-   }, 
+   },
    "language": {
       "codes": [
          {
             "code": "eng"
          }
-      ], 
-      "idCodeList": "ISO639-2", 
+      ],
+      "idCodeList": "ISO639-2",
       "version": "1998"
-   }, 
-   "languageDetails": null, 
+   },
+   "languageDetails": null,
    "meAccessibility": {
       "seConfidentiality": {
          "confidentialityStatus": {
@@ -43,53 +43,53 @@
                {
                   "code": "F"
                }
-            ], 
-            "idCodeList": "CL_CONF_STATUS", 
+            ],
+            "idCodeList": "CL_CONF_STATUS",
             "version": "1.0"
          }
       }
-   }, 
+   },
    "meContent": {
       "description": {
          "EN": "OECD Creditor Reporting System (CRS) code list for Units"
-      }, 
+      },
       "keywords": [
-         "crs", 
-         "code", 
+         "crs",
+         "code",
          "codes"
-      ], 
-      "resourceRepresentationType": "codelist", 
+      ],
+      "resourceRepresentationType": "codelist",
       "seCodeList": {
-         "numberOfLevels": "1", 
+         "numberOfLevels": "1",
          "typeOfCodeList": "list"
-      }, 
+      },
       "seCoverage": {
          "coverageSectors": {
             "codes": [
                {
                   "code": "06"
                }
-            ], 
-            "idCodeList": "FENIX_Subjects", 
+            ],
+            "idCodeList": "FENIX_Subjects",
             "version": "1.0"
          }
       }
-   }, 
+   },
    "metadataLanguage": {
       "codes": [
          {
             "code": "eng"
          }
-      ], 
-      "idCodeList": "ISO639-2", 
+      ],
+      "idCodeList": "ISO639-2",
       "version": "1998"
-   }, 
-   "metadataStandardName": "FENIX metadata", 
-   "metadataStandardVersion": "1.0", 
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
    "title": {
       "EN": "OECD Units"
-   }, 
-   "uid": "crs_units", 
+   },
+   "uid": "crs_units",
    "version": "2016"
 }
 --structure--
@@ -100,4 +100,5 @@ titleColumnIndex_EN=3
 --data--
 @million_usd@Million USD
 @percentage@%
-@usd@USD
+@usd@$
+@usd_mil@Mil $
