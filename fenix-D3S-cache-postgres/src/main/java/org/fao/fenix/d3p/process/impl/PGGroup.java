@@ -11,6 +11,7 @@ import org.fao.fenix.d3p.dto.QueryStep;
 import org.fao.fenix.d3p.dto.Step;
 import org.fao.fenix.d3p.dto.StepFactory;
 import org.fao.fenix.d3p.dto.StepType;
+import org.fao.fenix.d3p.process.DisposableProcess;
 import org.fao.fenix.d3p.process.dto.Aggregation;
 import org.fao.fenix.d3p.process.dto.GroupParams;
 import org.fao.fenix.d3p.process.type.ProcessName;
@@ -21,7 +22,7 @@ import java.sql.Connection;
 import java.util.*;
 
 @ProcessName("pggroup")
-public class PGGroup extends org.fao.fenix.d3p.process.StatefulProcess<GroupParams> {
+public class PGGroup extends DisposableProcess<GroupParams> {
 
     private @Inject DatabaseUtils databaseUtils;
     private @Inject StepFactory stepFactory;
