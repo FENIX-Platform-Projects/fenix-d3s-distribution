@@ -31,17 +31,17 @@ public class PGGroup extends DisposableProcess<GroupParams> {
     private String pid;
 
     @Override
-    public void dispose(Connection connection) throws Exception {
+    public void dispose() throws Exception {
     }
 
     @Override
-    public Step process(Connection connection, GroupParams params, Step... sourceStep) throws Exception {
+    public Step process(GroupParams params, Step... sourceStep) throws Exception {
         pid = uidUtils.getId();
         //Retrieve source informations
         Step source = sourceStep!=null && sourceStep.length==1 ? sourceStep[0] : null;
         StepType type = source!=null ? source.getType() : null;
         if (type==null || (type!=StepType.table && type!=StepType.query))
-            throw new UnsupportedOperationException("query filter can be applied only on a table or an other select query");
+            throw new UnsupportedOperationException("pggroup process support only one table or query input step");
         String sourceData = (String)source.getData();
         sourceData = type==StepType.table ? sourceData : '('+sourceData+") as " + source.getRid();
         DSDDataset dsd = source.getDsd();
@@ -64,7 +64,6 @@ public class PGGroup extends DisposableProcess<GroupParams> {
             step.setParams(((QueryStep) source).getParams());
             step.setTypes(((QueryStep) source).getTypes());
         }
-        step.setRid(getRandomTmpTableName());
         return step;
     }
 

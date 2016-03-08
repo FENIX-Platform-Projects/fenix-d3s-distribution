@@ -5,7 +5,7 @@ RETURNS anyelement LANGUAGE SQL IMMUTABLE STRICT AS $$
 $$;
 
 -- And then wrap an aggregate around it
-CREATE AGGREGATE public.PGFIRST (
+CREATE AGGREGATE public.FIRST (
         sfunc    = public.first_agg,
         basetype = anyelement,
         stype    = anyelement
@@ -18,7 +18,7 @@ RETURNS anyelement LANGUAGE SQL IMMUTABLE STRICT AS $$
 $$;
 
 -- And then wrap an aggregate around it
-CREATE AGGREGATE public.PGLAST (
+CREATE AGGREGATE public.LAST (
         sfunc    = public.last_agg,
         basetype = anyelement,
         stype    = anyelement
