@@ -67,7 +67,7 @@ public class DefaultStorage extends PostgresStorage {
             throw new Exception("Duplicate table error.");
 
         //Create query
-        StringBuilder query = new StringBuilder("CREATE TABLE IF NOT EXISTS ").append(getTableName(tableName)).append(" (");
+        StringBuilder query = new StringBuilder("CREATE UNLOGGED TABLE IF NOT EXISTS ").append(getTableName(tableName)).append(" (");
         StringBuilder queryIndex = new StringBuilder(" PRIMARY KEY (");
         boolean containsKey = false;
 
