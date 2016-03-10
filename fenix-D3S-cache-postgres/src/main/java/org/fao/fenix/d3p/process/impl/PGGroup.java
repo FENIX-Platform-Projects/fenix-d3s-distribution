@@ -122,7 +122,7 @@ public class PGGroup extends DisposableProcess<GroupParams> {
         //Support labels into DSD
         Language[] languages = DatabaseStandards.getLanguageInfo();
         if (languages!=null && languages.length>0)
-            dsd.extend(false, languages);
+            dsd.extend(languages);
         //Return dsd
         return dsd;
     }
