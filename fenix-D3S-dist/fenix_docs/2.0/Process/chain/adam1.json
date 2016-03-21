@@ -1,0 +1,58 @@
+[
+  {
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "oda": { "enumeration": [ "usd_commitment" ] },
+        "sectorcode": {
+          "codes": [
+            {
+              "uid": "crs_sectors",
+              "version": "2016",
+              "codes": [
+                "600"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "pggroup",
+    "parameters": {
+      "by": [
+        "recipientcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "pgfirst"
+        }
+      ]
+    }
+  },
+  {
+    "name": "select",
+    "parameters": {
+      "query": "WHERE recipientcode<>?",
+      "queryParameters": [ { "value": "NA" } ]
+    }
+  }
+]
