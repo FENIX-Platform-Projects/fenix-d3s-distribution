@@ -4,38 +4,38 @@
          {
             "code": "106"
          }
-      ], 
-      "idCodeList": "IANAcharacterSet", 
+      ],
+      "idCodeList": "IANAcharacterSet",
       "version": null
-   }, 
+   },
    "contacts": [
       {
          "contactInfo": {
-            "address": null, 
-            "emailAddress": null, 
+            "address": null,
+            "emailAddress": null,
             "phone ": null
-         }, 
-         "name": null, 
+         },
+         "name": null,
          "organization": {
             "EN": "Organisation for Economic Co-operation and Development (OECD)"
-         }, 
-         "organizationUnit": null, 
+         },
+         "organizationUnit": null,
          "role": null
       }
-   ], 
+   ],
    "dsd": {
       "contextSystem": "adam"
-   }, 
+   },
    "language": {
       "codes": [
          {
             "code": "eng"
          }
-      ], 
-      "idCodeList": "ISO639-2", 
+      ],
+      "idCodeList": "ISO639-2",
       "version": "1998"
-   }, 
-   "languageDetails": null, 
+   },
+   "languageDetails": null,
    "meAccessibility": {
       "seConfidentiality": {
          "confidentialityStatus": {
@@ -43,53 +43,53 @@
                {
                   "code": "F"
                }
-            ], 
-            "idCodeList": "CL_CONF_STATUS", 
+            ],
+            "idCodeList": "CL_CONF_STATUS",
             "version": "1.0"
          }
       }
-   }, 
+   },
    "meContent": {
       "description": {
          "EN": "OECD Creditor Reporting System (CRS) code list for Channels"
-      }, 
+      },
       "keywords": [
-         "crs", 
-         "code", 
+         "crs",
+         "code",
          "codes"
-      ], 
-      "resourceRepresentationType": "codelist", 
+      ],
+      "resourceRepresentationType": "codelist",
       "seCodeList": {
-         "numberOfLevels": "3", 
+         "numberOfLevels": "3",
          "typeOfCodeList": "tree"
-      }, 
+      },
       "seCoverage": {
          "coverageSectors": {
             "codes": [
                {
                   "code": "06"
                }
-            ], 
-            "idCodeList": "FENIX_Subjects", 
+            ],
+            "idCodeList": "FENIX_Subjects",
             "version": "1.0"
          }
       }
-   }, 
+   },
    "metadataLanguage": {
       "codes": [
          {
             "code": "eng"
          }
-      ], 
-      "idCodeList": "ISO639-2", 
+      ],
+      "idCodeList": "ISO639-2",
       "version": "1998"
-   }, 
-   "metadataStandardName": "FENIX metadata", 
-   "metadataStandardVersion": "1.0", 
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
    "title": {
       "EN": "OECD Channels"
-   }, 
-   "uid": "crs_channels", 
+   },
+   "uid": "crs_channels",
    "version": "2016"
 }
 --structure--
@@ -101,12 +101,12 @@ shortTitleColumnIndex_EN=5
 shortTitleColumnIndex_FR=6
 
 --data--
-@10000@PUBLIC SECTOR INSTITUTIONS@INSTITUTIONS DU SECTEUR PUBLIC@@
+@10000@Public sector institutions@Institutions du secteur public@@
 10000@11000@Donor Government@Gouvernement du donneur@@
 10000@12000@Recipient Government@Gouvernement du bénéficiaire@@
 10000@13000@Third Country Government (Delegated co-operation)@Gouvernement tiers (coopération déléguée)@@
-@20000@NON-GOVERNMENTAL ORGANISATIONS (NGOs) AND CIVIL SOCIETY @ORGANISATIONS NON GOUVERNEMENTALES (ONG) et SOCIÉTÉ CIVILE@@
-20000@21000@INTERNATIONAL NGO@ONG INTERNATIONALE@@
+@20000@Non-Governmental Organisations (NGOs) and civil society@Organisations Non Gouvernamentales (ONG) et société civile@@
+20000@21000@International NGO@ONG Internationale@@
 21000@21045@African Medical and Research Foundation @Fondation africaine pour la médecine et la recherche@AMREF@AMREF
 21000@21046@Agency for Cooperation and Research in Development @Association de Coopération et de Recherche pour le Développement@ACORD@ACORD
 21000@21001@Association of Geoscientists for International Development @Association de géoscientifiques pour le développement international@AGID@AGID
@@ -172,7 +172,7 @@ shortTitleColumnIndex_FR=6
 23000@21003@Latin American Council for Social Sciences @Conseil latino-américain des sciences sociales@CLASCO@CLASCO
 23000@21030@Pan African Institute for Development@Institut panafricain pour le développement@PAID@IPD
 23000@21055@Regional AIDS Training Network@Réseau régional de formation sur le SIDA@RATN@RRFS
-@30000@PUBLIC-PRIVATE PARTNERSHIPS (PPPs) and NETWORKS@PARTENARIATS PUBLIC-PRIVÉ ET RÉSEAUX@@
+@30000@Public-Private partnerships (PPPs) and networks@Partnenariats public-privé  et réseaux@@
 30000@31000@Public-Private Partnership (PPP)@Partenariat public-privé (PPP)@@
 31000@30008@Cities Alliance@Alliance pour les villes@@
 31000@30016@European Fund for Southeast Europe@European Fund for Southeast Europe@EFSE@EFSE
@@ -191,7 +191,7 @@ shortTitleColumnIndex_FR=6
 31000@21056@Renewable Energy and Energy Efficiency Partnership@Partenariat pour les énergies renouvelables et l'efficience énergétique@REEEP@REEEP
 31000@30017@SANAD Fund for Micro, Small and Medium Enterprises@SANAD Fund for Micro, Small and Medium Enterprises@SANAD@SANAD
 31000@30009@Small Arms Survey@Small Arms Survey@SAS@SAS
-30000@32000@Network@RÉSEAU@@
+30000@32000@Network@Réseau@@
 32000@47010@Commonwealth Agency for Public Administration and Management @Agence du Commonwealth pour l'administration et la gestion publiques@CAPAM@CAPAM
 32000@47028@Commonwealth Partnership for Technical Management @Partenariat pour la gestion technique (Commonwealth)@CPTM@CPTM
 32000@21043@European Parliamentarians for Africa@Association des parlementaires d’Europe pour l’Afrique@AWEPA@AWEPA
@@ -201,10 +201,10 @@ shortTitleColumnIndex_FR=6
 32000@21017@International Centre for Trade and Sustainable Development @Centre international de commerce et de développement durable @ICTSD@ICTSD
 32000@31003@International Land Coalition@Coalition internationale pour l'accès à la terre @ILC@ILC
 32000@31005@Parliamentary Network on the World Bank@Réseau parlementaire sur la Banque mondaile@PNoWB@RPsBM
-@40000@MULTILATERAL ORGANISATIONS@ORGANISATIONS MULTILATÉRALES@@
+@40000@Multilateral organisations@Organisations multilatérales@@
 40000@41000@United Nations agency, fund or commission (UN)@Agence, fonds ou commission des Nations unies (NU)@@
 41000@41147@Central Emergency Response Fund@Fonds central pour les interventions d'urgence@CERF@CERF
-41000@41101@Convention to Combat Desertification @Convention sur la lutte contre la désertification @UNCCD@CCD 
+41000@41101@Convention to Combat Desertification @Convention sur la lutte contre la désertification @UNCCD@CCD
 41000@41102@Desert Locust Control Organisation for Eastern Africa @Organisation de lutte contre le criquet pèlerin dans l'Est Africain@DLCO-EA@OLCP-EA
 41000@41106@Economic and Social Commission for Asia and the Pacific @Commission économique et sociale pour l'Asie et le Pacifique@ESCAP@CESAP
 41000@41105@Economic and Social Commission for Western Asia@Commission économique et sociale pour l'Asie occidentale@ESCWA@CESAO
@@ -308,7 +308,7 @@ shortTitleColumnIndex_FR=6
 46000@46012@Inter-American Development Bank, Inter-American Investment Corporation and Multilateral Investment Fund @Banque interaméricaine de développement, Société interaméricaine d'investissements, Fonds multilatéral d'investissements@IDB@BID
 46000@46025@Islamic Development Bank@Banque Islamique de Développement@IsDB@BIsD
 46000@46021@West African Development Bank@Banque ouest-africaine de développement@BOAD@BOAD
-47000@47000@Other multilateral institution@Autre institution multilatérale@@
+40000@47000@Other multilateral institution@Autre institution multilatérale@@
 47000@47111@Adaptation Fund@Fonds pour l’adaptation@@
 47000@47009@African and Malagasy Council for Higher Education @Conseil africain et malgache pour l'enseignement supérieur@CAMES@CAMES
 47000@47001@African Capacity Building Foundation @Fondation pour le renforcement des capacités en Afrique@ACBF@ACBF
@@ -371,7 +371,7 @@ shortTitleColumnIndex_FR=6
 47000@47078@Multilateral Fund for the Implementation of the Montreal Protocol @Fonds multilatéral pour l’application du Protocole de Montréal @Montreal Protocol@Protocol de Montréal
 47000@47117@New Partnership for Africa's Development@Nouveau Partenariat pour le développement de l’Afrique@NEPAD@NEPAD
 47000@47128@Nordic Development Fund@Nordic Development Fund@NDF@NDF
-47000@47081@OECD Development Centre @OCDE Centre de développement@OECD-Dev. Centre@OCDE-Centre de dév. 
+47000@47081@OECD Development Centre @OCDE Centre de développement@OECD-Dev. Centre@OCDE-Centre de dév.
 47000@47142@OPEC Fund for International Development@Le Fonds OPEP pour le développement international@OFID@OFID
 47000@47080@Organisation for Economic Co-operation and Development (Contributions to special funds for Technical Co-operation Activities Only) @Organisation de Coopération et de développement économiques (contributions aux fonds spéciaux pour les activités de coopération technique uniquement)@OECD@OCDE
 47000@47079@Organisation of American States @Organisation des États américains@OAS@OEA
@@ -398,7 +398,7 @@ shortTitleColumnIndex_FR=6
 47000@47098@Unrepresented Nations and Peoples’ Organisation @Organisation des peuples et des nations non représentés@UNPO@UNPO
 47000@47100@West African Monetary Union @Union monétaire ouest-africaine@WAMU@UMOA
 47000@47139@World Customs Organization Customs Co-operation Fund@Organisation Mondiale des Douanes Fonds de coopération douanière@WCO CCF@OMD CCF
-@50000@OTHER @AUTRE@@
+@50000@Other @Autre@@
 50000@51000@University, college or other teaching institution, research institute or think‑tank@Université, institut d’éducation et autre institution d’enseignement, institut de recherche ou groupe de réflexion@@
 51000@47101@Africa Rice Centre@Centre du riz pour l’Afrique@WARDA@ADRAO
 51000@47069@Bioversity International@Bioversity International@@
