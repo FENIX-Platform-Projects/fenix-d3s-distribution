@@ -1,0 +1,138 @@
+[
+  {
+    "name" : "union",
+    "sid" : [
+      {"uid" : "test", "version" : "1"},
+      {"uid" : "test", "version" : "2"}
+    ],
+    "parameters" : {
+      "logic" : "manual",
+      "join" : [
+        {
+          "columns" : ["recipientcode", null, "value", "unitcode"]
+        },
+        {
+          "columns" : ["recipientcode", "sectorcode", "value", "unitcode"]
+        }
+      ]
+    }
+  },
+
+
+  {
+    "name": "filter",
+    "sid" : [{"uid" : "adam_usd_aggregation_table"}],
+    "parameters": {
+      "rows": {
+        "oda": { "enumeration": [ "usd_commitment" ] },
+        "sectorcode": {
+          "codes": [
+            {
+              "uid": "crs_sectors",
+              "version": "2016",
+              "codes": [
+                "600"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "select",
+    "rid" : {"uid" : "test", "version" : "1" },
+    "parameters": {
+      "query": "WHERE recipientcode<>?",
+      "queryParameters": [ { "value": "NA" } ]
+    }
+  },
+  {
+    "name": "filter",
+    "sid" : [{"uid" : "adam_usd_aggregation_table"}],
+    "parameters": {
+      "rows": {
+        "oda": { "enumeration": [ "usd_commitment" ] },
+        "sectorcode": {
+          "codes": [
+            {
+              "uid": "crs_sectors",
+              "version": "2016",
+              "codes": [
+                "600"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode", "sectorcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "select",
+    "rid" : {"uid" : "test", "version" : "2" },
+    "parameters": {
+      "query": "WHERE recipientcode<>?",
+      "queryParameters": [ { "value": "NA" } ]
+    }
+  }
+]
