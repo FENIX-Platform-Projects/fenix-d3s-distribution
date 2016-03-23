@@ -11,6 +11,7 @@ import org.fao.fenix.d3p.dto.QueryStep;
 import org.fao.fenix.d3p.dto.Step;
 import org.fao.fenix.d3p.dto.StepFactory;
 import org.fao.fenix.d3p.dto.StepType;
+import org.fao.fenix.d3p.process.DisposableProcess;
 import org.fao.fenix.d3p.process.dto.Aggregation;
 import org.fao.fenix.d3p.process.dto.GroupParams;
 import org.fao.fenix.d3p.process.type.ProcessName;
@@ -21,7 +22,7 @@ import java.sql.Connection;
 import java.util.*;
 
 @ProcessName("pggroup")
-public class PGGroup extends org.fao.fenix.d3p.process.StatefulProcess<GroupParams> {
+public class PGGroup extends DisposableProcess<GroupParams> {
 
     private @Inject DatabaseUtils databaseUtils;
     private @Inject StepFactory stepFactory;
@@ -30,17 +31,17 @@ public class PGGroup extends org.fao.fenix.d3p.process.StatefulProcess<GroupPara
     private String pid;
 
     @Override
-    public void dispose(Connection connection) throws Exception {
+    public void dispose() throws Exception {
     }
 
     @Override
-    public Step process(Connection connection, GroupParams params, Step... sourceStep) throws Exception {
+    public Step process(GroupParams params, Step... sourceStep) throws Exception {
         pid = uidUtils.getId();
         //Retrieve source informations
         Step source = sourceStep!=null && sourceStep.length==1 ? sourceStep[0] : null;
         StepType type = source!=null ? source.getType() : null;
         if (type==null || (type!=StepType.table && type!=StepType.query))
-            throw new UnsupportedOperationException("query filter can be applied only on a table or an other select query");
+            throw new UnsupportedOperationException("pggroup process support only one table or query input step");
         String sourceData = (String)source.getData();
         sourceData = type==StepType.table ? sourceData : '('+sourceData+") as " + source.getRid();
         DSDDataset dsd = source.getDsd();
@@ -63,7 +64,6 @@ public class PGGroup extends org.fao.fenix.d3p.process.StatefulProcess<GroupPara
             step.setParams(((QueryStep) source).getParams());
             step.setTypes(((QueryStep) source).getTypes());
         }
-        step.setRid(getRandomTmpTableName());
         return step;
     }
 
@@ -122,7 +122,7 @@ public class PGGroup extends org.fao.fenix.d3p.process.StatefulProcess<GroupPara
         //Support labels into DSD
         Language[] languages = DatabaseStandards.getLanguageInfo();
         if (languages!=null && languages.length>0)
-            dsd.extend(false, languages);
+            dsd.extend(languages);
         //Return dsd
         return dsd;
     }

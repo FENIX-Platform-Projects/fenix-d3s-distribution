@@ -32,20 +32,22 @@ public class SurveyEnergyProcess extends org.fao.fenix.d3p.process.Process<Energ
 
 
     @Override
-    public Step process(Connection connection, EnergyFilterParameters params, Step... sourceStep) throws Exception {
+    public Step process(EnergyFilterParameters params, Step... sourceStep) throws Exception {
         Step source = sourceStep!=null && sourceStep.length==1 ? sourceStep[0] : null;
         StepType type = source!=null ? source.getType() : null;
         if (type==null || type!=StepType.table)
             throw new UnsupportedOperationException("Survey summary can be applied only on a table");
-        String tableName = source!=null ? (String)source.getData() : null;
-        DSDDataset dsd = source!=null ? source.getDsd() : null;
-        if (tableName!=null && dsd!=null) {
+
+        String tableName = (String)source.getData();
+        Connection connection = source.getStorage().getConnection();
+        try {
             double consumedEnergy = 0;
             double totalEnergy = 0;
             Collection<Object> queryParams = new LinkedList<>();
             StringBuilder query;
             String selectorSegment;
             ResultSet resultSet;
+
 
             //Consumed energy
             if (params.consumers) {
@@ -125,12 +127,12 @@ public class SurveyEnergyProcess extends org.fao.fenix.d3p.process.Process<Energ
 
             //Create and return step
             IteratorStep step = (IteratorStep)stepFactory.getInstance(StepType.iterator);
-            step.setRid(getRandomTmpTableName());
             step.setDsd(metadata.getDsd());
             step.setData(new LabelDataIterator(data,new Table(metadata),metadata.getDsd(),getCodeLists(new String[][] {{"GIFT_UM",null}})));
             return step;
-        } else
-            throw new Exception ("Source step for data filtering is unavailable or incomplete.");
+        } finally {
+            connection.close();
+        }
     }
 
     private Collection<Resource<DSDCodelist, Code>> getCodeLists(String[][] ids) throws Exception {
@@ -176,7 +178,7 @@ public class SurveyEnergyProcess extends org.fao.fenix.d3p.process.Process<Energ
         column.getDomain().getCodes().add(umCodeList);
         dsd.getColumns().add(column);
         if (languages!=null && languages.length>0)
-            dsd.extend(false, languages);
+            dsd.extend(languages);
 
         return metadata;
     }

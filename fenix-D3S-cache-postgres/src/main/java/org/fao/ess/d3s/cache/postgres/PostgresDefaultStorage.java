@@ -8,6 +8,7 @@ import org.fao.fenix.commons.utils.database.DataIterator;
 import org.fao.fenix.d3s.cache.dto.StoreStatus;
 import org.fao.fenix.d3s.cache.dto.dataset.Column;
 import org.fao.fenix.d3s.cache.dto.dataset.Table;
+import org.fao.fenix.d3s.cache.dto.dataset.TableScope;
 import org.fao.fenix.d3s.cache.dto.dataset.Type;
 import org.fao.fenix.d3s.cache.storage.StorageName;
 import org.postgresql.PGConnection;
@@ -23,9 +24,10 @@ import java.util.Date;
 
 @Singleton
 @StorageName("postgres")
-public class DefaultStorage extends PostgresStorage {
+public class PostgresDefaultStorage extends PostgresStorage {
 
     private static String SCHEMA_NAME = "DATA";
+    private static String TMP_TABLESPACE = "d3s_tmp";
     private final Map<String, Connection> session = new HashMap<>();
 
 
@@ -54,7 +56,7 @@ public class DefaultStorage extends PostgresStorage {
     //DATA
 
     @Override
-    public synchronized StoreStatus create(Table tableStructure, Date timeout) throws Exception {
+    public synchronized StoreStatus create(Table tableStructure, Date timeout, TableScope scope) throws Exception {
         String tableName = tableStructure!=null ? tableStructure.getTableName() : null;
         if (session.containsKey(tableName))
             throw new ConcurrentModificationException("Write session already open on: "+tableName);
@@ -67,10 +69,16 @@ public class DefaultStorage extends PostgresStorage {
             throw new Exception("Duplicate table error.");
 
         //Create query
-        StringBuilder query = new StringBuilder("CREATE UNLOGGED TABLE IF NOT EXISTS ").append(getTableName(tableName)).append(" (");
+        StringBuilder query = new StringBuilder("CREATE UNLOGGED TABLE IF NOT EXISTS ").append(getTableName(tableName));
         StringBuilder queryIndex = new StringBuilder(" PRIMARY KEY (");
         boolean containsKey = false;
 
+        //Check for temporary RAM table
+        if (scope==TableScope.temporary)
+            query.append(" TABLESPACE ").append(TMP_TABLESPACE);
+
+        //Append columns and primary key
+        query.append(" (");
         for (Column column : columns) {
             query.append(column.getName());
 
@@ -437,6 +445,24 @@ public class DefaultStorage extends PostgresStorage {
                 connection.createStatement().executeUpdate("DROP TABLE " + getTableName(tableName));
                 count++;
             }
+
+            //Remove temporary indexes
+            ResultSet resultSet = connection.createStatement().executeQuery("select schemaname, tablename from pg_tables where tablespace = '"+TMP_TABLESPACE+'\'');
+            while (resultSet.next()) {
+                String indexName = resultSet.getString(1)+'.'+resultSet.getString(2);
+                connection.createStatement().executeUpdate("DROP INDEX "+indexName);
+                count++;
+            }
+            //Remove temporary tables
+            resultSet = connection.createStatement().executeQuery("select schemaname, tablename from pg_tables where tablespace = '"+TMP_TABLESPACE+'\'');
+            while (resultSet.next()) {
+                String tableName = resultSet.getString(1)+'.'+resultSet.getString(2);
+                connection.createStatement().executeUpdate("DROP TABLE "+tableName);
+                count++;
+            }
+
+
+
 
         } catch (Exception ex) {
             connection.rollback();

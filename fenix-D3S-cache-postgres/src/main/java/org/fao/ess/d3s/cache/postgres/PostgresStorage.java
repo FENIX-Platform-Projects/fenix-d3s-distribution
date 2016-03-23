@@ -1,5 +1,6 @@
 package org.fao.ess.d3s.cache.postgres;
 
+import org.apache.log4j.Logger;
 import org.fao.fenix.commons.utils.FileUtils;
 import org.fao.fenix.d3s.cache.storage.dataset.DatasetStorage;
 import org.fao.fenix.d3s.cache.tools.Server;
@@ -15,6 +16,8 @@ import java.sql.SQLException;
 import java.util.Map;
 
 public abstract class PostgresStorage implements DatasetStorage {
+    private static final Logger LOGGER = Logger.getLogger(PostgresStorage.class);
+
     @Inject private FileUtils fileUtils;
 
     private boolean initialized = false;
@@ -54,20 +57,20 @@ public abstract class PostgresStorage implements DatasetStorage {
         if (input!=null) {
             //Read script instructions
             String script = fileUtils.readTextFile(input);
-            String[] instructions = script.split(";");
-            //Run script
-            Connection connection = getConnection();
-            try {
-                for (String command : instructions)
-                    connection.createStatement().executeUpdate(command.trim());
-                connection.commit();
-            } catch (Exception ex) {
-                connection.rollback();
-                throw ex;
-            } finally {
-                if (connection != null)
-                    connection.close();
-            }
+            String[] instructions = script.split("-- command");
+            //Run safe script
+            Connection connection = null;
+            for (String command : instructions)
+                if ((command = command.trim()).length()>0)
+                    try {
+                        (connection = getConnection()).setAutoCommit(true);
+                        connection.createStatement().executeUpdate(command.trim());
+                    } catch (Exception ex) {
+                        LOGGER.warn("Postgres storage init script command error: "+ex.getMessage());
+                    } finally {
+                        if (connection!=null)
+                            connection.close();
+                    }
         }
     }
 

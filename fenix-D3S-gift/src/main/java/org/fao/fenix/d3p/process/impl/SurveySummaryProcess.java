@@ -23,14 +23,15 @@ public class SurveySummaryProcess extends org.fao.fenix.d3p.process.Process<Summ
 
 
     @Override
-    public Step process(Connection connection, SummaryFilterParameters params, Step... sourceStep) throws Exception {
+    public Step process(SummaryFilterParameters params, Step... sourceStep) throws Exception {
         Step source = sourceStep!=null && sourceStep.length==1 ? sourceStep[0] : null;
         StepType type = source!=null ? source.getType() : null;
         if (type==null || type!=StepType.table)
             throw new UnsupportedOperationException("Survey summary can be applied only on a table");
-        String tableName = source!=null ? (String)source.getData() : null;
-        DSDDataset dsd = source!=null ? source.getDsd() : null;
-        if (tableName!=null && dsd!=null) {
+
+        String tableName = (String)source.getData();
+        Connection connection = source.getStorage().getConnection();
+        try {
             //Population and consumers number
             Collection<Object> queryParams = new LinkedList<>();
             StringBuilder query = new StringBuilder("SELECT COUNT(*) FROM (SELECT DISTINCT subject FROM ").append(tableName).append(" where item = 'FOOD_AMOUNT_PROC'");
@@ -192,18 +193,18 @@ public class SurveySummaryProcess extends org.fao.fenix.d3p.process.Process<Summ
 
             //Return step
             IteratorStep step = (IteratorStep)stepFactory.getInstance(StepType.iterator);
-            step.setRid(getRandomTmpTableName());
             step.setDsd(getDsd());
             step.setData(data.iterator());
             return step;
-        } else
-            throw new Exception ("Source step for data filtering is unavailable or incomplete.");
+        } finally {
+            connection.close();
+        }
     }
 
     //DSD creator
     private DSDDataset getDsd() {
         DSDDataset resultDSD = new DSDDataset();
-        resultDSD.setContextSystem("D3S");
+        resultDSD.setContextSystem("D3P");
         resultDSD.setColumns(new LinkedList<DSDColumn>());
         DSDColumn column = new DSDColumn();
         column.setId("variable");
