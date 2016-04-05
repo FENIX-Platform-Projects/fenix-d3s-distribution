@@ -1,0 +1,21 @@
+{
+  "resource": {
+    "metadata": {
+      "uid": "test_md_3857"
+    },
+    "data": []
+  },
+  "input": {
+    "plugin": "inputMD",
+    "config": {}
+  },
+  "output": {
+    "plugin": "outputMD",
+    "config": {
+      "full": false,
+      "lang": "EN",
+      "template": "uneca",
+      "fileName": "test.pdf"
+    }
+  }
+}
