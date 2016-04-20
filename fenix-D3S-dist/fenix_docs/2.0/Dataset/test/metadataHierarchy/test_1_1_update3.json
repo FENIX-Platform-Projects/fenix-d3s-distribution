@@ -2,5 +2,8 @@
   "uid": "test_1_1",
   "title": {
     "FR": "EDUCATION BIS"
+  },
+  "meContent": {
+    "resourceRepresentationType": "dataset"
   }
 }
