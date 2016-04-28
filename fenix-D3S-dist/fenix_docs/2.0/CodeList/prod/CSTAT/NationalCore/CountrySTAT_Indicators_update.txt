@@ -1,0 +1,24 @@
+{
+    "uid": "CountrySTAT_Indicators"
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+
+
+--data--
+
+@13@Fishery
+13@1301@Aquaculture production
+1301@130102@Marine Aquaculture production
+130102@13010201@Industrial Marine Aquaculture production
+130102@13010202@Artisanal Marine Aquaculture production
+13@1302@Capture production
+1302@130202@Marine Capture production
+130202@13020201@Industrial Marine Capture production
+130202@13020202@Artisanal Marine Capture production
