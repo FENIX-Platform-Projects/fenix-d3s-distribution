@@ -1,0 +1,270 @@
+{
+  "metadata" : {
+    "creationDate" : 1460705825687,
+    "language" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "eng"
+      } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "title" : {
+      "EN" : "Population by sex"
+    },
+    "dsd" : {
+      "contextSystem" : "cstat_gmb",
+      "datasources" : [ "D3S" ],
+      "columns" : [ {
+        "key" : true,
+        "id" : "DIMENSION0",
+        "title" : {
+          "EN" : "Year"
+        },
+        "values" : {
+          "timeList" : [ 1901, 1911, 1921, 1931, 1951, 1963, 1973, 1983, 1993, 2003 ]
+        },
+        "subject" : "time",
+        "dataType" : "year"
+      }, {
+        "key" : true,
+        "id" : "DIMENSION1",
+        "title" : {
+          "EN" : "Indicator"
+        },
+        "values" : {
+          "codes" : [ {
+            "codes" : [ {
+              "code" : "0501",
+              "label" : {
+                "EN" : "Population"
+              }
+            } ],
+            "idCodeList" : "CountrySTAT_Indicators"
+          } ]
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_Indicators"
+          } ]
+        },
+        "subject" : "indicator",
+        "dataType" : "code"
+      }, {
+        "key" : true,
+        "id" : "DIMENSION2",
+        "title" : {
+          "EN" : "Sex"
+        },
+        "values" : {
+          "codes" : [ {
+            "codes" : [ {
+              "code" : "8002",
+              "label" : {
+                "EN" : "Male"
+              }
+            }, {
+              "code" : "8003",
+              "label" : {
+                "EN" : "Female"
+              }
+            }, {
+              "code" : "8001",
+              "label" : {
+                "EN" : "Total"
+              }
+            } ],
+            "idCodeList" : "CountrySTAT_Gender"
+          } ]
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_Gender"
+          } ]
+        },
+        "subject" : "gender",
+        "dataType" : "code"
+      }, {
+        "key" : false,
+        "id" : "VALUE0",
+        "title" : {
+          "EN" : "Value"
+        },
+        "subject" : "value",
+        "dataType" : "number"
+      }, {
+        "key" : false,
+        "id" : "OTHER0",
+        "title" : {
+          "EN" : "Flag"
+        },
+        "subject" : "flag",
+        "dataType" : "text"
+      }, {
+        "key" : false,
+        "id" : "OTHER1",
+        "title" : {
+          "EN" : "um"
+        },
+        "values" : {
+          "codes" : [ {
+            "codes" : [ {
+              "code" : "0107",
+              "label" : {
+                "EN" : "thousands"
+              }
+            } ],
+            "idCodeList" : "CountrySTAT_UM"
+          } ]
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_UM"
+          } ]
+        },
+        "subject" : "um",
+        "dataType" : "code"
+      }, {
+        "key" : false,
+        "id" : "DIMENSION1_EN",
+        "title" : {
+          "EN" : "Indicator"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "DIMENSION1_ES",
+        "title" : {
+          "EN" : "Indicator"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "DIMENSION1_FR",
+        "title" : {
+          "EN" : "Indicator"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "DIMENSION1_DE",
+        "title" : {
+          "EN" : "Indicator"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "DIMENSION2_EN",
+        "title" : {
+          "EN" : "Sex"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "DIMENSION2_ES",
+        "title" : {
+          "EN" : "Sex"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "DIMENSION2_FR",
+        "title" : {
+          "EN" : "Sex"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "DIMENSION2_DE",
+        "title" : {
+          "EN" : "Sex"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "OTHER1_EN",
+        "title" : {
+          "EN" : "um"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "OTHER1_ES",
+        "title" : {
+          "EN" : "um"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "OTHER1_FR",
+        "title" : {
+          "EN" : "um"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      }, {
+        "key" : false,
+        "id" : "OTHER1_DE",
+        "title" : {
+          "EN" : "um"
+        },
+        "dataType" : "text",
+        "virtual" : false,
+        "transposed" : false
+      } ]
+    },
+    "uid" : "D3S_83928266475004708527987642121810700569",
+    "meContent" : {
+      "resourceRepresentationType" : "dataset"
+    },
+    "characterSet" : {
+      "codes" : [ {
+        "code" : "106"
+      } ],
+      "idCodeList" : "IANAcharacterSet"
+    },
+    "metadataStandardName" : "FENIX",
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "codes" : [ { } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "contacts" : [ {
+      "organization" : {
+        "EN" : "Gambia bureau of statistics"
+      },
+      "contactInfo" : {
+        "phone" : "000"
+      },
+      "pointOfContact" : "Baba Suwareh"
+    } ],
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" : 1460705825685
+      }
+    }
+  },
+  "data" : [ [ 1901, "0501", "8002", null, "-", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1901, "0501", "8003", null, "-", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1901, "0501", "8001", 90.404, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1911, "0501", "8001", 146.101, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1911, "0501", "8002", 73.793, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1911, "0501", "8003", 72.309, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1921, "0501", "8001", 210.611, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1921, "0501", "8002", 111.02, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1921, "0501", "8003", 99.591, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1931, "0501", "8003", 104.894, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1931, "0501", "8001", 199.52, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1931, "0501", "8002", 104.894, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1951, "0501", "8002", null, "-", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1951, "0501", "8003", null, "-", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1951, "0501", "8001", 279.686, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1963, "0501", "8003", 154.637, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1963, "0501", "8002", 160.849, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1963, "0501", "8001", 315.486, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1973, "0501", "8003", 243.113, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1973, "0501", "8002", 250.386, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1973, "0501", "8001", 493.499, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1983, "0501", "8001", 687.817, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1983, "0501", "8002", 342.134, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1983, "0501", "8003", 345.683, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1993, "0501", "8002", 519.95, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1993, "0501", "8003", 518.195, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 1993, "0501", "8001", 1025.867, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 2003, "0501", "8003", 689.84, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 2003, "0501", "8001", 1360.681, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ], [ 2003, "0501", "8002", 670.841, "", "0107", "Population", null, null, null, null, null, null, null, "thousands", null, null, null ] ],
+  "size" : 30
+}
