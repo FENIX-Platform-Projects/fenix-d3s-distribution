@@ -64,7 +64,7 @@
     "rid" : {"uid" : "test", "version" : "1" },
     "parameters": {
       "query": "WHERE recipientcode<>?",
-      "queryParameters": [ { "value": "NA" } ]
+      "queryParameters": [ { "value": "34"} ]
     }
   },
   {

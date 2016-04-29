@@ -1,7 +1,7 @@
 {
   "resource": {
     "metadata": {
-      "uid": "test_md_3857"
+      "uid": "adam_country_indicators"
     },
     "data": []
   },
@@ -14,7 +14,7 @@
     "config": {
       "full": false,
       "lang": "EN",
-      "template": "uneca",
+      "template": "fao",
       "fileName": "test.pdf"
     }
   }

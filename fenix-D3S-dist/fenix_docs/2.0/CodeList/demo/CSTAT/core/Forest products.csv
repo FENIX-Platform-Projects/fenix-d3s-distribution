@@ -1,0 +1,174 @@
+{
+    "uid": "CountrySTAT_Forest_products",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "Forest products"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "ESS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["forestry, forest"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+		"dsd":{
+      "contextSystem":"cstat"
+   }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+
+
+--data--
+
+@0101@Recovered Fibre Pulp
+@0102@Uncoated Mechanical
+@0103@Uncoated Woodfree
+@0104@Coated Papers
+@0105@Case Materials
+@0106@Folding Boxboard
+@0107@Wrapping Papers
+@0108@Other Papers Packaging
+@0109@Wood Charcoal
+@0110@Mechanical Wood Pulp
+@0111@Semi-Chemical Wood Pulp
+@0112@Chemical Wood Pulp
+@0113@Unbleached Sulphite Pulp
+@0114@Bleached Sulphite Pulp
+@0115@Unbleached Sulphate Pulp
+@0116@Bleached Sulphate Pulp
+@0117@Dissolving Wood Pulp
+@0118@Other Fibre Pulp
+@0119@Recovered Paper
+@0120@Newsprint
+@0121@Printing+Writing Paper
+@0122@Other Paper+Paperboard
+@0123@Household+Sanitary Paper
+@0124@Wrapg+Packg Paper+Board
+@0125@Paper+Paperboard NES
+@0126@Sawlogs+Veneer Logs (C)
+@0127@Pulpwood,Round&Split(C)
+@0128@Pulpwood,Round&Split(NC)
+@0129@Sawlogs+Veneer Logs (NC)
+@0130@Pulpwood+Particles(C)
+@0131@Pulpwood+Particles(NC)
+@0132@Pulpwood,Round&Split Trd
+@0133@Chips and Particles
+@0134@Wood Residues
+@0135@Other Indust Roundwd(C)
+@0136@Other Indust Roundwd Trd
+@0137@Other Indust Roundwd(NC)
+@0138@Wood Fuel(C)
+@0139@Wood Fuel(NC)
+@0140@Wood Fuel Trd
+@0141@Sawnwood (C)
+@0142@Sawnwood (NC)
+@0143@Veneer Sheets
+@0144@Plywood
+@0145@Particle Board
+@0146@Hardboard
+@0147@MDF
+@0148@Fibreboard, Compressed
+@0149@Insulating Board
+@0150@Ind Rwd Wir (C)
+@0151@Ind Rwd Wir (NC) Tropica
+@0152@Ind Rwd Wir (NC) Other

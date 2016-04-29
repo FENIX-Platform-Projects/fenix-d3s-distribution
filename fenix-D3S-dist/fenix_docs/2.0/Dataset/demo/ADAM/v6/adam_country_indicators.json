@@ -1,5 +1,5 @@
 {
-  "uid": "adam_country_indicators",
+  "uid": "country_indicators_test",
   "title": {
     "EN": "ADAM Recipient/Donor Country Indicators data"
   },
@@ -10,7 +10,7 @@
     "resourceRepresentationType": "dataset"
   },
   "dsd": {
-    "contextSystem": "adam",
+    "contextSystem": "test",
     "datasources": [
       "adam"
     ],

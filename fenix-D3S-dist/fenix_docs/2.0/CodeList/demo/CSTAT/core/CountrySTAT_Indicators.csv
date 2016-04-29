@@ -1,0 +1,218 @@
+{
+    "uid": "CountrySTAT_Indicators",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "CountrySTAT Indicators"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "ESS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["indicators"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 3,
+            "typeOfCodeList": "tree"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+		"dsd":{
+      "contextSystem":"cstat"
+   }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+
+
+--data--
+
+@01@Production
+01@0101@Production quantity
+01@0102@Production value
+01@0103@Yield
+01@0104@Area Harvested
+01@0105@Area sown
+01@0106@Seeds quantity
+@02@Food availability
+02@0201@Protein quantity
+02@0202@Lipid quantity
+02@0203@Food supply quantity
+@03@Trade
+03@0301@Export quantity
+03@0302@Export value
+03@0303@Import quantity
+03@0304@Import value
+03@0305@Consumption quantity
+03@0306@Re-export quantity
+03@0307@Re-export value
+03@0308@Re-import quantity
+03@0309@Re-import value
+@04@Machinery
+04@0401@Machines in service
+@05@Population
+05@0501@Population
+05@0502@Economically active population
+05@0503@Population total density
+05@0504@Population growth Rate 
+05@0505@Life expectancy
+@06@Prices
+06@0601@Consumer price
+06@0602@Producer price
+06@0603@Commercial rate
+06@0604@Official rate
+06@0605@Wholesale price
+06@0606@Annual average price
+@07@Value added
+07@0701@Constant prices
+07@0702@Current prices
+@08@Land use
+08@0801@Administrative Area
+08@0802@Agricultural area
+08@0803@Arable land
+08@0804@Arable land and permanent crops area
+08@0805@Area equipped for irrigation
+08@0806@Fallow Land
+08@0807@Forest area
+08@0808@Inland water
+08@0809@Land Area
+08@0810@Other land?
+08@0811@Other wooded land
+08@0812@Permanent crops area
+08@0813@Permanent meadows and pastures
+08@0814@Temporary crops area
+08@0815@Temporary meadows and pastures
+@09@Employment
+09@0901@Unemployment Rate 
+09@0902@Labourforce Participation Rate
+@10@Water
+10@1001@Average rainfall
+10@1002@Max temperature
+10@1003@Min temperature
+@11@Livestock
+11@1101@Slaughtered animals
+11@1102@Live animals
+1101@110101@Female Live Animals
+1101@110102@Lactating Animals
+11@1103@Laying hens
+@12@National account
+12@1201@GPD
+12@1202@GDP growth
+12@1203@GDP per capita
+@13@Fishery
+13@1301@Aquaculture production
+1301@130101@Inland Aquaculture production
+1301@130102@Marine Aquaculture production
+1301@130103@Marine/Brackish Aquaculture production
+13@1302@Capture production
+1302@130201@Inland Capture production
+1302@130202@Marine Capture production
+1302@130203@Marine/Brackish Capture production
+1102@110203@Male Live Animals
+1102@110204@Born Animals
+1102@110205@Bought Animals
+1102@110206@Animals got as gift
+1102@110207@Animals got for caretaking
+1102@110208@Sold Animals
+1102@110209@Stolen Animals
+1102@110210@Animals given for caretaking
+1102@110211@Animals given as gift
+11@1104@Dead Animals
+11@1105@Total Input
+11@1106@Total Output
+
+
+

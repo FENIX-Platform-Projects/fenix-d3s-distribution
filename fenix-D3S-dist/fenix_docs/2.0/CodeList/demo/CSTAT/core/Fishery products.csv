@@ -1,0 +1,181 @@
+{
+    "uid": "CountrySTAT_Fishery_products",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "Fishery products"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "ESS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["fishery, fish"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 2,
+            "typeOfCodeList": "tree"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+		"dsd":{
+      "contextSystem":"cstat"
+   }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+
+
+--data--
+
+@1@Freshwater fishes
+1@11@Carps, barbels and other cyprinids
+1@12@Tilapias and other cichlids
+1@13@Miscellaneous freshwater fishes
+@2@Diadromous fishes
+2@21@Sturgeons, paddlefishes
+2@22@River eels
+2@23@Salmons, trouts, smelts
+2@24@Shads
+2@25@Miscellaneous diadromous fishes
+@3@Marine fishes
+3@31@Flounders, halibuts, soles
+3@32@Cods, hakes, haddocks
+3@33@Miscellaneous coastal fishes
+3@34@Miscellaneous demersal fishes
+3@35@Herrings, sardines, anchovies
+3@36@Tunas, bonitos, billfishes
+3@37@Miscellaneous pelagic fishes
+3@38@Sharks, rays, chimaeras
+3@39@Marine fishes not identified
+@4@Crustaceans
+4@41@Freshwater crustaceans
+4@42@Crabs, sea-spiders
+4@43@Lobsters, spiny-rock lobsters
+4@44@King crabs, squat-lobsters
+4@45@Shrimps, prawns
+4@46@Krill, planktonic crustaceans
+4@47@Miscellaneous marine crustaceans
+@5@Molluscs
+5@51@Freshwater molluscs
+5@52@Abalones, winkles, conchs
+5@53@Oysters
+5@54@Mussels
+5@55@Scallops, pectens
+5@56@Clams, cockles, arkshells
+5@57@Squids, cuttlefishes, octopuses
+5@58@Miscellaneous marine molluscs
+@6@Whales, seals and other aquatic mammals
+6@61@Blue-whales, fin-whales
+6@62@Sperm-whales, pilot-whales
+6@63@Eared seals, hair seals, walruses
+6@64@Miscellaneous aquatic mammals
+@7@Miscellaneous aquatic animals
+7@71@Frogs and other amphibians
+7@72@Turtles
+7@73@Crocodiles and alligators
+7@74@Sea-squirts and other tunicates
+7@75@Horseshoe crabs and other arachnoids
+7@76@Sea-urchins and other echinoderms
+7@77@Miscellaneous aquatic invertebrates
+@8@Miscellaneous aquatic animal products
+8@81@Pearls, mother-of-pearl, shells
+8@82@Corals
+8@83@Sponges
+@9@Aquatic plants
+9@91@Brown seaweeds
+9@92@Red seaweeds
+9@93@Green seaweeds
+9@94@Miscellaneous aquatic plants
