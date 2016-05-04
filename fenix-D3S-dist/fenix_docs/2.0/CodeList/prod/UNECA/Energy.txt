@@ -1,0 +1,108 @@
+{  
+      "uid":"UNECA_Energy",
+			 "version": null,
+      "title":{  
+         "EN":"UNECA kind of energy"
+				
+      },
+      "meContent":{  
+         "resourceRepresentationType":"codelist",
+         "seCodeList":{  
+            "numberOfLevels":1,
+            "typeOfCodeList":"list"
+         },
+         "description":{  
+            "EN":"This codelist contains the classification of the kind energy according to the energy source"
+         },
+         "keywords":[  
+            "energy"
+          
+         ],
+         "seCoverage":{  
+            "coverageSectors":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"06"
+                  }
+               ],
+               "idCodeList":"FENIX_Subjects"
+            }
+         }
+      },
+      "characterSet":{  
+         "codes":[  
+            {  
+               "code":"106"
+            }
+         ],
+         "idCodeList":"IANAcharacterSet"
+      },
+      "metadataStandardName":"FENIX metadata",
+      "metadataStandardVersion":"1.0",
+      "metadataLanguage":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "contacts":[  
+         {  
+            "organization":{  
+               "EN":"ECA"
+            },
+            "role":"distributor",
+            "organizationUnit":{  
+               "EN":"UNECA"
+            }
+         }
+      ],
+      "meAccessibility":{  
+         "seConfidentiality":{  
+            "confidentialityStatus":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"F"
+                  }
+               ],
+               "idCodeList":"CL_CONF_STATUS"
+            }
+         }
+      },
+      "language":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "dsd":{  
+         "contextSystem":"uneca"
+      }
+   }
+
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+	
+--data--
+
+
+@01@total
+@02@fossil fuels
+@03@geothermal
+@04@hydro
+@05@nuclear
+@06@thermal
+@07@wind

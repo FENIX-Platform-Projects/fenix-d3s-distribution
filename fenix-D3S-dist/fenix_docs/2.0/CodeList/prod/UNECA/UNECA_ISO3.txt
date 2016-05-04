@@ -1,0 +1,516 @@
+﻿{  
+      "uid":"UNECA_ISO3",
+			 "version": null,
+      "title":{  
+         "EN":"UNECA Country Codes"
+				
+      },
+      "meContent":{  
+         "resourceRepresentationType":"codelist",
+         "seCodeList":{  
+            "numberOfLevels":2,
+            "typeOfCodeList":"tree"
+         },
+         "description":{  
+            "EN":"This codelist contains all the African countries. In particular the hierarchy groups countries according to geographic, institutional and economic agreements. The country codes are compliant with the ISO3 international classifications"
+         },
+         "keywords":[  
+            "geographic","national level", "iso", "iso3"
+          
+         ],
+         "seCoverage":{  
+            "coverageSectors":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"0201"
+                  }
+               ],
+               "idCodeList":"FENIX_Subjects"
+            }
+         }
+      },
+      "characterSet":{  
+         "codes":[  
+            {  
+               "code":"106"
+            }
+         ],
+         "idCodeList":"IANAcharacterSet"
+      },
+      "metadataStandardName":"FENIX metadata",
+      "metadataStandardVersion":"1.0",
+      "metadataLanguage":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "contacts":[  
+         {  
+            "organization":{  
+               "EN":"ECA"
+            },
+            "role":"distributor",
+            "organizationUnit":{  
+               "EN":"ECA"
+            }
+         }
+      ],
+      "meAccessibility":{  
+         "seConfidentiality":{  
+            "confidentialityStatus":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"F"
+                  }
+               ],
+               "idCodeList":"CL_CONF_STATUS"
+            }
+         }
+      },
+      "language":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "dsd":{  
+         "contextSystem":"uneca"
+      }
+   }
+
+	 
+	 
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+titleColumnIndex_FR=4
+descriptionColumnIndex_EN=5
+descriptionColumnIndex_FR=6
+
+
+
+--data--
+
+@SROWA@SROWA@SROWA@West Africa@Afrique de l'Ouest
+@SROEA@SROEA@SROEA@Eastern Africa@Afrique de l'Est
+@SROCA@SROCA@SROCA@Central Africa@Afrique Centrale
+@SRONA@SRONA@SRONA@North Africa@Afrique du Nord
+@SROSA@SROSA@SROSA@Southern Africa@Afrique Australe
+@COMESA@COMESA@COMESA@Common Market for Eastern and Southern Africa@MARCHÉ COMMUN DE L'AFRIQUE ORIENTALE ET AUSTRALE
+@ECOWAS@ECOWAS@CEDEAO@Economic Community of West African States@COMMUNAUTÉ ECONOMIQUE DES ETATS DE L’AFRIQUE DE L’OUEST
+@EAC@EAC@EAC@East African Community@COMMUNAUTÉ EST-AFRICAINE
+@SADC@SADC@SADC@Southern African Development Community@COMMUNAUTÉ DE DÉVELOPPEMENT D'AFRIQUE AUSTRALE
+@AMU@AMU@UMA@Arab Maghreb Union@Union du Maghreb Arabe
+@ECCAS@ECCAS@CEEAC@Economic Community of Central African States@COMMUNAUTÉ ECONOMIQUE DES ÉTATS DE L’AFRIQUE CENTRALE
+@IGAD@IGAD@IGAD@Intergovernmental Authority on Development@ AUTORITÉ INTERGOUVERNEMENTALE POUR LE DÉVELOPPEMENT
+@B5@B5@B5@B5@B5
+@OPC@OPC@OPC@Oil producing economies@
+@LDC@LDC@LDC@Least developed countires@
+@LLC@LLC@LLC@Land-locked countries@
+@ISE@ISE@ISE@Island economies@
+@MRC@MRC@MRC@Mineral-rich countries@
+@OLDC@OLDC@OLDC@Oil LDCs@
+@NOLDC@NOLDC@NOLDC@Non-Oil LDCs@
+@LLLDC@LLLDC@LLLDC@Land-locked LDCs@
+@SAF@SAF@SAF@Sub-Saharan Africa@
+@NOPC@NOPC@NOPC@Non-Oil Producing@
+@CENSAD@CEN-SAD@CEN-SAD@The Community of Sahel-Saharan States@COMMUNAUTÉ DES ETATS SAHÉLO-SAHARIENS
+SRONA@DZA@Algeria@Algérie@Algeria@Algérie
+AMU@DZA@Algeria@Algérie@Algeria@Algérie
+B5@DZA@Algeria@Algérie@Algeria@Algérie
+OPC@DZA@Algeria@Algérie@Algeria@Algérie
+OPC@AGO@Angola@Angola@Angola@Angola
+LDC@AGO@Angola@Angola@Angola@Angola
+SROSA@AGO@Angola@Angola@Angola@Angola
+ECCAS@AGO@Angola@Angola@Angola@Angola
+SADC@AGO@Angola@Angola@Angola@Angola
+COMESA@AGO@Angola@Angola@Angola@Angola
+SAF@AGO@Angola@Angola@Angola@Angola
+OLDC@AGO@Angola@Angola@Angola@Angola
+SAF@BEN@Benin@Bénin@Benin@Bénin
+NOLDC@BEN@Benin@Bénin@Benin@Bénin
+NOPC@BEN@Benin@Bénin@Benin@Bénin
+SROWA@BEN@Benin@Bénin@Benin@Bénin
+ECOWAS@BEN@Benin@Bénin@Benin@Bénin
+LDC@BEN@Benin@Bénin@Benin@Bénin
+CENSAD@BEN@Benin@Bénin@Benin@Bénin
+SADC@BWA@Botswana@Botswana@Botswana@Botswana
+SROSA@BWA@Botswana@Botswana@Botswana@Botswana
+NOPC@BWA@Botswana@Botswana@Botswana@Botswana
+LLC@BWA@Botswana@Botswana@Botswana@Botswana
+SAF@BWA@Botswana@Botswana@Botswana@Botswana
+MRC@BWA@Botswana@Botswana@Botswana@Botswana
+LLLDC@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+SAF@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+NOLDC@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+LLC@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+NOPC@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+SROWA@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+ECOWAS@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+LDC@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+CENSAD@BFA@Burkina Faso@Burkina Faso@Burkina Faso@Burkina Faso
+EAC@BDI@Burundi@Burundi@Burundi@Burundi
+LDC@BDI@Burundi@Burundi@Burundi@Burundi
+ECCAS@BDI@Burundi@Burundi@Burundi@Burundi
+SROEA@BDI@Burundi@Burundi@Burundi@Burundi
+COMESA@BDI@Burundi@Burundi@Burundi@Burundi
+NOPC@BDI@Burundi@Burundi@Burundi@Burundi
+LLC@BDI@Burundi@Burundi@Burundi@Burundi
+NOLDC@BDI@Burundi@Burundi@Burundi@Burundi
+SAF@BDI@Burundi@Burundi@Burundi@Burundi
+LLLDC@BDI@Burundi@Burundi@Burundi@Burundi
+SAF@CPV@Cabo Verde@Cap-Vert@Cabo Verde@Cap-Vert
+NOLDC@CPV@Cabo Verde@Cap-Vert@Cabo Verde@Cap-Vert
+SROWA@CPV@Cabo Verde@Cap-Vert@Cabo Verde@Cap-Vert
+ISE@CPV@Cabo Verde@Cap-Vert@Cabo Verde@Cap-Vert
+NOPC@CPV@Cabo Verde@Cap-Vert@Cabo Verde@Cap-Vert
+ECOWAS@CPV@Cabo Verde@Cap-Vert@Cabo Verde@Cap-Vert
+LDC@CPV@Cabo Verde@Cap-Vert@Cabo Verde@Cap-Vert
+OPC@CMR@Cameroon@Cameroun@Cameroon@Cameroun
+ECCAS@CMR@Cameroon@Cameroun@Cameroon@Cameroun
+SROCA@CMR@Cameroon@Cameroun@Cameroon@Cameroun
+SAF@CMR@Cameroon@Cameroun@Cameroon@Cameroun
+SAF@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+NOLDC@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+LLLDC@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+MRC@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+NOPC@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+LLC@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+SROCA@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+ECCAS@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+LDC@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+CENSAD@CAF@Central African Republic@République Centrafricaine@Central African Republic@République Centrafricaine
+CENSAD@TCD@Chad@Tchad@Chad@Tchad
+LDC@TCD@Chad@Tchad@Chad@Tchad
+ECCAS@TCD@Chad@Tchad@Chad@Tchad
+SROCA@TCD@Chad@Tchad@Chad@Tchad
+LLC@TCD@Chad@Tchad@Chad@Tchad
+LLLDC@TCD@Chad@Tchad@Chad@Tchad
+OLDC@TCD@Chad@Tchad@Chad@Tchad
+OPC@TCD@Chad@Tchad@Chad@Tchad
+SAF@TCD@Chad@Tchad@Chad@Tchad
+SAF@COM@Comoros@Comores@Comoros@Comores
+NOLDC@COM@Comoros@Comores@Comoros@Comores
+ISE@COM@Comoros@Comores@Comoros@Comores
+NOPC@COM@Comoros@Comores@Comoros@Comores
+SROEA@COM@Comoros@Comores@Comoros@Comores
+COMESA@COM@Comoros@Comores@Comoros@Comores
+LDC@COM@Comoros@Comores@Comoros@Comores
+CENSAD@COM@Comoros@Comores@Comoros@Comores
+OPC@COG@Congo@Congo@Congo@Congo
+ECCAS@COG@Congo@Congo@Congo@Congo
+SROCA@COG@Congo@Congo@Congo@Congo
+SAF@COG@Congo@Congo@Congo@Congo
+SAF@CIV@Cote d'Ivoire@Côte d'Ivoire@Cote d'Ivoire@Côte d'Ivoire
+SROWA@CIV@Cote d'Ivoire@Côte d'Ivoire@Cote d'Ivoire@Côte d'Ivoire
+ECOWAS@CIV@Cote d'Ivoire@Côte d'Ivoire@Cote d'Ivoire@Côte d'Ivoire
+OPC@CIV@Cote d'Ivoire@Côte d'Ivoire@Cote d'Ivoire@Côte d'Ivoire
+CENSAD@CIV@Cote d'Ivoire@Côte d'Ivoire@Cote d'Ivoire@Côte d'Ivoire
+LDC@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+ECCAS@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+SADC@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+SROEA@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+COMESA@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+NOPC@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+SAF@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+NOLDC@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+MRC@COD@Democratic Republic of the Congo@République Démocratique du Congo@Democratic Republic of the Congo@République Démocratique du Congo
+NOLDC@DJI@Djibouti@Djibouti@Djibouti@Djibouti
+NOPC@DJI@Djibouti@Djibouti@Djibouti@Djibouti
+SAF@DJI@Djibouti@Djibouti@Djibouti@Djibouti
+COMESA@DJI@Djibouti@Djibouti@Djibouti@Djibouti
+SROEA@DJI@Djibouti@Djibouti@Djibouti@Djibouti
+LDC@DJI@Djibouti@Djibouti@Djibouti@Djibouti
+IGAD@DJI@Djibouti@Djibouti@Djibouti@Djibouti
+CENSAD@DJI@Djibouti@Djibouti@Djibouti@Djibouti
+CENSAD@EGY@Egypt@Egypte@Egypt@Egypte
+B5@EGY@Egypt@Egypte@Egypt@Egypte
+OPC@EGY@Egypt@Egypte@Egypt@Egypte
+SRONA@EGY@Egypt@Egypte@Egypt@Egypte
+COMESA@EGY@Egypt@Egypte@Egypt@Egypte
+OPC@GNQ@Equatorial Guinea@Guinée équatoriale@Equatorial Guinea@Guinée équatoriale
+LDC@GNQ@Equatorial Guinea@Guinée équatoriale@Equatorial Guinea@Guinée équatoriale
+ECCAS@GNQ@Equatorial Guinea@Guinée équatoriale@Equatorial Guinea@Guinée équatoriale
+SROCA@GNQ@Equatorial Guinea@Guinée équatoriale@Equatorial Guinea@Guinée équatoriale
+SAF@GNQ@Equatorial Guinea@Guinée équatoriale@Equatorial Guinea@Guinée équatoriale
+OLDC@GNQ@Equatorial Guinea@Guinée équatoriale@Equatorial Guinea@Guinée équatoriale
+NOLDC@ERI@Eritrea@Erythrée@Eritrea@Erythrée
+SAF@ERI@Eritrea@Erythrée@Eritrea@Erythrée
+NOPC@ERI@Eritrea@Erythrée@Eritrea@Erythrée
+LDC@ERI@Eritrea@Erythrée@Eritrea@Erythrée
+IGAD@ERI@Eritrea@Erythrée@Eritrea@Erythrée
+COMESA@ERI@Eritrea@Erythrée@Eritrea@Erythrée
+SROEA@ERI@Eritrea@Erythrée@Eritrea@Erythrée
+CENSAD@ERI@Eritrea@Erythrée@Eritrea@Erythrée
+SROEA@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+COMESA@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+IGAD@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+LDC@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+NOPC@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+SAF@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+LLC@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+NOLDC@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+LLLDC@ETH@Ethiopia@Ethiopie@Ethiopia@Ethiopie
+SAF@GAB@Gabon@Gabon@Gabon@Gabon
+OPC@GAB@Gabon@Gabon@Gabon@Gabon
+SROCA@GAB@Gabon@Gabon@Gabon@Gabon
+ECCAS@GAB@Gabon@Gabon@Gabon@Gabon
+ECOWAS@GMB@Gambia@Gambie@Gambia@Gambie
+LDC@GMB@Gambia@Gambie@Gambia@Gambie
+SROWA@GMB@Gambia@Gambie@Gambia@Gambie
+SAF@GMB@Gambia@Gambie@Gambia@Gambie
+NOPC@GMB@Gambia@Gambie@Gambia@Gambie
+NOLDC@GMB@Gambia@Gambie@Gambia@Gambie
+CENSAD@GMB@Gambia@Gambie@Gambia@Gambie
+CENSAD@GHA@Ghana@Ghana@Ghana@Ghana
+MRC@GHA@Ghana@Ghana@Ghana@Ghana
+NOPC@GHA@Ghana@Ghana@Ghana@Ghana
+SAF@GHA@Ghana@Ghana@Ghana@Ghana
+SROWA@GHA@Ghana@Ghana@Ghana@Ghana
+ECOWAS@GHA@Ghana@Ghana@Ghana@Ghana
+ECOWAS@GIN@Guinea@Guinée@Guinea@Guinée
+LDC@GIN@Guinea@Guinée@Guinea@Guinée
+SROWA@GIN@Guinea@Guinée@Guinea@Guinée
+SAF@GIN@Guinea@Guinée@Guinea@Guinée
+NOPC@GIN@Guinea@Guinée@Guinea@Guinée
+MRC@GIN@Guinea@Guinée@Guinea@Guinée
+NOLDC@GIN@Guinea@Guinée@Guinea@Guinée
+CENSAD@GIN@Guinea@Guinée@Guinea@Guinée
+CENSAD@GNB@Guinea-Bissau@Guinée-Bissau@Guinea-Bissau@Guinée-Bissau
+NOLDC@GNB@Guinea-Bissau@Guinée-Bissau@Guinea-Bissau@Guinée-Bissau
+NOPC@GNB@Guinea-Bissau@Guinée-Bissau@Guinea-Bissau@Guinée-Bissau
+SAF@GNB@Guinea-Bissau@Guinée-Bissau@Guinea-Bissau@Guinée-Bissau
+SROWA@GNB@Guinea-Bissau@Guinée-Bissau@Guinea-Bissau@Guinée-Bissau
+LDC@GNB@Guinea-Bissau@Guinée-Bissau@Guinea-Bissau@Guinée-Bissau
+ECOWAS@GNB@Guinea-Bissau@Guinée-Bissau@Guinea-Bissau@Guinée-Bissau
+IGAD@KEN@Kenya@Kenya@Kenya@Kenya
+EAC@KEN@Kenya@Kenya@Kenya@Kenya
+COMESA@KEN@Kenya@Kenya@Kenya@Kenya
+SROEA@KEN@Kenya@Kenya@Kenya@Kenya
+SAF@KEN@Kenya@Kenya@Kenya@Kenya
+NOPC@KEN@Kenya@Kenya@Kenya@Kenya
+CENSAD@KEN@Kenya@Kenya@Kenya@Kenya
+NOPC@LSO@Lesotho@Lesotho@Lesotho@Lesotho
+SAF@LSO@Lesotho@Lesotho@Lesotho@Lesotho
+LLC@LSO@Lesotho@Lesotho@Lesotho@Lesotho
+NOLDC@LSO@Lesotho@Lesotho@Lesotho@Lesotho
+LLLDC@LSO@Lesotho@Lesotho@Lesotho@Lesotho
+SROSA@LSO@Lesotho@Lesotho@Lesotho@Lesotho
+LDC@LSO@Lesotho@Lesotho@Lesotho@Lesotho
+SADC@LSO@Lesotho@Lesotho@Lesotho@Lesotho
+ECOWAS@LBR@Liberia@Libéria@Liberia@Libéria
+LDC@LBR@Liberia@Libéria@Liberia@Libéria
+SROWA@LBR@Liberia@Libéria@Liberia@Libéria
+NOLDC@LBR@Liberia@Libéria@Liberia@Libéria
+SAF@LBR@Liberia@Libéria@Liberia@Libéria
+NOPC@LBR@Liberia@Libéria@Liberia@Libéria
+CENSAD@LBR@Liberia@Libéria@Liberia@Libéria
+CENSAD@LBY@Libya@Libye@Libya@Libye
+COMESA@LBY@Libya@Libye@Libya@Libye
+SRONA@LBY@Libya@Libye@Libya@Libye
+OPC@LBY@Libya@Libye@Libya@Libye
+AMU@LBY@Libya@Libye@Libya@Libye
+SADC@MDG@Madagascar@Madagascar@Madagascar@Madagascar
+LDC@MDG@Madagascar@Madagascar@Madagascar@Madagascar
+SROEA@MDG@Madagascar@Madagascar@Madagascar@Madagascar
+COMESA@MDG@Madagascar@Madagascar@Madagascar@Madagascar
+NOPC@MDG@Madagascar@Madagascar@Madagascar@Madagascar
+SAF@MDG@Madagascar@Madagascar@Madagascar@Madagascar
+ISE@MDG@Madagascar@Madagascar@Madagascar@Madagascar
+NOLDC@MDG@Madagascar@Madagascar@Madagascar@Madagascar
+NOLDC@MWI@Malawi@Malawi@Malawi@Malawi
+LLLDC@MWI@Malawi@Malawi@Malawi@Malawi
+LLC@MWI@Malawi@Malawi@Malawi@Malawi
+SAF@MWI@Malawi@Malawi@Malawi@Malawi
+NOPC@MWI@Malawi@Malawi@Malawi@Malawi
+COMESA@MWI@Malawi@Malawi@Malawi@Malawi
+SROSA@MWI@Malawi@Malawi@Malawi@Malawi
+LDC@MWI@Malawi@Malawi@Malawi@Malawi
+SADC@MWI@Malawi@Malawi@Malawi@Malawi
+ECOWAS@MLI@Mali@Mali@Mali@Mali
+LDC@MLI@Mali@Mali@Mali@Mali
+SROWA@MLI@Mali@Mali@Mali@Mali
+NOPC@MLI@Mali@Mali@Mali@Mali
+SAF@MLI@Mali@Mali@Mali@Mali
+LLC@MLI@Mali@Mali@Mali@Mali
+LLLDC@MLI@Mali@Mali@Mali@Mali
+MRC@MLI@Mali@Mali@Mali@Mali
+NOLDC@MLI@Mali@Mali@Mali@Mali
+CENSAD@MLI@Mali@Mali@Mali@Mali
+CENSAD@MRT@Mauritania@Mauritanie@Mauritania@Mauritanie
+NOLDC@MRT@Mauritania@Mauritanie@Mauritania@Mauritanie
+MRC@MRT@Mauritania@Mauritanie@Mauritania@Mauritanie
+NOPC@MRT@Mauritania@Mauritanie@Mauritania@Mauritanie
+SRONA@MRT@Mauritania@Mauritanie@Mauritania@Mauritanie
+LDC@MRT@Mauritania@Mauritanie@Mauritania@Mauritanie
+AMU@MRT@Mauritania@Mauritanie@Mauritania@Mauritanie
+SADC@MUS@Mauritius@Maurice@Mauritius@Maurice
+SROSA@MUS@Mauritius@Maurice@Mauritius@Maurice
+COMESA@MUS@Mauritius@Maurice@Mauritius@Maurice
+NOPC@MUS@Mauritius@Maurice@Mauritius@Maurice
+ISE@MUS@Mauritius@Maurice@Mauritius@Maurice
+SAF@MUS@Mauritius@Maurice@Mauritius@Maurice
+NOPC@MAR@Morocco@Maroc@Morocco@Maroc
+SRONA@MAR@Morocco@Maroc@Morocco@Maroc
+AMU@MAR@Morocco@Maroc@Morocco@Maroc
+B5@MAR@Morocco@Maroc@Morocco@Maroc
+CENSAD@MAR@Morocco@Maroc@Morocco@Maroc
+LDC@MOZ@Mozambique@Mozambique@Mozambique@Mozambique
+SADC@MOZ@Mozambique@Mozambique@Mozambique@Mozambique
+NOPC@MOZ@Mozambique@Mozambique@Mozambique@Mozambique
+SAF@MOZ@Mozambique@Mozambique@Mozambique@Mozambique
+SROSA@MOZ@Mozambique@Mozambique@Mozambique@Mozambique
+MRC@MOZ@Mozambique@Mozambique@Mozambique@Mozambique
+NOLDC@MOZ@Mozambique@Mozambique@Mozambique@Mozambique
+MRC@NAM@Namibia@Namibie@Namibia@Namibie
+SAF@NAM@Namibia@Namibie@Namibia@Namibie
+NOPC@NAM@Namibia@Namibie@Namibia@Namibie
+SADC@NAM@Namibia@Namibie@Namibia@Namibie
+SROSA@NAM@Namibia@Namibie@Namibia@Namibie
+SROWA@NER@Niger@Niger@Niger@Niger
+ECOWAS@NER@Niger@Niger@Niger@Niger
+LDC@NER@Niger@Niger@Niger@Niger
+NOPC@NER@Niger@Niger@Niger@Niger
+SAF@NER@Niger@Niger@Niger@Niger
+LLC@NER@Niger@Niger@Niger@Niger
+MRC@NER@Niger@Niger@Niger@Niger
+LLLDC@NER@Niger@Niger@Niger@Niger
+NOLDC@NER@Niger@Niger@Niger@Niger
+CENSAD@NER@Niger@Niger@Niger@Niger
+CENSAD@NGA@Nigeria@Nigéria@Nigeria@Nigéria
+SAF@NGA@Nigeria@Nigéria@Nigeria@Nigéria
+B5@NGA@Nigeria@Nigéria@Nigeria@Nigéria
+OPC@NGA@Nigeria@Nigéria@Nigeria@Nigéria
+ECOWAS@NGA@Nigeria@Nigéria@Nigeria@Nigéria
+SROWA@NGA@Nigeria@Nigéria@Nigeria@Nigéria
+SROEA@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+COMESA@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+ECCAS@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+LDC@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+SAF@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+LLC@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+NOPC@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+NOLDC@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+LLLDC@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+MRC@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+EAC@RWA@Rwanda@Rwanda@Rwanda@Rwanda
+CENSAD@STP@Sao Tome and Principe@Sao Tomé-et-Principe@Sao Tome and Principe@Sao Tomé-et-Principe
+NOLDC@STP@Sao Tome and Principe@Sao Tomé-et-Principe@Sao Tome and Principe@Sao Tomé-et-Principe
+NOPC@STP@Sao Tome and Principe@Sao Tomé-et-Principe@Sao Tome and Principe@Sao Tomé-et-Principe
+ISE@STP@Sao Tome and Principe@Sao Tomé-et-Principe@Sao Tome and Principe@Sao Tomé-et-Principe
+SAF@STP@Sao Tome and Principe@Sao Tomé-et-Principe@Sao Tome and Principe@Sao Tomé-et-Principe
+LDC@STP@Sao Tome and Principe@Sao Tomé-et-Principe@Sao Tome and Principe@Sao Tomé-et-Principe
+ECCAS@STP@Sao Tome and Principe@Sao Tomé-et-Principe@Sao Tome and Principe@Sao Tomé-et-Principe
+SROCA@STP@Sao Tome and Principe@Sao Tomé-et-Principe@Sao Tome and Principe@Sao Tomé-et-Principe
+ECOWAS@SEN@Senegal@Sénégal@Senegal@Sénégal
+SROWA@SEN@Senegal@Sénégal@Senegal@Sénégal
+SAF@SEN@Senegal@Sénégal@Senegal@Sénégal
+NOPC@SEN@Senegal@Sénégal@Senegal@Sénégal
+NOLDC@SEN@Senegal@Sénégal@Senegal@Sénégal
+LDC@SEN@Senegal@Sénégal@Senegal@Sénégal
+CENSAD@SEN@Senegal@Sénégal@Senegal@Sénégal
+NOPC@SYC@Seychelles@Seychelles@Seychelles@Seychelles
+SAF@SYC@Seychelles@Seychelles@Seychelles@Seychelles
+ISE@SYC@Seychelles@Seychelles@Seychelles@Seychelles
+COMESA@SYC@Seychelles@Seychelles@Seychelles@Seychelles
+SROEA@SYC@Seychelles@Seychelles@Seychelles@Seychelles
+SROWA@SLE@Sierra Leone@Sierra Leone@Sierra Leone@Sierra Leone
+ECOWAS@SLE@Sierra Leone@Sierra Leone@Sierra Leone@Sierra Leone
+LDC@SLE@Sierra Leone@Sierra Leone@Sierra Leone@Sierra Leone
+SAF@SLE@Sierra Leone@Sierra Leone@Sierra Leone@Sierra Leone
+NOPC@SLE@Sierra Leone@Sierra Leone@Sierra Leone@Sierra Leone
+MRC@SLE@Sierra Leone@Sierra Leone@Sierra Leone@Sierra Leone
+NOLDC@SLE@Sierra Leone@Sierra Leone@Sierra Leone@Sierra Leone
+CENSAD@SLE@Sierra Leone@Sierra Leone@Sierra Leone@Sierra Leone
+CENSAD@SOM@Somalia@Somalie@Somalia@Somalie
+NOLDC@SOM@Somalia@Somalie@Somalia@Somalie
+SAF@SOM@Somalia@Somalie@Somalia@Somalie
+NOPC@SOM@Somalia@Somalie@Somalia@Somalie
+LDC@SOM@Somalia@Somalie@Somalia@Somalie
+IGAD@SOM@Somalia@Somalie@Somalia@Somalie
+SROEA@SOM@Somalia@Somalie@Somalia@Somalie
+SROSA@ZAF@South Africa@Afrique du Sud@South Africa@Afrique du Sud
+B5@ZAF@South Africa@Afrique du Sud@South Africa@Afrique du Sud
+SADC@ZAF@South Africa@Afrique du Sud@South Africa@Afrique du Sud
+NOPC@ZAF@South Africa@Afrique du Sud@South Africa@Afrique du Sud
+SAF@ZAF@South Africa@Afrique du Sud@South Africa@Afrique du Sud
+MRC@ZAF@South Africa@Afrique du Sud@South Africa@Afrique du Sud
+OLDC@SDN@Sudan@Soudan@Sudan@Soudan
+OPC@SDN@Sudan@Soudan@Sudan@Soudan
+IGAD@SDN@Sudan@Soudan@Sudan@Soudan
+LDC@SDN@Sudan@Soudan@Sudan@Soudan
+SRONA@SDN@Sudan@Soudan@Sudan@Soudan
+COMESA@SDN@Sudan@Soudan@Sudan@Soudan
+CENSAD@SDN@Sudan@Soudan@Sudan@Soudan
+SROEA@SSD@South Sudan@Soudan du Sud@South Sudan@Soudan du Sud
+EAC@SSD@South Sudan@Soudan du Sud@South Sudan@Soudan du Sud
+IGAD@SSD@South Sudan@Soudan du Sud@South Sudan@Soudan du Sud
+OPC@SSD@South Sudan@Soudan du Sud@South Sudan@Soudan du Sud
+LDC@SSD@South Sudan@Soudan du Sud@South Sudan@Soudan du Sud
+OLDC@SSD@South Sudan@Soudan du Sud@South Sudan@Soudan du Sud
+LLLDC@SSD@South Sudan@Soudan du Sud@South Sudan@Soudan du Sud
+SAF@SSD@South Sudan@Soudan du Sud@South Sudan@Soudan du Sud
+COMESA@SWZ@Swaziland@Swaziland@Swaziland@Swaziland
+SROSA@SWZ@Swaziland@Swaziland@Swaziland@Swaziland
+SADC@SWZ@Swaziland@Swaziland@Swaziland@Swaziland
+LLC@SWZ@Swaziland@Swaziland@Swaziland@Swaziland
+NOPC@SWZ@Swaziland@Swaziland@Swaziland@Swaziland
+SAF@SWZ@Swaziland@Swaziland@Swaziland@Swaziland
+NOPC@TGO@Togo@Togo@Togo@Togo
+SAF@TGO@Togo@Togo@Togo@Togo
+LDC@TGO@Togo@Togo@Togo@Togo
+ECOWAS@TGO@Togo@Togo@Togo@Togo
+SROWA@TGO@Togo@Togo@Togo@Togo
+CENSAD@TGO@Togo@Togo@Togo@Togo
+NOLDC@TGO@Togo@Togo@Togo@Togo
+CENSAD@TUN@Tunisia@Tunisie@Tunisia@Tunisie
+SRONA@TUN@Tunisia@Tunisie@Tunisia@Tunisie
+AMU@TUN@Tunisia@Tunisie@Tunisia@Tunisie
+OPC@TUN@Tunisia@Tunisie@Tunisia@Tunisie
+IGAD@UGA@Uganda@Ouganda@Uganda@Ouganda
+SROEA@UGA@Uganda@Ouganda@Uganda@Ouganda
+EAC@UGA@Uganda@Ouganda@Uganda@Ouganda
+COMESA@UGA@Uganda@Ouganda@Uganda@Ouganda
+LDC@UGA@Uganda@Ouganda@Uganda@Ouganda
+LLC@UGA@Uganda@Ouganda@Uganda@Ouganda
+LLLDC@UGA@Uganda@Ouganda@Uganda@Ouganda
+NOPC@UGA@Uganda@Ouganda@Uganda@Ouganda
+SAF@UGA@Uganda@Ouganda@Uganda@Ouganda
+NOLDC@UGA@Uganda@Ouganda@Uganda@Ouganda
+NOLDC@TZA@United Republic of Tanzania@Tanzanie, République Unie de @United Republic of Tanzania@Tanzanie, République Unie de 
+MRC@TZA@United Republic of Tanzania@Tanzanie, République Unie de @United Republic of Tanzania@Tanzanie, République Unie de 
+SAF@TZA@United Republic of Tanzania@Tanzanie, République Unie de @United Republic of Tanzania@Tanzanie, République Unie de 
+NOPC@TZA@United Republic of Tanzania@Tanzanie, République Unie de @United Republic of Tanzania@Tanzanie, République Unie de 
+EAC@TZA@United Republic of Tanzania@Tanzanie, République Unie de @United Republic of Tanzania@Tanzanie, République Unie de 
+SROEA@TZA@United Republic of Tanzania@Tanzanie, République Unie de @United Republic of Tanzania@Tanzanie, République Unie de 
+LDC@TZA@United Republic of Tanzania@Tanzanie, République Unie de @United Republic of Tanzania@Tanzanie, République Unie de 
+SADC@TZA@United Republic of Tanzania@Tanzanie, République Unie de @United Republic of Tanzania@Tanzanie, République Unie de 
+SADC@ZMB@Zambia@Zambie@Zambia@Zambie
+SROSA@ZMB@Zambia@Zambie@Zambia@Zambie
+COMESA@ZMB@Zambia@Zambie@Zambia@Zambie
+LLC@ZMB@Zambia@Zambie@Zambia@Zambie
+LDC@ZMB@Zambia@Zambie@Zambia@Zambie
+MRC@ZMB@Zambia@Zambie@Zambia@Zambie
+LLLDC@ZMB@Zambia@Zambie@Zambia@Zambie
+SAF@ZMB@Zambia@Zambie@Zambia@Zambie
+NOPC@ZMB@Zambia@Zambie@Zambia@Zambie
+NOLDC@ZMB@Zambia@Zambie@Zambia@Zambie
+NOPC@ZWE@Zimbabwe@Zimbabwe@Zimbabwe@Zimbabwe
+SAF@ZWE@Zimbabwe@Zimbabwe@Zimbabwe@Zimbabwe
+MRC@ZWE@Zimbabwe@Zimbabwe@Zimbabwe@Zimbabwe
+LLC@ZWE@Zimbabwe@Zimbabwe@Zimbabwe@Zimbabwe
+COMESA@ZWE@Zimbabwe@Zimbabwe@Zimbabwe@Zimbabwe
+SROSA@ZWE@Zimbabwe@Zimbabwe@Zimbabwe@Zimbabwe
+SADC@ZWE@Zimbabwe@Zimbabwe@Zimbabwe@Zimbabwe

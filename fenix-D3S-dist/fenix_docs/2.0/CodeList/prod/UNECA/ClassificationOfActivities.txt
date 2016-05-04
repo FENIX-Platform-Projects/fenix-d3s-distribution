@@ -1,0 +1,355 @@
+﻿{  
+      "uid":"UNECA_ClassificationOfActivities",
+			 "version": "2.0",
+      "title":{  
+         "EN":"UNECA Classification of Activities -Domains, topics and indicators"
+				
+      },
+      "meContent":{  
+         "resourceRepresentationType":"codelist",
+         "seCodeList":{  
+            "numberOfLevels":3,
+            "typeOfCodeList":"tree"
+         },
+         "description":{  
+            "EN":"This codelist contains in a hierarchically the Domains, the Topics and the Indicators included in UNECA DB. It is partially based on the Classification of international Statistics activities (UNSD)."
+         },
+         "keywords":[  
+            "activity",
+            "sector",
+            "domains",
+            "topics",
+            "indicators"
+         ],
+         "seCoverage":{  
+            "coverageSectors":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"06"
+                  }
+               ],
+               "idCodeList":"FENIX_Subjects"
+            }
+         }
+      },
+      "characterSet":{  
+         "codes":[  
+            {  
+               "code":"106"
+            }
+         ],
+         "idCodeList":"IANAcharacterSet"
+      },
+      "metadataStandardName":"FENIX metadata",
+      "metadataStandardVersion":"1.0",
+      "metadataLanguage":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "contacts":[  
+         {  
+            "organization":{  
+               "EN":"ECA"
+            },
+            "role":"distributor",
+            "organizationUnit":{  
+               "EN":"UNECA"
+            }
+         }
+      ],
+      "meAccessibility":{  
+         "seConfidentiality":{  
+            "confidentialityStatus":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"F"
+                  }
+               ],
+               "idCodeList":"CL_CONF_STATUS"
+            }
+         }
+      },
+      "language":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "dsd":{  
+         "contextSystem":"uneca"
+      }
+   }
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+	
+--data--
+
+@01@Demographic and social statistics
+01@0101@Population
+0101@010101@Mid-year Population
+0101@010102@Urbanization rate (per cent)
+0101@010103@Average annual growth rate
+0101@010104@Crude birth rate per 1,000 population
+0101@010105@Crude death rate per 1,000 population
+0101@010106@Total fertility
+0101@010107@Net reproduction rate
+0101@010108@Life expectancy (years)
+0101@010109@Dependency ratio
+0101@01010901@Dependency ratio young
+0101@01010902@Dependency ratio old
+0101@010110@Net migration rate
+0101@010111@Proportion of population living in slums
+0101@010112@Population below $1 (PPP) per day
+0101@010113@Population below $1.25 (PPP) per day
+0101@010114@Population below $2 (PPP) per day
+0101@010115@Population below national poverty line
+0101@010116@Share of poorest quintile in national consumption
+01@0102@Education
+0102@010201@Enrolment in primary education
+0102@010202@Enrolment in secondary education
+0102@010203@Enrolment in tertiary education
+0102@010204@Gross enrolment rate
+0102@010205@Net enrolment rate 
+0102@010206@Literacy rate
+0102@01020601@Adult literacy rate
+0102@01020602@Youth literacy rate (15-24)
+0102@010207@Teaching staff at primary school
+0102@010208@Teaching staff at secondary school
+0102@010209@Teaching staff at tertiary school
+0102@010210@Pupil teacher ratio
+0102@010211@Ratio of girls to boys in primary school
+0102@010212@Ratio of girls to boys in secondary school
+0102@010213@Ratio of girls to boys in tertiary level
+0102@010214@Ratio of Literate women to men 
+0102@01021401@Ratio of Literate women to men youth
+0102@010215@Proportion of pupils starting grade 1 who reach last grade of primary
+0102@010216@Public expenditure on education as % of GDP
+0102@010217@Capital expenditure on education as % of Government expenditures
+0102@010218@Public expenditure on education as % of Government expenditures
+01@0104@Labour
+0104@010401@Economically Active Population
+0104@010402@Unemployment rate
+0104@010403@Percentage (by economic sector) of Economically Active Population 
+0104@010404@Percentage (by gender) of Economically Active Population 
+01@0103@Health
+0103@010301@Percentage of children under-five and underweight
+0103@010302@Prevalence of undernourishment
+0103@010303@Under five mortality rate (both sexes) per 1,000
+0103@010304@Infant mortality rate (both sexes) per 1,000
+0103@010305@Neo-natal mortality rate per 1,000
+0103@010306@Maternal mortality ratio per 1,000
+0103@010307@Percentage of children provided the vaccines (BCG)
+0103@010308@Percentage of children provided the vaccines (DPT3)
+0103@010309@Percentage of children provided the vaccines (Polio)
+0103@010310@Percentage of children provided the vaccines (Measles)
+0103@010311@Percentage of mothers provided at least one antenatal care
+0103@010312@Percentage of deliveries attended by skilled health personnel
+0103@010313@Number of doctors per 10,000 population
+0103@010314@Number of nurses and Midwives per 10,000 population
+0103@010315@Hospital beds - Total (per 10 000 population)
+0103@010316@Births registered (per 1 000)
+0103@010317@Deaths registered (per 1 000)
+@02@Economics statistics
+02@0201@Agriculture
+0201@020101@Crop production
+0201@02010101@Area Harvested
+0201@02010102@Yield
+0201@02010103@Production quantity
+0201@02010104@Seed
+02@0202@Balance of Payments
+0202@020204@Current account balance (BoP)
+0202@020201@Trade balance of goods and services
+0202@02020101@Balance on goods (BoP)
+0202@0202010101@Exports of goods (BoP)
+0202@0202010102@Imports of goods (BoP)
+0202@02020102@Balance on services (BoP)
+0202@0202010201@Exports of services (BoP)
+0202@0202010202@Imports of services (BoP)
+0202@020202@Primary income balance
+0202@02020201@Net compensation of employees
+0202@0202020101@Compensation of employees, Credit
+0202@0202020102@Compensation of employees, Debit
+0202@02020203@Net Investment Income
+0202@02020204@Direct investment
+0202@02020205@Portfolio investment
+0202@02020206@Other investment (BoP)
+0202@02020207@Income and reserve assets
+0202@020203@Secondary income balance
+0202@02020301@Net current transfers
+0202@0202030101@Net official transfers
+0202@0202030102@Net workers' remittances
+0202@020203010201@Workers' remittances, credit
+0202@020203010202@Workers' remittances, debit
+0202@0202030103@Other BoP transfers (excluding net official transfert and workers' remittances)
+0202@020205@Capital and financial account balance (BoP)
+0202@02020501@Capital account balance (BoP)
+0202@02020502@Financial account balance (BoP)
+0202@020206@Net errors and omissions in BoP
+0202@020207@Overall balance of payements
+02@0203@Debt
+0203@020305@Total external debt
+0203@02030501@Total external debt, private
+0203@02030502@Total external debt, public
+0203@020306@Total external debt service
+0203@020307@Present value of external debt
+0203@020308@Total government domestic debt
+02@0204@Energy
+0204@020401@Electricity installed capacity, net - Total
+0204@02040101@Electricity installed capacity, net - self
+0204@02040102@Electricity installed capacity, net - public
+0204@020402@Production of electricity, total
+0204@02040201@Production of electricity, other
+0204@02040202@Production of electricity, self
+0204@02040203@Production of electricity, public
+0204@02040204@Electricity - gross production, public and self-producer
+0204@020403@Imports of electricity, total
+0204@020404@Exports of electricity, total
+0204@020405@Final consumption of electricity, total
+0204@020406@Electricity production index
+02@0205@Globalisation
+0205@020501@Net Foreign Direct Investment Inflows
+0205@020502@Origin of FDI Inflows
+02@0206@International trade
+0206@020601@Import quantity
+0206@020602@Import value
+0206@020603@Export quantity
+0206@020604@Export value
+0206@020605@Re-export quantity
+0206@020606@Re-export value
+02@0207@National Account
+0207@020701@National account, constant prices
+0207@02070101@Final consumption expenditure, contant prices
+0207@0207010101@Household final consumption expenditure, contant prices
+0207@0207010102@Nonprofit institutions serving households (NPISHs) final consumption expenditure, constant prices
+0207@0207010103@General government final consumption expenditure, constant prices
+0207@020701010301@Individual consumption expenditure, constant prices
+0207@020701010302@Collective consumption expenditure, constant prices
+0207@02070102@Exports of goods and services, constant prices
+0207@0207010201@Exports of goods, constant prices
+0207@0207010202@Exports of services, constant prices
+0207@02070103@Import of goods and services, constant prices
+0207@0207010301@Imports of goods, constant prices
+0207@0207010302@Imports of services, constant prices
+0207@02070104@Statistical discrepancy on gross domestic product, constant prices
+0207@02070105@Gross domestic product, constant prices
+0207@02070106@Gross capital formation, contant prices
+0207@02070107@Gross fixed capital formation, contant prices
+0207@02070108@Changes in inventories, contant prices
+0207@02070109@Acquisitions less disposals of valuables, contant prices
+0207@020702@National account, current prices
+0207@02070201@Final consumption expenditure, current prices
+0207@0207020101@Household final consumption expenditure, currrent prices
+0207@0207020102@Nonprofit institutions serving households (NPISHs) final consumption expenditure, current prices
+0207@0207020103@General government final consumption expenditure, current prices
+0207@020702010301@Individual consumption expenditure, current prices
+0207@020702010302@Collective consumption expenditure, current prices
+0207@02070202@Exports of goods and services at current prices
+0207@0207020201@Exports of goods, current prices
+0207@0207020202@Exports of services, current prices
+0207@02070203@Import of goods and services, current prices
+0207@0207020301@Imports of goods, current prices
+0207@0207020302@Imports of services, current prices
+0207@02070204@Statistical discrepancy on gross domestic product, current prices
+0207@02070205@Gross domestic product, current prices
+0207@02070206@Gross capital formation, current prices
+0207@02070207@Gross fixed capital formation, current prices
+0207@02070208@Changes in inventories, current prices
+0207@02070209@Acquisitions less disposals of valuables, current prices
+0207@020703@Value added by industries, current prices
+0207@02070313@Gross value added at basic prices, current prices
+0207@02070314@Financial intermediation services indirectly measured (FISIM), current prices
+0207@02070315@Net taxes on products, current prices
+0207@0207031501@Taxes on products, current prices
+0207@0207031502@Subsidies on products, current prices
+0207@020704@Value added by industries, constant prices
+0207@02070413@Gross value added at basic prices, constant prices
+0207@02070414@Financial intermediation services indirectly measured (FISIM), constant prices
+0207@02070415@Net taxes on products, constant prices
+0207@0207041501@Taxes on products, constant prices
+0207@0207041502@Subsidies on products, constant prices
+0207@020705@GDP growth (annual %)
+0207@020706@GDP per capita (constant 2005 US$)
+0207@020707@GROSS DOMESTIC PRODUCT (current prices)
+02@0208@Mining
+0208@020801@Mining production
+0208@02080101@Production of coking coal
+0208@02080102@Production of charcoal
+0208@02080103@Production of crude oil,  liquefied natural gas and additives
+0208@02080104@Production of natural gas
+0208@02080105@Refinery output of oil products
+0208@02080106@Final consumption of coking coal
+0208@02080107@Final consumption of oil
+0208@02080108@Final consumption of natural gas
+0208@02080109@Consumption of oil in industry
+0208@02080110@Consumption of natural gas in industry
+0208@02080111@Consumption of electricity in industry
+0208@02080112@Consumption of coking coal in industry
+0208@02080113@Consumption of oil in transport
+0208@02080114@Net imports of coking coal
+0208@02080115@Net imports of crude oil,  liquefied natural gas, Etc.
+0208@02080116@Net imports of oil product
+0208@02080117@Net imports of natural gas
+02@0209@Monetary Statistics
+0209@020901@Money supply (M1)
+0209@020902@Money supply (M2)
+0209@020903@Quasi-money
+0209@02090301@Quasi-money of which Demand Deposit
+0209@020904@Net foreign assets
+0209@020905@Domestic credit
+0209@02090501@Domestic credit of which claims on private sector
+0209@02090502@Domestic credit of which Claims on government sector, net
+0209@020906@International reserves
+0209@020907@Period average exchange rate
+0209@020908@End-of-period exchange rate
+02@0210@Official Development Assistance
+0210@021001@Net Total Official Development assistance
+0210@02100101@Official Development assistance
+02@0211@Prices
+0211@021101@Inflation, consumer prices
+0211@02110114@Inflation, consumer prices (annual %)
+0211@02110115@Inflation, GDP deflator (annual %)
+0211@021102@Inflation by kind of commodity
+02@0212@Public Finance
+0212@021201@Total revenues and grants
+0212@02120101@Tax revenue
+0212@02120102@Non tax revenue
+0212@021202@Total grants
+0212@021203@Total expenditures and net lending
+0212@02120301@Current expenditure
+0212@0212030101@Wages and salaries
+0212@02120302@Capital expenditure
+0212@02120303@Net lending
+0212@021204@Fiscal balance
+02@0213@Tourism
+0213@021301@Rooms in hotels and similar establishments
+0213@021302@Overnight stays in tourist accommodation
+0213@021303@Tourism contribution to GDP
+0213@021304@Tourism conribution to employment
+0213@021305@International tourism, number of arrivals
+0213@021306@International tourism, number of departures
+0213@021307@International tourism, receipts
+0213@021308@International tourism, receipts (% of total exports)
+@03@Environment and multi-Domain statistics
+@03@0303@Poverty
+@0303@030301@GNI Per Capita (US$)
+@0303@030305@Share of Income Held by Poorest 10%
+@0303@030304@Share of Income Held by Richest 10%
+@0303@010114@Population below $2 (PPP) per day
+@0303@030306@Gini’s index
+@0303@030302@Human Poverty Index (HPI-1) Value (%)

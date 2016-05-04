@@ -1,0 +1,111 @@
+{  
+      "uid":"UNECA_KindOfCommodity",
+			 "version": null,
+      "title":{  
+         "EN":"UNECA Kind of commodity"
+				
+      },
+      "meContent":{  
+         "resourceRepresentationType":"codelist",
+         "seCodeList":{  
+            "numberOfLevels":1,
+            "typeOfCodeList":"list"
+         },
+         "description":{  
+            "EN":"This list contains the list of kind of commodity in order to identify different industries."
+         },
+         "keywords":[  
+            "industries" , "commodity"
+         ],
+         "seCoverage":{  
+            "coverageSectors":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"06"
+                  }
+               ],
+               "idCodeList":"FENIX_Subjects"
+            }
+         }
+      },
+      "characterSet":{  
+         "codes":[  
+            {  
+               "code":"106"
+            }
+         ],
+         "idCodeList":"IANAcharacterSet"
+      },
+      "metadataStandardName":"FENIX metadata",
+      "metadataStandardVersion":"1.0",
+      "metadataLanguage":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "contacts":[  
+         {  
+            "organization":{  
+               "EN":"ECA"
+            },
+            "role":"distributor",
+            "organizationUnit":{  
+               "EN":"UNECA"
+            }
+         }
+      ],
+      "meAccessibility":{  
+         "seConfidentiality":{  
+            "confidentialityStatus":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"F"
+                  }
+               ],
+               "idCodeList":"CL_CONF_STATUS"
+            }
+         }
+      },
+      "language":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "dsd":{  
+         "contextSystem":"uneca"
+      }
+   }
+
+
+
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+@01@Alcoholic beverages and tobacco
+@02@Clothing and footwear
+@03@Communication
+@04@Education
+@05@Food and non-alcoholic beverage
+@06@Furniture household and maintenance
+@07@Hotels, coffee-house and restaurant
+@08@Medical care
+@09@Other goods and  service
+@10@Recreation and culture
+@11@Rent, water fuel and power
+@12@Transportation
+@NA@NA
