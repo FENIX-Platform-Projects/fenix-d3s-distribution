@@ -1,0 +1,139 @@
+{
+  "resource": {
+    "metadata" : {
+      "version" : "44577973725406657025345204686390490356",
+      "dsd" : {
+        "contextSystem" : "D3P",
+        "rid" : "66_2503",
+        "columns" : [ {
+          "dataType" : "code",
+          "key" : true,
+          "id" : "IndicatorCode",
+          "title" : {
+            "EN" : "Indicator"
+          },
+          "domain" : {
+            "codes" : [ {
+              "idCodeList" : "UNECA_ClassificationOfActivities",
+              "extendedName" : {
+                "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+              }
+            } ]
+          },
+          "subject" : "item"
+        }, {
+          "dataType" : "code",
+          "key" : true,
+          "id" : "CountryCode",
+          "title" : {
+            "EN" : "Country"
+          },
+          "domain" : {
+            "codes" : [ {
+              "idCodeList" : "ISO3",
+              "extendedName" : {
+                "EN" : "International Standard Organization - Geographic names"
+              }
+            } ]
+          },
+          "subject" : "geo"
+        }, {
+          "dataType" : "year",
+          "key" : true,
+          "id" : "Year",
+          "title" : {
+            "EN" : "Year"
+          },
+          "subject" : "time"
+        }, {
+          "dataType" : "code",
+          "key" : true,
+          "id" : "GenderCode",
+          "title" : {
+            "EN" : "Gender"
+          },
+          "domain" : {
+            "codes" : [ {
+              "idCodeList" : "UNECA_Gender",
+              "extendedName" : {
+                "EN" : "UNECA - Gender"
+              }
+            } ]
+          }
+        }, {
+          "dataType" : "code",
+          "key" : true,
+          "id" : "AgeRangeCode",
+          "title" : {
+            "EN" : "Age Range"
+          },
+          "domain" : {
+            "codes" : [ {
+              "idCodeList" : "UNECA_AgeRange",
+              "extendedName" : {
+                "EN" : "UNECA Age-range"
+              }
+            } ]
+          }
+        }, {
+          "dataType" : "number",
+          "key" : false,
+          "id" : "Value",
+          "title" : {
+            "EN" : "Value"
+          },
+          "subject" : "value"
+        }, {
+          "dataType" : "text",
+          "key" : false,
+          "id" : "IndicatorCode_EN",
+          "title" : {
+            "EN" : "Indicator"
+          },
+          "virtual" : false,
+          "transposed" : false
+        }, {
+          "dataType" : "text",
+          "key" : false,
+          "id" : "CountryCode_EN",
+          "title" : {
+            "EN" : "Country"
+          },
+          "virtual" : false,
+          "transposed" : false
+        }, {
+          "dataType" : "text",
+          "key" : false,
+          "id" : "GenderCode_EN",
+          "title" : {
+            "EN" : "Gender"
+          },
+          "virtual" : false,
+          "transposed" : false
+        }, {
+          "dataType" : "text",
+          "key" : false,
+          "id" : "AgeRangeCode_EN",
+          "title" : {
+            "EN" : "Age Range"
+          },
+          "virtual" : false,
+          "transposed" : false
+        } ]
+      },
+      "uid" : "D3P_R_0"
+    },
+    "data" : [ [ "010102", "GHA", 2010, "3", "AGT", 50.9, "Urbanization rate (per cent)", "Ghana", "Total", "Total" ], [ "010102", "MLI", 2010, "3", "AGT", 35.85699731, "Urbanization rate (per cent)", "Mali", "Total", "Total" ], [ "010102", "NGA", 2010, "3", "AGT", 49.80299979, "Urbanization rate (per cent)", "Nigeria", "Total", "Total" ] ],
+    "size" : 3
+  },
+  "input": {
+    "plugin": "inputTable",
+    "config": {}
+  },
+  "output": {
+    "plugin": "outputTable",
+    "config": {
+      "lang": "EN"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "resource": {
+  "metadata" : {
+    "uid" : "adam_country_indicators"
+  },
+  "data" :[]
+  },
+  "input": {
+    "plugin": "inputTable",
+    "config": {}
+  },
+  "output": {
+    "plugin": "outputTable",
+    "config": {
+      "lang": "EN"
+    }
+  }
+}
