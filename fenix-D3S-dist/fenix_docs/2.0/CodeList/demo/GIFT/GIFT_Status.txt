@@ -114,7 +114,6 @@ titleColumnIndex_EN=3
 
 
 --data--
-@F@Available on GIFT
-@N@Coming soon on GIFT
-@C@Already available on another web platform
-@D@Existing but restricted
+@F@Data Available in FAO/WHO GIFT for analysis
+@N@Data soon to be inserted in FAO/WHO GIFT
+@D@Existing data potentially suitable to be inserted in FAO/WHO GIFT
