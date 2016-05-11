@@ -1,5 +1,6 @@
 {
   "metadata" : {
+    "uid" : "UNECA_Health",
     "language" : {
       "version" : "1998",
       "codes" : [ {
@@ -84,7 +85,6 @@
         "subject" : "um"
       } ]
     },
-    "uid" : "UNECA_Health",
     "meContent" : {
       "resourceRepresentationType" : "dataset"
     },
