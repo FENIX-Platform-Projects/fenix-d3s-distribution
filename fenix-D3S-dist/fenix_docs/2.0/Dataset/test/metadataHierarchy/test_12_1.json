@@ -1,0 +1,16 @@
+{
+  "uid": "test_12_1",
+  "parents" : [
+    { "uid" : "test_1"},
+    { "uid" : "test_2"}
+  ],
+  "title": {
+    "FR": "EDUCATION 12"
+  },
+  "meContent": {
+    "resourceRepresentationType": "dataset"
+  },
+  "languageDetails": {
+    "EN": "Details 12_1"
+  }
+}
