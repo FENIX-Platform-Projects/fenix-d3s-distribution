@@ -1,5 +1,5 @@
 {
-  "uid": "country_indicators_test",
+  "uid": "adam_country_indicators",
   "title": {
     "EN": "ADAM Recipient/Donor Country Indicators data"
   },
@@ -10,14 +10,13 @@
     "resourceRepresentationType": "dataset"
   },
   "dsd": {
-    "contextSystem": "test",
-    "datasources": [
-      "adam"
-    ],
-    "cache": {
-      "storage": "postgres"
+    "contextSystem": "adam",
+    "datasources": ["adam"],
+    "cache":{
+      "storage":"postgres"
     },
     "columns": [
+
       {
         "id": "countryname",
         "title": {
@@ -33,13 +32,11 @@
         },
         "dataType": "code",
         "domain": {
-          "codes": [
-            {
-              "idCodeList": "crs_recipientdonors",
-              "version": "2016",
-              "level": 1
-            }
-          ]
+          "codes": [{
+            "idCodeList": "crs_recipientdonors",
+            "version": "2016",
+            "level": 1
+          }]
         },
         "key": true
       },
@@ -57,38 +54,13 @@
         },
         "dataType": "code",
         "domain": {
-          "codes": [
-            {
-              "idCodeList": "adam_development_indicators",
-              "version": "2016",
-              "level": 1
-            }
-          ]
+          "codes": [{
+            "idCodeList": "adam_development_indicators",
+            "version": "2016",
+            "level": 1
+          }]
         },
         "key": true
-      },
-      {
-        "id": "itemname",
-        "title": {
-          "EN": "Item name"
-        },
-        "dataType": "text"
-      },
-      {
-        "id": "itemcode",
-        "title": {
-          "EN": "Item code"
-        },
-        "dataType": "code",
-        "domain": {
-          "codes": [
-            {
-              "idCodeList": "adam_development_indicators",
-              "version": "2016",
-              "level": 1
-            }
-          ]
-        }
       },
       {
         "id": "period",
@@ -113,13 +85,11 @@
           "EN": "Measurement unit"
         },
         "domain": {
-          "codes": [
-            {
-              "idCodeList": "crs_units",
-              "version": "2016",
-              "level": 1
-            }
-          ]
+          "codes": [{
+            "idCodeList": "crs_units",
+            "version": "2016",
+            "level": 1
+          }]
         },
         "dataType": "code"
       },
@@ -145,12 +115,13 @@
         "dataType": "text"
       },
       {
-        "id": "link",
+        "id": "internalnote",
         "title": {
-          "EN": "Link"
+          "EN": "Internal note"
         },
         "dataType": "text"
       }
+
     ]
   }
 }

@@ -17,8 +17,8 @@
             "value": "value"
           },
           {
-            "type": "id",
-            "value": "unitcode"
+            "type": "code",
+            "value": "million_usd"
           }
         ],
         [
