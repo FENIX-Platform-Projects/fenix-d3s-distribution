@@ -1,0 +1,23 @@
+[
+  {
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version": "2.0",
+              "codes": [
+                "020201", "020204"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "unecaPercentageGDP"
+  }
+]

@@ -1,0 +1,10 @@
+{
+    "dsd.contextSystem" : {
+        "enumeration": [
+            "externalLayers"
+        ]
+    },
+    "meContent.resourceRepresentationType" : {
+        "enumeration" : ["geographic"]
+    }
+}

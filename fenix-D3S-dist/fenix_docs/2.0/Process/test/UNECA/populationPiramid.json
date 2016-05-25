@@ -1,0 +1,84 @@
+[
+  {
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "ISO3",
+              "codes": [
+                "AGO"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version": "2.0",
+              "codes": [
+                "010101"
+              ]
+            }
+          ]
+        },
+        "GenderCode": {
+          "codes": [
+            {
+              "uid": "UNECA_Gender",
+              "version": null,
+              "codes": [
+                "1",
+                "2"
+              ]
+            }
+          ]
+        },
+        "AgeRangeCode": {
+          "codes": [
+            {
+              "uid": "UNECA_AgeRange",
+              "version": null,
+              "codes": [
+                "AG02",
+                "AG03",
+                "AG04",
+                "AG05",
+                "AG06",
+                "AG07",
+                "AG08",
+                "AG09",
+                "AG10",
+                "AG11",
+                "AG12",
+                "AG13",
+                "AG14",
+                "AG15"
+              ]
+            }
+          ]
+        },
+        "Year": {
+          "time": [
+            {
+              "from": 1900,
+              "to": 2020
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "percentage"
+  }
+]
