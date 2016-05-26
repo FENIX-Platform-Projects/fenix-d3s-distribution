@@ -1,0 +1,181 @@
+{  
+      "uid":"UAE_ClassificationOfActivities",
+			 "version": null,
+      "title":{  
+         "EN":"UAE Classification of Activities -Domains, topics and indicators"
+				
+      },
+      "meContent":{  
+         "resourceRepresentationType":"codelist",
+         "seCodeList":{  
+            "numberOfLevels":2,
+            "typeOfCodeList":"tree"
+         },
+         "description":{  
+            "EN":"This codelist contains in a hierarchically the Domains, and the Indicators included in UAE DB. "
+         },
+         "keywords":[  
+            "activity",
+            "sector",
+            "domains",
+            "topics",
+            "indicators"
+         ],
+         "seCoverage":{  
+            "coverageSectors":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"06"
+                  }
+               ],
+               "idCodeList":"FENIX_Subjects"
+            }
+         }
+      },
+      "characterSet":{  
+         "codes":[  
+            {  
+               "code":"106"
+            }
+         ],
+         "idCodeList":"IANAcharacterSet"
+      },
+      "metadataStandardName":"FENIX metadata",
+      "metadataStandardVersion":"1.0",
+      "metadataLanguage":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "contacts":[  
+         {  
+            "organization":{  
+               "EN":"ECA"
+            },
+            "role":"distributor",
+            "organizationUnit":{  
+               "EN":"UAE"
+            }
+         }
+      ],
+      "meAccessibility":{  
+         "seConfidentiality":{  
+            "confidentialityStatus":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"F"
+                  }
+               ],
+               "idCodeList":"CL_CONF_STATUS"
+            }
+         }
+      },
+      "language":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "dsd":{  
+         "contextSystem":"uae"
+      }
+   }
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+	
+
+--data--
+@A@Production
+@B@Trade
+@C@Population
+@D@Food Availability
+@E@Labor
+@F@Land Use
+@G@Machinery
+@H@Pesticides
+@I@Fertilizers
+@J@Prices
+@K@Forestry
+@L@Fisheries
+@M@Water
+@N@Value Added
+@O@Government Expenditure
+A@2510@Distribution of the Production Quantity for Primary Crops (ton)
+A@2312@Distribution of Area Harvested for Primary Crops (Ha)
+A@A1@Distribution of Area Sown for Primary Crops (Ha)
+A@A2@Distribution of Seeds (ton)
+A@A3@Distribution of Primary Crops Utilized as Animal Feed (ton)
+A@A4@Distribution of Production for Processed Commodities (ton)
+A@A5@Distribution of Number of Live Animals (head)
+A@A6@Distribution of Number of female animals (head)
+A@A7@Distribution of Slaughtered Animals (head)
+A@A8@Distribution of Production of Meat (ton)
+A@A9@Distribution of Milking Animals (head)
+A@A10@Distribution of Production of Milk (ton)
+A@A11@Number of Laying animals (head)
+A@A12@Distribution of the Production of Eggs - Hen and Other Fowl (ton)
+A@A13@Distribution of Other Livestock Products Derived from Live animals (ton)
+A@A14@Distribution of Other Primary and Processed commodities (ton)
+B@2610@Distribution of Import Quantity
+B@2620@Distribution of Import Value
+B@2910@Distribution of Export Quantity
+B@2920@Distribution of Export Value
+B@5710@Distribution of Re-Export Quantity
+B@5722@Distribution of Re-Export Value
+C@C1@Distribution of the Population by sex ('000)
+C@C2@Distribution of the rural and urban Population ('000)
+C@C3@Distribution of the Agricultural and Non-Agricultural Population ('000)
+C@C4@Population Growth Indicators (%)
+C@C5@Distribution of the Population Forecast by sex ('000)
+C@C6@Distribution of the rural and urban population forecast ('000)
+C@C7@Distribution of the agricultural and non-agricultural population forecast ('000)
+D@D1@Distribution of food supply quantity (ton)
+D@D2@Distribution of food supply quantity (kg/capita/yr)
+D@D3@Distribution of food supply quantity (g/capita/day)
+D@D4@Distribution of food supply quantity (kcal/capita/day)
+D@D5@Distribution of protein supply quantity (g/capita/day)
+D@D6@Distribution of fat supply quantity (g/capita/day)
+E@E1@Distribution of labour by sex ('000)
+E@E2@Distribution of labour in agriculture by sex ('000)
+E@E3@Employment Indicators (%)
+F@F1@Distribution of Land Use (1000 Ha)
+G@G1@Distribution of Machinery in Use (Number)
+H@H1@Distribution of Consumption Quantity of Pesticides (ton)
+H@H2@Distribution of Production Quantity of Pesticides (ton)
+I@I1@Distribution of Fertilizer Production Quantity (ton)
+I@I2@Distribution of Fertilizer Consumption (ton)
+J@J1@Distribution of producer prices for primary crops and livestock products (Local Currency per ton)
+J@J2@Distribution of consumer prices for primary crops and livestock products (Local Currency per ton)
+J@J3@Producer Price Index (PPI)
+J@J4@Distribution of the Consumer Price Index (CPI)
+K@K1@Distribution of production quantity of forestry products (ton)
+K@K2@Distribution of production quantity of forestry products (CUM)
+L@L1@Distribution of Fish Capture Production Quantity (ton)
+L@L2@Distribution of Value of Fish Capture Production (US$)
+L@L3@Distribution of Fish Aquaculture Production Quantity (ton)
+L@L4@Distribution of Value of Fish Aquaculture Production (US$)
+L@L5@Distribution of catch and aquaculture production in inland waters by species (tons)
+L@L6@Distribution of catch and aquaculture production in marine waters by species (tons)
+M@M1@Distribution of water withdrawal by sector (109 m3/an)
+M@M2@Distribution of internal and external renewable water resources (109 m3/an)
+M@M3@Distribution of average rainfall and dam capacity
+N@N1@Distribution of value added by sector at constant prices (US$)
+N@N2@Distribution of value added by sector at current prices (US$)
+N@N3@Distribution of value added by Primary Sector at constant prices (US$)
+N@N4@Distribution of value added by Primary Sector at current prices (US$)
+O@O1@Distribution of government expenditure on agriculture and related functions (Local currency) 

@@ -1,0 +1,164 @@
+{  
+      "uid":"UAE_COICOP",
+			 "version": null,
+      "title":{  
+         "EN":"UAE Classification of Activities -Domains, topics and indicators"
+				
+      },
+      "meContent":{  
+         "resourceRepresentationType":"codelist",
+         "seCodeList":{  
+            "numberOfLevels":2,
+            "typeOfCodeList":"tree"
+         },
+         "description":{  
+            "EN":"This codelist contains in a hierarchically the Domains, and the Indicators included in UAE DB. "
+         },
+         "keywords":[  
+            "activity",
+            "sector",
+            "domains",
+            "topics",
+            "indicators"
+         ],
+         "seCoverage":{  
+            "coverageSectors":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"06"
+                  }
+               ],
+               "idCodeList":"FENIX_Subjects"
+            }
+         }
+      },
+      "characterSet":{  
+         "codes":[  
+            {  
+               "code":"106"
+            }
+         ],
+         "idCodeList":"IANAcharacterSet"
+      },
+      "metadataStandardName":"FENIX metadata",
+      "metadataStandardVersion":"1.0",
+      "metadataLanguage":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "contacts":[  
+         {  
+            "organization":{  
+               "EN":"ECA"
+            },
+            "role":"distributor",
+            "organizationUnit":{  
+               "EN":"UAE"
+            }
+         }
+      ],
+      "meAccessibility":{  
+         "seConfidentiality":{  
+            "confidentialityStatus":{  
+               "version":"1.0",
+               "codes":[  
+                  {  
+                     "code":"F"
+                  }
+               ],
+               "idCodeList":"CL_CONF_STATUS"
+            }
+         }
+      },
+      "language":{  
+         "version":"1998",
+         "codes":[  
+            {  
+               "code":"eng"
+            }
+         ],
+         "idCodeList":"ISO639-2"
+      },
+      "dsd":{  
+         "contextSystem":"uae"
+      }
+   }
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+	
+
+--data--
+
+
+@01-12@Individual consumption expenditure of households
+@01@Food and non-alcoholic beverages
+@01.1@Food
+@01.2@Non-alcoholic beverages
+@02@Alcoholic beverages, tobacco and narcotics
+@02.1@Alcoholic beverages
+@02.2@Tobacco
+@02.3@Narcotics
+@03@Clothing and footwear
+@03.1@Clothing
+@03.2@Footwear
+@04@Housing, water, electricity, gas and other fuels
+@04.1@Actual rentals for housing
+@04.2@Imputed rentals for housing
+@04.3@Maintenance and repair of the dwelling
+@04.4@Water supply and miscellaneous services relating to the dwelling
+@04.5@Electricity, gas and other fuels
+@05@Furnishings, household equipment and routine household maintenance
+@05.1@Furniture and furnishings, carpets and other floor coverings
+@05.2@Household textiles
+@05.3@Household appliances
+@05.4@Glassware, tableware and household utensils
+@05.5@Tools and equipment for house and garden
+@05.6@Goods and services for routine household maintenance
+@06@Health
+@06.1@Medical products, appliances and equipment
+@06.2@Outpatient services
+@06.3@Hospital services
+@07@Transport
+@07.1@Purchase of vehicles
+@07.2@Operation of personal transport equipment
+@07.3@Transport services
+@08@Communication
+@08.1@Postal services
+@08.2@Telephone and telefax equipment
+@08.3@Telephone and telefax services
+@09@Recreation and culture
+@09.1@Audio-visual, photographic and information processing equipment
+@09.2@Other major durables for recreation and culture
+@09.3@Other recreational items and equipment, gardens and pets
+@09.4@Recreational and cultural services
+@09.5@Newspapers, books and stationery
+@09.6@Package holidays
+@10@Education
+@10.1@Pre-primary and primary education
+@10.2@Secondary education
+@10.3@Post-secondary non-tertiary education
+@10.4@Tertiary education
+@10.5@Education not definable by level
+@11@Restaurants and hotels
+@11.1@Catering services
+@11.2@Accommodation services
+@12@Miscellaneous goods and services
+@12.1@Personal care
+@12.2@Prostitution
+@12.3@Personal effects n.e.c.
+@12.4@Social protection
+@12.5@Insurance
+@12.6@Financial services n.e.c.
+@12.7@Other services n.e.c.
