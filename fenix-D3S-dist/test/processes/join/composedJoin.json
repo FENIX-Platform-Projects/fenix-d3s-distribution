@@ -1,0 +1,77 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_usd_aggregation_table"
+      }
+    ],
+    "rid" : {"uid" : "test", "version" : "1" },
+    "parameters": {
+      "rows": {
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "sectorcode": {
+          "codes": [
+            {
+              "uid": "crs_sectors",
+              "version": "2016",
+              "codes": [
+                "600"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "test",
+        "version":"1"
+      },
+      {
+        "uid": "adam_country_indicators"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "value"
+          },
+          {
+            "type": "code",
+            "value": "million_usd"
+          }
+        ],
+        [
+          {
+            "type": "id",
+            "value": "value"
+          },
+          {
+            "type": "id",
+            "value": "unitcode"
+          }
+        ]
+      ],
+      "values": [
+      ]
+    }
+  }
+]

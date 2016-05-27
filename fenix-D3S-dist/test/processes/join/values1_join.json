@@ -1,0 +1,41 @@
+[
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "adam_usd_aggregation_table"
+      },
+      {
+        "uid": "adam_country_indicators"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "value"
+          },
+          {
+            "type": "code",
+            "value": "million_usd"
+          }
+        ],
+        [
+          {
+            "type": "id",
+            "value": "value"
+          },
+          {
+            "type": "id",
+            "value": "unitcode"
+          }
+        ]
+      ],
+      "values": [
+        ["oda", "dac_member","purposecode"],
+        ["itemcode","period"]
+      ]
+    }
+  }
+]
