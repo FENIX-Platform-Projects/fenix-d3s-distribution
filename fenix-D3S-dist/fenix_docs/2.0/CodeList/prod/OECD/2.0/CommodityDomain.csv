@@ -105,7 +105,7 @@
     }
 }
 
-#structure
+--structure--
 csvSeparator=;
 structure=table
 dateFormat=dd/mm/yyyy

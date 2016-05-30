@@ -22,8 +22,8 @@
                 }
         },
         "seCodeList"  : {
-            "numberOfLevels": 2,
-            "typeOfCodeList": "tree"
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
         }
 
     },
@@ -105,7 +105,7 @@
     }
 }
 
-#structure
+--structure--
 csvSeparator=;
 structure=table
 dateFormat=dd/mm/yyyy
@@ -113,6 +113,7 @@ codeColumnsIndex=1
 titleColumnIndex_EN=2
 
 --data--
+
 3;Maize
 8;Maize + Wheat
 9;Maize + Rice

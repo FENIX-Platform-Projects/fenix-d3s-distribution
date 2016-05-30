@@ -1,0 +1,155 @@
+{
+  "uid" : "OECD_View_BiofuelPolicy",
+  "title" : {
+    "EN" : "Dataset for Biofuel Policy Graph and Biofuels policies-detailed Graph"
+  },
+  "meContent" : {
+    "resourceRepresentationType" : "dataset"
+  },
+
+
+  "dsd" : {
+    "contextSystem" : "oecd_view",
+    "datasources" : [ "oecdView" ],
+    "columns" : [
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "policydomain",
+        "title" : {
+          "EN" : "Policy domain"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_PolicyDomain",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "commoditydomain",
+        "title" : {
+          "EN" : "Commodity domain"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_CommodityDomain",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "policytype",
+        "title" : {
+          "EN" : "Policy type"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_PolicyType",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "policymeasure",
+        "title" : {
+          "EN" : "Policy measure"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_PolicyType1_2_6",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "commodityclass",
+        "title" : {
+          "EN" : "Commodity class"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_CommodityClass1",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "country",
+        "subject" : "geo",
+        "title" : {
+          "EN" : "Country"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "GAUL",
+            "version" : "2014"
+          } ]
+        }
+      },
+      {
+        "dataType" : "date",
+        "key" : false,
+        "id" : "startDate",
+        "title" : {
+          "EN" : "Start date"
+        }
+      },
+      {
+        "dataType" : "date",
+        "key" : false,
+        "id" : "endDate",
+        "title" : {
+          "EN" : "End date"
+        }
+      }
+    ]
+  },
+
+
+
+
+
+
+  "language" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "characterSet" : {
+    "codes" : [ {
+      "code" : "106",
+      "label" : {
+        "EN" : "UTF-8"
+      }
+    } ],
+    "idCodeList" : "IANAcharacterSet"
+  },
+  "metadataStandardName" : "FENIX",
+  "metadataStandardVersion" : "1.0",
+  "metadataLanguage" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  }
+}

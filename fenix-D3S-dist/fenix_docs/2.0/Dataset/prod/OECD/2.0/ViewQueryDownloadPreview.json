@@ -1,0 +1,415 @@
+{
+  "uid" : "OECD_View_QueryDownloadPreview",
+  "title" : {
+    "EN" : "Query and Download preview (internal row)"
+  },
+  "meContent" : {
+    "resourceRepresentationType" : "dataset"
+  },
+
+
+  "dsd" : {
+    "contextSystem" : "oecd_view",
+    "datasources" : [ "oecdView" ],
+    "columns" : [
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "metadataId",
+        "title" : {
+          "EN" : "Metadata ID"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : true,
+        "id" : "policyId",
+        "title" : {
+          "EN" : "Policy ID"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "cplId",
+        "title" : {
+          "EN" : "CPL ID"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "commodityId",
+        "title" : {
+          "EN" : "Commodity ID"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "hsVersion",
+        "title" : {
+          "EN" : "HS version"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "hsCode",
+        "title" : {
+          "EN" : "HS code"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "hsSuffix",
+        "title" : {
+          "EN" : "HS suffix"
+        }
+      },
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "element",
+        "subject" : "element",
+        "title" : {
+          "EN" : "Element"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_Element",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "date",
+        "key" : false,
+        "id" : "startDate",
+        "title" : {
+          "EN" : "Start date"
+        }
+      },
+      {
+        "dataType" : "date",
+        "key" : false,
+        "id" : "endDate",
+        "title" : {
+          "EN" : "End date"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "um",
+        "subject" : "um",
+        "title" : {
+          "EN" : "Unit of measure"
+        }
+      },
+      {
+        "dataType" : "number",
+        "key" : false,
+        "id" : "value",
+        "subject" : "value",
+        "title" : {
+          "EN" : "Value"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "valueText",
+        "title" : {
+          "EN" : "Value text"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "valueType",
+        "title" : {
+          "EN" : "Value type"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "exemptions",
+        "title" : {
+          "EN" : "Exemptions"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "minavtariffvalue",
+        "title" : {
+          "EN" : "Min AV tariff value"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "notes",
+        "title" : {
+          "EN" : "Notes"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "link",
+        "title" : {
+          "EN" : "Link"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "source",
+        "title" : {
+          "EN" : "Source"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "title_of_notice",
+        "title" : {
+          "EN" : "Title of notice"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "legal_basis_name",
+        "title" : {
+          "EN" : "Legal basis name"
+        }
+      },
+      {
+        "dataType" : "date",
+        "key" : false,
+        "id" : "date_of_publication",
+        "title" : {
+          "EN" : "Publication date"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "imposed_end_date",
+        "title" : {
+          "EN" : "Imposed end date"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "second_generation_specific",
+        "title" : {
+          "EN" : "Second generation"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "benchmark_tax",
+        "title" : {
+          "EN" : "Benchmark tax"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "benchmark_product",
+        "title" : {
+          "EN" : "Benchmark product"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "tax_rate_biofuel",
+        "title" : {
+          "EN" : "Biofuel tax rate"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "tax_rate_benchmark",
+        "title" : {
+          "EN" : "Benchmark tax rate"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "start_date_tax",
+        "title" : {
+          "EN" : "Tax start date"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "benchmark_link",
+        "title" : {
+          "EN" : "Benchmark link"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "original_dataset",
+        "title" : {
+          "EN" : "Original dataset"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "type_of_change_code",
+        "title" : {
+          "EN" : "Type of change code"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "type_of_change_name",
+        "title" : {
+          "EN" : "Type of change name"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "measure_description",
+        "title" : {
+          "EN" : "Measure description"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "product_original_hs",
+        "title" : {
+          "EN" : "Original product HS code"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "product_original_name",
+        "title" : {
+          "EN" : "Original product name"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "link_pdf",
+        "title" : {
+          "EN" : "PDF link"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "benchmark_link_pdf",
+        "title" : {
+          "EN" : "VBenchmark PDF link"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "short_description",
+        "title" : {
+          "EN" : "Short description"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "shared_group_code",
+        "title" : {
+          "EN" : "Shared group code"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "description",
+        "title" : {
+          "EN" : "Description"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "maxavtariffvalue",
+        "title" : {
+          "EN" : "Max AV tariff value"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "countavtariff",
+        "title" : {
+          "EN" : "AV tariff count"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "countnavtariff",
+        "title" : {
+          "EN" : "NAV tariff count"
+        }
+      }
+    ]
+  },
+
+
+
+
+
+
+  "language" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "characterSet" : {
+    "codes" : [ {
+      "code" : "106",
+      "label" : {
+        "EN" : "UTF-8"
+      }
+    } ],
+    "idCodeList" : "IANAcharacterSet"
+  },
+  "metadataStandardName" : "FENIX",
+  "metadataStandardVersion" : "1.0",
+  "metadataLanguage" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  }
+}
