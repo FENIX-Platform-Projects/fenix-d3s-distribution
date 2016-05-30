@@ -1,0 +1,354 @@
+{
+    "uid": "OECD_IndividualPolicy",
+	"version": "1.0",
+    "title": {
+        "EN": "OECD Individual policy list"
+    },
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["policy", "individual"],
+        "description": {"EN":"OECD Individual policy list"},
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": "06"
+                        }
+                    ],
+                    "idCodeList": "FENIX_Subjects",
+                    "version": "1.0"
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 2,
+            "typeOfCodeList": "tree"
+        }
+
+    },
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "OECD"
+            },
+            "organizationUnit": {"EN":"CDC-DAC"},
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": "+33 1 45 24 82 00",
+                "address": "OECD - 2, rue André Pascal - 75775 Paris Cedex 16 - France",	
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": "https://unstats.un.org/unsd/cr/registry/cpc-2.asp",
+                "disseminationFormat": ["txt","pdf"]
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+    },
+    "dsd" : {
+        "contextSystem":"oecd"
+    }
+}
+
+--structure--
+csvSeparator=;
+structure=table
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1
+titleColumnIndex_EN=2
+
+--data--
+
+1;(ASRA)  QC - Maize  -  PC39
+2;(ASRA)  QC - Soybeans  -  PC41
+3;(ASRA) 2010  QC - Maize  -  PC49
+4;(ASRA) 2010  QC - Soybeans  -  PC51
+5;(MA - Maize)  ASERCA + ASERCA Exports&Freight Maize  -  TCTC7
+6;(MA - Maize)  FIDELIST  -  TCTC1
+7;(MA - Maize)  Maize  -  TCTC8
+8;(MA - Maize)  Premium to commercial buyers (PEP)  Maize  -  TCTC2
+9;(MA - Maize)  Risk premium (PROP) (since 2005)  Maize  -  TCTC7
+10;(MRI Ontario) Maize  -  PC59
+11;(MRI Ontario) Soybeans  -  PC61
+12;(RI - Rice)  ASERCA - Rice  -  TCTC6
+13;(RI - Rice)  Premium to commercial buyers (PEP)  Rice  -  TCTC3
+14;(RI - Rice)  Production refunds for starch from rice  -  TCTC1
+15;(RI - Rice)  Rice for the poor (RASKIN)  -  TCTC1
+16;(RI - Rice)  Risk premium (PROP) (since 2005)  Rice  -  TCTC8
+17;(SB - Soybeans)  ASERCA - Soyabeans  -  TCTC5
+18;(SB - Soybeans)  Risk premium (PROP) (since 2005)  Soybeans  -  TCTC9
+19;(SB - Soybeans)  Soybean oil  -  TCTC11
+20;(WT - Wheat)  ASERCA + ASERCA Exports&Freight Wheat  -  TCTC3
+21;(WT - Wheat)  CWB Pool deficits--Wheat  -  TCTC3
+22;(WT - Wheat)  Premium to commercial buyers (PEP)  Wheat  -  TCTC1
+23;(WT - Wheat)  Risk premium (PROP) (since 2005)  Wheat  -  TCTC6
+24;(WT - Wheat)  Wheat  -  TCTC9
+29;Agricultural Stabilization Act--Wheat (Federal Portion)  -  PO1
+30;Agricultural Stabilization Act--Wheat (Provincial Portion)  -  PO21
+31;Agri-monetary (Labour insurance 35%) Common wheat  -  PIV3
+32;Agri-monetary (Labour insurance 35%) Durum Wheat  -  PIV4
+33;Agri-monetary (Labour insurance 35%) Maize  -  PIV7
+34;Agri-monetary (Labour insurance 35%) Rice  -  PIV8
+35;Agri-monetary aid (45%) common wheat  -  PO37
+36;Agri-monetary aid (45%) Durum wheat  -  PO38
+37;Agri-monetary aid (45%) Maize  -  PO41
+38;Agri-monetary aid (45%) Rice  -  PO42
+40;Agrimonetary aid (Nat.)  Common wheat  -  PO50
+41;Agrimonetary aid (Nat.)  Durum wheat  -  PO51
+42;Agrimonetary aid (Nat.)  Maize  -  PO53
+43;Agrimonetary aid (Nat.)  Rice  -  PO60
+45;Aid to durum wheat  -  PC3
+46;Aid to small cereal producers  Common wheat  -  PO1
+47;Aid to small cereal producers  Durum wheat  -  PO2
+48;Aid to small cereal producers  Maize  -  PO6
+49;Aid to small cereal producers  Rice  -  PO7
+50;Alianza -- soybeans (oleaginosas)  -  PC1
+51;ALIANZA programa nopalero  -  PIV5
+52;Area payment (rice)  -  PC1
+53;Area payments for common wheat (incl. top-ups)  national expenditures  -  PC9
+54;Area payments for durum wheat (incl. top-ups)  national expenditures  -  PC10
+55;ASA-Maize (Federal Portion)  -  PO2
+56;ASA-Maize (Provincial Portion)  -  PO22
+57;ASA--Soybeans (Federal Portion)  -  PO4
+58;ASA--Soybeans (Provincial Portion)  -  PO24
+59;ASERCA marketing payments  maize  -  PO2
+60;ASERCA marketing payments  rice  -  PO1
+61;ASERCA marketing payments  soya  -  PO11
+62;ASERCA marketing payments  wheat  -  PO3
+63;ASERCA price hedging and contracting (maize)  -  PIV18
+64;ASERCA price hedging and contracting (soya)  -  PIV20
+65;ASERCA price hedging and contracting (wheat)  -  PIV21
+66;Assurance-stabilisation du revenu agricole (ASRA)  QC - Wheat  -  PC38
+67;Assurance-stabilisation du revenu agricole (ASRA) 2010  QC - Wheat  -  PC48
+68;Certificate exchange gains  From 1996 Maize  -  PO82
+69;Certificate exchange gains  From 1996 Rice  -  PO84
+70;Certificate exchange gains  From 1996 Soybeans  -  PO85
+71;Certificate exchange gains  From 1996 Wheat  -  PO80
+72;Commodity Loan Forfeit  FROM 1996 Maize  -  PO7
+73;Commodity Loan Forfeit  FROM 1996 Rice  -  PO9
+74;Commodity Loan Forfeit  FROM 1996 Soybeans  -  PO10
+75;Commodity Loan Forfeit  FROM 1996 Wheat  -  PO5
+76;Commodity Loan Forfeit  UP TO 1995 - Maize  -  PO2
+77;Commodity Loan Forfeit  UP TO 1995  Rice  -  PO4
+78;Commodity Loan Forfeit  UP TO 1995 - Wheat  -  PO1
+79;Commodity loan interest subsidy  FROM 1996 Maize  -  PO111
+80;Commodity loan interest subsidy  FROM 1996 Rice  -  PO113
+81;Commodity loan interest subsidy  FROM 1996 Soybeans  -  PO114
+82;Commodity loan interest subsidy  FROM 1996 Wheat  -  PO109
+83;Commodity loan interest subsidy  UP TO 1995 Maize  -  PO104
+84;Commodity loan interest subsidy  UP TO 1995 Rice  -  PO106
+85;Commodity loan interest subsidy  UP TO 1995 Soybeans  -  PO107
+86;Commodity loan interest subsidy  UP TO 1995 Wheat  -  PO102
+87;Crop insurance    Maize  -  PC8
+88;Crop insurance    Rice  -  PC11
+89;Crop insurance    Soybeans  -  PC12
+90;Crop insurance  Wheat  -  PC6
+91;Crop Insurance payments--Maize (federal)  -  PC2
+92;Crop Insurance payments--Maize (provincial)  -  PC15
+93;Crop Insurance payments--Soybeans (federal)  -  PC4
+94;Crop Insurance payments--Soybeans (provincial)  -  PC17
+95;Crop Insurance payments--Wheat (federal)  -  PC1
+96;Crop Insurance payments--Wheat (provincial)  -  PC14
+101;Deficiency payments  up to 1995 Maize  -  PC3
+102;Deficiency payments  up to 1995 Rice  -  PC4
+103;Deficiency payments  up to 1995 Wheat  -  PC1
+104;Direct payment for core farmers (Soybean)  -  PO35
+105;Direct payment for core farmers (Wheat)  -  PO33
+107;Direct payments for soybeans  -  PO29
+110;Durum Wheat Quality Program  -  PIV9
+115;Hard white wheat incentive payments  -  PO170
+116;Loan deficiency payments  FROM 1996 Maize  -  PO34
+117;Loan deficiency payments  FROM 1996 Rice  -  PO36
+118;Loan deficiency payments  FROM 1996 Soybeans  -  PO37
+119;Loan deficiency payments  FROM 1996 Wheat  -  PO32
+120;Loan deficiency payments  UP TO 1995 Maize  -  PO28
+121;Loan deficiency payments  UP TO 1995 Rice  -  PO29
+122;Loan deficiency payments  UP TO 1995 Soybeans  -  PO30
+123;Loan deficiency payments  UP TO 1995 Wheat  -  PO27
+124;Maize premium  -  PO10
+125;Market loss payments Soybeans  -  PO141
+126;Market Revenue Program (MRI Ontario) Wheat  -  PC58
+127;Marketing loan gains  FROM 1996 Maize  -  PO59
+128;Marketing loan gains  FROM 1996 Rice  -  PO61
+129;Marketing loan gains  FROM 1996 Soybeans  -  PO62
+130;Marketing loan gains  FROM 1996 Wheat  -  PO57
+131;Marketing loan gains  UP TO 1995 -- Rice  -  PO55
+132;MPS Common wheat
+133;MPS Durum wheat
+134;MPS Maize
+135;MPS Rice
+136;MPS Soybeans
+137;MPS Wheat
+138;National output payments for maize  -  PO63
+139;National output payments for wheat  -  PO62
+140;National subsidies to soybeans  -  PO65
+141;National Tripartite Stabilization Program--Wheat (Federal Portion)  -  PO11
+143;New Variety Extension Payment 2002  -  PIV2
+144;Non-specified per tonne payments for crop and animal production  Maize  -  PO25
+145;Non-specified per tonne payments for crop and animal production  Wheat  -  PO24
+148;NTSP-Maize (Federal Portion)  -  PO12
+150;NTSP--Soybeans (Federal Portion)  -  PO14
+152;Ontario Risk Management Program - Maize  -  PC90
+153;Ontario Risk Management Program - Soybeans  -  PC92
+154;Ontario Risk Management Program - Wheat  -  PC89
+156;Other measures for rice  -  PC8
+157;PACE marketing payments  maize / ASERCA  -  PO13
+158;Payment on rice (JRIS)  -  PO28
+159;Payments for nitrate reduction  Maize  -  PC12
+160;Payments for nitrate reduction  Maize  national expenditures  -  PC15
+161;Payments for rice  -  PC6
+162;Per hectare payment for maize  -  PC5
+163;Per hectare payments for crops from 2006         Maize  -  PC2
+164;Per hectare payments for crops from 2006    Wheat  -  PC1
+165;Per hectare subsidies -- Rice  -  PC1
+166;Per tonne payments crops up to 1992     Maize  -  PO2
+167;Per tonne payments crops up to 1992    Wheat  -  PO1
+170;Pledge loan benefit (from reduced interest on pledge loans)  Maize  -  PO38
+171;Pledge loan benefit (from reduced interest on pledge loans)  Wheat  -  PO37
+172;POSEI- area payments for rice  -  PC7
+173;Post harvest and processing facilities for maize  -  PIF2
+174;Post harvest and processing facilities for rice  -  PIF1
+175;Post harvest and processing facilities for soybeans  -  PIF3
+179;Preferential interest subsidy on marketing loans  Wheat  -  PO1
+183;Preferential interest subsidy on working capital loans  Wheat  -  PIV1
+184;Production aid for durum wheat  -  PC1
+185;Production aid for indica rice  -  PO8
+187;Quality premium for durum wheat  -  PC4
+188;Rice Farm Income Support (fixed rate)  -  PC6
+189;Rice Farm Income Support (variable rate)  -  PC7
+190;Rice farmers management support  -  PC2
+195;Seed payments  Common Wheat  -  PO18
+196;Seed payments  Durum Wheat  -  PO19
+197;Seed payments  Maize  -  PO22
+198;Seed payments  Rice  -  PO23
+200;Seeds for maize  -  PIV3
+201;Seeds for rice  -  PIV2
+202;Seeds for soybean  -  PIV6
+203;Soybeans producers management stabilization programme  -  PO30
+204;Special Canadian Grains Program--Maize  -  PC28
+205;Special Canadian Grains Program--Soybeans  -  PC30
+206;Special Canadian Grains Program--Wheat  -  PC27
+207;Storage payments  UP TO 1995 Maize  -  PO136
+208;Storage payments  UP TO 1995 Wheat  -  PO135
+209;Supplementary aid for durum wheat  -  PC2
+210;Variable payment for paddy field  -  PC2
+211;Wheat premium  -  PO11
+212;Total or partial exemption from Impuesto a los Combustibles Liquidos y Gaseosos (ICLG) or hydrocarbon tax
+213;Total or partial exemption from 'Tasa Hídrica' or gasoline tax
+214;Total or partial exemption from Gas-oil tax
+215;Total or partial exemption from ICMS (consumption state tax for circulation of goods and services)
+216;Total or partial exemption from COFINS (Contribution for Financing Social Security)
+217;Total or partial exemption from PIS (Contribution to the Social Integration Program)
+218;Preferential interest subsidy on marketing loans  Soybeans  -  PO7
+219;Preferential interest subsidy on working capital loans  Soybeans  -  PIV7
+220;Rural insurance premium (from 2006  with input constraints)  Rice  -  PIV32
+221;Preferential interest subsidy on marketing loans (with input constraints)  Maize  -  PO4
+222;Rural insurance premium (from 2006  with input constraints)  Soybeans  -  PIV34
+223;ACRE Wheat  -  PC31
+224;Preferential interest subsidy on marketing loans (with input constraints)  Soybeans  -  PO8
+225;Rural insurance premium (from 2006  with input constraints)  Maize  -  PIV30
+226;Defficiency payments - PEPRO programme  Soybeans  -  PO27
+227;Diversion payments Wheat  -  PC22
+228;Direct payment for wheat  -  PO27
+229;Other interventions for rice  -  PO9
+230;Rural insurance premium (from 2006  with input constraints)  Wheat  -  PIV28
+231;Preferential interest subsidy on working capital loans (with input constraints)  Wheat  -  PIV2
+232;ACRE Maize  -  PC33
+233;NTSP--Soybeans (Provincial Portion)  -  PO33
+234;Preferential interest subsidy on working capital loans (with input constraints)  Maize  -  PIV4
+235;Preferential interest subsidy on working capital loans (with input constraints)  Rice  -  PIV6
+236;Agri-monetary aid (45%) Soyabean  -  PO46
+237;ACRE Soybeans  -  PC36
+238;Defficiency payments - PEPRO programme  Wheat  -  PO25
+239;Rural insurance premium (from 2004)  Rice  -  PIV31
+240;Rural insurance premium (from 2004)  Soybeans  -  PIV33
+241;Preferential interest subsidy on working capital loans  Rice  -  PIV5
+242;Preferential interest subsidy on marketing loans  Rice  -  PO5
+243;(WT - Wheat)  Ad hoc bread subsidy from State Reserve Fund (2014)  -  TCTC5
+244;Per tonne subsidy for grain delivered to state stocks (1993-94)  Maize  -  PO23
+245;Preferential interest subsidy on working capital loans (with input constraints)  Soybeans  -  PIV8
+246;Defficiency payments - PEPRO programme  Maize  -  PO26
+247;Preferential interest subsidy on marketing loans  Maize  -  PO3
+248;Rural insurance premium (from 2004)  Maize  -  PIV29
+249;Embargo Compensation--Wheat  -  PO41
+250;Rural insurance premium (from 2004)  Wheat  -  PIV27
+251;Preferential interest subsidy on marketing loans (with input constraints)  Rice  -  PO6
+252;Direct payment for rice farmers (rice flour and feed rice)  -  PC8
+253;NTSP-Maize (Provincial Portion)  -  PO31
+254;Preferential interest subsidy on marketing loans (with input constraints)  Wheat  -  PO2
+255;Non-specified per tonne payments for crops from regional budgets (from 2005)  Wheat  -  PO10
+256;Embargo Compensation--Maize  -  PO42
+257;Diversion payments Maize  -  PC24
+258;National Tripartite Stabilization Program--Wheat (Provincial Portion)  -  PO30
+259;ACRE Rice  -  PC35
+260;Seed payments  Soyabean  -  PO24
+261;Preferential interest subsidy on working capital loans  Maize  -  PIV3
+262;Production aid for soyabeans  -  PO12
+263;Agrimonetary aid (Nat.)  Soyabeans  -  PO56
+264;Non-specified per tonne payments for crops from regional budgets (from 2005)  Maize  -  PO11
+265;Per tonne subsidy for grain delivered to state stocks (1993-94)  Wheat  -  PO22
+266;Total or partial exemption for ethanol imports and sales from CIDE (Contribuição de Intervenção no Domínio Econômico)
+999;n.a.
+
+
+
+
+
+
+
+

@@ -1,0 +1,460 @@
+{
+    "uid": "OECD_Condition",
+	"version": "1.0",
+    "title": {
+        "EN": "OECD Condition list"
+    },
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["condition"],
+        "description": {"EN":"OECD Condition list"},
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": "06"
+                        }
+                    ],
+                    "idCodeList": "FENIX_Subjects",
+                    "version": "1.0"
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 2,
+            "typeOfCodeList": "tree"
+        }
+
+    },
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "OECD"
+            },
+            "organizationUnit": {"EN":"CDC-DAC"},
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": "+33 1 45 24 82 00",
+                "address": "OECD - 2, rue André Pascal - 75775 Paris Cedex 16 - France",	
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": "https://unstats.un.org/unsd/cr/registry/cpc-2.asp",
+                "disseminationFormat": ["txt","pdf"]
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+    },
+    "dsd" : {
+        "contextSystem":"oecd"
+    }
+}
+
+--structure--
+csvSeparator=;
+structure=table
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1
+titleColumnIndex_EN=2
+
+--data--
+
+14;A biodiesel producer is only eligible to receive a refund for up to 25 million gallons of biodiesel produced during each calendar year.
+15;Annual tax credit cap of $5 million
+16;Applies to biofuel production
+18;Biodiesel from feedstock from Family Agriculture (PRONAF)
+19;Biodiesel from raw materials from North, Northeast & Semi-Arid Zones
+21;Biodiesel made from used cooking oil (UCO)
+22;Biodiesel produced from large size companies
+23;Biodiesel produced from medium size companies
+24;Biodiesel produced from small size companies
+30;Eligible are biodiesel producers and biodiesel produce from waste vegetable oil feedstock.
+31;Eligible are biodiesel producers and biodiesel produced from other feedstocks, including soybean oil produced in a facility that began operating on or before December 31, 2004.
+32;Eligible are biodiesel producers and biodiesel produced from soybean oil in a facility or through expanded capacity of a facility that began operating after December 31, 2004.
+33;Eligible are biodiesel production facilities, from 40,000 gallons of produced biofuel for year, with a maximum annual credit of  $2.5 million in a maximum of 4 consecutive taxable years.
+34;Eligible are biofuel producer and blenders. Annual biodiesel tax credit cap of $10 million.
+35;Eligible are biofuel producers up to 36 consecutive months for new fuel production; The credit will be capped at ten million gallons of biodiesel per year per biodiesel facility.
+36;Eligible are ethanol producers and ethanol from other agricultural products (not small grains).
+37;Eligible are ethanol producers and ethanol from small grains.
+38;Eligible are ethanol producers that must have produced ethanol on or before December 31, 2006.
+39;Eligible are ethanol producers up to 36 consecutive months for new fuel production; The credit will be capped at ten million gallons of ethanol per year per ethanol facility and 30 million gallons of ethanol per year at all ethanol facilities in the state
+40;Eligible are ethanol producers. Annual tax credit cap of $5 million.
+41;Eligible are fuel retailers
+42;Eligible are fuel retailers and biodiesel that is made entirely from components produced in Montana.
+44;Eligible are Montana-based ethanol producers and ethanol producer must use at least 20% Montana products in the first year of production, 25% in the second year, and 10% yearly increase thereafter.
+45;Eligible is a licensed distributor and biodiesel that is made entirely from components produced in Montana.
+46;Ethanol distributor
+48;Ethanol producer or importer
+75;Exports to Brazil
+82;For organic wheat only
+83;For retailers within 2% of meeting the annual renewable fuel goals.
+84;For retailers within 4% of meeting the annual renewable fuel goals.
+85;For small producers (<2 million gallons); annual limit $5,000; up to three years.
+92;If in-state annualized production volume equals or > 10 million gallons; produced from domestically grown feedstock.
+93;Imports of biodiesel originating in Argentina
+94;Imports of biodiesel originating in Indonesia
+95;Imports of biodiesel originating in Indonesia and Argentina
+96;Imports of biodiesel originating in the United States of America
+97;Imports of bioethanol originating in the United States of America
+99;Low protein wheat (see Notes)
+105;n.a.
+107;On ethanol used by enterprises for production of mixed motor fuels with the content of ethanol additives based on ethanol
+109;One year after in-state production has reached 350 million gallons of cellulosic ethanol and sustained this volume for three months.
+110;One year after in-state production of biodiesel reaches 100 million gallons.
+111;One year after in-state production of biodiesel reaches 200 million gallons.
+112;One year after in-state production of biodiesel reaches 40 million gallons.
+113;One year after in-state production of biodiesel reaches 400 million gallons.
+114;One year after in-state production reaches 40 million gallons and that level is maintained on an annualized basis for at least three months.
+115;Only biodiesel produced in NS is eligible.
+120;Only for biodiesel exceeding mandated quota
+121;Only for ethanol exceeding mandated quota
+124;Only for wheat in bags not exceeding 50 kg
+127;Organic maize and those shipments carried out in bags only
+131;Payment rates fixed
+132;Payment rates fixed; Current commodity production output limits
+133;Payment rates fixed; Current commodity production output limits; With (mandatory) input constraints
+134;Payment rates fixed; With (mandatory) input constraints
+135;Payment rates fixed; With (voluntary)/environmental input constraints
+136;Payment rates variable
+137;Payment rates variable; Current commodity production output limits
+138;Payment rates variable; Current commodity production output limits; With (mandatory) input constraints
+139;Payment rates variable; With (mandatory) input constraints
+141;Producers with social fuel stamp
+142;Producers without social fuel stamp
+143;Production of biofuel using ethanol
+144;Production quantity > 150 million liters
+145;Production quantity until 150 million liters
+146;Provider of a port terminal service who exports wheat
+148;Retailers must meet the certain annual renewable fuel goals to be eligible for the credit.
+149;Retailers whose total diesel sales consist of at least 50% biodiesel blends.
+154;Tax exemption towards ethanol biofuel was imposed only to four specific companies.
+166;The second generation biofuel does not qualify for alcohol fuel
+201;Popcorn only
+202;Quota applies to Matta (variety of non-basmati rice)
+203;Quota applies to Ponni Samba (variety of non-basmati rice)
+204;Quota applies to Sona Masuri (variety of non-basmati rice)
+205;Wheat exporter
+285;Organic non-Basmati rice
+286;Organic wheat
+287;Exports to Maldives
+288;Exports to Bangladesh
+289;Exports to Russian Federation
+290;Exports to Cote d'Ivoire
+291;Exports to Egypt
+292;Exports to Mali
+293;Exports to Nigeria
+294;Exports to Djibouti
+295;Exports to Zanzibar
+296;Exports to Benin
+297;Exports to Mozambique
+298;Exports to Ghana
+299;Exports to Cameroon
+300;Exports to Mauritius
+301;Exports to Somalia
+302;Exports to Togo
+303;Exports to Zambia
+304;Exports to Senegal
+305;Exports to Guinea Bissau
+306;Exports to Burkina Faso
+307;Exports to Gambia
+308;Exports to Liberia
+309;Exports to Sierra Leone
+310;Exports to Tunisia
+311;Exports to Nepal
+312;Exports to Kenya, Somalia & Djibouti
+313;Exports to Bhutan
+314;Exports to Comoros
+315;Exports to Madagascar
+316;Exports to Afghanistan
+362;Veterinary certificate is needed
+363;Quarantine phytosanitary control at customs border of the Customs Union is implemented
+364;10% broken rice
+365;15% broken rice
+366;25% broken rice
+367;35% broken rice
+368;5% broken rice
+369;Broken rate between 5-25%
+370;Broken rate max 5%
+371;Coal and mineral mining companies
+372;COFCO Biochemical (AnHui) Co., Ltd.
+373;Companies technically capable of using biodiesel to generate electricity
+374;Ethanol importer, producer or blender
+375;Exports to Uzbekistan
+376;If in-state annualized production volume equals or > 50 million gallons; Produced from domestic agricultural or biomass products.
+377;Imposed on oil refining companies which gasoline production exceeds 600 kkl/y.
+378;Locally produced biodiesel
+379;Locally produced ethanol
+380;Only PEMEX, the state-owned oil company which has monopoly in the domestic market, is subject to this policy. Exporters from other countries are not.
+381;Organic rice, broken rate between 0-25%
+382;Tax exemption was imposed only to two specific companies.
+383;The second generation biofuel qualifies for alcohol fuel
+384;In quota tariff associated with HS1996 code 10011000
+385;In quota tariff associated with HS1996 code 10019010
+386;In quota tariff associated with HS1996 code 10019090
+387;In quota tariff associated with HS1996 code 10019099-01
+388;In quota tariff associated with HS1996 code 10019099-02
+389;In quota tariff associated with HS1996 code 1005
+390;In quota tariff associated with HS1996 code 10051000
+391;In quota tariff associated with HS1996 code 10059000
+392;In quota tariff associated with HS1996 code 1006
+393;In quota tariff associated with HS1996 code 10061010-01
+394;In quota tariff associated with HS1996 code 10061010-02
+395;In quota tariff associated with HS1996 code 10061090-01
+396;In quota tariff associated with HS1996 code 10061090-02
+397;In quota tariff associated with HS1996 code 10062000-01
+398;In quota tariff associated with HS1996 code 10062000-02
+399;In quota tariff associated with HS1996 code 10062011
+400;In quota tariff associated with HS1996 code 10062013
+401;In quota tariff associated with HS1996 code 10062015
+402;In quota tariff associated with HS1996 code 10062017
+403;In quota tariff associated with HS1996 code 10062092
+404;In quota tariff associated with HS1996 code 10062094
+405;In quota tariff associated with HS1996 code 10062096
+406;In quota tariff associated with HS1996 code 10062098
+407;In quota tariff associated with HS1996 code 10063000-01
+408;In quota tariff associated with HS1996 code 10063000-02
+409;In quota tariff associated with HS1996 code 10063021
+410;In quota tariff associated with HS1996 code 10063023
+411;In quota tariff associated with HS1996 code 10063025
+412;In quota tariff associated with HS1996 code 10063027
+413;In quota tariff associated with HS1996 code 10063042
+414;In quota tariff associated with HS1996 code 10063044
+415;In quota tariff associated with HS1996 code 10063046
+416;In quota tariff associated with HS1996 code 10063048
+417;In quota tariff associated with HS1996 code 10063061
+418;In quota tariff associated with HS1996 code 10063063
+419;In quota tariff associated with HS1996 code 10063065
+420;In quota tariff associated with HS1996 code 10063067
+421;In quota tariff associated with HS1996 code 10063092
+422;In quota tariff associated with HS1996 code 10063094
+423;In quota tariff associated with HS1996 code 10063096
+424;In quota tariff associated with HS1996 code 10063098
+425;In quota tariff associated with HS1996 code 10064000
+426;In quota tariff associated with HS1996 code 10064000-01
+427;In quota tariff associated with HS1996 code 10064000-02
+428;In quota tariff associated with HS1996 code 11010000
+429;In quota tariff associated with HS1996 code 11022000
+430;In quota tariff associated with HS1996 code 11023000-01
+431;In quota tariff associated with HS1996 code 11023000-02
+432;In quota tariff associated with HS1996 code 11031100
+433;In quota tariff associated with HS1996 code 11031300
+434;In quota tariff associated with HS1996 code 11031400-01
+435;In quota tariff associated with HS1996 code 11031400-02
+436;In quota tariff associated with HS1996 code 11032100
+437;In quota tariff associated with HS1996 code 11042300
+438;In quota tariff associated with HS1996 code 15071000
+439;In quota tariff associated with HS1996 code 15079000
+440;In quota tariff associated with HS1996 code 23023010
+441;In quota tariff associated with HS1996 code 23023090
+442;In quota tariff associated with HS1996 code 23024010
+443;In quota tariff associated with HS1996 code 23024090
+446;In quota tariff associated with HS2002 code 100110
+447;In quota tariff associated with HS2002 code 10011001
+448;In quota tariff associated with HS2002 code 100190-01
+449;In quota tariff associated with HS2002 code 100190-02
+450;In quota tariff associated with HS2002 code 10019099
+452;In quota tariff associated with HS2002 code 100590
+456;In quota tariff associated with HS2002 code 10059099
+457;In quota tariff associated with HS2002 code 1006
+458;In quota tariff associated with HS2002 code 100610
+460;In quota tariff associated with HS2002 code 100620
+463;In quota tariff associated with HS2002 code 100630
+466;In quota tariff associated with HS2002 code 100640
+468;In quota tariff associated with HS2002 code 100890
+469;In quota tariff associated with HS2002 code 110100-01
+470;In quota tariff associated with HS2002 code 110100-02
+471;In quota tariff associated with HS2002 code 110230
+473;In quota tariff associated with HS2002 code 110290
+474;In quota tariff associated with HS2002 code 110311
+476;In quota tariff associated with HS2002 code 110319
+478;In quota tariff associated with HS2002 code 110320
+479;In quota tariff associated with HS2002 code 110320-01
+480;In quota tariff associated with HS2002 code 110320-02
+482;In quota tariff associated with HS2002 code 110419
+483;In quota tariff associated with HS2002 code 110419-01
+484;In quota tariff associated with HS2002 code 110419-02
+487;In quota tariff associated with HS2002 code 110429
+488;In quota tariff associated with HS2002 code 110429-01
+489;In quota tariff associated with HS2002 code 110429-02
+490;In quota tariff associated with HS2002 code 110811
+492;In quota tariff associated with HS2002 code 110812
+494;In quota tariff associated with HS2002 code 110813
+495;In quota tariff associated with HS2002 code 110814
+496;In quota tariff associated with HS2002 code 110819
+498;In quota tariff associated with HS2002 code 110820
+500;In quota tariff associated with HS2002 code 1201001000
+502;In quota tariff associated with HS2002 code 1201009001
+505;In quota tariff associated with HS2002 code 190120-01
+506;In quota tariff associated with HS2002 code 190120-02
+509;In quota tariff associated with HS2002 code 190190-01
+510;In quota tariff associated with HS2002 code 190190-02
+513;In quota tariff associated with HS2002 code 190410
+514;In quota tariff associated with HS2002 code 190420
+515;In quota tariff associated with HS2002 code 190430
+516;In quota tariff associated with HS2002 code 190490
+517;In quota tariff associated with HS2002 code 210690
+518;In quota tariff associated with HS2002 code 2304000008
+519;In quota tariff associated with HS2007 code 1001
+520;In quota tariff associated with HS2007 code 10011010
+521;In quota tariff associated with HS2007 code 10019010
+522;In quota tariff associated with HS2007 code 1005
+523;In quota tariff associated with HS2007 code 100590
+524;In quota tariff associated with HS2007 code 1101
+525;In quota tariff associated with HS2007 code 11010010
+526;In quota tariff associated with HS2007 code 1102-02
+527;In quota tariff associated with HS2007 code 1103-01
+528;In quota tariff associated with HS2007 code 1103-03
+529;In quota tariff associated with HS2007 code 11031110
+530;In quota tariff associated with HS2007 code 11032011
+531;In quota tariff associated with HS2007 code 1104-01
+532;In quota tariff associated with HS2007 code 1104-03
+533;In quota tariff associated with HS2007 code 11041911
+534;In quota tariff associated with HS2007 code 11042911
+535;In quota tariff associated with HS2007 code 11043011
+536;In quota tariff associated with HS2007 code 1107-01
+537;In quota tariff associated with HS2007 code 1108-01
+538;In quota tariff associated with HS2007 code 1108-02
+539;In quota tariff associated with HS2007 code 11081110
+540;In quota tariff associated with HS2007 code 11090010
+541;In quota tariff associated with HS2007 code 1201
+542;In quota tariff associated with HS2007 code 19012013
+543;In quota tariff associated with HS2007 code 19012023
+544;In quota tariff associated with HS2007 code 19021110
+545;In quota tariff associated with HS2007 code 19021911
+546;In quota tariff associated with HS2007 code 19021991
+547;In quota tariff associated with HS2007 code 19023011
+548;In quota tariff associated with HS2007 code 19041010
+549;In quota tariff associated with HS2007 code 19042010
+550;In quota tariff associated with HS2007 code 19042061
+551;In quota tariff associated with HS2007 code 19043010
+552;In quota tariff associated with HS2007 code 19043061
+553;In quota tariff associated with HS2007 code 19049010
+554;In quota tariff associated with HS2007 code 19049061
+555;In quota tariff associated with HS2007 code 19051010
+556;In quota tariff associated with HS2007 code 19051030
+557;In quota tariff associated with HS2007 code 19051040
+558;In quota tariff associated with HS2007 code 19051071
+559;In quota tariff associated with HS2007 code 19053110
+560;In quota tariff associated with HS2007 code 19053121
+561;In quota tariff associated with HS2007 code 19053129
+562;In quota tariff associated with HS2007 code 19053191
+563;In quota tariff associated with HS2007 code 19053199
+564;In quota tariff associated with HS2007 code 19053210
+565;In quota tariff associated with HS2007 code 19053291
+566;In quota tariff associated with HS2007 code 19053299
+567;In quota tariff associated with HS2007 code 19054010
+568;In quota tariff associated with HS2007 code 19054020
+569;In quota tariff associated with HS2007 code 19054040
+570;In quota tariff associated with HS2007 code 19054050
+571;In quota tariff associated with HS2007 code 19059010
+572;In quota tariff associated with HS2007 code 19059031
+573;In quota tariff associated with HS2007 code 19059034
+574;In quota tariff associated with HS2007 code 19059039
+575;In quota tariff associated with HS2007 code 19059041
+576;In quota tariff associated with HS2007 code 19059042
+577;In quota tariff associated with HS2007 code 19059049
+578;In quota tariff associated with HS2007 code 19059061
+579;In quota tariff associated with HS2007 code 19059069
+580;In quota tariff associated with HS2007 code 23023010
+581;In quota tariff associated with HS2007 code 2304
+582;In quota tariff associated with HS2007 code 2305
+583;In quota tariff associated with HS2007 code 2306
+584;In quota tariff associated with HS2007 code 1104230000
+585;In quota tariff associated with HS2007 code 1201009090
+586;In quota tariff associated with HS2007 code 1806902999
+587;In quota tariff associated with HS2007 code 1901909091
+588;In quota tariff associated with HS2007 code 1103202000
+589;In quota tariff associated with HS2007 code 1108200000
+590;In quota tariff associated with HS2007 code 1901201000
+591;In quota tariff associated with HS2007 code 1901209000
+592;In quota tariff associated with HS2007 code 1006201000
+593;In quota tariff associated with HS2007 code 0712902092
+594;In quota tariff associated with HS2007 code 1005909000
+595;In quota tariff associated with HS2007 code 1005901000
+596;In quota tariff associated with HS2007 code 1005902000
+597;In quota tariff associated with HS2007 code 1108199000
+598;In quota tariff associated with HS2007 code 1108110000
+599;In quota tariff associated with HS2007 code 1005100000
+600;In quota tariff associated with HS2007 code 1103193000
+601;In quota tariff associated with HS2007 code 1102902000
+602;In quota tariff associated with HS2007 code 1108121000
+603;In quota tariff associated with HS2007 code 1006302000
+604;In quota tariff associated with HS2007 code 1006301000
+605;In quota tariff associated with HS2007 code 1201009010
+606;In quota tariff associated with HS2007 code 1103130000
+607;In quota tariff associated with HS2007 code 0712902091
+608;In quota tariff associated with HS2007 code 1006100000
+609;In quota tariff associated with HS2007 code 1006400000
+610;In quota tariff associated with HS2007 code 1104191000
+611;In quota tariff associated with HS2007 code 1901909099
+612;In quota tariff associated with HS2007 code 1006202000
+613;In quota tariff associated with HS2007 code 1201001000
+614;In quota tariff associated with HS2007 code 1806902290
+615;In quota tariff associated with HS2007 code 1108129000
+616;Across 20 states and 4 contiguous union territories
+617;Across 9 states and 4 contiguous union territories
+618;Across 10 states and 3 contiguous union territories
+619;This VAT tax rebate is only granted for special economic zone 'Astana - new city' and special economic zone 'National industrial petrochemical technopark'
+620;Hanoi, Ho Chi Minh city, Hai phong, Da Nang, Can tho, Quang ngai and Ba Ria - Vung Tau.
+621;Hanoi, Ho Chi Minh city, Hai phong, Da Nang, Can tho, Quang ngai and Ba Ria - Vung Tau
+622;9 provinces
+
+
+
+
+
