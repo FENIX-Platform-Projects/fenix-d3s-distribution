@@ -7,6 +7,7 @@
   "dsd": {
     "contextSystem": "FAOSTAT",
     "datasources" : ["FAOSTAT"],
+    "cache":{ "storage":"postgres" },
 
     "columns" : [
       {
