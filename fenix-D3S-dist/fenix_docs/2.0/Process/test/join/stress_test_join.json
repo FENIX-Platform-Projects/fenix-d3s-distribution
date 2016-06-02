@@ -1,0 +1,34 @@
+[
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "adam_country_indicators"
+      },
+      {
+        "uid": "gift_avg_000042BUR201001"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+
+          {
+            "type": "id",
+            "value": "countryname"
+          }
+
+        ],
+        [
+          {
+            "type": "id",
+            "value": "subject"
+          }
+        ]
+      ],
+      "values": [
+
+      ]
+    }
+  }
+]

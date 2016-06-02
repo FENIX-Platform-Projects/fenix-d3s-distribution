@@ -3,38 +3,39 @@
     "name": "join",
     "sid": [
       {
-        "uid": "adam_usd_aggregation_table"
+        "uid": "UNECA_GDP_USD"
       },
       {
-        "uid": "adam_country_indicators"
+        "uid": "UNECA_BalanceOfPayments"
       }
     ],
     "parameters": {
       "joins": [
         [
+
           {
             "type": "id",
-            "value": "value"
+            "value": "Year"
           },
           {
-            "type": "code",
-            "value": "million_usd"
+            "type": "id",
+            "value": "TopicCode"
           }
         ],
         [
           {
             "type": "id",
-            "value": "value"
+            "value": "Year"
           },
           {
-            "type": "id",
-            "value": "unitcode"
+            "type": "text",
+            "value": "0207"
           }
         ]
       ],
       "values": [
-        ["oda", "dac_member","purposecode"],
-        ["itemcode","period"]
+        ["IndicatorCode", "CountryCode"],
+        ["Value","um"]
       ]
     }
   }

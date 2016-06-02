@@ -1,0 +1,57 @@
+[
+
+  {
+    "name": "filter",
+    "sid" : [{"uid" : "adam_usd_aggregation_table"}],
+    "parameters": {
+      "columns":["year", "value", "unitcode"],
+      "rows": {
+        "oda": { "enumeration": [ "usd_commitment" ] },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "302"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name": "group",
+    "result" : true,
+    "parameters": {
+      "by": [
+        "year"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  }
+
+]
