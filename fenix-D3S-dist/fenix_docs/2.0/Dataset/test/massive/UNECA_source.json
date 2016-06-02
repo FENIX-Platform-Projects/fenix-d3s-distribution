@@ -1,0 +1,30 @@
+{
+  "filter": {
+    "dsd.contextSystem" : {
+      "enumeration": [
+        "uneca"
+      ]
+    },
+    "meContent.resourceRepresentationType" : {
+      "enumeration" : ["dataset"]
+    }
+  },
+  "metadata": {
+    "contacts" : [ {
+      "organization" : {
+        "EN" : "UNECA"
+      },
+      "contactInfo" : {
+        "address" : "http://www.uneca.org/acs"
+      },
+      "organizationUnit" : {
+        "EN" : "Education system data, education surveys, household surveys or census for data on enrolment by level of education; population census or estimates for school-age population. Alternatively UNESCO."
+      },
+      "roleLabel" : {
+        "EN" : "Owner"
+      },
+      "role" : "owner"
+    } ]
+
+  }
+}
