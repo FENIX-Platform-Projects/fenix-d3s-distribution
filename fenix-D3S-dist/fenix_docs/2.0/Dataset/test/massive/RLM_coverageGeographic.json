@@ -1,0 +1,27 @@
+{
+  "filter": {
+    "dsd.contextSystem" : {
+      "enumeration": [
+        "RLM"
+      ]
+    },
+    "meContent.resourceRepresentationType" : {
+      "enumeration" : ["dataset"]
+    }
+  },
+  "metadata": {
+    "meContent" : {
+      "seCoverage": {
+        "coverageGeographic": {
+          "codes": [
+            {
+              "label": {
+                "EN": "World"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
