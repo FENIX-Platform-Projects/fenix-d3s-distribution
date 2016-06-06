@@ -1,0 +1,33 @@
+[
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "UNECA_GDP_USD"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "code",
+        "id": "unitcode",
+        "title": {
+          "EN": "Measurement unit"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2016",
+              "extendedName": {
+                "EN": "OECD Units"
+              },
+              "idCodeList": "crs_units"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "million_usd"
+    }
+  }
+]
+
