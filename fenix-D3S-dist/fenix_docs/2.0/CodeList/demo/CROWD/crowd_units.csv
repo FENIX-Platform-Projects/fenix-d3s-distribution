@@ -1,0 +1,111 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "Food and Agriculture Organization of the United Nations (FAO)"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "cstat_gmb_crowd"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "Crowd Data units measurement"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "1",
+         "typeOfCodeList": "list"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "02"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "Crowd Data Units"
+   },
+   "uid": "crowd_units"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@0@kg
+@1@Cup
+@10@Tête
+@11@Quantité
+@2@Sack
+@3@Bag
+@4@Hg
+@5@g
+@6@l
+@7@Number
+@8@Head
+@9@Alvéole

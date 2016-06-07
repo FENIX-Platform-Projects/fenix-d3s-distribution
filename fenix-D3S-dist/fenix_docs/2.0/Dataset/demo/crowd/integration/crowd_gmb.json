@@ -1,383 +1,146 @@
 {
-  "metadata": {
-    "language": {
-      "version": "1998",
-      "codes": [
-        {
-          "code": "eng",
-          "label": {
-            "EN": "English"
-          }
-        }
-      ],
-      "idCodeList": "ISO639-2"
-    },
-    "title": {
-      "EN": "Crowd data from GAMBIA"
-    },
-    "dsd": {
-      "columns": [
-        {
-          "dataType": "string",
-          "key": true,
-          "id": "countrycode",
-          "title": {
-            "EN": "Country code"
-          },
-          "values": {
-            "timeList": [
-              2011,
-              2012
-            ]
-          },
-          "subject": "time"
-        },
-        {
-          "dataType": "code",
-          "key": true,
-          "id": "AdministrativeLevel",
-          "title": {
-            "EN": "Area"
-          },
-          "values": {
-            "codes": [
-              {
-                "codes": [
-
-                ],
-                "idCodeList": "GAUL1_AFG"
-              }
-            ]
-          },
-          "domain": {
-            "codes": [
-              {
-                "idCodeList": "GAUL1_AFG"
-              }
-            ]
-          },
-          "subject": "geo"
-        },
-        {
-          "dataType": "code",
-          "key": true,
-          "id": "Product",
-          "title": {
-            "EN": "Product"
-          },
-          "values": {
-            "codes": [
-              {
-                "codes": [
-                  {
-                    "code": "27"
-                  },
-                  {
-                    "code": "56"
-                  },
-                  {
-                    "code": "15"
-                  },
-                  {
-                    "code": "44"
-                  }
-                ],
-                "idCodeList": "CountrySTAT_commodityList"
-              }
-            ]
-          },
-          "domain": {
-            "codes": [
-              {
-                "idCodeList": "CountrySTAT_commodityList"
-              }
-            ]
-          },
-          "subject": "item"
-        },
-        {
-          "dataType": "number",
-          "key": false,
-          "id": "Value",
-          "title": {
-            "EN": "Value"
-          },
-          "subject": "value"
-        }
-      ],
-      "datasources": [
-        "D3S"
-      ],
-      "contextSystem": "cstat_gmb_crowd",
-      "cache" : { "storage" : "postgres" }
-    },
-    "meContent": {
-      "description": {
-        "EN": "Distribution of Area Sown for Primary Crops\r\nby Year, Administrative Level 1, Product (Ha)",
-        "parent": "description."
-      },
-      "resourceRepresentationType": "dataset",
-      "keywords": [
-        "Primary Crops"
-      ],
-      "statisticalConceptsDefinitions": {
-        "EN": "",
-        "parent": "statisticalConceptsDefinitions."
-      },
-      "seReferencePopulation": {
-        "statisticalPopulation": {
-          "EN": "aaa"
-        },
-        "referencePeriod": {
-          "version": "1.0",
-          "codes": [
-            {
-              "code": "9"
-            }
-          ],
-          "idCodeList": "FAO_Period"
-        },
-        "referenceArea": {
-          "version": "1.0",
-          "codes": [
-            {
-              "code": "ADM1"
-            }
-          ],
-          "idCodeList": "GAUL_ReferenceArea"
-        }
-      },
-      "seCoverage": {
-        "coverageSectors": {
-          "codes": [
-            {
-              "code": "0201"
-            }
-          ],
-          "idCodeList": "UNECA_ClassificationOfActivities"
-        },
-        "coverageSectorsDetails": {
-          "EN": "",
-          "parent": "coverageSectorsDetails."
-        },
-        "coverageTime": {
-          "from": 1293836400000,
-          "to": 1356908400000
-        },
-        "coverageGeographic": {
-          "version": "2014",
-          "codes": [
-            {
-              "code": "1",
-              "label": {
-                "PT": "Afeganistão",
-                "FR": "Afghanistan",
-                "EN": "Afghanistan",
-                "AR": "أفغانستان",
-                "RU": "Афганистан",
-                "ES": "Afganistán",
-                "ZH": "阿富汗"
-              }
-            }
-          ],
-          "idCodeList": "GAUL0"
-        }
-      }
-    },
-    "uid": "002SPD016",
-    "meMaintenance": {
-      "seUpdate": {
-        "updateDate": 1435214674338
-      }
-    },
-    "contacts": [
-      {
-        "organization": {
-          "EN": "CSO"
-        },
-        "position": {
-          "EN": "Director of agriculture dev."
-        },
-        "role": "distributor",
-        "contactInfo": {
-          "address": "Ansari watt Kabul",
-          "phone": "93202104096",
-          "emailAddress": "mogibrashed@yahoo.com",
-          "hoursOfService": {
-            "EN": "9:00-17:00"
-          },
-          "contactInstruction": {
-            "EN": ""
-          }
-        },
-        "pointOfContact": "Agriculture statistic dev.",
-        "specify": {
-          "EN": ""
-        },
-        "organizationUnit": {
-          "EN": "ESD"
-        }
-      }
-    ],
-    "languageDetails": {
-      "EN": ""
-    },
-    "characterSet": {
-      "codes": [
-        {
-          "code": "106",
-          "label": {
-            "EN": "UTF-8"
-          }
-        }
-      ],
-      "idCodeList": "IANAcharacterSet"
-    },
-    "metadataStandardName": "FENIX",
-    "metadataStandardVersion": "1.0",
-    "metadataLanguage": {
-      "version": "1998",
-      "codes": [
-        {
-          "code": "eng",
-          "label": {
-            "EN": "English"
-          }
-        }
-      ],
-      "idCodeList": "ISO639-2"
-    },
-    "meInstitutionalMandate": {
-      "legalActsAgreements": {
-        "EN": "For legal acts concerning statistics at national levels see links to country websites."
-      },
-      "institutionalMandateDataSharing": {
-        "EN": "Article I of the constitution indeed requires the Organization to collect, analyse, interpret and disseminate information relating to nutrition, food and agriculture (the term “agriculture” and its derivatives includes forestry, fisheries and aquaculture). The first session of the FAO Conference in 1945 provided the rationale: “If FAO is to carry out its work successfully it will need to know where and why hunger and malnutrition exist, what forms they take, and how widespread they are. Such data will serve as a basis for making plans, determining the efficacy of measures used, and measuring progress from time to time.” \r\nMember countries reaffirmed this mandate in 2000 when formulating the Organization’s strategic thrusts for the 2000-2015 period: Corporate Strategy E1 commits the Organization to building “an integrated information resource base, with current, relevant and reliable statistics, information and knowledge made accessible to all FAO clients.\r\n"
-      }
-    },
-    "meAccessibility": {
-      "seConfidentiality": {
-        "confidentialityPolicy": {
-          "EN": "Only non-confidential data are recorded"
-        },
-        "confidentialityDataTreatment": {
-          "EN": ""
-        },
-        "confidentialityStatus": {
-          "version": "1.0",
-          "codes": [
-            {
-              "code": "F",
-              "label": {
-                "EN": "Free"
-              }
-            }
-          ],
-          "idCodeList": "CL_CONF_STATUS"
-        }
-      }
-    },
-    "meDataQuality": {
-      "qualityManagement": {
-        "EN": "",
-        "parent": "qualityManagement."
-      },
-      "qualityAssessment": {
-        "EN": "Based on TWG quality assessment methodology.",
-        "parent": "qualityAssessment."
-      },
-      "qualityAssurance": {
-        "EN": "Statistics are subject to the general quality assurance framework , where domain-specific quality assurance activities (the use of best practices, quality reviews, self-assessments, compliance monitoring) are carried out systematically. ",
-        "parent": "qualityAssurance."
-      },
-      "seAccuracy": {
-        "accuracyNonSampling": {
-          "EN": "It is not possible to asses the accuracy but when there is a substantial amount of estimated or imputed data points, the accuracy for certain products, countries and regions is not that good.",
-          "parent": "accuracyNonSampling."
-        },
-        "accuracySampling": {
-          "EN": "",
-          "parent": "accuracySampling."
-        }
-      },
-      "seComparability": {
-        "comparabilityGeographical": {
-          "EN": "All data refers to Afghanistan/Afghanistan regions.",
-          "parent": "comparabilityGeographical."
-        },
-        "comparabilityTime": {
-          "EN": "",
-          "parent": "comparabilityTime."
-        },
-        "coherenceIntern": {
-          "EN": "Among Afghanistan domains fairly good overall coherence.",
-          "parent": "coherenceIntern."
-        }
-      }
-    },
-    "meStatisticalProcessing": {
-      "seDataValidation": {
-        "dataValidationIntermediate": {
-          "EN": ""
-        },
-        "dataValidationOutput": {
-          "EN": "Countries and International Organizations are responsible for transmitting data which have already been checked. Validation at FAO concerns any transmission errors, consolidation and data consistency- data also validated internally followed by peer-review."
-        },
-        "dataValidationSource": {
-          "EN": ""
-        }
-      },
-      "seDataSource": {
-        "seSecondaryDataCollection": {
-          "dataCollection": {
-            "EN": "Technical Working Group"
-          },
-          "originOfCollectedData": {
-            "version": "1.0",
-            "codes": [
-              {
-                "code": "D",
-                "label": {
-                  "EN": "Consultants"
-                }
-              }
-            ],
-            "idCodeList": "FAOSTAT_OriginData"
-          },
-          "rawDataDescription": {
-            "EN": ""
-          }
-        }
-      },
-      "seDataCompilation": {
-        "missingData": {
-          "EN": "Missing data are highlighted in the dataset using the following symbols: \r\n-data not available = \"..\" and \"...\" missing data (data exist but have not been collected)\r\n\r\n-\".\" data for this category do not exist and / or data included in another category"
-        },
-        "weights": {
-          "EN": "No weights"
-        },
-        "aggregationProcessing": {
-          "EN": ""
-        },
-        "dataAdjustment": {
-          "version": "1.1",
-          "codes": [
-            {
-              "code": "_Z",
-              "label": {
-                "EN": "Not applicable"
-              }
-            }
-          ],
-          "idCodeList": "CL_ADJUSTMENT"
-        },
-        "dataAdjustmentDetails": {
-          "EN": ""
-        },
-        "indexType": {
-          "EN": "No index"
-        }
-      }
-    }
+  "uid": "crowd_data_gmb",
+  "title": {
+    "EN": "ADAM Gross National Income (GNI) data for Donor countries"
   },
+  "meContent": {
+    "description": {
+      "EN": "GNI, Atlas method (current US$ Million) data for donor countries."
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "cstat_gmb_crowd",
+    "cache":{
+      "storage":"postgres"
+    },
+    "columns": [
+      {
+        "id": "countrycode",
+        "subject": "geo",
+        "title": {
+          "EN": "Country code"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [{
+            "idCodeList": "crowd_countries"
+          }]
+        },
+        "key": true
+      },
+      {
+        "id": "citycode",
+        "title": {
+          "EN": "City code"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [{
+            "idCodeList": "crowd_cities"
+          }]
+        },
+        "key": true
+      },
+      {
+        "id": "marketcode",
+        "title": {
+          "EN": "Market code"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [{
+            "idCodeList": "crowd_markets"
+          }]
+        },
+        "key": true
+      },
+      {
+        "id": "vendorcode",
+        "title": {
+          "EN": "Vendor code"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [{
+            "idCodeList": "crowd_vendors"
+          }]
+        },
+        "key": true
+      },
+      {
+        "id": "unitcode",
+        "title": {
+          "EN": "Unit Code"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [{
+            "idCodeList": "crowd_units"
+          }]
+        },
+        "key": true,
+        "subject" : "um"
+
+      },
+      {
+        "id": "currencycode",
+        "title": {
+          "EN": "Currency Code"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [{
+            "idCodeList": "crowd_currencies"
+          }]
+        },
+        "key": true
+      },
+      {
+        "id": "commoditycode",
+        "title": {
+          "EN": "Commodity Code"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [{
+            "idCodeList": "crowd_commodities"
+          }]
+        },
+        "key": true
+      },
+      {
+        "id": "price",
+        "subject": "value",
+        "title": {
+          "EN": "Price"
+        },
+        "dataType": "number"
+      },
+      {
+        "id": "date",
+        "title": {
+          "EN": "Date"
+        },
+        "dataType": "date",
+        "key": true
+      },
+      {
+        "id": "note",
+        "title": {
+          "EN": "Notes"
+        },
+        "dataType": "text",
+        "key": false
+      },
+      {
+        "id": "quantity",
+        "title": {
+          "EN": "Quantity"
+        },
+        "dataType": "number",
+        "key": true
+      }
+    ]
+  }
 }

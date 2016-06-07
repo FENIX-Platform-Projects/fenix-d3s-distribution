@@ -1,0 +1,227 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "Food and Agriculture Organization of the United Nations (FAO)"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "cstat_gmb_crowd"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "Crowd Data Vendors"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "1",
+         "typeOfCodeList": "list"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "02"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "Crowd Data Vendors"
+   },
+   "uid": "crowd_vendors"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@1@Vendor of Nairobi
+@2@Vendor of Mombasa
+@3@Vendor of Kisumu
+@4@Vendor of Nakuru
+@5@Vendor of Eldoret
+@6@Vendor of Malindi
+@7@Vendor of Marimanti
+@8@Vendor of Imenti
+@9@Vendor of Nyahururu
+@10@Vendor of Kitale
+@11@Vendor of Kakamega
+@12@Vendor of Machakos
+@13@Vendor of Kisii
+@14@Vendor of Busia
+@15@Vendor of Taveta
+@16@Vendor of Loitokitok
+@17@Vendor of Embu
+@18@Vendor of Kitui
+@19@Vendor of Tharaka North
+@20@Vendor of Chwele
+@21@Vendor of Tharaka South
+@22@Vendor of Isiolo
+@23@Vendor of Kajiado
+@25@Vendor of Citayy
+@26@Vendor of Freetown
+@27@Vendor of Kenema
+@28@Vendor of Koidu
+@29@Vendor of Makeni
+@30@Vendor of Lunsar
+@31@Vendor of Port Loko
+@32@Vendor of Waterloo
+@33@Vendor of Kabala
+@34@Vendor of Segbwema
+@35@Vendor of Dar es Salaam
+@36@Vendor of Mwanza
+@37@Vendor of Arusha
+@38@Vendor of Dodoma
+@39@Vendor of Mbeya
+@40@Vendor of Morogoro
+@41@Vendor of Tanga
+@42@Vendor of Kahama
+@43@Vendor of Tabora
+@44@Vendor of Zanzibar City
+@45@Vendor of Lagos
+@46@Vendor of Kano
+@47@Vendor of Abuja
+@48@Vendor of Ibadan
+@49@Vendor of Kaduna
+@50@Vendor of Port Harcourt
+@51@Vendor of Aba
+@52@Vendor of Ogobomosho
+@53@Vendor of Maiduguri
+@54@Vendor of Benin City
+@55@Vendor of Harare
+@56@Vendor of Bulawayo
+@57@Vendor of Mutare
+@58@Vendor of Bindura
+@59@Vendor of Marondera
+@60@Vendor of Chinhoyi
+@61@Vendor of Masvingo
+@62@Vendor of Lupane District
+@63@Vendor of Gwanda
+@64@Vendor of Gweru
+@65@Vendor of Douala
+@66@Vendor of Yaounde
+@67@Vendor of Garoua
+@68@Vendor of Kousseri
+@69@Vendor of Bamenda
+@70@Vendor of Maroua
+@71@Vendor of Bafoussam
+@72@Vendor of Mokolo
+@73@Vendor of Ngaoundere
+@74@Vendor of Bertoua
+@76@Vendor of Bakau
+@77@Vendor of Banjul
+@78@Vendor of Farafenni
+@79@Vendor of Lamin
+@80@Vendor of Sukuta
+@81@Vendor of Basse Santa Su
+@82@Vendor of Gunjur
+@83@Vendor of Soma
+@84@Vendor of Sabi
+@85@Vendor of Addis Ababa
+@86@Vendor of Dire Dawa
+@87@Vendor of Mekele
+@88@Vendor of Nazret
+@89@Vendor of Bahir Dar
+@90@Vendor of Gonder
+@91@Vendor of Dessie
+@92@Vendor of Awasa
+@93@Vendor of Jima
+@94@Vendor of Bishoftu
+@95@Vendor of Kabul
+@96@Vendor of Kandahar
+@97@Vendor of Mazari Sharif
+@98@Vendor of Herat
+@99@Vendor of Jalalabad
+@100@Vendor of Kunduz
+@101@Vendor of Ghazni
+@102@Vendor of Balkh
+@103@Vendor of Baghlan
+@104@Vendor of Gardez
+@105@Vendor of Tcheboa
+@106@Vendor of Santa
+@107@Vendor of Ngoulemakong
+@134@Vendor of yaounde
+@135@Vendor of yaounde
+@136@Vendor of yaounde
+@137@Vendor of yaounde
+@138@Vendor of yaounde
+@139@Vendor of yaounde
+@140@Vendor of Garoua
+@141@Vendor of santa
+@142@Vendor of santa
+@143@Vendor of santa
+@144@Vendor of Kaduna
+@145@Vendor of Kaduna
+@146@Vendor of Kaduna
+@147@Vendor of kaduna
+@197@KADUNA MARKET (CENTRAL)
+@198@KAWO MARKET
+@200@UNG RIMI MARKET
+@209@STATION MARKET
+@226@TUDUN WADA MARKET
+@235@TUDUN WADA MARKET
+@245@KAKURI MARKET
+@256@KADUNA JUNCTION MARKET
+@268@BADARAWA MARKET

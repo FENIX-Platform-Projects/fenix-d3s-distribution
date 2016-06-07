@@ -1,0 +1,245 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "Food and Agriculture Organization of the United Nations (FAO)"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "cstat_gmb_crowd"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "Crowd Data Commodities"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "1",
+         "typeOfCodeList": "list"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "02"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "Crowd Data Commodities"
+   },
+   "uid": "crowd_commodities"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@0@Wheat
+@1@Maize
+@2@Sugar Cane
+@3@Potato
+@4@Grape
+@5@Vegetables
+@6@Barley
+@7@Rice
+@8@Apricots
+@9@Apple
+@10@Cauliflower
+@11@Chillies
+@12@Cooking Bananas
+@13@Cowpeas
+@14@Cucumber
+@15@Dry Maize
+@16@Eggs
+@17@Finger Millet
+@18@Fresh Peas
+@19@Green Gram
+@20@Green Maize
+@21@Groundnuts
+@22@Kales
+@23@Lemon
+@24@Lettuce
+@25@Lime
+@26@Mango
+@27@Mango, ngowe
+@28@Mwezi Moja
+@29@Onions Dry
+@30@Orange
+@31@Passion Fruits
+@32@Pawpaw
+@33@Pineapples
+@34@Red Irish Potato
+@35@Ripe Banana
+@36@Sorghum
+@37@Spring Onion
+@38@Sweet Potato
+@39@Tomato
+@41@Irish Potato
+@42@Rice, Paddy
+@43@Cassava
+@44@Oil, Palm Fruit
+@46@Plantains
+@47@Fonio
+@48@Groundnuts, with Shell
+@50@Maize, Green
+@51@Vegetables, Fresh nes
+@52@Fruit, Citrus nes
+@53@Millet
+@54@Banana
+@55@Mangoes, Mangosteens, Guavas
+@56@Pulses, nes
+@57@Palm Kernels
+@58@Fruit, Tropical Fresh nes
+@59@Coconuts
+@60@Oil, Palm
+@61@Seed Cotton
+@62@Coffee, Green
+@63@Taro (Cocoyam)
+@64@Yams
+@65@Cottonseed
+@66@Rubber, Natural
+@67@Cotton Lint
+@69@Cocoa, Beans
+@70@Cashew Nuts, with Shell
+@71@Melons, other (inc. Cantaloupes)
+@72@Tobacco, unmanifatured
+@73@Sesame Seed
+@74@Nuts, nes
+@75@Sisal
+@76@Soybeans
+@77@Fruit, Fresh nes
+@78@Fibre Crops nes
+@79@Cereals, nes
+@80@Kola Nuts
+@81@Chillies and Peppers, dry
+@82@Peas, dry
+@83@Spices, nes
+@84@Broad beans, Horse Beans, dry
+@85@Ananas
+@86@Arachide graine
+@87@Arachide coque
+@88@Banane douce
+@89@Banane plantain
+@90@Concombre
+@91@Gingembre
+@92@Gombo
+@93@Haricot
+@94@Huile de palme
+@95@Igname
+@96@Macabo/Taro
+@97@Maïs
+@98@Manioc
+@99@Melon
+@100@Mil/Sorgho
+@101@Niébé
+@102@Oignon
+@103@Pastèque
+@104@Patate douce
+@105@Piment
+@106@Pomme de terre
+@107@Riz
+@108@Sésame
+@109@Soja
+@110@Tomate
+@111@Voandzou
+@112@Viande
+@113@Lait
+@114@Miel
+@115@Œufs
+@116@Boeuf
+@117@Taureau
+@118@Vache de réforme
+@119@Porc
+@120@Mouton
+@121@Chèvre
+@122@Poule de chair
+@123@Poule de reforme
+@124@Local rice
+@125@Broken rice
+@126@Long Grain Rice
+@127@Findo
+@128@Sesame
+@129@Cabbage
+@130@Hot pepper
+@131@Large pepper (Hot)
+@132@Okra
+@133@Egg plant
+@134@Wonjo
+@135@Bitter Tomato
+@136@Tomato (big size)
+@137@Tomato (small size)
+@138@Onion, imported
+@139@Onion, local
+@140@Carrot
+@141@Melon
+@142@Pumkin
+@143@Decorticated G/Nut
+@144@Undecorticated G/Nut
+@145@Beans
+@146@Meat & Bone
+@147@Beef Steak
+@148@Mutton
+

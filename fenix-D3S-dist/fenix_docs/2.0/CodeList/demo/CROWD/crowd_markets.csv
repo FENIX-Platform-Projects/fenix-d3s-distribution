@@ -1,0 +1,329 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "Food and Agriculture Organization of the United Nations (FAO)"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "cstat_gmb_crowd"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "Crowd Data Markets"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "1",
+         "typeOfCodeList": "list"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "02"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "Crowd Data Markets"
+   },
+   "uid": "crowd_markets"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@1@Market of Nairobi
+@2@Market of Mombasa
+@3@Market of Kisumu
+@4@Market of Nakuru
+@5@Market of Eldoret
+@6@Market of Malindi
+@7@Market of Marimanti
+@8@Market of Imenti
+@9@Market of Nyahururu
+@10@Market of Kitale
+@11@Market of Kakamega
+@12@Market of Machakos
+@13@Market of Kisii
+@14@Market of Busia
+@15@Market of Taveta
+@16@Market of Loitokitok
+@17@Market of Embu
+@18@Market of Kitui
+@19@Market of Tharaka North
+@20@Market of Chwele
+@21@Market of Tharaka South
+@22@Market of Isiolo
+@23@Market of Kajiado
+@25@Market of Citayy
+@26@Market of Freetown
+@27@Market of Kenema
+@28@Market of Koidu
+@29@Market of Makeni
+@30@Market of Lunsar
+@31@Market of Port Loko
+@32@Market of Waterloo
+@33@Market of Kabala
+@34@Market of Segbwema
+@35@Market of Dar es Salaam
+@36@Market of Mwanza
+@37@Market of Arusha
+@38@Market of Dodoma
+@39@Market of Mbeya
+@40@Market of Morogoro
+@41@Market of Tanga
+@42@Market of Kahama
+@43@Market of Tabora
+@44@Market of Zanzibar City
+@45@Market of Lagos
+@46@Market of Kano
+@47@Market of Abuja
+@48@Market of Ibadan
+@49@Market of Kaduna
+@50@Market of Port Harcourt
+@51@Market of Aba
+@52@Market of Ogobomosho
+@53@Market of Maiduguri
+@54@Market of Benin City
+@55@Market of Harare
+@56@Market of Bulawayo
+@57@Market of Mutare
+@58@Market of Bindura
+@59@Market of Marondera
+@60@Market of Chinhoyi
+@61@Market of Masvingo
+@62@Market of Lupane District
+@63@Market of Gwanda
+@64@Market of Gweru
+@65@Market of Douala
+@66@Market of Yaounde
+@67@Market of Garoua
+@68@Market of Kousseri
+@69@Market of Bamenda
+@70@Market of Maroua
+@71@Market of Bafoussam
+@72@Market of Mokolo
+@73@Market of Ngaoundere
+@74@Market of Bertoua
+@76@Market of Bakau
+@77@Market of Banjul
+@78@Market of Farafenni
+@79@Market of Lamin
+@80@Market of Sukuta
+@81@Market of Basse Santa Su
+@82@Market of Gunjur
+@83@Market of Soma
+@84@Market of Sabi
+@85@Market of Addis Ababa
+@86@Market of Dire Dawa
+@87@Market of Mekele
+@88@Market of Nazret
+@89@Market of Bahir Dar
+@90@Market of Gonder
+@91@Market of Dessie
+@92@Market of Awasa
+@93@Market of Jima
+@94@Market of Bishoftu
+@95@Market of Kabul
+@96@Market of Kandahar
+@97@Market of Mazari Sharif
+@98@Market of Herat
+@99@Market of Jalalabad
+@100@Market of Kunduz
+@101@Market of Ghazni
+@102@Market of Balkh
+@103@Market of Baghlan
+@104@Market of Gardez
+@105@Ngong
+@106@Djefatou
+@107@Tchéboa Centre
+@108@Santa Centre
+@109@Mile 12
+@110@Toll Gate Matazem
+@111@Buchi
+@112@Awing
+@113@Pinyin
+@114@Ngoulemakong
+@115@Boutenkou
+@145@fudhu
+@147@KADUNA MARKET (CENTRAL)
+@148@KAWO MARKET
+@150@UNG RIMI MARKET
+@159@STATION MARKET
+@176@TUDUN WADA MARKET
+@185@TUDUN WADA MARKET
+@195@KAKURI MARKET
+@206@KADUNA JUNCTION MARKET
+@218@BADARAWA MARKET
+@231@Bodija
+@232@Bodija
+@233@Bodija
+@234@Bodija
+@235@Bodija
+@236@Bodija
+@237@wuse market
+@238@wuse market
+@239@wuse market
+@240@wuse market
+@241@wuse market
+@242@wuse market
+@243@wuse market
+@244@wuse market
+@245@wuse market
+@246@wuse market
+@247@marche de mvog ada
+@248@marche de mvog ada
+@249@marche de mvog ada
+@250@marche de mvog ada
+@251@marche de mvog ada
+@252@marche de mvog ada
+@253@marche de mvog ada
+@254@marche de mvog ada
+@255@marche de mvog ada
+@256@marche de mvog ada
+@257@marche de mvog ada
+@258@marche de mvog ada
+@259@marche de mvog ada
+@260@marche de mvog ada
+@261@marche de mvog ada
+@262@marche de mvog ada
+@263@marche de mvog ada
+@264@marche de mvog ada
+@265@marche de mvog ada
+@266@marche de mvog ada
+@267@marche de mvog ada
+@268@marche de mvog ada
+@269@marche de mvog ada
+@270@marche de mvog ada
+@271@marche de mvog ada
+@272@marche de mvog ada
+@273@marche de mvog ada
+@274@marche de mvog ada
+@275@marche de mvog ada
+@276@marche de mvog ada
+@277@marche de mvog ada
+@278@marche de mvog ada
+@279@marche de mvog ada
+@280@marche de mvog ada
+@281@marche de mvog ada
+@282@marche de mvog ada
+@283@marche de mvog ada
+@284@marche de mvog ada
+@285@marche de mvog ada
+@286@marche de mvog ada
+@287@marche de mvog ada
+@288@marche de mvog ada
+@289@marche de mvog ada
+@290@marche de mvog ada
+@291@marche de mvog ada
+@292@marche de mvog ada
+@293@marche de mvog ada
+@294@marche de mvog ada
+@295@marche de mvog ada
+@296@marche de mvog ada
+@297@marche de mvog ada
+@298@marche de mvog ada
+@299@marche de mvog ada
+@300@marche de mvog ada
+@301@marche de mvog ada
+@302@marche de mvog ada
+@303@marche de mvog ada
+@304@marche de mvog ada
+@305@marche de mvog ada
+@306@marche de mvog ada
+@307@marche de mvog ada
+@308@marche de mvog ada
+@309@marche de mvog ada
+@310@marche de mvog ada
+@311@marche de mvog ada
+@312@marche de mvog ada
+@313@marche de mvog ada
+@314@marche de mvog ada
+@315@marche de mvog ada
+@316@marche de mvog ada
+@317@marche de mvog ada
+@318@marche de mvog ada
+@319@marche de mvog ada
+@320@marche de mvog ada
+@321@marche de mvog ada
+@322@marche de mvog ada
+@323@marche de mvog ada
+@324@marche de mvog ada
+@325@marche de mvog ada
+@326@marche de mvog ada
+@327@marche de mvog ada
+@328@marche de mvog ada
+@329@marche de mvog ada
+@330@marche de mvog ada
+@331@marche de mvog ada
+@332@marche de mvog ada
+@333@marche de mvog ada
+@334@marche de mvog ada
+@335@marche de mvog ada
+@336@marche de mvog ada
+@337@marche de mvog ada
