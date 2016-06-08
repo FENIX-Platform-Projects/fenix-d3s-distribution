@@ -1,69 +1,78 @@
 create table  data_fenix as select * from (
 
-	select
-	to_char(dt.gaul0code, '9999') as countrycode ,
-	g0.name as countrycode_EN,
-	cast(null as  character varying(80)) as countrycode_ES,
-	cast(null as character varying(80)) as countrycode_FR,
-	cast(null as  character varying(80)) as countrycode_DE,
+  select
+    to_char(dt.gaul0code, '9999') as countrycode ,
+    to_char(dt.citycode, '9999') as citycode,
+    dt.marketcode as  marketcode ,
+    dt.vendorcode as vendorcode  ,
+    dt.munitcode as unitcode  ,
+    dt.currencycode as currencycode ,
+    dt.commoditycode as commoditycode ,
+    avg(dt.price) as price  ,
+    cast(to_char(dt.date, 'YYYYMMDD') as integer) as date,
+    dt.quantity  as quantity,
 
-	to_char(dt.citycode, '9999') as citycode,
-	cy.name as citycode_EN ,
-	cast(null as   character varying(80)) as citycode_ES  ,
-	cast(null as   character varying(80)) as citycode_FR ,
-	cast(null as   character varying(80)) as citycode_DE ,
+    g0.name as countrycode_en,
+    cast(null as  character varying(80)) as countrycode_es,
+    cast(null as character varying(80)) as countrycode_fr,
+    cast(null as  character varying(80)) as countrycode_de,
 
-	dt.marketcode as  marketcode ,
-	mk.name  as marketcode_EN  ,
-	cast(null as   character varying(80)) as marketcode_FR,
-	cast(null as   character varying(80)) as marketcode_ES,
-	cast(null as   character varying(80)) as marketcode_DE,
+    cy.name as citycode_en ,
+    cast(null as   character varying(80)) as citycode_es  ,
+    cast(null as   character varying(80)) as citycode_fr ,
+    cast(null as   character varying(80)) as citycode_de ,
 
-	dt.vendorcode as vendorcode  ,
-	dt.vendorname as vendorcode_EN ,
-	cast(null as character varying(80)) as vendorcode_FR ,
-	cast(null as   character varying(80)) as vendorcode_ES ,
-	cast(null as   character varying(80)) as vendorcode_DE ,
+    mk.name  as marketcode_en  ,
+    cast(null as   character varying(80)) as marketcode_fr,
+    cast(null as   character varying(80)) as marketcode_es,
+    cast(null as   character varying(80)) as marketcode_de,
 
-	dt.munitcode as um  ,
-	mu.name as um_EN  ,
-	cast(null as   character varying(80)) as um_FR  ,
-	cast(null as   character varying(80)) as um_ES  ,
-	cast(null as   character varying(80)) as um_DE  ,
-	dt.currencycode as currencycode ,
+    ve.name as vendorcode_en ,
+    cast(null as character varying(80)) as vendorcode_fr ,
+    cast(null as   character varying(80)) as vendorcode_es ,
+    cast(null as   character varying(80)) as vendorcode_de ,
 
-	cu.name as currencycode_EN  ,
-	cast(null as   character varying(80)) as currencycode_FR  ,
-	cast(null as   character varying(80)) as currencycode_ES  ,
-	cast(null as   character varying(80)) as currencycode_DE  ,
+    mu.name as unitcode_en  ,
+    cast(null as   character varying(80)) as unitcode_fr  ,
+    cast(null as   character varying(80)) as unitcode_es  ,
+    cast(null as   character varying(80)) as unitcode_de  ,
 
-	dt.commoditycode as commoditycode ,
-	cm.name as commoditycode_EN ,
-	cast(null as character varying(80)) as commoditycode_FR ,
-	cast(null as   character varying(80)) as commoditycode_ES ,
-	cast(null as   character varying(80)) as commoditycode_DE ,
+    cu.name as currencycode_en  ,
+    cast(null as   character varying(80)) as currencycode_fr  ,
+    cast(null as   character varying(80)) as currencycode_es  ,
+    cast(null as   character varying(80)) as currencycode_de  ,
 
-	dt.price as price  ,
-	dt.date as day,
-	dt.note as note  ,
-	dt.quantity  as quantity
+    cm.name as commoditycode_en ,
+    cast(null as character varying(80)) as commoditycode_fr ,
+    cast(null as   character varying(80)) as commoditycode_es ,
+    cast(null as   character varying(80)) as commoditycode_de
 
-	from
-	(select * from data where gaul0code='90')dt,
-	(select * from gaul0 where code='90')g0,
-	city as cy,
-	market as mk,
-	munit as mu,
-	currency as cu,
-	commodity as cm
+    from
+      (select gaul0code,citycode,marketcode, vendorcode,munitcode,
+       commoditycode,currencycode,date, quantity, avg(price) as price
+       from data where gaul0code='90'
+       group by data.gaul0code,data.citycode,data.marketcode, data.vendorcode,data.munitcode,
+       data.commoditycode,data.currencycode,data.date, data.quantity )dt,
+      (select * from gaul0 where code='90')g0,
+      city as cy,
+      market as mk,
+      munit as mu,
+      currency as cu,
+      commodity as cm,
+      vendor as ve
 
-	where
-	dt.citycode = cy.code and
-	cast(dt.marketcode as integer)= mk.code and
-	dt.munitcode = mu.code and
-	dt.currencycode = cu.code and
-	cast(dt.commoditycode as integer) =cm.code
+    where
+      dt.citycode = cy.code and
+      cast(dt.marketcode as integer)= mk.code and
+      dt.munitcode = mu.code and
+      dt.currencycode = cu.code and
+      cast(dt.commoditycode as integer) =cm.code and
+      cast(dt.vendorcode as integer) =ve.code
 
+    group by dt.gaul0code,dt.citycode,dt.marketcode, dt.vendorcode,dt.munitcode,
+     dt.commoditycode,dt.currencycode,dt.date, dt.quantity,
+     g0.name, cy.name,mk.name,dt.vendorcode, ve.name, mu.name,
+     cu.name, cm.name
 
 
 )t

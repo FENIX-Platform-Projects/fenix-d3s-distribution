@@ -1,7 +1,7 @@
 {
   "uid": "crowd_data_gmb",
   "title": {
-    "EN": "ADAM Gross National Income (GNI) data for Donor countries"
+    "EN": "Crowd data for gambia"
   },
   "meContent": {
     "description": {
@@ -11,22 +11,17 @@
   },
   "dsd": {
     "contextSystem": "cstat_gmb_crowd",
+    "datasources": ["cstat_gmb_crowd"],
     "cache":{
       "storage":"postgres"
     },
     "columns": [
       {
-        "id": "countrycode",
-        "subject": "geo",
-        "title": {
-          "EN": "Country code"
-        },
-        "dataType": "code",
-        "domain": {
-          "codes": [{
-            "idCodeList": "crowd_countries"
-          }]
-        },
+        "id" : "countrycode",
+        "subject" : "geo",
+        "title" : { "EN" : "Country Code" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 0 } ] } ,
         "key": true
       },
       {
@@ -124,14 +119,6 @@
         },
         "dataType": "date",
         "key": true
-      },
-      {
-        "id": "note",
-        "title": {
-          "EN": "Notes"
-        },
-        "dataType": "text",
-        "key": false
       },
       {
         "id": "quantity",
