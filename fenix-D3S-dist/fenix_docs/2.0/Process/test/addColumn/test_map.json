@@ -1,6 +1,10 @@
 {
-  "name": "addColumn",
-  "parameters": {
+  "name": "addcolumn",
+  "sid": [
+    {
+      "uid": "UNECA_GDP_USD"
+    }
+  ],  "parameters": {
     "column": {
       "dataType": "code",
       "id": "unitcode",

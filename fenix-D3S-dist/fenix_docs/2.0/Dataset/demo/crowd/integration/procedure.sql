@@ -1,8 +1,8 @@
 create table  data_fenix as select * from (
 
   select
-    to_char(dt.gaul0code, '9999') as countrycode ,
-    to_char(dt.citycode, '9999') as citycode,
+    to_char(dt.gaul0code, 'FM99999') as countrycode ,
+    to_char(dt.citycode, 'FM99999') as citycode,
     dt.marketcode as  marketcode ,
     dt.vendorcode as vendorcode  ,
     dt.munitcode as unitcode  ,

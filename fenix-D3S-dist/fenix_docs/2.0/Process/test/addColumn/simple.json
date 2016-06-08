@@ -9,7 +9,7 @@
     "parameters": {
       "column": {
         "dataType": "code",
-        "id": "unitcode",
+        "id": "testColumn!",
         "title": {
           "EN": "Measurement unit"
         },
