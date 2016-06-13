@@ -3,13 +3,13 @@
     "name": "addcolumn",
     "sid": [
       {
-        "uid": "UNECA_GDP_USD"
+        "uid": "adam_donors_gni"
       }
     ],
     "parameters": {
       "column": {
         "dataType": "code",
-        "id": "testColumn!",
+        "id": "testColumn",
         "title": {
           "EN": "Measurement unit"
         },

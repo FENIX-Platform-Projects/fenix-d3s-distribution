@@ -121,8 +121,22 @@ titleColumnIndex_EN=3
 --data--
 
 @01@Single sector ODA
-@02@Total single sector donor ODA
-@03@Percentage
-@04@Total
-@04@NA
+@02@Percentage
+@03@Subsector ODA
+@04@Total ODA in the country
+@05@Sector/Country ODA
+@06@SubSector/Country ODA
+@07@Total ODA from Donor
+@08@OECD ODA average for sector
+@09@OECD ODA average for subsector
+@10@Donor/Sector ODA
+@11@Donor/Subsector ODA
+@12@Donor Total ODA
+@13@GNI Donor
+@14@OECD ODA/GNI average
+@15@Donor/Country Total ODA
+@16@Total ODA
+
+
+@99@NA
 

@@ -1,1 +1,20 @@
-[{"name":"simpleFilter","parameters":{"filter":{"rows":{"indicatorcode":{"time":[{"from":2013,"to":2013}]}}}}}]
+[
+  {
+    "name": "filter",
+    "sid":"crowd_data_gmb",
+    "parameters": {
+      "filter": {
+        "rows": {
+          "price": {
+            "time": [
+              {
+                "from": 2013,
+                "to": 2013
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+]

@@ -12,28 +12,21 @@
     "parameters": {
       "joins": [
         [
-
           {
             "type": "id",
             "value": "Year"
-          },
-          {
-            "type": "id",
-            "value": "TopicCode"
           }
         ],
         [
           {
             "type": "id",
             "value": "Year"
-          },
-          {
-            "type": "text",
-            "value": "0207"
           }
         ]
       ],
       "values": [
+        ["CountryCode", "IndicatorCode"],
+        ["Value"]
 
       ]
     }

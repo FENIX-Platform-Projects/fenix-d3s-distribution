@@ -114,6 +114,12 @@
       },
       {
         "id": "date",
+        "domain":{
+          "period":{
+            "from": 20151201,
+            "to": 20151231
+          }
+        },
         "title": {
           "EN": "Date"
         },

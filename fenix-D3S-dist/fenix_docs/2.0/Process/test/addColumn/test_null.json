@@ -1,0 +1,42 @@
+[
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "adam_donors_gni"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "code",
+        "id": "testColumn",
+        "title": {
+          "EN": "Measurement unit"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2016",
+              "extendedName": {
+                "EN": "OECD Units"
+              },
+              "idCodeList": "crs_units"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": {
+        "keys": [
+          "countrycode = '1'",
+          {
+          }
+        ],
+        "values": [
+          "countrycode",
+          "this should be null!!!"
+        ]
+      }
+    }
+  }
+]
