@@ -120,6 +120,7 @@
       "uid": "sector_oda"
     }
   },
+
   {
     "name": "filter",
     "sid": [
@@ -394,8 +395,6 @@
   {
     "name": "addcolumn",
     "sid":[{"uid":"join_process"}],
-
-
     "parameters": {
       "column": {
         "dataType": "number",
@@ -493,15 +492,4 @@
       "uid": "percentage_ODA"
     }
   }
-
-
-
-
-
-
-
-
-
-
-
 ]

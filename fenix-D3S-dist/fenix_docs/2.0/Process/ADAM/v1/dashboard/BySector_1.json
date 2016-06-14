@@ -7,14 +7,13 @@
         "uid": "sector_oda"
       },
       {
-        "uid": "subsector_ODA"
-      },
-      {
         "uid": "total_oda"
       },
       {
-        "uid":"percentage_ODA"
+        "uid": "percentage_ODA"
+
       }
+
     ],
     "parameters": {
     },
@@ -120,116 +119,9 @@
       "uid": "sector_oda"
     }
   },
-  {
-    "name": "filter",
-    "sid": [
-      {
-        "uid": "adam_usd_aggregation_table"
-      }
-    ],
-    "parameters": {
-      "columns": [
-        "year",
-        "value",
-        "unitcode"
-      ],
-      "rows": {
-        "oda": {
-          "enumeration": [
-            "usd_commitment"
-          ]
-        },
-        "sectorcode": {
-          "codes": [
-            {
-              "uid": "crs_sectors",
-              "version": "2016",
-              "codes": [
-                "114"
-              ]
-            }
-          ]
-        },
-        "purposecode": {
-          "codes": [
-            {
-              "uid": "crs_purposes",
-              "version": "2016",
-              "codes": [
-                "11420"
-              ]
-            }
-          ]
-        },
-        "year": {
-          "time": [
-            {
-              "from": 2000,
-              "to": 2013
-            }
-          ]
-        }
-      }
-    }
 
-  },
-  {
-    "name": "group",
-    "parameters": {
-      "by": [
-        "year"
-      ],
-      "aggregations": [
-        {
-          "columns": [
-            "value"
-          ],
-          "rule": "SUM"
-        },
-        {
-          "columns": [
-            "unitcode"
-          ],
-          "rule": "first"
-        }
-      ]
-    },
-    "rid": {
-      "uid": "tt2"
-    }
-  },
-  {
-    "name": "addcolumn",
-    "sid": [
-      {
-        "uid": "tt2"
-      }
-    ],
-    "parameters": {
-      "column": {
-        "dataType": "text",
-        "id": "indicator",
-        "title": {
-          "EN": "Indicator"
-        },
-        "domain": {
-          "codes": [
-            {
-              "extendedName": {
-                "EN": "Adam Processes"
-              },
-              "idCodeList": "adam_processes"
-            }
-          ]
-        },
-        "subject": null
-      },
-      "value": "SUBSECTOR"
-    },
-    "rid": {
-      "uid": "subsector_ODA"
-    }
-  },
+
+
   {
     "name": "filter",
     "sid": [
@@ -331,7 +223,6 @@
 
 
   },
-
   {
     "name": "addcolumn",
     "parameters": {
@@ -366,7 +257,7 @@
         "uid": "sector_oda"
       },
       {
-        "uid": "subsector_ODA"
+        "uid": "total_oda"
       }
     ],
     "parameters": {
@@ -394,8 +285,6 @@
   {
     "name": "addcolumn",
     "sid":[{"uid":"join_process"}],
-
-
     "parameters": {
       "column": {
         "dataType": "number",
@@ -407,7 +296,7 @@
       },
       "value": {
         "keys":  ["1 = 1"],
-        "values":[" ( subsector_ODA_value / sector_oda_value )*100"]
+        "values":[" ( sector_oda_value / total_oda_value )*100"]
 
       }
     },
@@ -493,15 +382,6 @@
       "uid": "percentage_ODA"
     }
   }
-
-
-
-
-
-
-
-
-
 
 
 ]
