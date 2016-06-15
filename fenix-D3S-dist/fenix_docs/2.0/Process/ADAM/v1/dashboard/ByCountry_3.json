@@ -1,127 +1,223 @@
 [
-
   {
     "name": "union",
     "sid": [
       {
-        "uid": "sector_oda"
+        "uid": "country_sector_oda"
       },
       {
-        "uid": "country_oda"
+        "uid": "country_subsector_oda"
       },
       {
-        "uid":"percentage_ODA"
-      }
-
-    ],
-    "parameters": {
-    },
-    "rid":{"uid":"union_process"}
-
-  },
-
-  {
-    "name": "filter",
-    "sid": [
-      {
-        "uid": "adam_usd_aggregation_table"
+        "uid": "percentage_ODA"
       }
     ],
     "parameters": {
-      "columns": [
-        "year",
-        "value",
-        "unitcode"
-      ],
-      "rows": {
-        "oda": {
-          "enumeration": [
-            "usd_commitment"
-          ]
-        },
-        "recipientcode": {
-          "codes": [
-            {
-              "uid": "crs_recipients",
-              "version": "2016",
-              "codes": [
-                "998"
-              ]
-            }
-          ]
-        },
-        "sectorcode": {
-          "codes": [
-            {
-              "uid": "crs_sectors",
-              "version": "2016",
-              "codes": [
-                "114"
-              ]
-            }
-          ]
-        },
-        "year": {
-          "time": [
-            {
-              "from": 2000,
-              "to": 2013
-            }
-          ]
-        }
-      }
-    }
-  },
-  {
-    "name": "group",
-    "parameters": {
-      "by": [
-        "year"
-      ],
-      "aggregations": [
-        {
-          "columns": [
-            "value"
-          ],
-          "rule": "SUM"
-        },
-        {
-          "columns": [
-            "unitcode"
-          ],
-          "rule": "first"
-        }
-      ]
-    },
-    "rid":{"uid":"total_ODA"}
-
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "dataType": "text",
-        "id": "indicator",
-        "title": {
-          "EN": "Indicator"
-        },
-        "domain": {
-          "codes": [
-            {
-              "extendedName": {
-                "EN": "Adam Processes"
-              },
-              "idCodeList": "adam_processes"
-            }
-          ]
-        },
-        "subject": null
-      },
-      "value": "TOTAL ODA in the country"
     },
     "rid": {
-      "uid": "total_oda"
+      "uid": "union_process"
     }
+  },
+
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_usd_aggregation_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "year",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "oda": {
+          "enumeration": [
+            "usd_disbursement"
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "998"
+              ]
+            }
+          ]
+        },
+        "sectorcode": {
+          "codes": [
+            {
+              "uid": "crs_sectors",
+              "version": "2016",
+              "codes": [
+                "998"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "year"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "oda in the sector by country"
+    }
+  },
+
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_usd_aggregation_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "year",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "oda": {
+          "enumeration": [
+            "usd_disbursement"
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "998"
+              ]
+            }
+          ]
+        },
+        "sectorcode": {
+          "codes": [
+            {
+              "uid": "crs_sectors",
+              "version": "2016",
+              "codes": [
+                "998"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "year"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "oda in the sector by country"
+    },
+    "rid":{"uid":"country_sector_oda"}
   },
 
 
@@ -142,7 +238,7 @@
       "rows": {
         "oda": {
           "enumeration": [
-            "usd_commitment"
+            "usd_disbursement"
           ]
         },
         "sectorcode": {
@@ -151,7 +247,7 @@
               "uid": "crs_sectors",
               "version": "2016",
               "codes": [
-                "430"
+                "998"
               ]
             }
           ]
@@ -163,6 +259,17 @@
               "version": "2016",
               "codes": [
                 "998"
+              ]
+            }
+          ]
+        },
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "99820"
               ]
             }
           ]
@@ -224,18 +331,20 @@
         },
         "subject": null
       },
-      "value": "country ODA"
+      "value": "subsector ODA"
     },
-    "rid":{"uid":"country_oda"}
+    "rid":{"uid":"country_subsector_oda"}
   },
+
+
   {
     "name": "join",
     "sid": [
       {
-        "uid": "total_oda"
+        "uid": "country_sector_oda"
       },
       {
-        "uid": "country_oda"
+        "uid": "country_subsector_oda"
       }
     ],
     "parameters": {
@@ -274,7 +383,7 @@
       },
       "value": {
         "keys":  ["1 = 1"],
-        "values":[" ( country_oda_value / total_oda_value )*100"]
+        "values":[" ( country_subsector_oda_value / country_sector_oda_value )*100"]
 
       }
     },
@@ -282,6 +391,8 @@
       "uid": "percentage_Value"
     }
   },
+
+
   {
     "name": "filter",
     "parameters": {
@@ -294,27 +405,28 @@
     "rid": {
       "uid": "percentage_with_two_values"
     }
-  },{
-  "name": "addcolumn",
-  "parameters": {
-    "column": {
-      "id": "unitcode",
-      "title": {
-        "EN": "Measurement Unit"
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "id": "unitcode",
+        "title": {
+          "EN": "Measurement Unit"
+        },
+        "domain": {
+          "codes": [{
+            "idCodeList": "crs_units",
+            "version": "2016",
+            "level": 1
+          }]
+        },
+        "dataType": "code",
+        "subject": "um"
       },
-      "domain": {
-        "codes": [{
-          "idCodeList": "crs_units",
-          "version": "2016",
-          "level": 1
-        }]
-      },
-      "dataType": "code",
-      "subject": "um"
-    },
-    "value": "percentage"
-  }
-},
+      "value": "percentage"
+    }
+  },
   {
     "name": "addcolumn",
     "parameters": {
@@ -359,10 +471,6 @@
       "uid": "percentage_ODA"
     }
   }
-
-
-
-
 
 
 
