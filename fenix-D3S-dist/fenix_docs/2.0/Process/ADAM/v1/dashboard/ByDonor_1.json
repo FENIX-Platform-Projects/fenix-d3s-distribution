@@ -18,13 +18,13 @@
             "usd_commitment"
           ]
         },
-        "recipientcode": {
+        "donorcode": {
           "codes": [
             {
-              "uid": "crs_recipients",
+              "uid": "crs_donors",
               "version": "2016",
               "codes": [
-                "998"
+                "302"
               ]
             }
           ]
@@ -61,9 +61,36 @@
         }
       ]
     },
+    "rid":{"uid":"total_ODA"}
+
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "TOTAL ODA FROM DONOR"
+    },
     "rid": {
-      "uid": "total_oda"
+      "uid": "total_donor_oda"
     }
   }
 ]
+
 

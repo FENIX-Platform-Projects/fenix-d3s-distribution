@@ -1,0 +1,51 @@
+[
+  {
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "parentsector_code": {
+          "codes": [
+            {
+              "uid": "crs_dac",
+              "version": "2016",
+              "codes": [
+                "400"
+              ]
+            }
+          ]
+        },
+        "recipientname": {
+          "enumeration": [
+            "Afghanistan",
+            "Bangladesh",
+            "Belize"
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2014,
+              "to": 2014
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode",
+        "purposecode"
+      ],
+      "aggregations": []
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "recipientcode": "DESC"
+    }
+  }
+]
