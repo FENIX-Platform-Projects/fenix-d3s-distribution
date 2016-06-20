@@ -1,0 +1,100 @@
+{
+  "uid": "adam_donors_gni",
+  "title": {
+    "EN": "ADAM Gross National Income (GNI) data for Donor countries"
+  },
+  "meContent": {
+    "description": {
+      "EN": "GNI, Atlas method (current US$ Million) data for donor countries."
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "adam",
+    "datasources": ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+    "columns": [
+
+      {
+        "id": "donorname",
+        "title": {
+          "EN": "Resource Partner"
+        },
+        "dataType": "text"
+      },
+      {
+        "id": "donorcode",
+        "subject": "geo",
+        "title": {
+          "EN": "Resource Partner code"
+        },
+        "dataType": "code",
+         "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] 
+        },
+        "key": true
+      },
+      {
+        "id": "indicatorname",
+        "title": {
+          "EN": "Indicator name"
+        },
+        "dataType": "text"
+      },
+      {
+        "id": "indicatorcode",
+        "title": {
+          "EN": "Indicator code"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [{
+            "idCodeList": "adam_development_indicators",
+            "version": "2016",
+            "level": 1
+          }]
+        },
+        "key": true
+      },
+      {
+        "id": "year",
+        "title": {
+          "EN": "Year"
+        },
+        "dataType": "integer",
+        "key": true
+      },
+      {
+        "id": "value",
+        "subject": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "dataType": "number"
+      },
+      {
+        "id": "unitcode",
+        "subject": "um",
+        "title": {
+          "EN": "Measurement unit"
+        },
+        "domain": {
+          "codes": [{
+            "idCodeList": "crs_units",
+            "version": "2016",
+            "level": 1
+          }]
+        },
+        "dataType": "code"
+      },
+      {
+        "id": "unitname",
+        "title": {
+          "EN": "Measurement unit name"
+        },
+        "dataType": "text"
+      }
+    ]
+  }
+}

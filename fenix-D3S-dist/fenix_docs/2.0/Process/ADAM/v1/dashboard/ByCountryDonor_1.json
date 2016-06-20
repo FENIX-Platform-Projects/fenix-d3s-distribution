@@ -1,0 +1,105 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_usd_aggregation_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "year",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "302"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "998"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "year"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    },
+    "rid":{"uid":"total_ODA"}
+
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "TOTAL ODA FROM DONOR"
+    },
+    "rid": {
+      "uid": "total_donor_oda"
+    }
+  }
+]

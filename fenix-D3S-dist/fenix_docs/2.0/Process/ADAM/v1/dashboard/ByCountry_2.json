@@ -283,7 +283,8 @@
     "rid": {
       "uid": "percentage_with_two_values"
     }
-  },{
+  },
+  {
   "name": "addcolumn",
   "parameters": {
     "column": {
