@@ -20,6 +20,7 @@
     "rid":{"uid":"union_process"}
 
   },
+
   {
     "name": "filter",
     "sid": [
@@ -82,18 +83,10 @@
           "rule": "first"
         }
       ]
-    },
-    "rid": {
-      "uid": "tt"
     }
   },
   {
     "name": "addcolumn",
-    "sid": [
-      {
-        "uid": "tt"
-      }
-    ],
     "parameters": {
       "column": {
         "dataType": "text",
@@ -284,7 +277,7 @@
     },
     "rid":{"uid":"join_process"}
   },
-   {
+  {
     "name": "addcolumn",
     "sid":[{"uid":"join_process"}],
     "parameters": {

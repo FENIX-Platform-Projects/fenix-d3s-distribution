@@ -1,5 +1,4 @@
 [
-
   {
     "name": "union",
     "sid": [
@@ -7,10 +6,10 @@
         "uid": "sector_oda"
       },
       {
-        "uid": "total_oda"
+        "uid": "subsector_ODA"
       },
       {
-        "uid":"average_oecd"
+        "uid":"total_oda"
       },
 
       {
@@ -20,7 +19,6 @@
     "parameters": {
     },
     "rid":{"uid":"union_process"}
-
   },
   {
     "name": "filter",
@@ -62,7 +60,6 @@
         }
       }
     }
-
   },
   {
     "name": "group",
@@ -121,7 +118,6 @@
       "uid": "sector_oda"
     }
   },
-
   {
     "name": "filter",
     "sid": [
@@ -173,7 +169,6 @@
         }
       }
     }
-
   },
   {
     "name": "group",
@@ -303,11 +298,8 @@
             }
           ]
         }
-
       }
-
     }
-
   },
   {
     "name": "group",
@@ -330,10 +322,7 @@
         }
       ]
     }
-
-
   },
-
   {
     "name": "addcolumn",
     "parameters": {
@@ -493,4 +482,5 @@
       "uid": "percentage_ODA"
     }
   }
+
 ]

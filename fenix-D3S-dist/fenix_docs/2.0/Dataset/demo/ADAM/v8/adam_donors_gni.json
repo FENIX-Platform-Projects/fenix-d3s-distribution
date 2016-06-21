@@ -31,7 +31,7 @@
           "EN": "Resource Partner code"
         },
         "dataType": "code",
-         "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] 
+         "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ]
         },
         "key": true
       },
