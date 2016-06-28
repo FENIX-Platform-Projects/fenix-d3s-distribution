@@ -1,0 +1,63 @@
+{
+  "uid": "adam_recipient_undaf_priorities",
+  "title": {
+    "EN": "ADAM Recipient UNDAF priorities"
+  },
+  "meContent": {
+    "description": {
+      "EN": "ADAM recipient country priorities taken from the United Nations Development Assistance Framework (UNDAF) and mapped to OECD DAC purposes."
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "adam",
+    "datasources": ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+    "columns": [
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "recipientname",
+        "title" : { "EN" : "Recipient" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "from_year",
+        "title" : { "EN" : "From Year" },
+        "dataType" : "text",
+	"key": true
+      }, 
+      {
+        "id" : "to_year",
+        "title" : { "EN" : "To Year" },
+        "dataType" : "text",
+	"key": true
+      },
+      {
+        "id" : "stated_priority",
+        "title" : { "EN" : "UNDAF Stated Priority" },
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "OCED DAC" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "purposename",
+        "title" : { "EN" : "OCED DAC" },
+        "dataType" : "text"
+      }
+    ]
+  }
+}

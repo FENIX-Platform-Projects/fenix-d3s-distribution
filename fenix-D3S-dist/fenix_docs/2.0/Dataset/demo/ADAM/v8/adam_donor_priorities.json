@@ -1,0 +1,78 @@
+{
+  "uid": "adam_donor_priorities",
+  "title": {
+    "EN": "ADAM Resource Partner priorities"
+  },
+  "meContent": {
+    "description": {
+      "EN": "ADAM resource partner priorities calculated from the OECD CRS Commitments Data using statistical algotithms."
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "adam",
+    "datasources": ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "recipientname",
+        "title" : { "EN" : "Recipient" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "donorcode",
+        "title" : { "EN" : "Resource Partner"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "donorname",
+        "title" : { "EN" : "Resource Partner" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "OCED DAC" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "from_year",
+        "title" : { "EN" : "From Year" },
+        "dataType" : "text"
+      }, 
+      {
+        "id" : "to_year",
+        "title" : { "EN" : "To Year" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "purposename",
+        "title" : { "EN" : "OCED DAC" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "source",
+        "title" : { "EN" : "Source" },
+        "dataType" : "text"
+      },
+      {
+        "id" : "description",
+        "title" : { "EN" : "Description" },
+        "dataType" : "text"
+      }
+    ]
+  }
+}

@@ -151,6 +151,7 @@ titleColumnIndex_EN=3
 05@0503@Population total density
 05@0504@Population growth Rate 
 05@0505@Life expectancy
+05@0506@Chronic malnutrition rate
 @06@Prices
 06@0601@Consumer price
 06@0602@Producer price
@@ -206,6 +207,10 @@ titleColumnIndex_EN=3
 11@1104@Dead Animals
 11@1105@Total Input
 11@1106@Total Output
+11@1107@Animals-feeding
+1107@110701@Stall-feeding
+1107@110702@Field-feeding
+1107@110703@Mix feeding
 @12@National account
 12@1201@GPD
 12@1202@GDP growth

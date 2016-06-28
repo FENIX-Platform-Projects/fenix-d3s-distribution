@@ -137,7 +137,7 @@ titleColumnIndex_EN=3
 @0114@Liter
 @0115@Cubic meter/second
 @0116@Centimeter
-@0117@local currency by ton
+@0117@Local currency by ton
 @0118@Degree Celsius
 @0119@Percentage
 @0120@MT or Cubic meter
@@ -155,4 +155,9 @@ titleColumnIndex_EN=3
 @0132@Local currency/dollar
 @0133@1000 Local currency
 @0134@Kg
+@0135@Local currency/liter
+@0136@Days
+@0137@Liter/milking/head
+@0138@Months
+
 
