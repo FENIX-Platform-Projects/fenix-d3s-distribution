@@ -1,0 +1,166 @@
+{
+    "creationDate" : 1447930800000,
+    "title" : {
+      "EN" : "Population"
+    },
+    "meContent" : {
+      "resourceRepresentationType" : "dataset",
+      "seCoverage" : {
+        "coverageSectors" : {
+          "codes" : [ {
+            "code" : "0101"
+          } ],
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        }
+      }
+    },
+    "uid" : "Uneca_PopulationNew",
+    "dsd" : {
+      "columns" : [ {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Domain"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "UNECA_ClassificationOfActivities"
+          } ]
+        },
+        "key" : false,
+        "id" : "DomainCode"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Topic"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "UNECA_ClassificationOfActivities"
+          } ]
+        },
+        "key" : false,
+        "id" : "TopicCode"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Indicator"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "UNECA_ClassificationOfActivities"
+          } ]
+        },
+        "subject" : "item",
+        "key" : true,
+        "id" : "IndicatorCode"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Country"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "ISO3"
+          } ]
+        },
+        "subject" : "geo",
+        "key" : true,
+        "id" : "CountryCode"
+      }, {
+        "dataType" : "year",
+        "title" : {
+          "EN" : "Year"
+        },
+        "subject" : "time",
+        "key" : true,
+        "id" : "Year"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Gender"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "UNECA_Gender"
+          } ]
+        },
+        "key" : true,
+        "id" : "GenderCode"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Age Range"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "UNECA_AgeRange"
+          } ]
+        },
+        "key" : true,
+        "id" : "AgeRangeCode"
+      }, {
+        "dataType" : "number",
+        "title" : {
+          "EN" : "Value"
+        },
+        "subject" : "value",
+        "key" : false,
+        "id" : "Value"
+      } ],
+      "datasources" : [ "D3S" ],
+      "contextSystem" : "uneca"
+    },
+    "languageDetails" : {
+      "EN" : null
+    },
+    "characterSet" : {
+      "codes" : [ {
+        "code" : "106"
+      } ],
+      "idCodeList" : "IANAcharacterSet"
+    },
+    "metadataStandardName" : "FENIX",
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "eng"
+      } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "contacts" : [ {
+      "position" : {
+        "EN" : null
+      },
+      "organization" : {
+        "EN" : "ECA"
+      },
+      "contactInfo" : {
+        "phone" : "000",
+        "hoursOfService" : {
+          "EN" : null
+        },
+        "contactInstruction" : {
+          "EN" : null
+        }
+      },
+      "specify" : {
+        "EN" : null
+      },
+      "organizationUnit" : {
+        "EN" : null
+      }
+    } ],
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" : 1449504308199
+      }
+    },
+    "language" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "eng"
+      } ],
+      "idCodeList" : "ISO639-2"
+    }
+}
