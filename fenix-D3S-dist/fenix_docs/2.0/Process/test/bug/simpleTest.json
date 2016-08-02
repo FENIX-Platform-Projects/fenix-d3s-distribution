@@ -1,20 +1,81 @@
 [
   {
-    "name": "filter",
-    "sid":"crowd_data_gmb",
-    "parameters": {
-      "filter": {
-        "rows": {
-          "price": {
-            "time": [
-              {
-                "from": 2013,
-                "to": 2013
-              }
-            ]
-          }
+    "name":"filter",
+    "sid":[
+      {
+        "uid":"adam_usd_aggregation_table"
+      }
+    ],
+    "parameters":{
+      "columns":[
+        "donorcode",
+        "value",
+        "unitcode"
+      ],
+      "rows":{
+        "oda":{
+          "enumeration":[
+            "usd_commitment"
+          ]
+        },
+        "parentsector_code":{
+          "codes":[
+            {
+              "uid":"crs_dac",
+              "version":"2016",
+              "codes":[
+                "600"
+              ]
+            }
+          ]
+        },
+        "year":{
+          "time":[
+            {
+              "from":2000,
+              "to":2014
+            }
+          ]
         }
       }
+    },
+    "rid":{
+      "uid":"filter_top_10_donors_sum"
+    }
+  },
+  {
+    "name":"group",
+    "parameters":{
+      "by":[
+        "donorcode"
+      ],
+      "aggregations":[
+        {
+          "columns":[
+            "value"
+          ],
+          "rule":"SUM"
+        },
+        {
+          "columns":[
+            "unitcode"
+          ],
+          "rule":"first"
+        }
+      ]
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "value":"DESC"
+    }
+  },
+  {
+    "name":"page",
+    "parameters":{
+      "perPage":10,
+      "page":1
     }
   }
 ]

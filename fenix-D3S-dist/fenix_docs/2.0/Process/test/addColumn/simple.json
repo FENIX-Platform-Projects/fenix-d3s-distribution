@@ -1,32 +1,42 @@
 [
   {
-    "name": "addcolumn",
+    "name":"filter",
     "sid": [
       {
         "uid": "adam_donors_gni"
+      }],
+    "parameters":{
+      "columns":[
+        "year",
+        "value"
+      ],
+      "rows":{
+
       }
-    ],
+    }
+  },
+
+  {
+    "name": "addcolumn",
     "parameters": {
-      "column": {
-        "dataType": "code",
-        "id": "testColumn",
-        "title": {
-          "EN": "Measurement unit"
+      "column":{
+        "id":"unitcode",
+        "title":{
+          "EN":"Measurement Unit"
         },
-        "domain": {
-          "codes": [
+        "domain":{
+          "codes":[
             {
-              "version": "2016",
-              "extendedName": {
-                "EN": "OECD Units"
-              },
-              "idCodeList": "crs_units"
+              "idCodeList":"crs_units",
+              "version":"2016",
+              "level":1
             }
           ]
         },
-        "subject": null
+        "dataType":"code",
+        "subject":"um"
       },
-      "value": "million_usd"
+      "value":"percentage"
     }
   }
 ]

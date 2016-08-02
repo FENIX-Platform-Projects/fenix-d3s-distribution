@@ -1,0 +1,49 @@
+[
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "adam_donors_gni"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "customCode",
+        "id": "testCustomCode",
+        "title": {
+          "EN": "Test Custom Code"
+        },
+        "domain": {
+          "codes": [
+            {
+              "codes": [
+                {
+                  "code": "7",
+                  "label": {
+                    "EN": "Seven"
+                  }
+                },
+                {
+                  "code": "40",
+                  "label": {
+                    "EN": "Fourty"
+                  }
+                },
+                {
+                  "code": "78",
+                  "label": {
+                    "EN": "SeventyEight"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "7"
+    }
+  }
+]
+
+

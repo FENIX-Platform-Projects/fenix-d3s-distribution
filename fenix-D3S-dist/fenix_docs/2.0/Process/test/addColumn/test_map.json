@@ -8,16 +8,27 @@
     ],
     "parameters": {
       "column": {
-        "dataType": "text",
-        "id": "testColumn",
+        "dataType": "code",
+        "id": "testColumnCode",
         "title": {
-          "EN": "Test Column"
+          "EN": "OECD Dac"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2016",
+              "extendedName": {
+                "EN": "OECD Dac"
+              },
+              "idCodeList": "crs_dac"
+            }
+          ]
         },
         "subject": null
       },
       "value": {
-        "keys": ["countrycode = '1'", "year = '2000'"],
-        "values": ["countrycode", "year"]
+        "keys": ["donorcode = '801'", "year = '2000'"],
+        "values": ["32161", "12181"]
       }
     }
   }

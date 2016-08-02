@@ -1,0 +1,171 @@
+{
+  "meContent": {
+    "description": {
+      "EN": "ADAM resource partner priorities calculated from the OECD CRS Commitments Data using statistical algotithms."
+    },
+    "resourceRepresentationType": "dataset"
+  },
+
+    "title": {
+      "EN": "Land use"
+    },
+    "dsd": {
+      "contextSystem": "cstat_afg",
+      "datasources": [
+        "D3S"
+      ],
+      "columns": [
+        {
+          "dataType": "year",
+          "key": true,
+          "id": "DIMENSION0",
+          "title": {
+            "EN": "Year"
+          },
+          "values": {
+            "timeList": [
+              2010
+            ]
+          },
+          "subject": "time"
+        },
+        {
+          "dataType": "code",
+          "key": true,
+          "id": "DIMENSION1",
+          "title": {
+            "EN": "Indicator"
+          },
+          "values": {
+            "codes": [
+              {
+                "codes": [
+                  {
+                    "code": "0802",
+                    "label": {
+                      "EN": "Agricultural area"
+                    }
+                  }
+                ],
+                "idCodeList": "CountrySTAT_Indicators",
+                "extendedName": {
+                  "EN": "CountrySTAT Indicators"
+                }
+              }
+            ]
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "CountrySTAT_Indicators",
+                "extendedName": {
+                  "EN": "CountrySTAT Indicators"
+                }
+              }
+            ]
+          },
+          "subject": "indicator"
+        },
+        {
+          "dataType": "code",
+          "key": true,
+          "id": "DIMENSION2",
+          "title": {
+            "EN": "Field management"
+          },
+          "values": {
+            "codes": [
+              {
+                "codes": [
+                  {
+                    "code": "8002",
+                    "label": {
+                      "EN": "Irrigated"
+                    }
+                  },
+                  {
+                    "code": "8009",
+                    "label": {
+                      "EN": "Unspecified"
+                    }
+                  }
+                ],
+                "idCodeList": "CountrySTAT_Field_Management",
+                "extendedName": {
+                  "EN": "Field management"
+                }
+              }
+            ]
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "CountrySTAT_Field_Management",
+                "extendedName": {
+                  "EN": "Field management"
+                }
+              }
+            ]
+          },
+          "subject": "fieldManagement"
+        },
+        {
+          "dataType": "number",
+          "key": false,
+          "id": "VALUE0",
+          "title": {
+            "EN": "Value"
+          },
+          "subject": "value"
+        },
+        {
+          "dataType": "text",
+          "key": false,
+          "id": "OTHER0",
+          "title": {
+            "EN": "Flag"
+          },
+          "subject": "flag"
+        },
+        {
+          "dataType": "code",
+          "key": false,
+          "id": "OTHER1",
+          "title": {
+            "EN": "Unit"
+          },
+          "values": {
+            "codes": [
+              {
+                "codes": [
+                  {
+                    "code": "0125",
+                    "label": {
+                      "EN": "1000 Ha"
+                    }
+                  }
+                ],
+                "idCodeList": "CountrySTAT_UM",
+                "extendedName": {
+                  "EN": "Units of measurement"
+                }
+              }
+            ]
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "CountrySTAT_UM",
+                "extendedName": {
+                  "EN": "Units of measurement"
+                }
+              }
+            ]
+          },
+          "subject": "um"
+        }
+      ]
+    },
+    "uid": "D3S_81266173298010827046349544565972331199"
+
+}

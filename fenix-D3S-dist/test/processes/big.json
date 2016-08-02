@@ -1,24 +1,20 @@
 [
-
   {
     "name": "union",
     "sid": [
       {
-        "uid": "total_donor_oda"
+        "uid": "top_10_recipients_sum"
       },
       {
-        "uid": "gni_donor_oda"
-      },
-      {
-        "uid":"ODA_on_GNI"
+        "uid": "others"
       }
     ],
     "parameters": {
     },
-    "rid":{"uid":"union_process"}
-
+    "rid": {
+      "uid": "union_process"
+    }
   },
-
   {
     "name": "filter",
     "sid": [
@@ -28,7 +24,7 @@
     ],
     "parameters": {
       "columns": [
-        "year",
+        "recipientcode",
         "value",
         "unitcode"
       ],
@@ -38,13 +34,13 @@
             "usd_commitment"
           ]
         },
-        "donorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_donors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
-                "302"
+                "600"
               ]
             }
           ]
@@ -53,18 +49,21 @@
           "time": [
             {
               "from": 2000,
-              "to": 2013
+              "to": 2014
             }
           ]
         }
       }
+    },
+    "rid": {
+      "uid": "filter_top_10_recipients_sum"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "year"
+        "recipientcode"
       ],
       "aggregations": [
         {
@@ -80,9 +79,100 @@
           "rule": "first"
         }
       ]
-    },
-    "rid":{"uid":"total_ODA"}
-
+    }
+  },
+  {
+    "name": "select",
+    "parameters": {
+      "query": "WHERE recipientcode NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "queryParameters": [
+        {
+          "value": "298"
+        },
+        {
+          "value": "498"
+        },
+        {
+          "value": "798"
+        },
+        {
+          "value": "89"
+        },
+        {
+          "value": "589"
+        },
+        {
+          "value": "889"
+        },
+        {
+          "value": "189"
+        },
+        {
+          "value": "289"
+        },
+        {
+          "value": "389"
+        },
+        {
+          "value": "380"
+        },
+        {
+          "value": "489"
+        },
+        {
+          "value": "789"
+        },
+        {
+          "value": "689"
+        },
+        {
+          "value": "619"
+        },
+        {
+          "value": "679"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "unitcode",
+        "value"
+      ],
+      "rows": {
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "unitcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
   },
   {
     "name": "addcolumn",
@@ -105,35 +195,37 @@
         },
         "subject": null
       },
-      "value": "TOTAL ODA FROM DONOR"
+      "value": "Top Recipient Countries"
     },
     "rid": {
-      "uid": "total_donor_oda"
+      "uid": "top_10_recipients_sum"
     }
   },
-
-
   {
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_donors_gni"
+        "uid": "adam_usd_aggregation_table"
       }
     ],
     "parameters": {
       "columns": [
-        "year",
         "value",
         "unitcode"
       ],
       "rows": {
-        "donorcode": {
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_donors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
-                "302"
+                "600"
               ]
             }
           ]
@@ -142,18 +234,21 @@
           "time": [
             {
               "from": 2000,
-              "to": 2013
+              "to": 2014
             }
           ]
         }
       }
+    },
+    "rid": {
+      "uid": "filter_all_recipients_sum"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "year"
+        "unitcode"
       ],
       "aggregations": [
         {
@@ -161,12 +256,6 @@
             "value"
           ],
           "rule": "SUM"
-        },
-        {
-          "columns": [
-            "unitcode"
-          ],
-          "rule": "first"
         }
       ]
     }
@@ -192,49 +281,51 @@
         },
         "subject": null
       },
-      "value": "GNI DONOR"
+      "value": "sum of all recipients"
     },
     "rid": {
-      "uid": "gni_donor_oda"
+      "uid": "top_all_recipients_sum"
     }
   },
-
-
   {
     "name": "join",
     "sid": [
       {
-        "uid": "gni_donor_oda"
+        "uid": "top_all_recipients_sum"
       },
       {
-        "uid": "total_donor_oda"
+        "uid": "top_10_recipients_sum"
       }
     ],
     "parameters": {
       "joins": [
         [
-
           {
             "type": "id",
-            "value": "year"
+            "value": "unitcode"
           }
         ],
         [
           {
             "type": "id",
-            "value": "year"
+            "value": "unitcode"
           }
-
         ]
       ],
       "values": [
       ]
     },
-    "rid":{"uid":"join_process_oda_gni"}
+    "rid": {
+      "uid": "join_process_total_recipients"
+    }
   },
   {
     "name": "addcolumn",
-    "sid":[{"uid":"join_process_oda_gni"}],
+    "sid": [
+      {
+        "uid": "join_process_total_recipients"
+      }
+    ],
     "parameters": {
       "column": {
         "dataType": "number",
@@ -245,8 +336,12 @@
         "subject": null
       },
       "value": {
-        "keys":  ["1 = 1"],
-        "values":[" ( total_donor_oda_value / gni_donor_oda_value)*100"]
+        "keys": [
+          "1 = 1"
+        ],
+        "values": [
+          "top_all_recipients_sum_value - top_10_recipients_sum_value"
+        ]
       }
     }
   },
@@ -254,48 +349,9 @@
     "name": "filter",
     "parameters": {
       "columns": [
-        "year",
-        "value"
-      ],
-      "rows": {}
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "id": "unitcode",
-        "title": {
-          "EN": "Measurement Unit"
-        },
-        "domain": {
-          "codes": [{
-            "idCodeList": "crs_units",
-            "version": "2016",
-            "level": 1
-          }]
-        },
-        "dataType": "code",
-        "subject": "um"
-      },
-      "value": "percentage"
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "dataType": "text",
-        "id": "unitcode_EN",
-        "title": {
-          "EN": "Measurement Unit_TEST"
-        },
-        "subject": null
-      },
-      "value": "%"
-    },
-    "rid": {
-      "uid": "percentage_withUM"
+        "value",
+        "unitcode"
+      ]
     }
   },
   {
@@ -319,13 +375,10 @@
         },
         "subject": null
       },
-      "value": "PERCENTAGE"
+      "value": "Other Recipients"
     },
     "rid": {
-      "uid": "ODA_on_GNI"
+      "uid": "others"
     }
   }
-
-
-
 ]

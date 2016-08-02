@@ -62,7 +62,7 @@
         "title": {
           "EN": "Year"
         },
-        "dataType": "integer",
+        "dataType": "year",
         "key": true
       },
       {
