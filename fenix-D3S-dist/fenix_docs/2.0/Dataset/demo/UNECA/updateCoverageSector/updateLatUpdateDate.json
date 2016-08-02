@@ -1,0 +1,20 @@
+{
+  "filter" : {
+    "dsd.contextSystem" : {
+      "enumeration": [
+        "uneca"
+      ]
+    },
+    "meContent.resourceRepresentationType" : {
+      "enumeration" : ["dataset"]
+    }
+  },
+  "metadata" : {
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" :
+        1467878033000
+      }
+    }
+  }
+}

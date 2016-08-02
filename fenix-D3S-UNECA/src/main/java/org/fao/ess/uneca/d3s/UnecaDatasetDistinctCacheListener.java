@@ -9,7 +9,6 @@ import org.fao.fenix.commons.msd.dto.full.MeIdentification;
 import org.fao.fenix.commons.msd.dto.full.OjCode;
 import org.fao.fenix.commons.msd.dto.full.OjCodeList;
 import org.fao.fenix.commons.msd.dto.full.Period;
-import org.fao.fenix.commons.msd.dto.templates.codeList.*;
 import org.fao.fenix.commons.msd.dto.templates.standard.combined.dataset.MetadataDSD;
 import org.fao.fenix.commons.msd.dto.type.DataType;
 import org.fao.fenix.d3p.services.Processes;
