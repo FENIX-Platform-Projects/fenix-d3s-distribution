@@ -103,7 +103,7 @@ public class PostgresDefaultStorage extends PostgresStorage {
             queryIndex.setCharAt(queryIndex.length() - 1, ')');
             query.append(queryIndex).append(')');
         } else
-            query.append(')');
+            query.setCharAt(query.length()-1,')');
 
         //Execute query and update metadata
         StoreStatus status = new StoreStatus(StoreStatus.Status.loading, 0l, new Date(), timeout);

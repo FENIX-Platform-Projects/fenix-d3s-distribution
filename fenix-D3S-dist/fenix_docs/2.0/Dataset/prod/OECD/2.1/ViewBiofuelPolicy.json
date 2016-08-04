@@ -141,6 +141,14 @@
         "title" : {
           "EN" : "End date"
         }
+      },
+      {
+        "dataType" : "year",
+        "key" : false,
+        "id" : "year",
+        "title" : {
+          "EN" : "Year"
+        }
       }
     ]
   }

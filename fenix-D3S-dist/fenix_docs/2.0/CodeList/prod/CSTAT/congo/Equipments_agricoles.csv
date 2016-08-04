@@ -1,0 +1,169 @@
+{
+    "uid": "Equipments_agricoles",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "Equipments_agricoles"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "ESS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": [],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+"dsd":{
+      "contextSystem":"cstat"
+   }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+
+
+--data--
+
+@01@Camions
+@02@camionnette/Automobile
+@03@Remorques
+@04@Charrettes
+@05@Motos
+@06@pirogues/hors bord
+@07@Motopompes
+@08@Citernes
+@09@Groupes électrogènes
+@10@Forages/Puits
+@11@Séchoirs
+@12@Semoirs
+@13@Epandeurs
+@14@Moissonneuse-batteuse
+@15@Motoculteur
+@16@Couveuse
+@17@Abreuvoir
+@18@Silos
+@19@Pulvérisateurs
+@20@Pulvériseurs
+@21@Décortiqueuses
+@22@Senne
+@23@Filets
+@24@Epuisette
+@25@bateaux de pêche
+@26@Paniers
+@27@bacs à tri
+@28@Balance
+@29@table de tri
+@30@Alevinières
+@31@sceaux en plastique
+@32@bacs à filet
+@33@ph mètre
+@34@sachets spéciaux à oxygène pur
+@35@fûts en plastique
+@36@véhicules frigorifiques
+@37@Broyeurs
+@38@autres matériels et équipements de pêche
+@39@Tracteurs
+@40@chargeurs Caterpillar
+@41@tronçonneuses
+@42@Niveleuses
+@43@Grues
+@44@élévateurs manitou
+@45@Bateaux
+@46@Micro pousseur
+@47@autres matériel et équipement de forêt

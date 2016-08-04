@@ -1,42 +1,13 @@
 {
-  "uid" : "OECD_View_BiofuelPolicy",
+  "uid" : "OECD_View_ImportTariffs",
   "title" : {
-    "EN" : "Dataset for Biofuel Policy Graph and Biofuels policies-detailed Graph"
-  },
-  "language" : {
-    "version" : "1998",
-    "codes" : [ {
-      "code" : "eng",
-      "label" : {
-        "EN" : "English"
-      }
-    } ],
-    "idCodeList" : "ISO639-2"
-  },
-  "characterSet" : {
-    "codes" : [ {
-      "code" : "106",
-      "label" : {
-        "EN" : "UTF-8"
-      }
-    } ],
-    "idCodeList" : "IANAcharacterSet"
-  },
-  "metadataStandardName" : "FENIX",
-  "metadataStandardVersion" : "1.0",
-  "metadataLanguage" : {
-    "version" : "1998",
-    "codes" : [ {
-      "code" : "eng",
-      "label" : {
-        "EN" : "English"
-      }
-    } ],
-    "idCodeList" : "ISO639-2"
+    "EN" : "Dataset for Import Tariffs Graph"
   },
   "meContent" : {
     "resourceRepresentationType" : "dataset"
   },
+
+
   "dsd" : {
     "contextSystem" : "oecd_view",
     "datasources" : [ "oecdView" ],
@@ -127,6 +98,48 @@
         }
       },
       {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "hsCode",
+        "subject" : "item",
+        "title" : {
+          "EN" : "HS code"
+        }
+      },
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "element",
+        "subject" : "element",
+        "title" : {
+          "EN" : "Element"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_Element",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "number",
+        "key" : false,
+        "id" : "value",
+        "subject" : "value",
+        "title" : {
+          "EN" : "Value"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "um",
+        "subject" : "um",
+        "title" : {
+          "EN" : "Unit of measure"
+        }
+      },
+      {
         "dataType" : "date",
         "key" : false,
         "id" : "startDate",
@@ -141,8 +154,52 @@
         "title" : {
           "EN" : "End date"
         }
+      },
+      {
+        "dataType" : "year",
+        "key" : false,
+        "id" : "year",
+        "title" : {
+          "EN" : "Year"
+        }
       }
     ]
-  }
+  },
 
+
+
+
+
+
+  "language" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "characterSet" : {
+    "codes" : [ {
+      "code" : "106",
+      "label" : {
+        "EN" : "UTF-8"
+      }
+    } ],
+    "idCodeList" : "IANAcharacterSet"
+  },
+  "metadataStandardName" : "FENIX",
+  "metadataStandardVersion" : "1.0",
+  "metadataLanguage" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  }
 }
