@@ -9,7 +9,7 @@
     "parameters": {
       "columns": [
         "commodityclass",
-        "policytype",
+        "policymeasure",
         "country",
         "startDate",
         "endDate"
@@ -21,9 +21,33 @@
               "uid": "OECD_CommodityClass1",
               "version": "1.0",
               "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "policymeasure": {
+          "codes": [
+            {
+              "uid" : "OECD_PolicyType1_2_6",
+              "version" : "1.0",
+              "codes": [
+                "1",
+                "2",
+                "4",
                 "5",
-                "6",
-                "7"
+                "8"
+              ]
+            }
+          ]
+        },
+        "policytype": {
+          "codes": [
+            {
+              "uid" : "OECD_PolicyType",
+              "version" : "1.0",
+              "codes": [
+                "1"
               ]
             }
           ]
@@ -37,25 +61,25 @@
       "query": "WHERE (((startdate BETWEEN ? AND ?) OR (enddate BETWEEN ? AND ?))OR ((startdate <= ?) AND (enddate>=?)) OR (enddate IS NULL AND  startdate<=?))",
       "queryParameters": [
         {
-          "value": 20110101
+          "value": 20110116
         },
         {
-          "value": 20140131
+          "value": 20140104
         },
         {
-          "value": 20110101
+          "value": 20110116
         },
         {
-          "value": 20140131
+          "value": 20140104
         },
         {
-          "value": 20110101
+          "value": 20110116
         },
         {
-          "value": 20140131
+          "value": 20140104
         },
         {
-          "value": 20140131
+          "value": 20140104
         }
       ]
     }
@@ -66,7 +90,7 @@
     "parameters": {
       "by": [
         "commodityclass",
-        "policytype",
+        "policymeasure",
         "country"
       ],
       "aggregations": [
@@ -93,7 +117,7 @@
     "parameters": {
       "by": [
         "commodityclass",
-        "policytype"
+        "policymeasure"
       ],
       "aggregations": [
         {

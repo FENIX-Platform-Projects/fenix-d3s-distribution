@@ -9,7 +9,7 @@
     "parameters": {
       "columns": [
         "commodityclass",
-        "policytype",
+        "policymeasure",
         "country",
         "startDate",
         "endDate"
@@ -24,6 +24,17 @@
                 "5",
                 "6",
                 "7"
+              ]
+            }
+          ]
+        },
+        "policytype": {
+          "codes": [
+            {
+              "uid" : "OECD_PolicyType",
+              "version" : "1.0",
+              "codes": [
+                "8"
               ]
             }
           ]
@@ -66,7 +77,7 @@
     "parameters": {
       "by": [
         "commodityclass",
-        "policytype",
+        "policymeasure",
         "country"
       ],
       "aggregations": [
@@ -93,7 +104,7 @@
     "parameters": {
       "by": [
         "commodityclass",
-        "policytype"
+        "policymeasure"
       ],
       "aggregations": [
         {
@@ -108,4 +119,5 @@
       "uid":"final"
     }
   }
+
 ]
