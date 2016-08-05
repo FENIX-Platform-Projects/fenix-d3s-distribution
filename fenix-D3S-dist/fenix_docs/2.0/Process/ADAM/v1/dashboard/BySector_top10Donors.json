@@ -35,10 +35,10 @@
             "usd_commitment"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
                 "600"
@@ -167,10 +167,10 @@
             "usd_commitment"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
                 "600"

@@ -1,6 +1,4 @@
 [
-
-
   {
     "name": "union",
     "sid": [
@@ -21,10 +19,7 @@
     "parameters": {
     },
     "rid":{"uid":"union_process"}
-
   },
-
-
   {
     "name": "filter",
     "sid": [
@@ -180,11 +175,11 @@
             }
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
-              "version": "2016",
+              "uid" : "crs_dac",
+              "version" : "2016",
               "codes": [
                 "111"
               ]
@@ -304,9 +299,6 @@
         "value"
       ],
       "rows": {}
-    },
-    "rid": {
-      "uid": "percentage_with_two_values"
     }
   },
   {
@@ -328,23 +320,6 @@
         "subject": "um"
       },
       "value": "percentage"
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "dataType": "text",
-        "id": "unitcode_EN",
-        "title": {
-          "EN": "Measurement Unit"
-        },
-        "subject": null
-      },
-      "value": "%"
-    },
-    "rid": {
-      "uid": "percentage_withUM"
     }
   },
   {
@@ -399,11 +374,11 @@
             "t"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
-              "version": "2016",
+              "uid" : "crs_dac",
+              "version" : "2016",
               "codes": [
                 "111"
               ]
@@ -428,14 +403,9 @@
       "by": [
         "donorcode",
         "year"
-
-
       ],
       "aggregations": [
       ]
-    },
-    "rid": {
-      "uid": "sd"
     }
   },
   {
@@ -500,11 +470,11 @@
             "t"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
-              "version": "2016",
+              "uid" : "crs_dac",
+              "version" : "2016",
               "codes": [
                 "111"
               ]
@@ -603,10 +573,8 @@
         "keys":  ["1 = 1"],
         "values":[" ( aggregated_oecd_value / count_dac_members_value_count )"]
       }
-    },
-    "rid": {
-      "uid": "avg_value"
     }
+
   },
   {
     "name": "filter",

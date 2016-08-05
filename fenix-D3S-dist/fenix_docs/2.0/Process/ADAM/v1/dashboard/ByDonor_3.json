@@ -40,10 +40,10 @@
             "usd_commitment"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
                 "111"
@@ -144,10 +144,10 @@
             "usd_commitment"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
                 "111"
@@ -339,23 +339,6 @@
     "parameters": {
       "column": {
         "dataType": "text",
-        "id": "unitcode_EN",
-        "title": {
-          "EN": "Measurement Unit_TEST"
-        },
-        "subject": null
-      },
-      "value": "%"
-    },
-    "rid": {
-      "uid": "percentage_withUM"
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "dataType": "text",
         "id": "indicator",
         "title": {
           "EN": "Indicator"
@@ -403,10 +386,10 @@
             "t"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
                 "111"
@@ -483,10 +466,10 @@
             "t"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
                 "111"

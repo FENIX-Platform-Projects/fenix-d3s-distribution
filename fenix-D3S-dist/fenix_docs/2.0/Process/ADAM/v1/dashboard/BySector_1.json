@@ -40,10 +40,10 @@
             "usd_commitment"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
                 "114"
@@ -134,10 +134,10 @@
             "usd_commitment"
           ]
         },
-        "sectorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_sectors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
                 "NA"
@@ -331,23 +331,6 @@
         "subject": "um"
       },
       "value": "percentage"
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "dataType": "text",
-        "id": "unitcode_EN",
-        "title": {
-          "EN": "Measurement Unit_TEST"
-        },
-        "subject": null
-      },
-      "value": "%"
-    },
-    "rid": {
-      "uid": "percentage_withUM"
     }
   },
   {
