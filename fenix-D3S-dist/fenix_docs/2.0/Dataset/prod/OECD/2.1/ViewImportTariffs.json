@@ -11,6 +11,10 @@
   "dsd" : {
     "contextSystem" : "oecd_view",
     "datasources" : [ "oecdView" ],
+    "cache":{
+      "storage":"postgres"
+    },
+
     "columns" : [
       {
         "dataType" : "code",
@@ -104,6 +108,14 @@
         "subject" : "item",
         "title" : {
           "EN" : "HS code"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "hsPrefix",
+        "title" : {
+          "EN" : "HS prefix"
         }
       },
       {

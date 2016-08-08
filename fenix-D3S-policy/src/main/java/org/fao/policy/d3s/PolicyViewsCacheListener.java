@@ -12,6 +12,7 @@ public class PolicyViewsCacheListener implements DatasetCacheListener {
         //Browse Data indexes
         //datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,sectorcode, purposecode)");
 
+        System.out.println("here");
         return false;
     }
 

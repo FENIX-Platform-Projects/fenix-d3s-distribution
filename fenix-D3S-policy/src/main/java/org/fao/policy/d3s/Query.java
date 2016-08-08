@@ -78,13 +78,14 @@ public enum Query {
                     "to_char(mastertable.commodityclass_code, 'FM999999999999999999') as commodityclass_code,\n" +
                     "to_char(mastertable.country_code, 'FM999999999999999999') as country_code,\n" +
                     "commlistwithid.hs_code,\n" +
+                    "SUBSTRING(commlistwithid.hs_code from 0 for 5) as hs_prefix,\n"+
                     "to_char(element_code, 'FM999999999999999999') as element_code,\n" +
                     "value,\n" +
                     "units,\n" +
                     "to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,\n" +
-                    "to_number(to_char(end_date,'YYYYMMDD'), '9999') as end_date,\n" +
-                    "to_number(to_char(start_date,'YYYY'), '99999999') as beginning_year\n" +
-                    "from mastertable, policyTableViewTest, commlistwithid where mastertable.cpl_id = policyTableViewTest.cpl_id AND commlistwithid.commodity_id = policyTableViewTest.commodity_id;\n"
+                    "to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date,\n" +
+                    "to_number(to_char(start_date,'YYYY'), '9999') as beginning_year\n" +
+                    "from mastertable, policytable, commlistwithid where mastertable.cpl_id = policytable.cpl_id AND commlistwithid.commodity_id = policyTableViewTest.commodity_id;\n"
             ),
     OECD_View_BiofuelPolicy
             (
