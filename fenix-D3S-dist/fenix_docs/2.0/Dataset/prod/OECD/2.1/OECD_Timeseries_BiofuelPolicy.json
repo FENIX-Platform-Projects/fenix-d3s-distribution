@@ -1,7 +1,7 @@
 {
-  "uid" : "OECD_View_BiofuelPolicy",
+  "uid" : "OECD_Timeseries_BiofuelPolicy",
   "title" : {
-    "EN" : "Dataset for Biofuel Policy Graph and Biofuels policies-detailed Graph"
+    "EN" : "Dataset for Biofuel Policy Timeseries and Export restriction timeseries"
   },
   "language" : {
     "version" : "1998",
@@ -48,27 +48,13 @@
       {
         "dataType" : "code",
         "key" : false,
-        "id" : "policydomain",
+        "id" : "commodityclass",
         "title" : {
-          "EN" : "Policy domain"
+          "EN" : "Commodity class"
         },
         "domain" : {
           "codes" : [ {
-            "idCodeList" : "OECD_PolicyDomain",
-            "version" : "1.0"
-          } ]
-        }
-      },
-      {
-        "dataType" : "code",
-        "key" : false,
-        "id" : "commoditydomain",
-        "title" : {
-          "EN" : "Commodity domain"
-        },
-        "domain" : {
-          "codes" : [ {
-            "idCodeList" : "OECD_CommodityDomain",
+            "idCodeList" : "OECD_CommodityClass1",
             "version" : "1.0"
           } ]
         }
@@ -104,20 +90,6 @@
       {
         "dataType" : "code",
         "key" : false,
-        "id" : "commodityclass",
-        "title" : {
-          "EN" : "Commodity class"
-        },
-        "domain" : {
-          "codes" : [ {
-            "idCodeList" : "OECD_CommodityClass1",
-            "version" : "1.0"
-          } ]
-        }
-      },
-      {
-        "dataType" : "code",
-        "key" : false,
         "id" : "country",
         "subject" : "geo",
         "title" : {
@@ -133,35 +105,12 @@
       {
         "dataType" : "date",
         "key" : false,
-        "id" : "startDate",
+        "id" : "day",
         "title" : {
-          "EN" : "Start date"
+          "EN" : "Day"
         }
-      },
-      {
-        "dataType" : "date",
-        "key" : false,
-        "id" : "endDate",
-        "title" : {
-          "EN" : "End date"
-        }
-      },
-      {
-        "dataType" : "year",
-        "key" : false,
-        "id" : "startYear",
-        "title" : {
-          "EN" : "Year"
-        }
-      },
-      {
-        "dataType" : "year",
-        "key" : false,
-        "id" : "endYear",
-        "title" : {
-          "EN" : "Year"
-        }
-      }    ]
+      }
+       ]
   }
 
 }

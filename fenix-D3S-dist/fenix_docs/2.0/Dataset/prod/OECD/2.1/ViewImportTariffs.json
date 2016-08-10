@@ -170,7 +170,15 @@
       {
         "dataType" : "year",
         "key" : false,
-        "id" : "year",
+        "id" : "startYear",
+        "title" : {
+          "EN" : "Year"
+        }
+      },
+      {
+        "dataType" : "year",
+        "key" : false,
+        "id" : "endYear",
         "title" : {
           "EN" : "Year"
         }

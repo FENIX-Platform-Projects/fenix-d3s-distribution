@@ -1,0 +1,49 @@
+[
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "OECD_Timeseries_BiofuelPolicy"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "day",
+        "policytype",
+        "country"
+      ],
+      "aggregations": []
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": null
+      },
+      "value": 1
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "day",
+        "policytype"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  }
+]
