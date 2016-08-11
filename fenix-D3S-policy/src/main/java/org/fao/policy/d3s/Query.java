@@ -238,6 +238,50 @@ public enum Query {
                     "                   final.policymeasure,  \n" +
                     "                   final.country, \n" +
                     "                   final.day \n"
+    ),
+    OECD_Timeseries_ImportTariffs (
+            "   with timeseries as ( \n" +
+                    "                    select to_number(to_char(generate_series('2012-01-01'::timestamp, '2015-12-31'::timestamp, '1 year'), \n" +
+                    "                    'YYYY'),'9999') \n" +
+                    "                    as  year ) \n" +
+                    "                     \n" +
+                    "                    select  \n" +
+                    "                    year, \n" +
+                    "                    hs_tariff, \n" +
+                    "                    commodityclass, \n" +
+                    "                    case policy_element  \n" +
+                    "                    when 'Final bound tariff' then '1' \n" +
+                    "                    when 'MFN applied tariff' then '2' \n" +
+                    "                    end as policyelement, \n" +
+                    "                    units, \n" +
+                    "                    value \n" +
+                    "                     \n" +
+                    "                    from  \n" +
+                    "                    timeseries  \n" +
+                    "                    join \n" +
+                    "                     (select HS_Tariff,commodityclass, policy_element, start_year, end_year, units, value from ( \n" +
+                    "                    select  * from ( \n" +
+                    "                           select  \n" +
+                    "                           to_char(mastertable.commodityclass_code, 'FM999999999999999999') as commodityclass,  \n" +
+                    "                           policytable.policy_element,  \n" +
+                    "                           SUBSTRING(commlistwithid.HS_Code from 0 for 5) as hs_tariff, \n" +
+                    "                           to_number(to_char(start_date,'YYYY'), '9999') as start_year,  \n" +
+                    "                           to_number(to_char(end_date,'YYYY'), '9999') as end_year,  \n" +
+                    "                           commlistwithid.HS_Code,  \n" +
+                    "                           policytable.units,  \n" +
+                    "                           policytable.value  \n" +
+                    "                           from  \n" +
+                    "                           mastertable  JOIN policytable ON mastertable.CPL_ID = policytable.CPL_ID \n" +
+                    "                            JOIN commlistwithid ON mastertable.Commodity_ID = commlistwithid.Commodity_ID)t \n" +
+                    "                     \n" +
+                    "                    WHERE hs_tariff IN ('1001','1005','1006','1201') \n" +
+                    "                    and t.policy_element in ('Final bound tariff','MFN applied tariff') \n" +
+                    "                    and t.units = '%'  \n" +
+                    "                            )g \n" +
+                    "                         )h  \n" +
+                    "                          \n" +
+                    "                     on ((h.end_year is null AND year >= h.start_year) OR  \n" +
+                    "                    (year  between h.start_year and h.end_year) ) "
     );
 
     private String query;

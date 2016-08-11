@@ -1,0 +1,46 @@
+[
+
+  {
+    "name": "addcolumn",
+    "sid":[{"uid":"OECD_Timeseries_ImportTariffs"}],
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value_count",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": null
+      },
+      "value": 1
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "commodityclass",
+        "policyelement",
+        "year",
+        "um"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value_count"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "avg"
+        }
+      ]
+    },
+    "rid":{
+      "uid":"final"
+    }
+  }
+]

@@ -11,7 +11,7 @@
         "commodityclass",
         "policymeasure",
         "country",
-        "year",
+        "startYear",
         "value",
         "um"
       ],
@@ -19,7 +19,7 @@
         "commodityclass": {
           "codes": [
             {
-              "uid": "OECD_CommodityClass1",
+              "uid": "OECD_CommodityClass",
               "version": "1.0",
               "codes": [
                 "9"
@@ -30,7 +30,7 @@
         "policymeasure": {
           "codes": [
             {
-              "uid" : "OECD_PolicyType1_2_6",
+              "uid" : "OECD_PolicyMeasure",
               "version" : "1.0",
               "codes": [
                 "3"
@@ -41,8 +41,8 @@
         "country": {
           "codes": [
             {
-              "uid" : "GAUL",
-              "version" : "2014",
+              "uid" : "OECD_Country",
+              "version" : "1.0",
               "codes": [
                 "37"
               ]
@@ -61,6 +61,12 @@
           ]
         }
       }
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "startYear": "ASC"
     }
   }
 ]

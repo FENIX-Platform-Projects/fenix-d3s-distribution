@@ -18,7 +18,7 @@
         "commodityclass": {
           "codes": [
             {
-              "uid": "OECD_CommodityClass1",
+              "uid": "OECD_CommodityClass",
               "version": "1.0",
               "codes": [
                 "5",

@@ -1,0 +1,87 @@
+[
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "OECD_Timeseries_BiofuelPolicy"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "commodityclass",
+        "policytype",
+        "policymeasure",
+        "country",
+        "day"
+      ],
+      "rows": {
+        "commodityclass": {
+          "codes": [
+            {
+              "uid": "OECD_CommodityClass",
+              "version": "1.0",
+              "codes": [
+                "5","6","7"
+              ]
+            }
+          ]
+        },
+        "policytype": {
+          "codes": [
+            {
+              "uid" : "OECD_PolicyType",
+              "version" : "1.0",
+              "codes": [
+                "8"
+              ]
+            }
+          ]
+        }
+
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "day",
+        "policymeasure",
+        "country"
+      ],
+      "aggregations": []
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": null
+      },
+      "value": 1
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "day",
+        "policymeasure"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  }
+]

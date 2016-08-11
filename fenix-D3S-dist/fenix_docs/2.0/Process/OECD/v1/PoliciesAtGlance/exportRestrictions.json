@@ -18,10 +18,10 @@
         "commodityclass": {
           "codes": [
             {
-              "uid": "OECD_CommodityClass1",
+              "uid": "OECD_CommodityClass",
               "version": "1.0",
               "codes": [
-                "1"
+                "1","2","3","4"
               ]
             }
           ]
@@ -29,7 +29,7 @@
         "policymeasure": {
           "codes": [
             {
-              "uid" : "OECD_PolicyType1_2_6",
+              "uid" : "OECD_PolicyMeasure",
               "version" : "1.0",
               "codes": [
                 "1",

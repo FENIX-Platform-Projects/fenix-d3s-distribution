@@ -1,7 +1,7 @@
 {
-  "uid": "OECD_Timeseries_ExportRestrictions",
+  "uid": "OECD_Timeseries_ImportTariffs",
   "title": {
-    "EN": "Dataset for Export Restrictions Timeseries and Export restriction timeseries"
+    "EN": "Dataset for Import tariffs timeseries"
   },
   "language": {
     "version": "1998",
@@ -53,6 +53,22 @@
     },
     "columns": [
       {
+        "dataType": "year",
+        "key": false,
+        "id": "year",
+        "title": {
+          "EN": "Year"
+        }
+      },
+      {
+        "dataType": "text",
+        "key": false,
+        "id": "hsTariff",
+        "title": {
+          "EN": "HS Tariff"
+        }
+      },
+      {
         "dataType": "code",
         "key": false,
         "id": "commodityclass",
@@ -71,58 +87,35 @@
       {
         "dataType": "code",
         "key": false,
-        "id": "policytype",
+        "id": "policyelement",
         "title": {
           "EN": "Policy type"
         },
         "domain": {
           "codes": [
             {
-              "idCodeList": "OECD_PolicyType",
+              "idCodeList": "OECD_PolicyElement",
               "version": "1.0"
             }
           ]
         }
       },
       {
-        "dataType": "code",
+        "dataType": "text",
         "key": false,
-        "id": "policymeasure",
+        "id": "um",
+        "subject": "um",
         "title": {
-          "EN": "Policy measure"
-        },
-        "domain": {
-          "codes": [
-            {
-              "idCodeList": "OECD_PolicyMeasure",
-              "version": "1.0"
-            }
-          ]
+          "EN": "Unit of measure"
         }
       },
       {
-        "dataType": "code",
+        "dataType": "number",
         "key": false,
-        "id": "country",
-        "subject": "geo",
+        "id": "value",
+        "subject": "value",
         "title": {
-          "EN": "Country"
-        },
-        "domain": {
-          "codes": [
-            {
-              "idCodeList": "OECD_Country",
-              "version": "1.0"
-            }
-          ]
-        }
-      },
-      {
-        "dataType": "date",
-        "key": false,
-        "id": "day",
-        "title": {
-          "EN": "Day"
+          "EN": "Value"
         }
       }
     ]
