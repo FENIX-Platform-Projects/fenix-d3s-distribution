@@ -54,7 +54,9 @@
       {
         "id" : "dac_member",
         "title" : { "EN" : "OECD DAC Member Donor Country" },
-        "dataType" : "text"
+        "dataType" : "text",
+        "key": true
+
       },
       {
         "id" : "donorcode",
