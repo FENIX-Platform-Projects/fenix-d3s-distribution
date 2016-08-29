@@ -4,14 +4,16 @@
     "name": "union",
     "sid": [
       {
-        "uid": "total_donor_oda"
+        "uid": "sector_oda"
       },
       {
-        "uid": "gni_donor_oda"
+        "uid": "total_oda"
       },
       {
-        "uid":"ODA_on_GNI"
+        "uid": "percentage_ODA"
+
       }
+
     ],
     "parameters": {
     },
@@ -38,13 +40,13 @@
             "usd_commitment"
           ]
         },
-        "donorcode": {
+        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_donors",
+              "uid": "crs_dac",
               "version": "2016",
               "codes": [
-                "302"
+                "114"
               ]
             }
           ]
@@ -59,6 +61,7 @@
         }
       }
     }
+
   },
   {
     "name": "group",
@@ -80,9 +83,7 @@
           "rule": "first"
         }
       ]
-    },
-    "rid":{"uid":"total_ODA"}
-
+    }
   },
   {
     "name": "addcolumn",
@@ -105,19 +106,20 @@
         },
         "subject": null
       },
-      "value": "TOTAL ODA FROM DONOR"
+      "value": "SECTOR"
     },
     "rid": {
-      "uid": "total_donor_oda"
+      "uid": "sector_oda"
     }
   },
+
 
 
   {
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_donors_gni"
+        "uid": "adam_usd_aggregation_table"
       }
     ],
     "parameters": {
@@ -127,15 +129,58 @@
         "unitcode"
       ],
       "rows": {
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "parentsector_code": {
+          "codes": [
+            {
+              "uid": "crs_dac",
+              "version": "2016",
+              "codes": [
+                "NA"
+              ]
+            }
+          ]
+        },
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "NA"
+              ]
+            }
+          ]
+        },
         "donorcode": {
           "codes": [
             {
               "uid": "crs_donors",
               "version": "2016",
               "codes": [
-                "302"
+                "NA"
               ]
             }
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "NA"
+              ]
+            }
+          ]
+        },
+        "dac_member": {
+          "enumeration": [
+            "NA"
           ]
         },
         "year": {
@@ -146,8 +191,11 @@
             }
           ]
         }
+
       }
+
     }
+
   },
   {
     "name": "group",
@@ -170,6 +218,8 @@
         }
       ]
     }
+
+
   },
   {
     "name": "addcolumn",
@@ -192,10 +242,10 @@
         },
         "subject": null
       },
-      "value": "GNI DONOR"
+      "value": "TOTAL"
     },
     "rid": {
-      "uid": "gni_donor_oda"
+      "uid": "total_oda"
     }
   },
 
@@ -204,10 +254,10 @@
     "name": "join",
     "sid": [
       {
-        "uid": "gni_donor_oda"
+        "uid": "sector_oda"
       },
       {
-        "uid": "total_donor_oda"
+        "uid": "total_oda"
       }
     ],
     "parameters": {
@@ -230,11 +280,11 @@
       "values": [
       ]
     },
-    "rid":{"uid":"join_process_oda_gni"}
+    "rid":{"uid":"join_process"}
   },
   {
     "name": "addcolumn",
-    "sid":[{"uid":"join_process_oda_gni"}],
+    "sid":[{"uid":"join_process"}],
     "parameters": {
       "column": {
         "dataType": "number",
@@ -246,8 +296,12 @@
       },
       "value": {
         "keys":  ["1 = 1"],
-        "values":[" ( total_donor_oda_value / gni_donor_oda_value)*100"]
+        "values":[" ( sector_oda_value / total_oda_value )*100"]
+
       }
+    },
+    "rid": {
+      "uid": "percentage_Value"
     }
   },
   {
@@ -258,6 +312,9 @@
         "value"
       ],
       "rows": {}
+    },
+    "rid": {
+      "uid": "percentage_with_two_values"
     }
   },
   {
@@ -305,10 +362,9 @@
       "value": "PERCENTAGE"
     },
     "rid": {
-      "uid": "ODA_on_GNI"
+      "uid": "percentage_ODA"
     }
   }
-
 
 
 ]
