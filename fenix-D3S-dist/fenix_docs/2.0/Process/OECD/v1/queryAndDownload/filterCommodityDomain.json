@@ -1,0 +1,48 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "FilterCommodityDomainClass"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "orderFixed",
+        "commodityclass"
+      ],
+      "rows": {
+        "commoditydomain": {
+          "codes": [
+            {
+              "uid": "OECD_CommodityDomain",
+              "version": "1.0",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "mixed": {
+          "enumeration": [
+            "1"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "orderfixed": "ASC"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "commodityclass"
+      ]
+    }
+  }
+]

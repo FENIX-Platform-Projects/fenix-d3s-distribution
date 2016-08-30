@@ -1,0 +1,95 @@
+{
+  "uid" : "FilterCommodityDomainClass",
+  "title" : {
+    "EN" : "Filter for selecting commodity domain and policy type or measure"
+  },
+  "language" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "characterSet" : {
+    "codes" : [ {
+      "code" : "106",
+      "label" : {
+        "EN" : "UTF-8"
+      }
+    } ],
+    "idCodeList" : "IANAcharacterSet"
+  },
+  "metadataStandardName" : "FENIX",
+  "metadataStandardVersion" : "1.0",
+  "metadataLanguage" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "meContent" : {
+    "resourceRepresentationType" : "dataset"
+  },
+  "dsd" : {
+    "contextSystem" : "oecd_view",
+    "datasources" : [ "oecdView" ],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns" : [
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "commoditydomain",
+        "title" : {
+          "EN" : "Commodity domain"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_CommodityDomain",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "commodityclass",
+        "title" : {
+          "EN" : "Commodity class"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_CommodityClass",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "number",
+        "key" : false,
+        "id" : "orderFixed",
+        "title" : {
+          "EN" : "Order"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "mixed",
+        "title" : {
+          "EN" : "Mixed Content"
+        }
+      }
+
+    ]
+  }
+}

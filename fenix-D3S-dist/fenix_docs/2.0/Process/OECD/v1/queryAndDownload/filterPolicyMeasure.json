@@ -1,0 +1,50 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "FilterCommodityPolicy"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "policymeasure"
+      ],
+      "rows": {
+        "commoditydomain": {
+          "codes": [
+            {
+              "uid": "OECD_CommodityDomain",
+              "version": "1.0",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "policydomain": {
+          "codes": [
+            {
+              "uid": "OECD_PolicyDomain",
+              "version": "1.0",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "policytype": {
+          "codes": [
+            {
+              "uid": "OECD_PolicyType",
+              "version": "1.0",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

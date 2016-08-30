@@ -282,6 +282,12 @@ public enum Query {
                     "                          \n" +
                     "                     on ((h.end_year is null AND year >= h.start_year) OR  \n" +
                     "                    (year  between h.start_year and h.end_year) ) "
+    ),
+    FilterCommodityPolicy(
+            "select commoditydomain, policydomain, policytype, policymeasure from filtercommoditypolicy"
+    ),
+    FilterCommodityDomainClass (
+            "select * from filtercommodityclassdomain "
     );
 
     private String query;
