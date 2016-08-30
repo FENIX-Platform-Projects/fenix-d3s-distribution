@@ -1,0 +1,21 @@
+[
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "group_code",
+        "subgroup_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "first"
+        }
+      ]
+    }
+  }
+]

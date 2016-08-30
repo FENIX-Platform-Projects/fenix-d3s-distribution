@@ -1,0 +1,1559 @@
+
+{
+    "uid": "GIFT_FoodGroups",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "WHO-FAO GIFT, food groups"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "WHO-FAO"
+            },
+            "organizationUnit": null,
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["diet"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 3,
+            "typeOfCodeList": "tree"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+		"dsd":{
+      "contextSystem":"gift"
+   }
+}
+
+--structure--
+csvSeparator=;
+structure=table
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2,3
+titleColumnIndex_EN=4
+
+
+
+--data--
+
+01;;;Cereals
+01;0101;;Rice and rice-based products
+01;0101;A001C;Rice and similar-
+01;0101;A0F6Q;Rice semolina
+01;0101;A003F;Rice flour
+01;0101;A0F6P;Rice bran
+01;0101;A00DR;Rice, popped
+01;0101;A00DQ;Rice rolled grains
+01;0101;A00ER;Rice porridge
+01;0101;A003G;Rice starch
+01;0101;A00DS;Processed rice-based flakes
+01;0101;A008E;Glass noodle
+01;0101;A006G;Extruded rice bread
+01;0101;A03TH;Milk imitates
+01;0102;;Maize and maize-based products
+01;0102;A000S;Maize and similar-
+01;0102;A002N;Maize semolina
+01;0102;A0C0Z;Maize, milled
+01;0102;A016K;Maize germ
+01;0102;A00ET;Cornmeal porridge
+01;0102;A002R;Maize starch
+01;0102;A00DD;Processed maize-based flakes
+01;0102;A00DC;Popcorn (maize, popped)
+01;0103;;Wheat and wheat-based products
+01;0103;A001M;Wheat and similar-
+01;0103;A004E;Wheat groats
+01;0103;A004F;Wheat semolina
+01;0103;A003X;Wheat flour
+01;0103;A004P;Wheat bran
+01;0103;A004Q;Wheat germ
+01;0103;A00EB;Wheat rolled grains
+01;0103;A00EC;Wheat germs rolled flakes
+01;0103;A00ED;Wheat bran rolled flakes
+01;0103;A00EV;Wheat semolina porridge
+01;0103;A004M;Wheat starch
+01;0103;A00EE;Wheat, popped
+01;0103;A00EF;Processed wheat-based flakes
+01;0103;A04LC;Pasta wholemeal
+01;0103;A007F;Fresh pasta
+01;0103;A007L;Dried pasta
+01;0103;A007T;Fresh stuffed pasta
+01;0103;A007Y;Dried stuffed pasta
+01;0103;A008H;Yeast leavened bread doughs
+01;0103;A008P;Chemically leavened doughs
+01;0103;A0CSL;Bread pre-mixes (dry)
+01;0103;A005M;Mixed wheat and rye bread and rolls
+01;0103;A005Q;Multigrain (not only rye-wheat) bread and rolls
+01;0103;A004Y;Wheat bread and rolls, white (refined flour)
+01;0103;A005D;Wheat bread and rolls, semi-brown
+01;0103;A005E;Wheat bread and rolls, brown or wholemeal
+01;0103;A005K;Bread and rolls with special ingredients added
+01;0103;A0BB2;Sandwich bread (hamburger roll-type)
+01;0103;A006Q;Pizza base, cooked
+01;0103;A006S;Pita bread
+01;0103;A006X;Roti
+01;0103;A006Y;Chapati
+01;0103;A006D;Wheat crisp bread
+01;0103;A006H;Puffed cereals textured bread
+01;0103;A005V;Pretzels
+01;0103;A007A;Breadcrumbs
+01;0103;A006N;Rusk, refined flour
+01;0103;A006P;Rusk, wholemeal
+01;0103;A005R;Gluten free bread
+01;0103;A007B;Croutons
+01;0103;A007C;Bread stuffing
+01;0104;;Sorghum and sorghum-based products
+01;0104;A0D9Q;Sorghum and similar-
+01;0104;A003T;Sorghum flour
+01;0105;;Millet and millet-based products
+01;0105;A000Y;Common millet and similar-
+01;0105;A002V;Millet groats
+01;0105;A002T;Millet flour
+01;0105;A00DF;Millet rolled grains
+01;0106;;Cereals other than rice, maize, wheat, sorghum and millet, and their products
+01;0106;A001X;Mixture of grains
+01;0106;A0D9Y;Barley and similar-
+01;0106;A04KH;Buckwheat and other pseudo-cereals and similar-
+01;0106;A000F;Oat and similar-
+01;0106;A0D9R;Rye and similar-
+01;0106;A001Y;Other cereals
+01;0106;A065N;Barley groats
+01;0106;A002H;Buckwheat groats
+01;0106;A002Z;Oat groats
+01;0106;A003P;Rye groats
+01;0106;A004G;Bulgur
+01;0106;A16GM;Mixed roasted flours for porridge-like food
+01;0106;A004S;Flour mix (like wheat/rye/barley/oats and other)
+01;0106;A002E;Amaranth flour
+01;0106;A002L;Barley flour
+01;0106;A002G;Buckwheat flour
+01;0106;A002Y;Oat flour
+01;0106;A003J;Rye flour
+01;0106;A004H;Spelt flour
+01;0106;A04KT;Cereal and cereal-like flours not separately listed
+01;0106;A003B;Oat bran
+01;0106;A003Q;Rye bran
+01;0106;A00EM;Processed mixed cereal-based flakes
+01;0106;A00DA;Processed barley-based flakes
+01;0106;A00DN;Processed oat-based flakes
+01;0106;A00DY;Processed rye-based flakes
+01;0106;A0F4Q;Extruded breakfast cereal products
+01;0106;A00CZ;Barley popped
+01;0106;A00DM;Oat popped
+01;0106;A00DX;Rye popped
+01;0106;A00EH;Mixed cereal rolled grains
+01;0106;A00CY;Barley rolled grains
+01;0106;A00DH;Oat rolled grains
+01;0106;A00DV;Rye rolled grains
+01;0106;A00EA;Spelt rolled grains
+01;0106;A00EX;Barley porridge
+01;0106;A00EQ;Oat porridge
+01;0106;A00ES;Rye porridge
+01;0106;A0F0T;Porridge milk based (ready to eat)
+01;0106;A0ESM;Porridge water based (ready to eat)
+01;0106;A00EY;Cereal bars
+01;0106;A00EJ;Muesli and similar
+01;0106;A007R;Asian-style noodles other than glass noodles
+01;0106;A008B;Pasta, gluten free
+01;0106;A008C;Couscous
+01;0106;A005F;Rye only bread and rolls
+01;0106;A006T;Matzo
+01;0106;A16FX;Fried bread dough
+01;0106;A006V;Tortilla
+01;0106;A006A;Rye crisp bread
+01;0106;A03TL;Oats drink
+01;0106;A03TN;Rye drink
+01;0106;A03TP;Spelt drink
+01;0106;A003A;Oat starch
+01;0106;A003R;Rye starch
+02;;;Roots, tubers and plantains
+02;0201;;Potato and sweet potato and potato and sweet potato-based products
+02;0201;A0DPP;Potatoes and similar-
+02;0201;A0DPH;Sweet potatoes and similar-
+02;0201;A011F;Potato starch
+02;0201;A008D;Gnocchi
+02;0201;A011C;Dried potato products
+02;0202;;Cassava and similar roots (excluding taro) and products based on them
+02;0202;A00ZZ;Cassava roots
+02;0202;A010K;Canna
+02;0202;A010N;Chayote roots
+02;0202;A0DPN;Konjac roots
+02;0202;A010A;Tannias
+02;0202;A0DPL;Blue taros
+02;0203;;Taro and taro-based products
+02;0203;A010B;Taros
+02;0204;;Yam and yam-based products
+02;0204;A04JY;Yams and similar-
+02;0205;;Starchy roots and tubers other than cassava, yam potato and sweet potato (excluding sugary roots and tubers) and  products based on them
+02;0205;A010H;Other tropical root and tuber vegetables
+02;0205;A011J;Tapioca starch
+02;0205;A0DPE;Arrowroots and similar-
+02;0206;;Plantain and plantain-based products
+02;0206;A01LE;Plantains
+03;;;Pulses, seeds and nuts
+03;0301;;Pulses (excluding soybeans) and products based on them
+03;0301;A012S;Beans (dry) and similar-
+03;0301;A0DCE;Lentils (dry) and similar-
+03;0301;A0DCD;Peas (dry) and similar-
+03;0301;A0DCA;Lupins (dry) and similar-
+03;0301;A04HD;Other pulses
+03;0301;A00SR;Mung bean sprouts
+03;0301;A00ST;Peas shoots and sprouts
+03;0301;A00SG;Adzuki bean sprouts
+03;0301;A00SK;Common bean sprouts
+03;0301;A00SL;Chickpea sprouts
+03;0301;A00SN;Fenugreek sprouts
+03;0301;A00SP;Lentil sprouts
+03;0301;A01BB;Canned or jarred common beans
+03;0301;A01BC;Canned or jarred peas
+03;0301;A01BD;Canned or jarred lentils
+03;0301;A01BE;Canned or jarred chickpea
+03;0302;;Soybeans and soy-based products
+03;0302;A0DBM;Soyabeans and similar-
+03;0302;A00SY;Soyabeans sprouts
+03;0302;A03TF;Textured soy protein
+03;0302;A03TJ;Soya drink
+03;0302;A03TT;Tofu
+03;0302;A03TV;Soya yoghurt
+03;0302;A01BG;Soya proteins
+03;0303;;Nuts and seeds and products based on them
+03;0303;A0DYP;Almonds and similar-
+03;0303;A0DYL;Brazil nuts and similar-
+03;0303;A0DYK;Cashew nuts and similar-
+03;0303;A0DYJ;Chestnuts and similar-
+03;0303;A0DYD;Coconuts and similar-
+03;0303;A0CFF;Hazelnuts and similar-
+03;0303;A0DYA;Macadamias and similar-
+03;0303;A0DXX;Pecans and similar-
+03;0303;A014P;Pine nut kernels and similar-
+03;0303;A0DXK;Pistachios and similar-
+03;0303;A0DXJ;Walnuts and similar-
+03;0303;A014S;Other Tree nuts
+03;0303;A0F0N;Dried nuts and related flours and powders
+03;0303;A0F0M;Nut/seeds paste/emulsion/mass
+03;0303;A03TK;Almond drink
+03;0303;A0DBS;Peanuts and similar-
+03;0303;A0DBT;Linseeds and similar-
+03;0303;A0DBR;Poppy seeds and similar-
+03;0303;A0DBQ;Sesame seeds and similar-
+03;0303;A0DBP;Sunflower seeds and similar-
+03;0303;A04KG;Rapeseeds and similar-
+03;0303;A015Q;Mustard seeds and similar-
+03;0303;A0DBJ;Cotton seeds and similar-
+03;0303;A0CGF;Pumpkin seeds and similar-
+03;0303;A0DBD;Safflower seeds and similar-
+03;0303;A0CGG;Borage seeds and similar-
+03;0303;A0DAV;Gold of pleasure seeds and similar-
+03;0303;A0DAS;Hemp seeds and similar-
+03;0303;A0DAP;Castor beans and similar-
+03;0303;A016D;Other oilseeds (including elsewhere non-listed seeds)
+03;0303;A0DAM;Olives for oil production and similar-
+03;0303;A0DAL;Oil palms kernels and similar-
+03;0303;A0DAD;Oil palms fruits and similar-
+03;0303;A0D9Z;Kapok and similar-
+03;0303;A016R;Other oil fruits
+04;;;Milk and milk products
+04;0401;;Milk: fresh and processed
+04;0401;A02LV;Cow milk
+04;0401;A0CXC;American buffalo milk
+04;0401;A0CXB;Banteng milk
+04;0401;A0CXA;European buffalo milk
+04;0401;A0CVZ;Gayal milk
+04;0401;A0CVY;Yak (domestic) milk
+04;0401;A0CVX;Zebu milk
+04;0401;A02MD;Water buffalo milk
+04;0401;A02MC;Sheep milk
+04;0401;A0CVV;Mouflon (farmed) milk
+04;0401;A02MB;Goat milk
+04;0401;A02MF;Horse milk
+04;0401;A02MG;Ass milk
+04;0401;A02ME;Bactrian camel milk
+04;0401;A0CVT;Dromedary milk
+04;0401;A0CVS;Elk milk
+04;0401;A0CVR;Reindeer milk
+04;0401;A02MH;Other milk producer animals
+04;0401;A02MJ;Human milk
+04;0401;A02PF;Evaporated milk (liquid, unsweetened)
+04;0401;A02PG;Condensed milk (sometimes with added sugars)
+04;0401;A065H;Baked milk and similar
+04;0401;A02MP;Flavoured milks
+04;0401;A065Z;Dairy snacks
+04;0401;A02PJ;Milk powder
+04;0401;A02PR;Milk protein
+04;0402;;Fermented milk products
+04;0402;A02NF;Yoghurt, cow milk
+04;0402;A02NJ;Yoghurt, sheep milk
+04;0402;A16GH;Strained yoghurt
+04;0402;A02NM;Yoghurt, goat milk
+04;0402;A02NQ;Yoghurt drinks, sweetened and/or flavoured
+04;0402;A02NV;Kefir
+04;0402;A02NX;Kumis
+04;0402;A02NY;Traditional nordic fermented milks
+04;0402;A02PC;Flavoured traditional sour milk products
+04;0402;A02MV;Buttermilk
+04;0402;A02NS;Acidophilus milk
+04;0403;;Crème, whey and any other milk products
+04;0403;A02PM;Cream powder
+04;0403;A02PN;Whey powder
+04;0403;A02ML;Cream, plain
+04;0403;A02MM;Cream with other ingredients
+04;0403;A02MN;Cream sprayable
+04;0403;A02NB;Sour cream, plain
+04;0403;A02NC;Créme fraiche and other mild variants of sour cream
+04;0403;A02ND;Flavoured sour cream
+04;0403;A02MR;Whey, sweet
+04;0403;A02MS;Whey, sour
+04;0403;A02MT;Flavoured whey
+04;0403;A02PS;Whey protein
+04;0404;;Cheese
+04;0404;A02QF;Fresh uncured cheese
+04;0404;A02RB;Soft brined cheese (feta type)
+04;0404;A02RE;Firm brined cheese (ricotta salata type)
+04;0404;A02RJ;Soft-ripened washed-rind cheese (limburger type)
+04;0404;A02RT;Soft-ripened cheese with bloomy rind (white mould) (brie, camembert type)
+04;0404;A02SG;Soft-ripened cheese veined with blue mould (blue bavarian, blue de graven type )
+04;0404;A02SM;Soft-ripened cheese with white and blue mould (cambozola type)
+04;0404;A02SN;Soft-ripened cheese with natural rind and other soft-ripened cheeses
+04;0404;A02SV;Firm/semi-hard cheese (gouda and edam type)
+04;0404;A02YE;Hard cheese (cheddar, emmental type)
+04;0404;A02ZH;Extra hard cheese (parmesan, grana type)
+04;0404;A030B;Firm-ripened blue mould-veined cheese
+04;0404;A030P;Firm-ripened bloomy (white mould) or washed rind cheese
+04;0404;A030Z;Firm-ripened cheese with added herbs, spices or other ingredients
+04;0404;A031B;Processed cheese, sliceable
+04;0404;A031C;Processed cheese, spreadable
+04;0404;A031D;Processed cheese wedges and similar
+04;0404;A16FE;Cheese powder
+04;0404;A0F1H;Cheese rind
+05;;;Eggs
+05;0501;;Eggs: fresh and processed
+05;0501;A031G;Hen eggs
+05;0501;A031H;Duck eggs
+05;0501;A031J;Geese eggs
+05;0501;A031K;Quail eggs
+05;0501;A031M;Turkey eggs
+05;0501;A031R;Hen egg mixed whole
+05;0501;A031S;Hen egg yolk
+05;0501;A031T;Hen egg  white
+05;0501;A031X;Hen egg mixed whole, dried
+05;0501;A031Y;Hen egg  yolk, dried
+05;0501;A031Z;Hen egg  white, dried
+05;0501;A032B;Boiled eggs
+05;0501;A032C;Fried eggs
+05;0501;A032D;Poached eggs
+05;0501;A032E;Manufactured solid egg roll
+05;0501;A031P;Seagull eggs
+05;0501;A0CVN;Emu eggs
+05;0501;A0CVM;Nandu eggs
+05;0501;A031N;Ostrich eggs
+05;0501;A0CVL;Eggs from other not listed eggs producer birds
+06;;;Fish
+06;0601;;Freshwater fish (excluding offal): fresh and processed (excluding dried)
+06;0601;A026Y;Barbs
+06;0601;A027A;Bluegill sunfish, or bluegill bream
+06;0601;A027B;Freshwater bream - Europe
+06;0601;A0F1A;Wuchang bream - China
+06;0601;A027C;Carps
+06;0601;A0F8J;Weatherfish
+06;0601;A027Z;Roaches
+06;0601;A16GD;Tench
+06;0601;A028A;Tilapia
+06;0601;A027J;Catfishes (freshwater)
+06;0601;A0F8X;Mandarine fish
+06;0601;A0F8Y;Snakeheads(=Murrels)
+06;0601;A0F9C;Arapaima
+06;0601;A0F9D;Asian swamp eel
+06;0601;A0F9E;Characins
+06;0601;A0F9J;Gudgeons
+06;0601;A027M;Gourami (asia)
+06;0601;A0F9M;Climbing perch
+06;0601;A027N;Perch
+06;0601;A027S;White crappie
+06;0601;A0F9Q;Silver perch
+06;0601;A028N;Nile perch
+06;0601;A026Z;Largemouth black bass
+06;0601;A027T;Pike
+06;0601;A027Y;Pike-perch
+06;0601;A028C;Cod, murray
+06;0601;A028D;Perch, golden
+06;0601;A0F9R;Dagaas
+06;0601;A0F9S;African bonytongue
+06;0602;;Diadromous fish (excluding offal): fresh and processed (excluding dried)
+06;0602;A029E;Sturgeon
+06;0602;A029P;Paddle fish
+06;0602;A028G;River eels
+06;0602;A0C75;Salmons
+06;0602;A029F;Trouts
+06;0602;A029M;Char
+06;0602;A029B;Smelt
+06;0602;A029Q;Whitefishes or coregonus
+06;0602;A0FAF;Ayu sweetfish
+06;0602;A0FAG;Pond smelt
+06;0602;A0FAH;Clearhead icefish
+06;0602;A0FAJ;Hilsa shad
+06;0602;A028F;Barramundi
+06;0602;A16GE;River lamprey
+06;0602;A028M;Milkfish
+06;0602;A027R;Perch, white
+06;0602;A02KF;Smoked salmon
+06;0603;;Marine fish (excluding offal): fresh and processed (excluding dried)
+06;0603;A02AS;Dab or common dab
+06;0603;A02AT;Flounders
+06;0603;A02AY;Halibut
+06;0603;A02BC;Plaice
+06;0603;A02BF;Sole
+06;0603;A02BG;Turbot
+06;0603;A02BH;Brill
+06;0603;A0FAL;Megrims
+06;0603;A02BV;Cod
+06;0603;A02CA;Haddock
+06;0603;A02CB;Hakes
+06;0603;A02CC;Ling
+06;0603;A02CD;Tusk
+06;0603;A02CE;Pollack, pollock
+06;0603;A02CG;Whiting
+06;0603;A02CH;Grenadiers
+06;0603;A02CJ;Norway pout
+06;0603;A0FAN;Blue whitings
+06;0603;A0FAP;Alaska pollock
+06;0603;A02AD;Mullets
+06;0603;A0C76;Threadfins
+06;0603;A029T;Sea bass
+06;0603;A029V;Sea bream
+06;0603;A0FAS;Groupers
+06;0603;A0FAV;Snappers
+06;0603;A0FAX;Dentex
+06;0603;A0FAY;Weakfishes
+06;0603;A0FAT;Emperors
+06;0603;A029X;Bogue
+06;0603;A02AB;Drums
+06;0603;A0FAZ;Meagre
+06;0603;A0FBC;Red drum
+06;0603;A0FBB;Large yellow croaker
+06;0603;A0FBA;Yellow croaker
+06;0603;A02AH;Bream, silver
+06;0603;A0FBD;Sea catfishes
+06;0603;A0FBE;Pacific sandlance
+06;0603;A0FBF;Bombay-duck
+06;0603;A02AE;Surgeonfish
+06;0603;A02AF;Lesser sand eel
+06;0603;A02BL;Wolffishes
+06;0603;A02AK;Conger
+06;0603;A02AM;Ocean perch
+06;0603;A02BJ;Anglerfish and monkfish
+06;0603;A02BK;Dories
+06;0603;A0FBG;Hairtails, scabbardfishes (generic)
+06;0603;A0FBH;Alfonsinos
+06;0603;A0FBJ;Cusk-eels
+06;0603;A02DA;Sardines and sardine-type fishes
+06;0603;A02DD;Anchovies
+06;0603;A02DE;Herrings
+06;0603;A02DH;Sprat
+06;0603;A02AC;Menhaden
+06;0603;A02DS;Bonito
+06;0603;A02DX;Tuna
+06;0603;A07Y0;Swordfish
+06;0603;A02CR;Spanish mackerel
+06;0603;A02CQ;King mackerel
+06;0603;A02CS;Seerfish
+06;0603;A0FBK;Other billfishes
+06;0603;A02AJ;Butterfish
+06;0603;A02AP;Pomfret, atlantic
+06;0603;A0FBL;Pomfret, Indo-Pacific
+06;0603;A02AQ;Bluefish
+06;0603;A0FBM;Pompanos
+06;0603;A0FBP;Cobia
+06;0603;A0FBN;Amberjack
+06;0603;A02BN;Barracudas
+06;0603;A02BP;Capelin
+06;0603;A02BQ;Dolphinfishes
+06;0603;A02BR;Horse jack
+06;0603;A02BS;Garfish
+06;0603;A02CM;Jack mackerel
+06;0603;A02CP;Scad
+06;0603;A02CT;Mackerel
+06;0603;A02DJ;Sharks
+06;0603;A02DQ;Rays
+06;0603;A04RS;Marine fishes not identified
+06;0603;A16EM;Smoked mackerel
+06;0603;A02KG;Smoked herring
+06;0604;;Offal - fish and shellfish: fresh and processed (excluding dried)
+06;0604;A02EJ;Fish liver
+06;0604;A02EM;Fish roe
+06;0604;A02FB;Other fish offal
+06;0605;;Shellfish (excluding offal) - all types: fresh and processed (excluding dried)
+06;0605;A02FF;Freshwater crabs
+06;0605;A02FG;Freshwater crayfishes
+06;0605;A02FH;Freshwater shrimps or prawns
+06;0605;A0FCL;Swimming crabs
+06;0605;A0FCM;Indo-Pacific swamp crab
+06;0605;A0FCN;Blue crab
+06;0605;A0FCQ;Tanner crabs (generic)
+06;0605;A0FCP;Edible crab
+06;0605;A02FP;Lobsters
+06;0605;A02FT;Slipper lobster
+06;0605;A02FV;Spiny and rock lobsters
+06;0605;A02FN;Squat lobsters
+06;0605;A0FCR;King crabs
+06;0605;A02FX;Shrimps and prawns
+06;0605;A02FM;Krill, planktonic crustaceans
+06;0605;A02FK;Barnacle
+06;0605;A0FCX;Squillids
+06;0605;A02HY;Freshwater molluscs
+06;0605;A02GS;Abalones, winkles, conchs
+06;0605;A02HG;Oysters
+06;0605;A02HF;Mussels
+06;0605;A02HN;Scallops, pectens
+06;0605;A02HA;Clams
+06;0605;A02HC;Cockle and arkshell
+06;0605;A02JA;Cuttlefishes
+06;0605;A02JD;Octopuses
+06;0605;A02JH;Squids
+06;0605;A0FAB;Miscellaneous marine molluscs
+06;0605;A02GN;Sea-squirts and other tunicates
+06;0605;A02GP;Sea urchins and other echinoderms
+06;0605;A02GY;Jellyfishes and similar
+06;0605;A0EYZ;Smoked seafood
+06;0605;A0EZA;Marinated / pickled seafood
+06;0605;A0EYX;Salted seafood
+06;0605;A0BZ5;Canned seafood
+06;0605;A16FR;Seafood offal
+06;0606;;Fish and shellfish - unspecified: processed (excluding dried)
+06;0606;A02KC;Fish fingers, breaded
+06;0606;A02KD;Fish balls
+06;0606;A02KE;Fish paste or surimi
+06;0606;A0F0P;Marinated / pickled fish
+06;0606;A0EYT;Salt-preserved fish
+06;0606;A0EYR;Canned/jarred fish
+06;0606;A16FA;Fermented fish
+06;0607;;Fish and shellfish (including offal) - all types: dried
+06;0607;A02JR;Stockfish
+06;0607;A02JX;Flat-fishes, dried
+06;0607;A0EYY;Dried seafood
+07;;;Meat
+07;0701;;Offal: fresh and processed (excluding dried)
+07;0701;A01XF;Bovine liver
+07;0701;A01XJ;Pig liver
+07;0701;A01XK;Sheep liver
+07;0701;A01XL;Goat liver
+07;0701;A01XM;Equine liver
+07;0701;A01XQ;Rabbit liver
+07;0701;A01XT;Deer liver
+07;0701;A01XV;Wild boar liver
+07;0701;A01XZ;Chicken liver
+07;0701;A01YA;Turkey liver
+07;0701;A01YB;Duck liver
+07;0701;A01YC;Goose liver
+07;0701;A01YD;Ratites liver
+07;0701;A01YJ;Bovine kidney
+07;0701;A01YM;Pig kidney
+07;0701;A01YN;Sheep kidney
+07;0701;A01YP;Goat kidney
+07;0701;A01YQ;Equine kidney
+07;0701;A01YT;Rabbit kidney
+07;0701;A01YY;Deer kidney
+07;0701;A01YZ;Wild boar kidney
+07;0701;A01ZC;Chicken kidney
+07;0701;A01ZD;Turkey kidney
+07;0701;A01ZE;Duck kidney
+07;0701;A01ZF;Goose kidney
+07;0701;A01ZG;Ratites kidney
+07;0701;A01ZM;Bovine edible offals (other than liver and kidney)
+07;0701;A01ZP;Pig edible offals (other than liver and kidney)
+07;0701;A01ZQ;Sheep edible offals (other than liver and kidney)
+07;0701;A01ZR;Goat edible offals (other than liver and kidney)
+07;0701;A01ZS;Equine edible offals (other than liver and kidney)
+07;0701;A01ZX;Rabbit, other organs (edible offals non-muscle)
+07;0701;A020B;Deer, other organs (edible offals non-muscle)
+07;0701;A020C;Wild boar, other organs (edible offals non-muscle)
+07;0701;A01ZZ;Camel, other organs (edible offals non-muscle)
+07;0701;A020F;Chicken, other organs (edible offals non-muscle)
+07;0701;A020G;Turkey, other organs (edible offals non-muscle)
+07;0701;A020H;Duck, other organs (edible offals non-muscle)
+07;0701;A020J;Goose, other organs (edible offals non-muscle)
+07;0701;A020K;Ratites other organs (edible offals non-muscle)
+07;0701;A0F1T;Animal blood
+07;0701;A026M;Liver based spreadable-textured specialities
+07;0702;;Mammals, reptiles and amphibians (excluding offal): fresh and processed (excluding dried)
+07;0702;A04BL;Asses-mules-hinnies carcase
+07;0702;A049Q;Bovine carcase
+07;0702;A01QV;Bovine muscle
+07;0702;A01TQ;Mixed beef and mutton/lamb fresh meat
+07;0702;A01TN;Bovine and pig fresh meat
+07;0702;A01TX;Bovine fat tissue
+07;0702;A020R;Bovine other slaughtering products
+07;0702;A01XB;Bovine and pig, fresh fat tissue
+07;0702;A04AA;Pig carcase
+07;0702;A04CN;Wild boar carcase
+07;0702;A01RG;Pig muscle
+07;0702;A01TP;Mixed pork and mutton/lamb fresh meat
+07;0702;A01SH;Wild boar fresh meat
+07;0702;A01VA;Pig fat tissue
+07;0702;A021A;Pig other slaughtering products
+07;0702;A021X;Wild boar, other slaughtering products
+07;0702;A01RM;Equine muscle
+07;0702;A01SA;Deer fresh meat
+07;0702;A04CE;Deer carcase
+07;0702;A04BC;Horse carcase
+07;0702;A04AS;Goat carcase
+07;0702;A04BV;Rabbit carcase
+07;0702;A04AJ;Sheep carcase
+07;0702;A01RH;Sheep muscle
+07;0702;A01RL;Goat muscle
+07;0702;A01RQ;Rabbit fresh meat
+07;0702;A01RT;Camel fresh meat
+07;0702;A01RS;Kangaroo fresh meat
+07;0702;A01RY;Llama or lama fresh meat
+07;0702;A01SJ;Hare fresh meat
+07;0702;A01SL;Moufflon fresh meat
+07;0702;A01SM;Chamois fresh meat
+07;0702;A0F6A;Dog meat
+07;0702;A0F6B;Rat meat
+07;0702;A02KN;Marine mammals meat
+07;0702;A01XA;Mixed fresh fat tissue
+07;0702;A01VB;Sheep fat tissue
+07;0702;A01VC;Goat fat tissue
+07;0702;A01VD;Equine fat tissue
+07;0702;A01VG;Rabbit, fresh fat tissue
+07;0702;A01VL;Deer, fresh fat tissue
+07;0702;A01VM;Wild boar, fresh fat tissue
+07;0702;A01VJ;Camel fat tissue
+07;0702;A01VN;Hare fresh fat tissue
+07;0702;A0F3H;Mammals msm
+07;0702;A021H;Sheep other slaughtering products
+07;0702;A021J;Goat other slaughtering products
+07;0702;A021L;Horse, other slaughtering products
+07;0702;A021Q;Asses-mules-hinnies, other slaughtering products
+07;0702;A021R;Rabbit, other slaughtering products
+07;0702;A021V;Deer, other slaughtering products
+07;0702;A023H;Cooked cured or seasoned pork meat
+07;0702;A023P;Cooked cured or seasoned bovine meat
+07;0702;A023Z;Cooked cured or seasoned ovine meat
+07;0702;A022S;Cured seasoned pork meat
+07;0702;A023B;Cured seasoned bovine meat
+07;0702;A023A;Cured pork fat
+07;0702;A02LK;Snails
+07;0702;A02LJ;Crocodiles
+07;0702;A02KR;Frogs (legs)
+07;0702;A0CVC;Other frog legs from frogs not belonging to the genus Rana
+07;0702;A02LC;Snakes
+07;0702;A02LD;Turtles
+07;0702;A02LB;Lizards
+07;0703;;Birds (excluding offal): fresh and processed (excluding dried)
+07;0703;A04DQ;Chicken carcase
+07;0703;A04EJ;Duck carcase
+07;0703;A04ES;Goose carcase
+07;0703;A04FC;Ratites carcase
+07;0703;A04EA;Turkey carcase
+07;0703;A01TR;Undefined mixed poultry fresh meat
+07;0703;A01SP;Chicken fresh meat
+07;0703;A01SQ;Turkey fresh meat
+07;0703;A01SR;Duck fresh meat
+07;0703;A01SS;Goose fresh meat
+07;0703;A01ST;Ratites fresh meat
+07;0703;A01SX;Guinea-fowl fresh meat
+07;0703;A01SY;Partridge fresh meat
+07;0703;A01SZ;Pheasant fresh meat
+07;0703;A01TA;Pigeon fresh meat
+07;0703;A01TB;Quail fresh meat
+07;0703;A01TF;Wild goose fresh meat
+07;0703;A01TG;Mallard fresh meat
+07;0703;A01TH;Snipe fresh meat
+07;0703;A01TJ;Grouse fresh meat
+07;0703;A01TK;Ptarmigan fresh meat
+07;0703;A01VR;Chicken, fresh fat tissue
+07;0703;A01VS;Turkey, fresh fat tissue
+07;0703;A01VT;Duck, fresh fat tissue
+07;0703;A01VV;Goose, fresh fat tissue
+07;0703;A01VX;Ratites fresh fat tissue
+07;0703;A04DK;Generic poultry msm
+07;0703;A022A;Poultry skin
+07;0703;A022B;Chicken, other slaughtering products
+07;0703;A022D;Turkey, other slaughtering products
+07;0703;A022E;Duck, other slaughtering products
+07;0703;A022F;Goose, other slaughtering products
+07;0703;A023S;Cooked cured or seasoned poultry meat
+07;0703;A023E;Cured seasoned poultry meat
+07;0703;A022Q;Turkey meat, dried
+07;0704;;Meat - unspecified: processed (excluding dried)
+07;0704;A16EL;Ciccioli and similar
+07;0704;A024G;Fresh raw sausages
+07;0704;A024Q;Cured unripened raw sausages
+07;0704;A024V;Cured ripened raw sausages
+07;0704;A025K;Spreadable cooked sausages
+07;0704;A025N;Sliceable or firm cooked sausages
+07;0704;A026A;Pre-cooked sausages to be cooked before consumption
+07;0704;A026K;Meat based spreadable-textured specialities
+07;0704;A0F1J;Edible casings
+07;0704;A0EYQ;Marinated meat
+07;0704;A0F5E;Gelatin
+07;0704;A024B;Canned-tinned meat
+07;0705;;Meat - all types: dried
+07;0705;A022M;Bovine meat, dried
+07;0705;A022N;Horse meat, dried
+07;0705;A022P;Pig meat, dried
+07;0705;A0F6L;Goat meat, dried
+08;;;Insects and grubs
+08;0801;;Insects and grubs
+08;0801;A02LQ;Insects
+08;0801;A0CVA;Earthworms (including species only consumed outside EU)
+09;;;Vegetables
+09;0901;;Leafy vegetables: fresh
+09;0901;A0DLC;Lamb's lettuces and similar-
+09;0901;A0DLB;Lettuces and similar-
+09;0901;A00LD;Escaroles and similar-
+09;0901;A0DKQ;Land cresses and similar-
+09;0901;A00LM;Roman rocket and similar-
+09;0901;A0DKP;Red mustard leaves and similar-
+09;0901;A00MA;Baby leaf crops (including brassica species) and similar-
+09;0901;A00NF;Other lettuces and salad plants
+09;0901;A00MH;Spinaches and similar-
+09;0901;A00MN;Purslanes and similar-
+09;0901;A0DJT;Chards and similar-
+09;0901;A00MY;Other spinaches and similar leaves
+09;0901;A0DJQ;Grape leaves and similar species
+09;0901;A00NC;Watercresses and similar-
+09;0901;A0DJL;Witloofs and similar-
+09;0901;A0DLG;Brussels sprouts and similar-
+09;0901;A00FX;Head cabbages and similar-
+09;0901;A00GD;Other head brassica (p)
+09;0901;A00GF;Chinese cabbages and similar-
+09;0901;A00GL;Kales and similar-
+09;0901;A00GS;Other leafy brassica (c)
+09;0901;A0F6Y;Fern group
+09;0901;A00VK;Brown algae
+09;0901;A00VE;Red algae
+09;0901;A00VB;Green algae
+09;0901;A04LX;Micro-phyte
+09;0901;A0DCP;Other algae
+09;0901;A0DCN;Other procaryotes organisms
+09;0903;;Vegetables (excluding leafy vegetables): fresh
+09;0903;A00LK;Cresses
+09;0903;A00SH;Alfalfa sprouts
+09;0903;A0DKX;Chinese chives sprouts
+09;0903;A0DKV;Broccoli sprouts
+09;0903;A0DKT;Daikon sprouts
+09;0903;A0DKS;Ginger shoots
+09;0903;A0DKR;Roman rocket sprouts
+09;0903;A00SZ;Sunflower shoots and sprouts
+09;0903;A00TA;Wheatgrass
+09;0903;A00SJ;Barley sprouts
+09;0903;A00SQ;Millet sprouts
+09;0903;A00SS;Mustard sprouts
+09;0903;A00SV;Radish sprouts
+09;0903;A00SX;Rice sprouts
+09;0903;A00FM;Broccoli and similar-
+09;0903;A0DLL;Cauliflowers and similar-
+09;0903;A00FS;Other flowering brassica (p)
+09;0903;A00GY;Garlic and similar-
+09;0903;A00HB;Onions and similar-
+09;0903;A0DNB;Shallots and similar-
+09;0903;A00HG;Spring onions and similar-
+09;0903;A00HK;Other Bulb vegetables
+09;0903;A0DEV;Asparagus and similar-
+09;0903;A0DES;Cardoons and similar-
+09;0903;A0DEQ;Celeries and similar-
+09;0903;A0DEP;Florence fennels and similar-
+09;0903;A0DEN;Globe artichokes and similar-
+09;0903;A0DEH;Leeks and similar-
+09;0903;A0DEG;Rhubarbs and similar-
+09;0903;A0DEF;Bamboo shoots and similar-
+09;0903;A0DEC;Palm hearts and similar-
+09;0903;A00SE;Other Stem vegetables
+09;0903;A04RA;Kohlrabies and similar-
+09;0903;A0ESZ;Flowers used as vegetables
+09;0903;A00PC;Beans (with pods) and similar-
+09;0903;A00PX;Peas (with pods) and similar-
+09;0903;A0DFB;Lentils and similar-
+09;0903;A00HQ;Tomatoes and similar-
+09;0903;A00HZ;Sweet peppers and similar-
+09;0903;A00JC;Aubergines and similar-
+09;0903;A0DMC;Okra and similar-
+09;0903;A00JJ;Other solanacea
+09;0903;A0DMB;Cucumbers and similar-
+09;0903;A00JN;Gherkins and similar-
+09;0903;A00JQ;Courgettes and similar-
+09;0903;A00JV;Other cucurbits with edible peel
+09;0903;A00KE;Melons and similar-
+09;0903;A0DLV;Pumpkins and similar-
+09;0903;A0DLQ;Watermelons and similar-
+09;0903;A00KK;Other cucurbits with inedible peel
+09;0903;A0DLP;Sweet corn and similar-
+09;0903;A00KQ;Other fruiting vegetables
+09;0903;A0DPC;Beetroots and similar-
+09;0903;A0DPB;Carrots and similar-
+09;0903;A0DNY;Celeriacs and similar-
+09;0903;A04JZ;Horseradishes and similar-
+09;0903;A0DNV;Jerusalem artichokes and similar-
+09;0903;A0DNS;Parsnips and similar-
+09;0903;A0DNR;Parsley roots and similar-
+09;0903;A00QT;Radishes and similar-
+09;0903;A04KA;Salsifies and similar-
+09;0903;A0DNH;Swedes and similar-
+09;0903;A0DNG;Turnips and similar-
+09;0903;A00RF;Additional not listed root and tuber vegetables (excluding starchy- and sugar-)
+09;0903;A011Z;Beans (fresh seeds without pods) and similar-
+09;0903;A012G;Peas (without pods) and similar-
+09;0903;A04HC;Other Legume vegetables
+09;0903;A00TP;Cultivated fungi and similar-
+09;0903;A00TD;Wild fungi and similar-
+09;0903;A0DCT;Icelandic mosses
+09;0903;A0DCS;Other mosses and lichens
+09;0904;;Vegetables - all types: dried
+09;0904;A00TY;Dried mushrooms
+09;0904;A00ZG;Sun-dried tomatoes
+09;0905;;Vegetables - all types: processed (excluding dried)
+09;0905;A00ZP;Sweet corn canned
+09;0905;A00TZ;Canned mushrooms
+09;0905;A0ESL;French beans canned
+09;0905;A00ZB;Preserved tomatoes not concentrated
+09;0905;A00ZE;Preserved concentrated tomatoes
+09;0905;A0ETT;Fermented vegetables
+09;0905;A00ZJ;Pickled/marinated vegetables
+09;0905;A0F3F;Vegetable puree or paste
+09;0905;A0ETR;Salted vegetables
+09;0905;A03TR;Imitation cream
+09;0905;A03TS;Non dairy coffee creamer
+09;0905;A03TY;Imitation cheese
+09;0905;A03TZ;Imitation yoghurt, non soy
+09;0905;A03TG;Textured fungal proteins
+10;;;Fruits
+10;1002;;Fruits: fresh
+10;1002;A01CX;Grapefruits and similar-
+10;1002;A01CP;Oranges and similar-
+10;1002;A01BX;Lemons and similar-
+10;1002;A0DYX;Limes and similar-
+10;1002;A01CB;Mandarins and similar-
+10;1002;A01DF;Other Citrus fruits
+10;1002;A01DH;Apples and similar-
+10;1002;A01DN;Pears and similar-
+10;1002;A0DXC;Quinces and similar-
+10;1002;A0DVZ;Medlars and similar-
+10;1002;A0DVY;Loquats and similar-
+10;1002;A01DS;Other Pome fruits
+10;1002;A0DVX;Apricots and similar-
+10;1002;A01GG;Cherries and similar-
+10;1002;A01GL;Peaches and similar-
+10;1002;A01GP;Plums and similar-
+10;1002;A01HB;Other Stone fruits
+10;1002;A0DVE;Table grapes and similar-
+10;1002;A0DVC;Wine grapes and similar-
+10;1002;A01DZ;Strawberries and similar-
+10;1002;A0DTY;Blackberries and similar-
+10;1002;A01EF;Dewberries and similar-
+10;1002;A01EN;Raspberries and similar-
+10;1002;A01ES;Other cane fruits
+10;1002;A04JJ;Blueberries and similar-
+10;1002;A04JK;Cranberries and similar-
+10;1002;A0DSV;Currants and similar-
+10;1002;A01FQ;Gooseberries and similar-
+10;1002;A01FR;Rose hips and similar-
+10;1002;A04JL;Mulberries (black and white) and similar-
+10;1002;A0CFC;Azaroles and similar-
+10;1002;A04JM;Elderberries and similar-
+10;1002;A01GB;Other not listed other small fruits and berries
+10;1002;A0DSB;Dates and similar-
+10;1002;A0DRY;Figs and similar-
+10;1002;A01HH;Table olives and similar-
+10;1002;A01HJ;Kumquats and similar-
+10;1002;A01HL;Carambolas and similar-
+10;1002;A01HP;Kaki and similar-
+10;1002;A04JN;Jambuls and similar-
+10;1002;A01JA;Other Miscellaneous fruits with edible peel
+10;1002;A0DRG;Kiwi fruits and similar-
+10;1002;A04JP;Litchis and similar-
+10;1002;A0DRB;Passionfruits and similar-
+10;1002;A0DQT;Prickly pears and similar-
+10;1002;A0DQQ;Star apples and similar-
+10;1002;A04JQ;American persimmons and similar-
+10;1002;A01KG;Other Miscellaneous fruits with inedible peel, small
+10;1002;A0DQP;Avocados and similar-
+10;1002;A01LC;Cavendishes
+10;1002;A01LD;Dwarf bananas
+10;1002;A0DQF;Mangoes and similar-
+10;1002;A0DQE;Papayas and similar-
+10;1002;A0DQC;Granate apples and similar-
+10;1002;A04JT;Cherimoyas and similar-
+10;1002;A01LN;Guavas and similar-
+10;1002;A0DPV;Pineapples and similar-
+10;1002;A04JV;Breadfruits and similar-
+10;1002;A0DPR;Durians and similar-
+10;1002;A0DPQ;Soursops and similar-
+10;1002;A01LV;Other Miscellaneous fruits with inedible peel, large
+10;1002;A01QE;Citrus fruit peel
+10;1004;;Fruits: processed (excluding dried)
+10;1004;A01NN;Canned or jarred fruit
+10;1004;A01BR;Olives, processed
+10;1004;A01QM;Fruit in vinegar or brine
+10;1003;;Fruits: dried
+10;1003;A01QF;Mixed dried fruits
+10;1003;A01QH;Fruit chips
+10;1003;A01MB;Dried prunes
+10;1003;A01MC;Dried apples
+10;1003;A01MD;Dried apricots
+10;1003;A01ME;Dried vine fruits (raisins etc.)
+10;1003;A01MF;Dried dates
+10;1003;A01MG;Dried figs
+10;1003;A01MH;Dried pears
+10;1003;A01MJ;Dried bananas
+10;1003;A01MK;Dried mangoes
+11;;;Fats and oils
+11;1101;;Vegetable fat and oil (excluding red palm oil)
+11;1101;A036P;Olive oils
+11;1101;A036V;Rape seed oil, edible
+11;1101;A036X;Soya bean oil, refined
+11;1101;A036Y;Maize oil, edible
+11;1101;A036Z;Cotton seed oil, edible
+11;1101;A037A;Peanut oil, edible
+11;1101;A037B;Safflower seed oil, edible
+11;1101;A037C;Sesame seed oil, edible
+11;1101;A037D;Sunflower seed oil, edible
+11;1101;A037E;Almond oil
+11;1101;A037F;Grape seed oil
+11;1101;A037G;Linseed oil
+11;1101;A037H;Pumpkinseed oil
+11;1101;A037K;Walnut oil
+11;1101;A037M;Coconut oil/fat
+11;1101;A037N;Palm oil/fat
+11;1101;A037P;Palm kernel oil, edible
+11;1101;A037Q;Wheat germ oil
+11;1101;A037R;Cocoa butter
+11;1101;A0F5Z;Shea butter
+11;1101;A0F1G;Margarines and similar
+11;1103;;Animal fat and oil
+11;1103;A037V;Pork lard
+11;1103;A037X;Beef tallow (including processed suet)
+11;1103;A037Z;Buffalo tallow
+11;1103;A038A;Camel tallow
+11;1103;A038B;Sheep tallow
+11;1103;A038C;Goat tallow
+11;1103;A038D;Horse tallow
+11;1103;A038F;Chicken fat, processed
+11;1103;A038G;Duck fat, processed
+11;1103;A038H;Goose fat, processed
+11;1103;A038J;Turkey fat, processed
+11;1103;A038L;Processed fat (blubber) of marine mammals
+11;1103;A038M;Fish oil
+11;1103;A04PL;Other fish oil
+11;1103;A038V;Cow milk fat (not emulsified)
+11;1103;A04PK;Milk fat from other animals
+11;1103;A039C;Butter
+11;1103;A04SD;Blended fat and oils
+12;;;Sweets and sugars
+12;1201;;Sweets and sugars
+12;1201;A008L;Yeast leavened sweet doughs
+12;1201;A008T;Unleavened doughs
+12;1201;A008X;Short pastry doughs (pate brisee)
+12;1201;A009B;Short sweet pastry doughs (pate sucree, sablee)
+12;1201;A009G;Choux pastry doughs
+12;1201;A009J;Cake pre-mixes/batter
+12;1201;A009L;Laminated doughs
+12;1201;A009Q;Gingerbread dough
+12;1201;A009R;Quark oil dough
+12;1201;A009S;Suet pastry (pâte a grasse de boeuf) dough
+12;1201;A0CSM;Cake pre-mixes (dry)
+12;1201;A0CSN;Pancake pre-mixes (dry)
+12;1201;A005Y;Crackers and breadsticks
+12;1201;A009X;Biscuits, sweet, plain
+12;1201;A00AE;Biscuit with inclusions, filling or coating
+12;1201;A00AG;Choux pastry
+12;1201;A00AN;Cakes
+12;1201;A00BL;Buns
+12;1201;A00BM;Croissant
+12;1201;A00BR;Doughnuts-berliner
+12;1201;A00BS;Kringles
+12;1201;A16FY;Fried dough sweet
+12;1201;A16FV;Flat bread-based pastry
+12;1201;A00BT;Brioche type products
+12;1201;A00BX;Flan tart
+12;1201;A00BZ;Fruit pie-tarts
+12;1201;A00CB;Marzipan pie
+12;1201;A00CD;Croissant from puff pastry
+12;1201;A00CF;Apple strudel
+12;1201;A00CG;Cream-cheese strudel
+12;1201;A00CH;Baklava
+12;1201;A00CK;Dumpling, sweet
+12;1201;A00CL;Pancakes
+12;1201;A00CM;Scones and similar
+12;1201;A00CN;Macaroons
+12;1201;A00CP;Meringue
+12;1201;A00CQ;Waffles
+12;1201;A16EQ;Puddings based on cereal products or bread
+12;1201;A00CR;Spice cakes
+12;1201;A01PS;Candied fruits
+12;1201;A01QQ;Chocolate coated dried fruit
+12;1201;A0F0L;Candied or sugar preserved nuts
+12;1201;A034G;Bitter chocolate
+12;1201;A034J;Milk chocolate
+12;1201;A034M;Couverture chocolate
+12;1201;A034P;White chocolate
+12;1201;A034N;Gianduja chocolate
+12;1201;A0C6P;Chocolate spread
+12;1201;A034Q;Filled chocolate
+12;1201;A034R;Chocolate coated confectionery
+12;1201;A034S;Pralines
+12;1201;A034T;Chocolate substitutes
+12;1201;A035H;Foamed sugar products (marshmallows)
+12;1201;A035J;Liquorice candies
+12;1201;A035K;Gum drops
+12;1201;A035L;Jelly candies
+12;1201;A035M;Chewing gum
+12;1201;A034X;Hard candies
+12;1201;A034Y;Marzipan
+12;1201;A035C;Fudge
+12;1201;A035E;Nuts-seeds based halva
+12;1201;A035G;Sugar cotton
+12;1201;A035B;Toffee
+12;1201;A035D;Nougat
+12;1201;A034Z;Caramel, hard
+12;1201;A0FDG;Loukoumi
+12;1201;A0FDH;Quince cheese
+12;1201;A035N;Basic sweet masses
+12;1201;A046G;Fruit sauce
+12;1201;A046H;Chocolate sauce
+12;1201;A046J;Fudge sauce
+12;1201;A046K;Alcoholic sweet sauce
+12;1201;A01MM;Jam of fruit / vegetables
+12;1201;A01NJ;Marmalade
+12;1201;A16FC;Fruit jelly
+12;1201;A01QP;Fruit preparations for fillings and/or flavouring
+12;1201;A16GL;Fruit dessert thickened
+12;1201;A01PD;Compote of fruit / vegetables
+12;1201;A01QJ;Fruit or fruit-vegetable puree
+12;1201;A0ETS;Candied or sugar-preserved vegetables
+12;1201;A0CXP;Sugar canes and similar-
+12;1201;A04HB;Other sugar plants
+12;1201;A0CXQ;Sugar beet roots and similar-
+12;1201;A0CXM;Chicory roots and similar-
+12;1201;A032H;Sucrose (common sugar)
+12;1201;A02PQ;Lactose
+12;1201;A032X;Galactose
+12;1201;A032Y;Maltose
+12;1201;A032V;Glucose
+12;1201;A032T;Fructose
+12;1201;A033S;Molasses
+12;1201;A033Z;Syrups
+12;1201;A032Z;Polyols
+12;1201;A0BSL;Maltodextrin
+12;1201;A0BSK;Dextrin
+12;1201;A0BSM;Polydextrose
+12;1201;A0EZE;Inulin and other polyfructoses
+12;1201;A033J;Honey
+13;;;Spices and condiments
+13;1301;;Spices and condiments
+13;1301;A0DJJ;Chervil and similar-
+13;1301;A00XC;Chives and similar-
+13;1301;A04KB;Celery leaves and similar-
+13;1301;A0DHZ;Parsley and similar-
+13;1301;A0DHX;Sage and similar-
+13;1301;A0DHQ;Rosemary and similar-
+13;1301;A04KD;Thyme and similar-
+13;1301;A0ESV;Basils and mints
+13;1301;A0DGE;Laurel and similar-
+13;1301;A04KF;Tarragon and similar-
+13;1301;A00VS;Aniseed myrtle
+13;1301;A00XK;Evening primrose leaves
+13;1301;A00YJ;Sassafras leaves
+13;1301;A00YS;White ginger
+13;1301;A00YV;Wintergreen leaves
+13;1301;A00XT;Marigold flowers
+13;1301;A0DGH;Pot marigold (edible flowers)
+13;1301;A00YD;Nasturtium flowers and leaves
+13;1301;A00YZ;Hops
+13;1301;A0CXS;Saffron and similar-
+13;1301;A01AS;Other Flower pistil spices
+13;1301;A016V;Angelica, dry
+13;1301;A016X;Balm leaves, dry
+13;1301;A016Y;Basil, dry
+13;1301;A016Z;Bay leaves, dry
+13;1301;A017A;Borage, dry
+13;1301;A017B;Celery leaves, dry
+13;1301;A017C;Fennel, dry
+13;1301;A017D;Hyssop, dry
+13;1301;A017E;Lavender, dry
+13;1301;A017F;Lovage, dry
+13;1301;A017G;Marjoram, dry
+13;1301;A017H;Mints, dry
+13;1301;A017J;Rosemary, dry
+13;1301;A017K;Rue, dry
+13;1301;A017L;Sage, dry
+13;1301;A017M;Savory, dry
+13;1301;A017N;Sweet cicely, dry
+13;1301;A017P;Tansy and related species, dry
+13;1301;A017Q;Thyme, dry
+13;1301;A017R;Wintergreen leaves, dry
+13;1301;A017S;Woodruff, dry
+13;1301;A017T;Wormwoods, dry
+13;1301;A0CYA;Cloves buds and similar-
+13;1301;A0CHA;Capers buds and similar-
+13;1301;A01AN;Other Bud spices
+13;1301;A0CZF;Anise seed and similar-
+13;1301;A0CZE;Black caraway seed and similar-
+13;1301;A04KN;Celery seed and similar-
+13;1301;A0CGQ;Coriander seeds and similar-
+13;1301;A0CZA;Cumin seed and similar-
+13;1301;A0CYZ;Dill seed  and similar-
+13;1301;A0CYY;Fennel seed  and similar-
+13;1301;A0CYT;Fenugreek seed and similar-
+13;1301;A0CYS;Nutmeg seed and similar-
+13;1301;A0F7E;Radhuni seed
+13;1301;A0CXR;Mace aril and similar-
+13;1301;A01AX;Other Aril spices
+13;1301;A019T;Cinnamon bark and similar-
+13;1301;A019Y;Other Bark spices
+13;1301;A0CYP;Allspice fruit and similar-
+13;1301;A0CGR;Sichuan pepper fruit and similar-
+13;1301;A0CGS;Caraway fruit and similar-
+13;1301;A0CGT;Cardamom fruit and similar-
+13;1301;A0CYL;Juniper berry and similar-
+13;1301;A018Y;Peppercorn (black, green and white) and similar-
+13;1301;A0CGV;Vanilla and similar-
+13;1301;A0CYJ;Tamarind and similar-
+13;1301;A019K;Chili pepper, dried
+13;1301;A0CYE;Liquorice roots and similar-
+13;1301;A0CGX;Ginger roots and similar-
+13;1301;A0CGZ;Turmeric roots and similar-
+13;1301;A0CGY;Horseradish roots spice and similar-
+13;1301;A01AD;Other Root and rhizome spices
+13;1301;A042P;Salt
+13;1301;A044R;Soy sauce
+13;1301;A042Y;Seasoning mixes
+13;1301;A043Q;Gravy ingredients
+13;1301;A043F;Stock cubes or granulate (bouillon base)
+13;1301;A0BN3;Hydrolysed animal proteins
+13;1301;A0C0T;Hydrolysed vegetable proteins
+13;1301;A043L;Vegetable savoury extracts
+13;1301;A043M;Meat extract
+13;1301;A043N;Malt extract
+13;1301;A16GK;Savoury sauce dry preparation
+13;1301;A043P;Yeast extract
+13;1301;A044L;Vinegar
+13;1301;A045K;Salad dressing
+13;1301;A044X;Mayonnaise sauce
+13;1301;A045F;Hollandaise type sauce
+13;1301;A045N;Tartar sauce
+13;1301;A044C;Tomato-containing cooking sauces
+13;1301;A043X;Bechamel sauce
+13;1301;A043Y;Cheese sauce
+13;1301;A044A;Cream sauce
+13;1301;A044B;Butter sauce
+13;1301;A043Z;Continental european brown cooked sauce, gravy
+13;1301;A044G;Mustard and related sauces
+13;1301;A045B;Barbecue or steak sauces
+13;1301;A044S;Oyster sauce
+13;1301;A044T;Teriyaki sauce
+13;1301;A0B9H;Fish sauce
+13;1301;A16EY;Sweet and sour sauce
+13;1301;A045C;British islands brown sauce
+13;1301;A044P;Tomato ketchup and related sauces
+13;1301;A044Q;Tabasco sauce
+13;1301;A045A;Aioli or garlic sauce
+13;1301;A045D;Curry sauce
+13;1301;A044V;Pesto
+13;1301;A045G;Horseradish sauce
+13;1301;A045H;Mint sauce
+13;1301;A045E;Herbs,vegetables and oil sauces
+13;1301;A045M;Salsa
+13;1301;A0FDF;Tzatziki
+13;1301;A16BR;Meat sauce
+13;1301;A16BS;Alcoholic sauce
+13;1301;A044E;Vegetables-based cooked sauce
+13;1301;A045Q;Chutneys
+13;1301;A045Y;Pickles
+14;;;Beverages
+14;1401;;Alcoholic drinks
+14;1401;A03MC;Lager beer
+14;1401;A03MH;Ale beer
+14;1401;A03ML;Stout beer
+14;1401;A03MM;Wheat beer
+14;1401;A16GG;Root beer
+14;1401;A03MP;Low-malt beers
+14;1401;A03MQ;Shandy
+14;1401;A03MR;Mixed beer drinks
+14;1401;A03MV;Wine, white
+14;1401;A03MX;Wine, red
+14;1401;A03MY;Wine, rosé
+14;1401;A03NA;Champagne-like wine
+14;1401;A03NB;Red or rosé sparkling wine
+14;1401;A03ND;Cider
+14;1401;A03NE;Perry
+14;1401;A03NP;Raisin wine
+14;1401;A03NQ;Ice wine
+14;1401;A03NR;Noble rot wine
+14;1401;A03NH;Vermouth
+14;1401;A03NJ;Sherry
+14;1401;A03NK;Madeira
+14;1401;A03NL;Port
+14;1401;A03NM;Marsala
+14;1401;A03NT;Fruit liqueur
+14;1401;A03NV;Herb liqueur
+14;1401;A03NX;Chocolate liqueur
+14;1401;A03NY;Coffee liqueur
+14;1401;A03NZ;Egg liqueur
+14;1401;A03PA;Cream liqueur
+14;1401;A03PB;Coconut cream liqueur
+14;1401;A03PC;Milk liqueur
+14;1401;A0CSC;Spirits not from fruit
+14;1401;A0CSA;Spirits from fruit
+14;1401;A03PK;Spirits made from stone fruits
+14;1401;A04QG;Unsweetened flavoured spirits
+14;1401;A03PN;Cocktail drink
+14;1401;A03PP;Alcopop and flavoured wine
+14;1401;A03PR;Mixtures of beer with other alcoholic drinks
+14;1401;A03PS;Punch
+14;1401;A03PT;Sangria
+14;1401;A0CJA;Fruit in alcohol or spirits
+14;1402;;Drinking water
+14;1402;A03DL;Tap water
+14;1402;A03DN;Filtered tap water
+14;1402;A03DP;Well water
+14;1402;A03DQ;Natural mineral water
+14;1402;A03DT;Bottled drinking water
+14;1402;A03DY;Flavoured bottled water
+14;1402;A03GC;Fortified bottled water
+14;1403;;Tea, herbal tea, coffee and cocoa
+14;1403;A03KA;Coffee beverages
+14;1403;A03KL;Coffee imitate beverages
+14;1403;A0C6A;Coffee RPC derivatives
+14;1403;A03GS;Coffee imitate ingredients
+14;1403;A0D9J;Coffee beans and similar-
+14;1403;A0F2E;Coffee beverage-preparation, powder
+14;1403;A03LB;Tea beverages
+14;1403;A03LH;Camomile infusion
+14;1403;A03LJ;Jasmine infusion
+14;1403;A03LK;Fruit infusion
+14;1403;A03LL;Roselle infusion
+14;1403;A16GQ;Peppermint infusion
+14;1403;A16GR;Fennel infusion
+14;1403;A03LM;Rose infusion
+14;1403;A03LN;Elderflowers infusion
+14;1403;A03LP;Lime blossoms infusion
+14;1403;A03LQ;Strawberry leaves infusion
+14;1403;A03LR;Maté infusion
+14;1403;A03LS;Lemon verbena infusion
+14;1403;A03LT;Rooibos infusion
+14;1403;A03LV;Gingko infusion
+14;1403;A03LX;Valerian root infusion
+14;1403;A03LY;Ginseng root infusion
+14;1403;A03JR;Other Herbal infusion materials from leaves and herbs
+14;1403;A04KM;Rooibos and similar-
+14;1403;A0D1Y;Mate and similar-
+14;1403;A0D7B;Strawberry infusion leaves and similar-
+14;1403;A0D9E;Chamomile and similar-
+14;1403;A0D9B;Hibiscus infusion flowers and similar-
+14;1403;A0D9A;Rose infusion flowers  and similar-
+14;1403;A04KL;Jasmine infusion flowers  and similar-
+14;1403;A0D7F;Lime infusion flowers and similar-
+14;1403;A03JJ;Other Herbal infusion materials from flowers
+14;1403;A0D1X;Valerian infusion roots and similar-
+14;1403;A0D0X;Ginseng  and similar-
+14;1403;A03JX;Other Herbal infusion materials from roots
+14;1403;A0CZJ;Carobs and similar-
+14;1403;A03JS;Herbal infusion materials from roots
+14;1403;A04KK;Teas leaves, dry and/or fermented, and similar
+14;1403;A03HX;Tea powder ingredients and extracts
+14;1403;A16GX;Herbal infusion extracts (RPC derivatives)
+14;1403;A0CZM;Cocoa beans and similar-
+14;1403;A03HH;Cocoa beverage-preparation, powder
+14;1403;A03KY;Cocoa beverages
+14;1403;A0C6B;Cocoa ingredients (RPC derivatives)
+14;1405;;Soft drinks
+14;1405;A03FQ;Cola-type drinks
+14;1405;A03EA;Soft drink, with fruit juice (fruit content below the minimum for nectars)
+14;1405;A03EX;Soft drink, flavoured, no fruit
+14;1405;A03GA;Energy drinks
+14;1405;A03GB;Isotonic and sport drinks
+14;1405;A03GE;Liquid drink bases (including concentrates and home-made preparations)
+14;1405;A03GF;Powdered drink bases
+14;1405;A03BC;Nectar, apricot
+14;1405;A03BD;Nectar, apple
+14;1405;A03BE;Nectar, banana
+14;1405;A03BF;Nectar, mango
+14;1405;A03BG;Nectar, orange
+14;1405;A03BH;Nectar, peach
+14;1405;A03BJ;Nectar, pear
+14;1405;A03BK;Nectar, pineapple
+14;1405;A03BL;Mixed fruit nectars
+14;1405;A03DH;Multivitamin juices
+14;1405;A03BP;Juice concentrate, apricots
+14;1405;A03BQ;Juice concentrate, blackberry
+14;1405;A03BR;Juice concentrate, blueberry
+14;1405;A03BS;Juice concentrate, black currant
+14;1405;A03BT;Juice concentrate, red currant
+14;1405;A03BV;Juice concentrate, cranberry
+14;1405;A03BX;Juice concentrate, gooseberry
+14;1405;A03BY;Juice concentrate, grape
+14;1405;A03BZ;Juice concentrate, mandarin
+14;1405;A03CA;Juice concentrate, orange
+14;1405;A03CB;Juice concentrate, peach
+14;1405;A03CC;Juice concentrate, plum
+14;1405;A03CD;Juice concentrate, raspberry
+14;1405;A03CE;Juice concentrate, strawberry
+14;1405;A16MQ;Juice concentrate, apple
+14;1405;A16MR;Juice concentrate, pineapple
+14;1405;A16MS;Juice concentrate, pomegranate
+14;1405;A03CF;Juice concentrate, sweet cherry
+14;1405;A03CZ;Vegetable juice concentrate
+14;1405;A0EVA;Liquid extract of plant origin
+14;1405;A03CG;Dehydrated/powdered fruit juice
+14;1405;A03DA;Dehydrated/powdered vegetable juice
+14;1405;A03DF;Fruit smoothies
+14;1406;;100% fruit and vegetable juices
+14;1406;A03AN;Mixed fruit juice
+14;1406;A039M;Juice, apple
+14;1406;A039N;Juice, apricot
+14;1406;A039P;Juice, black currant
+14;1406;A039S;Juice, blackberry
+14;1406;A03AG;Juice, citrus
+14;1406;A039T;Juice, cranberry
+14;1406;A039V;Juice, elderberry
+14;1406;A03AK;Juice, grape
+14;1406;A03AL;Juice, grapefruit
+14;1406;A039X;Juice, guava
+14;1406;A03AH;Juice, lemon
+14;1406;A03AJ;Juice, lime
+14;1406;A039Y;Juice, mango
+14;1406;A039Z;Juice, nectarine
+14;1406;A03AM;Juice, orange
+14;1406;A03AA;Juice, passion fruit
+14;1406;A03AB;Juice, peach
+14;1406;A03AC;Juice, pear
+14;1406;A03AF;Juice, pineapple
+14;1406;A03AD;Juice, pomegranate
+14;1406;A03AE;Juice, prune
+14;1406;A039R;Juice, red currant
+14;1406;A03CS;Mixed vegetable juice
+14;1406;A03CK;Juice, carrot
+14;1406;A03CL;Juice, celery
+14;1406;A03CQ;Juice, cucumber
+14;1406;A03CJ;Juice, tomato
+14;1406;A03CR;Juice, turnip
+14;1406;A03CN;Juice, white cabbage
+14;1406;A03CM;Juice, beetroot
+14;1406;A03CP;Juice, potato
+14;1406;A03DC;Juice, apple-carrot
+14;1406;A03DD;Juice, multi-fruit-carrot
+14;1406;A0ETZ;Powdered extract of plant origin
+14;1406;A03DG;Aloe vera juice
+14;1406;A0F4S;Coconut water
+15;;;Foods for particular nutritional uses
+15;1501;;Infant  formulas and ready-to-eat meals for infants and young children
+15;1501;A03PZ;Infant formulae, powder
+15;1501;A03QE;Infant formulae, liquid
+15;1501;A03QK;Follow-on formulae, powder
+15;1501;A03QQ;Follow-on formulae, liquid
+15;1501;A03RD;Ready-to-eat vegetable-based meal for children
+15;1501;A03RE;Ready-to-eat cereal-based meal for children
+15;1501;A03RF;Ready-to-eat meat-based meal for children
+15;1501;A03RG;Ready-to-eat fish-based meal for children
+15;1501;A03RH;Ready-to-eat dairy-based meal for children
+15;1501;A03RJ;Ready-to-eat fruit-based meal for children
+15;1501;A03RK;Ready-to-eat mixed meal for children
+15;1501;A03QZ;Cereals with an added high protein food which have to be reconstituted with water or other protein-free liquid
+15;1501;A0BZF;Cereals with an added high protein food reconstituted
+15;1501;A03QY;Simple cereals which have to be reconstituted with milk or other appropriate nutritious liquids
+15;1501;A0BZE;Simple cereals for infants or children, reconstituted
+15;1501;A03RA;Biscuits, rusks and cookies for children
+15;1501;A03RB;Pasta for children (dry, to be cooked)
+15;1501;A03RM;Teas and infusions specific for infants and young children
+15;1501;A16GS;Herbal infusions specific for infants and young children, dry
+15;1501;A03RN;Fruit and vegetable juices and nectars specific for infants and young children
+15;1501;A03RP;Special food for children's growth
+15;1501;;Foods for weight reduction
+15;1501;A03RT;Total daily diet replacement for weight reduction
+15;1501;A03RV;Single meal replacement for weight reduction
+15;1501;;Foods for sporting people
+15;1501;A03RY;Carbohydrate-rich energy food products for sports people
+15;1501;A03RZ;Carbohydrate-electrolyte solutions for sports people
+15;1501;A03SA;Protein and protein components for sports people
+15;1501;A03SB;Micronutrients supplement for sports people
+15;1501;A03SC;Carnitine or creatine-based supplement for sports people
+15;1501;;Foods for medical purposes
+15;1501;A03SE;Nutritionally complete formulae
+15;1501;A03SF;Nutritionally incomplete formulae
+15;1501;A03SG;Formulas for metabolic disorders
+15;1501;A03SH;Oral rehydration products
+16;;;Food supplements and similar
+16;1601;;Food supplements and similar
+16;1601;A03TC;Mixed supplements/formulations
+16;1601;A03SL;Vitamin only supplements
+16;1601;A03SM;Mineral only supplements
+16;1601;A03SN;Combination of vitamin and mineral only supplements
+16;1601;A03SQ;Bee-produced formulations
+16;1601;A03SR;Fiber supplements
+16;1601;A03SS;Herbal formulations and plant extracts
+16;1601;A03ST;Algae based formulations (e.g. Spirulina, chlorella)
+16;1601;A03SX;Formulations containing special fatty acids (e.g. Omega-3, essential fatty acids)
+16;1601;A03SY;Protein and amino acids supplements
+16;1601;A03SZ;Coenzyme q10 formulations
+16;1601;A03TA;Enzyme-based formulations
+16;1601;A03TB;Yeast based formulations
+16;1601;A0F3Y;Probiotic or prebiotic formulations
+16;1601;A03SV;Other common supplements
+17;;;Food additives
+17;1701;;Sweeteners and flavourings
+17;1701;A0F7T;Table-top sweeteners in liquid form
+17;1701;A0F7V;Table-top sweeteners in powder form
+17;1701;A0F7X;Table-top sweeteners in tablets
+17;1701;A047B;Flavourings
+17;1701;A047C;Essences and extracts
+17;1701;A046M;Artificial sweeteners (e.g., aspartam, saccharine)
+17;1702;;Colorants
+17;1702;A047P;Natural food colour
+17;1702;A047Q;Artificial food colour
+17;1703;;Other food additives
+17;1703;A047S;Preservative
+17;1703;A047T;Antioxidant
+17;1703;A047V;Emulsifier
+17;1703;A047X;Thickener
+17;1703;A047Y;Gelling agent
+17;1703;A047Z;Stabiliser
+17;1703;A048A;Flavour enhancer
+17;1703;A048B;Acid
+17;1703;A048C;Acidity regulator
+17;1703;A048D;Anti-caking agent
+17;1703;A048E;Modified starch
+17;1703;A048F;Anti-foaming agent
+17;1703;A048G;Glazing agent
+17;1703;A048H;Emulsifying salts
+17;1703;A048J;Flour treatment agent
+17;1703;A048K;Firming agent
+17;1703;A048L;Humectant
+17;1703;A048M;Bulking agent
+17;1703;A169T;Raising agents
+17;1703;A048N;Propellent gas
+17;1704;;Home-preparation aids
+17;1704;A048Q;Preparations for raising and flavouring home-made bakery
+17;1704;A048R;Preparations for gelling home-made food
+17;1704;A048S;Preparations for pickling vegetables
+17;1704;A16GC;Preparations for dessert
+17;1704;A0F3T;Preparations for food flavouring
+17;1704;A048T;Processing aids
+17;1705;;Ingredients for food fortification/enrichment and supplements
+17;1705;A0EXZ;Vitamin A(retinol, carotenoids)
+17;1705;A0EXY;Vitamin B1 (thiamine)
+17;1705;A0EXX;Vitamin B2 (Riboflavin)
+17;1705;A0EXV;Vitamin B3 (Niacin, niacinamide)
+17;1705;A0EXT;Vitamin B5 (Pantothenic acid)
+17;1705;A0EXS;Vitamin B6 (Pyridoxine, pyridoxamine, pyridoxal)
+17;1705;A0EXR;Vitamin B7 (Biotin)
+17;1705;A0EXQ;Vitamin B9 (Folic acid, folinic acid)
+17;1705;A0EXP;Vitamin B12 (Cyanocobalamin, hydroxycobalamin, methylcobalamin)
+17;1705;A0EXN;Vitamin C (Ascorbic acid)
+17;1705;A0EXM;Vitamin D (Cholecalciferol)
+17;1705;A0EXL;Vitamin E (Tocopherols, tocotrienols)
+17;1705;A0EXK;Vitamin K (phylloquinone, menaquinones)
+17;1705;A0EXJ;Potassium
+17;1705;A0EXH;Calcium
+17;1705;A0EXG;Phosphorus
+17;1705;A0EXF;Magnesium
+17;1705;A0EXE;Zinc
+17;1705;A0EXD;Iron
+17;1705;A0EXC;Manganese
+17;1705;A0EXB;Copper
+17;1705;A0EXA;Iodine
+17;1705;A0F3A;Fluorine
+17;1705;A0EVZ;Selenium
+17;1705;A0EVY;Molybdenum
+17;1705;A0EVX;Bromine
+17;1705;A0EVV;Omega-3 fatty acids
+17;1705;A0EVT;Omega-6 fatty acids
+17;1705;A0EVR;Dietary fibre
+17;1705;A0EVQ;Phytosterols
+17;1705;A0EVP;Polyphenols
+17;1705;A0EVN;Carotenoids
+17;1705;A0EVL;Algae based fortifying agents (e.g. Spirulina, chlorella)
+17;1705;A0EVK;Caffeine
+17;1705;A16GT;Taurine
+17;1705;A0F4M;Co-factors to metabolism
+17;1705;A0CVH;Pollen (residues of vegetal pollens)
+17;1705;A0CVG;Royal jelly
+17;1705;A0CVF;Other edible apiculture products
+17;1706;;Microbiological or enzymatic ingredients
+17;1706;A048Y;Starter cultures
+17;1706;A048Z;Yeast cultures
+17;1706;A16FP;Probiotic cultures
+17;1706;A049B;Mould or micro-fungal cultures
+17;1706;A048V;Enzymes for food manufacture
