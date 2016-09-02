@@ -47,10 +47,11 @@
       "column": {
         "dataType": "number",
         "id": "value",
+
         "title": {
           "EN": "Value"
         },
-        "subject": null
+        "subject":"value"
       },
       "value": 1
     }

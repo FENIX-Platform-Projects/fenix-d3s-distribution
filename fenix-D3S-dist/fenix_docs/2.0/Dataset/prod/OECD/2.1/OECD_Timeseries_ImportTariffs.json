@@ -55,6 +55,7 @@
       {
         "dataType": "year",
         "key": false,
+        "subject":"time",
         "id": "year",
         "title": {
           "EN": "Year"

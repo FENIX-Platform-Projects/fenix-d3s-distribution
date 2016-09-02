@@ -1,8 +1,24 @@
 [
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "OECD_Timeseries_ImportTariffs"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "year",
+        "hsTariff",
+        "commodityclass",
+        "policyelement",
+        "um"
 
+      ]
+    }
+  },
   {
     "name": "addcolumn",
-    "sid":[{"uid":"OECD_Timeseries_ImportTariffs"}],
     "parameters": {
       "column": {
         "dataType": "number",
@@ -10,7 +26,7 @@
         "title": {
           "EN": "Value"
         },
-        "subject": null
+        "subject":"value"
       },
       "value": 1
     }

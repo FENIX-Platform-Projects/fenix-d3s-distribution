@@ -268,7 +268,7 @@ public class PostgresDefaultStorage extends PostgresStorage {
 
     private int insertData(Connection connection, String tableName, Column[] structure, int[] columnsType, Iterator<Object[]> data, int size) throws Exception {
         //Build query
-        StringBuilder query = new StringBuilder("COPY ").append(getTableName(tableName)).append(" FROM STDIN WITH CSV DELIMITER ';' QUOTE '\"' ENCODING 'UTF8'");
+        StringBuilder query = new StringBuilder("COPY ").append(getTableName(tableName)).append(" FROM STDIN WITH (FORMAT CSV, DELIMITER ';', ESCAPE '\\',QUOTE '\"', ENCODING 'UTF8')");
 
         //Prepare store session
         CopyManager cpManager = ((PGConnection)connection).getCopyAPI();

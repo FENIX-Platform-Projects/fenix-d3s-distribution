@@ -120,6 +120,7 @@
       {
         "dataType": "date",
         "key": false,
+        "subject":"time",
         "id": "day",
         "title": {
           "EN": "Day"
