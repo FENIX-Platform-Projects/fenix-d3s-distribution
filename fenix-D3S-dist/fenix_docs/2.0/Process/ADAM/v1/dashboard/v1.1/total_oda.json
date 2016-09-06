@@ -373,11 +373,7 @@
             "usd_commitment"
           ]
         },
-        "dac_member":{
-          "enumeration":[
-            "t"
-          ]
-        },
+
         "parentsector_code":{
           "codes":[
             {
