@@ -1,4 +1,5 @@
 [
+
   {
     "name": "filter",
     "sid": [
@@ -45,8 +46,8 @@
     "name": "group",
     "parameters": {
       "by": [
-        "recipientcode",
-        "donorcode"
+        "donorcode",
+        "recipientcode"
       ],
       "aggregations": [
         {
@@ -62,9 +63,13 @@
           "rule": "first"
         }
       ]
-    },
-    "rid": {
-      "uid": "all_subsectors_sum"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 5,
+      "page": 1
     }
   },
   {
@@ -88,7 +93,7 @@
         },
         "subject": null
       },
-      "value": "TOTAL ODA"
+      "value": "TOTAL ODA top 5"
     },
     "rid": {
       "uid": "total_oda"
@@ -146,8 +151,8 @@
     "name": "group",
     "parameters": {
       "by": [
-        "recipientcode",
-        "donorcode"
+        "donorcode",
+        "recipientcode"
       ],
       "aggregations": [
         {
@@ -163,7 +168,18 @@
           "rule": "first"
         }
       ]
-    }},
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 5,
+      "page": 1
+    },
+    "rid": {
+      "uid": "top_5"
+    }
+  },
   {
     "name": "addcolumn",
     "parameters": {
@@ -185,12 +201,14 @@
         },
         "subject": null
       },
-      "value": "semi oda"
+      "value": "FAO SECTOR top 5"
     },
     "rid": {
-      "uid": "related_oda"
+      "uid": "sector_oda"
     }
   },
+
+
   {
     "name": "join",
     "sid": [
@@ -198,83 +216,141 @@
         "uid": "total_oda"
       },
       {
-        "uid": "related_oda"
+        "uid": "sector_oda"
       }
     ],
     "parameters": {
       "joins": [
         [
-
           {
             "type": "id",
             "value": "recipientcode"
-          },
-          {
-            "type": "id",
-            "value": "donorcode"
           }
         ],
         [
           {
             "type": "id",
             "value": "recipientcode"
-          },
-          {
-            "type": "id",
-            "value": "donorcode"
           }
-
         ]
       ],
       "values": [
       ]
     },
-    "rid":{"uid":"join_process"}
-  },
-  {
-    "name": "addcolumn",
-    "sid":[{"uid":"join_process"}],
-    "parameters": {
-      "column": {
-        "dataType": "number",
-        "id": "percentage_value",
-        "title": {
-          "EN": "FAO Sector (%)"
-        },
-        "subject": null
-      },
-      "value": {
-        "keys":  ["1 = 1"],
-        "values":[" ( related_oda_value / total_oda_value )*100"]
-
-      }
-    },
     "rid": {
-      "uid": "percentage_Value"
+      "uid": "join_process"
     }
   },
   {
     "name": "addcolumn",
-    "sid":[{"uid":"join_process"}],
+    "sid": [
+      {
+        "uid": "join_process"
+      }
+    ],
     "parameters": {
       "column": {
         "dataType": "number",
-        "id": "percentage_value",
+        "id": "value",
         "title": {
           "EN": "FAO Sector (%)"
         },
         "subject": null
       },
       "value": {
-        "keys":  ["1 = 1"],
-        "values":[" ( related_oda_value / total_oda_value )*100"]
-
+        "keys": [
+          "1 = 1"
+        ],
+        "values": [
+          " ( sector_oda_value / total_oda_value )*100"
+        ]
       }
-    },
-    "rid": {
-      "uid": "percentage_Value"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "id": "unitcode",
+        "title": {
+          "EN": "Measurement Unit"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "crs_units",
+              "version": "2016",
+              "level": 1
+            }
+          ]
+        },
+        "dataType": "code"
+      },
+      "value": "percentage"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "Percentage of FAO Sector on ODA"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "total_oda_donorcode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+      }
+    }
+  },
+
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "join_process"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "code",
+        "id" : "donorcode",
+        "title" : { "EN" : "Donor" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
+        "subject": null
+      },
+      "value": {
+        "keys": [
+          "1 = 1"
+        ],
+        "values": [
+          "total_oda_donorcode"
+        ]
+      }
     }
   }
-
 
 ]

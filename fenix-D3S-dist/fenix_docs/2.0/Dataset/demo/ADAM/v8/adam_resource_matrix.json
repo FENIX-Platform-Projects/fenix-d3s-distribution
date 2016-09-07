@@ -1,0 +1,76 @@
+{
+  "uid": "adam_resource_matrix_oda",
+  "title": {
+    "EN": "ADAM Resource Matrix"
+  },
+  "meContent": {
+    "description": {
+      "EN": "ADAM resource matrix"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "adam_agg",
+    "datasources": ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id": "oda",
+        "title": {
+          "EN": "Oda name"
+        },
+        "dataType": "text",
+        "key": true
+
+      },
+      {
+        "id" : "donorcode",
+        "title" : { "EN" : "Donor" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year" },
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "fao_sector",
+        "title" : { "EN" : "Fao_Sector" },
+        "dataType" : "text",
+        "key": true
+
+      },
+      {
+        "id": "value",
+        "subject": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "dataType": "number"
+      },
+      {
+        "id" : "unitcode",
+        "subject" : "um",
+        "title" : { "EN" : "Measurement unit" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
+        "dataType" : "code"
+      }
+
+
+    ]
+  }
+}
