@@ -139,4 +139,3 @@ titleColumnIndex_EN=3
 @VITB12@Vitamin B12
 @VITA@Vitamin A
 @BCAROT@Beta-carotene
-

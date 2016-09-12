@@ -3,13 +3,31 @@
     "name": "group",
     "parameters": {
       "by": [
-        "group_code",
-        "subgroup_code"
+        "subject",
+        "group_code"
       ],
       "aggregations": [
         {
           "columns": [ "value" ],
           "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "group_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "AVG"
         },
         {
           "columns": [ "um" ],

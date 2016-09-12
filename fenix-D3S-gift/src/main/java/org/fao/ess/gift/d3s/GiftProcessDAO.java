@@ -118,3 +118,95 @@ public class GiftProcessDAO extends WDSDatasetDao {
 // EAT_SEQ, FOOD_TYPE, RECIPE_CODE, RECIPE_DESCR, AMOUNT_RECIPE, INGREDIENT, GROUP_CODE, SUBGROUP_CODE, FOODEX2_CODE,
 // FACET_A, FACET_B, FACET_C, FACET_D, FACET_E, FACET_F, FACET_G, '<<indicator>>' AS ITEM, <<indicator>> AS VALUE, 'g' AS UM
 // from SUBJECT S join CONSUMPTION C on (S.SURVEY_CODE = C.SURVEY_CODE and S.SUBJECT = C.SUBJECT) WHERE S.SURVEY_CODE = ?
+/*
+select count(*) from
+(
+select subject, group_code, subgroup_code, item, avg(value) as value, um from
+(
+	select s.subject, survey_day, group_code, subgroup_code, 'FOOD_AMOUNT_UNPROC'::varchar as item, sum(FOOD_AMOUNT_UNPROC) as value, 'g'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'ENERGY'::varchar as item, sum(ENERGY) as value, 'kcal'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'PROTEIN'::varchar as item, sum(PROTEIN) as value, 'g'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'A_PROT'::varchar as item, sum(A_PROT) as value, 'g'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'V_PROT'::varchar as item, sum(V_PROT) as value, 'g'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'CARBOH'::varchar as item, sum(CARBOH) as value, 'g'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'FAT'::varchar as item, sum(FAT) as value, 'g'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'SAT_FAT'::varchar as item, sum(SAT_FAT) as value, 'g'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'CALC'::varchar as item, sum(CALC) as value, 'mg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'IRON'::varchar as item, sum(IRON) as value, 'mg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'ZINC'::varchar as item, sum(ZINC) as value, 'mg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'VITC'::varchar as item, sum(VITC) as value, 'mg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'THIA'::varchar as item, sum(THIA) as value, 'mg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'RIBO'::varchar as item, sum(RIBO) as value, 'mg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'NIAC'::varchar as item, sum(NIAC) as value, 'mg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'VITB6'::varchar as item, sum(VITB6) as value, 'mg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'FOLA'::varchar as item, sum(FOLA) as value, 'microgdfe'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'VITB12'::varchar as item, sum(VITB12) as value, 'microg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'VITA'::varchar as item, sum(VITA) as value, 'micrograe'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+	union all
+	select s.subject, survey_day, group_code, subgroup_code, 'BCAROT'::varchar as item, sum(BCAROT) as value, 'microg'::varchar as um
+	from subject s join consumption c on (s.survey_code = c.survey_code and s.subject = c.subject)
+	group by s.subject, survey_day, group_code, subgroup_code
+) data_by_day
+group by  subject, group_code, subgroup_code, item, um
+) data_avg
+ */
