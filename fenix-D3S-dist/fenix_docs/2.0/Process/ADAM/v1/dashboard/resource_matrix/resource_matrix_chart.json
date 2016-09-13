@@ -1,5 +1,4 @@
 [
-
   {
     "name": "union",
     "sid": [
@@ -7,10 +6,10 @@
         "uid": "total_oda"
       },
       {
-        "uid":"related_oda"
+        "uid": "related_oda"
       },
       {
-        "uid":"percentage_ODA"
+        "uid":"percentage_oda"
       }
 
     ],
@@ -25,7 +24,7 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_usd_aggregation_table"
+        "uid": "adam_resource_matrix_oda"
       }
     ],
     "parameters": {
@@ -37,79 +36,6 @@
         "unitcode"
       ],
       "rows": {
-        "recipientcode": {
-          "codes": [
-            {
-              "uid": "crs_recipients",
-              "version": "2016",
-              "codes": [
-                "998"
-              ]
-            }
-          ]
-        },
-        "purposecode": {
-          "codes":[
-            {
-              "uid": "crs_purposes",
-              "version": "2016",
-              "codes": [
-                "31165",
-                "14030",
-                "14031",
-                "15170",
-                "16062",
-                "23070",
-                "31110",
-                "31120",
-                "31130",
-                "31140",
-                "31150",
-                "31161",
-                "31162",
-                "31163",
-                "31164",
-                "31165",
-                "31166",
-                "31181",
-                "31182",
-                "31191",
-                "31192",
-                "31193",
-                "31194",
-                "31195",
-                "31210",
-                "31220",
-                "31261",
-                "31281",
-                "31282",
-                "31291",
-                "31310",
-                "31320",
-                "31381",
-                "31382",
-                "31391",
-                "32161",
-                "32162",
-                "32163",
-                "32165",
-                "32267",
-                "41010",
-                "41020",
-                "41030",
-                "41040",
-                "41050",
-                "41081",
-                "41082",
-                "43040",
-                "43050",
-                "52010",
-                "72040",
-                "74010"
-              ]
-            }]
-        },
-
         "donorcode": {
           "codes": [
             {
@@ -117,6 +43,17 @@
               "version": "2016",
               "codes": [
                 "302"
+              ]
+            }
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "130"
               ]
             }
           ]
@@ -156,7 +93,7 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "max"
         }
       ]
     },
@@ -196,7 +133,7 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_usd_aggregation_table"
+        "uid": "adam_resource_matrix_oda"
       }
     ],
     "parameters": {
@@ -219,6 +156,17 @@
             }
           ]
         },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "130"
+              ]
+            }
+          ]
+        },
         "year": {
           "time": [
             {
@@ -232,15 +180,9 @@
             "usd_commitment"
           ]
         },
-        "recipientcode": {
-          "codes": [
-            {
-              "uid": "crs_recipients",
-              "version": "2016",
-              "codes": [
-                "998"
-              ]
-            }
+        "fao_sector": {
+          "enumeration": [
+            "1"
           ]
         }
       }
@@ -265,11 +207,10 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "max"
         }
       ]
-    }
-  },
+    }},
   {
     "name": "addcolumn",
     "parameters": {
@@ -291,13 +232,12 @@
         },
         "subject": null
       },
-      "value": "FAO Sectors"
+      "value": "semi oda"
     },
     "rid": {
       "uid": "related_oda"
     }
   },
-
   {
     "name": "join",
     "sid": [
@@ -311,29 +251,12 @@
     "parameters": {
       "joins": [
         [
-
-          {
-            "type": "id",
-            "value": "recipientcode"
-          },
-          {
-            "type": "id",
-            "value": "donorcode"
-          },
           {
             "type": "id",
             "value": "year"
           }
         ],
         [
-          {
-            "type": "id",
-            "value": "recipientcode"
-          },
-          {
-            "type": "id",
-            "value": "donorcode"
-          },
           {
             "type": "id",
             "value": "year"
@@ -355,34 +278,15 @@
         "id": "value",
         "title": {
           "EN": "FAO Sector (%)"
-        }
+        },
+        "subject": null
       },
       "value": {
         "keys":  ["1 = 1"],
         "values":[" ( related_oda_value / total_oda_value )*100"]
 
       }
-    },
-    "rid": {
-      "uid": "percentage_Value"
     }
-  },
-
-  {
-    "name": "filter",
-    "parameters": {
-      "columns": [
-        "recipientcode",
-        "donorcode",
-        "year",
-        "value",
-        "unitcode",
-        "indicator"
-      ],
-      "rows": {
-      }
-    }
-
   },
   {
     "name": "addcolumn",
@@ -400,7 +304,7 @@
           }]
         },
         "dataType": "code",
-        "subject":"um"
+        "subject": null
       },
       "value": "percentage"
     }
@@ -426,14 +330,29 @@
         },
         "subject": null
       },
-      "value": "Percentage of FAO Sector on ODA"
+      "value": "Percentage oda"
+    }
+
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "donorcode",
+        "year",
+        "value",
+        "unitcode",
+        "indicator"
+      ],
+      "rows": {
+      }
     },
-    "rid":{"uid":"percentage_ODA"}
-
+    "rid": {
+      "uid": "percentage_oda"
+    }
   }
-
-
-
 
 
 ]

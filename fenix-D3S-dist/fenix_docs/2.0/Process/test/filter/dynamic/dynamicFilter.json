@@ -1,0 +1,71 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_donors_gni"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "year"
+       ],
+      "rows": {
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "level": 1,
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2007,
+              "to": 2007
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "test1"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_donors_gni"
+      },
+      {
+        "uid": "test1"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "year",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "year": {
+          "tables": [
+            {
+              "uid": "test1",
+              "column": "year"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "final"
+    }
+  }
+]

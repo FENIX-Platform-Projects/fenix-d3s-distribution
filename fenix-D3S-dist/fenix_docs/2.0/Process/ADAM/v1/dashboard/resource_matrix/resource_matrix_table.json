@@ -1,5 +1,26 @@
 [
   {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "total_oda"
+      },
+      {
+        "uid": "related_oda"
+      },
+      {
+        "uid":"percentage_oda"
+      }
+
+    ],
+    "parameters": {
+    },
+    "rid":{"uid":"union_process"}
+
+  },
+
+
+  {
     "name": "filter",
     "sid": [
       {
@@ -59,7 +80,7 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "max"
         }
       ]
     },
@@ -237,7 +258,7 @@
     "parameters": {
       "column": {
         "dataType": "number",
-        "id": "percentage_value",
+        "id": "value",
         "title": {
           "EN": "FAO Sector (%)"
         },
@@ -248,31 +269,70 @@
         "values":[" ( related_oda_value / total_oda_value )*100"]
 
       }
-    },
-    "rid": {
-      "uid": "percentage_Value"
     }
   },
   {
     "name": "addcolumn",
-    "sid":[{"uid":"join_process"}],
     "parameters": {
       "column": {
-        "dataType": "number",
-        "id": "percentage_value",
+        "id": "unitcode",
         "title": {
-          "EN": "FAO Sector (%)"
+          "EN": "Measurement Unit"
+        },
+        "domain": {
+          "codes": [{
+            "idCodeList": "crs_units",
+            "version": "2016",
+            "level": 1
+          }]
+        },
+        "dataType": "code",
+        "subject": null
+      },
+      "value": "percentage"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
         },
         "subject": null
       },
-      "value": {
-        "keys":  ["1 = 1"],
-        "values":[" ( related_oda_value / total_oda_value )*100"]
+      "value": "Percentage oda"
+    }
 
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "donorcode",
+        "value",
+        "unitcode",
+        "indicator"
+      ],
+      "rows": {
       }
     },
     "rid": {
-      "uid": "percentage_Value"
+      "uid": "percentage_oda"
     }
   }
 

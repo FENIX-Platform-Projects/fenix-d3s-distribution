@@ -35,11 +35,6 @@
           "enumeration": [
             "usd_commitment"
           ]
-        },
-        "fao_sector": {
-          "enumeration": [
-            "1"
-          ]
         }
 
       }
