@@ -1,0 +1,57 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_priority_analysis"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "donorcode",
+        "purposecode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "donorcode",
+        "purposecode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  }
+]

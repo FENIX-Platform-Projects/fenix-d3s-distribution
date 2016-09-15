@@ -1,0 +1,52 @@
+{
+  "uid" : "adam_priority_analysis",
+  "title" : {
+    "EN" : "Priority Analysis"
+  },
+  "meContent" : {
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd" : {
+    "contextSystem" : "adam_aggr",
+    "datasources" : ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+    "columns" : [
+      {
+        "id" : "donorcode",
+        "title" : { "EN" : "Donor" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "Sub-sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year" },
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "value",
+        "subject" : "value",
+        "title" : { "EN" : "Commitment Constant (USD Mil)" },
+        "dataType" : "number"
+      },
+      {
+        "id" : "unitcode",
+        "subject" : "um",
+        "title" : { "EN" : "Measurement unit" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
+        "dataType" : "code"
+      }
+    ]
+  }
+}
