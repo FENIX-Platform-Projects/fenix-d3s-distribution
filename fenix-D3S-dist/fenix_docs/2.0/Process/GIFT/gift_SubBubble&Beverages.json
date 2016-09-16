@@ -3,7 +3,7 @@
     "name": "filter",
     "parameters": {
       "columns": [
-        "group_code",
+        "subgroup_code",
         "value",
         "um"
       ],
@@ -16,11 +16,11 @@
             }
           ]
         },
-        "!group_code": {
+        "group_code": {
           "codes": [
             {
               "uid": "GIFT_FoodGroups",
-              "codes": [ "14" ]
+              "codes": [ "09" ]
             }
           ]
         }
@@ -32,7 +32,7 @@
     "name": "group",
     "parameters": {
       "by": [
-        "group_code"
+        "subgroup_code"
       ],
       "aggregations": [
         {
