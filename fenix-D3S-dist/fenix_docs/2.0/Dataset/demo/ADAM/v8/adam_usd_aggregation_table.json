@@ -79,6 +79,19 @@
         },
         "dataType": "text",
         "key": true
+      },
+      {
+        "id": "fao_sector",
+        "title": {
+          "EN": "FAO sector"
+        },
+        "dataType": "text"
+      },
+      {
+        "id" : "flowcategory_code",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       }
     ]
   }

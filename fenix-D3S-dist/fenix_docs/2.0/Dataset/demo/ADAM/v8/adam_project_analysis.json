@@ -7,7 +7,7 @@
     "resourceRepresentationType": "dataset"
   },
   "dsd" : {
-    "contextSystem" : "adam_aggr",
+    "contextSystem" : "adam_agg",
     "datasources" : ["adam"],
     "cache":{
       "storage":"postgres"

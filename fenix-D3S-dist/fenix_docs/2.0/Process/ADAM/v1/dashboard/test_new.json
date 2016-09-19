@@ -1,6 +1,19 @@
 [
-
-
+  {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "top_10_recipients_sum"
+      },
+      {
+        "uid": "others"
+      }
+    ],
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
+    }
+  },
   {
     "name": "filter",
     "sid": [
@@ -10,7 +23,7 @@
     ],
     "parameters": {
       "columns": [
-        "year",
+        "recipientcode",
         "value",
         "unitcode"
       ],
@@ -20,97 +33,30 @@
             "usd_commitment"
           ]
         },
-        "parentsector_code": {
-          "codes": [
-            {
-              "uid": "crs_dac",
-              "version": "2016",
-              "codes": [
-                "NA"
-              ]
-            }
-          ]
-        },
-        "purposecode": {
-          "codes": [
-            {
-              "uid": "crs_purposes",
-              "version": "2016",
-              "codes": [
-                "NA"
-              ]
-            }
-          ]
-        },
-        "donorcode": {
-          "codes": [
-            {
-              "uid": "crs_donors",
-              "version": "2016",
-              "codes": [
-                "NA"
-              ]
-            }
-          ]
-        },
-        "recipientcode": {
-          "codes": [
-            {
-              "uid": "crs_recipients",
-              "version": "2016",
-              "codes": [
-                "NA"
-              ]
-            }
-          ]
-        },
-        "dac_member": {
+        "fao_sector":{
           "enumeration": [
-            "t"
+            "1"
           ]
         },
         "year": {
           "time": [
             {
               "from": 2000,
-              "to": 2013
+              "to": 2014
             }
           ]
         }
       }
     },
-    "rid":{"uid":"all_subsectors_sum"}
-  },
-  {
-    "name": "filter",
-    "sid": [
-      {
-        "uid": "adam_donors_gni"
-      }
-    ],
-    "parameters": {
-      "columns": [
-        "year",
-        "value",
-        "unitcode"
-      ],
-      "rows": {
-        "year": {
-          "time": [
-            {
-              "from": 2000,
-              "to": 2013
-            }
-          ]
-        }
-      }
+    "rid": {
+      "uid": "filter_top_10_recipients_sum"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "year"
+        "recipientcode"
       ],
       "aggregations": [
         {
@@ -126,70 +72,93 @@
           "rule": "first"
         }
       ]
-    },
-    "rid": {
-      "uid": "GNI_sum"
     }
   },
   {
-    "name": "join",
-    "sid": [
-      {
-        "uid": "GNI_sum"
-      },
-      {
-        "uid": "all_subsectors_sum"
-      }
-    ],
+    "name": "select",
     "parameters": {
-      "joins": [
-        [
-          {
-            "type": "id",
-            "value": "year"
-          }
-        ],
-        [
-          {
-            "type": "id",
-            "value": "year"
-          }
-        ]
-      ],
-      "values": [
-      ]
-    },
-    "rid": {
-      "uid": "join_oecd_avg"
-    }
-  },
-  {
-    "name": "addcolumn",
-    "sid": [
-      {
-        "uid": "join_oecd_avg"
-      }
-    ],
-    "parameters": {
-      "column": {
-        "dataType": "number",
-        "id": "value",
-        "title": {
-          "EN": "Value"
+      "query": "WHERE recipientcode NOT IN (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+      "queryParameters": [
+        {
+          "value": "298"
         },
-        "subject": null
-      },
-      "value": {
-        "keys": [
-          "1 = 1"
-        ],
-        "values": [
-          " ( all_subsectors_sum_value / GNI_sum_value)*100"
-        ]
-      }
+        {
+          "value": "498"
+        },
+        {
+          "value": "798"
+        },
+        {
+          "value": "89"
+        },
+        {
+          "value": "589"
+        },
+        {
+          "value": "889"
+        },
+        {
+          "value": "189"
+        },
+        {
+          "value": "289"
+        },
+        {
+          "value": "389"
+        },
+        {
+          "value": "380"
+        },
+        {
+          "value": "489"
+        },
+        {
+          "value": "789"
+        },
+        {
+          "value": "689"
+        },
+        {
+          "value": "619"
+        },
+        {
+          "value": "679"
+        }
+      ]
     }
   },
-
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    },
+    "rid": {
+      "uid": "filtered_dataset"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "unitcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
   {
     "name": "addcolumn",
     "parameters": {
@@ -211,40 +180,151 @@
         },
         "subject": null
       },
-      "value": "OECD AVERAGE OF ODA/GNI"
+      "value": "Top Recipient Countries"
+    },
+    "rid": {
+      "uid": "top_10_recipients_sum"
+    }
+  },
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "filtered_dataset"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "unitcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
     }
   },
   {
     "name": "addcolumn",
     "parameters": {
       "column": {
-        "id": "unitcode",
+        "dataType": "text",
+        "id": "indicator",
         "title": {
-          "EN": "Measurement Unit"
+          "EN": "Indicator"
         },
         "domain": {
-          "codes": [{
-            "idCodeList": "crs_units",
-            "version": "2016",
-            "level": 1
-          }]
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
         },
-        "dataType": "code"
+        "subject": null
       },
-      "value": "percentage"
+      "value": "sum of all recipients"
+    },
+    "rid": {
+      "uid": "top_all_recipients_sum"
+    }
+  },
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "top_all_recipients_sum"
+      },
+      {
+        "uid": "top_10_recipients_sum"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "unitcode"
+          }
+        ],
+        [
+          {
+            "type": "id",
+            "value": "unitcode"
+          }
+        ]
+      ],
+      "values": []
+    },
+    "rid": {
+      "uid": "join_process_total_recipients"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "join_process_total_recipients"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": null
+      },
+      "value": {
+        "keys": [
+          "1 = 1"
+        ],
+        "values": [
+          "top_all_recipients_sum_value - top_10_recipients_sum_value"
+        ]
+      }
     }
   },
   {
     "name": "filter",
     "parameters": {
       "columns": [
-        "year",
         "value",
-        "unitcode",
-        "indicator"
+        "unitcode"
       ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "Other Recipients"
     },
-    "rid":{"uid":"oecd_percentage_oda_gni"}
+    "rid": {
+      "uid": "others"
+    }
   }
-
 ]
