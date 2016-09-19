@@ -1,0 +1,65 @@
+{
+  "uid" : "adam_comparative_advantage",
+  "title" : {
+    "EN" : "Comparative advantage table"
+  },
+  "meContent" : {
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd" : {
+    "contextSystem" : "adam_aggr",
+    "datasources" : ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+    "columns" : [
+
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year" },
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "OCED DAC Sub Sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "delivery",
+        "title" : { "EN" : "% Delivery over Total FAO Delivery" },
+        "dataType" : "number"
+      },
+      {
+        "id" : "fao_delivery",
+        "title" : { "EN" : "% FAO Delivery over Total Delivery" },
+        "dataType" : "number"
+      },
+      {
+        "id" : "total_fao_delivery",
+        "title" : { "EN" : "% Total FAO Delivery over Total Agriculture" },
+        "dataType" : "number"
+      },
+      {
+        "id" : "advantage_ratio",
+        "title" : { "EN" : "Comparative Advantage Ratio" },
+        "dataType" : "number"
+      },
+      {
+        "id" : "ratio",
+        "title" : { "EN" : "Does FAO have a Comparative Advantage?" },
+        "dataType" : "text"
+      }
+    ]
+  }
+}

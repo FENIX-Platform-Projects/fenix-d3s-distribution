@@ -28,7 +28,7 @@
         "id": "donorcode",
         "subject": "geo",
         "title": {
-          "EN": "Resource Partner code"
+          "EN": "Resource Partner"
         },
         "dataType": "code",
          "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ]

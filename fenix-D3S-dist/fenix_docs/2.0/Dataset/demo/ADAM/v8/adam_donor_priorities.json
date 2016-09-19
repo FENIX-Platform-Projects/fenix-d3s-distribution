@@ -19,7 +19,7 @@
     "columns": [
       {
         "id" : "recipientcode",
-        "title" : { "EN" : "Recipient"},
+        "title" : { "EN" : "Recipient Country"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
         "key": true
