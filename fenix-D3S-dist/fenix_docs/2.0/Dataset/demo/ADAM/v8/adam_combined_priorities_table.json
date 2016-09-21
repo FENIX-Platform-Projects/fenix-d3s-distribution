@@ -31,11 +31,20 @@
         "key": true
       },
       {
-        "id" : "countrycode",
-        "title" : { "EN" : "Country"},
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient Country"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_recipientdonors", "version" : "2016", "level" : 1 } ] } ,
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] },
         "key": true
+
+      },
+      {
+        "id" : "donorcode",
+        "title" : { "EN" : "Resource Partner"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
+        "key": true
+
       },
       {
         "id" : "purposecode",
@@ -44,7 +53,6 @@
         "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
         "key": true
       }
-     
     ]
   }
 }

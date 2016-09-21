@@ -47,9 +47,8 @@ public class AdamCacheListener implements DatasetCacheListener {
                 break;
 
             case "adam_combined_priorities_table" :
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (countrycode)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (typecode)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (purposecode)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (donorcode)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (recipientcode)");
                 break;
         }
 

@@ -1,0 +1,249 @@
+{
+    "uid": "OECD_Sources",
+	"version": "1.0",
+    "title": {
+        "EN": "OECD sources"
+    },
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["change", "types"],
+        "description": {"EN":"OECD type changes list"},
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": "06"
+                        }
+                    ],
+                    "idCodeList": "FENIX_Subjects",
+                    "version": "1.0"
+                }
+        },
+        "seCodeList"  : {
+              "numberOfLevels": 1,
+              "typeOfCodeList": "list"
+        }
+
+
+    },
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "OECD"
+            },
+            "organizationUnit": {"EN":"CDC-DAC"},
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": "+33 1 45 24 82 00",
+                "address": "OECD - 2, rue André Pascal - 75775 Paris Cedex 16 - France",
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": "https://unstats.un.org/unsd/cr/registry/cpc-2.asp",
+                "disseminationFormat": ["txt","pdf"]
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+    },
+    "dsd" : {
+        "contextSystem":"oecd"
+    }
+}
+
+--structure--
+csvSeparator=;
+structure=table
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1
+titleColumnIndex_EN=2
+
+--data--
+1;Agência Nacional do Petróleo, Gás Natural e Biocombustíveis
+2;Agriculture Export Council, Ministry of Trade and Industry
+3;Australian Government
+4;Australian Government, Australian Customs and Border Protection Service
+5;Brazilian Federal Government
+6;Brazilian Federal Government; Receita Federal do Brasil - RFB
+7;Brazilian Presidency
+8;Brazilian Presidency; Brazilian Congress
+9;Cabinet of Ministers of Ukraine
+10;Canada Revenue Agency, Government of Canada
+11;China’s State Administration of Taxation and the Ministry of Finance
+12;Comercio Exterior
+13;Customs Union Commission
+14;Dezhou Municipal Finance Bureau
+15;El Senado y Cámara de Diputados de la Nación Argentina
+16;Environmental Protection Agency
+17;European Union
+18;FAO
+19;Federal Government (Germany)
+20;General Organization for Export and Import Control, Ministry of Trade and Industry
+21;Government of Acre
+22;Government of Alagoas
+23;Government of Alberta
+24;Government of Amapá
+25;Government of Amazonas
+26;Government of Bahia
+27;Government of British Columbia
+28;Government of Canada
+29;Government of Ceara
+30;Government of China
+31;Government of Distrito Federal
+32;Government of Espírito Santo
+33;Government of Florida
+34;Government of Goiás
+35;Government of Hawaii
+36;Government of Illinois
+37;Government of India
+38;Government of India, Ministry of Commerce and Industry, Department of Commerce
+39;Government of India, Ministry of Commerce and Industry, Directorate General of Foreign Trade
+40;Government of India, Ministry of Petroleum and Natural Gas
+41;Government of Indonesia
+42;Government of Iowa
+43;Government of Japan
+44;Government of Kentucky
+45;Government of Louisiana
+46;Government of Maine
+47;Government of Manitoba
+48;Government of Maranhão
+49;Government of Maryland
+50;Government of Massachusetts
+51;Government of Mato Grosso
+52;Government of Mato Grosso do Sul
+53;Government of Mexico
+54;Government of Michigan
+55;Government of Minas Gerais
+56;Government of Minnesota
+57;Government of Missouri
+58;Government of Montana
+59;Government of New Mexico
+60;Government of New York
+61;Government of Nigeria, Energy Commission
+62;Government of North Dakota
+63;Government of Oklahoma
+64;Government of Ontario
+65;Government of Oregon
+66;Government of Pennsylvania
+67;Government of Quebec
+68;Government of Rhode Island
+69;Government of Rio Grande do Norte
+70;Government of Rondônia
+71;Government of Roraima
+72;Government of São Paulo
+73;Government of Saskatchewan
+74;Government of Sergipe
+75;Government of South Africa, Department of Energy
+76;Government of South Dakota
+77;Government of Spain
+78;Government of Texas
+79;Government of Thailand
+80;Government of the Republic of Kazakhstan
+81;Government of the Republic of Korea
+82;Government of the Russian Federation
+83;Government of UK
+84;Government of Ukraine
+85;Government of Virginia
+86;Government of Washington
+87;Governo da Paraíba
+88;Governo de Pernambuco
+89;Governo de Santa Catarina
+90;Governo de Tocantins
+91;Governo do Pará
+92;Governo do Paraná
+93;Governo do Piauí
+94;Governo do Rio de Janeiro
+95;Governo do Rio Grande do Sul
+96;Ministère de l'Écologie, du Développement Durable et de l'Énergie, République Francaise
+97;Ministério da Agricultura, Pecuária e Abastecimento Conselho Interministerial do Açúcar e do Álcool (CIMA/MAPA)
+98;Ministerio de Economía e Infraestructura
+99;Ministerio de Economía y Finanzas Públicas, Comercio Exterior
+100;Ministerio de Economía y Producción
+101;Ministerio de Planificación Federal Inversión Pública y Servicios, Secretaría de Energía
+102;Ministerio de Producción y Ministerio de Economía y Finanzas Públicas
+103;Ministero dello Sviluppo Economico
+104;Ministry of Agriculture, Forestry and Fisheries
+105;Ministry of Commerce of the People's Republic of China
+106;Ministry of Energy and Mineral Resources (MEMR)
+107;Ministry of Finance of the People's Republic of China
+108;Ministry of Industry and Trade
+109;Ministry of Trade
+110;Ministry of Trade and Industry
+111;Natural Resources Canada
+112;New South Wales Government
+113;Nova Scotia Minister of Finance
+114;OECD
+115;Oficina Nacional de Control Comercial Agropecuario; Comercio Exterior
+116;Ontario Ministry of Finances
+117;Presidente da República
+118;Press release
+119;Receita Federal do Brasil - RFB
+120;Republic of Philippines, Department of Energy
+121;République française, Ministère  Budget, comptes publics et réforme de l'État
+122;Senado y Cámara de Diputados
+123;State Administration of Taxation
+124;State Administration of Taxation and MOF
+125;State Administration of Taxation, Government of China
+126;State Customs Service of Ukraine
+127;The Standing Committee of National Assembly, Socialist Republic of Vietnam
+128;Turkish Energy Regulatory Authority (EMRA)
+129;UK HM  Revenue & Customs
+130;United States of America federal government
+131;WTO Consolidated Tariff Schedule Database
+132;WTO Integrated Database
+133;WTO Members Notifications
