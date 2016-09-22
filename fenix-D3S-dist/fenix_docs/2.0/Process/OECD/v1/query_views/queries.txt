@@ -1,0 +1,297 @@
+1) OECD_View_ImportTariffs
+------------------------------------------------------------------------------------------------
+
+ select
+                    cpl.policydomain_code,
+                    cpl.commoditydomain_code,
+                    cpl.policytype_code,
+                    cpl.policymeasure_code,
+                    cpl.commodityclass_code,
+                    cpl.country_code,
+                    commodity.hs_code,
+                    SUBSTRING(commodity.hs_code from 0 for 5) as hs_prefix,
+                    element_code,
+                    value,
+                    units,
+                    to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,
+                    to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date,
+                    to_number(to_char(start_date,'YYYY'), '9999') as beginning_year,
+                    to_number(to_char(end_date,'YYYY'), '9999') as ending_year
+                    from cpl, policy, commodity where cpl.cpl_id = policy.cpl_id AND commodity.commodity_id = policy.commodity_id;
+
+2) OECD_View_QueryDownloadPreview
+------------------------------------------------------------------------------------------------
+
+     select
+                    metadata_id,
+                    to_char(policy_id, 'FM999999999999999999') as policy_id,
+                    to_char(cpl.cpl_id, 'FM999999999999999999') as cpl_id,
+                    to_char(commodity.commodity_id, 'FM999999999999999999') as commodity_id,
+                    hs_version,
+                    hs_code,
+                    hs_suffix,
+                    element_code,
+                    to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,
+                    to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date,
+                    units,
+                    value,
+                    value_text,
+                    value_type,
+                    exemptions,
+                    minavtariffvalue,
+                    notes,
+                    link,
+                    source,
+                    title_of_notice,
+                    legal_basis_name,
+                    to_number(to_char(date_of_publication,'YYYYMMDD'), '99999999') as date_of_publication,
+                    imposed_end_date,
+                    second_generation_specific,
+                    benchmark_tax,
+                    benchmark_product,
+                    tax_rate_biofuel,
+                    tax_rate_benchmark,
+                    start_date_tax,
+                    benchmark_link,
+                    original_dataset,
+                    type_of_change_code,
+                    measure_description,
+                    product_original_hs,
+                    product_original_name,
+                    link_pdf,
+                    benchmark_link_pdf,
+                    short_description,
+                    sharedgroup_code,
+                    description,
+                    maxavtariffvalue,
+                    countavtariff,
+                    countnavtariff
+                    from cpl, policy, commodity where cpl.cpl_id = policy.cpl_id and commodity.commodity_id = policy.commodity_id;
+
+
+3)OECD_View_QueryDownload
+-----------------------------------------------------------------------------------------------
+  select
+                    to_char(cpl.cpl_id, 'FM999999999999999999') as cpl_id,
+                    to_char(policy.commodity_id, 'FM999999999999999999') as commodity_id,
+                    cpl.country_code,
+                    cpl_subnational.subnational_code,
+                    cpl.commoditydomain_code,
+                    cpl.commodityclass_code,
+                    cpl.policydomain_code,
+                    cpl.policytype_code,
+                    cpl.policymeasure_code,
+                    cpl.condition_code,
+                    cpl.individualpolicy_code,
+                    to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,
+                    to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date
+                    from cpl,
+                    cpl_subnational,
+                    policy
+                    where cpl.cpl_id = policy.cpl_id
+                    and cpl.cpl_id = cpl_subnational.cpl_id
+
+
+
+4) OECD_View_BiofuelPolicy
+-----------------------------------------------------------------------------------------------
+
+ select
+                    policydomain_code,
+                    commoditydomain_code,
+                    cpl.policytype_code,
+                    cpl.policymeasure_code,
+                    cpl.commodityclass_code,
+                    cpl.country_code,
+                    to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,
+                    to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date,
+                    to_number(to_char(start_date,'YYYY'), '9999') as beginning_year,
+                    to_number(to_char(end_date,'YYYY'), '9999') as ending_year
+                    from cpl, policy where cpl.cpl_id = policy.cpl_id;
+
+
+
+5) OECD_Timeseries_BiofuelPolicy
+-------------------------------------------------------------------------------------------------
+  with timeseries as (
+                                     select to_number(to_char(generate_series('2011-01-01'::timestamp, '2014-12-31'::timestamp, '1 day'),
+                                     'YYYYMMDD'),'99999999')
+                                     as  day )
+
+                                     select
+                                     final.commodityclass,
+                                     final.policytype,
+                                     final.policymeasure,
+                                     final.country,
+                                     final.day
+
+                                     from
+                                     (select *
+                                      from
+                                      timeseries
+                                     left join
+                                     (select
+                                     m.commodityclass_code as commodityclass,
+                                     m.policytype_code as policytype,
+                                     m.policymeasure_code as policymeasure,
+                                     m.country_code as country,
+                                     to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,
+                                     to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date
+                                     from
+                                     (select * from cpl where
+                                     policytype_code in ('8','10','1','2','12','9')
+                                     and commodityclass_code IN ('5','6','7'))m,
+                                     policy,
+                                     commodity
+                                     where m.cpl_id = policy.cpl_id
+                                     AND
+                                     commodity.commodity_id = policy.commodity_id
+
+                                     group by
+
+                                     commodityclass,
+                                     policytype,
+                                     policymeasure,
+                                     country,
+                                     start_date,
+                                     end_date
+                                     order by
+                                     commodityclass,
+                                     policytype,
+                                     policymeasure,
+                                     country,
+                                     start_date,
+                                     end_date
+                                     )h
+                                     on
+                                     ((h.end_date is null AND day >= h.start_date) OR
+                                     (day  between h.start_date and h.end_date) ))  final
+                                     group by
+                                     final.commodityclass,
+                                     final.policytype,
+                                     final.policymeasure,
+                                     final.country,
+                                     final.day
+                                     order by
+                                     final.commodityclass,
+                                     final.policytype,
+                                     final.policymeasure,
+                                     final.country,
+                                     final.day
+
+6) OECD_Timeseries_ExportRestrictions
+--------------------------------------------------------------------------------------------------------
+   with timeseries as (
+                                       select to_number(to_char(generate_series('2007-01-01'::timestamp, '2014-12-31'::timestamp, '1 day'),
+                                       'YYYYMMDD'),'99999999')
+                                       as  day )
+
+                                       select
+                                       final.commodityclass,
+                                       final.policytype,
+                                       final.policymeasure,
+                                       final.country,
+                                       final.day
+
+                                       from
+                                       (select *
+                                        from
+                                        timeseries
+                                        left join
+                                       (select
+                                        m.commodityclass_code as commodityclass,
+                                       m.policytype_code as policytype,
+                                       m.policymeasure_code as policymeasure,
+                                       m.country_code as country,
+                                       to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,
+                                       to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date
+                                       from
+                                       (select * from cpl where
+                                       policytype_code in ('1')
+                                       and commodityclass_code IN ('1','2','3','4')
+                                       and policymeasure_code IN('1','2','4','5','8'))m,
+                                       policy,
+                                       commodity
+                                       where m.cpl_id = policy.cpl_id
+                                       AND
+                                       commodity.commodity_id = policy.commodity_id
+
+                                       group by
+
+                                       commodityclass,
+                                       policytype,
+                                       policymeasure,
+                                       country,
+                                       start_date,
+                                       end_date
+                                       order by
+                                       commodityclass,
+                                       policytype,
+                                       policymeasure,
+                                       country,
+                                       start_date,
+                                       end_date
+                                       )h
+                                       on
+                                       ((h.end_date is null AND day >= h.start_date) OR
+                                       (day  between h.start_date and h.end_date) ))  final
+                                       group by
+                                       final.commodityclass,
+                                       final.policytype,
+                                       final.policymeasure,
+                                       final.country,
+                                       final.day
+                                       order by
+                                       final.commodityclass,
+                                       final.policytype,
+                                       final.policymeasure,
+                                       final.country,
+                                       final.day
+
+
+7) OECD_Timeseries_ImportTariffs
+--------------------------------------------------------------------------------------------------------
+        with timeseries as (
+                                          select to_number(to_char(generate_series('2012-01-01'::timestamp, '2015-12-31'::timestamp, '1 year'),
+                                          'YYYY'),'9999')
+                                          as  year )
+
+                                          select
+                                          year,
+                                          hs_tariff,
+                                          commodityclass,
+                                          case element_code
+                                          when '4' then '1'
+                                          when '8' then '2'
+                                          end as policyelement,
+                                          units,
+                                          value
+
+                                          from
+                                          timeseries
+                                          join
+                                           (select HS_Tariff,commodityclass, element_code, start_year, end_year, units, value from (
+                                          select  * from (
+                                                 select
+                                                 cpl.commodityclass_code as commodityclass,
+                                                 policy.element_code,
+                                                 SUBSTRING(commodity.HS_Code from 0 for 5) as hs_tariff,
+                                                 to_number(to_char(start_date,'YYYY'), '9999') as start_year,
+                                                 to_number(to_char(end_date,'YYYY'), '9999') as end_year,
+                                                 commodity.HS_Code,
+                                                 policy.units,
+                                                 policy.value
+                                                 from
+                                                 cpl  JOIN policy ON cpl.CPL_ID = policy.CPL_ID
+                                                  JOIN commodity ON cpl.Commodity_ID = commodity.Commodity_ID)t
+
+                                          WHERE hs_tariff IN ('1001','1005','1006','1201')
+                                          and t.element_code in ('4','8')
+                                          and t.units = '1'
+                                                  )g
+                                               )h
+
+                                           on ((h.end_year is null AND year >= h.start_year) OR
+                                          (year  between h.start_year and h.end_year) )
+
+
