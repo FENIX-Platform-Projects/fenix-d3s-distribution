@@ -1,0 +1,126 @@
+{
+  "uid": "OECD_Timeseries_ExportRestrictions",
+  "title": {
+    "EN": "Dataset for Export Restrictions Timeseries and Export restriction timeseries"
+  },
+  "language": {
+    "version": "1998",
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "characterSet": {
+    "codes": [
+      {
+        "code": "106",
+        "label": {
+          "EN": "UTF-8"
+        }
+      }
+    ],
+    "idCodeList": "IANAcharacterSet"
+  },
+  "metadataStandardName": "FENIX",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "version": "1998",
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "meContent": {
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "oecd_view",
+    "datasources": [
+      "oecdView"
+    ],
+    "cache": {
+      "storage": "postgres"
+    },
+    "columns": [
+      {
+        "dataType": "code",
+        "id": "commodityclass",
+        "title": {
+          "EN": "Commodity class"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_CommodityClass",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "policytype",
+        "title": {
+          "EN": "Policy type"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_PolicyType",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "policymeasure",
+        "title": {
+          "EN": "Policy measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_PolicyMeasure",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "country",
+        "subject": "geo",
+        "title": {
+          "EN": "Country"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_Country",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "date",
+        "subject":"time",
+        "id": "day",
+        "title": {
+          "EN": "Day"
+        }
+      }
+    ]
+  }
+}

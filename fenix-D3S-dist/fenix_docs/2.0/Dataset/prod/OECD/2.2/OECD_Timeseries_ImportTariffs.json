@@ -1,0 +1,126 @@
+{
+  "uid": "OECD_Timeseries_ImportTariffs",
+  "title": {
+    "EN": "Dataset for Import tariffs timeseries"
+  },
+  "language": {
+    "version": "1998",
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "characterSet": {
+    "codes": [
+      {
+        "code": "106",
+        "label": {
+          "EN": "UTF-8"
+        }
+      }
+    ],
+    "idCodeList": "IANAcharacterSet"
+  },
+  "metadataStandardName": "FENIX",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "version": "1998",
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "meContent": {
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "oecd_view",
+    "datasources": [
+      "oecdView"
+    ],
+    "cache": {
+      "storage": "postgres"
+    },
+    "columns": [
+      {
+        "dataType": "year",
+        "subject":"time",
+        "id": "year",
+        "title": {
+          "EN": "Year"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "hsTariff",
+        "title": {
+          "EN": "HS Tariff"
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "commodityclass",
+        "title": {
+          "EN": "Commodity class"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_CommodityClass",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "policyelement",
+        "title": {
+          "EN": "Policy type"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_PolicyElement",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "um",
+        "subject": "um",
+        "title": {
+          "EN": "Unit of measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_Units",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "number",
+        "id": "value",
+        "subject": "value",
+        "title": {
+          "EN": "Value"
+        }
+      }
+    ]
+  }
+}

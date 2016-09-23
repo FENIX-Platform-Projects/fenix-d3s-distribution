@@ -1,7 +1,7 @@
-1) OECD_View_ImportTariffs
+1) OECD_View_ImportTariffs OK
 ------------------------------------------------------------------------------------------------
 
- select
+                    select
                     cpl.policydomain_code,
                     cpl.commoditydomain_code,
                     cpl.policytype_code,
@@ -71,7 +71,7 @@
 
 3)OECD_View_QueryDownload
 -----------------------------------------------------------------------------------------------
-  select
+                    select
                     to_char(cpl.cpl_id, 'FM999999999999999999') as cpl_id,
                     to_char(policy.commodity_id, 'FM999999999999999999') as commodity_id,
                     cpl.country_code,
@@ -96,7 +96,7 @@
 4) OECD_View_BiofuelPolicy
 -----------------------------------------------------------------------------------------------
 
- select
+                    select
                     policydomain_code,
                     commoditydomain_code,
                     cpl.policytype_code,
@@ -113,7 +113,7 @@
 
 5) OECD_Timeseries_BiofuelPolicy
 -------------------------------------------------------------------------------------------------
-  with timeseries as (
+                                     with timeseries as (
                                      select to_number(to_char(generate_series('2011-01-01'::timestamp, '2014-12-31'::timestamp, '1 day'),
                                      'YYYYMMDD'),'99999999')
                                      as  day )
@@ -181,7 +181,7 @@
 
 6) OECD_Timeseries_ExportRestrictions
 --------------------------------------------------------------------------------------------------------
-   with timeseries as (
+                                       with timeseries as (
                                        select to_number(to_char(generate_series('2007-01-01'::timestamp, '2014-12-31'::timestamp, '1 day'),
                                        'YYYYMMDD'),'99999999')
                                        as  day )
