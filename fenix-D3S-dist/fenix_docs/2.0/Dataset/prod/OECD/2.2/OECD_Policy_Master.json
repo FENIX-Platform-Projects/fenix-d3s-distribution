@@ -1,0 +1,496 @@
+{
+  "uid" : "OECD_Policy_Master",
+  "title" : {
+    "EN" : "OECD - Policy master policies dataset"
+  },
+  "language" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "characterSet" : {
+    "codes" : [ {
+      "code" : "106",
+      "label" : {
+        "EN" : "UTF-8"
+      }
+    } ],
+    "idCodeList" : "IANAcharacterSet"
+  },
+  "metadataStandardName" : "FENIX",
+  "metadataStandardVersion" : "1.0",
+  "metadataLanguage" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "meContent" : {
+    "resourceRepresentationType" : "dataset"
+  },
+  "dsd" : {
+    "contextSystem" : "oecd_view",
+    "datasources" : [ "oecdView" ],
+    "columns" : [
+
+      {
+        "dataType" : "text",
+        "key" : true,
+        "id" : "cpl_id",
+        "title" : {
+          "EN" : "CPL ID"
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "country",
+        "subject" : "geo",
+        "title" : {
+          "EN" : "Country"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_Country",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "text",
+        "id" : "subnational",
+        "title" : {
+          "EN" : "Subnational level"
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "commodityclass",
+        "title" : {
+          "EN" : "Commodity class"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_CommodityClass",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "text",
+        "id" : "commodity_id",
+        "title" : {
+          "EN" : "Commodity ID"
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "policydomain",
+        "title" : {
+          "EN" : "Policy domain"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_PolicyDomain",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "policytype",
+        "title" : {
+          "EN" : "Policy type"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_PolicyType",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "policymeasure",
+        "title" : {
+          "EN" : "Policy measure"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_PolicyMeasure",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "condition",
+        "title" : {
+          "EN" : "Condition"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_Condition",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "individualPolicy",
+        "title" : {
+          "EN" : "Individual policy"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_IndividualPolicy",
+            "version" : "1.0"
+          } ]
+        }
+      },
+
+
+      {
+        "dataType" : "text",
+        "key" : true,
+        "id" : "policy_id",
+        "title" : {
+          "EN" : "Policy ID"
+        }
+      },
+      {
+        "dataType" : "text",
+        "id" : "metadata_id",
+        "title" : {
+          "EN" : "Metadata ID"
+        }
+      },
+      {
+        "dataType" : "date",
+        "id" : "startDate",
+        "title" : {
+          "EN" : "Start date"
+        }
+      },
+      {
+        "dataType" : "date",
+        "id" : "endDate",
+        "title" : {
+          "EN" : "End date"
+        }
+      },
+      {
+        "dataType" : "text",
+        "id" : "value_text",
+        "title" : {
+          "EN" : "Value text"
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "element",
+        "subject" : "element",
+        "title": {
+          "EN": "Element"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_Element",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+
+
+      {
+        "dataType": "text",
+        "id": "hs_code",
+        "subject": "item",
+        "title": {
+          "EN": "HS code"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "hs_version",
+        "title": {
+          "EN": "HS version"
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "commoditydomain",
+        "title" : {
+          "EN" : "Commodity domain"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_CommodityDomain",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "exemptions",
+        "title": {
+          "EN": "Exemptions"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "minavtariffvalue",
+        "title": {
+          "EN": "Min AV tariff value"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "notes",
+        "title": {
+          "EN": "Notes"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "link",
+        "title": {
+          "EN": "Link"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "source",
+        "title": {
+          "EN": "Source"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "title_of_notice",
+        "title": {
+          "EN": "Title of notice"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "legal_basis_name",
+        "title": {
+          "EN": "Legal basis name"
+        }
+      },
+      {
+        "dataType" : "date",
+        "id" : "date_of_publication",
+        "title" : {
+          "EN" : "Date of publication"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "imposed_end_date",
+        "title": {
+          "EN": "Imposed end date"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "second_generation_specific",
+        "title": {
+          "EN": "Second generation specific"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "benchmark_tax",
+        "title": {
+          "EN": "Benchmark tax"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "benchmark_product",
+        "title": {
+          "EN": "Benchmark product"
+        }
+      },
+      {
+        "dataType": "number",
+        "id": "tax_rate_biofuel",
+        "title": {
+          "EN": "Tax rate biofuel"
+        }
+      },
+      {
+        "dataType": "number",
+        "id": "tax_rate_benchmark",
+        "title": {
+          "EN": "Tax rate benchmark"
+        }
+      },
+      {
+        "dataType" : "date",
+        "id" : "start_date_tax",
+        "title" : {
+          "EN" : "Start date tax"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "benchmark_link",
+        "title": {
+          "EN": "Benchmark link"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "original_dataset",
+        "title": {
+          "EN": "Original dataset"
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "type_of_change",
+        "title" : {
+          "EN" : "Type of change"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_TypeOfChange",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "measure_description",
+        "title": {
+          "EN": "Measure description"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "product_original_hs",
+        "title": {
+          "EN": "Product original hs"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "product_original_name",
+        "title": {
+          "EN": "Product original name"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "link_pdf",
+        "title": {
+          "EN": "Link pdf"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "benchmark_link_pdf",
+        "title": {
+          "EN": "Benchmark link pdf"
+        }
+      },
+      {
+        "dataType": "number",
+        "id": "maxavtariffvalue",
+        "title": {
+          "EN": "Max AV tariff"
+        }
+      },
+      {
+        "dataType": "number",
+        "id": "countavtariff",
+        "title": {
+          "EN": "Count AV tariff"
+        }
+      },
+      {
+        "dataType": "number",
+        "id": "countnavtariff",
+        "title": {
+          "EN": "Count NAV tariff"
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "unit",
+        "title" : {
+          "EN" : "Unit"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_Units",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType": "number",
+        "id": "value",
+        "subject": "value",
+        "title": {
+          "EN": "Value"
+        }
+      },
+      {
+        "dataType" : "code",
+        "id" : "value_type",
+        "title" : {
+          "EN" : "Type of value"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "OECD_Value",
+            "version" : "1.0"
+          } ]
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "hs_suffix",
+        "title": {
+          "EN": "HS suffix"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "commodity_description",
+        "title": {
+          "EN": "Commodity description"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "commodity_short_description",
+        "title": {
+          "EN": "Commodity short description"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "sharedgroup_code",
+        "title": {
+          "EN": "Sharedgroup code"
+        }
+      }
+    ]
+  }
+
+}

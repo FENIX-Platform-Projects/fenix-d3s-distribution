@@ -291,7 +291,62 @@ public enum Query {
     ),
     FilterCommodityDomainClass (
             "select * from filtercommodityclassdomain "
-    );
+    ),
+    OECD_Policy_Master (
+            "select cpl.cpl_id, cpl.country_code, subnational_codes, cpl.commodityclass_code, cpl.commodity_id, policydomain_code, policytype_code, policymeasure_code, condition_code, individualpolicy_code,\n" +
+            "policy_id, metadata_id, to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date, coalesce(to_number(to_char(end_date,'YYYYMMDD'), '99999999'),99991231) as end_date, value_text, element_code,\n" +
+            "hs_code, hs_version,\n" +
+            "\n" +
+            "commoditydomain_code,\n" +
+            "\n" +
+            "exemptions,\n" +
+            "minavtariffvalue,\n" +
+            "notes,\n" +
+            "link,\n" +
+            "source,\n" +
+            "title_of_notice,\n" +
+            "legal_basis_name,\n" +
+            "to_number(to_char(date_of_publication,'YYYYMMDD'), '99999999') as date_of_publication,\n" +
+            "imposed_end_date,\n" +
+            "second_generation_specific,\n" +
+            "benchmark_tax,\n" +
+            "benchmark_product,\n" +
+            "tax_rate_biofuel,\n" +
+            "tax_rate_benchmark,\n" +
+            "to_number(to_char(start_date_tax,'YYYYMMDD'), '99999999') as start_date_tax,\n" +
+            "benchmark_link,\n" +
+            "original_dataset,\n" +
+            "type_of_change_code,\n" +
+            "measure_description,\n" +
+            "product_original_hs,\n" +
+            "product_original_name,\n" +
+            "link_pdf,\n" +
+            "benchmark_link_pdf,\n" +
+            "maxavtariffvalue,\n" +
+            "countavtariff,\n" +
+            "countnavtariff,\n" +
+            "units, \n" +
+            "value, \n" +
+            "value_type,\n" +
+            "\n" +
+            "hs_suffix,\n" +
+            "description,\n" +
+            "short_description,\n" +
+            "sharedgroup_code\n" +
+            "\n" +
+            "from\n" +
+            "(\n" +
+            "\tselect cpl.*, subnational_codes\n" +
+            "\tfrom cpl join\n" +
+            "\t(select cpl_id, string_agg(subnational_code,',') as subnational_codes from cpl_subnational group by cpl_id) subnational\n" +
+            "\ton (cpl.cpl_id = subnational.cpl_id)\n" +
+            ") cpl join policy on (cpl.cpl_id = policy.cpl_id)\n" +
+            "join commodity on (cpl.commodity_id = commodity.commodity_id)"
+    )
+
+    ;
+
+
 
     private String query;
     Query(String query) {

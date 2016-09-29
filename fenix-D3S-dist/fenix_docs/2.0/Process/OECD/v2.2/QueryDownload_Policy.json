@@ -1,0 +1,99 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "OECD_Policy_Master"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "policy_id","commodity_short_description","sharedgroup_code","startDate","endDate","unit","value","element"
+      ],
+      "rows": {
+        "commoditydomain": {
+          "codes": [
+            {
+              "uid": "OECD_CommodityDomain",
+              "version": "1.0",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "policydomain": {
+          "codes": [
+            {
+              "uid": "OECD_PolicyDomain",
+              "version": "1.0",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "country": {
+          "codes": [
+            {
+              "uid": "OECD_Country",
+              "version": "1.0",
+              "codes": [
+                "12","46"
+              ]
+            }
+          ]
+        },
+        "commodityclass": {
+          "codes": [
+            {
+              "uid": "OECD_CommodityClass",
+              "version": "1.0",
+              "codes": [
+                "3","9","13","18","11","10","14","8"
+              ]
+            }
+          ]
+        },
+        "policytype": {
+          "codes": [
+            {
+              "uid": "OECD_PolicyType",
+              "version": "1.0",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "policymeasure": {
+          "codes": [
+            {
+              "uid": "OECD_PolicyMeasure",
+              "version": "1.0",
+              "codes": [
+                "1","2","3"
+              ]
+            }
+          ]
+        },
+        "startDate": {
+          "time": [ {"to":20120328} ]
+        },
+        "endDate": {
+          "time": [ {"from":19951101} ]
+        },
+        "cpl_id": {
+          "enumeration": ["4356"]
+        }
+      }
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "commodity_short_description": "ASC",
+      "sharedgroup_code": "ASC"
+    }
+  }
+]

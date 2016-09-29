@@ -1,0 +1,233 @@
+{
+  "uid": "OECD_Master",
+  "title": {
+    "EN": "AMIS - Policy CPL and policy master data"
+  },
+  "meContent": {
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "oecd_view",
+    "datasources": [
+      "oecdView"
+    ],
+    "cache": {
+      "storage": "postgres"
+    },
+    "columns": [
+      {
+        "dataType": "code",
+        "id": "policydomain",
+        "title": {
+          "EN": "Policy domain"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_PolicyDomain",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "commoditydomain",
+        "title": {
+          "EN": "Commodity domain"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_CommodityDomain",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "policytype",
+        "title": {
+          "EN": "Policy type"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_PolicyType",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "policymeasure",
+        "title": {
+          "EN": "Policy measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_PolicyMeasure",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "commodityclass",
+        "title": {
+          "EN": "Commodity class"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_CommodityClass",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "country",
+        "subject": "geo",
+        "title": {
+          "EN": "Country"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_Country",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "hsCode",
+        "subject": "item",
+        "title": {
+          "EN": "HS code"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "hsPrefix",
+        "title": {
+          "EN": "HS prefix"
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "element",
+        "subject": "element",
+        "title": {
+          "EN": "Element"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_Element",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "number",
+        "id": "value",
+        "subject": "value",
+        "title": {
+          "EN": "Value"
+        }
+      },
+      {
+        "dataType": "code",
+        "id": "um",
+        "subject": "um",
+        "title": {
+          "EN": "Unit of measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "OECD_Units",
+              "version": "1.0"
+            }
+          ]
+        }
+      },
+      {
+        "dataType": "date",
+        "id": "startDate",
+        "title": {
+          "EN": "Start date"
+        }
+      },
+      {
+        "dataType": "date",
+        "id": "endDate",
+        "title": {
+          "EN": "End date"
+        }
+      },
+      {
+        "dataType": "year",
+        "key": false,
+        "id": "startYear",
+        "title": {
+          "EN": "Start Year"
+        }
+      },
+      {
+        "dataType": "year",
+        "key": false,
+        "id": "endYear",
+        "title": {
+          "EN": "End Year"
+        }
+      }
+    ]
+  },
+  "language": {
+    "version": "1998",
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "characterSet": {
+    "codes": [
+      {
+        "code": "106",
+        "label": {
+          "EN": "UTF-8"
+        }
+      }
+    ],
+    "idCodeList": "IANAcharacterSet"
+  },
+  "metadataStandardName": "FENIX",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "version": "1998",
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  }
+}

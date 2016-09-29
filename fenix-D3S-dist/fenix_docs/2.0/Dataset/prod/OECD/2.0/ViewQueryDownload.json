@@ -83,7 +83,7 @@
         },
         "domain" : {
           "codes" : [ {
-            "idCodeList" : "OECD_CommodityClass1",
+            "idCodeList" : "OECD_CommodityClass",
             "version" : "1.0"
           } ]
         }
@@ -125,7 +125,7 @@
         },
         "domain" : {
           "codes" : [ {
-            "idCodeList" : "OECD_PolicyType1_2_6",
+            "idCodeList" : "OECD_PolicyMeasure",
             "version" : "1.0"
           } ]
         }
