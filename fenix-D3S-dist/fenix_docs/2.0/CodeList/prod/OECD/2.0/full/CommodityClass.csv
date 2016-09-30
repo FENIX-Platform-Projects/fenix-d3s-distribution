@@ -126,4 +126,10 @@ titleColumnIndex_EN=2
 10;Maize + Soybeans
 11;Maize + Rice + Wheat
 12;Rice + Wheat
+13;Maize + Rice + Soybeans
+14;Maize + Soybeans + Wheat
+15;Rice + Soybeans
+16;Rice + Soybeans + Wheat
+17;Soybeans + Wheat
+18;Maize + Rice + Soybeans + Wheat
 

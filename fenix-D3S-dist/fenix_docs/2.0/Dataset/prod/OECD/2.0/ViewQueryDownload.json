@@ -173,6 +173,22 @@
         "title" : {
           "EN" : "End date"
         }
+      },
+      {
+        "dataType" : "number",
+        "key" : false,
+        "id" : "commodityclass_order",
+        "title" : {
+          "EN" : "Commodity class Order"
+        }
+      },
+      {
+        "dataType" : "text",
+        "key" : false,
+        "id" : "commodityclass_mixed",
+        "title" : {
+          "EN" : "Commodity class Mixed"
+        }
       }
     ]
   },

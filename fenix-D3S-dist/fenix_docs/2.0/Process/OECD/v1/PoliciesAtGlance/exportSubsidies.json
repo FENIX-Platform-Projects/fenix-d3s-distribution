@@ -9,7 +9,7 @@
     "parameters": {
       "columns": [
         "commodityclass",
-        "policymeasure",
+        "element",
         "country",
         "startYear",
         "value",

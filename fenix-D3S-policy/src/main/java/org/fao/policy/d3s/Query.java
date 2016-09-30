@@ -51,25 +51,66 @@ public enum Query {
             ),
     OECD_View_QueryDownload
             (
-                "      select\n" +
-                        "                    to_char(cpl.cpl_id, 'FM999999999999999999') as cpl_id,\n" +
-                        "                    to_char(policy.commodity_id, 'FM999999999999999999') as commodity_id,\n" +
-                        "                    cpl.country_code,\n" +
-                        "                    cpl_subnational.subnational_code,\n" +
-                        "                    cpl.commoditydomain_code,\n" +
-                        "                    cpl.commodityclass_code,\n" +
-                        "                    cpl.policydomain_code,\n" +
-                        "                    cpl.policytype_code,\n" +
-                        "                    cpl.policymeasure_code,\n" +
-                        "                    cpl.condition_code,\n" +
-                        "                    cpl.individualpolicy_code,\n" +
-                        "                    to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,\n" +
-                        "                    to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date\n" +
-                        "                    from cpl,\n" +
-                        "                    cpl_subnational,\n" +
-                        "                    policy\n" +
-                        "                    where cpl.cpl_id = policy.cpl_id\n" +
-                        "                    and cpl.cpl_id = cpl_subnational.cpl_id"
+               "SELECT\n" +
+                       "   to_char(cpl.cpl_id,\n" +
+                       "   'FM999999999999999999') AS cpl_id,\n" +
+                       "   to_char(policy.commodity_id,\n" +
+                       "   'FM999999999999999999') AS commodity_id,\n" +
+                       "   cpl.country_code,\n" +
+                       "   cpl_subnational.subnational_code,\n" +
+                       "   cpl.commoditydomain_code,\n" +
+                       "   cpl.commodityclass_code,\n" +
+                       "   cpl.policydomain_code,\n" +
+                       "   cpl.policytype_code,\n" +
+                       "   cpl.policymeasure_code,\n" +
+                       "   cpl.condition_code,\n" +
+                       "   cpl.individualpolicy_code,\n" +
+                       "   to_number(to_char(start_date,\n" +
+                       "   'YYYYMMDD'),\n" +
+                       "   '99999999') AS start_date,\n" +
+                       "   to_number(to_char(end_date,\n" +
+                       "   'YYYYMMDD'),\n" +
+                       "   '99999999') AS end_date,\n" +
+                       "   case       \n" +
+                       "      when commodityclass_code = '6' then 1      \n" +
+                       "      when commodityclass_code = '7' then 2      \n" +
+                       "      when commodityclass_code = '5' then 3      \n" +
+                       "      when commodityclass_code = '3' then 4      \n" +
+                       "      when commodityclass_code = '2' then 5      \n" +
+                       "      when commodityclass_code = '4' then 6      \n" +
+                       "      when commodityclass_code = '1' then 7      \n" +
+                       "      when commodityclass_code = '9' then 8      \n" +
+                       "      when commodityclass_code = '18' then 10      \n" +
+                       "      when commodityclass_code = '11' then 11      \n" +
+                       "      when commodityclass_code = '10' then 12      \n" +
+                       "      when commodityclass_code = '14' then 13      \n" +
+                       "      when commodityclass_code = '8' then 14      \n" +
+                       "      when commodityclass_code = '15' then 15      \n" +
+                       "      when commodityclass_code = '16' then 16      \n" +
+                       "      when commodityclass_code = '12' then 17      \n" +
+                       "      when commodityclass_code = '17' then 18    \n" +
+                       "   end as commodityclass_order,\n" +
+                       "   case \n" +
+                       "      when commodityclass_code in ('9',\n" +
+                       "      '13',\n" +
+                       "      '18',\n" +
+                       "      '11',\n" +
+                       "      '10',\n" +
+                       "      '14',\n" +
+                       "      '8',\n" +
+                       "      '15',\n" +
+                       "      '16',\n" +
+                       "      '12',\n" +
+                       "      '17') then '1' \n" +
+                       "      else '0'      \n" +
+                       "   end as commodityclass_mixed             \n" +
+                       "FROM\n" +
+                       "   cpl,\n" +
+                       "   cpl_subnational,\n" +
+                       "   policy  \n" +
+                       "WHERE\n" +
+                       "   cpl.cpl_id = policy.cpl_id  \n" +
+                       "   AND cpl.cpl_id = cpl_subnational.cpl_id"
             ),
     OECD_View_ImportTariffs
             (
