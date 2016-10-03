@@ -70,40 +70,7 @@ public enum Query {
                        "   '99999999') AS start_date,\n" +
                        "   to_number(to_char(end_date,\n" +
                        "   'YYYYMMDD'),\n" +
-                       "   '99999999') AS end_date,\n" +
-                       "   case       \n" +
-                       "      when commodityclass_code = '6' then 1      \n" +
-                       "      when commodityclass_code = '7' then 2      \n" +
-                       "      when commodityclass_code = '5' then 3      \n" +
-                       "      when commodityclass_code = '3' then 4      \n" +
-                       "      when commodityclass_code = '2' then 5      \n" +
-                       "      when commodityclass_code = '4' then 6      \n" +
-                       "      when commodityclass_code = '1' then 7      \n" +
-                       "      when commodityclass_code = '9' then 8      \n" +
-                       "      when commodityclass_code = '18' then 10      \n" +
-                       "      when commodityclass_code = '11' then 11      \n" +
-                       "      when commodityclass_code = '10' then 12      \n" +
-                       "      when commodityclass_code = '14' then 13      \n" +
-                       "      when commodityclass_code = '8' then 14      \n" +
-                       "      when commodityclass_code = '15' then 15      \n" +
-                       "      when commodityclass_code = '16' then 16      \n" +
-                       "      when commodityclass_code = '12' then 17      \n" +
-                       "      when commodityclass_code = '17' then 18    \n" +
-                       "   end as commodityclass_order,\n" +
-                       "   case \n" +
-                       "      when commodityclass_code in ('9',\n" +
-                       "      '13',\n" +
-                       "      '18',\n" +
-                       "      '11',\n" +
-                       "      '10',\n" +
-                       "      '14',\n" +
-                       "      '8',\n" +
-                       "      '15',\n" +
-                       "      '16',\n" +
-                       "      '12',\n" +
-                       "      '17') then '1' \n" +
-                       "      else '0'      \n" +
-                       "   end as commodityclass_mixed             \n" +
+                       "   '99999999') AS end_date \n" +
                        "FROM\n" +
                        "   cpl,\n" +
                        "   cpl_subnational,\n" +

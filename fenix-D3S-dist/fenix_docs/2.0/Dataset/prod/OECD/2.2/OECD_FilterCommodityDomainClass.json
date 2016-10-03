@@ -1,5 +1,5 @@
 {
-  "uid" : "FilterCommodityDomainClass",
+  "uid" : "OECD_FilterCommodity",
   "title" : {
     "EN" : "Filter for selecting commodity domain and policy type or measure"
   },
@@ -76,9 +76,9 @@
       {
         "dataType" : "number",
         "key" : false,
-        "id" : "orderFixed",
+        "id" : "sorting",
         "title" : {
-          "EN" : "Order"
+          "EN" : "Sorting"
         }
       },
       {

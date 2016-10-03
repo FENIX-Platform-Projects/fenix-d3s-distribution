@@ -1,0 +1,37 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "OECD_View_QueryDownload"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "policytype"
+      ],
+      "rows": {
+        "commoditydomain": {
+          "codes": [
+            {
+              "uid": "OECD_CommodityDomain",
+              "version": "1.0",
+              "codes": [
+                "2"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "policytype"
+      ],
+      "aggregations": []
+    }
+  }
+]
