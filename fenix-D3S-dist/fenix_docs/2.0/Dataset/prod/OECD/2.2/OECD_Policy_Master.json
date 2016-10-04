@@ -44,7 +44,6 @@
 
       {
         "dataType" : "text",
-        "key" : true,
         "id" : "cpl_id",
         "title" : {
           "EN" : "CPL ID"
