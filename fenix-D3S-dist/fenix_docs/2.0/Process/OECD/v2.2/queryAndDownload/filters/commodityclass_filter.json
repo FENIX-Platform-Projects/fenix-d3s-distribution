@@ -1,0 +1,39 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "OECD_CommodityClass"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "commodityclass_code"
+      ],
+      "rows": {
+        "commoditydomain": {
+          "codes": [
+            {
+              "uid": "OECD_CommodityDomain",
+              "version": "1.0",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "mixed": {
+          "enumeration": [
+            "1"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "sorting": "DESC"
+    }
+  }
+]

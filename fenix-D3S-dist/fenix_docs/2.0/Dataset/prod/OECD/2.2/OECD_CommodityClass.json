@@ -1,7 +1,7 @@
 {
-  "uid" : "OECD_FilterCommodity",
+  "uid" : "OECD_CommodityClass",
   "title" : {
-    "EN" : "Filter for selecting commodity domain and policy type or measure"
+    "EN" : "Filter for selecting commodity domain and commodity class"
   },
   "language" : {
     "version" : "1998",
@@ -48,7 +48,7 @@
       {
         "dataType" : "code",
         "key" : false,
-        "id" : "commoditydomain",
+        "id" : "commoditydomain_code",
         "title" : {
           "EN" : "Commodity domain"
         },
@@ -62,7 +62,7 @@
       {
         "dataType" : "code",
         "key" : false,
-        "id" : "commodityclass",
+        "id" : "commodityclass_code",
         "title" : {
           "EN" : "Commodity class"
         },

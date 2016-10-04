@@ -1,54 +1,7 @@
 package org.fao.policy.d3s;
 
 public enum Query {
-    OECD_View_QueryDownloadPreview
-            (
-                 "   select\n" +
-                         "                    metadata_id,\n" +
-                         "                    to_char(policy_id, 'FM999999999999999999') as policy_id,\n" +
-                         "                    to_char(cpl.cpl_id, 'FM999999999999999999') as cpl_id,\n" +
-                         "                    to_char(commodity.commodity_id, 'FM999999999999999999') as commodity_id,\n" +
-                         "                    hs_version,\n" +
-                         "                    hs_code,\n" +
-                         "                    hs_suffix,\n" +
-                         "                    element_code,\n" +
-                         "                    to_number(to_char(start_date,'YYYYMMDD'), '99999999') as start_date,\n" +
-                         "                    to_number(to_char(end_date,'YYYYMMDD'), '99999999') as end_date,\n" +
-                         "                    units,\n" +
-                         "                    value,\n" +
-                         "                    value_text,\n" +
-                         "                    value_type,\n" +
-                         "                    exemptions,\n" +
-                         "                    minavtariffvalue,\n" +
-                         "                    notes,\n" +
-                         "                    link,\n" +
-                         "                    source,\n" +
-                         "                    title_of_notice,\n" +
-                         "                    legal_basis_name,\n" +
-                         "                    to_number(to_char(date_of_publication,'YYYYMMDD'), '99999999') as date_of_publication,\n" +
-                         "                    imposed_end_date,\n" +
-                         "                    second_generation_specific,\n" +
-                         "                    benchmark_tax,\n" +
-                         "                    benchmark_product,\n" +
-                         "                    tax_rate_biofuel,\n" +
-                         "                    tax_rate_benchmark,\n" +
-                         "                    start_date_tax,\n" +
-                         "                    benchmark_link,\n" +
-                         "                    original_dataset,\n" +
-                         "                    type_of_change_code,\n" +
-                         "                    measure_description,\n" +
-                         "                    product_original_hs,\n" +
-                         "                    product_original_name,\n" +
-                         "                    link_pdf,\n" +
-                         "                    benchmark_link_pdf,\n" +
-                         "                    short_description,\n" +
-                         "                    sharedgroup_code,\n" +
-                         "                    description,\n" +
-                         "                    maxavtariffvalue,\n" +
-                         "                    countavtariff,\n" +
-                         "                    countnavtariff\n" +
-                         "                    from cpl, policy, commodity where cpl.cpl_id = policy.cpl_id and commodity.commodity_id = policy.commodity_id;"
-            ),
+
     OECD_View_QueryDownload
             (
                "SELECT\n" +
@@ -294,11 +247,8 @@ public enum Query {
                    "                                           on ((h.end_year is null AND year >= h.start_year) OR\n" +
                    "                                          (year  between h.start_year and h.end_year) )"
     ),
-    FilterCommodityPolicy(
-            "select commoditydomain, policydomain, policytype, policymeasure from filtercommoditypolicy"
-    ),
-    FilterCommodityDomainClass (
-            "select * from filtercommodityclassdomain "
+    OECD_CommodityClass (
+            "select * from commodityclass"
     ),
     OECD_Policy_Master (
             "select cpl.cpl_id, cpl.country_code, subnational_codes, cpl.commodityclass_code, cpl.commodity_id, policydomain_code, policytype_code, policymeasure_code, condition_code, individualpolicy_code,\n" +
