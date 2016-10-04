@@ -107,29 +107,45 @@
 
 --structure--
 csvSeparator=;
-structure=table
+structure=tree
 dateFormat=dd/mm/yyyy
-codeColumnsIndex=1
-titleColumnIndex_EN=2
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
 
 --data--
+;18;Maize + Rice + Soybeans + Wheat
+;5;Ethanol
+;6;Biodiesel
+;7;Biofuel (unspecified)
 
-1;Wheat
-2;Rice
-3;Maize
-4;Soybeans
-5;Ethanol
-6;Biodiesel
-7;Biofuel (unspecified)
-8;Maize + Wheat
-9;Maize + Rice
-10;Maize + Soybeans
-11;Maize + Rice + Wheat
-12;Rice + Wheat
-13;Maize + Rice + Soybeans
-14;Maize + Soybeans + Wheat
-15;Rice + Soybeans
-16;Rice + Soybeans + Wheat
-17;Soybeans + Wheat
-18;Maize + Rice + Soybeans + Wheat
+18;11;Maize + Rice + Wheat
+18;13;Maize + Rice + Soybeans
+18;14;Maize + Soybeans + Wheat
+18;16;Rice + Soybeans + Wheat
+
+11;8;Maize + Wheat
+14;8;Maize + Wheat
+11;9;Maize + Rice
+13;9;Maize + Rice
+13;10;Maize + Soybeans
+14;10;Maize + Soybeans
+11;12;Rice + Wheat
+16;12;Rice + Wheat
+13;15;Rice + Soybeans
+16;15;Rice + Soybeans
+14;17;Soybeans + Wheat
+16;17;Soybeans + Wheat
+
+8;1;Wheat
+12;1;Wheat
+17;1;Wheat
+9;2;Rice
+12;2;Rice
+15;2;Rice
+8;3;Maize
+9;3;Maize
+10;3;Maize
+10;4;Soybeans
+15;4;Soybeans
+17;4;Soybeans
 
