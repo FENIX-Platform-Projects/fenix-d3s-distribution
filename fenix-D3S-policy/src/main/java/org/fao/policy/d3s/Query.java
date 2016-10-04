@@ -247,7 +247,7 @@ public enum Query {
                    "                                           on ((h.end_year is null AND year >= h.start_year) OR\n" +
                    "                                          (year  between h.start_year and h.end_year) )"
     ),
-    OECD_CommodityClass (
+    OECD_CommodityClassFilter (
             "select * from commodityclass"
     ),
     OECD_Policy_Master (

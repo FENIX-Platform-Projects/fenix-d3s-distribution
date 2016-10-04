@@ -3,15 +3,16 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "OECD_CommodityClass"
+        "uid": "OECD_CommodityClassFilter"
       }
     ],
     "parameters": {
       "columns": [
-        "commodityclass_code"
+        "commodityclass_code",
+        "sorting"
       ],
       "rows": {
-        "commoditydomain": {
+        "commoditydomain_code": {
           "codes": [
             {
               "uid": "OECD_CommodityDomain",
@@ -34,6 +35,14 @@
     "name": "order",
     "parameters": {
       "sorting": "DESC"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "commodityclass_code"
+      ]
     }
   }
 ]
