@@ -1,0 +1,50 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_project_analysis"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "donorcode",
+        "purposecode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2016
+            }
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "998"
+              ]
+            }
+          ]
+        },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "50"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

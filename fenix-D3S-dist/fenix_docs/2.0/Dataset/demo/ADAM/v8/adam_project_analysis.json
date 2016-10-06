@@ -68,7 +68,7 @@
       },
       {
         "id" : "fao_sector",
-        "title" : { "EN" : "Fao_Sector" },
+        "title" : { "EN" : "Fao Sector" },
         "dataType" : "text",
         "key": true
       },
@@ -83,3 +83,4 @@
     ]
   }
 }
+

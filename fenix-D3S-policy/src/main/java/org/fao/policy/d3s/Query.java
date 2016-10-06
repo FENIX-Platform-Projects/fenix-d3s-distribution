@@ -300,9 +300,7 @@ public enum Query {
             "\ton (cpl.cpl_id = subnational.cpl_id)\n" +
             ") cpl join policy on (cpl.cpl_id = policy.cpl_id)\n" +
             "join commodity on (cpl.commodity_id = commodity.commodity_id)"
-    )
-
-    ;
+    );
 
 
 
