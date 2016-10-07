@@ -11,13 +11,15 @@
         "donorcode",
         "purposecode",
         "value",
-        "unitcode"
+        "unitcode",
+        "oda"
+
       ],
       "rows": {
         "year": {
           "time": [
             {
-              "from": 2000,
+              "from": 2016,
               "to": 2016
             }
           ]
@@ -39,12 +41,52 @@
               "uid": "crs_donors",
               "version": "2016",
               "codes": [
-                "50"
+                "998"
               ]
             }
           ]
         }
       }
     }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "OECD Dac"
+        },
+        "subject": null
+      },
+      "value": {
+        "keys": ["oda = 'usd_commitment'", "oda = 'usd_commitment'"],
+        "values": ["Commitment (Mil $)", "Disbursement (Mil $)"]
+      }
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_project_analysis"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "donorcode",
+        "purposecode",
+        "value",
+        "unitcode",
+        "indicator"
+
+      ],
+      "rows": {
+
+      }
+    }
   }
+
+
 ]

@@ -8,10 +8,8 @@
     ],
     "parameters": {
       "columns": [
-        "donorcode",
         "purposecode",
-        "value",
-        "unitcode"
+        "value"
       ],
       "rows": {
         "year": {
@@ -29,7 +27,6 @@
     "name": "group",
     "parameters": {
       "by": [
-        "donorcode",
         "purposecode"
       ],
       "aggregations": [
@@ -38,12 +35,6 @@
             "value"
           ],
           "rule": "SUM"
-        },
-        {
-          "columns": [
-            "unitcode"
-          ],
-          "rule": "first"
         }
       ]
     }
@@ -52,6 +43,111 @@
     "name": "order",
     "parameters": {
       "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    },
+    "rid":{"uid":"top_10_purposes"}
+  },
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_priority_analysis"
+      },
+      {
+        "uid": "top_10_purposes"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "purposecode",
+        "donorcode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        },
+        "purposecode":{
+          "tables":[
+            {
+              "uid":"top_10_purposes",
+              "column":"purposecode"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "purposecode",
+        "donorcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "rank",
+        "title": {
+          "EN": "Rank"
+        },
+        "subject": null
+      },
+      "value": "rank() over (partition by purposecode order by value DESC)"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "purposecode",
+        "donorcode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "rank": {
+          "number": [
+            {
+              "from": 1,
+              "to": 10
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "purposecode": "DESC",
+      "donorcode":"DESC"
     }
   }
 ]
