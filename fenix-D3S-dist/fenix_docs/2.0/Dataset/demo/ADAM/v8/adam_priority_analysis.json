@@ -14,6 +14,14 @@
     },
     "columns" : [
       {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] },
+        "key": true
+
+      },
+      {
         "id" : "donorcode",
         "title" : { "EN" : "Resource Partner" },
         "dataType" : "code",
