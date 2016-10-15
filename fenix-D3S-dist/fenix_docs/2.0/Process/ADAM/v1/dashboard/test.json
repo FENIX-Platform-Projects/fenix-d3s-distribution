@@ -1,100 +1,46 @@
 [
   {
-    "name": "filter",
+    "name": "union",
     "sid": [
       {
-        "uid": "adam_priority_analysis"
-      }
-    ],
-    "parameters": {
-      "columns": [
-        "purposecode",
-        "value"
-      ],
-      "rows": {
-        "year": {
-          "time": [
-            {
-              "from": "2000",
-              "to": "2014"
-            }
-          ]
-        },
-        "purposecode": {
-          "codes": [
-            {
-              "uid": "crs_purposes",
-              "version": "2016",
-              "codes": [
-                "31120",
-                "31130",
-                "41010",
-                "52010"
-              ]
-            }
-          ]
-        }
-      }
-    },
-    "rid": {
-      "uid": "filter_top_10"
-    }
-  },
-  {
-    "name": "group",
-    "parameters": {
-      "by": [
-        "purposecode"
-      ],
-      "aggregations": [
-        {
-          "columns": [
-            "value"
-          ],
-          "rule": "SUM"
-        }
-      ]
-    }
-  },
-  {
-    "name": "order",
-    "parameters": {
-      "value": "DESC"
-    }
-  },
-  {
-    "name": "page",
-    "parameters": {
-      "perPage": 10,
-      "page": 1
-    },
-    "rid": {
-      "uid": "top_10_purposes"
-    }
-  },
-  {
-    "name": "filter",
-    "sid": [
-      {
-        "uid": "adam_priority_analysis"
+        "uid": "top_10_donors_sum"
       },
       {
-        "uid": "top_10_purposes"
+        "uid": "others"
+      }
+    ],
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_usd_aggregated_table"
       }
     ],
     "parameters": {
       "columns": [
-        "purposecode",
         "donorcode",
         "value",
         "unitcode"
       ],
       "rows": {
-        "purposecode": {
-          "tables": [
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "parentsector_code": {
+          "codes": [
             {
-              "uid": "top_10_purposes",
-              "column": "purposecode"
+              "uid": "crs_dac",
+              "version": "2016",
+              "codes": [
+                "500"
+              ]
             }
           ]
         },
@@ -109,14 +55,13 @@
       }
     },
     "rid": {
-      "uid": "filter_top_10_purposes"
+      "uid": "filter_top_10_donors_sum"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "purposecode",
         "donorcode"
       ],
       "aggregations": [
@@ -125,58 +70,37 @@
             "value"
           ],
           "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
         }
       ]
     }
   },
   {
-    "name": "addcolumn",
+    "name": "order",
     "parameters": {
-      "column": {
-        "dataType": "number",
-        "id": "rank",
-        "title": {
-          "EN": "Rank"
-        },
-        "subject": null
-      },
-      "value": "rank() over (partition by purposecode order by value DESC)"
-    }
-  },
-
-
-  {
-    "name": "filter",
-    "parameters": {
-      "columns": [
-        "purposecode",
-        "donorcode",
-        "value",
-        "rank",
-        "unitcode"
-      ],
-      "rows": {
-        "rank": {
-          "number": [
-            {
-              "from": 1,
-              "to": 10
-            }
-          ]
-        }
-      }
+      "value": "DESC"
     },
     "rid": {
-      "uid": "filter_top_10_purposes_donors"
+      "uid": "filtered_dataset"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
     }
   },
   {
     "name": "group",
-    "sid":[{"uid":"filter_top_10_purposes_donors"}],
     "parameters": {
       "by": [
-        "purposecode"
-
+        "unitcode"
       ],
       "aggregations": [
         {
@@ -186,19 +110,91 @@
           "rule": "SUM"
         }
       ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "Top Resource Partners"
     },
     "rid": {
-      "uid": "filter_aggregated_top10"
+      "uid": "top_10_donors_sum"
+    }
+  },
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "filtered_dataset"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "unitcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "sum of all donors"
+    },
+    "rid": {
+      "uid": "top_all_donors_sum"
     }
   },
   {
     "name": "join",
     "sid": [
       {
-        "uid": "filter_top_10_purposes_donors"
+        "uid": "top_all_donors_sum"
       },
       {
-        "uid": "filter_aggregated_top10"
+        "uid": "top_10_donors_sum"
       }
     ],
     "parameters": {
@@ -206,26 +202,29 @@
         [
           {
             "type": "id",
-            "value": "purposecode"
+            "value": "unitcode"
           }
-
         ],
         [
           {
             "type": "id",
-            "value": "purposecode"
+            "value": "unitcode"
           }
-
         ]
       ],
-      "values": [
-      ]
+      "values": []
+    },
+    "rid": {
+      "uid": "join_process_total_donors"
     }
   },
-
-
   {
     "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "join_process_total_donors"
+      }
+    ],
     "parameters": {
       "column": {
         "dataType": "number",
@@ -233,33 +232,52 @@
         "title": {
           "EN": "Value"
         },
-        "subject":"value"
-
-
+        "subject": null
       },
-      "value": "filter_top_10_purposes_donors_value"
-    }
-  },
-
-  {
-    "name": "order",
-    "parameters": {
-      "filter_aggregated_top10_value":"DESC",
-      "value": "DESC"
+      "value": {
+        "keys": [
+          "1 = 1"
+        ],
+        "values": [
+          "top_all_donors_sum_value - top_10_donors_sum_value"
+        ]
+      }
     }
   },
   {
     "name": "filter",
     "parameters": {
       "columns": [
-        "purposecode",
-        "filter_top_10_purposes_donors_donorcode",
         "value",
         "unitcode"
-      ],
-      "rows": {
-      }
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "Other Resource Partners"
+    },
+    "rid": {
+      "uid": "others"
     }
   }
-
 ]

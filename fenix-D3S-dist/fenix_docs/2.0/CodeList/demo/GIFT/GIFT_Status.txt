@@ -117,3 +117,5 @@ titleColumnIndex_EN=3
 @F@Data Available in FAO/WHO GIFT for analysis
 @N@Data soon to be inserted in FAO/WHO GIFT
 @D@Existing data potentially suitable to be inserted in FAO/WHO GIFT
+@P@Planned food consumption survey
+@Z@Data waiting for approval

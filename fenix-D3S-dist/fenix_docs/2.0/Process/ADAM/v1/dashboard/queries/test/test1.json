@@ -1,0 +1,75 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_usd_aggregation_table_tot"
+      }
+    ],
+    "parameters": {
+      "rows": {
+
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "!gaul0": {
+          "codes": [
+            {
+              "uid": "GAUL0",
+              "version": "2014",
+              "codes": [
+                "NA"
+              ]
+            }
+          ]
+        },
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "99821"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2014"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_region"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "gaul0"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  }
+]
