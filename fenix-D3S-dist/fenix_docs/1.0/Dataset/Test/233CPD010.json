@@ -1,0 +1,5671 @@
+{
+  "parentUid": null,
+  "uid": "233CPD010",
+  "language": "FR",
+  "title": {
+    "FR": "Répartition de la production des cultures primaires  "
+  },
+  "summary": null,
+  "description": null,
+  "supplemental": null,
+  "creationDate": 1416006000000,
+  "geographicExtent": {
+    "code": "42",
+    "level": 1,
+    "title": {
+      "PT": "Burkina Faso",
+      "FR": "Burkina Faso",
+      "EN": "Burkina Faso",
+      "AR": "بوركينا فاسو",
+      "RU": "Буркина-Фасо",
+      "ES": "Burkina Faso",
+      "ZH": "布基纳法索"
+    },
+    "description": null,
+    "supplemental": null,
+    "fromDate": -30609795600000,
+    "toDate": 32503676400000,
+    "aggregationRules": null,
+    "childs": null,
+    "relations": null,
+    "conversions": null,
+    "propaedeutics": null,
+    "exclusionList": null,
+    "systemKey": "GAUL",
+    "systemVersion": "1.0"
+  },
+  "referencePeriod": null,
+  "basePeriod": null,
+  "coverageSectors": null,
+  "comparability": null,
+  "statisticalUnit": null,
+  "unitOfMeasure": {
+    "code": "100",
+    "level": 1,
+    "title": {
+      "PT": "Tonelada",
+      "FR": "Tonnes",
+      "EN": "Ton"
+    },
+    "description": null,
+    "supplemental": null,
+    "fromDate": null,
+    "toDate": null,
+    "aggregationRules": null,
+    "childs": null,
+    "relations": null,
+    "conversions": null,
+    "propaedeutics": null,
+    "exclusionList": null,
+    "systemKey": "CS_Units",
+    "systemVersion": "1.0"
+  },
+  "coverageGeographical": null,
+  "unitOfMeasureDetails": null,
+  "codingSystems": null,
+  "weightReferencePeriod": null,
+  "classificationSystems": null,
+  "collectionPeriodicity": {
+    "code": "10",
+    "level": 1,
+    "title": {
+      "PT": "Anual",
+      "FR": "Annuel",
+      "EN": "Annually"
+    },
+    "description": null,
+    "supplemental": null,
+    "fromDate": null,
+    "toDate": null,
+    "aggregationRules": null,
+    "childs": null,
+    "relations": null,
+    "conversions": null,
+    "propaedeutics": null,
+    "exclusionList": null,
+    "systemKey": "FAOSTAT_Periodicity",
+    "systemVersion": "1.0"
+  },
+  "processMethodologyDocuments": null,
+  "compilationProcessing": null,
+  "collectionProcessing": null,
+  "indexType": null,
+  "processConceptsDocuments": [
+    {
+      "title": {
+        "FR": "Concepts et définitions de la FAO"
+      },
+      "description": null,
+      "link": "http://countrystat.org/resources/metadata_fr.pdf",
+      "id": "15_7",
+      "publicationDate": 1384902000000
+    }
+  ],
+  "processConcepts": null,
+  "sourceType": null,
+  "aggregationProcessing": {
+    "FR": "<BLOCKQUOTE dir=ltr style=\"MARGIN-RIGHT: 0px\"> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt -2.8pt\" align=left><FONT face=Tahoma size=2><SPAN lang=FR>Lors des séances de travail, les résultats définitifs sont présentés aux directeurs régionaux. A ce stade, les discussions portent toujours sur les vraisemblances.<?xml:namespace prefix = o /><o:p></o:p></SPAN></FONT></P> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt -2.8pt\" align=left><FONT size=3><FONT face=Arial><SPAN lang=FR><FONT face=Tahoma size=2>Les résultats des travaux avec les directeurs régionaux sont partagés au cours de la réunion interne avec les directions centrale du ministère. C’est au cours de cette séance que l’ensemble du ministère prend connaissance des résultats avant leur présentation lors de l’atelier national.</FONT></SPAN></FONT></FONT></P> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt -2.8pt\" align=left><FONT size=3><FONT face=Arial><SPAN lang=FR><FONT face=Tahoma size=2></FONT></SPAN></FONT></FONT> </P><FONT size=3><FONT face=Arial><SPAN lang=FR><FONT size=3><FONT face=\"Times New Roman\"> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt\"><SPAN><STRONG>Les statistiques des cultures</STRONG>:<o:p></o:p></SPAN></P> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt\"><SPAN style=\"FONT-SIZE: 11pt; FONT-FAMILY: Arial\"><o:p> </o:p></SPAN></P> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt\"><SPAN lang=FR style=\"FONT-SIZE: 11pt; FONT-FAMILY: Arial; mso-ansi-language: FR\">Les statistiques des cultures proviennent essentiellement du dispositif de <STRONG>l’Enquête Permanente Agricole (EPA),</STRONG> de <STRONG>l’Enquête Maraîchère</STRONG> pilotés par la DGPER qui sont conduites chaque année.<o:p></o:p></SPAN></P> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt\"></FONT></FONT></P> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt -2.8pt\" align=left></SPAN></FONT></FONT> </P> <P class=MsoNormal style=\"MARGIN: 0cm 0cm 0pt -2.8pt\" align=left><FONT size=3><FONT face=Arial><SPAN lang=FR><FONT face=Tahoma size=2></FONT><?xml:namespace prefix = u1 /><u1:p></u1:p></SPAN><B><o:p></o:p></B></FONT></FONT> </P></BLOCKQUOTE> <P><LINK href=\"file:///C:%5CUsers%5CESSS140%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_filelist.xml\" rel=File-List><LINK href=\"file:///C:%5CUsers%5CESSS140%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_themedata.thmx\" rel=themeData><LINK href=\"file:///C:%5CUsers%5CESSS140%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_colorschememapping.xml\" rel=colorSchemeMapping> <STYLE> <!-- /* Font Definitions */ @font-face {font-family:\"Cambria Math\"; panose-1:2 4 5 3 5 4 6 3 2 4; mso-font-charset:0; mso-generic-font-family:roman; mso-font-pitch:variable; mso-font-signature:-1610611985 1107304683 0 0 159 0;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4; mso-font-charset:0; mso-generic-font-family:swiss; mso-font-pitch:variable; mso-font-signature:-1610611985 1073750139 0 0 159 0;} /* Style Definitions */ p.MsoNormal, li.MsoNormal, div.MsoNormal {mso-style-unhide:no; mso-style-qformat:yes; mso-style-parent:\"\"; margin-top:0cm; margin-right:0cm; margin-bottom:10.0pt; margin-left:0cm; line-height:115%; mso-pagination:widow-orphan; font-size:11.0pt; font-family:\"Calibri\",\"sans-serif\"; mso-fareast-font-family:Calibri; mso-bidi-font-family:\"Times New Roman\"; mso-fareast-language:EN-US;} .MsoChpDefault {mso-style-type:export-only; mso-default-props:yes; font-size:10.0pt; mso-ansi-font-size:10.0pt; mso-bidi-font-size:10.0pt; mso-ascii-font-family:Calibri; mso-fareast-font-family:Calibri; mso-hansi-font-family:Calibri;} @page Section1 {size:612.0pt 792.0pt; margin:70.85pt 70.85pt 70.85pt 70.85pt; mso-header-margin:36.0pt; mso-footer-margin:36.0pt; mso-paper-source:0;} div.Section1 {page:Section1;} --> </STYLE> </P>"
+  },
+  "dataAdjustment": null,
+  "accuracy": null,
+  "accuracyAssessment": null,
+  "completeness": null,
+  "qualityMethodologyDocuments": null,
+  "disseminationPeriodicity": null,
+  "userAccess": null,
+  "disseminationFormat": null,
+  "revisionPolicy": null,
+  "embargoTimeSpec": {
+    "FR": "3 Mois"
+  },
+  "publications": null,
+  "news": null,
+  "confidentialityDataTreatment": null,
+  "confidentialityPolicy": null,
+  "releasePolicy": null,
+  "dataSources": null,
+  "otherDisseminatedData": null,
+  "provider": null,
+  "owner": {
+    "id": "12_725",
+    "institution": null,
+    "department": null,
+    "name": "Lassina",
+    "surname": "PARE",
+    "title": null,
+    "description": null,
+    "supplemental": null,
+    "region": null,
+    "role": null,
+    "context": null,
+    "contactList": [
+      {
+        "type": "phone",
+        "contact": "0022650306803"
+      },
+      {
+        "type": "email",
+        "contact": "agristat@fasonet.bf"
+      },
+      {
+        "type": "address",
+        "contact": "03 BP 7010 OUAGADOUGOU 03"
+      }
+    ]
+  },
+  "sources": null,
+  "contacts": null,
+  "compiler": null,
+  "coverageTime": null,
+  "accessibility": null,
+  "updateDate": 1416006000000,
+  "referenceUpdateDate": null,
+  "nextUpdateDate": null,
+  "completenessPercentage": null,
+  "updatePeriodicity": {
+    "code": "10",
+    "level": 1,
+    "title": {
+      "PT": "Anual",
+      "FR": "Annuel",
+      "EN": "Annually"
+    },
+    "description": null,
+    "supplemental": null,
+    "fromDate": null,
+    "toDate": null,
+    "aggregationRules": null,
+    "childs": null,
+    "relations": null,
+    "conversions": null,
+    "propaedeutics": null,
+    "exclusionList": null,
+    "systemKey": "FAOSTAT_Periodicity",
+    "systemVersion": "1.0"
+  },
+  "transferOptions": null,
+  "categories": null,
+  "statisticalPopulation": null,
+  "freeExtension": {
+    "accessLevel": 0,
+    "decimalsNumber": 0,
+    "coverageGeographical": [
+      {
+        "IDCoverage": "4",
+        "TextOther": ""
+      },
+      {
+        "IDCoverage": "11",
+        "TextOther": "Province"
+      }
+    ],
+    "survey": [
+      {
+        "FR": {
+          "title": "Enqu&#234;te Permanente Agricoles (EPA) et Enqu&#234;te Mara&#238;ch&#232;re",
+          "link": "",
+          "overview": "&lt;blockquote&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -2.8pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;&lt;br&gt;La vocation premi&#232;re du dispositif est l’&#233;valuation des superficies, des rendements et des productions des principales cultures en saison pluvieuse et en saison s&#232;che. Cette &#233;valuation est faite en deux temps : ao&#251;t et septembre, pour les pr&#233;visions saisonni&#232;res, et &#224; la fin des r&#233;coltes pour les r&#233;sultats d&#233;finitifs.&lt;!--?xml:namespace prefix = o /--&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt 27pt; TEXT-INDENT: -31.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;Les objectifs sp&#233;cifiques vis&#233;s par l’enqu&#234;te sont :&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt 9pt; TEXT-INDENT: -13.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;1.&#160;&lt;span&gt;&#160; &lt;/span&gt;&#233;valuer les superficies, les rendements et les productions agricoles d&#233;finitives par province et du pays pour chaque culture.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt 9pt; TEXT-INDENT: -13.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;2.&#160;&lt;span&gt;&#160; &lt;/span&gt;r&#233;aliser des pr&#233;visions de r&#233;coltes c&#233;r&#233;ali&#232;res courant septembre de chaque ann&#233;e afin d’informer tr&#232;s t&#244;t le gouvernement et ses partenaires au d&#233;veloppement de fa&#231;on objective sur la situation de la campagne. Ces pr&#233;visionspermettent d’&#233;tablir un bilan c&#233;r&#233;alier pr&#233;visionnel ;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt 9pt; TEXT-INDENT: -13.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;&lt;span&gt;3.&#160;&#160; &lt;/span&gt;faire des estimations de stocks r&#233;siduels paysans courant septembre ;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;Outre ces donn&#233;es, le dispositif permet de collecter des informations sur le cr&#233;dit, l’utilisation des intrants, la commercialisation, la population agricole, l’occupation de la population agricole, les sources de revenus mon&#233;taires, le cheptel rattach&#233; aux m&#233;nages agricoles, la d&#233;mographie des m&#233;nages agricoles, etc. Les donn&#233;es &#233;tant collect&#233;es avec un niveau suffisamment d&#233;taill&#233;, des analyses plus approfondies peuvent &#234;tre faites, notamment sur la s&#233;curit&#233; alimentaire des m&#233;nages, les analyses diff&#233;renci&#233;es par sexe &lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;/blockquote&gt;",
+          "design": "&lt;blockquote&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;&lt;br&gt;Les choix r&#233;alis&#233;s &#224; cette &#233;tape porte sur les d&#233;finitions, la construction des nomenclatures, l’identification la voie de collecte des informations de chaque fiche : par des enqu&#234;teurs, par contr&#244;leur, exploitation de documents administratifs. Il convient de d&#233;finir les unit&#233;s statistiques (personnes ou les objets) sur lesquels porte le questionnaire : l&#39;individu, le m&#233;nage, la parcelle agricole, etc. A cette &#233;tape du processus, les structures externes, les superviseurs r&#233;gionaux et les cadres de la DGPER valide les questionnaires au cours d’un atelier de validation des manuels et questionnaires&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;/blockquote&gt;",
+          "conduct": "&lt;blockquote&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;b&gt;&lt;span lang=&quot;FR&quot;&gt;&lt;br&gt;Les missions de supervision terrain effectuent de contre-enqu&#234;tes&lt;/span&gt;&lt;/b&gt;&lt;span lang=&quot;FR&quot;&gt;.&lt;!--?xml:namespace prefix = o /--&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;La premi&#232;re op&#233;ration du traitement apr&#232;s la saisie est l&#39;apurement du fichier. L&#39;apurement est indispensable car il permet de v&#233;rifier que tous les villages et m&#233;nages &#233;chantillons enqu&#234;t&#233;s sont saisis (exhaustivit&#233; des unit&#233;s), de d&#233;celer les erreurs de saisie, de v&#233;rifier que les donn&#233;es sont compl&#232;tes et coh&#233;rentes, de contr&#244;ler les r&#233;ponses ou les totaux manquants ou aberrants.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;&lt;o:p&gt;&#160;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;b&gt;&lt;span lang=&quot;FR&quot;&gt;Test de coh&#233;rence&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;Le test de coh&#233;rence a pour objectif de v&#233;rifier les incoh&#233;rences internes, l&#39;exactitude et la vraisemblance des donn&#233;es. C&#39;est une &#233;tape importante car la coh&#233;rence des r&#233;ponses est un des indicateurs de la qualit&#233; des donn&#233;es.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;&lt;o:p&gt;&#160;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;b&gt;&lt;span lang=&quot;FR&quot;&gt;Test de coh&#233;rence interne&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;Dans ce type de contr&#244;le, on examine les r&#233;ponses aux diverses questions pour rep&#233;rer les &#233;ventuelles contradictions (par exemple, poids net sup&#233;rieur &#224; poids brut).&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;&lt;o:p&gt;&#160;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;b&gt;&lt;span lang=&quot;FR&quot;&gt;V&#233;rification de l&#39;exactitude&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;Les tests d&#39;exactitude consistent essentiellement &#224; v&#233;rifier les additions et les multiplications. Par exemple, la somme des animaux appartenant aux hommes et aux femmes du m&#233;nage doit &#234;tre &#233;gale au total des animaux appartenant au m&#233;nage.&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;&lt;o:p&gt;&#160;&lt;/o:p&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;b&gt;&lt;span lang=&quot;FR&quot;&gt;V&#233;rification de la vraisemblance&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt -4.5pt&quot;&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;span lang=&quot;FR&quot;&gt;Les tests de vraisemblance consistent &#224; comparer les donn&#233;es recueillies &#224; d&#39;autres donn&#233;es d&#233;j&#224; publi&#233;es. Par exemple comparer les rendements aux rendements agronomiques fournit par la recherche.&lt;b&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/p&gt; &lt;p&gt;&lt;font face=&quot;Tahoma&quot; size=&quot;2&quot;&gt;&lt;/font&gt;&#160;&lt;/p&gt;&lt;/blockquote&gt;",
+          "statisticalReport": "&lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;Les rapports d’analyse&#160;se trouvent ci-dessous&#160;:&lt;/span&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;&lt;/span&gt;&#160;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/rapport_1996-1997.pdf&quot; target=&quot;_blank&quot;&gt;&lt;font color=&quot;#800080&quot;&gt;Rapport d&#39;analyse EPA campagne 1996-1997&lt;/font&gt;&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/rapport_1997-1998.pdf&quot; target=&quot;_blank&quot;&gt;Rapport d&#39;analyse EPA campagne 1997-1998&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/rapport_1998-1999.pdf&quot; target=&quot;_blank&quot;&gt;Rapport d&#39;analyse EPA campagne 1998-1999&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/rapport_1999-2000.pdf&quot; target=&quot;_blank&quot;&gt;Rapport d&#39;analyse EPA campagne 1999-2000&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/rapport_2001-2002.pdf&quot; target=&quot;_blank&quot;&gt;Rapport d&#39;analyse EPA campagne 2001-2002&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/rapport_2002-2003.pdf&quot; target=&quot;_blank&quot;&gt;&lt;font color=&quot;#800080&quot;&gt;Rapport d&#39;analyse EPA campagne 2002-2003&lt;/font&gt;&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/rapport_2003-2004.pdf&quot; target=&quot;_blank&quot;&gt;&lt;font color=&quot;#800080&quot;&gt;Rapport d&#39;analyse EPA campagne 2003-2004&lt;/font&gt;&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/rapport_2004-2005.pdf&quot; target=&quot;_blank&quot;&gt;&lt;font color=&quot;#800080&quot;&gt;Rapport d&#39;analyse EPA campagne 2004-2005&lt;/font&gt;&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;a title=&quot;&quot; href=&quot;/country/bfa/contents/docs/Rapport%20General%20des%20resultats%20previsionels%202010_2011%20finalx.pdf&quot; target=&quot;_self&quot;&gt;&lt;font color=&quot;#800080&quot;&gt;Rapport G&#233;n&#233;ral des r&#233;sultats previsionels 2010_2011 &lt;/font&gt;&lt;/a&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;&lt;/span&gt;&#160;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;----------------------------------------------------------&lt;/span&gt;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;Les rapports d’Enqu&#234;tes Mara&#238;ch&#232;re&#160;se trouvent ci-dessous&#160;:&lt;/span&gt;&lt;/p&gt;&lt;font face=&quot;TimesNewRoman,Bold&quot; size=&quot;7&quot;&gt;&lt;font face=&quot;TimesNewRoman,Bold&quot; size=&quot;7&quot;&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;&lt;/span&gt;&lt;/font&gt;&#160;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;a href=&quot;/Country/BFA/Doc/Survey/Analyse_1994_1996_1997.pdf&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;ANALYSE &lt;/span&gt;&lt;!--?xml:namespace prefix = st1 ns = &quot;urn:schemas-microsoft-com:office:smarttags&quot; /--&gt;&lt;st1:stockticker&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;DES&lt;/span&gt;&lt;/st1:stockticker&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt; RESULTATS DE L’ENQUETE MARAICHERE -CAMAPAGNE 1996 &#224; 1997&lt;!--?xml:namespace prefix = o ns = &quot;urn:schemas-microsoft-com:office:office&quot; /--&gt;&lt;o:p&gt;&lt;/o:p&gt;&lt;/span&gt;&lt;/a&gt;&lt;/font&gt;&lt;/p&gt;&lt;/font&gt;&lt;/font&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;&lt;/span&gt;&#160;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;&lt;/span&gt;&#160;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;&lt;/span&gt;&#160;&lt;/p&gt; &lt;p class=&quot;MsoNormal&quot; style=&quot;MARGIN: 0cm 0cm 0pt&quot;&gt;&lt;span lang=&quot;FR&quot; style=&quot;mso-ansi-language: FR&quot;&gt;&lt;/span&gt;&#160;&lt;/p&gt; &lt;p&gt;&#160;&lt;/p&gt;"
+        }
+      }
+    ],
+    "dimensionsPreferences": [
+      {
+        "showOnColumn": true,
+        "showOnRow": false,
+        "columnName": "Produit"
+      },
+      {
+        "showOnColumn": false,
+        "showOnRow": true,
+        "columnName": "Année"
+      }
+    ],
+    "MapDimensionID": 0,
+    "canAggregate": false,
+    "dimensionOnColIDs": [
+      2
+    ],
+    "dimensionOnRowIDs": [
+      1
+    ],
+    "source": "EPA/DGESS/MASA",
+    "columnsCountryStat": [
+      {
+        "columnId": "TIME",
+        "dataType": "year",
+        "title": {
+          "FR": "Année"
+        },
+        "dimension": {
+          "name": "TIME"
+        },
+        "valuesCountrystat": [
+          {
+            "code": "1984",
+            "label": "1984"
+          },
+          {
+            "code": "1985",
+            "label": "1985"
+          },
+          {
+            "code": "1986",
+            "label": "1986"
+          },
+          {
+            "code": "1987",
+            "label": "1987"
+          },
+          {
+            "code": "1988",
+            "label": "1988"
+          },
+          {
+            "code": "1989",
+            "label": "1989"
+          },
+          {
+            "code": "1990",
+            "label": "1990"
+          },
+          {
+            "code": "1991",
+            "label": "1991"
+          },
+          {
+            "code": "1992",
+            "label": "1992"
+          },
+          {
+            "code": "1993",
+            "label": "1993"
+          },
+          {
+            "code": "1994",
+            "label": "1994"
+          },
+          {
+            "code": "1995",
+            "label": "1995"
+          },
+          {
+            "code": "1996",
+            "label": "1996"
+          },
+          {
+            "code": "1997",
+            "label": "1997"
+          },
+          {
+            "code": "1998",
+            "label": "1998"
+          },
+          {
+            "code": "1999",
+            "label": "1999"
+          },
+          {
+            "code": "2000",
+            "label": "2000"
+          },
+          {
+            "code": "2001",
+            "label": "2001"
+          },
+          {
+            "code": "2002",
+            "label": "2002"
+          },
+          {
+            "code": "2003",
+            "label": "2003"
+          },
+          {
+            "code": "2004",
+            "label": "2004"
+          },
+          {
+            "code": "2005",
+            "label": "2005"
+          },
+          {
+            "code": "2006",
+            "label": "2006"
+          },
+          {
+            "code": "2007",
+            "label": "2007"
+          },
+          {
+            "code": "2008",
+            "label": "2008"
+          },
+          {
+            "code": "2009",
+            "label": "2009"
+          },
+          {
+            "code": "2010",
+            "label": "2010"
+          },
+          {
+            "code": "2011",
+            "label": "2011"
+          },
+          {
+            "code": "2012",
+            "label": "2012"
+          },
+          {
+            "code": "2013",
+            "label": "2013"
+          },
+          {
+            "code": "2014",
+            "label": "2014"
+          }
+        ]
+      },
+      {
+        "columnId": "ITEM",
+        "dataType": "customCode",
+        "title": {
+          "FR": "Produit"
+        },
+        "dimension": {
+          "name": "ITEM"
+        },
+        "valuesCountrystat": [
+          {
+            "code": "15",
+            "label": "Blé"
+          },
+          {
+            "code": "27",
+            "label": "Riz, paddy"
+          },
+          {
+            "code": "44",
+            "label": "Orge"
+          },
+          {
+            "code": "56",
+            "label": "Maïs"
+          },
+          {
+            "code": "68",
+            "label": "Maïs éclate"
+          },
+          {
+            "code": "71",
+            "label": "Seigle"
+          },
+          {
+            "code": "75",
+            "label": "Avoine"
+          },
+          {
+            "code": "79",
+            "label": "Mils"
+          },
+          {
+            "code": "83",
+            "label": "Sorgho"
+          },
+          {
+            "code": "89",
+            "label": "Sarrasin, blé noir"
+          },
+          {
+            "code": "92",
+            "label": "Quinoa"
+          },
+          {
+            "code": "94",
+            "label": "Fonio"
+          },
+          {
+            "code": "97",
+            "label": "Triticale"
+          },
+          {
+            "code": "101",
+            "label": "Alpiste"
+          },
+          {
+            "code": "103",
+            "label": "Céréales mélangées"
+          },
+          {
+            "code": "108",
+            "label": "Ceréales, nda"
+          },
+          {
+            "code": "108.1",
+            "label": "Teff"
+          },
+          {
+            "code": "116",
+            "label": "Pommes de terre"
+          },
+          {
+            "code": "122",
+            "label": "Patates douces"
+          },
+          {
+            "code": "125",
+            "label": "Manioc"
+          },
+          {
+            "code": "135",
+            "label": "Chou caraibe"
+          },
+          {
+            "code": "136",
+            "label": "Taros (colocases)"
+          },
+          {
+            "code": "137",
+            "label": "Ignames"
+          },
+          {
+            "code": "149",
+            "label": "Racines et tubercules nda"
+          },
+          {
+            "code": "156",
+            "label": "Sucre, canne"
+          },
+          {
+            "code": "157",
+            "label": "Sucre, betterave"
+          },
+          {
+            "code": "161",
+            "label": "Sucre, plantes sucrières, nda"
+          },
+          {
+            "code": "176",
+            "label": "Haricots secs"
+          },
+          {
+            "code": "181",
+            "label": "Fèves sèches"
+          },
+          {
+            "code": "187",
+            "label": "Pois secs"
+          },
+          {
+            "code": "191",
+            "label": "Pois chiches"
+          },
+          {
+            "code": "195",
+            "label": "Pois à vache secs"
+          },
+          {
+            "code": "197",
+            "label": "Pois cajan"
+          },
+          {
+            "code": "201",
+            "label": "Lentilles"
+          },
+          {
+            "code": "203",
+            "label": "Pois bambara"
+          },
+          {
+            "code": "205",
+            "label": "Vesces"
+          },
+          {
+            "code": "210",
+            "label": "Lupins"
+          },
+          {
+            "code": "211",
+            "label": "Légumineuses, nda"
+          },
+          {
+            "code": "216",
+            "label": "Noix du brésil non décortiquées"
+          },
+          {
+            "code": "217",
+            "label": "Noix d'acajou non décortiquées"
+          },
+          {
+            "code": "220",
+            "label": "Châtaignes"
+          },
+          {
+            "code": "221",
+            "label": "Amandes non décortiquées"
+          },
+          {
+            "code": "222",
+            "label": "Noix non décortiquées"
+          },
+          {
+            "code": "223",
+            "label": "Pistaches"
+          },
+          {
+            "code": "224",
+            "label": "Noix de kola"
+          },
+          {
+            "code": "225",
+            "label": "Noisettes non décortiquées"
+          },
+          {
+            "code": "226",
+            "label": "Noix d'arec"
+          },
+          {
+            "code": "234",
+            "label": "Fruits à coque nda"
+          },
+          {
+            "code": "236",
+            "label": "Soja"
+          },
+          {
+            "code": "242",
+            "label": "Arachides non décortiquées"
+          },
+          {
+            "code": "249",
+            "label": "Noix de coco"
+          },
+          {
+            "code": "254",
+            "label": "Huile, noix de palme"
+          },
+          {
+            "code": "256",
+            "label": "Palmistes"
+          },
+          {
+            "code": "257",
+            "label": "Huile de palme"
+          },
+          {
+            "code": "260",
+            "label": "Olives"
+          },
+          {
+            "code": "263",
+            "label": "Noix de karite"
+          },
+          {
+            "code": "265",
+            "label": "Ricin"
+          },
+          {
+            "code": "267",
+            "label": "Graines de tournesol"
+          },
+          {
+            "code": "270",
+            "label": "Colza"
+          },
+          {
+            "code": "275",
+            "label": "Noix d'abrasin"
+          },
+          {
+            "code": "277",
+            "label": "Graines de jojoba"
+          },
+          {
+            "code": "280",
+            "label": "Carthame"
+          },
+          {
+            "code": "289",
+            "label": "Sésame"
+          },
+          {
+            "code": "292",
+            "label": "Moutarde"
+          },
+          {
+            "code": "296",
+            "label": "Oeillette"
+          },
+          {
+            "code": "299",
+            "label": "Graines de melon"
+          },
+          {
+            "code": "305",
+            "label": "Graines d'arbre a suif"
+          },
+          {
+            "code": "310",
+            "label": "Kapok, fruit"
+          },
+          {
+            "code": "311",
+            "label": "Kapok, graines non décortiquées"
+          },
+          {
+            "code": "328",
+            "label": "Graines de coton"
+          },
+          {
+            "code": "329",
+            "label": "Graines de coton pour  la production de l'huile"
+          },
+          {
+            "code": "333",
+            "label": "Graines de lin"
+          },
+          {
+            "code": "336",
+            "label": "Chanvre"
+          },
+          {
+            "code": "339",
+            "label": "Graines oleagineuses nda"
+          },
+          {
+            "code": "358",
+            "label": "Choux et autres brassicacée"
+          },
+          {
+            "code": "366",
+            "label": "Artichauts"
+          },
+          {
+            "code": "367",
+            "label": "Asperges"
+          },
+          {
+            "code": "372",
+            "label": "Laitue et chicorée"
+          },
+          {
+            "code": "373",
+            "label": "Epinards"
+          },
+          {
+            "code": "378",
+            "label": "Feuilles de manioc"
+          },
+          {
+            "code": "388",
+            "label": "Tomates, fraiches"
+          },
+          {
+            "code": "393",
+            "label": "Choux-fleurs et brocolis"
+          },
+          {
+            "code": "394",
+            "label": "Citrouilles, courges et potirons"
+          },
+          {
+            "code": "397",
+            "label": "Concombres, cornichons"
+          },
+          {
+            "code": "399",
+            "label": "Aubergines"
+          },
+          {
+            "code": "401",
+            "label": "Piments forts, piments doux frais"
+          },
+          {
+            "code": "402",
+            "label": "Oignons, echalotes, frais"
+          },
+          {
+            "code": "403",
+            "label": "Oignons secs"
+          },
+          {
+            "code": "406",
+            "label": "Ail"
+          },
+          {
+            "code": "407",
+            "label": "Poireaux et autres légumes alliacés"
+          },
+          {
+            "code": "414",
+            "label": "Haricots frais"
+          },
+          {
+            "code": "417",
+            "label": "Pois frais"
+          },
+          {
+            "code": "420",
+            "label": "Légumineuses nda (dont fèves, caroubes)"
+          },
+          {
+            "code": "423",
+            "label": "Haricots verts"
+          },
+          {
+            "code": "426",
+            "label": "Carottes et navets"
+          },
+          {
+            "code": "430",
+            "label": "Gombo"
+          },
+          {
+            "code": "446",
+            "label": "Maïs frais"
+          },
+          {
+            "code": "449",
+            "label": "Champignons et truffes"
+          },
+          {
+            "code": "459",
+            "label": "Racines de chicorée"
+          },
+          {
+            "code": "461",
+            "label": "Caroubes"
+          },
+          {
+            "code": "463",
+            "label": "Légumes frais, nda"
+          },
+          {
+            "code": "486",
+            "label": "Bananes"
+          },
+          {
+            "code": "489",
+            "label": "Bananes plantains"
+          },
+          {
+            "code": "490",
+            "label": "Oranges"
+          },
+          {
+            "code": "495",
+            "label": "Tangerines, mandarines, clémentines, satsumas"
+          },
+          {
+            "code": "497",
+            "label": "Citrons et limes"
+          },
+          {
+            "code": "507",
+            "label": "Pamplemousses et pomelos"
+          },
+          {
+            "code": "512",
+            "label": "Fruits, agrumes nda"
+          },
+          {
+            "code": "515",
+            "label": "Pommes"
+          },
+          {
+            "code": "521",
+            "label": "Poires"
+          },
+          {
+            "code": "523",
+            "label": "Coings"
+          },
+          {
+            "code": "526",
+            "label": "Abricots"
+          },
+          {
+            "code": "530",
+            "label": "Grillottes"
+          },
+          {
+            "code": "531",
+            "label": "Cerises"
+          },
+          {
+            "code": "534",
+            "label": "Pêches et nectarines"
+          },
+          {
+            "code": "536",
+            "label": "Prunes et prunelles"
+          },
+          {
+            "code": "541",
+            "label": "Fruit à noyau, nda"
+          },
+          {
+            "code": "542",
+            "label": "Fruit à pépins, nda"
+          },
+          {
+            "code": "544",
+            "label": "Fraises"
+          },
+          {
+            "code": "547",
+            "label": "Framboises"
+          },
+          {
+            "code": "549",
+            "label": "Groseilles à maquereaux"
+          },
+          {
+            "code": "550",
+            "label": "Cassis et groseilles"
+          },
+          {
+            "code": "552",
+            "label": "Myrtilles"
+          },
+          {
+            "code": "554",
+            "label": "Canneberges"
+          },
+          {
+            "code": "558",
+            "label": "Baies nda"
+          },
+          {
+            "code": "560",
+            "label": "Raisins"
+          },
+          {
+            "code": "567",
+            "label": "Pastèques"
+          },
+          {
+            "code": "568",
+            "label": "Melons, cantaloups"
+          },
+          {
+            "code": "569",
+            "label": "Figues"
+          },
+          {
+            "code": "571",
+            "label": "Mangues, mangoustans et goyaves"
+          },
+          {
+            "code": "572",
+            "label": "Avocats"
+          },
+          {
+            "code": "574",
+            "label": "Ananas"
+          },
+          {
+            "code": "577",
+            "label": "Dattes"
+          },
+          {
+            "code": "587",
+            "label": "Plaqueminiers/kakis"
+          },
+          {
+            "code": "591",
+            "label": "Pomme d'acajou"
+          },
+          {
+            "code": "592",
+            "label": "Kiwis"
+          },
+          {
+            "code": "600",
+            "label": "Papayes"
+          },
+          {
+            "code": "603",
+            "label": "Fruits tropicaux frais, nda"
+          },
+          {
+            "code": "619",
+            "label": "Fruits frais nda"
+          },
+          {
+            "code": "636",
+            "label": "Fourrage et l'ensilage, maïs"
+          },
+          {
+            "code": "637",
+            "label": "Fourrage et l'ensilage, sorgho"
+          },
+          {
+            "code": "638",
+            "label": "Fourrage et l'ensilage, ray grass"
+          },
+          {
+            "code": "639",
+            "label": "Fourrage et l'ensilage, graminees nda"
+          },
+          {
+            "code": "640",
+            "label": "Fourrage et l'ensilage, trefle"
+          },
+          {
+            "code": "641",
+            "label": "Fourrage et l'ensilage, luzerne"
+          },
+          {
+            "code": "642",
+            "label": "Fourrage et l'ensilage, oleagineux verts"
+          },
+          {
+            "code": "643",
+            "label": "Fourrage et l'ensilage, légumineuses"
+          },
+          {
+            "code": "644",
+            "label": "Choux fourragers"
+          },
+          {
+            "code": "645",
+            "label": "Courges fourragères"
+          },
+          {
+            "code": "646",
+            "label": "Navets fourragers"
+          },
+          {
+            "code": "647",
+            "label": "Betteraves fourragères"
+          },
+          {
+            "code": "648",
+            "label": "Carottes fourragères"
+          },
+          {
+            "code": "649",
+            "label": "Rutabagas fourragers"
+          },
+          {
+            "code": "651",
+            "label": "Fourrage et l'ensilage, produits nda"
+          },
+          {
+            "code": "655",
+            "label": "Légumes, racines, fourragers nda"
+          },
+          {
+            "code": "656",
+            "label": "Café, vert"
+          },
+          {
+            "code": "661",
+            "label": "Cacao, fèves"
+          },
+          {
+            "code": "667",
+            "label": "Thé"
+          },
+          {
+            "code": "671",
+            "label": "Mate"
+          },
+          {
+            "code": "674",
+            "label": "Infusions nda"
+          },
+          {
+            "code": "677",
+            "label": "Houblon"
+          },
+          {
+            "code": "687",
+            "label": "Poivre (sous-espèces piper)"
+          },
+          {
+            "code": "689",
+            "label": "Piments doux et épicé"
+          },
+          {
+            "code": "692",
+            "label": "Vanille"
+          },
+          {
+            "code": "693",
+            "label": "Cannelle"
+          },
+          {
+            "code": "698",
+            "label": "Girofles"
+          },
+          {
+            "code": "702",
+            "label": "Muscade, macis et cardamome"
+          },
+          {
+            "code": "711",
+            "label": "Anis, badiane, fenouil, coriandre"
+          },
+          {
+            "code": "720",
+            "label": "Gingembre"
+          },
+          {
+            "code": "723",
+            "label": "Epices nda"
+          },
+          {
+            "code": "748",
+            "label": "Menthe poivrée, menthe verte"
+          },
+          {
+            "code": "754",
+            "label": "Pyrèthre, fleurs séchées"
+          },
+          {
+            "code": "767",
+            "label": "Coton, fibre"
+          },
+          {
+            "code": "773",
+            "label": "Lin, fibre et etoupe"
+          },
+          {
+            "code": "777",
+            "label": "Chanvre, fibre et etoupe"
+          },
+          {
+            "code": "780",
+            "label": "Jute"
+          },
+          {
+            "code": "788",
+            "label": "Ramie"
+          },
+          {
+            "code": "789",
+            "label": "Sisal"
+          },
+          {
+            "code": "800",
+            "label": "Fibres d'agave nda"
+          },
+          {
+            "code": "809",
+            "label": "Abaca, chanvre de manille"
+          },
+          {
+            "code": "813",
+            "label": "Fibre de coco"
+          },
+          {
+            "code": "821",
+            "label": "Fibres vegetales nda"
+          },
+          {
+            "code": "826",
+            "label": "Tabac, feuilles"
+          },
+          {
+            "code": "836",
+            "label": "Caoutchouc naturel"
+          },
+          {
+            "code": "839",
+            "label": "Gommes naturelles"
+          }
+        ]
+      }
+    ],
+    "dateLastUpdateTemporary": 1416009600000,
+    "contactTemporary": "parelas@yahoo.fr",
+    "sourceTemporary": "EPA/DGESS/MASA",
+    "unitTemporary": "100",
+    "noteTemporary": [
+      {
+        "code": "FR",
+        "label": ""
+      }
+    ],
+    "domainTemporary": "Production",
+    "UserID": "11_143"
+  },
+  "dataType": null,
+  "layerType": null,
+  "dataKind": null,
+  "copyright": null,
+  "availability": null,
+  "dsd": {
+    "startDate": null,
+    "endDate": null,
+    "supplemental": null,
+    "contextSystem": {
+      "name": "CountrySTAT"
+    },
+    "datasource": {
+      "reference": {
+        "psw": "admin",
+        "usr": "admin",
+        "url": "remote:faostat3.fao.org/CountrySTAT_1.0"
+      },
+      "dao": "cstat"
+    },
+    "columns": [
+      {
+        "columnId": "TIME",
+        "dataType": "year",
+        "geoLyer": null,
+        "codesLevel": null,
+        "virtualColumn": null,
+        "values": [
+          1984,
+          1985,
+          1986,
+          1987,
+          1988,
+          1989,
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014
+        ],
+        "title": {
+          "FR": "Année"
+        },
+        "supplemental": null,
+        "codeSystem": null,
+        "dimension": {
+          "name": "TIME",
+          "title": {
+            "FR": "Années",
+            "EN": "Year"
+          }
+        }
+      },
+      {
+        "columnId": "ITEM",
+        "dataType": "code",
+        "geoLyer": null,
+        "codesLevel": 1,
+        "virtualColumn": null,
+        "values": [
+          {
+            "code": "15",
+            "level": 1,
+            "title": {
+              "FR": "Blé",
+              "EN": "Wheat",
+              "PT": "Trigo"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "27",
+            "level": 1,
+            "title": {
+              "FR": "Riz, Paddy",
+              "EN": "Rice, paddy",
+              "PT": "Arrozal"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "44",
+            "level": 1,
+            "title": {
+              "FR": "Orge",
+              "EN": "Barley",
+              "PT": "Cevada"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "56",
+            "level": 1,
+            "title": {
+              "FR": "Maïs",
+              "EN": "Maize",
+              "PT": "Milho"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "68",
+            "level": 1,
+            "title": {
+              "FR": "Maïs Éclate",
+              "EN": "Popcorn",
+              "PT": "Pipocas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "71",
+            "level": 1,
+            "title": {
+              "FR": "Seigle",
+              "EN": "Rye",
+              "PT": "Centeio"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "75",
+            "level": 1,
+            "title": {
+              "FR": "Avoine",
+              "EN": "Oats",
+              "PT": "Aveia"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "79",
+            "level": 1,
+            "title": {
+              "FR": "Mils",
+              "EN": "Millet",
+              "PT": "Mexoeira"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "83",
+            "level": 1,
+            "title": {
+              "FR": "Sorgho",
+              "EN": "Sorghum",
+              "PT": "Mapira"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "89",
+            "level": 1,
+            "title": {
+              "FR": "Sarrasin, blé noir",
+              "EN": "Buckwheat",
+              "PT": "Trigo mourisco, trigo negro"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "92",
+            "level": 1,
+            "title": {
+              "FR": "Quinoa",
+              "EN": "Quinoa",
+              "PT": "Quinoa"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "94",
+            "level": 1,
+            "title": {
+              "FR": "Fonio",
+              "EN": "Fonio",
+              "PT": "Fonio"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "97",
+            "level": 1,
+            "title": {
+              "FR": "Triticale",
+              "EN": "Triticale",
+              "PT": "Triticale"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "101",
+            "level": 1,
+            "title": {
+              "FR": "Alpiste",
+              "EN": "Canary seed",
+              "PT": "Semente amarela"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "103",
+            "level": 1,
+            "title": {
+              "FR": "Céréales mélangées",
+              "EN": "Mixed grain",
+              "PT": "Grão misto"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "108",
+            "level": 1,
+            "title": {
+              "FR": "Ceréales, nda",
+              "EN": "Cereals, nes",
+              "PT": "Cereais nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "108.1",
+            "level": 1,
+            "title": {
+              "FR": "Teff",
+              "EN": "Teff"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "116",
+            "level": 1,
+            "title": {
+              "FR": "Pommes de terre",
+              "EN": "Potatoes",
+              "PT": "Batata reno"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "122",
+            "level": 1,
+            "title": {
+              "FR": "Patates douces",
+              "EN": "Sweet potatoes",
+              "PT": "Batata doce"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "125",
+            "level": 1,
+            "title": {
+              "FR": "Manioc",
+              "EN": "Cassava",
+              "PT": "Mandioca"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "135",
+            "level": 1,
+            "title": {
+              "FR": "Choux Caraibe",
+              "EN": "Yautia (cocoyam)",
+              "PT": "Repolho das Caraibas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "136",
+            "level": 1,
+            "title": {
+              "FR": "Taros (colocases)",
+              "EN": "Taro (cocoyam)",
+              "PT": "Inhame"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "137",
+            "level": 1,
+            "title": {
+              "FR": "Ignames",
+              "EN": "Yams",
+              "PT": "Inhame"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "149",
+            "level": 1,
+            "title": {
+              "FR": "Tubercules + racines nda",
+              "EN": "Roots and Tubers, nes",
+              "PT": "Raizes e tuberculos, nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "156",
+            "level": 1,
+            "title": {
+              "FR": "Canne à sucre",
+              "EN": "Sugar cane",
+              "PT": "Cana de açúcar"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "157",
+            "level": 1,
+            "title": {
+              "FR": "Betterave à sucre",
+              "EN": "Sugar beet",
+              "PT": "Beterraba açucareira"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "161",
+            "level": 1,
+            "title": {
+              "FR": "Plantes sucrières, nda",
+              "EN": "Sugar crops, nes",
+              "PT": "Planta açucrareiras"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "176",
+            "level": 1,
+            "title": {
+              "FR": "Haricots secs",
+              "EN": "Beans, dry",
+              "PT": "Feijão secos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "181",
+            "level": 1,
+            "title": {
+              "FR": "Fèves sèches",
+              "EN": "Broad beans and horse beans, dry",
+              "PT": "Feijões e favas secas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "187",
+            "level": 1,
+            "title": {
+              "FR": "Pois secs",
+              "EN": "Peas, dry",
+              "PT": "Ervilha seca"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "191",
+            "level": 1,
+            "title": {
+              "FR": "Pois chiches",
+              "EN": "Chick peas",
+              "PT": "Grão de Bico"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "195",
+            "level": 1,
+            "title": {
+              "FR": "Pois à vache secs",
+              "EN": "Cow peas, dry",
+              "PT": "Leguminosas secas n.e"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "197",
+            "level": 1,
+            "title": {
+              "FR": "Pois cajan",
+              "EN": "Pigeon peas",
+              "PT": "Guandu"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "201",
+            "level": 1,
+            "title": {
+              "FR": "Lentilles",
+              "EN": "Lentils",
+              "PT": "Lentilhas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "203",
+            "level": 1,
+            "title": {
+              "FR": "Pois bambara",
+              "EN": "Bambara beans",
+              "PT": "Bambara"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "205",
+            "level": 1,
+            "title": {
+              "FR": "Vesces",
+              "EN": "Vetches",
+              "PT": "Ervilhaça"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "210",
+            "level": 1,
+            "title": {
+              "FR": "Lupins",
+              "EN": "Lupins",
+              "PT": "Tremoços"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "211",
+            "level": 1,
+            "title": {
+              "FR": "Légumineuses, nda",
+              "EN": "Pulses, nes",
+              "PT": "Leguminosas nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "216",
+            "level": 1,
+            "title": {
+              "FR": "Noix du Brésil non décortiquées",
+              "EN": "Brazil nuts, with shell",
+              "PT": "Castanha de Brasil nao descascada"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "217",
+            "level": 1,
+            "title": {
+              "FR": "Noix d'Acajou",
+              "EN": "Cashew nuts, with shell",
+              "PT": "Castanha de caju com casca"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "220",
+            "level": 1,
+            "title": {
+              "FR": "Châtaignes",
+              "EN": "Chestnuts",
+              "PT": "Castanha"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "221",
+            "level": 1,
+            "title": {
+              "FR": "Amandes non décortiquées",
+              "EN": "Almonds, with shell",
+              "PT": "Amêndoas nao descascadas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "222",
+            "level": 1,
+            "title": {
+              "FR": "Noix non décortiquées",
+              "EN": "Walnuts, with shell",
+              "PT": "Nozes com casca"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "223",
+            "level": 1,
+            "title": {
+              "FR": "Pistaches",
+              "EN": "Pistachios",
+              "PT": "Pistaschios"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "224",
+            "level": 1,
+            "title": {
+              "FR": "Noix de Kola",
+              "EN": "Kolanuts",
+              "PT": "Cola"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "225",
+            "level": 1,
+            "title": {
+              "FR": "Noisettes non décortiquées",
+              "EN": "Hazelnuts, with shell",
+              "PT": "Avelãs descascadas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "226",
+            "level": 1,
+            "title": {
+              "FR": "Noix d'Arec",
+              "EN": "Arecanuts",
+              "PT": "Nozes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "234",
+            "level": 1,
+            "title": {
+              "FR": "Fruits à Coque nda",
+              "EN": "Nuts, nes",
+              "PT": "Castanhas nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "236",
+            "level": 1,
+            "title": {
+              "FR": "Soja",
+              "EN": "Soybeans",
+              "PT": "Soja"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "242",
+            "level": 1,
+            "title": {
+              "FR": "Arachides non décortiquées",
+              "EN": "Groundnuts, with shell",
+              "PT": "Amendoim com casca"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "249",
+            "level": 1,
+            "title": {
+              "FR": "Noix de coco",
+              "EN": "Coconuts",
+              "PT": "Coco"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "254",
+            "level": 1,
+            "title": {
+              "FR": "Noix de palme",
+              "EN": "Oil palm fruit",
+              "PT": "Oleo de fruta de palma"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "256",
+            "level": 1,
+            "title": {
+              "FR": "Palmistes",
+              "EN": "Palm kernels",
+              "PT": "palmiste"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "257",
+            "level": 1,
+            "title": {
+              "FR": "Huile de palme",
+              "EN": "Palm oil",
+              "PT": "Oleo de palma"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "260",
+            "level": 1,
+            "title": {
+              "FR": "Olives",
+              "EN": "Olives",
+              "PT": "Azeitonas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "263",
+            "level": 1,
+            "title": {
+              "FR": "Noix de Karité",
+              "EN": "Karite Nuts (Sheanuts)",
+              "PT": "Castanha de shea"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "265",
+            "level": 1,
+            "title": {
+              "FR": "Ricin",
+              "EN": "Castor oil seed",
+              "PT": "Castor"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "267",
+            "level": 1,
+            "title": {
+              "FR": "Graines de tournesol",
+              "EN": "Sunflower seed",
+              "PT": "semente de girassol"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "270",
+            "level": 1,
+            "title": {
+              "FR": "Colza",
+              "EN": "Rapeseed",
+              "PT": "Colza"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "275",
+            "level": 1,
+            "title": {
+              "FR": "Noix d'Abrasin",
+              "EN": "Tung Nuts",
+              "PT": "Nozes tung"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "277",
+            "level": 1,
+            "title": {
+              "FR": "Graines de Jojoba",
+              "EN": "Jojoba Seeds",
+              "PT": "Graos de jojoba"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "280",
+            "level": 1,
+            "title": {
+              "FR": "Carthame",
+              "EN": "Safflower seed",
+              "PT": "Semente de Cártamo"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "289",
+            "level": 1,
+            "title": {
+              "FR": "Sésame",
+              "EN": "Sesame seed",
+              "PT": "Semente de Gergelim"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "292",
+            "level": 1,
+            "title": {
+              "FR": "Moutarde",
+              "EN": "Mustard seed",
+              "PT": "Semente de Mustarda"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "296",
+            "level": 1,
+            "title": {
+              "FR": "Oeillette",
+              "EN": "Poppy seed",
+              "PT": "Papoula"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "299",
+            "level": 1,
+            "title": {
+              "FR": "Graines de melon",
+              "EN": "Melonseed",
+              "PT": "Graos de melão"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "305",
+            "level": 1,
+            "title": {
+              "FR": "Graines Arbre du Suif",
+              "EN": "Tallowtree Seeds",
+              "PT": "Sebo de arvores sementes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "310",
+            "level": 1,
+            "title": {
+              "FR": "Fruit du Kapokier",
+              "EN": "Kapok Fruit",
+              "PT": "Fruto da sumauma"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "311",
+            "level": 1,
+            "title": {
+              "FR": "Graines de Kapokier non décortiquées",
+              "EN": "Kapokseed in Shell",
+              "PT": "Graos de sumauma nao descascas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "328",
+            "level": 1,
+            "title": {
+              "FR": "Graines de coton",
+              "EN": "Seed cotton",
+              "PT": "Algodão em carroço"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "329",
+            "level": 1,
+            "title": {
+              "FR": "Graines de coton pour la prodution de l'huile",
+              "EN": "Cottonseed",
+              "PT": "Semente de algodão"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "333",
+            "level": 1,
+            "title": {
+              "FR": "Graines de lin",
+              "EN": "Linseed",
+              "PT": "Linhaça"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "336",
+            "level": 1,
+            "title": {
+              "FR": "Chanvre",
+              "EN": "Hempseed",
+              "PT": "Cânhamo"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "339",
+            "level": 1,
+            "title": {
+              "FR": "Graines oléagineuses, nda",
+              "EN": "Oilseeds, Nes",
+              "PT": "Oleagenosas , nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "358",
+            "level": 1,
+            "title": {
+              "FR": "Choux et autres brassicacée",
+              "EN": "Cabbages and other brassicas",
+              "PT": "Repolho e outras couves"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "366",
+            "level": 1,
+            "title": {
+              "FR": "Artichauts",
+              "EN": "Artichokes",
+              "PT": "Alcachofras"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "367",
+            "level": 1,
+            "title": {
+              "FR": "Asperges",
+              "EN": "Asparagus",
+              "PT": "Aspargos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "372",
+            "level": 1,
+            "title": {
+              "FR": "Laitue et chicorée",
+              "EN": "Lettuce and chicory",
+              "PT": "Alface e chicória"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "373",
+            "level": 1,
+            "title": {
+              "FR": "Epinards",
+              "EN": "Spinach",
+              "PT": "Espinafre"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "378",
+            "level": 1,
+            "title": {
+              "FR": "Feuilles de manioc",
+              "EN": "Cassava leaves",
+              "PT": "Folha de mandioca"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "388",
+            "level": 1,
+            "title": {
+              "FR": "Tomates",
+              "EN": "Tomatoes",
+              "PT": "Tomate"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "393",
+            "level": 1,
+            "title": {
+              "FR": "Choux-fleurs et brocolis",
+              "EN": "Cauliflowers and broccoli",
+              "PT": "Couve flor e brocolos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "394",
+            "level": 1,
+            "title": {
+              "FR": "Citrouilles, courges et potirons",
+              "EN": "Pumpkins, squash and gourds",
+              "PT": "Abóbora e aboborinhas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "397",
+            "level": 1,
+            "title": {
+              "FR": "Concombres et cornichons",
+              "EN": "Cucumbers and gherkins",
+              "PT": "Pepino e pepininho"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "399",
+            "level": 1,
+            "title": {
+              "FR": "Aubergines",
+              "EN": "Eggplants (aubergines)",
+              "PT": "Berinjelas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "401",
+            "level": 1,
+            "title": {
+              "FR": "Piments forts, piment doux frais",
+              "EN": "Chillies and peppers, green (Capsicum spp.)",
+              "PT": "Pimenta e pimentões"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "402",
+            "level": 1,
+            "title": {
+              "FR": "Oignons (et échalotes) frais",
+              "EN": "Onions (incl. shallots), green",
+              "PT": "Cebolas (e cebolinhas) frescas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "403",
+            "level": 1,
+            "title": {
+              "FR": "Oignons secs",
+              "EN": "Onions, dry",
+              "PT": "Cebola seca"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "406",
+            "level": 1,
+            "title": {
+              "FR": "Ail",
+              "EN": "Garlic",
+              "PT": "Alho"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "407",
+            "level": 1,
+            "title": {
+              "FR": "Poireaux et autres légumes alliacés",
+              "EN": "Leeks and other alliaceous vegetables",
+              "PT": "Alho porró e outros produtos alinaceos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "414",
+            "level": 1,
+            "title": {
+              "FR": "Haricots frais",
+              "EN": "Beans, green",
+              "PT": "Feijão verde"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "417",
+            "level": 1,
+            "title": {
+              "FR": "Pois frais",
+              "EN": "Peas, green",
+              "PT": "Ervilha verde"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "420",
+            "level": 1,
+            "title": {
+              "FR": "Légumineuses nda (dont fèves, caroubes)",
+              "EN": "Leguminous vegetables, nes",
+              "PT": "Legumes de vagem, nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "423",
+            "level": 1,
+            "title": {
+              "FR": "Haricots verts",
+              "EN": "String beans",
+              "PT": "Espinafre"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "426",
+            "level": 1,
+            "title": {
+              "FR": "Carottes et navets",
+              "EN": "Carrots and turnips",
+              "PT": "Cenouras"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "430",
+            "level": 1,
+            "title": {
+              "FR": "Gombo",
+              "EN": "Okra",
+              "PT": "Quiabo"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "446",
+            "level": 1,
+            "title": {
+              "FR": "Maïs frais",
+              "EN": "Maize, green",
+              "PT": "Milho fresco"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "449",
+            "level": 1,
+            "title": {
+              "FR": "Champignons et truffes",
+              "EN": "Mushrooms and truffles",
+              "PT": "Cogumelo"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "459",
+            "level": 1,
+            "title": {
+              "FR": "Racines de chicorée",
+              "EN": "Chicory roots",
+              "PT": "Raizes de chiocorria"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "461",
+            "level": 1,
+            "title": {
+              "FR": "Caroubes",
+              "EN": "Carobs",
+              "PT": "Carobs"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "463",
+            "level": 1,
+            "title": {
+              "FR": "Légumes Frais, nda",
+              "EN": "Vegetables fresh nes",
+              "PT": "Vegetais frescos nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "486",
+            "level": 1,
+            "title": {
+              "FR": "Bananes",
+              "EN": "Bananas",
+              "PT": "Banana"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "489",
+            "level": 1,
+            "title": {
+              "FR": "Bananes plantains",
+              "EN": "Plantains",
+              "PT": "Banana platano"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "490",
+            "level": 1,
+            "title": {
+              "FR": "Oranges",
+              "EN": "Oranges",
+              "PT": "Laranjas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "495",
+            "level": 1,
+            "title": {
+              "FR": "Tangerines, mandarines et clémentines",
+              "EN": "Tangerines, mandarins and clementines",
+              "PT": "Tangerina, mandarino e clementinas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "497",
+            "level": 1,
+            "title": {
+              "FR": "Citrons et limes",
+              "EN": "Lemons and limes",
+              "PT": "Limão e lima"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "507",
+            "level": 1,
+            "title": {
+              "FR": "Pamplemousse (incluant les pomélos)",
+              "EN": "Grapefruit (incl. pomelos)",
+              "PT": "Toranja incluindo pomelos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "512",
+            "level": 1,
+            "title": {
+              "FR": "Agrumes nda",
+              "EN": "Citrus fruit, nes",
+              "PT": "Citrinos, nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "515",
+            "level": 1,
+            "title": {
+              "FR": "Pommes",
+              "EN": "Apples",
+              "PT": "Maçã"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "521",
+            "level": 1,
+            "title": {
+              "FR": "Poires",
+              "EN": "Pears",
+              "PT": "Peras"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "523",
+            "level": 1,
+            "title": {
+              "FR": "Coings",
+              "EN": "Quinces",
+              "PT": "Marmelos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "526",
+            "level": 1,
+            "title": {
+              "FR": "Abricots",
+              "EN": "Apricots",
+              "PT": "Damasco"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "530",
+            "level": 1,
+            "title": {
+              "FR": "Grillottes",
+              "EN": "Sour cherries",
+              "PT": "Ginjas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "531",
+            "level": 1,
+            "title": {
+              "FR": "Cerises",
+              "EN": "Cherries",
+              "PT": "Cerejas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "534",
+            "level": 1,
+            "title": {
+              "FR": "Pêches et nectarines",
+              "EN": "Peaches and nectarines",
+              "PT": "Pessegos e nectarinas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "536",
+            "level": 1,
+            "title": {
+              "FR": "Prunes et prunelles",
+              "EN": "Plums and sloes",
+              "PT": "Ameixas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "541",
+            "level": 1,
+            "title": {
+              "FR": "Fruit à noyau, nda",
+              "EN": "Stone fruit, nes",
+              "PT": "Caroço de frutas, ne"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "542",
+            "level": 1,
+            "title": {
+              "FR": "Fruit à pépins, nda",
+              "EN": "Pome fruit, nes",
+              "PT": "Pomoideas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "544",
+            "level": 1,
+            "title": {
+              "FR": "Fraises",
+              "EN": "Strawberries",
+              "PT": "Morangos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "547",
+            "level": 1,
+            "title": {
+              "FR": "Framboises",
+              "EN": "Raspberries",
+              "PT": "Fambroesa"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "549",
+            "level": 1,
+            "title": {
+              "FR": "Groseilles à maquereaux",
+              "EN": "Gooseberries",
+              "PT": "Groselhas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "550",
+            "level": 1,
+            "title": {
+              "FR": "Cassis et groseilles",
+              "EN": "Currants",
+              "PT": "Cassis e groselhas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "552",
+            "level": 1,
+            "title": {
+              "FR": "Myrtilles",
+              "EN": "Blueberries",
+              "PT": "Mirtilos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "554",
+            "level": 1,
+            "title": {
+              "FR": "Canneberges",
+              "EN": "Cranberries",
+              "PT": "Cranberries"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "558",
+            "level": 1,
+            "title": {
+              "FR": "Baies Nda",
+              "EN": "Berries Nes",
+              "PT": "Bagas nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "560",
+            "level": 1,
+            "title": {
+              "FR": "Raisins",
+              "EN": "Grapes",
+              "PT": "Uvas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "567",
+            "level": 1,
+            "title": {
+              "FR": "Pastèques",
+              "EN": "Watermelons",
+              "PT": "Melancia"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "568",
+            "level": 1,
+            "title": {
+              "FR": "Melons, cantaloups",
+              "EN": "Other melons (incl. cantaloupes)",
+              "PT": "Meloes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "569",
+            "level": 1,
+            "title": {
+              "FR": "Figues",
+              "EN": "Figs",
+              "PT": "Figos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "571",
+            "level": 1,
+            "title": {
+              "FR": "Mangues",
+              "EN": "Mangoes",
+              "PT": "Manga, mangostões e goiba"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "572",
+            "level": 1,
+            "title": {
+              "FR": "Avocats",
+              "EN": "Avocados",
+              "PT": "Abacate"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "574",
+            "level": 1,
+            "title": {
+              "FR": "Ananas",
+              "EN": "Pineapples",
+              "PT": "Anánas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "577",
+            "level": 1,
+            "title": {
+              "FR": "Dattes",
+              "EN": "Dates",
+              "PT": "Tâmaras"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "587",
+            "level": 1,
+            "title": {
+              "FR": "Plaqueminiers",
+              "EN": "Persimmons",
+              "PT": "Caquis"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "591",
+            "level": 1,
+            "title": {
+              "FR": "Pomme d'acajou",
+              "EN": "Cashewapple",
+              "PT": "Fruto do caju"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "592",
+            "level": 1,
+            "title": {
+              "FR": "Kiwis",
+              "EN": "Kiwi fruit",
+              "PT": "Kiwis"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "600",
+            "level": 1,
+            "title": {
+              "FR": "Papayes",
+              "EN": "Papayas",
+              "PT": "Papaia"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "603",
+            "level": 1,
+            "title": {
+              "FR": "Fruits Tropicaux Frais, nda",
+              "EN": "Fruit, tropical fresh nes",
+              "PT": "Maracujas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "619",
+            "level": 1,
+            "title": {
+              "FR": "Fruits Frais, nda",
+              "EN": "Fruit Fresh Nes",
+              "PT": "Frutos frescos"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "636",
+            "level": 1,
+            "title": {
+              "FR": "Maïs Fourrager",
+              "EN": "Maize for forage and silage",
+              "PT": "Feno de milho"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "637",
+            "level": 1,
+            "title": {
+              "FR": "Sorgho Fourrager",
+              "EN": "Sorghum for forage and silage",
+              "PT": "Feno de sorgo"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "638",
+            "level": 1,
+            "title": {
+              "FR": "Ray-Grass Fourrager",
+              "EN": "Rye grass for forage and silage",
+              "PT": "Azevém para forragem e silagem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "639",
+            "level": 1,
+            "title": {
+              "FR": "Sil",
+              "EN": "Grasses Nes for forage",
+              "PT": "Gramineas forrageiras"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "640",
+            "level": 1,
+            "title": {
+              "FR": "Trèfle Fourrager",
+              "EN": "Clover for forage and silage",
+              "PT": "Clover para forragem e silagem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "641",
+            "level": 1,
+            "title": {
+              "FR": "Luzerne  Fourragère",
+              "EN": "Alfalfa for forage and silage",
+              "PT": "Alfafa para forragem e silagem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "642",
+            "level": 1,
+            "title": {
+              "FR": "Oleagineux verts pour l'ensilage",
+              "EN": "Green Oilseeds for Silage",
+              "PT": "Oleaginosas verdes para silagem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "643",
+            "level": 1,
+            "title": {
+              "FR": "Légumineuses Pour Fourrage",
+              "EN": "Leguminous for Silage",
+              "PT": "Leguminosas para silagem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "644",
+            "level": 1,
+            "title": {
+              "FR": "Choux Fourragers",
+              "EN": "Cabbage for Fodder",
+              "PT": "Repoulho para forragem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "645",
+            "level": 1,
+            "title": {
+              "FR": "Courges fourragères",
+              "EN": "Pumpkins for Fodder",
+              "PT": "Aboboras para forragem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "646",
+            "level": 1,
+            "title": {
+              "FR": "Navets Fourragers",
+              "EN": "Turnips for Fodder",
+              "PT": "Nabos para forragem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "647",
+            "level": 1,
+            "title": {
+              "FR": "Betteraves Fourragères",
+              "EN": "Beets for Fodder",
+              "PT": "Beterrabas para forragem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "648",
+            "level": 1,
+            "title": {
+              "FR": "Carottes Fourragères",
+              "EN": "Carrots for Fodder",
+              "PT": "Cenouras para forragem"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "649",
+            "level": 1,
+            "title": {
+              "FR": "Rutabagas Fourragers",
+              "EN": "Swedes for Fodder",
+              "PT": "Swedes for Fodder"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "651",
+            "level": 1,
+            "title": {
+              "FR": "Produits Fourragers",
+              "EN": "forage Products",
+              "PT": "Produtos forrageiros"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "655",
+            "level": 1,
+            "title": {
+              "FR": "Racines, légumes fourragers",
+              "EN": "Vegetables Roots Fodder",
+              "PT": "Raizes, legumes forrageiras"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "656",
+            "level": 1,
+            "title": {
+              "FR": "Café vert",
+              "EN": "Coffee, green",
+              "PT": "Café verde"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "661",
+            "level": 1,
+            "title": {
+              "FR": "Fèves de cacao",
+              "EN": "Cocoa beans",
+              "PT": "Cacau em amendoa"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "667",
+            "level": 1,
+            "title": {
+              "FR": "Thé",
+              "EN": "Tea",
+              "PT": "Cha"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "671",
+            "level": 1,
+            "title": {
+              "FR": "Mate",
+              "EN": "Maté",
+              "PT": "Mate"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "674",
+            "level": 1,
+            "title": {
+              "FR": "Infusions Nda",
+              "EN": "Tea Nes",
+              "PT": "Infusões"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "677",
+            "level": 1,
+            "title": {
+              "FR": "Houblon",
+              "EN": "Hops",
+              "PT": "Lupulo"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "687",
+            "level": 1,
+            "title": {
+              "FR": "Poivre (sous-espèces Piper)",
+              "EN": "Pepper (Piper spp.)",
+              "PT": "Pimenta"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "689",
+            "level": 1,
+            "title": {
+              "FR": "Piments doux et épicé",
+              "EN": "Chillies and peppers (Capsicum spp.) and allspice (Pimenta spp.)",
+              "PT": "Malagueta(piri-piri)"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "692",
+            "level": 1,
+            "title": {
+              "FR": "Vanille",
+              "EN": "Vanilla",
+              "PT": "Baunilha"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "693",
+            "level": 1,
+            "title": {
+              "FR": "Cannelle",
+              "EN": "Cinnamon (canella)",
+              "PT": "Canela"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "698",
+            "level": 1,
+            "title": {
+              "FR": "Girofles",
+              "EN": "Cloves",
+              "PT": "Cravos da índia"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "702",
+            "level": 1,
+            "title": {
+              "FR": "Muscade, macis et cardamome",
+              "EN": "Nutmeg, mace and cardamoms",
+              "PT": "Noz moscada, cardomomo"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "711",
+            "level": 1,
+            "title": {
+              "FR": "Anis, badiane, fenouil, coriandre, grain",
+              "EN": "Anise, badian, fennel, coriander, cumin, caraway seeds and juniper berries",
+              "PT": "Anis, funcho, badiana, coentro, cominho, sementes de cominho, bagas de zimbro"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "720",
+            "level": 1,
+            "title": {
+              "FR": "Gingembre",
+              "EN": "Ginger",
+              "PT": "Gengibre"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "723",
+            "level": 1,
+            "title": {
+              "FR": "Epices, nda",
+              "EN": "Spices, nes",
+              "PT": "Especiarias, nes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "748",
+            "level": 1,
+            "title": {
+              "FR": "Menthe poivrée, menthe verte",
+              "EN": "Peppermint",
+              "PT": "Mentol pimentado, mentol verde"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "754",
+            "level": 1,
+            "title": {
+              "FR": "Pyrèthre, fleurs séchées",
+              "EN": "Pyrethrum,Dried",
+              "PT": "Piretro, flores secas"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "767",
+            "level": 1,
+            "title": {
+              "FR": "Fibre de coton",
+              "EN": "Cotton lint",
+              "PT": "Fibra de algodão"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "773",
+            "level": 1,
+            "title": {
+              "FR": "Fibre et étoupe de lin",
+              "EN": "Flax fibre and tow",
+              "PT": "Fibras e estopa"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "777",
+            "level": 1,
+            "title": {
+              "FR": "Etoupes Déchets de Chanvre",
+              "EN": "Hemp Tow Waste",
+              "PT": "Estopas e residuos de hemp"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "780",
+            "level": 1,
+            "title": {
+              "FR": "Jute et fibres apparentées",
+              "EN": "Jute and Jute-like fibers",
+              "PT": "Juta e fibras aparentes"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "788",
+            "level": 1,
+            "title": {
+              "FR": "Ramie",
+              "EN": "Ramie",
+              "PT": "Rami"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "789",
+            "level": 1,
+            "title": {
+              "FR": "Sisal",
+              "EN": "Sisal",
+              "PT": "Sisal"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "800",
+            "level": 1,
+            "title": {
+              "FR": "Fibres d'Agave, nda",
+              "EN": "Agave Fibres Nes",
+              "PT": "Fibras de agave"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "809",
+            "level": 1,
+            "title": {
+              "FR": "Abaca, chanvre de manille",
+              "EN": "Manila Fibre (Abaca)",
+              "PT": "Abaca, manila"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "813",
+            "level": 1,
+            "title": {
+              "FR": "Fibre de Coco",
+              "EN": "Coir",
+              "PT": "Fibra de coco"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "821",
+            "level": 1,
+            "title": {
+              "FR": "Fibres Végetales nda",
+              "EN": "Fibre Crops Nes",
+              "PT": "Fibras de vegetais"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "826",
+            "level": 1,
+            "title": {
+              "FR": "Feuilles de tabac",
+              "EN": "Tobacco leaves",
+              "PT": "Tabaco em bruto"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "836",
+            "level": 1,
+            "title": {
+              "FR": "Caoutchouc naturel",
+              "EN": "Natural rubber",
+              "PT": "Borracha natural"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          },
+          {
+            "code": "839",
+            "level": 1,
+            "title": {
+              "FR": "Gommes Naturelles",
+              "EN": "Gums Natural",
+              "PT": "Gomas naturais"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Prod_Trade",
+            "systemVersion": "1.0"
+          }
+        ],
+        "title": {
+          "FR": "Produit"
+        },
+        "supplemental": null,
+        "codeSystem": {
+          "system": "CS_Prod_Trade",
+          "version": "1.0",
+          "title": {
+            "EN": "CountrySTAT commodities"
+          },
+          "description": {
+            "EN": "CountrySTAT commodities"
+          },
+          "startDate": 1389826800000,
+          "endDate": null,
+          "virtualDate": null,
+          "region": null,
+          "source": {
+            "id": "12_203",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "provider": {
+            "id": "12_204",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "category": null,
+          "keyWords": [
+            "product",
+            " trade",
+            "countrySTAT",
+            "commodities",
+            "code list",
+            "production",
+            "products",
+            " commodity"
+          ],
+          "sharingPolicy": "publicPolicy",
+          "rootCodes": null,
+          "levelsNumber": 1
+        },
+        "dimension": {
+          "name": "ITEM",
+          "title": {
+            "FR": "Produits",
+            "EN": "Products"
+          }
+        }
+      },
+      {
+        "columnId": "dim_Country",
+        "dataType": "code",
+        "geoLyer": null,
+        "codesLevel": 1,
+        "virtualColumn": "INTERNAL",
+        "values": [
+          {
+            "code": "42",
+            "level": 1,
+            "title": {
+              "PT": "Burkina Faso",
+              "FR": "Burkina Faso",
+              "EN": "Burkina Faso",
+              "AR": "بوركينا فاسو",
+              "RU": "Буркина-Фасо",
+              "ES": "Burkina Faso",
+              "ZH": "布基纳法索"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": -30609795600000,
+            "toDate": 32503676400000,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "GAUL",
+            "systemVersion": "1.0"
+          }
+        ],
+        "title": null,
+        "supplemental": null,
+        "codeSystem": {
+          "system": "GAUL",
+          "version": "1.0",
+          "title": {
+            "EN": "GAUL geographic code list level 3"
+          },
+          "description": {
+            "EN": "GAUL geographic code list (countries, regions, cities)"
+          },
+          "startDate": 1388703600000,
+          "endDate": null,
+          "virtualDate": null,
+          "region": null,
+          "source": {
+            "id": "12_221",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "provider": {
+            "id": "12_222",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "category": null,
+          "keyWords": [
+            "geographic",
+            "area",
+            "gaul",
+            "code list",
+            "nations"
+          ],
+          "sharingPolicy": "publicPolicy",
+          "rootCodes": null,
+          "levelsNumber": 3
+        },
+        "dimension": {
+          "name": "GEO",
+          "title": null
+        }
+      },
+      {
+        "columnId": "ITEM_TYPE",
+        "dataType": "text",
+        "geoLyer": null,
+        "codesLevel": null,
+        "virtualColumn": "INTERNAL",
+        "values": [
+          "Commodity"
+        ],
+        "title": null,
+        "supplemental": null,
+        "codeSystem": null,
+        "dimension": {
+          "name": "ITEM_TYPE",
+          "title": null
+        }
+      },
+      {
+        "columnId": "dim_element",
+        "dataType": "code",
+        "geoLyer": null,
+        "codesLevel": 1,
+        "virtualColumn": "INTERNAL",
+        "values": [
+          {
+            "code": "1",
+            "level": 1,
+            "title": {
+              "PT": "Produ��o",
+              "FR": "Production",
+              "EN": "Production"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "Elements",
+            "systemVersion": "1.0"
+          }
+        ],
+        "title": null,
+        "supplemental": null,
+        "codeSystem": {
+          "system": "Elements",
+          "version": "1.0",
+          "title": {
+            "EN": "Elements"
+          },
+          "description": {
+            "EN": "Elements list"
+          },
+          "startDate": -61912170000000,
+          "endDate": null,
+          "virtualDate": null,
+          "region": null,
+          "source": {
+            "id": "12_187",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "provider": {
+            "id": "12_188",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "category": null,
+          "keyWords": [
+            "Code list",
+            "Elements"
+          ],
+          "sharingPolicy": "publicPolicy",
+          "rootCodes": null,
+          "levelsNumber": 1
+        },
+        "dimension": {
+          "name": "ELEMENT",
+          "title": null
+        }
+      },
+      {
+        "columnId": "VALUE",
+        "dataType": "number",
+        "geoLyer": null,
+        "codesLevel": null,
+        "virtualColumn": null,
+        "values": null,
+        "title": null,
+        "supplemental": null,
+        "codeSystem": null,
+        "dimension": {
+          "name": "VALUE",
+          "title": null
+        }
+      },
+      {
+        "columnId": "UM",
+        "dataType": "code",
+        "geoLyer": null,
+        "codesLevel": 1,
+        "virtualColumn": "INTERNAL",
+        "values": [
+          {
+            "code": "100",
+            "level": 1,
+            "title": {
+              "PT": "Tonelada",
+              "FR": "Tonnes",
+              "EN": "Ton"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Units",
+            "systemVersion": "1.0"
+          }
+        ],
+        "title": null,
+        "supplemental": null,
+        "codeSystem": {
+          "system": "CS_Units",
+          "version": "1.0",
+          "title": {
+            "EN": "Units code list"
+          },
+          "description": {
+            "EN": "Units code list"
+          },
+          "startDate": -61912170000000,
+          "endDate": null,
+          "virtualDate": null,
+          "region": null,
+          "source": {
+            "id": "12_193",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "provider": {
+            "id": "12_194",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "category": null,
+          "keyWords": [
+            "Code list",
+            "CountrySTAT",
+            "Units"
+          ],
+          "sharingPolicy": "publicPolicy",
+          "rootCodes": null,
+          "levelsNumber": 1
+        },
+        "dimension": {
+          "name": "UM",
+          "title": null
+        }
+      },
+      {
+        "columnId": "INDICATOR",
+        "dataType": "code",
+        "geoLyer": null,
+        "codesLevel": 2,
+        "virtualColumn": "INTERNAL",
+        "values": [
+          {
+            "code": "PD010",
+            "level": 2,
+            "title": {
+              "PT": "Quantidade da produção de culturas primárias",
+              "FR": "Quantité de production des cultures primaires",
+              "EN": "Production quantity of Primary Crops",
+              "ES": "Cantidad de producción de cultivos primarios"
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Indicator",
+            "systemVersion": "1.0"
+          }
+        ],
+        "title": null,
+        "supplemental": null,
+        "codeSystem": {
+          "system": "CS_Indicator",
+          "version": "1.0",
+          "title": {
+            "EN": "CountrySTAT indicators"
+          },
+          "description": {
+            "EN": "Main CountrySTAT indicators"
+          },
+          "startDate": -61961936400000,
+          "endDate": null,
+          "virtualDate": null,
+          "region": null,
+          "source": {
+            "id": "12_223",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "provider": {
+            "id": "12_224",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "category": null,
+          "keyWords": [
+            "indicator",
+            "indicators",
+            "code list"
+          ],
+          "sharingPolicy": "publicPolicy",
+          "rootCodes": null,
+          "levelsNumber": 2
+        },
+        "dimension": {
+          "name": "INDICATOR",
+          "title": null
+        }
+      },
+      {
+        "columnId": "FLAG",
+        "dataType": "code",
+        "geoLyer": null,
+        "codesLevel": 1,
+        "virtualColumn": null,
+        "values": [
+          {
+            "code": "5",
+            "level": 1,
+            "title": {
+              "PT": "..",
+              "FR": "..",
+              "EN": ".."
+            },
+            "description": null,
+            "supplemental": null,
+            "fromDate": null,
+            "toDate": null,
+            "aggregationRules": null,
+            "childs": null,
+            "relations": null,
+            "conversions": null,
+            "propaedeutics": null,
+            "exclusionList": null,
+            "systemKey": "CS_Flags",
+            "systemVersion": "1.0"
+          }
+        ],
+        "title": null,
+        "supplemental": null,
+        "codeSystem": {
+          "system": "CS_Flags",
+          "version": "1.0",
+          "title": {
+            "EN": "Units code list"
+          },
+          "description": {
+            "EN": "Units code list"
+          },
+          "startDate": -61912170000000,
+          "endDate": null,
+          "virtualDate": null,
+          "region": null,
+          "source": {
+            "id": "12_195",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "provider": {
+            "id": "12_196",
+            "institution": null,
+            "department": null,
+            "name": "CountrySTAT",
+            "surname": "CountrySTAT",
+            "title": null,
+            "description": null,
+            "supplemental": null,
+            "region": null,
+            "role": null,
+            "context": {
+              "name": "CountrySTAT"
+            },
+            "contactList": null
+          },
+          "category": null,
+          "keyWords": [
+            "Code list",
+            "CountrySTAT",
+            "Flags"
+          ],
+          "sharingPolicy": "publicPolicy",
+          "rootCodes": null,
+          "levelsNumber": 1
+        },
+        "dimension": {
+          "name": "FLAG",
+          "title": null
+        }
+      }
+    ],
+    "aggregationRules": null
+  }
+}
