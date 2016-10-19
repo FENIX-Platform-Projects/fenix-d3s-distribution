@@ -73,10 +73,6 @@ public class PostgresDefaultStorage extends PostgresStorage {
         StringBuilder queryIndex = new StringBuilder(" PRIMARY KEY (");
         boolean containsKey = false;
 
-        //Check for temporary RAM table
-        if (scope==TableScope.temporary)
-            query.append(" TABLESPACE ").append(TMP_TABLESPACE);
-
         //Append columns and primary key
         query.append(" (");
         for (Column column : columns) {
@@ -104,6 +100,10 @@ public class PostgresDefaultStorage extends PostgresStorage {
             query.append(queryIndex).append(')');
         } else
             query.setCharAt(query.length()-1,')');
+
+        //Check for temporary RAM table
+        if (scope==TableScope.temporary)
+            query.append(" TABLESPACE ").append(TMP_TABLESPACE);
 
         //Execute query and update metadata
         StoreStatus status = new StoreStatus(StoreStatus.Status.loading, 0l, new Date(), timeout);

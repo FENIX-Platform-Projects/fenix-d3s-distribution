@@ -1,0 +1,54 @@
+[
+  {
+    "name": "filter",
+    "sid" : [{"uid":"gift_process_total_food_consumption_000042BUR201001"}],
+    "parameters": {
+      "columns": [
+        "foodex2_code",
+        "value"
+      ],
+      "rows": {
+        "item": {
+          "codes": [
+            {
+              "uid": "GIFT_Items",
+              "codes": [ "FOOD_AMOUNT_PROC" ]
+            }
+          ]
+        },
+        "subgroup_code": {
+          "codes": [
+            {
+              "uid": "GIFT_FoodGroups",
+              "codes": [ "0104" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "foodex2_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+
+  {
+    "name": "asTable"
+  },
+
+  {
+    "name": "percentage"
+  }
+
+]

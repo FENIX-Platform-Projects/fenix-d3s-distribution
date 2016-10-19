@@ -4,17 +4,13 @@ import org.fao.ess.gift.d3s.dto.DatasetType;
 import org.fao.ess.gift.d3s.dto.Items;
 import org.fao.ess.gift.d3s.dto.Queries;
 import org.fao.fenix.commons.msd.dto.full.*;
-import org.fao.fenix.commons.utils.UIDUtils;
 import org.fao.fenix.commons.utils.database.DataIterator;
-import org.fao.fenix.commons.utils.database.DatabaseUtils;
-import org.fao.fenix.d3s.msd.services.spi.Resources;
 import org.fao.fenix.d3s.wds.dataset.WDSDatasetDao;
 
 import javax.inject.Inject;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Types;
 import java.util.*;
 
 public class GiftProcessDAO extends WDSDatasetDao {
@@ -65,8 +61,10 @@ public class GiftProcessDAO extends WDSDatasetDao {
     private String buildQuery(MeIdentification resource, String survey, DatasetType datasetType) throws Exception {
         switch (datasetType) {
             case dailySubjectAvgBySubgroup:
-                String query = Queries.loadSubgroupDailySubjectWightedAvg.getQuery();
-                return query.replace("<<subjectsNumber>>", String.valueOf(countSubjects(survey)));
+            case subgroupSubjectTotal:
+                return Queries.loadSubgroupDailySubjectAvg.getQuery();
+            case foodSubjectTotal:
+                return Queries.loadFoodDailySubjectAvg.getQuery();
             default:
                 return null;
         }
@@ -74,7 +72,10 @@ public class GiftProcessDAO extends WDSDatasetDao {
     private void fillStatement(MeIdentification resource, String survey, DatasetType datasetType, PreparedStatement statement) throws Exception {
         switch (datasetType) {
             case dailySubjectAvgBySubgroup:
-                for (int i=1; i<=42; i++)
+            case subgroupSubjectTotal:
+            case foodSubjectTotal:
+                //for (int i=1; i<=42; i++)
+                for (int i=1; i<=4; i++)
                     statement.setString(i, survey);
                 break;
         }
@@ -100,18 +101,6 @@ public class GiftProcessDAO extends WDSDatasetDao {
         return uid.substring(datasetType.getPrefix().length(), end>0 ? end : uid.length());
     }
 
-    private int countSubjects (String survey) throws Exception {
-        Connection connection = dataSource.getConnection();
-        try {
-            PreparedStatement statement = connection.prepareStatement(Queries.countSurveySubjects.getQuery());
-            statement.setString(1, survey);
-            ResultSet resultSet = statement.executeQuery();
-            resultSet.next();
-            return resultSet.getInt(1);
-        } finally {
-            connection.close();
-        }
-    }
 
 
 

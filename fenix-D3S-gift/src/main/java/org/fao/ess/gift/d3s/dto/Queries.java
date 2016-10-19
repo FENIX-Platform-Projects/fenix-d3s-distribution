@@ -1,9 +1,53 @@
 package org.fao.ess.gift.d3s.dto;
 
 public enum Queries {
-    countSurveySubjects("select count(*) as count from subject where survey_code = ?"),
-    loadSubgroupDailySubjectWightedAvg(
-        "select subject, group_code, subgroup_code, item, avg(value)/<<subjectsNumber>> as value, um from\n" +
+    countSurveySubjects("select count(*) as count from (select distinct subject from <<tableName>>) subjects"),
+    loadSubgroupDailySubjectAvg(
+        "select subject, group_code, subgroup_code, item, avg(value) as value, um from\n" +
+        "(\n" +
+        "\tselect s.subject, survey_day, group_code, subgroup_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
+        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
+        "\tgroup by s.subject, survey_day, group_code, subgroup_code\n" +
+        "\tunion all\n" +
+        "\tselect s.subject, survey_day, group_code, subgroup_code, 'ENERGY'::varchar as item, sum(ENERGY) as value, 'kcal'::varchar as um\n" +
+        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
+        "\tgroup by s.subject, survey_day, group_code, subgroup_code\n" +
+        ") data_by_day\n" +
+        "group by  subject, group_code, subgroup_code, item, um\n"
+    ),
+    loadFoodDailySubjectAvg(
+        "select subject, group_code, subgroup_code, foodex2_code, item, avg(value) as value, um from\n" +
+        "(\n" +
+        "\tselect s.subject, survey_day, group_code, subgroup_code, foodex2_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
+        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
+        "\tgroup by s.subject, survey_day, group_code, subgroup_code, foodex2_code\n" +
+        "\tunion all\n" +
+        "\tselect s.subject, survey_day, group_code, subgroup_code, foodex2_code, 'ENERGY'::varchar as item, sum(ENERGY) as value, 'kcal'::varchar as um\n" +
+        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
+        "\tgroup by s.subject, survey_day, group_code, subgroup_code, foodex2_code\n" +
+        ") data_by_day\n" +
+        "group by  subject, group_code, subgroup_code, foodex2_code, item, um\n"
+    ),
+
+    ;
+
+    private String query;
+    Queries(String query) {
+        this.query = query;
+    }
+
+    public String getQuery() {
+        return query;
+    }
+}
+
+
+
+/*
+    QUERY WITH ALL OF THE INDICATORS (DO NOT DELETE)
+
+    loadSubgroupDailySubjectAvg(
+        "select subject, group_code, subgroup_code, item, avg(value) as value, um from\n" +
         "(\n" +
         "\tselect s.subject, survey_day, group_code, subgroup_code, 'FOOD_AMOUNT_UNPROC'::varchar as item, sum(FOOD_AMOUNT_UNPROC) as value, 'g'::varchar as um\n" +
         "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
@@ -90,16 +134,6 @@ public enum Queries {
         "\tgroup by s.subject, survey_day, group_code, subgroup_code\n" +
         ") data_by_day\n" +
         "group by  subject, group_code, subgroup_code, item, um\n"
-    )
+    ),
 
-    ;
-
-    private String query;
-    Queries(String query) {
-        this.query = query;
-    }
-
-    public String getQuery() {
-        return query;
-    }
-}
+ */

@@ -2,9 +2,14 @@ package org.fao.ess.gift.d3s;
 
 import org.fao.ess.gift.d3s.dto.DatasetType;
 import org.fao.ess.gift.d3s.dto.Items;
+import org.fao.ess.gift.d3s.dto.Queries;
 import org.fao.fenix.d3s.cache.manager.listener.Context;
 import org.fao.fenix.d3s.cache.manager.listener.DatasetAccessInfo;
 import org.fao.fenix.d3s.cache.manager.listener.DatasetCacheListener;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 @Context({"gift_process"})
 public class GIFTProcessCacheListener implements DatasetCacheListener {
@@ -19,7 +24,12 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
 
         switch (datasetType) {
             case dailySubjectAvgBySubgroup:
+            case subgroupSubjectTotal:
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (group_code, subgroup_code)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, group_code, subgroup_code)");
+                return false;
+            case foodSubjectTotal:
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (group_code, subgroup_code, foodex2_code)");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, group_code, subgroup_code)");
                 return false;
             default:
@@ -29,13 +39,34 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
 
     @Override
     public boolean updated(DatasetAccessInfo datasetInfo) throws Exception {
-        return false;
+        String uid = datasetInfo.getMetadata().getUid();
+        DatasetType datasetType = getType(uid);
+        String survey = getSurvey(datasetType,uid);
+        if (survey==null)
+            throw new UnsupportedOperationException("Dataset uid syntaxt not supported: "+uid);
+
+        Connection connection = datasetInfo.getConnection();
+        String tableName = datasetInfo.getTableName();
+        switch (datasetType) {
+            case dailySubjectAvgBySubgroup:
+                connection.createStatement().executeUpdate("UPDATE "+tableName+" SET value = value/"+countSubjects(connection, tableName));
+                return false;
+            default:
+                return false;
+        }
     }
 
     @Override
     public boolean removing(DatasetAccessInfo datasetInfo) throws Exception {
         return false;
     }
+
+    private int countSubjects (Connection connection, String tableName) throws Exception {
+        ResultSet resultSet = connection.createStatement().executeQuery(Queries.countSurveySubjects.getQuery().replace("<<tableName>>", tableName));
+        resultSet.next();
+        return resultSet.getInt(1);
+    }
+
 
 
     //Utils
