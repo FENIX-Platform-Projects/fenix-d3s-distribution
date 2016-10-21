@@ -1,0 +1,15 @@
+GAUL_ReferenceArea = {body: [], uid: 'GAUL0', version:"2014" },
+Language = {body: [], uid: 'ISO639-2', version:"1998" },
+referencePeriod = {body: [], uid: 'FAO_Period', version:"1.0"},
+typeOfCollection = {body: [], uid: 'FAOSTAT_Collection', version:"1.0"},
+originOfCollectedData = {body: [], uid: 'FAOSTAT_OriginData', version:"1.0"},
+dataAdjustment = {body: [], uid: 'CL_ADJUSTMENT', version:"1.1"},
+confidencialityStatus = {body: [], uid: 'CL_CONF_STATUS', version:"1.0"},
+referenceArea = {body: [], uid: 'GAUL_ReferenceArea', version:"1.0"},
+disseminationPeriodicy = {body: [], uid: 'FAO_Period', version:"1.0"},
+dataCollectionPeriodicity = {body: [], uid: 'FAO_Period', version:"1.0"},
+updatePeriodicity = {body: [], uid: 'FAO_Period', version:"1.0"},
+coverageSector =
+	{body: [], uid: 'CSTAT_Core'} // CSTAT_Core
+	{body: [], uid: 'UNECA_ClassificationOfActivities', version:"2.0"} // UNECA
+	{body: [], uid: 'CRS_purpose_codes'} // Other
