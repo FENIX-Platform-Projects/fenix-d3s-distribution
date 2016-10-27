@@ -47,9 +47,9 @@
             "position": null,
             "role": "distributor",
             "contactInfo": {
-                "phone ": null,
+                "phone": "000",
                 "address": null,
-                "emailAddress": null,
+                "emailAddress": "aaa@aaa.aa",
                 "hoursOfService": null,
                 "contactIntruction": null
             }

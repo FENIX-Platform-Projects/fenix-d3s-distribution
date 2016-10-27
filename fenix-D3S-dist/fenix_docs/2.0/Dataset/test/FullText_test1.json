@@ -7,7 +7,29 @@
     "description": {
       "EN": "ADAM resource partner priorities calculated from the OECD CRS Commitments Data using statistical algotithms."
     },
-    "resourceRepresentationType": "dataset"
+    "resourceRepresentationType": "dataset",
+    "keywords": ["policy", "individual"],
+    "seCoverage" : {
+      "coverageSectors" : {
+        "version" : "",
+        "codes" : [ {
+          "code" : "311"
+        } ],
+        "idCodeList" : "CRS_purpose_codes"
+      },
+      "coverageSectorsDetails" : {
+        "EN" : "The agricultural sector is covered"
+      },
+      "coverageTime" : {
+        "from" : 1009839600000,
+        "to" : 1356908400000
+      },
+      "coverageGeographic" : {
+        "version" : "2014",
+        "codes" : [ { "code" : "37" }, { "code" : "122" } ],
+        "idCodeList" : "GAUL0"
+      }
+    }
   },
   "contacts": [
     {

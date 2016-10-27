@@ -1,0 +1,20 @@
+{
+    "freetext" : {"freeText" : "OECd"},
+    "dsd.contextSystem" : {
+        "enumeration": [
+            "test"
+        ]
+    },
+    "meContent.resourceRepresentationType" : {
+        "enumeration" : ["dataset"]
+    },
+    "meContent.seCoverage.coverageGeographic" : {
+        "codes" : [
+            {
+                "uid" : "GAUL0",
+                "version" : "2014",
+                "codes" : ["122"]
+            }
+        ]
+    }
+}
