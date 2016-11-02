@@ -1,0 +1,57 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "UNECA_MonetaryStatistics"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "Year",
+        "Value",
+        "UnitCode"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version":"2.0",
+              "codes": [
+                "020906"
+
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ISO3",
+              "codes": [
+                "AGO"
+              ]
+            }
+          ]
+        },
+
+
+        "Year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  }
+]
+//020901  Money supply (M1)
+//020904  Net foreign assets
+//020906  International reserves

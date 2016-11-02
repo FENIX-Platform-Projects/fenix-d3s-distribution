@@ -1,0 +1,55 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "UNECA_Poverty"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "Year",
+        "Value"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version": "2.0",
+              "codes": [
+                "030301"
+
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ISO3",
+              "codes": [
+                "AGO"
+              ]
+            }
+          ]
+        },
+
+
+        "Year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  }
+]
+//030301  GNI Per Capita (US$)
+//010114  Population below $2 (PPP) per day

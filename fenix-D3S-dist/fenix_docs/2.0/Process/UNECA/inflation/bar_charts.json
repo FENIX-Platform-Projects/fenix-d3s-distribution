@@ -1,0 +1,56 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "UNECA_Inflation"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "Year",
+        "Value",
+        "UnitCode"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version":"2.0",
+              "codes": [
+                "02110114"
+
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ISO3",
+              "codes": [
+                "AGO"
+              ]
+            }
+          ]
+        },
+
+
+        "Year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  }
+]
+
+

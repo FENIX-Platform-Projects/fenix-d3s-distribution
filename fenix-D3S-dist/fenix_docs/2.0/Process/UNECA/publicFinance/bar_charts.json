@@ -1,0 +1,57 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "UNECA_PublicFinance"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "Year",
+        "Value",
+        "UnitCode"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version": "2.0",
+              "codes": [
+                "021201"
+
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ISO3",
+              "codes": [
+                "AGO"
+              ]
+            }
+          ]
+        },
+
+
+        "Year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  }
+]
+// 021204  Fiscal balance
+// 021203  Total expenditures and net lending
+// 021201  Total revenues and grants

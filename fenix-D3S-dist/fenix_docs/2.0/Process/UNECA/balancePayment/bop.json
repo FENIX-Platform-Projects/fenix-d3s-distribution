@@ -1,0 +1,55 @@
+[
+  {
+  "name": "filter",
+  "sid": [
+    {
+      "uid": "UNECA_BalanceOfPayments"
+    }
+  ],
+  "parameters": {
+    "columns": [
+      "IndicatorCode",
+      "Year",
+      "Value",
+      "um"
+    ],
+    "rows": {
+
+      "IndicatorCode": {
+        "codes": [
+          {
+            "uid": "UNECA_ClassificationOfActivities",
+            "version":"2.0",
+            "codes": [
+              "020204"
+
+            ]
+          }
+        ]
+      },
+
+      "CountryCode": {
+        "codes": [
+          {
+            "uid": "UNECA_ISO3",
+            "codes": [
+              "AGO"
+            ]
+          }
+        ]
+      },
+      "Year": {
+        "time": [
+          {
+            "from": 2000,
+            "to": 2013
+          }
+        ]
+      }
+    }
+  }
+}
+]
+
+// Capital account balance (BoP): 02020501
+// Financial account balance (BoP): 02020502

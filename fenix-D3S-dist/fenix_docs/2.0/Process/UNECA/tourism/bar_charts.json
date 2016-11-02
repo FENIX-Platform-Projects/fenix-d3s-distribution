@@ -1,0 +1,56 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "UNECA_Tourism"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "Year",
+        "Value"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version": "2.0",
+              "codes": [
+                "021301"
+
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ISO3",
+              "codes": [
+                "AGO"
+              ]
+            }
+          ]
+        },
+
+
+        "Year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  }
+]
+// 021305  International tourism, number of arrivals
+// 021301  Rooms in hotels and similar establishments
+// 021303  Tourism contribution to GDP

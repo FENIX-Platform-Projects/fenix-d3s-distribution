@@ -1,0 +1,60 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "UNECA_Health"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "Year",
+        "Value",
+        "Unit"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version":"2.0",
+              "codes": [
+                "010303"
+
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ISO3",
+              "codes": [
+                "AGO"
+              ]
+            }
+          ]
+        },
+
+
+        "Year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  }
+]
+
+// 010304 Infant mortality rate (both sexes) per 1,000
+// 010303 Under five mortality rate (both sexes) per 1,000
+// 010313 Number of doctors per 10,000 population
+// [010307,010308,010309,010310] Percentage of children provided the vaccines (BCG, DPT3, measles, polio)
+

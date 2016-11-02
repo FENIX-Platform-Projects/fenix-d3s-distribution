@@ -1,0 +1,56 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "Uneca_PopulationNew"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "GenderCode",
+        "AgeRangeCode",
+        "Year",
+        "Value"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "codes": [
+                "010101"
+
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "ISO3",
+              "codes": [
+                "AGO"
+              ]
+            }
+          ]
+        },
+
+
+        "Year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        }
+      }
+    }
+  }
+]
+//010101  Mid-year Population
+//010108  Life expectancy (years)
