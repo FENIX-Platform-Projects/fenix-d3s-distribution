@@ -21,7 +21,17 @@ public enum Items {
     FOLA("microgdfe"),
     VITB12("microg"),
     VITA("micrograe"),
-    BCAROT("microg");
+    BCAROT("microg"),
+    FIBTG("g"),
+    ASH("g"),
+    MG("mg"),
+    PHOS("mg"),
+    POTA("mg"),
+    NA("mg"),
+    CU("mg"),
+    RETOL("microg"),
+    VITD("microg"),
+    VITE("mg");
     
     String um;
 

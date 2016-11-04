@@ -9,6 +9,10 @@
       "coverageGeographic" : {
         "idCodeList" : "GAUL", "version" : "2014",
         "codes" : [{"code" : "42"}]
+      },
+      "coverageTime" : {
+        "from" : 1478274133603,
+        "to" : 1478274153500
       }
     }
   },

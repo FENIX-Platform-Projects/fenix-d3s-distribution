@@ -1,6 +1,6 @@
 
 {
-    "uid": "GIFT_Items",
+    "uid": "GIFT_Environment",
 	"version": null,
     "language": {
         "codes": [
@@ -14,7 +14,7 @@
 
     "languageDetails": null,
     "title": {
-        "EN": "WHO-FAO GIFT, Items, nutritional value"
+        "EN": "WHO-FAO GIFT, Environment position"
     },
     "creationDate": null,
     "characterSet": {
@@ -60,7 +60,7 @@
 
     "meContent": {
         "resourceRepresentationType": "codelist",
-        "keywords": ["nutritional value"],
+        "keywords": ["diet"],
         "description": null,
         "statisticalConceptsDefinitions": null,
         "seCoverage": {
@@ -118,34 +118,8 @@ titleColumnIndex_EN=3
 
 
 --data--
-@FOOD_AMOUNT_UNPROC@Amount (edible) consumed before processing
-@FOOD_AMOUNT_PROC@Amount (edible) consumed after processing
-@ENERGY@Energy
-@PROTEIN@Protein
-@A_PROT@Animal protein
-@V_PROT@Vegetal protein
-@CARBOH@Carbohydrates
-@FAT@Fat
-@SAT_FAT@Saturated fat
-@CALC@Calcium
-@IRON@Iron
-@ZINC@Zinc
-@VITC@Vitamin C
-@THIA@Thiamin
-@RIBO@Riboflavin
-@NIAC@Niacin
-@VITB6@Vitamin B6
-@FOLA@Folate
-@VITB12@Vitamin B12
-@VITA@Vitamin A
-@BCAROT@Beta-carotene
-@FIBTG@Fibre total dietary, or if missing, then [crude fibre]
-@ASH@Ash
-@MG@Magnesium
-@PHOS@Phosphorus
-@POTA@Potassium
-@NA@Sodium
-@CU@Copper
-@RETOL@Retinol
-@VITD@Vitamin D
-@VITE@Vitamin E (in alpha-tocopherol equivalents) or [alpha-tocopherol]
+
+@1@Rural
+@2@Urban
+@3@Peri-urban
+@4@Unspecified
