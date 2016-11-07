@@ -5,26 +5,26 @@ public enum Queries {
     loadSubgroupDailySubjectAvg(
         "select subject, group_code, subgroup_code, item, avg(value) as value, um from\n" +
         "(\n" +
-        "\tselect s.subject, survey_day, group_code, subgroup_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
-        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
-        "\tgroup by s.subject, survey_day, group_code, subgroup_code\n" +
+        "\tselect s.subject, s.round, survey_day, group_code, subgroup_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
+        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject and s.round = c.round)\n" +
+        "\tgroup by s.subject, s.round, survey_day, group_code, subgroup_code\n" +
         "\tunion all\n" +
-        "\tselect s.subject, survey_day, group_code, subgroup_code, 'ENERGY'::varchar as item, sum(ENERGY) as value, 'kcal'::varchar as um\n" +
-        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
-        "\tgroup by s.subject, survey_day, group_code, subgroup_code\n" +
+        "\tselect s.subject, s.round, survey_day, group_code, subgroup_code, 'ENERGY'::varchar as item, sum(ENERGY) as value, 'kcal'::varchar as um\n" +
+        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject and s.round = c.round)\n" +
+        "\tgroup by s.subject, s.round, survey_day, group_code, subgroup_code\n" +
         ") data_by_day\n" +
         "group by  subject, group_code, subgroup_code, item, um\n"
     ),
     loadFoodDailySubjectAvg(
         "select subject, group_code, subgroup_code, foodex2_code, item, avg(value) as value, um from\n" +
         "(\n" +
-        "\tselect s.subject, survey_day, group_code, subgroup_code, foodex2_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
-        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
-        "\tgroup by s.subject, survey_day, group_code, subgroup_code, foodex2_code\n" +
+        "\tselect s.subject, s.round, survey_day, group_code, subgroup_code, foodex2_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
+        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject and s.round = c.round)\n" +
+        "\tgroup by s.subject, s.round, survey_day, group_code, subgroup_code, foodex2_code\n" +
         "\tunion all\n" +
-        "\tselect s.subject, survey_day, group_code, subgroup_code, foodex2_code, 'ENERGY'::varchar as item, sum(ENERGY) as value, 'kcal'::varchar as um\n" +
-        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject)\n" +
-        "\tgroup by s.subject, survey_day, group_code, subgroup_code, foodex2_code\n" +
+        "\tselect s.subject, s.round, survey_day, group_code, subgroup_code, foodex2_code, 'ENERGY'::varchar as item, sum(ENERGY) as value, 'kcal'::varchar as um\n" +
+        "\tfrom subject s join consumption c on (s.survey_code = ? and c.survey_code = ? and s.subject = c.subject and s.round = c.round)\n" +
+        "\tgroup by s.subject, s.round, survey_day, group_code, subgroup_code, foodex2_code\n" +
         ") data_by_day\n" +
         "group by  subject, group_code, subgroup_code, foodex2_code, item, um\n"
     ),
