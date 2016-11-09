@@ -3,7 +3,7 @@
   "name": "filter",
   "sid": [
     {
-      "uid": "UNECA_BalanceOfPayments"
+      "uid": "UNECA_GDP_USD"
     }
   ],
   "parameters": {
@@ -11,7 +11,7 @@
       "IndicatorCode",
       "Year",
       "Value",
-      "um"
+      "UnitCode"
     ],
     "rows": {
 
@@ -21,7 +21,7 @@
             "uid": "UNECA_ClassificationOfActivities",
             "version":"2.0",
             "codes": [
-              "020204"
+              "020706"
 
             ]
           }
@@ -50,6 +50,6 @@
   }
 }
 ]
-
-// Capital account balance (BoP): 02020501
-// Financial account balance (BoP): 02020502
+// 020707:   GROSS DOMESTIC PRODUCT (current prices)
+// 020705:   GDP growth (annual %)
+// 020706:   GDP per capita (constant 2005 US$)

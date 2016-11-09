@@ -22,7 +22,7 @@
               "uid": "UNECA_ClassificationOfActivities",
               "version":"2.0",
               "codes": [
-                "010303"
+                "010307","010308","010309","010310"
 
               ]
             }
@@ -53,8 +53,8 @@
   }
 ]
 
-// 010304 Infant mortality rate (both sexes) per 1,000
-// 010303 Under five mortality rate (both sexes) per 1,000
-// 010313 Number of doctors per 10,000 population
-// [010307,010308,010309,010310] Percentage of children provided the vaccines (BCG, DPT3, measles, polio)
+// 010304                       : Infant mortality rate (both sexes) per 1,000
+// 010303                       : Under five mortality rate (both sexes) per 1,000
+// [010313,010314]              : Number of doctors per 10,000 population AND Number of nurses and Midwives per 10,000 population
+// [010307,010308,010309,010310]: Percentage of children provided the vaccines (BCG, DPT3, measles, polio)
 

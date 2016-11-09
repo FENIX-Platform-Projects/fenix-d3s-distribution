@@ -1,0 +1,112 @@
+[
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "filtered_ds"
+      },
+      {
+        "uid": "last_year_country"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "IndicatorCode"
+          },
+          {
+            "type": "id",
+            "value": "CountryCode"
+          },
+          {
+            "type": "id",
+            "value": "Year"
+          }
+        ],
+        [
+          {
+            "type": "id",
+            "value": "IndicatorCode"
+          },
+          {
+            "type": "id",
+            "value": "CountryCode"
+          },
+          {
+            "type": "id",
+            "value": "Year"
+          }
+        ]
+      ],
+      "values": []
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "Uneca_PopulationNew"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "Year",
+        "Value"
+      ],
+      "rows": {
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "codes": [
+                "010106"
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "ISO3",
+              "codes": [
+                "DZA"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filtered_ds"
+    }
+  },
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "filtered_ds"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "IndicatorCode",
+        "CountryCode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "Year"
+          ],
+          "rule": "max"
+        }
+      ]
+    },
+    "rid": {
+      "uid": "last_year_country"
+    }
+  }
+]

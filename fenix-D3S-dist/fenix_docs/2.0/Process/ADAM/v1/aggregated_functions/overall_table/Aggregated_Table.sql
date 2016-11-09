@@ -415,7 +415,7 @@ commitment_defl as (
       ON t.recipientcode = country_faoregion.country
 )
 
-
+-- union each dataset aggregated
 SELECT * from
   (
 
@@ -432,7 +432,7 @@ SELECT * from
 
   UNION
 
-
+-- TOTAL with all NA
   SELECT * from 
   (
     SELECT
@@ -535,17 +535,17 @@ SELECT * from
 
     UNION
 
+-- TOTAL WITH DAC_MEMBER
   SELECT * from (
-    SELECT
+   SELECT
     oda,
     'NA',
     year,
-
     sum(value) as value,
     'NA',
     'NA',
     'NA',
-    'NA',
+     dac_member,
     'NA',
     'NA',
     MAX (unitcode) as unitcode,
@@ -556,9 +556,9 @@ SELECT * from
     'NA'
     from
     commitment
-    GROUP BY
-    oda,
-    year
+    WHERE dac_member = 't'
+
+    GROUP BY oda, year
 
     UNION
 
@@ -569,8 +569,8 @@ SELECT * from
     sum(value) as value,
     'NA',
     'NA',
-    't',
     'NA',
+     dac_member,
     'NA',
     'NA',
     MAX (unitcode) as unitcode,
@@ -594,8 +594,8 @@ SELECT * from
     sum(value) as value,
     'NA',
     'NA',
-    't',
     'NA',
+     dac_member,
     'NA',
     'NA',
     MAX (unitcode) as unitcode,
@@ -619,8 +619,8 @@ SELECT * from
     sum(value) as value,
     'NA',
     'NA',
-    't',
     'NA',
+     dac_member,
     'NA',
     'NA',
     MAX (unitcode) as unitcode,
@@ -637,7 +637,6 @@ SELECT * from
     )tot_dac
   )ordered
 
-  ORDER BY oda,channelsubcategory_code,YEAR ,parentsector_code
-
+  ORDER BY oda,YEAR ,channelsubcategory_code,parentsector_code
 )
 

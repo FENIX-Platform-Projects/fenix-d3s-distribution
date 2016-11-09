@@ -1,0 +1,116 @@
+[
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "filtered_ds"
+      },
+      {
+        "uid": "last_year_country"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "CountryCode"
+          },
+          {
+            "type": "id",
+            "value": "Year"
+          }
+
+        ],
+        [
+          {
+            "type": "id",
+            "value": "CountryCode"
+          },
+          {
+            "type": "id",
+            "value": "Year"
+          }
+
+        ]
+      ],
+      "values": [
+      ]
+    }
+  },
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "UNECA_Health"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "CountryCode",
+        "Year",
+        "Value",
+        "Unit"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "version":"2.0",
+              "codes": [
+                "010301"
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ISO3",
+              "codes": [
+                "AGO",
+                "BFA"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filtered_ds"
+    }
+  },
+
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "filtered_ds"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "CountryCode"
+
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "Year"
+          ],
+          "rule": "max"
+        }
+      ]
+    },
+    "rid": {
+      "uid": "last_year_country"
+    }
+  }
+
+]
+// 010311 : Percentage of mothers provided at least one antenatal care
+// 010312 : Percentage of deliveries attended by skilled health personnel
+// 010301 : Percentage of children under-five and underweight

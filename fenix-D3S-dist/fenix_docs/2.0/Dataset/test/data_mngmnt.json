@@ -1,0 +1,1 @@
+{"columns":[{"dataType":"code","key":true,"id":"DIMENSION0","title":{"EN":"A"},"domain":{"codes":[{"version":"2.1","idCodeList":"CPC","extendedName":{"EN":"Central Product Classification"}}]},"subject":"item"},{"dataType":"number","key":false,"id":"VALUE0","title":{"EN":"B"},"subject":"value"}],"datasources":["D3S"],"contextSystem":"cstat_ago","rid":"12_644"}

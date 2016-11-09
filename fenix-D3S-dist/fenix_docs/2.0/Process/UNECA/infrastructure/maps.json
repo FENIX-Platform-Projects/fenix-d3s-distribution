@@ -1,0 +1,125 @@
+[
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "filtered_ds"
+      },
+      {
+        "uid": "last_year_country"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "IndicatorCode"
+          },
+          {
+            "type": "id",
+            "value": "CountryCode"
+          },
+          {
+            "type": "id",
+            "value": "Year"
+          }
+
+        ],
+        [
+          {
+            "type": "id",
+            "value": "IndicatorCode"
+          },
+          {
+            "type": "id",
+            "value": "CountryCode"
+          },
+          {
+            "type": "id",
+            "value": "Year"
+          }
+
+        ]
+      ],
+      "values": [
+      ]
+    }
+  },
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "UNECA_Infrastructure"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "IndicatorCode",
+        "CountryCode",
+        "Year",
+        "Value"
+      ],
+      "rows": {
+
+        "IndicatorCode": {
+          "codes": [
+            {
+              "uid": "UNECA_ClassificationOfActivities",
+              "codes": [
+                "030202"
+              ]
+            }
+          ]
+        },
+        "CountryCode": {
+          "codes": [
+            {
+              "uid": "ISO3",
+              "codes": [
+                "AGO",
+                "BFA"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filtered_ds"
+    }
+  },
+
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "filtered_ds"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "IndicatorCode",
+        "CountryCode"
+
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "Year"
+          ],
+          "rule": "max"
+        }
+      ]
+    },
+    "rid": {
+      "uid": "last_year_country"
+    }
+  }
+
+]
+
+
+// 021423  Roads, paved (% of total roads)
+// 030202  Mobile-cellular subscriptions per 1000 inhabitants
