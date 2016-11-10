@@ -4,6 +4,7 @@ import org.fao.ess.gift.d3s.dto.DatasetType;
 import org.fao.ess.gift.d3s.dto.Items;
 import org.fao.ess.gift.d3s.dto.Queries;
 import org.fao.fenix.commons.msd.dto.full.*;
+import org.fao.fenix.commons.utils.StringUtils;
 import org.fao.fenix.commons.utils.database.DataIterator;
 import org.fao.fenix.d3s.wds.dataset.WDSDatasetDao;
 
@@ -39,7 +40,7 @@ public class GiftProcessDAO extends WDSDatasetDao {
         Connection connection = dataSource.getConnection();
         connection.setAutoCommit(false);
         PreparedStatement statement = connection.prepareStatement(
-                buildQuery(resource, survey, datasetType),
+                buildQuery(connection, resource, survey, datasetType),
                 ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY, ResultSet.FETCH_FORWARD);
         fillStatement(resource, survey, datasetType, statement);
         statement.setFetchSize(100);
@@ -58,22 +59,39 @@ public class GiftProcessDAO extends WDSDatasetDao {
     }
 
     //Query management methods
-    private String buildQuery(MeIdentification resource, String survey, DatasetType datasetType) throws Exception {
+    private String buildQuery(Connection connection, MeIdentification resource, String survey, DatasetType datasetType) throws Exception {
         switch (datasetType) {
             case dailySubjectAvgBySubgroup:
             case subgroupSubjectTotal:
                 return Queries.loadSubgroupDailySubjectAvg.getQuery();
 
             case foodSubjectTotal:
+                return Queries.loadFoodDailySubject.getQuery();
             case foodSubjectTotalWeighted:
-                return Queries.loadFoodDailySubjectAvg.getQuery();
+                return Queries.loadFoodDailySubjectWeighted.getQuery().replace("<<subjects>>", String.valueOf(countSubject(connection, survey)));
             case foodSubjectRoundTotal:
+                return Queries.loadFoodDailySubjectRound.getQuery();
             case foodSubjectRoundTotalWeighted:
-                return Queries.loadFoodDailySubjectRoundAvg.getQuery();
+                return Queries.loadFoodDailySubjectRoundWeighted.getQuery().replace("<<subjects>>", String.valueOf(countSubject(connection, survey)));
             default:
                 return null;
         }
     }
+    private int countSubject(Connection connection, String survey) throws Exception {
+        PreparedStatement statement = connection.prepareStatement(Queries.countSubject.getQuery());
+        statement.setString(1, survey);
+        ResultSet resultSet = statement.executeQuery();
+        resultSet.next();
+        return resultSet.getInt(1);
+    }
+    private int countSubjectRound(Connection connection, String survey) throws Exception {
+        PreparedStatement statement = connection.prepareStatement(Queries.countSubjectRound.getQuery());
+        statement.setString(1, survey);
+        ResultSet resultSet = statement.executeQuery();
+        resultSet.next();
+        return resultSet.getInt(1);
+    }
+
     private void fillStatement(MeIdentification resource, String survey, DatasetType datasetType, PreparedStatement statement) throws Exception {
         switch (datasetType) {
             case dailySubjectAvgBySubgroup:

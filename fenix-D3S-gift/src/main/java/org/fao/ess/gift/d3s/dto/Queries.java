@@ -15,11 +15,11 @@ public enum Queries {
         "group by  subject, round, group_code, subgroup_code, item, um\n"
     ),
 
-    countSubjectRound("select count(*) as count from (select subject, round from <<tableName>> group by subject, round) subjects"),
-    countSubject("select count(*) as count from (select subject from <<tableName>> group by subject) subjects"),
-    loadFoodDailySubjectAvg(
+    countSubjectRound("select count(*) as count from (select subject, round from subject where survey_code = ? group by subject, round) subjects"),
+    countSubject("select count(*) as count from (select subject from subject where survey_code = ? group by subject) subjects"),
+    loadFoodDailySubject(
         "with subjects_days_count AS ( select subject, count(*) as days_number from\n" +
-        "( select subject, survey_day from consumption where survey_code = ? group by subject, survey_day ) subjects_days\n" +
+        "( select subject, round, survey_day from consumption where survey_code = ? group by subject, round, survey_day ) subjects_days\n" +
         "group by subject )\n" +
         "select subjects_days_count.subject as subject, group_code, subgroup_code, foodex2_code, item, value/days_number as value, um from\n" +
         "(\n" +
@@ -33,11 +33,43 @@ public enum Queries {
         "subjects_days_count\n" +
         "on (consumption_total.subject = subjects_days_count.subject)\n"
     ),
-    loadFoodDailySubjectRoundAvg(
+    loadFoodDailySubjectWeighted(
+        "with subjects_days_count AS ( select subject, count(*) as days_number from\n" +
+        "( select subject, round, survey_day from consumption where survey_code = ? group by subject, round, survey_day ) subjects_days\n" +
+        "group by subject )\n" +
+        "select subjects_days_count.subject as subject, group_code, subgroup_code, foodex2_code, item, (value/days_number)/<<subjects>> as value, um from\n" +
+        "(\n" +
+        "  select subject, foodex2_code, max(subgroup_code) as subgroup_code, max(group_code) as group_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(food_amount_proc) as value, 'g'::varchar as um\n" +
+        "  from consumption where survey_code = ? group by subject, foodex2_code\n" +
+        "  union all\n" +
+        "  select subject, foodex2_code, max(subgroup_code) as subgroup_code, max(group_code) as group_code, 'ENERGY'::varchar as item, sum(energy) as value, 'kcal'::varchar as um\n" +
+        "  from consumption where survey_code = ? group by subject, foodex2_code\n" +
+        ") consumption_total\n" +
+        "join\n" +
+        "subjects_days_count\n" +
+        "on (consumption_total.subject = subjects_days_count.subject)\n"
+    ),
+    loadFoodDailySubjectRound(
         "with subjects_days_count AS ( select round, subject, count(*) as days_number from\n" +
         "( select round, subject, survey_day from consumption where survey_code = ? group by round, survey_day, subject ) subjects_days\n" +
         "group by round, subject )\n" +
         "select subjects_days_count.subject as subject, subjects_days_count.round as round, group_code, subgroup_code, foodex2_code, item, value/days_number as value, um from\n" +
+        "(\n" +
+        "  select round, subject, foodex2_code, max(subgroup_code) as subgroup_code, max(group_code) as group_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(food_amount_proc) as value, 'g'::varchar as um\n" +
+        "  from consumption where survey_code = ? group by round, subject, foodex2_code\n" +
+        "  union all\n" +
+        "  select round, subject, foodex2_code, max(subgroup_code) as subgroup_code, max(group_code) as group_code, 'ENERGY'::varchar as item, sum(energy) as value, 'kcal'::varchar as um\n" +
+        "  from consumption where survey_code = ? group by round, subject, foodex2_code\n" +
+        ") consumption_total\n" +
+        "join\n" +
+        "subjects_days_count\n" +
+        "on (consumption_total.round = subjects_days_count.round and consumption_total.subject = subjects_days_count.subject)\n"
+    ),
+    loadFoodDailySubjectRoundWeighted(
+        "with subjects_days_count AS ( select round, subject, count(*) as days_number from\n" +
+        "( select round, subject, survey_day from consumption where survey_code = ? group by round, survey_day, subject ) subjects_days\n" +
+        "group by round, subject )\n" +
+        "select subjects_days_count.subject as subject, subjects_days_count.round as round, group_code, subgroup_code, foodex2_code, item, (value/days_number)/<<subjects>> as value, um from\n" +
         "(\n" +
         "  select round, subject, foodex2_code, max(subgroup_code) as subgroup_code, max(group_code) as group_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(food_amount_proc) as value, 'g'::varchar as um\n" +
         "  from consumption where survey_code = ? group by round, subject, foodex2_code\n" +

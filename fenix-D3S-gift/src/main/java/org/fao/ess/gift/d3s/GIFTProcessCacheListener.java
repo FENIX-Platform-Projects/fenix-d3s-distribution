@@ -42,7 +42,7 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
 
     @Override
     public boolean updated(DatasetAccessInfo datasetInfo) throws Exception {
-        String uid = datasetInfo.getMetadata().getUid();
+/*        String uid = datasetInfo.getMetadata().getUid();
         DatasetType datasetType = getType(uid);
         String survey = getSurvey(datasetType,uid);
         if (survey==null)
@@ -60,26 +60,13 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
                 connection.createStatement().executeUpdate("UPDATE "+tableName+" SET value = value/"+ countSubjectRound(connection, tableName));
                 break;
         }
-        return false;
+*/        return false;
     }
 
     @Override
     public boolean removing(DatasetAccessInfo datasetInfo) throws Exception {
         return false;
     }
-
-    private int countSubject(Connection connection, String tableName) throws Exception {
-        ResultSet resultSet = connection.createStatement().executeQuery(Queries.countSubject.getQuery().replace("<<tableName>>", tableName));
-        resultSet.next();
-        return resultSet.getInt(1);
-    }
-    private int countSubjectRound(Connection connection, String tableName) throws Exception {
-        ResultSet resultSet = connection.createStatement().executeQuery(Queries.countSubjectRound.getQuery().replace("<<tableName>>", tableName));
-        resultSet.next();
-        return resultSet.getInt(1);
-    }
-
-
 
     //Utils
     public DatasetType getType (String uid) {
