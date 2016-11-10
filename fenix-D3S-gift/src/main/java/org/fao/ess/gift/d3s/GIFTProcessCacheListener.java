@@ -8,7 +8,6 @@ import org.fao.fenix.d3s.cache.manager.listener.DatasetAccessInfo;
 import org.fao.fenix.d3s.cache.manager.listener.DatasetCacheListener;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 @Context({"gift_process"})
@@ -28,7 +27,11 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (group_code, subgroup_code)");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, group_code, subgroup_code)");
                 return false;
+
             case foodSubjectTotal:
+            case foodSubjectRoundTotal:
+            case foodSubjectTotalWeighted:
+            case foodSubjectRoundTotalWeighted:
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (group_code, subgroup_code, foodex2_code)");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, group_code, subgroup_code)");
                 return false;
@@ -49,11 +52,15 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
         String tableName = datasetInfo.getTableName();
         switch (datasetType) {
             case dailySubjectAvgBySubgroup:
-                connection.createStatement().executeUpdate("UPDATE "+tableName+" SET value = value/"+countSubjects(connection, tableName));
-                return false;
-            default:
-                return false;
+
+            case foodSubjectTotalWeighted:
+                connection.createStatement().executeUpdate("UPDATE "+tableName+" SET value = value/"+ countSubject(connection, tableName));
+                break;
+            case foodSubjectRoundTotalWeighted:
+                connection.createStatement().executeUpdate("UPDATE "+tableName+" SET value = value/"+ countSubjectRound(connection, tableName));
+                break;
         }
+        return false;
     }
 
     @Override
@@ -61,8 +68,13 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
         return false;
     }
 
-    private int countSubjects (Connection connection, String tableName) throws Exception {
-        ResultSet resultSet = connection.createStatement().executeQuery(Queries.countSurveySubjects.getQuery().replace("<<tableName>>", tableName));
+    private int countSubject(Connection connection, String tableName) throws Exception {
+        ResultSet resultSet = connection.createStatement().executeQuery(Queries.countSubject.getQuery().replace("<<tableName>>", tableName));
+        resultSet.next();
+        return resultSet.getInt(1);
+    }
+    private int countSubjectRound(Connection connection, String tableName) throws Exception {
+        ResultSet resultSet = connection.createStatement().executeQuery(Queries.countSubjectRound.getQuery().replace("<<tableName>>", tableName));
         resultSet.next();
         return resultSet.getInt(1);
     }

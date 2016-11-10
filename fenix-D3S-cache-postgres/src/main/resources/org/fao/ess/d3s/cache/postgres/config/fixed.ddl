@@ -31,4 +31,5 @@ CREATE AGGREGATE public.LAST (
         stype    = anyelement
 );
 -- command
+DROP TABLESPACE d3s_tmp;
 CREATE TABLESPACE d3s_tmp LOCATION '/tmp/ramdisk/postgres';
