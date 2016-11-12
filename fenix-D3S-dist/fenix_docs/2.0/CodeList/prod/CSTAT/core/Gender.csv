@@ -115,12 +115,13 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
-@5001@Female
-@5002@Male
-@5003@Unspecified
-@5004@Total
+@5001@Female@Féminin(e)
+@5002@Male@Masculin(e)
+@5003@Unspecified@Non spécifié
+@5004@Total@Total

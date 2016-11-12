@@ -115,13 +115,14 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
-@6001@Agricultural
-@6002@Non agricultural
-@6003@Unspecified
-@6004@Total
+@6001@Agricultural@Agricole
+@6002@Non agricultural@Non agricole
+@6003@Unspecified@Non spécifié
+@6004@Total@Total
 

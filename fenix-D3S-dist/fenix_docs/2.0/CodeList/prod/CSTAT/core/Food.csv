@@ -115,12 +115,13 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
-@9001@Food
-@9002@Non-Food
-@9003@Unspecified
-@9004@Total
+@9001@Food@Alimentaire
+@9002@Non-Food@Non alimentaire
+@9003@Unspecified@Non spécifié
+@9004@Total@Total

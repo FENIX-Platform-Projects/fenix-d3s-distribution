@@ -115,18 +115,19 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
-@8001@Rainfed
-@8002@Irrigated
-@8003@Cultivated
-@8004@Cultivated and irrigated
-@8005@Natural growth
-@8006@Organic
-@8007@Certified organic
-@8008@In conversion to organic
-@8009@Unspecified
-@8010@Total
+@8001@Rainfed@Pluviale
+@8002@Irrigated@Irrigué(e)
+@8003@Cultivated@Cultivé(e)
+@8004@Cultivated and irrigated@Cultivé(e) et irrigué(e)
+@8005@Natural growth@Croissance naturelle
+@8006@Organic@Biologique
+@8007@Certified organic@Certifié biologique
+@8008@In conversion to organic@En conversion à l'agriculture biologique
+@8009@Unspecified@Non spécifié
+@8010@Total@Total

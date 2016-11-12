@@ -115,69 +115,71 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
-@1@Freshwater fishes
-1@11@Carps, barbels and other cyprinids
-1@12@Tilapias and other cichlids
-1@13@Miscellaneous freshwater fishes
-@2@Diadromous fishes
-2@21@Sturgeons, paddlefishes
-2@22@River eels
-2@23@Salmons, trouts, smelts
-2@24@Shads
-2@25@Miscellaneous diadromous fishes
-@3@Marine fishes
-3@31@Flounders, halibuts, soles
-3@32@Cods, hakes, haddocks
-3@33@Miscellaneous coastal fishes
-3@34@Miscellaneous demersal fishes
-3@35@Herrings, sardines, anchovies
-3@36@Tunas, bonitos, billfishes
-3@37@Miscellaneous pelagic fishes
-3@38@Sharks, rays, chimaeras
-3@39@Marine fishes not identified
-@4@Crustaceans
-4@41@Freshwater crustaceans
-4@42@Crabs, sea-spiders
-4@43@Lobsters, spiny-rock lobsters
-4@44@King crabs, squat-lobsters
-4@45@Shrimps, prawns
-4@46@Krill, planktonic crustaceans
-4@47@Miscellaneous marine crustaceans
-@5@Molluscs
-5@51@Freshwater molluscs
-5@52@Abalones, winkles, conchs
-5@53@Oysters
-5@54@Mussels
-5@55@Scallops, pectens
-5@56@Clams, cockles, arkshells
-5@57@Squids, cuttlefishes, octopuses
-5@58@Miscellaneous marine molluscs
-@6@Whales, seals and other aquatic mammals
-6@61@Blue-whales, fin-whales
-6@62@Sperm-whales, pilot-whales
-6@63@Eared seals, hair seals, walruses
-6@64@Miscellaneous aquatic mammals
-@7@Miscellaneous aquatic animals
-7@71@Frogs and other amphibians
-7@72@Turtles
-7@73@Crocodiles and alligators
-7@74@Sea-squirts and other tunicates
-7@75@Horseshoe crabs and other arachnoids
-7@76@Sea-urchins and other echinoderms
-7@77@Miscellaneous aquatic invertebrates
-@8@Miscellaneous aquatic animal products
-8@81@Pearls, mother-of-pearl, shells
-8@82@Corals
-8@83@Sponges
-@9@Aquatic plants
-9@91@Brown seaweeds
-9@92@Red seaweeds
-9@93@Green seaweeds
-9@94@Miscellaneous aquatic plants
+@1@Freshwater fishes@Poissons d'eau douce
+1@11@Carps, barbels and other cyprinids@Carpes, barbeaux et autres cyprinidés
+1@12@Tilapias and other cichlids@Tilapias et autres cichlidés
+1@13@Miscellaneous freshwater fishes@Poissons d'eau douce divers
+@2@Diadromous fishes@Poissons diadromes
+2@21@Sturgeons, paddlefishes@Esturgeons, spatules
+2@22@River eels@Anguilles
+2@23@Salmons, trouts, smelts@Saumons, truites, éperlans
+2@24@Shads@Aloses
+2@25@Miscellaneous diadromous fishes@Poissons diadromes divers
+@3@Marine fishes@Poissons marins
+3@31@Flounders, halibuts, soles@Flets, flétans, soles
+3@32@Cods, hakes, haddocks@Morues, merlus, églefins
+3@33@Miscellaneous coastal fishes@Poissons côtiers divers
+3@34@Miscellaneous demersal fishes@Poissons démersaux divers
+3@35@Herrings, sardines, anchovies@Harengs, sardines, anchois
+3@36@Tunas, bonitos, billfishes@Thons, pélamides, marlins
+3@37@Miscellaneous pelagic fishes@Poissons pélagiques divers
+3@38@Sharks, rays, chimaeras@Squales, raies, chimères
+3@39@Marine fishes not identified@Poissons marins non identifiés
+@4@Crustaceans@Crustacés
+4@41@Freshwater crustaceans@Crustacés d'eau douce
+4@42@Crabs, sea-spiders@Crabes, araignées de mer
+4@43@Lobsters, spiny-rock lobsters@Homards, langoustes
+4@44@King crabs, squat-lobsters@Crabes royaux, galatées
+4@45@Shrimps, prawns@Crevettes
+4@46@Krill, planktonic crustaceans@Krill, crustacés planctoniques
+4@47@Miscellaneous marine crustaceans@Crustacés marins divers
+@5@Molluscs@Mollusques
+5@51@Freshwater molluscs@Mollusques d'eau douce
+5@52@Abalones, winkles, conchs@Ormeaux, bigorneaux, strombes
+5@53@Oysters@Huîtres
+5@54@Mussels@Moules
+5@55@Scallops, pectens@Coquilles St-Jacques
+5@56@Clams, cockles, arkshells@Clams, coques, arches
+5@57@Squids, cuttlefishes, octopuses@Encornets, seiches, poulpes
+5@58@Miscellaneous marine molluscs@Mollusques marins divers
+@6@Whales, seals and other aquatic mammals@Baleines, phoques et autres mammifères aquatiques
+6@61@Blue-whales, fin-whales@Baleines bleues, rorquals communs
+6@62@Sperm-whales, pilot-whales@Cachalots, globicéphales
+6@63@"Eared seals, hair seals, walruses"@Otaries, phoques, morses
+6@64@Miscellaneous aquatic mammals@Mammifères aquatiques divers
+@7@Miscellaneous aquatic animals@Animaux aquatiques divers
+7@71@Frogs and other amphibians@Grenouilles et autres amphibies
+7@72@Turtles@Tortues
+7@73@Crocodiles and alligators@Crocodiles et alligators
+7@74@Sea-squirts and other tunicates@Ascidiens et autres tuniciers
+7@75@Horseshoe crabs and other arachnoids@Limules et autres arachnoïdés
+7@76@Sea-urchins and other echinoderms@Oursins et autres échinodermes
+7@77@Miscellaneous aquatic invertebrates@Invertébrés aquatiques divers
+@8@Miscellaneous aquatic animal products@Produits divers d'animaux aquatiques
+8@81@Pearls, mother-of-pearl, shells@Perles, nacres, coquilles
+8@82@Corals@Coraux
+8@83@Sponges@Éponges
+@9@Aquatic plants@Plantes aquatiques
+9@91@Brown seaweeds@Algues brunes
+9@92@Red seaweeds@Algues rouges
+9@93@Green seaweeds@Algues vertes
+9@94@Miscellaneous aquatic plants@Plantes aquatiques diverses
+
 
 

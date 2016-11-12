@@ -115,49 +115,51 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
 
-@0101@head
-@0102@ha
-@0103@ton
-@0104@US$
-@0105@local currency
-@0106@index
-@0107@thousands
-@0108@units
-@0109@cubic meter
-@0110@kg/capita/yr
-@0111@Kcal/capita/day
-@0112@g/capita/day
-@0113@1000US$
-@0114@Liter
-@0115@Cubic meter/second
-@0116@Centimeter
-@0117@Local currency by ton
-@0118@Degree Celsius
-@0119@Percentage
-@0120@MT or Cubic meter
-@0121@Local currency/hectar
-@0122@Local currency/1 cubic meter
-@0123@Kg/Ha
-@0124@Local currency/Kg
-@0125@1000 Ha
-@0126@mm
-@0127@Square meter
-@0128@Household
-@0129@Ton/Ha
-@0130@Km2
-@0131@Years
-@0132@Local currency/dollar
-@0133@1000 Local currency
-@0134@Kg
-@0135@Local currency/liter
-@0136@Days
-@0137@Liter/milking/head
-@0138@Months
+@0101@head@tête
+@0102@Ha@Ha
+@0103@ton@Tonnes
+@0104@US$@US$
+@0105@local currency@Monnaie locale
+@0106@index@Indice
+@0107@thousands@Miliers
+@0108@units@Unité
+@0109@cubic meter@Mètre cube
+@0110@kg/capita/yr@Kg/personne/an
+@0111@Kcal/capita/day@Kcal/personne/jour
+@0112@g/capita/day@g/personne/jour
+@0113@1000 US$@1000 US$
+@0114@Liter@Litre
+@0115@Cubic meter/second@Mètre cube/seconde
+@0116@Centimeter@Centimetre
+@0117@Local currency by ton@Monnaie locale par tonne
+@0118@Degree Celsius@Degré celsius
+@0119@Percentage@Pourcentage
+@0120@MT or Cubic meter@Tonne métrique ou mètre cube
+@0121@Local currency/hectar@Monnaie locale/hectare
+@0122@Local currency/1 cubic meter@Monnaie locale/mètre cube
+@0123@Kg/Ha@Kg/Ha
+@0124@Local currency/Kg@Monnaie locale/Kg
+@0125@1000 Ha@1000 Ha
+@0126@mm@mm
+@0127@Square meter@Mètre carré
+@0128@Household@Famille
+@0129@Ton/Ha@Tonne/Ha
+@0130@Km2@Kilomètres carrés
+@0131@Years@Années
+@0132@Local currency/dollar@Monnaie locale/dollar
+@0133@1000 Local currency@1000 Monnaie locale
+@0134@Kg@Kg
+@0135@Local currency/Litre@Monnaie locale/litre
+@0136@Days@Jours
+@0137@Liter/milking/head@Litre par traite par tête
+@0138@Months@Mois
+
 
 

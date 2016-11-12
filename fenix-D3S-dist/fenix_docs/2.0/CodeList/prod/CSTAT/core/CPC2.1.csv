@@ -132,6 +132,12 @@ titleColumnIndex_EN=3
 011@0113@Rice
 0113@01131@Rice, seed
 0113@01132@Rice paddy, other (not husked)
+01132@01132.01@Rice, white
+01132.01@01132.01i@Rice, white (local)
+01132.01@01132.01m@Rice, white (imported)
+01132@01132.02@Rice, gasy
+01132@01132.03@Rice, makalioka
+01132@01132.04@Rice, tsipala
 011@0114@Sorghum
 0114@01141@Sorghum, seed
 0114@01142@Sorghum, other
@@ -166,6 +172,7 @@ titleColumnIndex_EN=3
 0121@01216@Artichokes
 0121@01219@Other leafy or stem vegetables
 01219@01219.01@Cassava leaves
+01219@01219.02@Parsley, watercress
 01219@01219.90@Other leafy or stem vegetables n.e.c.
 012@0122@Melons
 0122@01221@Watermelons
@@ -177,12 +184,14 @@ titleColumnIndex_EN=3
 0123@01234@Tomatoes
 0123@01235@Pumpkins, squash and gourds
 0123@01239@Other fruit-bearing vegetables
-01239@01239.01@Okra 
+01239@01239.01@Okra
+01239@01239.02@Chayote 
 01239@01239.90@Other fruit-bearing vegetables n.e.c.
 012@0124@Green leguminous vegetables
 0124@01241@Beans, green
 01241@01241.01@String beans 
 01241@01241.02@Other beans, green
+01241@01241.03@Lima beans
 0124@01242@Peas, green
 0124@01243@Broad beans and horse beans, green
 0124@01249@Other green leguminous vegetables
@@ -200,7 +209,8 @@ titleColumnIndex_EN=3
 0127@01270@Mushrooms and truffles
 012@0129@Vegetables, fresh, n.e.c.
 0129@01290@Vegetables, fresh, n.e.c.
-01290@01290.01@Green corn (maize) 
+01290@01290.01@Green corn (maize)
+01290@01290.02@Celery 
 01290@01290.90@Other vegetables, fresh n.e.c.
 01@013@Fruits and nuts
 013@0131@Tropical and subtropical fruits
@@ -220,6 +230,15 @@ titleColumnIndex_EN=3
 0131@01317@Papayas
 0131@01318@Pineapples
 0131@01319@Other tropical and subtropical fruits, n.e.c.
+01319@01319.01@Soursop
+01319@01319.02@Custard apple (Annona reticulata)
+01319@01319.03@Carambola (star fruit)
+01319@01319.04@Breadfruit
+01319@01319.05@Grenadia (passion fruit)
+01319@01319.06@Litchis
+01319@01319.07@Grenadine
+01319@01319.08@Mamoncillo
+01319@01319.09@Arbre véritable
 013@0132@Citrus fruits
 0132@01321@Pomelos and grapefruits
 0132@01322@Lemons and limes
@@ -261,6 +280,8 @@ titleColumnIndex_EN=3
 0135@01359@Other fruits, n.e.c.
 01359@01359.01@Persimmons
 01359@01359.02@Cashewapple
+01359@01359.03@Grenade
+01359@01359.02@Tamarind
 01359@01359.90@Other fruits, n.e.c.
 013@0136@Fruit seeds
 0136@01360@Fruit seeds
@@ -323,6 +344,8 @@ titleColumnIndex_EN=3
 015@0152@Cassava
 0152@01520@Cassava
 01520@01520.01@Cassava, dried
+01520.01@01520.0101@Bitter cassava
+01520.01@01520.0102@Sweet cassava
 015@0153@Sweet potatoes
 0153@01530@Sweet potatoes
 015@0154@Yams
@@ -332,6 +355,8 @@ titleColumnIndex_EN=3
 015@0159@Other edible roots and tubers with high starch or inulin content
 0159@01591@Yautia
 0159@01599@Other edible roots and tubers with high starch or inulin content, n.e.c.
+01599@01599.01@Beetroot
+01599@01599.02@Mazembelle
 01599@01599.10@Edible roots and tubers with high starch or inulin content, n.e.c., dried
 01@016@Stimulant, spice and aromatic crops
 016@0161@Coffee, green
@@ -357,6 +382,8 @@ titleColumnIndex_EN=3
 016@0169@Stimulant, spice and aromatic crops, n.e.c.
 0169@01691@Chicory roots
 0169@01699@Other stimulant, spice and aromatic crops, n.e.c.
+01699@01699.01@Achiote (Bixa orellana)
+01699@01699.02@Thyme
 01@017@Pulses (dried leguminous vegetables)
 017@0170@Pulses (dried leguminous vegetables)
 0170@01701@Beans, dry
@@ -379,6 +406,8 @@ titleColumnIndex_EN=3
 0180@01809@Other sugar crops n.e.c.
 01@019@Forage products; fibre crops; plants used in perfumery, pharmacy, or for insecticidal, fungicidal or similar purposes; beet, forage plant and flower seeds; natural rubber; living plants, cut flowers and flower buds; unmanufactured tobacco; other raw vegetable materials
 019@0191@Forage products
+0191@0191af@ Forage products (animal feeding)
+0191@0191s@ Forage products (sale)
 0191@01911@Maize for forage and silage
 0191@01912@Alfalfa for forage and silage
 0191@01913@Cereal straw, husks, unprepared, ground, pressed, or in the form of pellets
@@ -424,6 +453,7 @@ titleColumnIndex_EN=3
 01930@01930.02@Pyrethrum, dried flowers
 01930@01930.03@Pyrethrum Marc
 01930@01930.04@Tea nes (herbal tea)
+01930@01930.05@Vetiver
 01930@01930.90@Other plants and parts of plants used primarily in perfumery, in pharmacy, or for insecticidal, fungicidal or similar purposes, n.e.c.
 019@0194@Beet seeds (excluding sugar beet seeds) and seeds of forage plants
 0194@01940@Beet seeds (excluding sugar beet seeds) and seeds of forage plants
@@ -470,10 +500,14 @@ titleColumnIndex_EN=3
 0219@02191@Rabbits and hares
 0219@02192@Other mammals
 02192@02192.01@Other rodents
+02192.01@02192.0101@Cane rats
+02192.01@02192.0102@Guinea pigs
 02192@02192.90@Other mammals n.e.c.
 0219@02193@Ostriches and emus
 0219@02194@Other birds
 0219@02195@Reptiles
+02195@02195.01@Turtles
+02195@02195.02@Crocodiles
 0219@02196@Bees
 0219@02199@Other live animals, n.e.c.
 02199@02199.10@Other live animals non food, n.e.c.

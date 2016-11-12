@@ -115,12 +115,13 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
-@7001@Rural
-@7002@Urban
-@7003@Unspecified
-@7004@Total
+@7001@Rural@Rural(e)
+@7002@Urban@Urbain(e)
+@7003@Unspecified@Non spécifié
+@7004@Total@Total

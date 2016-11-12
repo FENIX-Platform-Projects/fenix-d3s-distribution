@@ -342,6 +342,7 @@ public class PostgresDefaultStorage extends PostgresStorage {
     public StoreStatus loadMetadata(String resourceId) throws Exception {
         Connection connection = getConnection();
         try {
+            System.out.println("start load metadata; resource ID: "+resourceId);
             PreparedStatement statement = connection.prepareStatement("SELECT status, rowsCount, lastUpdate, timeout FROM Metadata WHERE id = ?");
             statement.setString(1,resourceId);
             ResultSet result = statement.executeQuery();
@@ -367,6 +368,8 @@ public class PostgresDefaultStorage extends PostgresStorage {
         }
     }
     private synchronized void storeMetadata(String resourceId, StoreStatus status, Connection connection) throws Exception {
+        System.out.println("start store metadata on multithread; resourceID: "+resourceId + " and status is: "+(status!=null? status.getStatus():null));
+
         PreparedStatement statement = connection.prepareStatement(loadMetadata(resourceId) == null ?
                         "INSERT INTO Metadata (status, rowsCount, lastUpdate, timeout, id) VALUES (?,?,?,?,?)" :
                         "UPDATE Metadata SET status=?, rowsCount=?, lastUpdate=?, timeout=? WHERE id=?"
@@ -387,6 +390,7 @@ public class PostgresDefaultStorage extends PostgresStorage {
 
     @Override
     public void removeMetadata(String resourceId) throws Exception {
+
         Connection connection = getConnection();
         try {
             removeMetadata(resourceId, connection);
@@ -402,6 +406,7 @@ public class PostgresDefaultStorage extends PostgresStorage {
 
     }
     public synchronized void removeMetadata(String resourceId, Connection connection) throws Exception {
+        System.out.println("start remove metadata on multithread; resourceID: "+resourceId);
         connection.createStatement().executeUpdate("DELETE FROM Metadata WHERE id='" + resourceId + '\'');
     }
 

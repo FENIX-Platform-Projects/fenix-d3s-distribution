@@ -48,9 +48,10 @@ public class UnecaDatasetDistinctCacheListener implements DatasetCacheListener {
         for (DSDColumn column : dsd.getColumns())
             columnsMap.put(column.getId(), column);
 
-        OObjectDatabaseTx connection = client.getODatabase(OrientDatabase.msd);
+        //OObjectDatabaseTx connection = client.getODatabase(OrientDatabase.msd);
+        OObjectDatabaseTx connection = dbParameters.getConnection();
         try {
-            dbParameters.setConnection(connection);
+            //dbParameters.setConnection(connection);
             Map<String, Resource<DSDCodelist, Code>> codelists = getCodeLists(dsd.getColumns());
             Map<String,Code> codesMap = getCodesMap(codelists.values());
 
@@ -62,7 +63,7 @@ public class UnecaDatasetDistinctCacheListener implements DatasetCacheListener {
                     columnsMap.get(processedColumn.getId()).setValues(convert(processedColumn.getValues(), codelists, codesMap));
             connection.save(dsd);
         } finally {
-            connection.close();
+            //connection.close();
         }
         return false;
     }

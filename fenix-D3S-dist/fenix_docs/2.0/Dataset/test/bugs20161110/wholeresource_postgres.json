@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "uid":"Uneca_PopulationNew",
+    "uid":"Uneca_PopulationTEST_Pgre_3",
     "language": {
       "version": "1998",
       "codes": [
@@ -43,6 +43,9 @@
       "datasources": [
         "D3S"
       ],
+      "cache":{
+        "storage":"postgres"
+      },
       "columns": [
         {
           "dataType": "code",

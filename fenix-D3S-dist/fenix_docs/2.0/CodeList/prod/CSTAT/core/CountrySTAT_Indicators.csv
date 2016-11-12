@@ -115,131 +115,130 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
-@01@Production
-01@0101@Production quantity
-01@0102@Production value
-01@0103@Yield
-01@0104@Area Harvested
-01@0105@Area sown
-01@0106@Seeds quantity
-@02@Food availability
-02@0201@Protein quantity
-02@0202@Lipid quantity
-02@0203@Food supply quantity
-@03@Trade
-03@0301@Export quantity
-03@0302@Export value
-03@0303@Import quantity
-03@0304@Import value
-03@0305@Consumption quantity
-03@0306@Re-export quantity
-03@0307@Re-export value
-03@0308@Re-import quantity
-03@0309@Re-import value
-03@0310@Inventory of available products
-03@0311@Consumption rate
-@04@Machinery
-04@0401@Machines in service
-@05@Population
-05@0501@Population
-05@0502@Economically active population
-05@0503@Population total density
-05@0504@Population growth Rate 
-05@0505@Life expectancy
-05@0506@Chronic malnutrition rate
-@06@Prices
-06@0601@Consumer price
-06@0602@Producer price
-06@0603@Commercial rate
-06@0604@Official rate
-06@0605@Wholesale price
-06@0606@Annual average price
-06@0607@Lowest price
-06@0608@Highest price
-@07@Value added
-07@0701@Constant prices
-07@0702@Current prices
-@08@Land use
-08@0801@Administrative Area
-08@0802@Agricultural area
-08@0803@Arable land
-08@0804@Arable land and permanent crops area
-08@0805@Area equipped for irrigation
-08@0806@Fallow Land
-08@0807@Forest area
-08@0808@Inland water
-08@0809@Land Area
-08@0810@Other land?
-08@0811@Other wooded land
-08@0812@Permanent crops area
-08@0813@Permanent meadows and pastures
-08@0814@Temporary crops area
-08@0815@Temporary meadows and pastures
-@09@Employment
-09@0901@Unemployment Rate 
-09@0902@Labourforce Participation Rate
-@10@Water
-10@1001@Average rainfall
-10@1002@Max temperature
-10@1003@Min temperature
-10@1004@Drinking-water supply rate
-10@1005@Basic sanitation acces rate
-@11@Livestock
-11@1101@Slaughtered animals
-11@1102@Live animals
-1102@110201@Female Live Animals
-1102@110202@Lactating Animals
-1102@110203@Male Live Animals
-1102@110204@Born Animals
-1102@110205@Bought Animals
-1102@110206@Animals got as gift
-1102@110207@Animals got for caretaking
-1102@110208@Sold Animals
-1102@110209@Stolen Animals
-1102@110210@Animals given for caretaking
-1102@110211@Animals given as gift
-11@1103@Laying hens
-11@1104@Dead Animals
-11@1105@Total Input
-11@1106@Total Output
-11@1107@Animals-feeding
-1107@110701@Stall-feeding
-1107@110702@Field-feeding
-1107@110703@Mix feeding
-@12@National account
-12@1201@GPD
-12@1202@GDP growth
-12@1203@GDP per capita
-@13@Fishery
-13@1301@Aquaculture production
-1301@130101@Inland Aquaculture production
-1301@130102@Marine Aquaculture production
-130102@13010201@Industrial Marine Aquaculture production
-130102@13010202@Artisanal Marine Aquaculture production
-1301@130103@Marine/Brackish Aquaculture production
-13@1302@Capture production
-1302@130201@Inland Capture production
-1302@130202@Marine Capture production
-130202@13020201@Industrial Marine Capture production
-130202@13020202@Artisanal Marine Capture production
-130202@13020203@Traditional Marine Capture production
-1302@130203@Marine/Brackish Capture production
-@14@Forestry
-14@1401@Reforested area
-14@1402@Seedlings planted
-14@1403@Burned area
-1403@140301@Burned meadows
-1403@140302@Burned natural forests
-1403@140303@Burned reafforestation
-1403@140304@Authorized clearing
-1403@140305@Non-authorized clearing
-14@1404@Deforested area
-14@1405@Deforestation rate
+@01@Production@Production
+01@0101@Production quantity@Quantité produite
+01@0102@Production value@Valeur de la production
+01@0103@Yield@Rendement
+01@0104@Area Harvested@Superficie récoltée
+01@0105@Area sown@Superficie ensemencée
+01@0106@Seeds quantity@Quantité des semences
+@02@Food availability@Disponibilité alimentaire
+02@0201@Protein quantity@Disponibilité de protéines en quantité
+02@0202@Lipid quantity@Disponibilité de lipides en quantité
+02@0203@Food supply quantity@Disponibilité alimentaire en quantité
+@03@Trade@Commerce
+03@0301@Export quantity@Quantités des exportations 
+03@0302@Export value@Valeur des exportations
+03@0303@Import quantity@Quantités des importations
+03@0304@Import value@Valeur des importations
+03@0305@Consumption quantity@Quantité de consommation
+03@0306@Re-export quantity@Quantités des réexportations
+03@0307@Re-export value@Valeur des réexportations
+03@0308@Re-import quantity@Quantités des réimportations
+03@0309@Re-import value@Valeur des réimportations
+03@0310@Inventory of available products@Quantité des stocks des produits disponibles
+03@0311@Consumption rate@Taux de consommation
+@04@Machinery@Machines
+04@0401@Machines in service@Machines en service
+@05@Population@Population
+05@0501@Population@Population
+05@0502@Economically active population@Population économiquement active
+05@0503@Population total density@Densité totale de la population
+05@0504@Population growth rate @Taux de croissance de la population
+05@0505@Life expectancy@Espérance de vie
+05@0506@Chronic malnutrition rate@Taux de malnutrition chronique
+@06@Prices@Prix
+06@0601@Consumer price@Prix à la consommation
+06@0602@Producer price@Prix au producteur
+06@0603@Commercial rate@Taux commercial
+06@0604@Official rate@Taux officiel
+06@0605@Wholesale price@Prix de gros
+06@0606@Annual average price@Prix annuel moyen
+06@0607@Lowest price@Prix minimum
+06@0608@Highest price@Prix maximum
+@07@Value added@Valeur ajoutée
+07@0701@Constant prices@Prix constants
+07@0702@Current prices@Prix courants
+@08@Land use@Terres
+08@0801@Administrative Area@Superficie administrative
+08@0802@Agricultural area@Superficie agricole
+08@0803@Arable land@Terres arables
+08@0804@Arable land and permanent crops area@Terres arables et superficie des cultures permanentes
+08@0805@Area equipped for irrigation@Superficie équipée pour l'irrigation
+08@0806@Fallow Land@Terres en jachère
+08@0807@Forest area@Superficie forestière
+08@0808@Inland water@Eaux intérieures
+08@0809@Land Area@Extension des terres
+08@0810@Other land@Autres terres
+08@0811@Other wooded land@Autres terres boisées
+08@0812@Permanent crops area@Superficie des cultures permanentes
+08@0813@Permanent meadows and pastures@Prairies et pâturages permanents
+08@0814@Temporary crops area@Superficie des cultures temporaires
+08@0815@Temporary meadows and pastures@Prairies et pâturages temporaires
+@09@Employment@Emploi
+09@0901@Unemployment Rate @Taux de chômage
+09@0902@Labour force Participation Rate@Taux de participation à la population active
+@10@Water@Eau
+10@1001@Average rainfall@Hauteur moyenne de précipitations
+10@1002@Max temperature@Température maximale
+10@1003@Min temperature@Température minimale
+10@1004@Drinking-water supply rate@Taux de desserte en Eau Potable
+10@1005@Basic sanitation access rate@Taux d'accès en Assainissement de base
+@11@Livestock@Elevage
+11@1101@Slaughtered animals@Animaux abattus
+11@1102@Live animals@Animaux vivants
+1102@110201@Female Live Animals@Animaux vivants femelles
+1102@110202@Lactating Animals@Animaux en lactation
+1102@110203@Male Live Animals@Animaux vivants mâles
+1102@110204@Born Animals@Animaux nés
+1102@110205@Bought Animals@Animaux achetés
+1102@110206@Animals got as gift@Animaux reçus en cadeau
+1102@110207@Animals got for caretaking@Animaux reçus en gardiennage
+1102@110208@Sold Animals@Animaux vendus
+1102@110209@Stolen Animals@Animaux volés
+1102@110210@Animals given for caretaking@Animaux donnés en gardiennage
+1102@110211@Animals given as gift@Animaux donnés en cadeau
+1102@110212@Age at disposal@âge de réforme
+11@1103@Laying hens@Pondeuses
+11@1104@Dead Animals@Animaux morts
+11@1105@Total Input@Entrée totale
+11@1106@Total Output@Sortie totale
+@12@National account@Comptes nationaux
+12@1201@GPD@PIB
+12@1202@GDP growth@Croissance du PIB
+12@1203@GDP per capita@PIB par habitant
+@13@Fishery@Pêches
+13@1301@Aquaculture production@Production aquacole
+1301@130101@Inland Aquaculture production@Production aquacole en eaux intérieures
+1301@130102@Marine Aquaculture production@Production aquacole en eaux marines
+130102@13010201@Industrial Marine Aquaculture production@Production aquacole industrielle en eaux marines
+130102@13010202@Artisanal Marine Aquaculture production@Production aquacole artisanale en eaux marines
+1301@130103@Marine/Brackish Aquaculture production@Production aquacole en eaux saumâtres
+13@1302@Capture production@Production des captures
+1302@130201@Inland Capture production@Production des captures en eaux intérieures
+1302@130202@Marine Capture production@Production des captures en eaux marines
+130202@13020201@Industrial Marine Capture production@Production industrielle des captures en eaux marines
+130202@13020202@Artisanal Marine Capture production@Production artisanale des captures en eaux marines
+130202@13020203@Traditional Marine Capture production@Production traditionnelle des captures en eaux marines
+1302@130203@Marine/Brackish Capture production@Production des captures en eaux saumâtres
+@14@Forestry@Forêts
+14@1401@Reforested area@Superficie reboisée
+14@1402@Seedlings planted@Plants mises en terre
+14@1403@Burned area@Superficie brûlée
+1403@140301@Burned meadows@Prairies  brûlées                    
+1403@140302@Burned natural forests@Forêts naturelles brûlées 
+1403@140303@Burned reafforestation@Reboisement brûlé
+1403@140304@Authorized clearing@Défrichements Autorisés
+1403@140305@Non-authorized clearing@Défrichements Non Autorisés
+14@1404@Deforested area@Superficie déforéstée
+14@1405@Deforestation rate@Taux de déforestation
+
 
 
 
