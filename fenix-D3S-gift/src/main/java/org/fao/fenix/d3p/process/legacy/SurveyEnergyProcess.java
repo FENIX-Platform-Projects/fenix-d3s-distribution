@@ -1,4 +1,4 @@
-package org.fao.fenix.d3p.process.impl;
+package org.fao.fenix.d3p.process.legacy;
 
 
 import org.fao.fenix.commons.msd.dto.data.Resource;
@@ -11,8 +11,8 @@ import org.fao.fenix.d3p.dto.IteratorStep;
 import org.fao.fenix.d3p.dto.Step;
 import org.fao.fenix.d3p.dto.StepFactory;
 import org.fao.fenix.d3p.dto.StepType;
-import org.fao.fenix.d3p.process.impl.dto.EnergyFilterParameters;
-import org.fao.fenix.d3p.process.impl.dto.PopulationFoodFilterParameters;
+import org.fao.fenix.d3p.process.legacy.dto.EnergyFilterParameters;
+import org.fao.fenix.d3p.process.legacy.dto.PopulationFoodFilterParameters;
 import org.fao.fenix.d3p.process.type.ProcessName;
 import org.fao.fenix.d3s.cache.dto.dataset.Table;
 import org.fao.fenix.d3s.cache.manager.impl.level1.LabelDataIterator;

@@ -1,0 +1,244 @@
+{
+  "metadata" : {
+    "uid": "UNECA_hp_indicators",
+    "title": {
+      "EN": "UNECA home page indicators dataset"
+    },
+    "meContent": {
+      "resourceRepresentationType": "dataset"
+    },
+    "dsd": {
+      "contextSystem": "uneca_process",
+      "datasources": [
+        "D3S"
+      ],
+      "columns": [
+        {
+          "id": "indicator",
+          "subject": "item",
+          "title": {
+            "EN": "Indicator"
+          },
+          "dataType": "code",
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "UNECA_Indicators"
+              }
+            ]
+          },
+          "values": {
+            "codes": [
+              {
+                "idCodeList": "UNECA_Indicators",
+                "codes": [
+                  {
+                    "code": "gdp_ppp"
+                  },
+                  {
+                    "code": "gdp_capita"
+                  },
+                  {
+                    "code": "gdp_growth"
+                  },
+                  {
+                    "code": "inflation"
+                  },
+                  {
+                    "code": "export_growth"
+                  },
+                  {
+                    "code": "fdi_inward"
+                  },
+                  {
+                    "code": "fdi_outward"
+                  },
+                  {
+                    "code": "life_expectancy"
+                  }
+                ]
+              }
+            ]
+          },
+          "key": true
+        },
+        {
+          "id": "year",
+          "subject": "time",
+          "title": {
+            "EN": "Year"
+          },
+          "dataType": "year",
+          "domain": {
+            "period": {
+              "from": 2005,
+              "to": 2015
+            }
+          },
+          "values": {
+            "period": {
+              "from": 2005,
+              "to": 2015
+            }
+          },
+          "key": true
+        },
+        {
+          "id": "value",
+          "subject": "value",
+          "title": {
+            "EN": "Value"
+          },
+          "dataType": "number"
+        },
+        {
+          "id": "um",
+          "subject": "um",
+          "title": {
+            "EN": "Unit of measure"
+          },
+          "dataType": "code",
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "UNECA_UnitMeasure"
+              }
+            ]
+          },
+          "values": {
+            "codes": [
+              {
+                "idCodeList": "UNECA_UnitMeasure",
+                "codes": [
+                  {
+                    "code": "BIND"
+                  },
+                  {
+                    "code": "IND"
+                  },
+                  {
+                    "code": "Perc"
+                  },
+                  {
+                    "code": "MUSD"
+                  },
+                  {
+                    "code": "YRS"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "datasource",
+          "title": {
+            "EN": "Data source"
+          },
+          "dataType": "text"
+        }
+      ]
+    }
+  },
+  "data": [
+    ["gdp_ppp","2005","3,158","BIND","IMF"],
+    ["gdp_ppp","2006","3,457","BIND","IMF"],
+    ["gdp_ppp","2007","3,786","BIND","IMF"],
+    ["gdp_ppp","2008","4,071","BIND","IMF"],
+    ["gdp_ppp","2009","4,249","BIND","IMF"],
+    ["gdp_ppp","2010","4,540","BIND","IMF"],
+    ["gdp_ppp","2011","4,720","BIND","IMF"],
+    ["gdp_ppp","2012","5,034","BIND","IMF"],
+    ["gdp_ppp","2013","5,304","BIND","IMF"],
+    ["gdp_ppp","2014","5,577","BIND","IMF"],
+    ["gdp_ppp","2015","5,819","BIND","IMF"],
+    ["gdp_capita","2005","1,209","IND","IMF, UNPD"],
+    ["gdp_capita","2006","1,365","IND","IMF, UNPD"],
+    ["gdp_capita","2007","1,561","IND","IMF, UNPD"],
+    ["gdp_capita","2008","1,794","IND","IMF, UNPD"],
+    ["gdp_capita","2009","1,655","IND","IMF, UNPD"],
+    ["gdp_capita","2010","1,917","IND","IMF, UNPD"],
+    ["gdp_capita","2011","2,087","IND","IMF, UNPD"],
+    ["gdp_capita","2012","2,171","IND","IMF, UNPD"],
+    ["gdp_capita","2013","2,199","IND","IMF, UNPD"],
+    ["gdp_capita","2014","2,209","IND","IMF, UNPD"],
+    ["gdp_capita","2015","1,966","IND","IMF, UNPD"],
+    ["gdp_growth","2005","5.9","Perc","UNSD"],
+    ["gdp_growth","2006","5.6","Perc","UNSD"],
+    ["gdp_growth","2007","6.2","Perc","UNSD"],
+    ["gdp_growth","2008","6.0","Perc","UNSD"],
+    ["gdp_growth","2009","3.9","Perc","UNSD"],
+    ["gdp_growth","2010","5.6","Perc","UNSD"],
+    ["gdp_growth","2011","1.6","Perc","UNSD"],
+    ["gdp_growth","2012","5.2","Perc","UNSD"],
+    ["gdp_growth","2013","3.8","Perc","UNSD"],
+    ["gdp_growth","2014","3.8","Perc","UNSD"],
+    ["gdp_growth","2015","3.4","Perc","UNSD"],
+    ["inflation","2005","5.0","Perc","IMF"],
+    ["inflation","2006","5.5","Perc","IMF"],
+    ["inflation","2007","5.7","Perc","IMF"],
+    ["inflation","2008","11.3","Perc","IMF"],
+    ["inflation","2009","6.7","Perc","IMF"],
+    ["inflation","2010","6.2","Perc","IMF"],
+    ["inflation","2011","9.0","Perc","IMF"],
+    ["inflation","2012","8.6","Perc","IMF"],
+    ["inflation","2013","6.4","Perc","IMF"],
+    ["inflation","2014","7.1","Perc","IMF"],
+    ["inflation","2015","7.0","Perc","IMF"],
+    ["investment","2005","21.6","Perc","IMF"],
+    ["investment","2006","22.2","Perc","IMF"],
+    ["investment","2007","24.7","Perc","IMF"],
+    ["investment","2008","25.6","Perc","IMF"],
+    ["investment","2009","25.9","Perc","IMF"],
+    ["investment","2010","24.3","Perc","IMF"],
+    ["investment","2011","22.2","Perc","IMF"],
+    ["investment","2012","22.6","Perc","IMF"],
+    ["investment","2013","22.6","Perc","IMF"],
+    ["investment","2014","23.2","Perc","IMF"],
+    ["investment","2015","23.0","Perc","IMF"],
+    ["export_growth","2005","5.1","Perc","UNCTAD"],
+    ["export_growth","2006","2.9","Perc","UNCTAD"],
+    ["export_growth","2007","6.8","Perc","UNCTAD"],
+    ["export_growth","2008","1.3","Perc","UNCTAD"],
+    ["export_growth","2009","-5.9","Perc","UNCTAD"],
+    ["export_growth","2010","9.9","Perc","UNCTAD"],
+    ["export_growth","2011","0.3","Perc","UNCTAD"],
+    ["export_growth","2012","19.5","Perc","UNCTAD"],
+    ["export_growth","2013","-0.7","Perc","UNCTAD"],
+    ["export_growth","2014","0.0","Perc","UNCTAD"],
+    ["export_growth","2015","2.1","Perc","UNCTAD"],
+    ["fdi_inward","2005","27,888","MUSD","UNCTAD"],
+    ["fdi_inward","2006","32,686","MUSD","UNCTAD"],
+    ["fdi_inward","2007","48,702","MUSD","UNCTAD"],
+    ["fdi_inward","2008","56,116","MUSD","UNCTAD"],
+    ["fdi_inward","2009","52,653","MUSD","UNCTAD"],
+    ["fdi_inward","2010","44,072","MUSD","UNCTAD"],
+    ["fdi_inward","2011","47,705","MUSD","UNCTAD"],
+    ["fdi_inward","2012","56,435","MUSD","UNCTAD"],
+    ["fdi_inward","2013","53,969","MUSD","UNCTAD"],
+    ["fdi_inward","2014","53,912","MUSD","UNCTAD"],
+    ["fdi_inward","2015","","MUSD","UNCTAD"],
+    ["fdi_outward","2005","2,144","MUSD","UNCTAD"],
+    ["fdi_outward","2006","8,270","MUSD","UNCTAD"],
+    ["fdi_outward","2007","11,077","MUSD","UNCTAD"],
+    ["fdi_outward","2008","9,986","MUSD","UNCTAD"],
+    ["fdi_outward","2009","6,225","MUSD","UNCTAD"],
+    ["fdi_outward","2010","9,264","MUSD","UNCTAD"],
+    ["fdi_outward","2011","6,500","MUSD","UNCTAD"],
+    ["fdi_outward","2012","12,386","MUSD","UNCTAD"],
+    ["fdi_outward","2013","15,951","MUSD","UNCTAD"],
+    ["fdi_outward","2014","13,073","MUSD","UNCTAD"],
+    ["fdi_outward","2015","","MUSD","UNCTAD"],
+    ["life_expectancy","2005","55.8","YRS","UNPD"],
+    ["life_expectancy","2006","56.4","YRS","UNPD"],
+    ["life_expectancy","2007","57.0","YRS","UNPD"],
+    ["life_expectancy","2008","57.6","YRS","UNPD"],
+    ["life_expectancy","2009","58.3","YRS","UNPD"],
+    ["life_expectancy","2010","58.9","YRS","UNPD"],
+    ["life_expectancy","2011","59.4","YRS","UNPD"],
+    ["life_expectancy","2012","59.9","YRS","UNPD"],
+    ["life_expectancy","2013","60.4","YRS","UNPD"],
+    ["life_expectancy","2014","60.8","YRS","UNPD"],
+    ["life_expectancy","2015","61.2","YRS","UNPD"]
+  ]
+}

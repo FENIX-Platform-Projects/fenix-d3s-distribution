@@ -1,4 +1,4 @@
-package org.fao.ess.gift.d3s;
+package org.fao.ess.gift.d3s.utils;
 
 
 import java.sql.Connection;

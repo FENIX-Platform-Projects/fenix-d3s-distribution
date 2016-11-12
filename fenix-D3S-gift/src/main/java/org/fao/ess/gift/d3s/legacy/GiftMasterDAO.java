@@ -1,5 +1,6 @@
-package org.fao.ess.gift.d3s;
+package org.fao.ess.gift.d3s.legacy;
 
+import org.fao.ess.gift.d3s.utils.DataSource;
 import org.fao.fenix.commons.msd.dto.full.DSD;
 import org.fao.fenix.commons.msd.dto.full.DSDColumn;
 import org.fao.fenix.commons.msd.dto.full.DSDDataset;
@@ -9,7 +10,6 @@ import org.fao.fenix.commons.utils.database.DatabaseUtils;
 import org.fao.fenix.d3s.wds.dataset.WDSDatasetDao;
 
 import javax.inject.Inject;
-import javax.transaction.HeuristicRollbackException;
 import java.sql.*;
 import java.util.*;
 

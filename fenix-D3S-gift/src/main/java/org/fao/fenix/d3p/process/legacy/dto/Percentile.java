@@ -1,4 +1,4 @@
-package org.fao.fenix.d3p.process.impl.dto;
+package org.fao.fenix.d3p.process.legacy.dto;
 
 
 public class Percentile {

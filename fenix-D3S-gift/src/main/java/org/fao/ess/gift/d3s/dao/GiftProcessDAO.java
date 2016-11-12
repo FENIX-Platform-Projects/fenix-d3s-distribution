@@ -1,10 +1,10 @@
-package org.fao.ess.gift.d3s;
+package org.fao.ess.gift.d3s.dao;
 
 import org.fao.ess.gift.d3s.dto.DatasetType;
 import org.fao.ess.gift.d3s.dto.Items;
 import org.fao.ess.gift.d3s.dto.Queries;
+import org.fao.ess.gift.d3s.utils.DataSource;
 import org.fao.fenix.commons.msd.dto.full.*;
-import org.fao.fenix.commons.utils.StringUtils;
 import org.fao.fenix.commons.utils.database.DataIterator;
 import org.fao.fenix.d3s.wds.dataset.WDSDatasetDao;
 

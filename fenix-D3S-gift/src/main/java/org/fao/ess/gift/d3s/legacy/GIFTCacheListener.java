@@ -1,4 +1,4 @@
-package org.fao.ess.gift.d3s;
+package org.fao.ess.gift.d3s.legacy;
 
 import org.fao.fenix.d3s.cache.manager.listener.Context;
 import org.fao.fenix.d3s.cache.manager.listener.DatasetAccessInfo;

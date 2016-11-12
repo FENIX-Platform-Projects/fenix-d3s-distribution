@@ -1,4 +1,4 @@
-package org.fao.ess.gift.d3s;
+package org.fao.ess.gift.d3s.cache;
 
 import org.fao.ess.gift.d3s.dto.DatasetType;
 import org.fao.ess.gift.d3s.dto.Items;

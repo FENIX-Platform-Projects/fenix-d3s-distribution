@@ -1,7 +1,4 @@
-package org.fao.fenix.d3p.process.impl.dto;
-
-import java.util.Collection;
-import java.util.LinkedList;
+package org.fao.fenix.d3p.process.legacy.dto;
 
 public class SummaryFilterParameters extends PopulationFoodFilterParameters {
     public double[] percentiles;

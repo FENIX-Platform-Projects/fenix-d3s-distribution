@@ -1,4 +1,4 @@
-package org.fao.fenix.d3p.process.impl;
+package org.fao.fenix.d3p.process.legacy;
 
 
 import org.fao.fenix.commons.msd.dto.full.DSDColumn;
@@ -6,9 +6,9 @@ import org.fao.fenix.commons.msd.dto.full.DSDDataset;
 import org.fao.fenix.commons.msd.dto.type.DataType;
 import org.fao.fenix.commons.utils.database.DatabaseUtils;
 import org.fao.fenix.d3p.dto.*;
-import org.fao.fenix.d3p.process.impl.dto.Percentile;
-import org.fao.fenix.d3p.process.impl.dto.PopulationFoodFilterParameters;
-import org.fao.fenix.d3p.process.impl.dto.SummaryFilterParameters;
+import org.fao.fenix.d3p.process.legacy.dto.Percentile;
+import org.fao.fenix.d3p.process.legacy.dto.PopulationFoodFilterParameters;
+import org.fao.fenix.d3p.process.legacy.dto.SummaryFilterParameters;
 import org.fao.fenix.d3p.process.type.ProcessName;
 
 import javax.inject.Inject;

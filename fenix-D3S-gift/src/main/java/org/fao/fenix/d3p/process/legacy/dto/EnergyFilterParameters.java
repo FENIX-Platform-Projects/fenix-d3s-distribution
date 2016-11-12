@@ -1,6 +1,4 @@
-package org.fao.fenix.d3p.process.impl.dto;
-
-import java.util.Collection;
+package org.fao.fenix.d3p.process.legacy.dto;
 
 public class EnergyFilterParameters extends PopulationFoodFilterParameters {
     public boolean consumers;
