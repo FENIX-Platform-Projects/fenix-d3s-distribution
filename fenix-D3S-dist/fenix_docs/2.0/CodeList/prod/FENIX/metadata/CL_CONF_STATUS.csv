@@ -110,12 +110,13 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
-@F@Free
-@N@Not for publication, restricted for internal use only
-@C@Confidential statistical information
-@D@Secondary confidentiality set by the sender, not for publication 
-@S@Secondary confidentiality set and managed by the receiver, not for publication 
+@F@Free@Gratuit
+@N@Not for publication, restricted for internal use only@
+@C@Confidential statistical information@Non destiné à la publication, réservé à un usage interne seulement
+@D@Secondary confidentiality set by the sender, not for publication@Confidentialité secondaire définie par l'expéditeur, pas pour publication
+@S@Secondary confidentiality set and managed by the receiver, not for publication@Confidentialité secondaire définie et gérée par le destinataire, non pour publication

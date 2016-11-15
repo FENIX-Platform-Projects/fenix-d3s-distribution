@@ -110,23 +110,23 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
-
+titleColumnIndex_FR=4
 
 
 --data--
 
 
-@1@Second
-@2@Minute
-@3@Hour
-@4@Day
-@5@Week
-@6@Month
-@7@Quarter
-@8@Semester
-@9@Year
-@10@Fiscal year
-@11@Decay
-@12@Irregular
-@13@2 years
-@14@5 years
+@1@Second@Seconde
+@2@Minute@Minute
+@3@Hour@Heure
+@4@Day@Journée
+@5@Week@Semaine
+@6@Month@Mois
+@7@Quarter@Trimestre
+@8@Semester@Semestre
+@9@Year@An
+@10@Fiscal year@Exercice fiscal
+@11@Decay@Se désintégrer
+@12@Irregular@Irrégulier
+@13@2 years@2 ans
+@14@5 years@5 ans

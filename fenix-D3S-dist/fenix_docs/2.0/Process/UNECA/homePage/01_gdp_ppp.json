@@ -1,0 +1,23 @@
+[
+  {
+    "name": "filter",
+    "sid": [ { "uid": "UNECA_hp_indicators" } ],
+    "parameters": {
+      "columns": [
+        "year",
+        "value",
+        "um"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "UNECA_Indicators",
+              "codes": [ "gdp_ppp" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

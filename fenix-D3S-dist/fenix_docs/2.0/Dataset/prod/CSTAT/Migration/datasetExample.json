@@ -1,0 +1,158 @@
+{
+  "metadata" : {
+    "creationDate" : 1392933600000,
+    "title" : {
+      "EN" : "Production",
+      "FR" : "Production"
+    },
+    "meContent" : {
+      "resourceRepresentationType" : "dataset",
+      "seReferencePopulation" : {
+        "referenceArea" : {
+          "idCodeList" : "GAUL_ReferenceArea",
+          "version" : "1.0",
+          "codes" : [ { "code": "ADM0" } ]
+        }
+      },
+      "seCoverage" : {
+        "coverageSectors" : {
+          "idCodeList" : "CSTAT_Core",
+          "codes" : [ { "code" : "P" } ]
+        },
+        "coverageGeographic" : {
+          "idCodeList" : "GAUL0",
+          "version" : "2014",
+          "codes" : [ { "code" : "217" } ]
+        }
+      }
+    },
+    "contacts" : [ {
+      "organization" : {
+        "FR" : "Enquete Agricole Annuelle, Rapport sur les Statistiques horticoles"
+      },
+      "pointOfContact" : "Direction de l'Analyse, de la Prevision et des Statistiques Agricoles(DAPSA)",
+      "contactInfo" : {
+        "emailAddress" : null,
+        "phone" : "338646470"
+      }
+    } ],
+
+
+    "dsd" : {
+      "contextSystem": "cstat_sen",
+      "datasources": [
+        "D3S"
+      ],
+      "columns": [
+        {
+          "dataType": "year",
+          "key": true,
+          "id": "TIME",
+          "title": {
+            "FR": "Années"
+          },
+          "subject": "time"
+        },
+        {
+          "dataType": "code",
+          "key": true,
+          "id": "INDICATOR",
+          "title": {
+            "FR": "Indicateur"
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "CountrySTAT_Indicators"
+              }
+            ]
+          },
+          "subject": "indicator"
+        },
+        {
+          "dataType": "code",
+          "key": true,
+          "id": "ITEM",
+          "title": {
+            "FR": "Produit"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "full",
+                "idCodeList": "HS"
+              }
+            ]
+          },
+          "subject": "item"
+        },
+        {
+          "dataType": "number",
+          "id": "VALUE",
+          "title": {
+            "FR": "Valeur"
+          },
+          "subject": "value"
+        },
+        {
+          "dataType": "code",
+          "id": "UM",
+          "title": {
+            "FR": "Unité"
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "CountrySTAT_UM"
+              }
+            ]
+          },
+          "subject": "um"
+        },
+        {
+          "dataType": "code",
+          "id": "FLAG",
+          "title": {
+            "FR": "Flag"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "1.0",
+                "idCodeList": "Flag"
+              }
+            ]
+          },
+          "subject": "flag"
+        }
+      ]
+    },
+
+
+    "language" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "eng"
+      } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "characterSet" : {
+      "codes" : [ {
+        "code" : "106"
+      } ],
+      "idCodeList" : "IANAcharacterSet"
+    },
+    "metadataStandardName" : "FENIX",
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "eng"
+      } ],
+      "idCodeList" : "ISO639-2"
+    }
+  },
+  "data" : [
+
+  ]
+}

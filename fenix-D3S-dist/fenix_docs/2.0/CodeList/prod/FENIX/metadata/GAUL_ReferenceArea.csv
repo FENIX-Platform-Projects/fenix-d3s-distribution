@@ -140,11 +140,12 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
-@ADM0@International or country boundaries.
-@ADM1@First level administrative boundaries
-@ADM2@Second level administrative boundaries. 
+@ADM0@International or country boundaries@Frontières internationales ou nationales
+@ADM1@First level administrative boundaries@Limites administratives de premier niveau
+@ADM2@Second level administrative boundaries@Limites administratives de second niveau

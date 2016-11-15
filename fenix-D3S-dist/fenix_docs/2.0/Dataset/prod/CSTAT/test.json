@@ -1,0 +1,160 @@
+{
+  "metadata" : {
+    "uid" : "test_ivano_1",
+    "language" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "fre"
+      } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "title" : {
+      "EN" : "TestBlabla"
+    },
+    "dsd" : {
+      "contextSystem" : "cstat_cog",
+      "datasources" : [ "D3S" ],
+      "columns" : [ {
+        "dataType" : "year",
+        "key" : true,
+        "id" : "DIMENSION0",
+        "title" : {
+          "FR" : "Annee",
+          "EN" : "Annee"
+        },
+        "subject" : "time"
+      }, {
+        "dataType" : "code",
+        "key" : true,
+        "id" : "DIMENSION1",
+        "title" : {
+          "EN" : "indicateur"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_Indicators"
+          } ]
+        },
+        "subject" : "indicator"
+      }, {
+        "dataType" : "code",
+        "key" : true,
+        "id" : "DIMENSION2",
+        "title" : {
+          "FR" : "resdence",
+          "EN" : "resis"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_Residence"
+          } ]
+        },
+        "subject" : "residence"
+      }, {
+        "dataType" : "number",
+        "key" : false,
+        "id" : "VALUE0",
+        "title" : {
+          "FR" : "value",
+          "EN" : "value"
+        },
+        "subject" : "value"
+      }, {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "OTHER0",
+        "title" : {
+          "FR" : "flag",
+          "EN" : "flag"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "Flag"
+          } ]
+        },
+        "subject" : "flag"
+      }, {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "OTHER1",
+        "title" : {
+          "FR" : "um",
+          "EN" : "um"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_UM"
+          } ]
+        },
+        "subject" : "um"
+      } ]
+    },
+    "meContent" : {
+      "description" : {
+        "EN" : ""
+      },
+      "resourceRepresentationType" : "dataset",
+      "keywords" : [ "manco" ],
+      "statisticalConceptsDefinitions" : {
+        "EN" : ""
+      },
+      "seReferencePopulation" : {
+        "statisticalPopulation" : {
+          "EN" : ""
+        },
+        "statisticalUnit" : {
+          "EN" : ""
+        },
+        "referencePeriod" : {
+          "version" : "1.0",
+          "codes" : [ {
+            "code" : "14"
+          } ],
+          "idCodeList" : "FAO_Period"
+        }
+      },
+      "seCoverage" : {
+        "coverageSectors" : {
+          "codes" : [ {
+            "code" : "FER"
+          } ],
+          "idCodeList" : "CSTAT_Core"
+        },
+        "coverageSectorsDetails" : {
+          "EN" : ""
+        },
+        "coverageTime" : {
+          "from" : -3600000,
+          "to" : 1479078000000
+        }
+      }
+    },
+    "characterSet" : {
+      "codes" : [ {
+        "code" : "106"
+      } ],
+      "idCodeList" : "IANAcharacterSet"
+    },
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "fre"
+      } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "meInstitutionalMandate" : {
+      "legalActsAgreements" : {
+        "EN" : ""
+      },
+      "institutionalMandateDataSharing" : {
+        "EN" : ""
+      }
+    },
+    "meMaintenance" : {
+      "seUpdate" : { }
+    }
+  }
+  ,
+  "data":[["2003","0501","7001","1294",null,"0107"],["2003","0501","7002","1896",null,"0107"],["2004","0501","7002","1968",null,"0107"],["2004","0501","7001","1323",null,"0107"],["2005","0501","7002","2043",null,"0107"],["2005","0501","7001","1354",null,"0107"],["2006","0501","7002","2122",null,"0107"],["2006","0501","7001","1386",null,"0107"],["2010","0501","7002","2501",null,"0107"],["2007","0501","7002","2285551",null,"0107"],["2007","0501","7001","1411939",null,"0107"],["2008","0501","7001","1476674",null,"0107"],["2008","0501","7002","2313112",null,"0107"],["2009","0501","7002","2373495",null,"0107"],["2009","0501","7001","1510717",null,"0107"],["2010","0501","7001","1479196",null,"0107"],["2010","0501","7002","2500862",null,"0107"]]
+}

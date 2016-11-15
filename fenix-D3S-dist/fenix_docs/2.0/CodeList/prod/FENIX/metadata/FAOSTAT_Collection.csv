@@ -110,22 +110,22 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
-
+titleColumnIndex_FR=4
 
 
 --data--
 
 
 
-@01@Census data
-@02@National accounts data
-@03@Exhaustive surveys
-@04@Random sampling
-@05@Non-random sampling data
-@06@Administrative data
-@07@Mixture or other modes of data collection
-@08@Input to FBS/SUA
-@09@Exhaustive/adm.
-@10@HBS
-@11@LSS
-@12@Random sampling/exhaustive surveys
+@01@Census data@Données du recensement
+@02@National accounts data@Données des comptes nationaux
+@03@Exhaustive surveys@Etudes exhaustives
+@04@Random sampling@Échantillonnage aléatoire
+@05@Non-random sampling data@Données d'échantillonnage non aléatoires
+@06@Administrative data@Données administratives
+@07@Mixture or other modes of data collection@Mélange ou autres modes de collecte de données
+@08@Input to FBS/SUA@Entrée vers FBS/SUA
+@09@Exhaustive/adm@Exhaustive/adm
+@10@HBS@HBS
+@11@LSS@LSS
+@12@Random sampling/exhaustive surveys@Échantillonnage aléatoire/enquêtes exhaustives

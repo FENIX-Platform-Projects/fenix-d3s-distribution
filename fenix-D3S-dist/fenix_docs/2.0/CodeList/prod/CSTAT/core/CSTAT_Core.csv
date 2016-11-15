@@ -110,24 +110,26 @@ structure=tree
 dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
 
 
 
 --data--
 
 
-@P@Production
-@T@Trade
-@FA@Food Availability
-@PR@Prices
-@LU@Land Use
-@POP@Population
-@L@Labor
-@FER@Fertilizers
-@PES@Pesticides
-@M@Machinery
-@FOR@Forestry
-@FIS@Fisheries
-@W@Water
-@VA@Value Added
-@GE@Government Expenditure
+@P@Production@Production
+@T@Trade@Commerce
+@FA@Food Availability@Disponibilité alimentaire
+@PR@Prices@Prix
+@LU@Land Use@Terres
+@POP@Population@Population
+@L@Labor@Travail
+@FER@Fertilizers@Engrais
+@PES@Pesticides@Pesticides
+@M@Machinery@Machines
+@FOR@Forestry@Forêts
+@FIS@Fisheries@Pêches
+@W@Water@Eau
+@VA@Value Added@Valeur ajoutée
+@GE@Government Expenditure@Government Expenditure
+@LI@Livestock@Bétail

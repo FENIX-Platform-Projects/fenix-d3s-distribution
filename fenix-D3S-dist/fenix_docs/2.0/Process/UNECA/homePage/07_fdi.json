@@ -1,0 +1,24 @@
+[
+  {
+    "name": "filter",
+    "sid": [ { "uid": "UNECA_hp_indicators" } ],
+    "parameters": {
+      "columns": [
+        "indicator",
+        "year",
+        "value",
+        "um"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "UNECA_Indicators",
+              "codes": [ "fdi_inward", "fdi_outward" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]
