@@ -1,0 +1,37 @@
+create table browse_recipient as (select oda, parentsector_code, purposecode,
+ year, 
+recipientcode,fao_sector, 
+sum(value) as value,
+max(unitcode) as unitcode
+ from usd_aggregated_table
+ group by
+
+ oda, parentsector_code, purposecode, year, recipientcode,fao_sector
+ order by
+ oda, parentsector_code, purposecode, year, recipientcode,fao_sector);
+
+ ---
+
+ create table browse_sector_map as (
+select oda, 
+parentsector_code, 
+purposecode,
+ year, 
+ gaul0,
+ fao_region,
+ fao_subregion,
+ fao_sector, 
+sum(value) as value,
+max(unitcode) as unitcode
+ from usd_aggregated_table
+ group by
+ oda, parentsector_code, purposecode, year, gaul0,
+ fao_region,
+ fao_subregion
+ ,fao_sector
+ order by
+ oda, parentsector_code, purposecode, year, 
+ gaul0,
+ fao_region,
+ fao_subregion,
+ fao_sector);

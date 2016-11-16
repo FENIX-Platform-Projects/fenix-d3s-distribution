@@ -1,0 +1,80 @@
+{
+  "uid": "adam_browse_recipient",
+  "title": {
+    "EN": "ADAM aggregated table"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Dataset for aggregated data from different datasources"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd" : {
+    "contextSystem" : "adam_agg",
+    "datasources" : ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+    "columns": [
+      {
+        "id": "oda",
+        "title": {"EN": "Oda name"},
+        "domain" : { "codes" : [ { "idCodeList" : "crs_oda", "version" : "2016"} ] },
+        "dataType" : "code",
+        "key": true
+      },
+
+      {
+        "id" : "parentsector_code",
+        "title" : { "EN" : "Parent sector" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
+        "dataType" : "code"
+      },
+
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "Sub-sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year" },
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+      "id": "fao_sector",
+      "title": {
+        "EN": "FAO sector"
+      },
+      "dataType": "text"
+      },
+      {
+        "id": "value",
+        "subject": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "dataType": "number"
+      },
+      {
+        "id" : "unitcode",
+        "subject" : "um",
+        "title" : { "EN" : "Measurement unit" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
+        "dataType" : "code"
+      }
+    ]
+  }
+}
