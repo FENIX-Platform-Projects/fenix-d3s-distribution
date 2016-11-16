@@ -1,6 +1,7 @@
 package org.fao.ess.uneca.d3s;
 
 import com.orientechnologies.orient.object.db.OObjectDatabaseTx;
+import org.apache.log4j.Logger;
 import org.fao.fenix.commons.msd.dto.data.Resource;
 import org.fao.fenix.commons.msd.dto.data.ResourceProxy;
 import org.fao.fenix.commons.msd.dto.full.*;
@@ -19,14 +20,15 @@ import org.fao.fenix.commons.process.dto.Process;
 import org.fao.fenix.d3s.msd.dao.MetadataResourceDao;
 import org.fao.fenix.d3s.msd.services.spi.Resources;
 import org.fao.fenix.d3s.server.dto.DatabaseStandards;
-import org.fao.fenix.d3s.server.tools.orient.OrientDatabase;
 import org.fao.fenix.d3s.server.tools.orient.OrientServer;
 
 import javax.inject.Inject;
 import java.util.*;
 
-@Context({"uneca"})
-public class UnecaDatasetDistinctCacheListener implements DatasetCacheListener {
+//@Context({"uneca"})
+public class UnecaDatasetDistinctCacheListener {// implements DatasetCacheListener {
+    private static final Logger LOGGER = Logger.getLogger(UnecaDatasetDistinctCacheListener.class);
+
     @Inject DatabaseStandards dbParameters;
     @Inject OrientServer client;
     @Inject Processes processesService;
@@ -35,12 +37,12 @@ public class UnecaDatasetDistinctCacheListener implements DatasetCacheListener {
 
 
 
-    @Override
+    //@Override
     public boolean updating(DatasetAccessInfo datasetInfo) throws Exception {
         return false;
     }
 
-    @Override
+    //@Override
     public boolean updated(DatasetAccessInfo datasetInfo) throws Exception {
         MeIdentification<DSDDataset> metadata = datasetInfo.getMetadata();
         DSDDataset dsd = metadata.getDsd();
@@ -53,7 +55,7 @@ public class UnecaDatasetDistinctCacheListener implements DatasetCacheListener {
         try {
             //dbParameters.setConnection(connection);
             Map<String, Resource<DSDCodelist, Code>> codelists = getCodeLists(dsd.getColumns());
-            Map<String,Code> codesMap = getCodesMap(codelists.values());
+            Map<String, Code> codesMap = getCodesMap(codelists.values());
 
             ResourceProxy resource = processesService.apply(metadata.getUid(), metadata.getVersion(), new Process[]{new Process("dsdDistinct")}, null);
             MetadataDSD processedMetadata = (MetadataDSD) resource.getMetadata();
@@ -62,6 +64,8 @@ public class UnecaDatasetDistinctCacheListener implements DatasetCacheListener {
                 if (columnsMap.containsKey(processedColumn.getId()))
                     columnsMap.get(processedColumn.getId()).setValues(convert(processedColumn.getValues(), codelists, codesMap));
             connection.save(dsd);
+        } catch (Exception ex) {
+            LOGGER.error(ex.getMessage());
         } finally {
             //connection.close();
         }
@@ -69,7 +73,7 @@ public class UnecaDatasetDistinctCacheListener implements DatasetCacheListener {
     }
 
 
-    @Override
+    //@Override
     public boolean removing(DatasetAccessInfo datasetInfo) throws Exception {
         DSDDataset dsd = ((MeIdentification<DSDDataset>)datasetInfo.getMetadata()).getDsd();
         Collection<DSDColumn> columns = dsd!=null ? dsd.getColumns() : null;
