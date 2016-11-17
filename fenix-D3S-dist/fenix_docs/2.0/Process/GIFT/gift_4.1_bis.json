@@ -79,6 +79,8 @@
 
   {
     "name" : "var",
+    "rid" : {"uid" : "eccolo_qui"},
+    "result" : false,
     "parameters" : {
       "global" : true,
       "variables" : [
@@ -114,7 +116,10 @@
   {
     "name" : "select",
     "parameters" : {
-      "query" : "select group_code, (increment*100)/<<populationSize[0]>>"
+      "values" : {
+        "group_code" : null,
+        "increment" : "(increment*100)/<<populationSize[0]>>"
+      }
     }
   }
 
