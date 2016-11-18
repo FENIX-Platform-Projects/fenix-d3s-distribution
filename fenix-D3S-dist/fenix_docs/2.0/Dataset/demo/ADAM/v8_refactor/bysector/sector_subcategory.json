@@ -1,5 +1,5 @@
 {
-  "uid": "adam_browse_recipient_oda",
+  "uid": "adam_browse_sector_subcategory",
   "title": {
     "EN": "ADAM aggregated table"
   },
@@ -23,12 +23,14 @@
         "dataType" : "code",
         "key": true
       },
+
       {
         "id" : "parentsector_code",
         "title" : { "EN" : "Parent sector" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
       },
+
       {
         "id" : "purposecode",
         "title" : { "EN" : "Sub-sector" },
@@ -36,31 +38,22 @@
         "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
         "key": true
       },
-      {
-        "id" : "fao_region",
-        "title" : { "EN" : "FAO Region" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] },
-        "key": true
-      },
-      {
-        "id" : "fao_subregion",
-        "title" : { "EN" : "FAO Subregion" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 2 } ] },
-        "key": true
-      },
 
       {
-        "id" : "gaul0",
-        "subject" : "geo",
-        "title" : { "EN" : "GAUL Country" },
+        "id" : "channelsubcategory_code",
+        "title" : { "EN" : "Channel subcategory" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_channels", "version" : "2016", "level" : 2 } ] },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] },
+        "key": true
+
+      },
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year" },
+        "dataType" : "year",
+        "subject" : "time",
         "key": true
       },
-
-
       {
       "id": "fao_sector",
       "title": {
@@ -68,6 +61,12 @@
       },
       "dataType": "text",
         "key": true
+      },
+      {
+        "id" : "flowcategory",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       },
       {
         "id": "value",

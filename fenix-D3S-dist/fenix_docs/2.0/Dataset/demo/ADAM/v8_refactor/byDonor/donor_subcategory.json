@@ -1,5 +1,5 @@
 {
-  "uid": "adam_browse_sector_subcategory",
+  "uid": "adam_browse_donor_subcategory",
   "title": {
     "EN": "ADAM aggregated table"
   },
@@ -19,23 +19,31 @@
       {
         "id": "oda",
         "title": {"EN": "Oda name"},
-        "domain" : { "codes" : [ { "idCodeList" : "crs_oda", "version" : "2016"} ] },
+        "domain" : { "codes" : [ { "idCodeList" : "oda_crs", "version" : "2016"} ] },
         "dataType" : "code",
         "key": true
       },
-
       {
         "id" : "parentsector_code",
         "title" : { "EN" : "Parent sector" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
-        "dataType" : "code"
-      },
+        "dataType" : "code",
+        "key": true
 
+      },
       {
         "id" : "purposecode",
         "title" : { "EN" : "Sub-sector" },
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+
+      {
+        "id" : "donorcode",
+        "title" : { "EN" : "Resource Partner" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
         "key": true
       },
 
@@ -47,6 +55,7 @@
         "key": true
 
       },
+
       {
         "id" : "year",
         "title" : { "EN" : "Year" },
@@ -55,11 +64,11 @@
         "key": true
       },
       {
-      "id": "fao_sector",
-      "title": {
-        "EN": "FAO sector"
-      },
-      "dataType": "text",
+        "id": "fao_sector",
+        "title": {
+          "EN": "FAO sector"
+        },
+        "dataType": "text",
         "key": true
       },
       {

@@ -3,7 +3,7 @@
     "name":"filter",
     "sid":[
       {
-        "uid":"adam_browse_sector_oda"
+        "uid":"adam_browse_recipient"
       }
     ],
     "parameters":{
@@ -35,14 +35,14 @@
       }
     },
     "rid":{
-      "uid":"filter_subsectors"
+      "uid":"filter_recipients"
     }
   },
   {
     "name":"group",
     "parameters":{
       "by":[
-        "purposecode"
+        "recipientcode"
       ],
       "aggregations":[
         {
@@ -56,8 +56,13 @@
             "unitcode"
           ],
           "rule":"max"
+        },
+        {
+          "columns":[
+            "flowcategory"
+          ],
+          "rule":"max"
         }
-
       ]
     }
   },

@@ -19,11 +19,17 @@
       {
         "id": "oda",
         "title": {"EN": "Oda name"},
-        "domain" : { "codes" : [ { "idCodeList" : "crs_oda", "version" : "2016"} ] },
+        "domain" : { "codes" : [ { "idCodeList" : "oda_crs", "version" : "2016"} ] },
         "dataType" : "code",
         "key": true
       },
-
+      {
+        "id" : "donorcode",
+        "title" : { "EN" : "Resource Partner" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
+        "key": true
+      },
       {
         "id" : "parentsector_code",
         "title" : { "EN" : "Parent sector" },
@@ -45,12 +51,10 @@
         "subject" : "time",
         "key": true
       },
-
       {
-        "id" : "donorcode",
-        "title" : { "EN" : "Resource Partner" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
+        "id" : "dac_member",
+        "title" : { "EN" : "OECD DAC Member Donor Country" },
+        "dataType" : "text",
         "key": true
       },
       {
@@ -59,6 +63,12 @@
         "EN": "FAO sector"
       },
       "dataType": "text"
+      },
+      {
+        "id" : "flowcategory",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       },
       {
         "id": "value",

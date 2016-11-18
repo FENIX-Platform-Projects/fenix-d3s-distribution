@@ -19,7 +19,7 @@
       {
         "id": "oda",
         "title": {"EN": "Oda name"},
-        "domain" : { "codes" : [ { "idCodeList" : "crs_oda", "version" : "2016"} ] },
+        "domain" : { "codes" : [ { "idCodeList" : "oda_crs", "version" : "2016"} ] },
         "dataType" : "code",
         "key": true
       },
@@ -102,7 +102,14 @@
         "title" : { "EN" : "Measurement unit" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
+      },
+      {
+        "id" : "flowcategory",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       }
+
     ]
   }
 }

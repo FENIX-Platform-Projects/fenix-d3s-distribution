@@ -3,13 +3,10 @@
     "name":"union",
     "sid":[
       {
-        "uid":"total_sector_oda"
+        "uid":"total_country_sector_oda"
       },
       {
-        "uid":"total_subsector_oda"
-      },
-      {
-        "uid":"total_oda"
+        "uid":"total_country_subsector_oda"
       },
       {
         "uid":"percentage_ODA"
@@ -26,7 +23,7 @@
     "name":"filter",
     "sid":[
       {
-        "uid":"adam_browse_sector_oda"
+        "uid":"adam_browse_recipient_oda"
       }
     ],
     "parameters":{
@@ -52,6 +49,17 @@
             "1"
           ]
         },
+        "recipientcode":{
+          "codes":[
+            {
+              "uid":"crs_recipients",
+              "version":"2016",
+              "codes":[
+                "625"
+              ]
+            }
+          ]
+        },
         "year":{
           "time":[
             {
@@ -63,7 +71,7 @@
       }
     },
     "rid":{
-      "uid":"filter_total_sector_oda"
+      "uid":"filter_total_country_sector_oda"
     }
   },
   {
@@ -83,7 +91,7 @@
           "columns":[
             "unitcode"
           ],
-          "rule":"max"
+          "rule":"first"
         }
       ]
     }
@@ -109,17 +117,17 @@
         },
         "subject":null
       },
-      "value":"ODA Sector"
+      "value":"ODA in the Sector for the Country"
     },
     "rid":{
-      "uid":"total_sector_oda"
+      "uid":"total_country_sector_oda"
     }
   },
   {
     "name":"filter",
     "sid":[
       {
-        "uid":"adam_browse_sector_oda"
+        "uid":"adam_browse_recipient_oda"
       }
     ],
     "parameters":{
@@ -129,20 +137,20 @@
         "unitcode"
       ],
       "rows":{
-        "oda": {
-          "codes": [
-            {
-              "uid": "oda_crs",
-              "version": "2016",
-              "codes": [
-                "usd_commitment"
-              ]
-            }
-          ]
-        },
-        "fao_sector":{
+        "oda":{
           "enumeration":[
-            "1"
+            "usd_commitment"
+          ]
+        },
+        "recipientcode":{
+          "codes":[
+            {
+              "uid":"crs_recipients",
+              "version":"2016",
+              "codes":[
+                "625"
+              ]
+            }
           ]
         },
         "year":{
@@ -156,7 +164,7 @@
       }
     },
     "rid":{
-      "uid":"filter_total_subsector_oda"
+      "uid":"filter_total_country_subsector_oda"
     }
   },
   {
@@ -176,7 +184,7 @@
           "columns":[
             "unitcode"
           ],
-          "rule":"max"
+          "rule":"first"
         }
       ]
     }
@@ -202,141 +210,20 @@
         },
         "subject":null
       },
-      "value":"ODA Sub Sector"
+      "value":"ODA in the Sub Sector for the Country"
     },
     "rid":{
-      "uid":"total_subsector_oda"
-    }
-  },
-  {
-    "name":"filter",
-    "sid":[
-      {
-        "uid":"adam_browse_sector_oda"
-      }
-    ],
-    "parameters":{
-      "columns":[
-        "year",
-        "value",
-        "unitcode"
-      ],
-      "rows":{
-        "oda": {
-          "codes": [
-            {
-              "uid": "oda_crs",
-              "version": "2016",
-              "codes": [
-                "usd_commitment"
-              ]
-            }
-          ]
-        },
-        "parentsector_code":{
-          "codes":[
-            {
-              "uid":"crs_dac",
-              "version":"2016",
-              "codes":[
-                "NA"
-              ]
-            }
-          ]
-        },
-        "purposecode":{
-          "codes":[
-            {
-              "uid":"crs_purposes",
-              "version":"2016",
-              "codes":[
-                "NA"
-              ]
-            }
-          ]
-        },
-        "donorcode":{
-          "codes":[
-            {
-              "uid":"crs_donors",
-              "version":"2016",
-              "codes":[
-                "NA"
-              ]
-            }
-          ]
-        },
-        "year":{
-          "time":[
-            {
-              "from":"2000",
-              "to":"2014"
-            }
-          ]
-        }
-      }
-    },
-    "rid":{
-      "uid":"filter_total_oda"
-    }
-  },
-  {
-    "name":"group",
-    "parameters":{
-      "by":[
-        "year"
-      ],
-      "aggregations":[
-        {
-          "columns":[
-            "value"
-          ],
-          "rule":"SUM"
-        },
-        {
-          "columns":[
-            "unitcode"
-          ],
-          "rule":"max"
-        }
-      ]
-    }
-  },
-  {
-    "name":"addcolumn",
-    "parameters":{
-      "column":{
-        "dataType":"text",
-        "id":"indicator",
-        "title":{
-          "EN":"Indicator"
-        },
-        "domain":{
-          "codes":[
-            {
-              "extendedName":{
-                "EN":"Adam Processes"
-              },
-              "idCodeList":"adam_processes"
-            }
-          ]
-        },
-        "subject":null
-      },
-      "value":"Total ODA"
-    },
-    "rid":{
-      "uid":"total_oda"
+      "uid":"total_country_subsector_oda"
     }
   },
   {
     "name":"join",
     "sid":[
       {
-        "uid":"total_sector_oda"
+        "uid":"total_country_sector_oda"
       },
       {
-        "uid":"total_subsector_oda"
+        "uid":"total_country_subsector_oda"
       }
     ],
     "parameters":{
@@ -380,10 +267,10 @@
       },
       "value":{
         "keys":[
-          "1=1"
+          "1 = 1"
         ],
         "values":[
-          "(total_subsector_oda_value/total_sector_oda_value)*100"
+          " ( total_country_subsector_oda_value / total_country_sector_oda_value )*100"
         ]
       }
     },
