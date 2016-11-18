@@ -5,7 +5,8 @@
     "parameters": {
       "columns": [
         "subject",
-        "group_code"
+        "group_code",
+        "value"
       ],
       "rows": {
         "item": {
@@ -34,6 +35,12 @@
       "by": [
         "subject",
         "group_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        }
       ]
     }
   },
@@ -44,62 +51,17 @@
     "parameters": {
       "column": {
         "dataType": "number",
-        "id": "increment",
-        "subject" : "value"
+        "id": "increment"
       },
       "value": 1
     }
   },
 
-  {
-    "name": "group",
-    "parameters": {
-      "by": [
-        "subject"
-      ],
-      "aggregations": [
-        {
-          "columns": [ "increment" ],
-          "rule": "max"
-        }
-      ]
-    }
-  },
-
-  {
-    "name": "group",
-    "parameters": {
-      "aggregations": [
-        {
-          "columns": [ "increment" ],
-          "rule": "sum"
-        }
-      ]
-    }
-  },
-
-  {
-    "name" : "var",
-    "result" : false,
-    "parameters" : {
-      "global" : true,
-      "variables" : [
-        {
-          "key" : "populationSize",
-          "type" : "id",
-          "value" : "increment"
-        }
-      ]
-    }
-  },
-
-
-
 
 
   {
     "name": "group",
-    "sid" : [{"uid":"table_1_1_Increment"}],
+    "rid" : {"uid":"table_4_1"},
     "parameters": {
       "by": [
         "group_code"
@@ -114,13 +76,50 @@
   },
 
   {
+    "name": "group",
+    "sid" : [{"uid":"table_1_1_Increment"}],
+    "rid" : {"uid":"table_2_1"},
+    "parameters": {
+      "by": [
+        "group_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+
+
+
+  {
+    "name": "join",
+    "sid": [
+      { "uid": "table_2_1" },
+      { "uid": "table_4_1" }
+    ],
+    "parameters": {
+      "joins": [
+        [ { "type": "id", "value": "group_code" } ],
+        [ { "type": "id", "value": "group_code" } ]
+      ],
+      "values": []
+    }
+  },
+
+  {
     "name" : "select",
     "parameters" : {
       "values" : {
         "group_code" : null,
-        "increment" : "((increment*100)::float)/<<populationSize[0]>>"
+        "table_2_1_value" : "table_2_1_value/table_4_1_increment"
       }
     }
   }
+
+
+
 
 ]

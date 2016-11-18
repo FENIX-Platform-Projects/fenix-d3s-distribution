@@ -1,7 +1,7 @@
 {
-  "uid" : "gift_process_total_round_weighted_food_consumption_000042BUR201001",
+  "uid" : "gift_process_total_food_consumption_000042BUR201001",
   "title": {
-    "EN": "Total food daily average consumption by subject and round divided by the number of subject-round keys. Dataset is auto generated dataset for WHO-FAO GIFT processing purposes."
+    "EN": "Total food daily average consumption by subject. Dataset is auto generated dataset for WHO-FAO GIFT processing purposes."
   },
   "meContent": {
     "resourceRepresentationType": "dataset"
@@ -30,12 +30,20 @@
     "contextSystem": "gift_process",
     "columns": [
       {
-        "dataType": "number",
+        "dataType": "code",
         "title": {
-          "EN": "Round"
+          "EN": "Item"
         },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "GIFT_Items"
+            }
+          ]
+        },
+        "subject": "item",
         "key": true,
-        "id": "round"
+        "id": "item"
       },
       {
         "dataType": "text",
@@ -89,22 +97,6 @@
         },
         "key": true,
         "id": "foodex2_code"
-      },
-      {
-        "dataType": "code",
-        "title": {
-          "EN": "Item"
-        },
-        "domain": {
-          "codes": [
-            {
-              "idCodeList": "GIFT_Items"
-            }
-          ]
-        },
-        "subject": "item",
-        "key": true,
-        "id": "item"
       },
       {
         "dataType": "number",

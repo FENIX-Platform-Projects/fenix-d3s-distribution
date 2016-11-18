@@ -102,8 +102,11 @@ public class GiftProcessDAO extends WDSDatasetDao {
                 break;
 
             case foodSubjectTotal:
-            case foodSubjectRoundTotal:
             case foodSubjectTotalWeighted:
+                for (int i=1; i<=31; i++)
+                    statement.setString(i, survey);
+                break;
+            case foodSubjectRoundTotal:
             case foodSubjectRoundTotalWeighted:
                 for (int i=1; i<=3; i++)
                     statement.setString(i, survey);

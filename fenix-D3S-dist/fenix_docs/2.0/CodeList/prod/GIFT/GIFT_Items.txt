@@ -118,6 +118,7 @@ titleColumnIndex_EN=3
 
 
 --data--
+
 @FOOD_AMOUNT_UNPROC@Amount (edible) consumed before processing
 @FOOD_AMOUNT_PROC@Amount (edible) consumed after processing
 @ENERGY@Energy

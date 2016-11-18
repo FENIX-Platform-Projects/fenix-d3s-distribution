@@ -5,7 +5,8 @@
     "parameters": {
       "columns": [
         "subject",
-        "group_code"
+        "subgroup_code",
+        "foodex2_code"
       ],
       "rows": {
         "item": {
@@ -33,18 +34,20 @@
     "parameters": {
       "by": [
         "subject",
-        "group_code"
+        "subgroup_code",
+        "foodex2_code"
       ]
     }
   },
 
   {
     "name": "addcolumn",
-    "rid" : {"uid" : "table_1_1_Increment"},
+    "rid" : {"uid" : "table_1_3_Increment"},
     "parameters": {
       "column": {
         "dataType": "number",
-        "id": "increment"
+        "id": "increment",
+        "subject" : "value"
       },
       "value": 1
     }
@@ -79,7 +82,6 @@
 
   {
     "name" : "var",
-    "rid" : {"uid" : "eccolo_qui"},
     "result" : false,
     "parameters" : {
       "global" : true,
@@ -99,10 +101,11 @@
 
   {
     "name": "group",
-    "sid" : [{"uid":"table_1_1_Increment"}],
+    "sid" : [{"uid":"table_1_3_Increment"}],
     "parameters": {
       "by": [
-        "group_code"
+        "subgroup_code",
+        "foodex2_code"
       ],
       "aggregations": [
         {
@@ -117,10 +120,30 @@
     "name" : "select",
     "parameters" : {
       "values" : {
-        "group_code" : null,
-        "increment" : "(increment*100)/<<populationSize[0]>>"
+        "subgroup_code" : null,
+        "foodex2_code" : null,
+        "increment" : "((increment*100)::float)/<<populationSize[0]>>"
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "foodex2_code",
+        "increment"
+      ],
+      "rows": {
+        "subgroup_code": {
+          "codes": [
+            {
+              "uid": "GIFT_FoodGroups",
+              "codes": [ "0104" ]
+            }
+          ]
+        }
       }
     }
   }
-
 ]

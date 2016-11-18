@@ -5,7 +5,8 @@
     "parameters": {
       "columns": [
         "subject",
-        "group_code"
+        "group_code",
+        "subgroup_code"
       ],
       "rows": {
         "item": {
@@ -33,14 +34,15 @@
     "parameters": {
       "by": [
         "subject",
-        "group_code"
+        "group_code",
+        "subgroup_code"
       ]
     }
   },
 
   {
     "name": "addcolumn",
-    "rid" : {"uid" : "table_1_1_Increment"},
+    "rid" : {"uid" : "table_1_2_Increment"},
     "parameters": {
       "column": {
         "dataType": "number",
@@ -99,10 +101,11 @@
 
   {
     "name": "group",
-    "sid" : [{"uid":"table_1_1_Increment"}],
+    "sid" : [{"uid":"table_1_2_Increment"}],
     "parameters": {
       "by": [
-        "group_code"
+        "group_code",
+        "subgroup_code"
       ],
       "aggregations": [
         {
@@ -118,9 +121,29 @@
     "parameters" : {
       "values" : {
         "group_code" : null,
+        "subgroup_code" : null,
         "increment" : "((increment*100)::float)/<<populationSize[0]>>"
       }
     }
-  }
+  },
 
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "subgroup_code",
+        "increment"
+      ],
+      "rows": {
+        "group_code": {
+          "codes": [
+            {
+              "uid": "GIFT_FoodGroups",
+              "codes": [ "01" ]
+            }
+          ]
+        }
+      }
+    }
+  }
 ]
