@@ -7,7 +7,8 @@
         "subject",
         "group_code",
         "subgroup_code",
-        "value"
+        "value",
+        "um"
       ],
       "rows": {
         "item": {
@@ -42,6 +43,10 @@
         {
           "columns": [ "value" ],
           "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "MAX"
         }
       ]
     }
@@ -91,6 +96,10 @@
         {
           "columns": [ "value" ],
           "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "MAX"
         }
       ]
     }
@@ -119,7 +128,8 @@
       "values" : {
         "group_code" : null,
         "subgroup_code" : null,
-        "table_2_2_value" : "table_2_2_value/table_4_2_increment"
+        "table_2_2_value" : "table_2_2_value/table_4_2_increment",
+        "table_2_2_um" : null
       }
     }
   },
@@ -129,7 +139,8 @@
     "parameters": {
       "columns": [
         "subgroup_code",
-        "table_2_2_value"
+        "table_2_2_value",
+        "table_2_2_um"
       ],
       "rows": {
         "group_code": {

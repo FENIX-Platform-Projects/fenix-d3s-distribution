@@ -49,6 +49,28 @@
 
   {
     "name": "percentage"
+  },
+
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "code",
+        "id": "um",
+        "subject" : "um",
+        "title": {
+          "EN": "Unit of measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "GIFT_UM"
+            }
+          ]
+        }
+      },
+      "value": "perc"
+    }
   }
 
 ]

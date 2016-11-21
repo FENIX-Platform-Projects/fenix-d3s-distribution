@@ -124,3 +124,4 @@ titleColumnIndex_EN=3
 @mg@mg
 @g@g
 @kcal@kcal
+@perc@%

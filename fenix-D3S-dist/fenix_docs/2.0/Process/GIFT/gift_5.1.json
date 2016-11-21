@@ -6,7 +6,8 @@
       "columns": [
         "subject",
         "group_code",
-        "value"
+        "value",
+        "um"
       ],
       "rows": {
         "item": {
@@ -40,6 +41,10 @@
         {
           "columns": [ "value" ],
           "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "MAX"
         }
       ]
     }
@@ -87,6 +92,10 @@
         {
           "columns": [ "value" ],
           "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "MAX"
         }
       ]
     }
@@ -114,7 +123,8 @@
     "parameters" : {
       "values" : {
         "group_code" : null,
-        "table_2_1_value" : "table_2_1_value/table_4_1_increment"
+        "table_2_1_value" : "table_2_1_value/table_4_1_increment",
+        "table_2_1_um" : null
       }
     }
   }
