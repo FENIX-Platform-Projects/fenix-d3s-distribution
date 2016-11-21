@@ -1,0 +1,80 @@
+[
+  {
+    "name":"filter",
+    "sid":[
+      {
+        "uid":"adam_browse_sector_subcategory"
+      }
+    ],
+    "parameters":{
+      "rows": {
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_disbursement_defl"
+              ]
+            }
+          ]
+        },
+        "fao_sector":{
+          "enumeration":[
+            "1"
+          ]
+        },
+
+        "year":{
+          "time":[
+            {
+              "from":"2000",
+              "to":"2014"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name":"group",
+    "parameters":{
+      "by":[
+        "channelsubcategory_code"
+      ],
+      "aggregations":[
+        {
+          "columns":[
+            "value"
+          ],
+          "rule":"SUM"
+        },
+        {
+          "columns":[
+            "unitcode"
+          ],
+          "rule":"max"
+        },
+        {
+          "columns":[
+            "flowcategory_code"
+          ],
+          "rule":"max"
+        }
+      ]
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "value":"DESC"
+    }
+  },
+  {
+    "name":"page",
+    "parameters":{
+      "perPage":10,
+      "page":1
+    }
+  }
+]

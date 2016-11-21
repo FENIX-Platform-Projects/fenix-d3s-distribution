@@ -201,11 +201,28 @@ public class AdamAggregatedCacheListener implements DatasetCacheListener {
 
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,parentsector_code, purposecode, year)");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,parentsector_code, year)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,fao_sector, year)");
+
 
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda, parentsector_code, year, fao_sector)");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda, parentsector_code, year, recipientcode)");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda, fao_region, year, recipientcode)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda, recipientcode)");
+
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (  fao_region, fao_subregion, gaul0 )");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " (  fao_region, fao_subregion, recipientcode )");
+
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( parentsector_code, fao_region )");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( parentsector_code, gaul0 )");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( fao_sector, fao_region )");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( fao_sector, gaul0 )");
+
+
+
+
+
+
+
+
 
 
                 break;
