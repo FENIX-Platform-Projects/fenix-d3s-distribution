@@ -6,6 +6,7 @@ create table browse_recipient_oda as (
       gaul0,
       parentsector_code,
       purposecode,
+      channelsubcategory_code,
       year,
       fao_sector,
       flowcategory,
@@ -20,6 +21,7 @@ create table browse_recipient_oda as (
       gaul0,
       parentsector_code,
       purposecode,
+      channelsubcategory_code,
       year,
       fao_sector,
       flowcategory

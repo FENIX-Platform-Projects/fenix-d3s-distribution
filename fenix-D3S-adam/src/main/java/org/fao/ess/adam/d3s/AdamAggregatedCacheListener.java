@@ -15,10 +15,9 @@ public class AdamAggregatedCacheListener implements DatasetCacheListener {
         String uid = datasetInfo.getMetadata().getUid();
 
         // for browse data
-        if(uid.length() >11 && uid.substring(0,11).equals("adam_browse")) {
+        if (uid.length() > 11 && uid.substring(0, 11).equals("adam_browse")) {
             handleBrowseAggregatedViews(datasetInfo, uid);
-        }
-        else {
+        } else {
             switch (uid) {
                 case "adam_usd_aggregation_table":
                     //Browse Data indexes
@@ -39,8 +38,35 @@ public class AdamAggregatedCacheListener implements DatasetCacheListener {
                     break;
 
 
-                case "adam_usd_aggregated_table":
+                case "adam_usd_aggregated_table2":
                     //Browse Data indexes
+
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,recipientcode ,donorcode)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,fao_region ,donorcode )");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,fao_region,recipientcode ,donorcode)");
+
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( donorcode,parentsector_code,purposecode ,year)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( donorcode,parentsector_code ,year)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( donorcode,fao_sector ,year)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( donorcode ,dac_member,year)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( donorcode ,year)");
+
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( donor,year,channelsubcategory_code)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( purposecode,year,channelsubcategory_code)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( parentsector_code, purposecode)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( donorcode ,dac_member)");
+
+
+
+
+
+
+/*
+
+
+
+
+                    //-----------------------//-----------------------//-----------------------//-----------------------//-----------------------//-----------------------//-----------------------
 
                     datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,channelsubcategory_code,year ,parentsector_code)");
                     datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,year ,parentsector_code)");
@@ -72,7 +98,7 @@ public class AdamAggregatedCacheListener implements DatasetCacheListener {
 
                     datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,year,gaul0)");
                     datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,year,parentsector_code,gaul0)");
-                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,year,channelsubcategory_code,gaul0)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( oda,year,channelsubcategory_code,gaul0)");*/
 
 
                     break;
@@ -141,7 +167,7 @@ public class AdamAggregatedCacheListener implements DatasetCacheListener {
 
 
     //
-    private void handleBrowseAggregatedViews (DatasetAccessInfo datasetInfo, String uid) throws SQLException {
+    private void handleBrowseAggregatedViews(DatasetAccessInfo datasetInfo, String uid) throws SQLException {
         switch (uid) {
 
             case "adam_browse_sector_oda":
@@ -215,14 +241,6 @@ public class AdamAggregatedCacheListener implements DatasetCacheListener {
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( parentsector_code, gaul0 )");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( fao_sector, fao_region )");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( fao_sector, gaul0 )");
-
-
-
-
-
-
-
-
 
 
                 break;

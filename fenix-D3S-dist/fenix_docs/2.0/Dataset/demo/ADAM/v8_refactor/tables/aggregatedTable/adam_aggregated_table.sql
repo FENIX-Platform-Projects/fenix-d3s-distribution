@@ -4,7 +4,7 @@ CREATE TABLE usd_aggregated_table2  as (
 with disbursement as (
 
   SELECT
-  oda ,
+ oda ,
   channelsubcategory_code ,
   year ,
   value  ,
@@ -414,9 +414,23 @@ commitment_defl as (
 )
 
 -- union each dataset aggregated
-SELECT * from
-  (
+SELECT
+    oda,
+	  fao_region,
+	  recipientcode,
+	  donorcode,
+	  parentsector_code,
+	  purposecode,
+	  fao_sector,
+	  year,
+	  channelsubcategory_code,
+	  dac_member,
+	  gaul0,
+	  value,
+	  unitcode,
+	  flowcategory
 
+ from (
   SELECT * from (
     SELECT * from commitment
     UNION

@@ -31,13 +31,6 @@
         "key": true
       },
       {
-        "id" : "fao_subregion",
-        "title" : { "EN" : "FAO Subregion" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 2 } ] },
-        "key": true
-      },
-      {
         "id" : "recipientcode",
         "title" : { "EN" : "Recipient Country"},
         "dataType" : "code",

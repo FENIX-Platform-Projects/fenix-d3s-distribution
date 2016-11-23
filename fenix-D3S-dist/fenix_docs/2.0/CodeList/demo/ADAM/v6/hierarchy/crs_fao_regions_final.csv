@@ -60,7 +60,7 @@
       ], 
       "resourceRepresentationType": "codelist", 
       "seCodeList": {
-         "numberOfLevels": "3", 
+         "numberOfLevels": "2", 
          "typeOfCodeList": "tree"
       }, 
       "seCoverage": {
@@ -97,184 +97,167 @@ csvSeparator=@
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 titleColumnIndex_FR=4
-shorttitleColumnIndex_EN=5
 
 --data--
-@RAF@RAF - Regional Office for Africa@@RAF
-RAF@SFC@SFC - Subregional Office for Central Africa@@SFC
-RAF@SFE@SFE - Subregional Office for Eastern Africa@@SFE
-RAF@SFS@SFS - Subregional Office for Southern Africa@@SFS
-RAF@SFW@SFW - Subregional Office for West Africa@@SFW
-SFC@229@Cameroon@Cameroun@
-SFC@231@Central African Republic@République centrafricaine@
-SFC@232@Chad@Tchad@
-SFC@234@Congo@Congo@
-SFC@235@Democratic Republic of the Congo@République démocratique du Congo@
-SFC@245@Equatorial Guinea@Guinée équatoriale@
-SFC@239@Gabon@Gabon@
-SFC@268@Sao Tome and Principe@Sao Tomé-et-Principe@
-SFE@228@Burundi@Burundi@
-SFE@274@Djibouti@Djibouti@
-SFE@238@Ethiopia@Ethiopie@
-SFE@248@Kenya@Kenya@
-SFE@266@Rwanda@Rwanda@
-SFE@273@Somalia@Somalie@
-SFE@278@Sudan@Soudan@
-SFE@285@Uganda@Ouganda@
-SFS@225@Angola@Angola@
-SFS@227@Botswana@Botswana@
-SFS@233@Comoros@Comores@
-SFS@271@Eritrea@Erythrée@
-SFS@249@Lesotho@Lesotho@
-SFS@252@Madagascar@Madagascar@
-SFS@253@Malawi@Malawi@
-SFS@257@Mauritius@Maurice@
-SFS@259@Mozambique@Mozambique@
-SFS@275@Namibia@Namibie@
-SFS@270@Seychelles@Seychelles@
-SFS@218@South Africa@Afrique du Sud@
-SFS@280@Swaziland@Swaziland@
-SFS@282@Tanzania@Tanzanie@
-SFS@288@Zambia@Zambie@
-SFS@265@Zimbabwe@Zimbabwe@
-SFW@236@Benin@Bénin@
-SFW@287@Burkina Faso@Burkina Faso@
-SFW@230@Cape Verde@Cabo Verde@
-SFW@247@Côte d'Ivoire@Côte d'Ivoire@
-SFW@240@Gambia@Gambie@
-SFW@241@Ghana@Ghana@
-SFW@243@Guinea@Guinée@
-SFW@244@Guinea-Bissau@Guinée-Bissau@
-SFW@251@Liberia@Libéria@
-SFW@255@Mali@Mali@
-SFW@260@Niger@Niger@
-SFW@261@Nigeria@Nigéria@
-SFW@269@Senegal@Sénégal@
-SFW@272@Sierra Leone@Sierra Leone@
-SFW@283@Togo@Togo@
-@RAP@RAP - Regional Office for Asia and the Pacific@@RAP
-RAP@SAP@SAP - Subregional Office for the Pacific Islands@@SAP
-RAP@O_RAP@Other RAP Countries@@
-SAP@831@Cook Islands@Iles Cook@
-SAP@832@Fiji@Fidji@
-SAP@836@Kiribati@Kiribati@
-SAP@859@Marshall Islands@Iles Marshall@
-SAP@860@Micronesia@Micronésie@
-SAP@845@Nauru@Nauru@
-SAP@856@Niue@Niue@
-SAP@861@Palau@Palaos@
-SAP@862@Papua New Guinea@Papouasie-Nouvelle-Guinée@
-SAP@880@Samoa@Samoa@
-SAP@866@Solomon Islands@Iles Solomon@
-SAP@870@Tonga@Tonga@
-SAP@872@Tuvalu@Tuvalu@
-SAP@854@Vanuatu@Vanuatu@
-O_RAP@625@Afghanistan@Afghanistan@
-O_RAP@666@Bangladesh@Bangladesh@
-O_RAP@630@Bhutan@Bhoutan@
-O_RAP@728@Cambodia@Cambodge@
-O_RAP@730@China (People's Republic of)@Chine (République populaire de)@
-O_RAP@740@Democratic People's Republic of Korea@République populaire démocratique de Corée@
-O_RAP@645@India@Inde@
-O_RAP@738@Indonesia@Indonésie@
-O_RAP@745@Lao People's Democratic Republic@République démocratique populaire lao@
-O_RAP@751@Malaysia@Malaisie@
-O_RAP@655@Maldives@Maldives@
-O_RAP@753@Mongolia@Mongolie@
-O_RAP@635@Myanmar@Myanmar@
-O_RAP@660@Nepal@Népal@
-O_RAP@665@Pakistan@Pakistan@
-O_RAP@755@Philippines@Philippines@
-O_RAP@640@Sri Lanka@Sri Lanka@
-O_RAP@764@Thailand@Thaïlande@
-O_RAP@765@Timor-Leste@Timor-Leste@
-O_RAP@769@Viet Nam@Viet Nam@
-@REU@REU - Regional Office for Europe and Central Asia@@REU
-REU@SEC@SEC - Subregional Office for Central Asia@@SEC
-REU@SEU@SEU - Subregional Office for Central and Eastern Europe@@SEU
-REU@O_REU@Other REU Countries@@
-SEC@611@Azerbaijan@Azerbaïdjan@
-SEC@613@Kazakhstan@Kazakhstan@
-SEC@614@Kyrgyzstan@Kirghizistan@
-SEC@615@Tajikistan@Tadjikistan@
-SEC@55@Turkey@Turquie@
-SEC@616@Turkmenistan@Turkménistan@
-SEC@617@Uzbekistan@Ouzbékistan@
-SEU@71@Albania@Albanie@
-SEU@610@Armenia@Arménie@
-SEU@64@Bosnia and Herzegovina@Bosnie-Herzégovine@
-SEU@62@Croatia@Croatie@
-SEU@612@Georgia@Géorgie@
-SEU@65@Montenegro@Monténégro@
-SEU@93@Moldova@Moldova@
-SEU@63@Serbia@Serbie@
-SEU@61@Slovenia@Slovénie@
-SEU@66@Former Yugoslav Republic of Macedonia@Ex-République yougoslave de Macédoine@
-SEU@85@Ukraine@Ukraine@
-O_REU@86@Belarus@Bélarus@
-O_REU@45@Malta@Malte@
-@RLC@RLC - Regional Office for Latin America and the Caribbean@@RLC
-RLC@SLC@SLC - Subregional Office for the Caribbean@@SLC
-RLC@SLM@SLM - Subregional Office for Central America@@SLM
-RLC@SLS@SLS - Subregional Office for South America@@SLS
-SLC@377@Antigua and Barbuda@Antigua-et-Barbuda@
-SLC@329@Barbados@Barbade@
-SLC@352@Belize@Belize@
-SLC@338@Cuba@Cuba@
-SLC@378@Dominica@Dominique@
-SLC@340@Dominican Republic@République dominicaine@
-SLC@381@Grenada@Grenade@
-SLC@446@Guyana@Guyana@
-SLC@349@Haiti@Haïti@
-SLC@354@Jamaica@Jamaïque@
-SLC@382@Saint Kitts and Nevis@Saint-Kitts-et-Nevis@
-SLC@383@Saint Lucia@Sainte-Lucie@
-SLC@384@Saint Vincent and the Grenadines@Saint-Vincent-et-les-Grenadines@
-SLC@457@Suriname@Suriname@
-SLC@375@Trinidad and Tobago@Trinité-et-Tobago@
-SLM@336@Costa Rica@Costa Rica@
-SLM@342@El Salvador@El Salvador@
-SLM@347@Guatemala@Guatemala@
-SLM@351@Honduras@Honduras@
-SLM@358@Mexico@Mexique@
-SLM@364@Nicaragua@Nicaragua@
-SLM@366@Panama@Panama@
-SLS@425@Argentina@Argentine@
-SLS@428@Bolivia@Bolivie@
-SLS@431@Brazil@Brésil@
-SLS@434@Chile@Chili@
-SLS@437@Colombia@Colombie@
-SLS@440@Ecuador@Equateur@
-SLS@451@Paraguay@Paraguay@
-SLS@454@Peru@Pérou@
-SLS@460@Uruguay@Uruguay@
-SLS@463@Venezuela@Venezuela@
-@RNE@RNE - Regional Office for the Near East@@RNE
-RNE@SNE@SNE - Subregional Office for North Africa@@SNE
-RNE@SNG@SNG -  Subregional Office for the Gulf Cooperation Council States and Yemen@@SNG
-RNE@SNO@SNO - Subregional Office for Oriental Near East@@SNO
-SNO@142@Egypt@Egypte@
-SNO@540@Iran@Iran@
-SNO@543@Iraq@Iraq@
-SNO@549@Jordan@Jordanie@
-SNO@555@Lebanon@Liban@
-SNO@573@Syrian Arab Republic@République arabe syrienne@
-SNE@130@Algeria@Algérie@
-SNE@133@Libya@Libye@
-SNE@256@Mauritania@Mauritanie@
-SNE@136@Morocco@Maroc@
-SNE@139@Tunisia@Tunisie@
-SNG@530@Bahrain@Bahreïn@
-SNG@558@Oman@Oman@
-SNG@566@Saudi Arabia@Arabie saoudite@
-SNG@580@Yemen@Yémen@
-@NOTFAO@Unclassified - Not included in FAO coverage@@
-NOTFAO@88@States Ex-Yugoslavia@Etats ex-Yougoslavie non spécifié@
-NOTFAO@258@Mayotte@Mayotte@
-NOTFAO@276@Saint Helena@Sainte-Hélène@
-NOTFAO@376@Anguilla@Anguilla@
-NOTFAO@385@Montserrat@Montserrat@
-NOTFAO@387@Turks and Caicos Islands@Turks et Caïques, Iles@
-NOTFAO@550@West Bank and Gaza Strip@Cisjordanie et bande de Gaza@
-NOTFAO@868@Tokelau@Tokélaou@
-NOTFAO@876@Wallis and Futuna@Wallis-et-Futuna@
+@RAF@Africa@
+RAF@225@Angola@Angola
+RAF@236@Benin@Bénin
+RAF@227@Botswana@Botswana
+RAF@287@Burkina Faso@Burkina Faso
+RAF@228@Burundi@Burundi
+RAF@229@Cameroon@Cameroun
+RAF@230@Cape Verde@Cabo Verde
+RAF@231@Central African Republic@République centrafricaine
+RAF@232@Chad@Tchad
+RAF@233@Comoros@Comores
+RAF@234@Congo@Congo
+RAF@247@Côte d'Ivoire@Côte d'Ivoire
+RAF@235@Democratic Republic of the Congo@République démocratique du Congo
+RAF@274@Djibouti@Djibouti
+RAF@245@Equatorial Guinea@Guinée équatoriale
+RAF@271@Eritrea@Erythrée
+RAF@238@Ethiopia@Ethiopie
+RAF@239@Gabon@Gabon
+RAF@240@Gambia@Gambie
+RAF@241@Ghana@Ghana
+RAF@243@Guinea@Guinée
+RAF@244@Guinea-Bissau@Guinée-Bissau
+RAF@248@Kenya@Kenya
+RAF@249@Lesotho@Lesotho
+RAF@251@Liberia@Libéria
+RAF@252@Madagascar@Madagascar
+RAF@253@Malawi@Malawi
+RAF@255@Mali@Mali
+RAF@258@Mayotte@Mayotte
+RAF@257@Mauritius@Maurice
+RAF@259@Mozambique@Mozambique
+RAF@275@Namibia@Namibie
+RAF@260@Niger@Niger
+RAF@261@Nigeria@Nigéria
+RAF@266@Rwanda@Rwanda
+RAF@276@Saint Helena@Sainte-Hélène
+RAF@268@Sao Tome and Principe@Sao Tomé-et-Principe
+RAF@269@Senegal@Sénégal
+RAF@270@Seychelles@Seychelles
+RAF@272@Sierra Leone@Sierra Leone
+RAF@273@Somalia@Somalie
+RAF@218@South Africa@Afrique du Sud
+RAF@279@South Sudan@Soudan du sud
+RAF@280@Swaziland@Swaziland
+RAF@282@Tanzania@Tanzanie
+RAF@283@Togo@Togo
+RAF@285@Uganda@Ouganda
+RAF@288@Zambia@Zambie
+RAF@265@Zimbabwe@Zimbabwe
+@RAP@Asia and the Pacific@
+RAP@625@Afghanistan@Afghanistan
+RAP@666@Bangladesh@Bangladesh
+RAP@630@Bhutan@Bhoutan
+RAP@728@Cambodia@Cambodge
+RAP@730@China (People's Republic of)@Chine (République populaire de)
+RAP@831@Cook Islands@Iles Cook
+RAP@740@Democratic People's Republic of Korea@République populaire démocratique de Corée
+RAP@832@Fiji@Fidji
+RAP@645@India@Inde
+RAP@738@Indonesia@Indonésie
+RAP@836@Kiribati@Kiribati
+RAP@745@Lao People's Democratic Republic@République démocratique populaire lao
+RAP@751@Malaysia@Malaisie
+RAP@655@Maldives@Maldives
+RAP@859@Marshall Islands@Iles Marshall
+RAP@860@Micronesia@Micronésie
+RAP@753@Mongolia@Mongolie
+RAP@635@Myanmar@Myanmar
+RAP@845@Nauru@Nauru
+RAP@660@Nepal@Népal
+RAP@856@Niue@Niue
+RAP@665@Pakistan@Pakistan
+RAP@861@Palau@Palaos
+RAP@862@Papua New Guinea@Papouasie-Nouvelle-Guinée
+RAP@755@Philippines@Philippines
+RAP@880@Samoa@Samoa
+RAP@866@Solomon Islands@Iles Solomon
+RAP@640@Sri Lanka@Sri Lanka
+RAP@764@Thailand@Thaïlande
+RAP@765@Timor-Leste@Timor-Leste
+RAP@868@Tokelau@Tokélaou
+RAP@870@Tonga@Tonga
+RAP@872@Tuvalu@Tuvalu
+RAP@854@Vanuatu@Vanuatu
+RAP@769@Viet Nam@Viet Nam
+RAP@876@Wallis and Futuna@Wallis and Futuna
+@REU@Europe and Central Asia@
+REU@71@Albania@Albanie
+REU@610@Armenia@Arménie
+REU@611@Azerbaijan@Azerbaïdjan
+REU@86@Belarus@Bélarus
+REU@64@Bosnia and Herzegovina@Bosnie-Herzégovine
+REU@62@Croatia@Croatie
+REU@66@Former Yugoslav Republic of Macedonia@Ex-République yougoslave de Macédoine
+REU@612@Georgia@Géorgie
+REU@613@Kazakhstan@Kazakhstan
+REU@614@Kyrgyzstan@Kirghizistan
+REU@45@Malta@Malte
+REU@93@Moldova@Moldova
+REU@65@Montenegro@Monténégro
+REU@63@Serbia@Serbie
+REU@61@Slovenia@Slovénie
+REU@615@Tajikistan@Tadjikistan
+REU@55@Turkey@Turquie
+REU@616@Turkmenistan@Turkménistan
+REU@85@Ukraine@Ukraine
+REU@617@Uzbekistan@Ouzbékistan
+@RLC@Latin America and the Caribbean@
+RLC@376@Anguilla@Anguilla
+RLC@377@Antigua and Barbuda@Antigua-et-Barbuda
+RLC@425@Argentina@Argentine
+RLC@329@Barbados@Barbade
+RLC@352@Belize@Belize
+RLC@428@Bolivia@Bolivie
+RLC@431@Brazil@Brésil
+RLC@434@Chile@Chili
+RLC@437@Colombia@Colombie
+RLC@336@Costa Rica@Costa Rica
+RLC@338@Cuba@Cuba
+RLC@378@Dominica@Dominique
+RLC@340@Dominican Republic@République dominicaine
+RLC@440@Ecuador@Equateur
+RLC@342@El Salvador@El Salvador
+RLC@381@Grenada@Grenade
+RLC@347@Guatemala@Guatemala
+RLC@446@Guyana@Guyana
+RLC@349@Haiti@Haïti
+RLC@351@Honduras@Honduras
+RLC@354@Jamaica@Jamaïque
+RLC@358@Mexico@Mexique
+RLC@385@Montserrat@Montserrat
+RLC@364@Nicaragua@Nicaragua
+RLC@366@Panama@Panama
+RLC@451@Paraguay@Paraguay
+RLC@454@Peru@Pérou
+RLC@382@Saint Kitts and Nevis@Saint-Kitts-et-Nevis
+RLC@383@Saint Lucia@Sainte-Lucie
+RLC@384@Saint Vincent and the Grenadines@Saint-Vincent-et-les-Grenadines
+RLC@457@Suriname@Suriname
+RLC@375@Trinidad and Tobago@Trinité-et-Tobago
+RLC@387@Turks and Caicos Islands@Turks and Caicos Islands
+RLC@460@Uruguay@Uruguay
+RLC@463@Venezuela@Venezuela
+@RNE@Near East@
+RNE@130@Algeria@Algérie
+RNE@530@Bahrain@Bahreïn
+RNE@142@Egypt@Egypte
+RNE@540@Iran@Iran
+RNE@543@Iraq@Iraq
+RNE@549@Jordan@Jordanie
+RNE@555@Lebanon@Liban
+RNE@133@Libya@Libye
+RNE@256@Mauritania@Mauritanie
+RNE@136@Morocco@Maroc
+RNE@558@Oman@Oman
+RNE@566@Saudi Arabia@Arabie saoudite
+RNE@278@Sudan@Soudan
+RNE@573@Syrian Arab Republic@République arabe syrienne
+RNE@139@Tunisia@Tunisie
+RNE@550@West Bank and Gaza Strip@West Bank and Gaza Strip
+RNE@580@Yemen@Yémen
