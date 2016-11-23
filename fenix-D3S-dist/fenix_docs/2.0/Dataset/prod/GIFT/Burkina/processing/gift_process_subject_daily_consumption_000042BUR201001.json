@@ -1,5 +1,5 @@
 {
-  "uid" : "gift_process_total_food_consumption_000042BUR201001",
+  "uid" : "gift_process_subject_daily_consumption_000042BUR201001",
   "title": {
     "EN": "Total food daily average consumption by subject. Dataset is auto generated dataset for WHO-FAO GIFT processing purposes."
   },
@@ -52,6 +52,14 @@
         },
         "key": true,
         "id": "subject"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Round"
+        },
+        "key": true,
+        "id": "round"
       },
       {
         "dataType": "code",
@@ -145,6 +153,13 @@
         "key": true,
         "title" : { "EN" : "Age (months)" },
         "dataType" : "number"
+      },
+      {
+        "id" : "special_condition",
+        "key": true,
+        "title" : { "EN" : "Special condition" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GIFT_SpecialConditions" } ] }
       }
     ]
   }

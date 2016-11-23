@@ -16,7 +16,6 @@ import org.fao.fenix.d3s.server.dto.DatabaseStandards;
 import javax.inject.Inject;
 import javax.ws.rs.BadRequestException;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Collection;
 import java.util.HashMap;
@@ -90,7 +89,7 @@ public class AveragePercentile extends org.fao.fenix.d3p.process.Process<Percent
 
         int percentileSize = (foodPopulation*params.percentileSize)/100;
         percentileSize = Math.max(1,percentileSize);
-        String query =
+        String query = population>0 && foodPopulation>=3 ?
                 "with raw_data as (\n" +
                 "select subject, sum(value) as value, max(um) as um"+labelUnitColumns(languages)+" from "+tableName+
                 populationWhereCondition+"group by subject\n" +
@@ -104,7 +103,9 @@ public class AveragePercentile extends org.fao.fenix.d3p.process.Process<Percent
                 "( select * from raw_data offset "+(percentileSize+1)+" limit "+(foodPopulation-2*percentileSize-1)+" ) perc_middle\n" +
                 "union all\n" +
                 "select 'perc_high'::text as indicator, avg(value) as value, max (um) as um"+labelUnitColumns(languages)+" from \n" +
-                "( select * from raw_data offset "+(foodPopulation-percentileSize)+" limit "+percentileSize+" ) perc_high";
+                "( select * from raw_data offset "+(foodPopulation-percentileSize)+" limit "+percentileSize+" ) perc_high"
+                //Produce empty dataset with same query parameters
+                : "select null::text as indicator, null::float as value, null::text as um"+labelPercUnitColumns(languages) + " from "+tableName+populationWhereCondition+" limit 0";
 
         return query;
     }

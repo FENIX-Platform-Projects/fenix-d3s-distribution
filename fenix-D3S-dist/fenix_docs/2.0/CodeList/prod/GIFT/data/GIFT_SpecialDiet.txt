@@ -120,15 +120,12 @@ titleColumnIndex_EN=3
 --data--
 
 
-
-
-
-
 @1@Normal diet
 @2@Vegetarian diet
 @3@Slimming diet
 @4@Diet related to health conditions (e.g. celiac, diabete, …)
 @5@Unspecified
-@6@Vegetarian diet and Slimming diet
-@7@Vegetarian diet and Diet related to health conditions (e.g. celiac, diabete, …)
-@8@Slimming diet and Diet related to health conditions (e.g. celiac, diabete, …)
+@6@Vegetarian and slimming diet
+@7@Vegetarian diet related to health conditions (e.g. celiac, diabete, …)
+@8@Slimming diet related to health conditions (e.g. celiac, diabete, …)
+@9@Vegetarian and slimming diet related to health conditions (e.g. celiac, diabete, …)

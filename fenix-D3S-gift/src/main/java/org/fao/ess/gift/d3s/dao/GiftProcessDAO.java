@@ -65,6 +65,8 @@ public class GiftProcessDAO extends WDSDatasetDao {
             case subgroupSubjectTotal:
                 return Queries.loadSubgroupDailySubjectAvg.getQuery();
 
+            case foodSubjectConsumption:
+                return Queries.loadFoodSubject.getQuery();
             case foodSubjectTotal:
                 return Queries.loadFoodDailySubject.getQuery();
             case foodSubjectTotalWeighted:
@@ -96,14 +98,17 @@ public class GiftProcessDAO extends WDSDatasetDao {
         switch (datasetType) {
             case dailySubjectAvgBySubgroup:
             case subgroupSubjectTotal:
-                //for (int i=1; i<=42; i++)
                 for (int i=1; i<=4; i++)
                     statement.setString(i, survey);
                 break;
 
+            case foodSubjectConsumption:
+                for (int i=1; i<=31; i++)
+                    statement.setString(i, survey);
+                break;
             case foodSubjectTotal:
             case foodSubjectTotalWeighted:
-                for (int i=1; i<=31; i++)
+                for (int i=1; i<=32; i++)
                     statement.setString(i, survey);
                 break;
             case foodSubjectRoundTotal:

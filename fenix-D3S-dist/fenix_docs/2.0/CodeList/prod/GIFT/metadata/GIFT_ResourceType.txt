@@ -1,6 +1,6 @@
 
 {
-    "uid": "GIFT_SpecialConditions",
+    "uid": "GIFT_ResourceType",
 	"version": null,
     "language": {
         "codes": [
@@ -14,7 +14,7 @@
 
     "languageDetails": null,
     "title": {
-        "EN": "WHO-FAO GIFT, Special Conditions"
+        "EN": "WHO-FAO GIFT, resource types"
     },
     "creationDate": null,
     "characterSet": {
@@ -60,7 +60,7 @@
 
     "meContent": {
         "resourceRepresentationType": "codelist",
-        "keywords": ["pregnant","lactating"],
+        "keywords": ["eating occasion"],
         "description": null,
         "statisticalConceptsDefinitions": null,
         "seCoverage": {
@@ -118,14 +118,9 @@ titleColumnIndex_EN=3
 
 
 --data--
-@1@Normal condition
-@2@Pregnant
-@3@Lactating
-@4@Breastfed
-@5@Chronic / long term disease
-@6@Unspecified
-@7@Pregnant and Lactating
-@8@Pregnant and Chronic / long term disease
-@9@Lactating and Chronic / long term disease
-@10@Pregnant, Lactating and Chronic / long term disease
-@11@Breastfed and Chronic / long term disease
+
+@1@Dataset
+@2@Survey report
+@3@Scientific article
+@4@Promotion document
+@5@Other type of document

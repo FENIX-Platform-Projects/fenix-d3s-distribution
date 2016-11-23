@@ -28,9 +28,11 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, group_code, subgroup_code)");
                 return false;
 
+            case foodSubjectConsumption:
             case foodSubjectTotal:
-            case foodSubjectRoundTotal:
             case foodSubjectTotalWeighted:
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, gender, special_condition)");
+            case foodSubjectRoundTotal:
             case foodSubjectRoundTotalWeighted:
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (group_code, subgroup_code, foodex2_code)");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, group_code, subgroup_code)");
