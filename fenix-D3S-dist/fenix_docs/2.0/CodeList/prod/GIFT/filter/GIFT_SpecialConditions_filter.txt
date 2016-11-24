@@ -120,7 +120,7 @@ titleColumnIndex_EN=3
 --data--
 
 
-@1@Normal condition
-@2@Pregnant
-@3@Lactating
-@4@Pregnant and lactating
+@1@Pregnant
+@2@Lactating
+@3@Pregnant and lactating
+@4@Non pregnant and non lactating

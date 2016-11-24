@@ -34,7 +34,7 @@ public class AveragePercentile extends org.fao.fenix.d3p.process.Process<Percent
         Step source = sourceStep!=null && sourceStep.length==1 ? sourceStep[0] : null;
         StepType type = source!=null ? source.getType() : null;
         if (type==null || (type!=StepType.table))
-            throw new UnsupportedOperationException("Average percentile process can be applied only on a table");
+            throw new BadRequestException("Average percentile process can be applied only on a table");
         String tableName = (String)source.getData();
         DSDDataset dsd = source.getDsd();
         Language[] languages = DatabaseStandards.getLanguageInfo();
@@ -53,8 +53,11 @@ public class AveragePercentile extends org.fao.fenix.d3p.process.Process<Percent
 
 
     private String buildWhereConditions(PercentileParameters params, Collection<Object> queryParams) {
-        StringBuilder where = new StringBuilder(" where item=?");
-        queryParams.add(params.item);
+        StringBuilder where = new StringBuilder();
+        if (params.item!=null && params.item.trim().length()>0) {
+            where.append(" and item=?");
+            queryParams.add(params.item);
+        }
         if (params.group!=null && params.group.trim().length()>0) {
             where.append(" and group_code=?");
             queryParams.add(params.group);
@@ -67,7 +70,7 @@ public class AveragePercentile extends org.fao.fenix.d3p.process.Process<Percent
             where.append(" and foodex2_code=?");
             queryParams.add(params.food);
         }
-        return where.toString();
+        return where.length()>0 ? " where"+where.substring(4) : "";
     }
 
     private String createQuery(Step source, PercentileParameters params, String tableName, Collection<Object> queryParams,Language[] languages) throws Exception {
