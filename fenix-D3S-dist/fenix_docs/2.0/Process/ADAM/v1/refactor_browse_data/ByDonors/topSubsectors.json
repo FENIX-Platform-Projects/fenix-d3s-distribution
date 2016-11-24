@@ -1,0 +1,87 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_sector_oda"
+      }
+    ],
+    "parameters": {
+      "rows": {
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2014"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_subsectors"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "purposecode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        },
+        {
+          "columns": [
+            "flowcategory_code"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  }
+]

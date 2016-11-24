@@ -1,287 +1,302 @@
 [
   {
-    "name":"union",
-    "sid":[
+    "name": "union",
+    "sid": [
       {
-        "uid":"top_10_donors_sum"
+        "uid": "top_10_recipients_sum"
       },
       {
-        "uid":"others"
+        "uid": "others"
       }
     ],
-    "parameters":{
-
-    },
-    "rid":{
-      "uid":"union_process"
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
     }
   },
   {
-    "name":"filter",
-    "sid":[
+    "name": "filter",
+    "sid": [
       {
-        "uid":"adam_browse_sector_oda"
+        "uid": "adam_browse_recipient_oda"
       }
     ],
-    "parameters":{
-      "columns":[
-        "donorcode",
+    "parameters": {
+      "columns": [
+        "recipientcode",
         "value",
         "unitcode"
       ],
-      "rows":{
-        "oda": {
+      "rows": {
+        "!recipientcode": {
           "codes": [
             {
-              "uid": "oda_crs",
+              "uid": "crs_recipients",
               "version": "2016",
               "codes": [
-                "usd_commitment"
+                "298",
+                "498",
+                "798",
+                "89",
+                "589",
+                "889",
+                "189",
+                "289",
+                "389",
+                "380",
+                "489",
+                "789",
+                "689",
+                "619",
+                "679"
               ]
             }
           ]
         },
-        "fao_sector":{
-          "enumeration":[
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "fao_sector": {
+          "enumeration": [
             "1"
           ]
         },
-        "year":{
-          "time":[
+        "year": {
+          "time": [
             {
-              "from":"2000",
-              "to":"2014"
+              "from": "2000",
+              "to": "2014"
             }
           ]
         }
       }
     },
-    "rid":{
-      "uid":"filter_top_10_donors_sum"
+    "rid": {
+      "uid": "filter_top_10_recipients_sum"
     }
   },
   {
-    "name":"group",
-    "parameters":{
-      "by":[
-        "donorcode"
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode"
       ],
-      "aggregations":[
+      "aggregations": [
         {
-          "columns":[
+          "columns": [
             "value"
           ],
-          "rule":"SUM"
+          "rule": "SUM"
         },
         {
-          "columns":[
+          "columns": [
             "unitcode"
           ],
-          "rule":"max"
+          "rule": "max"
         }
       ]
     }
   },
   {
-    "name":"order",
-    "parameters":{
-      "value":"DESC"
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
     },
-    "rid":{
-      "uid":"filtered_dataset"
+    "rid": {
+      "uid": "filtered_dataset"
     }
   },
   {
-    "name":"page",
-    "parameters":{
-      "perPage":10,
-      "page":1
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
     }
   },
   {
-    "name":"group",
-    "parameters":{
-      "by":[
+    "name": "group",
+    "parameters": {
+      "by": [
         "unitcode"
       ],
-      "aggregations":[
+      "aggregations": [
         {
-          "columns":[
+          "columns": [
             "value"
           ],
-          "rule":"SUM"
+          "rule": "SUM"
         }
       ]
     }
   },
   {
-    "name":"addcolumn",
-    "parameters":{
-      "column":{
-        "dataType":"text",
-        "id":"indicator",
-        "title":{
-          "EN":"Indicator"
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
         },
-        "domain":{
-          "codes":[
+        "domain": {
+          "codes": [
             {
-              "extendedName":{
-                "EN":"Adam Processes"
+              "extendedName": {
+                "EN": "Adam Processes"
               },
-              "idCodeList":"adam_processes"
+              "idCodeList": "adam_processes"
             }
           ]
         },
-        "subject":null
+        "subject": null
       },
-      "value":"Top Resource Partners"
+      "value": "Top Recipient Countries"
     },
-    "rid":{
-      "uid":"top_10_donors_sum"
+    "rid": {
+      "uid": "top_10_recipients_sum"
     }
   },
   {
-    "name":"group",
-    "sid":[
+    "name": "group",
+    "sid": [
       {
-        "uid":"filtered_dataset"
+        "uid": "filtered_dataset"
       }
     ],
-    "parameters":{
-      "by":[
+    "parameters": {
+      "by": [
         "unitcode"
       ],
-      "aggregations":[
+      "aggregations": [
         {
-          "columns":[
+          "columns": [
             "value"
           ],
-          "rule":"SUM"
+          "rule": "SUM"
         }
       ]
     }
   },
   {
-    "name":"addcolumn",
-    "parameters":{
-      "column":{
-        "dataType":"text",
-        "id":"indicator",
-        "title":{
-          "EN":"Indicator"
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
         },
-        "domain":{
-          "codes":[
+        "domain": {
+          "codes": [
             {
-              "extendedName":{
-                "EN":"Adam Processes"
+              "extendedName": {
+                "EN": "Adam Processes"
               },
-              "idCodeList":"adam_processes"
+              "idCodeList": "adam_processes"
             }
           ]
         },
-        "subject":null
+        "subject": null
       },
-      "value":"sum of all donors"
+      "value": "sum of all recipients"
     },
-    "rid":{
-      "uid":"top_all_donors_sum"
+    "rid": {
+      "uid": "top_all_recipients_sum"
     }
   },
   {
-    "name":"join",
-    "sid":[
+    "name": "join",
+    "sid": [
       {
-        "uid":"top_all_donors_sum"
+        "uid": "top_all_recipients_sum"
       },
       {
-        "uid":"top_10_donors_sum"
+        "uid": "top_10_recipients_sum"
       }
     ],
-    "parameters":{
-      "joins":[
+    "parameters": {
+      "joins": [
         [
           {
-            "type":"id",
-            "value":"unitcode"
+            "type": "id",
+            "value": "unitcode"
           }
         ],
         [
           {
-            "type":"id",
-            "value":"unitcode"
+            "type": "id",
+            "value": "unitcode"
           }
         ]
       ],
-      "values":[
-
-      ]
+      "values": []
     },
-    "rid":{
-      "uid":"join_process_total_donors"
+    "rid": {
+      "uid": "join_process_total_recipients"
     }
   },
   {
-    "name":"addcolumn",
-    "sid":[
+    "name": "addcolumn",
+    "sid": [
       {
-        "uid":"join_process_total_donors"
+        "uid": "join_process_total_recipients"
       }
     ],
-    "parameters":{
-      "column":{
-        "dataType":"number",
-        "id":"value",
-        "title":{
-          "EN":"Value"
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
         },
-        "subject":null
+        "subject": null
       },
-      "value":{
-        "keys":[
+      "value": {
+        "keys": [
           "1 = 1"
         ],
-        "values":[
-          "top_all_donors_sum_value - top_10_donors_sum_value"
+        "values": [
+          "top_all_recipients_sum_value - top_10_recipients_sum_value"
         ]
       }
     }
   },
   {
-    "name":"filter",
-    "parameters":{
-      "columns":[
+    "name": "filter",
+    "parameters": {
+      "columns": [
         "value",
         "unitcode"
       ]
     }
   },
   {
-    "name":"addcolumn",
-    "parameters":{
-      "column":{
-        "dataType":"text",
-        "id":"indicator",
-        "title":{
-          "EN":"Indicator"
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
         },
-        "domain":{
-          "codes":[
+        "domain": {
+          "codes": [
             {
-              "extendedName":{
-                "EN":"Adam Processes"
+              "extendedName": {
+                "EN": "Adam Processes"
               },
-              "idCodeList":"adam_processes"
+              "idCodeList": "adam_processes"
             }
           ]
         },
-        "subject":null
+        "subject": null
       },
-      "value":"Other Resource Partners"
+      "value": "Other Recipients"
     },
-    "rid":{
-      "uid":"others"
+    "rid": {
+      "uid": "others"
     }
   }
 ]
