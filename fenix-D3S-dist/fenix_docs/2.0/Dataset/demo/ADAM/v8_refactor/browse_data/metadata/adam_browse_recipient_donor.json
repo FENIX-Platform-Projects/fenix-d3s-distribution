@@ -1,5 +1,5 @@
-{
-  "uid": "adam_browse_recipient_subcategory",
+ {
+  "uid": "adam_browse_recipient_donor",
   "title": {
     "EN": "ADAM aggregated table"
   },
@@ -38,22 +38,6 @@
         "key": true
       },
       {
-        "id" : "channelsubcategory_code",
-        "title" : { "EN" : "Channel subcategory" },
-        "domain" : { "codes" : [ { "idCodeList" : "crs_channels", "version" : "2016", "level" : 2 } ] },
-        "dataType" : "code",
-        "key": true
-
-      },
-      {
-        "id" : "gaul0",
-        "subject" : "geo",
-        "title" : { "EN" : "GAUL Country" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] },
-        "key": true
-      },
-      {
         "id" : "parentsector_code",
         "title" : { "EN" : "Parent sector" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
@@ -67,6 +51,13 @@
         "key": true
       },
       {
+        "id" : "donorcode",
+        "title" : { "EN" : "Resource Partner" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
+        "key": true
+      },
+      {
         "id" : "year",
         "title" : { "EN" : "Year" },
         "dataType" : "year",
@@ -74,11 +65,11 @@
         "key": true
       },
       {
-      "id": "fao_sector",
-      "title": {
-        "EN": "FAO sector"
-      },
-      "dataType": "text",
+        "id": "fao_sector",
+        "title": {
+          "EN": "FAO sector"
+        },
+        "dataType": "text",
         "key": true
       },
       {
@@ -95,6 +86,14 @@
         "title" : { "EN" : "Measurement unit" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
+      },
+      {
+        "id" : "gaul0",
+        "subject" : "geo",
+        "title" : { "EN" : "GAUL Country" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] },
+        "key": true
       },
       {
         "id" : "flowcategory",

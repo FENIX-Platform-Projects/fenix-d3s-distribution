@@ -1,5 +1,5 @@
 {
-  "uid": "adam_browse_recipient_oda",
+  "uid": "adam_browse_recipient_subcategory",
   "title": {
     "EN": "ADAM aggregated table"
   },
@@ -23,29 +23,13 @@
         "dataType" : "code",
         "key": true
       },
-
       {
-        "id" : "parentsector_code",
-        "title" : { "EN" : "Parent sector" },
-        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
-        "dataType" : "code"
-      },
-
-      {
-        "id" : "purposecode",
-        "title" : { "EN" : "Sub-sector" },
+        "id" : "fao_region",
+        "title" : { "EN" : "FAO Region" },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] },
         "key": true
       },
-      {
-        "id" : "year",
-        "title" : { "EN" : "Year" },
-        "dataType" : "year",
-        "subject" : "time",
-        "key": true
-      },
-
       {
         "id" : "recipientcode",
         "title" : { "EN" : "Recipient Country"},
@@ -54,12 +38,40 @@
         "key": true
       },
       {
-      "id": "fao_sector",
-      "title": {
-        "EN": "FAO sector"
+        "id" : "parentsector_code",
+        "title" : { "EN" : "Parent sector" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
+        "dataType" : "code"
       },
-      "dataType": "text",
-      "key": true
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "Sub-sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "channelsubcategory_code",
+        "title" : { "EN" : "Channel subcategory" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_channels", "version" : "2016", "level" : 2 } ] },
+        "dataType" : "code",
+        "key": true
+
+      },
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year" },
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id": "fao_sector",
+        "title": {
+          "EN": "FAO sector"
+        },
+        "dataType": "text",
+        "key": true
       },
       {
         "id": "value",
@@ -75,7 +87,22 @@
         "title" : { "EN" : "Measurement unit" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
+      },
+      {
+        "id" : "gaul0",
+        "subject" : "geo",
+        "title" : { "EN" : "GAUL Country" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "flowcategory",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       }
+
     ]
   }
 }

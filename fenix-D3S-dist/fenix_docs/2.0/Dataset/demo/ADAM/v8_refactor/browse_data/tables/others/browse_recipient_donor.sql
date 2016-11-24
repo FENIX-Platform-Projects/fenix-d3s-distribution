@@ -1,39 +1,39 @@
-create table browse_recipient_oda as (
+create table browse_recipient_donor as (
    select
       oda,
       fao_region,
       recipientcode,
-      gaul0,
       parentsector_code,
       purposecode,
-      channelsubcategory_code,
+      donorcode,
       year,
       fao_sector,
-      flowcategory,
       sum(value) as value,
-      max(unitcode) as unitcode
+      max(unitcode) as unitcode,
+      gaul0,
+      flowcategory
    from
-      usd_aggregated_table
+      usd_aggregated_table2
    group by
-     oda,
+      oda,
       fao_region,
       recipientcode,
-      gaul0,
       parentsector_code,
       purposecode,
-      channelsubcategory_code,
+      donorcode,
       year,
       fao_sector,
+      gaul0,
       flowcategory
-
    order by
       oda,
       fao_region,
       recipientcode,
-      gaul0,
       parentsector_code,
       purposecode,
+      donorcode,
       year,
       fao_sector,
+      gaul0,
       flowcategory
 );

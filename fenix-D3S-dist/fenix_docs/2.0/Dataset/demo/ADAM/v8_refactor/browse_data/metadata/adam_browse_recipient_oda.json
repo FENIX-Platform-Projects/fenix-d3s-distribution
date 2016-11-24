@@ -1,5 +1,5 @@
 {
-  "uid": "adam_browse_sector_map",
+  "uid": "adam_browse_recipient_oda",
   "title": {
     "EN": "ADAM aggregated table"
   },
@@ -23,14 +23,27 @@
         "dataType" : "code",
         "key": true
       },
-
+      {
+        "id" : "fao_region",
+        "title" : { "EN" : "FAO Region" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
       {
         "id" : "parentsector_code",
         "title" : { "EN" : "Parent sector" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
-        "dataType" : "code"
+        "dataType" : "code",
+        "key": true
       },
-
       {
         "id" : "purposecode",
         "title" : { "EN" : "Sub-sector" },
@@ -43,28 +56,6 @@
         "title" : { "EN" : "Year" },
         "dataType" : "year",
         "subject" : "time",
-        "key": true
-      },
-      {
-        "id" : "gaul0",
-        "subject" : "geo",
-        "title" : { "EN" : "GAUL Country" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] },
-        "key": true
-      },
-      {
-        "id" : "fao_region",
-        "title" : { "EN" : "FAO Region" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] },
-        "key": true
-      },
-      {
-        "id" : "fao_subregion",
-        "title" : { "EN" : "FAO Subregion" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 2 } ] },
         "key": true
       },
       {
@@ -89,6 +80,20 @@
         "title" : { "EN" : "Measurement unit" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
+      },
+      {
+        "id" : "gaul0",
+        "subject" : "geo",
+        "title" : { "EN" : "GAUL Country" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "flowcategory",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       }
     ]
   }

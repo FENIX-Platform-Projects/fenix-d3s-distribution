@@ -1,0 +1,42 @@
+create table browse_recipient_subcategory as (
+
+select
+      oda,
+      fao_region,
+      recipientcode,
+      parentsector_code,
+      purposecode,
+      channelsubcategory_code,
+      year,
+      fao_sector,
+      sum(value) as value,
+      max(unitcode) as unitcode,
+      gaul0,
+      flowcategory
+
+   from
+      usd_aggregated_table2
+   group by
+      oda,
+      fao_region,
+      recipientcode,
+      parentsector_code,
+      purposecode,
+      channelsubcategory_code,
+      year,
+      fao_sector,
+      gaul0,
+      flowcategory
+
+   order by
+       oda,
+      fao_region,
+      recipientcode,
+      parentsector_code,
+      purposecode,
+      channelsubcategory_code,
+      year,
+      fao_sector,
+      gaul0,
+      flowcategory
+);
