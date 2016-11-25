@@ -1,11 +1,9 @@
 [
   {
     "name":"filter",
-    "sid":[
-      {
-        "uid":"adam_browse_recipient_oda"
-      }
-    ],
+    "sid":[{
+        "uid":"adam_browse_sector_recipient"
+      }],
     "parameters":{
       "rows":{
         "fao_sector":{

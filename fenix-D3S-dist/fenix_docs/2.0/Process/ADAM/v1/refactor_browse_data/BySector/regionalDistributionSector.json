@@ -1,0 +1,57 @@
+[
+  {
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2014"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "unitcode",
+        "un_continent_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "select",
+    "parameters": {
+      "query": "WHERE un_continent_code<>?",
+      "queryParameters": [
+        {
+          "value": ""
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  }
+]

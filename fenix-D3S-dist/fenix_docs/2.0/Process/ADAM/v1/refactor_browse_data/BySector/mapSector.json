@@ -3,23 +3,45 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_recipient_subcategory"
+        "uid": "adam_browse_sector_recipient"
       }
     ],
     "parameters": {
       "rows": {
         "oda": {
-          "enumeration": [
-            "usd_disbursement"
-          ]
-        },
-        "recipientcode": {
           "codes": [
             {
-              "uid": "crs_recipients",
+              "uid": "oda_crs",
               "version": "2016",
               "codes": [
-                "625"
+                "usd_disbursement_defl"
+              ]
+            }
+          ]
+        },
+        "!gaul0": {
+          "codes": [
+            {
+              "uid": "GAUL0",
+              "version": "2014",
+              "codes": [
+                "NA"
+              ]
+            }
+          ]
+        },
+        "fao_sector":{
+          "enumeration":[
+            "1"
+          ]
+        },
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "31110"
               ]
             }
           ]
@@ -33,13 +55,16 @@
           ]
         }
       }
+    },
+    "rid": {
+      "uid": "filter_region"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "channelsubcategory_code"
+        "gaul0"
       ],
       "aggregations": [
         {
@@ -53,27 +78,9 @@
             "unitcode"
           ],
           "rule": "max"
-        },
-        {
-          "columns": [
-            "flowcategory_code"
-          ],
-          "rule": "max"
         }
+
       ]
-    }
-  },
-  {
-    "name": "order",
-    "parameters": {
-      "value": "DESC"
-    }
-  },
-  {
-    "name": "page",
-    "parameters": {
-      "perPage": 10,
-      "page": 1
     }
   }
 ]

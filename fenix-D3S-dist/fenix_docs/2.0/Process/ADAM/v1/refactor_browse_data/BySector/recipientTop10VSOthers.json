@@ -18,7 +18,7 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_recipient_oda"
+        "uid": "adam_browse_sector_recipient"
       }
     ],
     "parameters": {
@@ -55,7 +55,7 @@
         },
         "oda": {
           "enumeration": [
-            "usd_commitment"
+            "usd_disbursement_defl"
           ]
         },
         "fao_sector": {

@@ -3,7 +3,7 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_usd_aggregated_table"
+        "uid": "adam_usd_aggregated_table2"
       }
     ],
     "parameters": {
@@ -15,7 +15,7 @@
       "rows": {
         "oda": {
           "enumeration": [
-            "usd_commitment"
+            "usd_disbursement_defl"
           ]
         },
         "donorcode": {

@@ -1,5 +1,5 @@
 {
-  "uid": "adam_usd_aggregated_table",
+  "uid": "adam_browse_donor_recipient",
   "title": {
     "EN": "ADAM aggregated table"
   },
@@ -19,21 +19,22 @@
       {
         "id": "oda",
         "title": {"EN": "Oda name"},
-        "domain" : { "codes" : [ { "idCodeList" : "crs_oda", "version" : "2016"} ] },
+        "domain" : { "codes" : [ { "idCodeList" : "oda_crs", "version" : "2016"} ] },
         "dataType" : "code",
         "key": true
       },
       {
-        "id" : "fao_region",
-        "title" : { "EN" : "FAO Region" },
+        "id" : "parentsector_code",
+        "title" : { "EN" : "Parent sector" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] }
+        "key": true
       },
       {
-        "id" : "recipientcode",
-        "title" : { "EN" : "Recipient Country"},
+        "id" : "purposecode",
+        "title" : { "EN" : "Sub-sector" },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
         "key": true
       },
       {
@@ -44,24 +45,19 @@
         "key": true
       },
       {
-        "id" : "parentsector_code",
-        "title" : { "EN" : "Parent sector" },
-        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
-        "dataType" : "code"
-      },
-      {
-        "id" : "purposecode",
-        "title" : { "EN" : "Sub-sector" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
-        "key": true
-      },
-      {
         "id": "fao_sector",
         "title": {
           "EN": "FAO sector"
         },
-        "dataType": "text"
+        "dataType": "text",
+        "key": true
+      },
+      {
+        "id" : "fao_region",
+        "title" : { "EN" : "FAO Region" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] },
+        "key": true
       },
       {
         "id" : "year",
@@ -69,29 +65,6 @@
         "dataType" : "year",
         "subject" : "time",
         "key": true
-      },
-
-      {
-        "id" : "channelsubcategory_code",
-        "title" : { "EN" : "Channel subcategory" },
-        "domain" : { "codes" : [ { "idCodeList" : "crs_channels", "version" : "2016", "level" : 2 } ] },
-        "dataType" : "code",
-        "key": true
-
-      },
-      {
-        "id" : "dac_member",
-        "title" : { "EN" : "OECD DAC Member Donor Country" },
-        "dataType" : "text",
-        "key": true
-
-      },
-      {
-        "id" : "gaul0",
-        "subject" : "geo",
-        "title" : { "EN" : "GAUL Country" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] }
       },
       {
         "id": "value",
@@ -109,12 +82,19 @@
         "dataType" : "code"
       },
       {
+        "id" : "gaul0",
+        "subject" : "geo",
+        "title" : { "EN" : "GAUL Country" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] },
+        "key": true
+      },
+      {
         "id" : "flowcategory",
         "title" : { "EN" : "Flow" },
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       }
-
     ]
   }
 }

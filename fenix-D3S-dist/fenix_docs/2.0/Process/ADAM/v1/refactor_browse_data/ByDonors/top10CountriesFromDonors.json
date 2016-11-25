@@ -3,7 +3,7 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_recipient_donor"
+        "uid": "adam_browse_donor_recipient"
       }
     ],
     "parameters": {
@@ -15,7 +15,7 @@
         },
         "oda": {
           "enumeration": [
-            "usd_commitment"
+            "usd_disbursement_defl"
           ]
         },
         "donorcode": {
@@ -24,7 +24,7 @@
               "uid": "crs_donors",
               "version": "2016",
               "codes": [
-                "1"
+                "4"
               ]
             }
           ]
@@ -60,13 +60,13 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "max"
         },
         {
           "columns": [
-            "flowcategory_code"
+            "flowcategory"
           ],
-          "rule": "first"
+          "rule": "max"
         }
       ]
     }
