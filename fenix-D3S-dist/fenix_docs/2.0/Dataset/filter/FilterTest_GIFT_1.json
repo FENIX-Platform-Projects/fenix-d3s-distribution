@@ -6,5 +6,12 @@
     },
     "meContent.resourceRepresentationType" : {
         "enumeration" : ["dataset"]
+    },
+    "meContent.seCoverage.coverageGeographic" : {
+        "codes" : [
+            {
+                "uid" : "GAUL", "version" : "2014", "codes" : [ "42" ]
+            }
+        ]
     }
 }
