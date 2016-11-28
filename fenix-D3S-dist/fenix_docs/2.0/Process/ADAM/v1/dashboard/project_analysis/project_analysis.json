@@ -1,92 +1,66 @@
 [
-  {
-    "name": "filter",
-    "sid": [
-      {
-        "uid": "adam_project_analysis"
-      }
-    ],
-    "parameters": {
-      "columns": [
-        "donorcode",
-        "purposecode",
-        "value",
-        "unitcode",
-        "oda"
 
-      ],
-      "rows": {
-        "year": {
-          "time": [
-            {
-              "from": 2016,
-              "to": 2016
-            }
-          ]
-        },
-        "recipientcode": {
-          "codes": [
-            {
-              "uid": "crs_recipients",
-              "version": "2016",
-              "codes": [
-                "998"
-              ]
-            }
-          ]
-        },
-        "donorcode": {
-          "codes": [
-            {
-              "uid": "crs_donors",
-              "version": "2016",
-              "codes": [
-                "998"
-              ]
-            }
-          ]
+    {
+      "name": "filter",
+      "sid": [
+        {
+          "uid": "adam_project_analysis"
         }
-      }
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "dataType": "text",
-        "id": "indicator",
-        "title": {
-          "EN": "OECD Dac"
-        },
-        "subject": null
-      },
-      "value": {
-        "keys": ["oda = 'usd_commitment'", "oda = 'usd_commitment'"],
-        "values": ["Commitment (Mil $)", "Disbursement (Mil $)"]
-      }
-    }
-  },
-  {
-    "name": "filter",
-    "sid": [
-      {
-        "uid": "adam_project_analysis"
-      }
-    ],
-    "parameters": {
-      "columns": [
-        "donorcode",
-        "purposecode",
-        "value",
-        "unitcode",
-        "indicator"
-
       ],
-      "rows": {
-
+      "parameters": {
+        "columns": [
+          "recipientcode",
+          "oda",
+          "donorcode",
+          "projecttitle",
+          "year",
+          "parentsector_code",
+          "purposecode",
+          "value",
+          "unitcode"
+        ],
+        "rows": {
+          "year": {
+            "time": [
+              {
+                "from": 2000,
+                "to": 2014
+              }
+            ]
+          },
+          "recipientcode": {
+            "codes": [
+              {
+                "uid": "crs_recipients",
+                "version": "2016",
+                "codes": [
+                  "625"
+                ]
+              }
+            ]
+          },
+          "donorcode": {
+            "codes": [
+              {
+                "uid": "crs_donors",
+                "version": "2016",
+                "codes": [
+                  "1"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "rid": {
+        "uid": "filter_projects"
+      }
+    },
+    {
+      "name": "order",
+      "parameters": {
+        "year": "DESC"
       }
     }
-  }
-
 
 ]

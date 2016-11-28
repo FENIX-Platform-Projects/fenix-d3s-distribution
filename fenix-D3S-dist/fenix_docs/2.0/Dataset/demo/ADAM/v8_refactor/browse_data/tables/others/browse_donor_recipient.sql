@@ -12,7 +12,7 @@ create table browse_donor_recipient as (
       gaul0,
       flowcategory
    from
-      usd_aggregated_table2
+      usd_aggregated_table
    group by
       oda,
       parentsector_code,

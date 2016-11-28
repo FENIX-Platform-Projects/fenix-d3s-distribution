@@ -53,7 +53,8 @@
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
         "key": true
-      }, {
+      },
+      {
         "id" : "value",
         "subject" : "value",
         "title" : { "EN" : "Value" },

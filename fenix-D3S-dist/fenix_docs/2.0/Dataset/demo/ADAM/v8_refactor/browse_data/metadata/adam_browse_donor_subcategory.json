@@ -53,9 +53,7 @@
         "domain" : { "codes" : [ { "idCodeList" : "crs_channels", "version" : "2016", "level" : 2 } ] },
         "dataType" : "code",
         "key": true
-
       },
-
       {
         "id" : "year",
         "title" : { "EN" : "Year" },
@@ -85,6 +83,12 @@
         "title" : { "EN" : "Measurement unit" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
+      },
+      {
+        "id" : "flowcategory",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       }
     ]
   }

@@ -36,7 +36,7 @@
       "rows": {
         "oda": {
           "enumeration": [
-            "usd_commitment"
+            "usd_commitment_defl"
           ]
         },
         "donorcode": {
@@ -148,7 +148,7 @@
       "rows": {
         "oda": {
           "enumeration": [
-            "usd_commitment"
+            "usd_commitment_defl"
           ]
         },
         "fao_sector": {
@@ -379,7 +379,7 @@
       "rows": {
         "oda": {
           "enumeration": [
-            "usd_commitment"
+            "usd_commitment_defl"
           ]
         },
         "dac_member": {
@@ -471,7 +471,7 @@
       "rows": {
         "oda": {
           "enumeration": [
-            "usd_commitment"
+            "usd_commitment_defl"
           ]
         },
         "dac_member": {

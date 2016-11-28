@@ -4,11 +4,22 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_sector_recipient"
+        "uid": "adam_browse_donor_faoregion"
       }
     ],
     "parameters": {
       "rows": {
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "4"
+              ]
+            }
+          ]
+        },
         "year": {
           "time": [
             {
