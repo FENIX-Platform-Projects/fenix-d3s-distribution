@@ -1,6 +1,6 @@
 {
-    "uid": "CSTAT_Core",
-	"version": null,
+    "uid": "agro_ecological_zones",
+"version": null,
     "language": {
         "codes": [
             {
@@ -13,7 +13,7 @@
 
     "languageDetails": null,
     "title": {
-        "EN": "Classification of CountrySTAT indicator -National core"
+        "EN": "Agro-ecological zones"
     },
     "creationDate": null,
     "characterSet": {
@@ -42,13 +42,15 @@
             "organization": {
                 "EN": "FAO"
             },
-            "organizationUnit": {"EN":"CountrySTAT"},
+            "organizationUnit": {
+                "EN": "ESS"
+            },
             "name": null,
             "position": null,
             "role": "distributor",
             "contactInfo": {
                 "phone ": null,
-                "address": null,	
+                "address": null,
                 "emailAddress": null,
                 "hoursOfService": null,
                 "contactIntruction": null
@@ -59,7 +61,7 @@
 
     "meContent": {
         "resourceRepresentationType": "codelist",
-        "keywords": ["activity", "sector", "national core"],
+        "keywords": ["agro-ecological", "zones", "Zambia"],
         "description": null,
         "statisticalConceptsDefinitions": null,
         "seCoverage": {
@@ -67,16 +69,16 @@
                 {
                     "codes": [
                         {
-                            "code": "06"
+                            "code": null
                         }
                     ],
-                    "idCodeList": "FENIX_Subjects",
-                    "version": "1.0"
+                    "idCodeList": null,
+                    "version": null
                 }
         },
         "seCodeList"  : {
             "numberOfLevels": 1,
-            "typeOfCodeList": "tree"
+            "typeOfCodeList": "list"
         }
 
     },
@@ -101,7 +103,10 @@
         }
 
 
-    }
+    },
+		"dsd":{
+      "contextSystem":"cstat"
+   }
 }
 
 --structure--
@@ -116,21 +121,7 @@ titleColumnIndex_FR=4
 
 --data--
 
+@0101@Region I
+@0102@Region II
+@0103@Region III
 
-@P@Production@Production
-@T@Trade@Commerce
-@FA@Food Availability@Disponibilité alimentaire
-@PR@Prices@Prix
-@LU@Land Use@Terres
-@POP@Population@Population
-@L@Labor@Travail
-@FER@Fertilizers@Engrais
-@PES@Pesticides@Pesticides
-@M@Machinery@Machines
-@FOR@Forestry@Forêts
-@FIS@Fisheries@Pêches
-@W@Water@Eau
-@VA@Value Added@Valeur ajoutée
-@GE@National account@Comptes nationaux
-@LI@Livestock@Elevage
-@EM@Employment@Emploi

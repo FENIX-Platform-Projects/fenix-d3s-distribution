@@ -1,0 +1,271 @@
+{
+  "uid": "GAUL_Ethiopia",
+  "version": "2014",
+  "language": {
+    "codes": [
+      { "code": "eng" },
+      { "code": "fre" },
+      { "code": "spa" },
+      { "code": "por" },
+      { "code": "chi" },
+      { "code": "rus" },
+      { "code": "ara" }
+    ],
+    "idCodeList": "ISO639-2",
+    "version": "1998"
+  },
+
+  "languageDetails": null,
+  "title": {
+    "EN": "Global administrative unit layer"
+  },
+  "creationDate": null,
+  "characterSet": {
+    "codes": [{
+      "code": "106"
+    }],
+    "idCodeList": "IANAcharacterSet",
+    "version": null
+  },
+
+  "parentIdentifiers": null,
+  "metadataStandardName": "FENIX metadata",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "codes": [
+      {
+        "code": "eng"
+      }
+    ],
+    "idCodeList": "ISO639-2",
+    "version": "1998"
+  },
+
+  "contacts": [
+    {
+      "organization": {
+        "EN": "FAO"
+      },
+      "organizationUnit": {
+        "EN": "ESS"
+      },
+      "name": "Fabio Grita",
+      "position": null,
+      "role": "owner",
+      "contactInfo": {
+        "phone ": "0039 06 57054262",
+        "address": "FAO-HQ, Viale delle Terme di Caracalla, 00153 Roma",
+        "emailAddress": "fabio.grita@fao.org",
+        "hoursOfService": null,
+        "contactIntruction": null
+      }
+    }
+  ],
+  "noDataValue": null,
+
+  "meContent": {
+    "resourceRepresentationType": "codelist",
+    "keywords": ["GAUL", "geographic","area","layer"],
+    "description": null,
+    "statisticalConceptsDefinitions": null,
+    "seCoverage": {
+      "coverageSectors":
+      {
+        "codes": [
+          {
+            "code": "0201"
+          }
+        ],
+        "idCodeList": "FENIX_Subjects",
+        "version": "1.0"
+      }
+    },
+    "seCodeList"  : {
+      "numberOfLevels": 1,
+      "typeOfCodeList": "tree"
+    }
+
+  },
+  "meAccessibility": {
+    "seDataDissemination" : {
+      "seDistribution" : {
+        "onlineResource": null,
+        "disseminationFormat": null
+      }
+    },
+
+    "seConfidentiality" : {
+      "confidentialityStatus": {
+        "codes": [
+          {
+            "code": "F"
+          }
+        ],
+        "idCodeList": "CL_CONF_STATUS",
+        "version": "1.0"
+      }
+    }
+  },
+  "seDocuments": [{
+    "document": {
+      "documentKind": "methodologicalNotes",
+      "title": "The Global Administrative Unit Layers (GAUL)",
+      "date": "2006-12-20",
+      "documentContact":{
+        "organization": {
+          "EN": "FAO"
+        },
+        "organizationUnit": {
+          "EN": "ESS"
+        },
+        "name": "Fabio Grita",
+        "position": null,
+        "role": "director",
+        "contactInfo": {
+          "phone ": "0039 06 57054262",
+          "address": "FAO-HQ, Viale delle Terme di Caracalla, 00153 Roma",
+          "emailAddress": "fabio.grita@fao.org",
+          "hoursOfService": null,
+          "contactIntruction": null
+        }
+      },
+      "link": "http://www.fao.org/giews/english/shortnews/GAUL1.pdf"
+
+    }
+
+  }]
+
+
+}}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+descriptionColumnIndex_EN=4
+
+--data--
+
+
+@79@Ethiopia
+79@1229@Amhara
+1229@40799@North Wollo
+1229@40801@South Gonder
+1229@40803@Wag Himra
+79@1230@Benishangul Gumuz
+1230@40807@Metekel
+79@47678@Oromia
+47678@149287@Arsi
+47678@149288@Bale
+47678@47688@Borena
+47678@149289@East Shewa
+47678@149290@East Wellega
+47678@47691@Guji
+47678@40822@Jimma
+47678@47693@South West Shewa
+47678@149294@West Arsi
+47678@47694@West Shewa
+47678@149295@West Wellega
+79@1236@SNNP
+1236@47695@Alaba
+1236@47696@Basketo
+1236@149296@Bench Maji
+1236@47699@Gamo Gofa
+1236@47700@Gurage
+1236@40833@Hadiya
+1236@47703@Konta
+1236@40838@Sidama
+1236@40839@South Omo
+1236@47706@Wolayita
+79@1227@Addis Ababa
+1227@191510@Addis Ketema
+1227@191511@Akaki Kaliti
+1227@191512@Arada
+1227@191513@Bole
+1227@191514@Chirkos
+1227@191515@Gulele
+1227@191516@Kolfe Keraniyo
+1227@191517@LIDETA
+1227@191518@Nefas Silk Lafto
+1227@191519@Yeka
+79@1228@Afar
+1228@191520@Not Covered by Field Work
+1228@191521@Zone 02
+1228@191522@Zone 03
+1228@191523@Zone 01
+1228@191524@Zone 04
+1228@191525@Zone 05
+79@1229@Amhara
+1229@149282@Argoba Special woreda
+1229@149278@Awi
+1229@191527@Bahir Dar Liyu
+1229@40796@East Gojjam
+1229@149280@North Gondar
+1229@47682@North Shewa
+1229@40800@Oromiya
+1229@149281@South Wolo
+1229@40804@West Gojjam
+1230@Benishangul Gumuz
+1230@191527@Assosa
+1230@191528@Kamashi
+1230@191529@Maokomo Special
+1230@191530@Pawe Special
+79@1231@Dire Dawa
+1231@40809@Dire Dawa
+79@1232@Gambella
+1232@191531@Agnuwak
+1232@191532@Etang Spe.
+1232@191533@Mejenger
+1232@191534@Nuwer
+79@1233@Harari
+1233@191535@Harer
+79@47678@Oromia
+47678@191536@Adama Special Zone
+47678@191537@Burayu Sp. Zone
+47678@191538@East Hararge
+47678@191539@Horo Gudru Wellega
+47678@191540@Ilu Aba Bora
+47678@191541@Jimma Sp. Town
+47678@191542@North Shewa
+47678@191543@Qeleme Wellega
+47678@191544@West Hararge
+79@1236@SNNP
+1236@191545@Amaro Special
+1236@191546@Awassa Town
+1236@191547@Burji Special
+1236@191548@Dawuro
+1236@191549@Derashe Lyiu Wereda
+1236@191550@Gedeo
+1236@191551@Kefa
+1236@191552@Kembata Timbaro
+1236@191553@Konso Special
+1236@191554@SHEKA
+1236@191555@Siliti
+1236@191556@YEM
+79@47679@SOMALIE
+47679@191557@AFDER
+47679@191558@DEGEHABUR
+47679@191559@FIK
+47679@191560@GODE
+47679@191561@JIJIGA
+47679@191562@KORAHE
+47679@191563@LIBEN
+47679@191564@SHINILE
+47679@191565@SOMALIE some found at Oromia
+47679@191566@WARDER
+47679@191567@SOMALIE some found at Oromia
+79@191509@Special EA
+191509@191568@Afdem Special EA
+191509@191569@Meda Welabu Special EA
+191509@191560@Moyale Special EA
+191509@191561@Mulo Special EA
+79@1237@Tigray
+1237@191562@Central Tigray
+1237@191563@Eastern Tigray
+1237@191564@Mekele Especial Zone
+1237@191565@North Western Tigray
+1237@191566@South Tigray
+1237@191567@Western Tigray
+79@1228@Afar
+1228@191526@Zone 01
+
+

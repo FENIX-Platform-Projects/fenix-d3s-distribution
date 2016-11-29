@@ -1,0 +1,265 @@
+{
+  "uid": "GAUL_Uganda",
+  "version": "2014",
+  "language": {
+    "codes": [
+      { "code": "eng" },
+      { "code": "fre" },
+      { "code": "spa" },
+      { "code": "por" },
+      { "code": "chi" },
+      { "code": "rus" },
+      { "code": "ara" }
+    ],
+    "idCodeList": "ISO639-2",
+    "version": "1998"
+  },
+
+  "languageDetails": null,
+  "title": {
+    "EN": "Global administrative unit layer"
+  },
+  "creationDate": null,
+  "characterSet": {
+    "codes": [{
+      "code": "106"
+    }],
+    "idCodeList": "IANAcharacterSet",
+    "version": null
+  },
+
+  "parentIdentifiers": null,
+  "metadataStandardName": "FENIX metadata",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "codes": [
+      {
+        "code": "eng"
+      }
+    ],
+    "idCodeList": "ISO639-2",
+    "version": "1998"
+  },
+
+  "contacts": [
+    {
+      "organization": {
+        "EN": "FAO"
+      },
+      "organizationUnit": {
+        "EN": "ESS"
+      },
+      "name": "Fabio Grita",
+      "position": null,
+      "role": "owner",
+      "contactInfo": {
+        "phone ": "0039 06 57054262",
+        "address": "FAO-HQ, Viale delle Terme di Caracalla, 00153 Roma",
+        "emailAddress": "fabio.grita@fao.org",
+        "hoursOfService": null,
+        "contactIntruction": null
+      }
+    }
+  ],
+  "noDataValue": null,
+
+  "meContent": {
+    "resourceRepresentationType": "codelist",
+    "keywords": ["GAUL", "geographic","area","layer"],
+    "description": null,
+    "statisticalConceptsDefinitions": null,
+    "seCoverage": {
+      "coverageSectors":
+      {
+        "codes": [
+          {
+            "code": "0201"
+          }
+        ],
+        "idCodeList": "FENIX_Subjects",
+        "version": "1.0"
+      }
+    },
+    "seCodeList"  : {
+      "numberOfLevels": 1,
+      "typeOfCodeList": "tree"
+    }
+
+  },
+  "meAccessibility": {
+    "seDataDissemination" : {
+      "seDistribution" : {
+        "onlineResource": null,
+        "disseminationFormat": null
+      }
+    },
+
+    "seConfidentiality" : {
+      "confidentialityStatus": {
+        "codes": [
+          {
+            "code": "F"
+          }
+        ],
+        "idCodeList": "CL_CONF_STATUS",
+        "version": "1.0"
+      }
+    }
+  },
+  "seDocuments": [{
+    "document": {
+      "documentKind": "methodologicalNotes",
+      "title": "The Global Administrative Unit Layers (GAUL)",
+      "date": "2006-12-20",
+      "documentContact":{
+        "organization": {
+          "EN": "FAO"
+        },
+        "organizationUnit": {
+          "EN": "ESS"
+        },
+        "name": "Fabio Grita",
+        "position": null,
+        "role": "director",
+        "contactInfo": {
+          "phone ": "0039 06 57054262",
+          "address": "FAO-HQ, Viale delle Terme di Caracalla, 00153 Roma",
+          "emailAddress": "fabio.grita@fao.org",
+          "hoursOfService": null,
+          "contactIntruction": null
+        }
+      },
+      "link": "http://www.fao.org/giews/english/shortnews/GAUL1.pdf"
+
+    }
+
+  }]
+
+
+}}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+descriptionColumnIndex_EN=4
+
+--data--
+
+
+@253@Uganda
+253@743@Abim
+253@744@Amudat
+253@745@Amuru
+253@746@Apac
+253@747@Budaka
+253@748@Bugiri
+253@749@Buikwe
+253@750@Bukomansimbi
+253@751@Bukwo
+253@752@Bulambuli
+253@753@Buliisa
+253@754@Bundibugyo
+253@755@Bushenyi
+253@756@Buyende
+253@757@Butambala
+253@758@Iganga
+253@759@Kalungu
+253@760@Kamuli
+253@761@Kapchorwa
+253@762@Sheema
+253@763@Kitgum
+253@764@Kole
+253@765@Kotido
+253@766@Kween
+253@767@Lamwo
+253@768@Luuka
+253@769@Manafwa
+253@770@Masaka
+253@771@Masindi
+253@772@Moroto
+253@773@Nakapiripirit
+253@774@Namutumba
+253@775@Napak
+253@776@Nebbi
+253@777@Ngora
+253@778@Buhweju
+253@779@Ntoroko
+253@780@Maracha
+253@781@Otuke
+253@782@Oyam
+253@783@Pader
+253@784@Rubirizi
+253@785@Sironko
+253@786@Soroti
+253@787@Zombo
+253@788@Bukedea
+253@789@Dokolo
+253@790@Agago
+253@852@Alebtong
+253@1057@Arua
+253@1080@Bududa
+253@1082@Buvuma
+253@1086@Gomba
+253@191501@Omoro
+253@191500@Gulu
+253@1235@Kibuku
+253@1241@Kiryandongo
+253@1261@Kumi
+253@191503@Kiboga
+253@191502@Kyankwanzi
+253@1360@Mitooma
+253@1361@Kyegegwa
+253@1362@Kyenjojo
+253@1363@Mpigi
+253@1364@Nwoya
+253@1365@Serere
+253@1366@Lwengo
+253@1367@Mukono
+253@1368@Namayingo
+253@1369@Pallisa
+253@1370@Lira
+253@1371@Rakai
+253@1372@Lyantonde
+253@3104@Adjumani
+253@3110@Busia
+253@3112@Hoima
+253@3114@Jinja
+253@191505@Kabale
+253@191504@Rubanda
+253@3117@Kalangala
+253@3121@Kasese
+253@191508@Kakumiro
+253@191507@Kagadi
+253@191506@Kibaale
+253@3125@Kisoro
+253@3136@Moyo
+253@3141@Ntungamo
+253@3145@Ssembabule
+253@42180@Kabarole
+253@42181@Kaberamaido
+253@42182@Kampala
+253@42183@Kamwenge
+253@42184@Kanungu
+253@42185@Kayunga
+253@42189@Mayuge
+253@42195@Nakasongola
+253@42197@Rukungiri
+253@42200@Wakiso
+253@42201@Yumbe
+253@47067@Amolatar
+253@47068@Amuria
+253@47071@Butaleja
+253@47072@Ibanda
+253@47073@Isingiro
+253@47074@Kaabong
+253@47075@Kaliro
+253@47078@Katakwi
+253@47079@Kiruhura
+253@47080@Koboko
+253@47083@Luwero
+253@47085@Mbale
+253@47086@Mbarara
+253@47087@Mityana
+253@47088@Mubende
+253@47089@Nakaseke
+253@47090@Tororo
