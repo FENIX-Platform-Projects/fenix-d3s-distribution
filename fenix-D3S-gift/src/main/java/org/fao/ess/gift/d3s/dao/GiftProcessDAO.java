@@ -61,16 +61,22 @@ public class GiftProcessDAO extends WDSDatasetDao {
     //Query management methods
     private String buildQuery(Connection connection, MeIdentification resource, String survey, DatasetType datasetType) throws Exception {
         switch (datasetType) {
+            //legacy
             case dailySubjectAvgBySubgroup:
             case subgroupSubjectTotal:
                 return Queries.loadSubgroupDailySubjectAvg.getQuery();
 
-            case foodSubjectConsumption:
-                return Queries.loadFoodSubject.getQuery();
+            //current
+            case foodSubjectDailyTotal:
+                return Queries.loadFoodDailyTotalSubject.getQuery();
             case foodSubjectTotal:
                 return Queries.loadFoodDailySubject.getQuery();
             case foodSubjectTotalWeighted:
                 return Queries.loadFoodDailySubjectWeighted.getQuery().replace("<<subjects>>", String.valueOf(countSubject(connection, survey)));
+
+            //future
+            case foodSubjectConsumption:
+                return Queries.loadFoodSubject.getQuery();
             case foodSubjectRoundTotal:
                 return Queries.loadFoodDailySubjectRound.getQuery();
             case foodSubjectRoundTotalWeighted:
@@ -96,19 +102,27 @@ public class GiftProcessDAO extends WDSDatasetDao {
 
     private void fillStatement(MeIdentification resource, String survey, DatasetType datasetType, PreparedStatement statement) throws Exception {
         switch (datasetType) {
+            //legacy
             case dailySubjectAvgBySubgroup:
             case subgroupSubjectTotal:
                 for (int i=1; i<=4; i++)
                     statement.setString(i, survey);
                 break;
 
-            case foodSubjectConsumption:
-                for (int i=1; i<=31; i++)
-                    statement.setString(i, survey);
-                break;
+            //current
             case foodSubjectTotal:
             case foodSubjectTotalWeighted:
                 for (int i=1; i<=32; i++)
+                    statement.setString(i, survey);
+                break;
+            case foodSubjectDailyTotal:
+                for (int i=1; i<=2; i++)
+                    statement.setString(i, survey);
+                break;
+
+            //future
+            case foodSubjectConsumption:
+                for (int i=1; i<=31; i++)
                     statement.setString(i, survey);
                 break;
             case foodSubjectRoundTotal:

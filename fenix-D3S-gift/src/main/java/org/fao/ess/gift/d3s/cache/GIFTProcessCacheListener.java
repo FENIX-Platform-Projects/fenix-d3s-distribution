@@ -29,6 +29,7 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
                 return false;
 
             case foodSubjectConsumption:
+            case foodSubjectDailyTotal:
             case foodSubjectTotal:
             case foodSubjectTotalWeighted:
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, gender, special_condition)");
@@ -44,25 +45,7 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
 
     @Override
     public boolean updated(DatasetAccessInfo datasetInfo) throws Exception {
-/*        String uid = datasetInfo.getMetadata().getUid();
-        DatasetType datasetType = getType(uid);
-        String survey = getSurvey(datasetType,uid);
-        if (survey==null)
-            throw new UnsupportedOperationException("Dataset uid syntaxt not supported: "+uid);
-
-        Connection connection = datasetInfo.getConnection();
-        String tableName = datasetInfo.getTableName();
-        switch (datasetType) {
-            case dailySubjectAvgBySubgroup:
-
-            case foodSubjectTotalWeighted:
-                connection.createStatement().executeUpdate("UPDATE "+tableName+" SET value = value/"+ countSubject(connection, tableName));
-                break;
-            case foodSubjectRoundTotalWeighted:
-                connection.createStatement().executeUpdate("UPDATE "+tableName+" SET value = value/"+ countSubjectRound(connection, tableName));
-                break;
-        }
-*/        return false;
+        return false;
     }
 
     @Override
