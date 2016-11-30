@@ -1,7 +1,12 @@
 {
   "dsd.contextSystem" : {
     "enumeration": [
-      "gift_process"
+      "gift"
+    ]
+  },
+  "dsd.userName" : {
+    "enumeration": [
+      "ciccio"
     ]
   },
   "meContent.resourceRepresentationType" : {
