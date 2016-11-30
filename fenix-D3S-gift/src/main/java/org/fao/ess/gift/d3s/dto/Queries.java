@@ -26,13 +26,19 @@ public enum Queries {
     countSubject("select count(*) as count from (select subject from subject where survey_code = ? group by subject) subjects"),
     loadFoodDailyTotalSubject(
         "with subjects AS (select subject, age_year, age_month, special_condition, gender from subject where survey_code = ? and round = 1 group by subject, age_year, age_month, special_condition, gender)\n"+
-        //"select item, subjects.subject as subject, survey_day, group_code, subgroup_code, foodex2_code, value, um, gender, special_condition, age_year, age_month from\n" +
-        "select consumption_total.item, consumption_total.subject as subject, group_code, subgroup_code, foodex2_code, consumption_total.value, consumption_total.um, subjects.gender, subjects.special_condition, subjects.age_year, subjects.age_month, usa_hmd.value as suggested_value, 1::integer as increment from\n" +
+        "select consumption_total.item, consumption_total.subject as subject, survey_day, group_code, subgroup_code, foodex2_code, consumption_total.value, consumption_total.um, subjects.gender, subjects.special_condition, subjects.age_year, subjects.age_month, usa_hmd.value as suggested_value, 1::integer as increment from\n" +
         "(\n" +
         "  select subject, survey_day, foodex2_code, max(subgroup_code) as subgroup_code, max(group_code) as group_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
         "  from consumption where survey_code = ? group by subject, survey_day, foodex2_code\n" +
         ") consumption_total\n" +
-        "join subjects on (consumption_total.subject = subjects.subject)"
+        "join subjects on (consumption_total.subject = subjects.subject)\n"+
+        "left join usa_hmd on (\n" +
+        "  usa_hmd.item = consumption_total.item and \n" +
+        "  usa_hmd.gender = subjects.gender and \n" +
+        "  usa_hmd.special_condition = subjects.special_condition and \n" +
+        "  usa_hmd.age_year_from <= subjects.age_year and \n" +
+        "  usa_hmd.age_year_to > subjects.age_year \n" +
+        "  )"
     ),
     loadFoodDailySubject(
         "with subjects_days_count AS ( select subject, count(*) as days_number from\n" +
