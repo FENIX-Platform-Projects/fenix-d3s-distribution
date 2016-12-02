@@ -1,7 +1,7 @@
 [
   {
     "name": "gift_population_filter",
-    "sid": [ { "uid": "gift_process_total_weighted_food_consumption_000042BUR201001" } ],
+    "sid": [ { "uid": "gift_process_total_food_consumption_000042BUR201001" } ],
     "parameters": {
       "item": "FOOD_AMOUNT_PROC",
       "gender": null,
@@ -13,18 +13,15 @@
     }
   },
 
-
-
   {
     "name": "filter",
     "parameters": {
       "columns": [
-        "group_code",
-        "value",
-        "um"
+        "subgroup_code",
+        "value"
       ],
       "rows": {
-        "!group_code": {
+        "group_code": {
           "codes": [
             {
               "uid": "GIFT_FoodGroups",
@@ -40,18 +37,45 @@
     "name": "group",
     "parameters": {
       "by": [
-        "group_code"
+        "subgroup_code"
       ],
       "aggregations": [
         {
           "columns": [ "value" ],
           "rule": "SUM"
-        },
-        {
-          "columns": [ "um" ],
-          "rule": "max"
         }
       ]
     }
+  },
+
+  {
+    "name": "asTable"
+  },
+
+  {
+    "name": "percentage"
+  },
+
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "code",
+        "id": "um",
+        "subject" : "um",
+        "title": {
+          "EN": "Unit of measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "GIFT_UM"
+            }
+          ]
+        }
+      },
+      "value": "perc"
+    }
   }
+
 ]

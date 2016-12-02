@@ -1,6 +1,7 @@
+
 {
-    "uid": "GIFT_STATUS",
-	"version": "1.0",
+    "uid": "GIFT_Items_filter",
+	"version": null,
     "language": {
         "codes": [
             {
@@ -13,7 +14,7 @@
 
     "languageDetails": null,
     "title": {
-        "EN": "Status of surveys"
+        "EN": "WHO-FAO GIFT, Items, nutritional value"
     },
     "creationDate": null,
     "characterSet": {
@@ -40,7 +41,7 @@
     "contacts": [
         {
             "organization": {
-                "EN": "GIFT"
+                "EN": "WHO-FAO"
             },
             "organizationUnit": null,
             "name": null,
@@ -59,7 +60,7 @@
 
     "meContent": {
         "resourceRepresentationType": "codelist",
-        "keywords": ["confidentiality"],
+        "keywords": ["nutritional value"],
         "description": null,
         "statisticalConceptsDefinitions": null,
         "seCoverage": {
@@ -67,11 +68,11 @@
                 {
                     "codes": [
                         {
-                            "code": "0402"
+                            "code": null
                         }
                     ],
-                    "idCodeList": "FENIX_Subjects",
-                    "version": "1.0"
+                    "idCodeList": null,
+                    "version": null
                 }
         },
         "seCodeList"  : {
@@ -101,7 +102,10 @@
         }
 
 
-    }
+    },
+		"dsd":{
+      "contextSystem":"gift"
+   }
 }
 
 --structure--
@@ -115,8 +119,8 @@ titleColumnIndex_EN=3
 
 --data--
 
-@F@Data Available in FAO/WHO GIFT for analysis
-@N@Data soon to be inserted in FAO/WHO GIFT
-@D@Existing data potentially suitable to be inserted in FAO/WHO GIFT
-@P@Planned food consumption survey
-@Z@Data waiting for approval
+@VITA@Vitamin A
+@IRON@Iron
+@CALC@Calcium
+@ZINC@Zinc
+@FOLA@Folate

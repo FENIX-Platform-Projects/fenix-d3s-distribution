@@ -4,11 +4,6 @@
       "gift"
     ]
   },
-  "dsd.userName" : {
-    "enumeration": [
-      "ciccio"
-    ]
-  },
   "meContent.resourceRepresentationType" : {
     "enumeration" : ["dataset"]
   }

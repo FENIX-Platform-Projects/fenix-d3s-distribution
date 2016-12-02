@@ -1,0 +1,129 @@
+[
+  {
+    "name": "gift_population_filter",
+    "sid": [ { "uid": "gift_process_total_food_consumption_000042BUR201001" } ],
+    "parameters": {
+      "item": "VITA",
+      "gender": "2",
+      "special_condition": ["1"],
+      "age_year": {
+        "from": 10.5,
+        "to": 67
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "subject",
+        "value",
+        "suggested_value",
+        "um"
+      ],
+      "rows": {
+        "age_year": {
+          "number": [
+            {
+              "from": 1
+            }
+          ]
+        },
+        "!group_code": {
+          "codes": [
+            {
+              "uid": "GIFT_FoodGroups",
+              "codes": [ "14" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name": "group",
+    "rid" : { "uid" : "subjects_data" },
+    "parameters": {
+      "by": [
+        "subject"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "suggested_value" ],
+          "rule": "MAX"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "MAX"
+        }
+      ]
+    }
+  },
+
+
+  {
+    "name" : "select",
+    "parameters" : {
+      "values" : {
+        "value" : "count(*)"
+      }
+    }
+  },
+
+  {
+    "name" : "var",
+    "result" : false,
+    "parameters" : {
+      "global" : true,
+      "variables" : [
+        {
+          "key" : "populationSize",
+          "type" : "id",
+          "value" : "value"
+        }
+      ]
+    }
+  },
+
+
+  {
+    "name" : "select",
+    "sid" : [{ "uid" : "subjects_data" }],
+    "parameters" : {
+      "values" : {
+        "value" : "(count(*)*100.0)/<<populationSize[0]>>"
+      },
+      "query" : "where value<suggested_value"
+    }
+  },
+
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "code",
+        "title": {
+          "EN": "Unit of measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "GIFT_UM"
+            }
+          ]
+        },
+        "subject": "um",
+        "id": "um"
+      },
+      "value": "perc"
+    }
+  }
+
+
+]

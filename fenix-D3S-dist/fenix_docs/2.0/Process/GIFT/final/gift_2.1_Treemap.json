@@ -1,0 +1,81 @@
+[
+  {
+    "name": "gift_population_filter",
+    "sid": [ { "uid": "gift_process_total_food_consumption_000042BUR201001" } ],
+    "parameters": {
+      "item": "FOOD_AMOUNT_PROC",
+      "gender": null,
+      "special_condition": ["2"],
+      "age_year": {
+        "from": 10.5,
+        "to": 67
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "group_code",
+        "value"
+      ],
+      "rows": {
+        "!group_code": {
+          "codes": [
+            {
+              "uid": "GIFT_FoodGroups",
+              "codes": [ "14" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "group_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+
+  {
+    "name": "asTable"
+  },
+
+  {
+    "name": "percentage"
+  },
+
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "code",
+        "id": "um",
+        "subject" : "um",
+        "title": {
+          "EN": "Unit of measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "GIFT_UM"
+            }
+          ]
+        }
+      },
+      "value": "perc"
+    }
+  }
+
+]
