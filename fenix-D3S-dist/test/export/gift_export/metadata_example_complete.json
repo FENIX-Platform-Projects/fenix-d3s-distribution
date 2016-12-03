@@ -1,0 +1,335 @@
+{
+
+    "creationDate" : 1480783973603,
+    "title" : {
+      "EN" : "Risorsa giro completo"
+    },
+    "dsd" : {
+      "contextSystem" : "gift",
+      "datasources" : [ "D3S" ]
+    },
+    "uid" : "test3",
+    "meContent" : {
+      "description" : {
+        "EN" : "Risorsa giro completo"
+      },
+      "resourceRepresentationType" : "dataset",
+      "keywords" : [ "Risorsa giro completo" ],
+      "seReferencePopulation" : {
+        "statisticalPopulation" : {
+          "EN" : "1"
+        },
+        "referenceArea" : {
+          "codes" : [ {
+            "code" : "1",
+            "label" : {
+              "EN" : "National"
+            }
+          } ],
+          "idCodeList" : "GIFT_ReferenceArea",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, area of reference"
+          }
+        }
+      },
+      "seCoverage" : {
+        "coverageSectors" : {
+          "codes" : [ {
+            "code" : "3",
+            "label" : {
+              "EN" : "Both rural and urban"
+            }
+          } ],
+          "idCodeList" : "GIFT_CoverageSector",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, coverage sectors"
+          }
+        },
+        "coverageSectorsDetails" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "coverageTime" : {
+          "from" : 1480719600000,
+          "to" : 1480719600000
+        },
+        "coverageGeographic" : {
+          "version" : "2014",
+          "codes" : [ {
+            "code" : "122",
+            "label" : {
+              "PT" : "Itália",
+              "FR" : "Italie",
+              "AR" : "إيطاليا",
+              "EN" : "Italy",
+              "RU" : "Италия",
+              "ES" : "Italia",
+              "ZH" : "意大利"
+            }
+          } ],
+          "idCodeList" : "GAUL0",
+          "extendedName" : {
+            "EN" : "Global administrative unit layer country level"
+          }
+        }
+      },
+      "resourceRepresentationTypeLabel" : {
+        "EN" : "Dataset"
+      }
+    },
+    "noDataValue" : "Risorsa giro completo",
+    "languageDetails" : {
+      "EN" : "Risorsa giro completo"
+    },
+    "additions" : {
+      "DataAnalysisInformation" : {
+        "ExclusionRecruitment" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "ExclusionDataCleaning" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "MethodReporting" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "ReportingIndividualLevel" : {
+          "underReporting" : 70,
+          "overReporting" : 556
+        },
+        "ReportingGroupLevel" :
+        [{
+          "underReporting" : {
+            "idCodeList" : "YesNo",
+            "codes" : [ {
+              "code" : "yes",
+              "label":{"EN":"tt"}
+
+            } ]
+          },
+          "overReporting" : {
+            "idCodeList" : "YesNo",
+            "codes" : [ {
+              "code" : "yes",
+              "label":{"EN":"tt"}
+
+            } ]
+          }
+        }],
+        "DataAlreadyCorrected" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label":{"EN":"tt"}
+
+          } ]
+        },
+        "AssessmentIntake" : {
+          "EN" : "Risorsa giro completo"
+        }
+      },
+      "sampledPopulationInformation" : {
+        "sampleSize" : {
+          "EN" : "5"
+        },
+        "PopulationGroups" : [ {
+          "PopulationGroupsList" : {"EN":"Risorsa giro completo"}
+        } ],
+        "SampleSizeGroups" : {
+          "EN" : "5"
+        },
+        "PurposedlyGroups" : [ {
+          "PurposedlyGroupsList" : {"EN":"Risorsa giro completo"}
+        } ],
+        "PurposedlyGroupsDetails" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "MinumumAge" : 4,
+        "MaximumAge" : 10
+      },
+      "FoodCompositionInformation" : {
+        "FoodComsumption" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "NumberOfFood" : 700,
+        "MacroDietaryComponents" : {
+          "idCodeList" : "GIFT_Macronutrients",
+          "codes" : [ {
+            "code" : "9",
+            "label":{"EN":"tt"}
+
+          } ]
+        },
+        "MacroDietaryComponentsDetails" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "MicroDietaryComponents" : {
+          "idCodeList" : "GIFT_Micronutrients",
+          "codes" : [ {
+            "code" : "13",
+            "label":{"EN":"tt"}
+
+          } ]
+        },
+        "MicroDietaryComponentsDetails" : {
+          "EN" : "Risorsa giro completo"
+        }
+      },
+      "SamplingInformation" : {
+        "SamplingInformationDetails" : {
+          "EN" : "Risorsa giro completo"
+        }
+      },
+      "SurveyInformation" : {
+        "GeographicalCoverageDetails" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "StudyAreasDetails" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "SeasonsCoverage" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "AssessmentMethod" : {
+          "idCodeList" : "GIFT_DietaryMethod",
+          "codes" : [ {
+            "code" : "4",
+            "label":{"EN":"tt"}
+          } ]
+        },
+        "AssessmentMethodDetails" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "RepeatedDietary" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label":{"EN":"tt"}
+
+          } ]
+        },
+        "SizeOfSample" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "NumberOfRepeated" : 10,
+        "AverageTime" : 78,
+        "SurveyAdministrationMethod" : {
+          "idCodeList" : "GIFT_DataCollection",
+          "codes" : [ {
+            "code" : "3"
+          } ]
+        },
+        "SurveyAdministrationMethodDetails" : {
+          "EN" : "Risorsa giro completo"
+        }
+      },
+      "FoodConsumptionInformation" : {
+        "FoodCoverageDetails" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "DrinkingWater" : {
+          "idCodeList" : "GIFT_DataCollection",
+          "codes" : [ {
+            "code" : "3"
+          } ]
+        },
+        "SupplementInformation" : {
+          "idCodeList" : "GIFT_DataCollection",
+          "codes" : [ {
+            "code" : "3"
+          } ]
+        },
+        "SupplementInformationDetails" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "NumberOfFood" : 450,
+        "PortionSizes" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "RecipesManagement" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "QuantitiesReported" : {
+          "idCodeList" : "GIFT_QuantityReporting",
+          "codes" : [ {
+            "code" : "5"
+          }, {
+            "code" : "3"
+          } ]
+        },
+        "QuantitiesReportedDetails" : {
+          "EN" : "Risorsa giro completo (e total ammount before)"
+        }
+      }
+    },
+    "meInstitutionalMandate" : {
+      "legalActsAgreements" : {
+        "EN" : "Risorsa giro completo"
+      },
+      "institutionalMandateDataSharing" : {
+        "EN" : "Risorsa giro completo"
+      }
+    },
+    "meAccessibility" : {
+      "seConfidentiality" : {
+        "confidentialityStatus" : {
+          "codes" : [ {
+            "code" : "1",
+            "label" : {
+              "EN" : "Off"
+            }
+          } ],
+          "idCodeList" : "GIFT_ConfidentialityStatus",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, available confidentiality status"
+          }
+        }
+      }
+    },
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" : 1480783973603
+      }
+    },
+    "meStatisticalProcessing" : {
+      "seDataSource" : {
+        "sePrimaryDataCollection" : {
+          "typeOfCollection" : {
+            "codes" : [ {
+              "code" : "8",
+              "label" : {
+                "EN" : "Other (please specify)"
+              }
+            } ],
+            "idCodeList" : "GIFT_TypeOfCollection",
+            "extendedName" : {
+              "EN" : "WHO-FAO GIFT, Type of collection"
+            }
+          },
+          "samplingProcedure" : {
+            "EN" : "Risorsa giro completo"
+          }
+        }
+      },
+      "seDataCompilation" : {
+        "missingData" : {
+          "EN" : "Risorsa giro completo"
+        },
+        "weights" : {
+          "EN" : "Risorsa giro completo"
+        }
+      }
+    },
+    "language" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "eng",
+        "label" : {
+          "EN" : "English"
+        }
+      } ],
+      "idCodeList" : "GIFT_ISO639-2",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      }
+    }
+
+}

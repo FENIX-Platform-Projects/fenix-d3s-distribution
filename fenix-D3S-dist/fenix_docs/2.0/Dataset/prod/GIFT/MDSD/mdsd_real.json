@@ -977,10 +977,8 @@
             "es": ""
           },
           "propertyOrder": 52,
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/OjCodeList"
-          }
+          "type": "object",
+          "$ref": "#/definitions/OjCodeList"
         },
         "ResourceDetails": {
           "title": "Type of resource - details",
@@ -1031,7 +1029,50 @@
           "type": "string"
         }
       }
+    },
+    "PopulationGroupsList":{
+      "title": "Population Groups List",
+      "title_i18n": {
+        "en": "Population Group List",
+        "fr": "",
+        "es": ""
+      },
+      "description": "",
+      "description_i18n": {
+        "en": "",
+        "fr": "",
+        "es": ""
+      },
+      "type": "object",
+      "patternProperties": {
+        ".{1,}": {
+          "type": "string"
+        }
+      }
+
+    },
+    "PurposedlyGroupsList":{
+      "title": "Purposedly Groups List",
+      "title_i18n": {
+        "en": "Purposedly Groups List",
+        "fr": "",
+        "es": ""
+      },
+      "description": "",
+      "description_i18n": {
+        "en": "",
+        "fr": "",
+        "es": ""
+      },
+      "type": "object",
+      "patternProperties": {
+        ".{1,}": {
+          "type": "string"
+        }
+      }
+
     }
+
   },
   "properties": {
     "uid": {
@@ -4129,7 +4170,12 @@
                 "es": ""
               },
               "propertyOrder": 77,
-              "type": "string"
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
             },
             "NumberOfRepeated": {
               "title": "Number of repeated recalls/records per subject",
@@ -4194,7 +4240,12 @@
                 "es": ""
               },
               "propertyOrder": 81,
-              "type": "string"
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
             }
           }
         },
@@ -4280,7 +4331,7 @@
               "propertyOrder": 103,
               "type": "array",
               "items": {
-                "type": "string"
+                "$ref": "#/definitions/PopulationGroupsList"
               }
             },
             "SampleSizeGroups": {
@@ -4315,7 +4366,7 @@
               "propertyOrder": 105,
               "type": "array",
               "items": {
-                "type": "string"
+                "$ref": "#/definitions/PurposedlyGroupsList"
               }
             },
             "PurposedlyGroupsDetails": {
@@ -4332,9 +4383,11 @@
                 "es": ""
               },
               "propertyOrder": 106,
-              "type": "array",
-              "items": {
-                "type": "string"
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
               }
             },
             "MinumumAge": {
@@ -4449,10 +4502,9 @@
                 "es": ""
               },
               "propertyOrder": 114,
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/OjReportingIndividualLevel"
-              }
+              "type": "object",
+              "$ref": "#/definitions/OJReportingIndividualLevel"
+
             },
             "ReportingGroupLevel": {
               "title": "Under-/over-reporting at group level",
@@ -4470,7 +4522,7 @@
               "propertyOrder": 120,
               "type": "array",
               "items": {
-                "$ref": "#/definitions/OjReportingGroupLevel"
+                "$ref": "#/definitions/OJReportingGroupLevel"
               }
             },
             "DataAlreadyCorrected": {
@@ -4669,7 +4721,11 @@
               },
               "propertyOrder": 135,
               "type": "object",
-              "$ref": "#/definitions/OjCodeList"
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
             },
             "NumberOfFood": {
               "title": "Number of different food items in the food list",
@@ -4743,10 +4799,8 @@
                 "es": ""
               },
               "propertyOrder": 139,
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/OjCodeList"
-              }
+              "type": "object",
+              "$ref": "#/definitions/OjCodeList"
             },
             "QuantitiesReportedDetails": {
               "title": "Quantities reported as - details",
@@ -4838,10 +4892,8 @@
                 "es": ""
               },
               "propertyOrder": 153,
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/OjCodeList"
-              }
+              "type": "object",
+              "$ref": "#/definitions/OjCodeList"
             },
             "MacroDietaryComponentsDetails": {
               "title": "Macronutrients and dietary components available in the dataset - details",
@@ -4878,10 +4930,8 @@
                 "es": ""
               },
               "propertyOrder": 155,
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/OjCodeList"
-              }
+              "type": "object",
+              "$ref": "#/definitions/OjCodeList"
             },
             "MicroDietaryComponentsDetails": {
               "title": "Micronutrients and minerals available in the dataset - details",
