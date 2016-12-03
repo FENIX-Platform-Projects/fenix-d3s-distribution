@@ -11,130 +11,126 @@
   },
   "dsd": {
     "contextSystem": "adam",
-    "datasources": ["adam"],
-    "cache":{
-      "storage":"postgres"
+    "datasources": [
+      "adam"
+    ],
+    "cache": {
+      "storage": "postgres"
     },
-    "columns": [ {
-      "dataType" : "text",
-      "id" : "countryname",
-      "title" : {
-        "EN" : "Country name"
-      }
-    }, {
-      "dataType" : "code",
-      "key" : true,
-      "id" : "countrycode",
-      "title" : {
-        "EN" : "Country code"
+    "columns": [
+      {
+        "dataType": "code",
+        "key": true,
+        "id": "countrycode",
+        "title": {
+          "EN": "Country code"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2016",
+              "extendedName": {
+                "EN": "OECD Recipientdonors"
+              },
+              "idCodeList": "crs_recipientdonors"
+            }
+          ]
+        },
+        "subject": "geo"
       },
-      "domain" : {
-        "codes" : [ {
-          "version" : "2016",
-          "extendedName" : {
-            "EN" : "OECD Recipientdonors"
-          },
-          "idCodeList" : "crs_recipientdonors"
-        } ]
+      {
+        "dataType": "code",
+        "key": true,
+        "id": "indicatorcode",
+        "title": {
+          "EN": "Indicator code"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2016",
+              "extendedName": {
+                "EN": "FAO Development Indicators"
+              },
+              "idCodeList": "adam_development_indicators"
+            }
+          ]
+        }
       },
-      "subject" : "geo"
-    }, {
-      "dataType" : "text",
-      "id" : "indicatorname",
-      "title" : {
-        "EN" : "Indicator name"
-      }
-    }, {
-      "dataType" : "code",
-      "key" : true,
-      "id" : "indicatorcode",
-      "title" : {
-        "EN" : "Indicator code"
+      {
+        "dataType": "code",
+        "id": "itemcode",
+        "title": {
+          "EN": "Item code"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2016",
+              "extendedName": {
+                "EN": "FAO Development Indicators"
+              },
+              "idCodeList": "adam_development_indicators"
+            }
+          ]
+        }
       },
-      "domain" : {
-        "codes" : [ {
-          "version" : "2016",
-          "extendedName" : {
-            "EN" : "FAO Development Indicators"
-          },
-          "idCodeList" : "adam_development_indicators"
-        } ]
-      }
-    }, {
-      "dataType" : "text",
-      "id" : "itemname",
-      "title" : {
-        "EN" : "Item name"
-      }
-    }, {
-      "dataType" : "code",
-      "id" : "itemcode",
-      "title" : {
-        "EN" : "Item code"
+      {
+        "dataType": "text",
+        "key": true,
+        "id": "period",
+        "title": {
+          "EN": "Period"
+        }
       },
-      "domain" : {
-        "codes" : [ {
-          "version" : "2016",
-          "extendedName" : {
-            "EN" : "FAO Development Indicators"
-          },
-          "idCodeList" : "adam_development_indicators"
-        } ]
-      }
-    }, {
-      "dataType" : "text",
-      "key" : true,
-      "id" : "period",
-      "title" : {
-        "EN" : "Period"
-      }
-    }, {
-      "dataType" : "number",
-      "id" : "value",
-      "title" : {
-        "EN" : "Value"
+      {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": "value"
       },
-      "subject" : "value"
-    }, {
-      "dataType" : "code",
-      "id" : "unitcode",
-      "title" : {
-        "EN" : "Measurement unit"
+      {
+        "dataType": "code",
+        "id": "unitcode",
+        "title": {
+          "EN": "Measurement unit"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2016",
+              "extendedName": {
+                "EN": "OECD Units"
+              },
+              "idCodeList": "crs_units"
+            }
+          ]
+        },
+        "subject": "um"
       },
-      "domain" : {
-        "codes" : [ {
-          "version" : "2016",
-          "extendedName" : {
-            "EN" : "OECD Units"
-          },
-          "idCodeList" : "crs_units"
-        } ]
+      {
+        "dataType": "text",
+        "id": "source",
+        "title": {
+          "EN": "Source"
+        }
       },
-      "subject" : "um"
-    }, {
-      "dataType" : "text",
-      "id" : "unitname",
-      "title" : {
-        "EN" : "Measurement unit name"
+      {
+        "dataType": "text",
+        "id": "note",
+        "title": {
+          "EN": "Note"
+        }
+      },
+      {
+        "dataType": "text",
+        "id": "link",
+        "title": {
+          "EN": "Link"
+        }
       }
-    }, {
-      "dataType" : "text",
-      "id" : "source",
-      "title" : {
-        "EN" : "Source"
-      }
-    }, {
-      "dataType" : "text",
-      "id" : "note",
-      "title" : {
-        "EN" : "Note"
-      }
-    }, {
-      "dataType" : "text",
-      "id" : "link",
-      "title" : {
-        "EN" : "Link"
-      }
-    } ]
+    ]
   }
 }

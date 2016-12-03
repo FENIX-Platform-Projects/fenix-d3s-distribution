@@ -1,13 +1,16 @@
 {
   "resource": {
     "metadata": {
-      "uid": "adam_country_indicators"
+      "uid": "000042BUR201002"
     },
     "data": []
   },
   "input": {
     "plugin": "inputMD",
-    "config": {}
+    "config": {
+      "template":"gift"
+
+    }
   },
   "output": {
     "plugin": "outputMD",

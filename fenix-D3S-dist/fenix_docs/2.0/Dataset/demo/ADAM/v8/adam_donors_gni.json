@@ -18,13 +18,6 @@
     "columns": [
 
       {
-        "id": "donorname",
-        "title": {
-          "EN": "Resource Partner"
-        },
-        "dataType": "text"
-      },
-      {
         "id": "donorcode",
         "subject": "geo",
         "title": {
@@ -34,13 +27,6 @@
          "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ]
         },
         "key": true
-      },
-      {
-        "id": "indicatorname",
-        "title": {
-          "EN": "Indicator name"
-        },
-        "dataType": "text"
       },
       {
         "id": "indicatorcode",
@@ -87,13 +73,6 @@
           }]
         },
         "dataType": "code"
-      },
-      {
-        "id": "unitname",
-        "title": {
-          "EN": "Measurement unit name"
-        },
-        "dataType": "text"
       }
     ]
   }

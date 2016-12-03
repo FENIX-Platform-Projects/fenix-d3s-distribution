@@ -1,0 +1,79 @@
+{
+  "creationDate": 1479719163779,
+  "title": {
+    "EN": "Burkina Faso - HarvestPlus/IRD, 2010"
+  },
+  "dsd": {
+    "rid": "66_3567"
+  },
+  "uid": "000042BUR201002",
+  "meContent": {
+    "resourceRepresentationType": "dataset",
+    "seCoverage": {
+      "coverageTime": {
+        "from": 1478214000000,
+        "to": 1478214000000
+      },
+      "coverageGeographic": {
+        "version": "2014",
+        "codes": [
+          {
+            "code": "42",
+            "label": {
+              "PT": "Burkina Faso",
+              "FR": "Burkina Faso",
+              "AR": "بوركينا فاسو",
+              "EN": "Burkina Faso",
+              "RU": "Буркина-Фасо",
+              "ES": "Burkina Faso",
+              "ZH": "布基纳法索"
+            }
+          }
+        ],
+        "idCodeList": "GAUL",
+        "extendedName": {
+          "EN": "Global administrative unit layer"
+        }
+      }
+    },
+    "resourceRepresentationTypeLabel": {
+      "EN": "Dataset"
+    }
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "WHO-FAO"
+      },
+      "role": "distributor",
+      "contactInfo": {
+        "emailAddress": "pauline.allemand@gmail.com"
+      },
+      "organizationUnit": {
+        "EN": "Institut de Recherche pour le Développement"
+      },
+      "roleLabel": {
+        "FR": "Distributeur",
+        "EN": "Distributor"
+      }
+    }
+  ],
+  "additions": {
+    "sampledPopulationInformation": {
+      "AssessmentIntake":{
+        "EN":"test",
+        "FR":"test2"
+      }
+
+    }
+  },
+  "meMaintenance": {
+    "seUpdate": {
+      "updateDate": 1480663561452
+
+    }
+  },
+  "dsd": {
+    "contextSystem": "gift"
+  }
+}

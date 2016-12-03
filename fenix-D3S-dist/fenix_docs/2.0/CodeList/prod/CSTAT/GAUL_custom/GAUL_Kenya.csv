@@ -1,0 +1,315 @@
+{
+  "uid": "GAUL_Kenya",
+  "version": "2014",
+  "language": {
+    "codes": [
+      { "code": "eng" },
+      { "code": "fre" },
+      { "code": "spa" },
+      { "code": "por" },
+      { "code": "chi" },
+      { "code": "rus" },
+      { "code": "ara" }
+    ],
+    "idCodeList": "ISO639-2",
+    "version": "1998"
+  },
+
+  "languageDetails": null,
+  "title": {
+    "EN": "Global administrative unit layer"
+  },
+  "creationDate": null,
+  "characterSet": {
+    "codes": [{
+      "code": "106"
+    }],
+    "idCodeList": "IANAcharacterSet",
+    "version": null
+  },
+
+  "parentIdentifiers": null,
+  "metadataStandardName": "FENIX metadata",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "codes": [
+      {
+        "code": "eng"
+      }
+    ],
+    "idCodeList": "ISO639-2",
+    "version": "1998"
+  },
+
+  "contacts": [
+    {
+      "organization": {
+        "EN": "FAO"
+      },
+      "organizationUnit": {
+        "EN": "ESS"
+      },
+      "name": "Fabio Grita",
+      "position": null,
+      "role": "owner",
+      "contactInfo": {
+        "phone ": "0039 06 57054262",
+        "address": "FAO-HQ, Viale delle Terme di Caracalla, 00153 Roma",
+        "emailAddress": "fabio.grita@fao.org",
+        "hoursOfService": null,
+        "contactIntruction": null
+      }
+    }
+  ],
+  "noDataValue": null,
+
+  "meContent": {
+    "resourceRepresentationType": "codelist",
+    "keywords": ["GAUL", "geographic","area","layer"],
+    "description": null,
+    "statisticalConceptsDefinitions": null,
+    "seCoverage": {
+      "coverageSectors":
+      {
+        "codes": [
+          {
+            "code": "0201"
+          }
+        ],
+        "idCodeList": "FENIX_Subjects",
+        "version": "1.0"
+      }
+    },
+    "seCodeList"  : {
+      "numberOfLevels": 1,
+      "typeOfCodeList": "tree"
+    }
+
+  },
+  "meAccessibility": {
+    "seDataDissemination" : {
+      "seDistribution" : {
+        "onlineResource": null,
+        "disseminationFormat": null
+      }
+    },
+
+    "seConfidentiality" : {
+      "confidentialityStatus": {
+        "codes": [
+          {
+            "code": "F"
+          }
+        ],
+        "idCodeList": "CL_CONF_STATUS",
+        "version": "1.0"
+      }
+    }
+  },
+  "seDocuments": [{
+    "document": {
+      "documentKind": "methodologicalNotes",
+      "title": "The Global Administrative Unit Layers (GAUL)",
+      "date": "2006-12-20",
+      "documentContact":{
+        "organization": {
+          "EN": "FAO"
+        },
+        "organizationUnit": {
+          "EN": "ESS"
+        },
+        "name": "Fabio Grita",
+        "position": null,
+        "role": "director",
+        "contactInfo": {
+          "phone ": "0039 06 57054262",
+          "address": "FAO-HQ, Viale delle Terme di Caracalla, 00153 Roma",
+          "emailAddress": "fabio.grita@fao.org",
+          "hoursOfService": null,
+          "contactIntruction": null
+        }
+      },
+      "link": "http://www.fao.org/giews/english/shortnews/GAUL1.pdf"
+
+    }
+
+  }]
+
+
+}}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+descriptionColumnIndex_EN=4
+
+--data--
+
+
+@133@Kenya
+133@51328@NAIROBI
+51328@191568@NAIROBI WEST
+51328@191569@NAIROBI EAST
+51328@191570@NAIROBI NORTH
+51328@191571@WESTLANDS
+133@51325@CENTRAL
+51325@51337@NYANDARUA NORTH
+51325@191572@NYANDARUA SOUTH
+51325@191573@NYERI NORTH
+51325@191574@NYERI SOUTH
+51325@51334@KIRINYAGA
+51325@51336@MURANGA NORTH
+51325@51335@MURANGA SOUTH
+51325@51333@KIAMBU
+51325@191575@KIKUYU
+51325@191576@LIMURU
+51325@191577@LARI
+51325@191578@GITHUNGURI
+51325@191579@THIKA EAST
+51325@191580@THIKA WEST
+51325@191581@RUIRU
+51325@191582@GATANGA
+51325@191583@GATUNDU
+133@51326@COAST
+51326@51344@MOMBASA
+51326@191584@KILINDINI
+51326@51341@KWALE
+51326@191585@KINANGO
+51326@191586@MSAMBWENI
+51326@51340@KILIFI
+51326@191587@KALOLENI
+51326@51343@MALINDI
+51326@51346@TANA RIVER
+51326@191588@TANA DELTA
+51326@51342@LAMU
+51326@191589@TAITA
+51326@191590@TAVETA
+133@51327@EASTERN
+51327@51352@MARSABIT
+51327@191591@CHALBI
+51327@191592@LAISAMIS
+51327@51357@MOYALE
+51327@51348@ISIOLO
+51327@191593@GARBATULA
+51327@51354@MERU CENTRAL
+51327@191594@IMENTI NORTH
+51327@191595@IMENTI SOUTH
+51327@51356@MERU SOUTH
+51327@191596@MAARA
+51327@191597@IGEMBE
+51327@191598@TIGANIA
+51327@51359@THARAKA
+51327@51347@EMBU
+51327@51353@MBEERE
+51327@51349@KITUI
+51327@191599@MUTOMO
+51327@51358@MWINGI
+51327@191600@KYUSO
+51327@51350@MACHAKOS
+51327@191601@MWALA
+51327@191602@YATTA
+51327@191603@KANGUNDO
+51327@51351@MAKUENI
+51327@191604@MBOONI
+51327@191605@KIBWEZI
+51327@191606@NZAUI
+133@51329@NORTH EASTERN
+51329@51361@GARISSA
+51329@191607@LAGDERA
+51329@191608@FAFI
+51329@51362@IJARA
+51329@191609@WAJIR SOUTH
+51329@191610@WAJIR NORTH
+51329@191611@WAJIR EAST
+51329@191612@WAJIR WEST
+51329@191613@MANDERA CENTRAL
+51329@191614@MANDERA EAST
+51329@191615@MANDERA WEST
+133@51330@NYANZA
+51330@51375@SIAYA
+51330@51365@BONDO
+51330@191616@RARIEDA
+51330@191617@KISUMU EAST
+51330@191618@KISUMU WEST
+51330@51373@NYANDO
+51330@191619@HOMABAY
+51330@51376@SUBA
+51330@51374@RACHUONYO
+51330@51371@MIGORI
+51330@191620@RONGO
+51330@191621@KURIA WEST
+51330@191622@KURIA EAST
+51330@191623@KISII CENTRAL
+51330@191624@KISII SOUTH
+51330@191625@MASABA
+51330@51367@GUCHA
+51330@191626@GUCHA SOUTH
+51330@51372@NYAMIRA
+51330@191627@MANGA
+51330@191628@BORABU
+133@51331@RIFT VALLEY
+51331@191629@TURKANA CENTRAL
+51331@191630@TURKANA NORTH
+51331@191631@TURKANA SOUTH
+51331@51394@WEST POKOT
+51331@191632@POKOT NORTH
+51331@191633@POKOT CENTRAL
+51331@191634@SAMBURU CENTRAL
+51331@191635@SAMBURU EAST
+51331@191636@SAMBURU NORTH
+51331@191637@TRANS NZOIA WEST
+51331@191638@TRANS NZOIA EAST
+51331@191639@KWANZA
+51331@51377@BARINGO
+51331@191640@BARINGO NORTH
+51331@191641@EAST POKOT
+51331@51383@KOIBATEK
+51331@191642@ELDORET WEST
+51331@191643@ELDORET EAST
+51331@191644@WARENG
+51331@51385@MARAKWET
+51331@51381@KEIYO
+51331@68769@NANDI NORTH
+51331@191645@NANDI CENTRAL
+51331@191646@NANDI EAST
+51331@68770@NANDI SOUTH
+51331@191647@TINDERET
+51331@191648@LAIKIPIA NORTH
+51331@191649@LAIKIPIA EAST
+51331@191650@LAIKIPIA WEST
+51331@51386@NAKURU
+51331@191651@NAKURU NORTH
+51331@191652@NAIVASHA
+51331@191653@MOLO
+51331@191654@NAROK NORTH
+51331@191655@NAROK SOUTH
+51331@51390@TRANS MARA
+51331@191656@KAJIADO CENTRAL
+51331@191657@LOITOKITOK
+51331@51382@KERICHO
+51331@191658@KIPKELION
+51331@51379@BURET
+51331@191659@SOTIK
+51331@51378@BOMET
+51331@191660@KAJIADO NORTH
+133@51332@WESTERN
+51332@191661@KAKAMEGA CENTRAL
+51332@191662@KAKAMEGA SOUTH
+51332@191663@KAKAMEGA NORTH
+51332@191664@KAKAMEGA EAST
+51332@51399@LUGARI
+51332@51402@VIHIGA
+51332@191665@EMUHAYA
+51332@191666@HAMISI
+51332@191667@MUMIAS
+51332@191668@BUTERE
+51332@191669@BUNGOMA SOUTH
+51332@191670@BUNGOMA NORTH
+51332@191671@BUNGOMA EAST
+51332@191672@BUNGOMA WEST
+51332@51400@MT ELGON
+51332@51396@BUSIA
+51332@191673@TESO NORTH
+51332@191674@SAMIA
+51332@191675@BUNYALA
+51332@191676@TESO SOUTH

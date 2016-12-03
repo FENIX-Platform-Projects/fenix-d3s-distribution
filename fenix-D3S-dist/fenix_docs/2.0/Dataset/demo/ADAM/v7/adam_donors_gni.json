@@ -16,14 +16,6 @@
       "storage":"postgres"
     },
     "columns": [
-
-      {
-        "id": "countryname",
-        "title": {
-          "EN": "Country name"
-        },
-        "dataType": "text"
-      },
       {
         "id": "countrycode",
         "subject": "geo",
@@ -39,13 +31,6 @@
           }]
         },
         "key": true
-      },
-      {
-        "id": "indicatorname",
-        "title": {
-          "EN": "Indicator name"
-        },
-        "dataType": "text"
       },
       {
         "id": "indicatorcode",
@@ -92,14 +77,8 @@
           }]
         },
         "dataType": "code"
-      },
-      {
-        "id": "unitname",
-        "title": {
-          "EN": "Measurement unit name"
-        },
-        "dataType": "text"
       }
+
     ]
   }
 }
