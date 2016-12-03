@@ -948,6 +948,89 @@
           "$ref": "#/definitions/OjCodeList"
         }
       }
+    },
+    "OJResource": {
+      "title": "Data, survey reports, publications and scientific papers related to the data",
+      "title_i18n": {
+        "en": "Data, survey reports, publications and scientific papers related to the data",
+        "fr": "",
+        "es": ""
+      },
+      "description": "",
+      "description_i18n": {
+        "en": "",
+        "fr": "",
+        "es": ""
+      },
+      "properties": {
+        "ResourceType": {
+          "title": "Type of resource",
+          "title_i18n": {
+            "en": "Type of resource",
+            "fr": "",
+            "es": ""
+          },
+          "description": "List datasets, reports, publications and other types of documents which provide information and/or were derived from the survey and the data",
+          "description_i18n": {
+            "en": "List datasets, reports, publications and other types of documents which provide information and/or were derived from the survey and the data",
+            "fr": "",
+            "es": ""
+          },
+          "propertyOrder": 52,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OjCodeList"
+          }
+        },
+        "ResourceDetails": {
+          "title": "Type of resource - details",
+          "title_i18n": {
+            "en": "Type of resource - details",
+            "fr": "",
+            "es": ""
+          },
+          "description": "Provide detailed information on the resources listed above",
+          "description_i18n": {
+            "en": "Provide detailed information on the resources listed above",
+            "fr": "",
+            "es": ""
+          },
+          "propertyOrder": 53,
+          "type": "string"
+        },
+        "ResourceCite": {
+          "title": "Preferred way to cite the resource",
+          "title_i18n": {
+            "en": "Preferred way to cite the resource",
+            "fr": "",
+            "es": ""
+          },
+          "description": "Specify the preferred way to cite the resource listed above",
+          "description_i18n": {
+            "en": "Specify the preferred way to cite the resource listed above",
+            "fr": "",
+            "es": ""
+          },
+          "propertyOrder": 54,
+          "type": "string"
+        },
+        "ResourceLink": {
+          "title": "Access link to the online resource",
+          "title_i18n": {
+            "en": "Access link to the online resource",
+            "fr": "",
+            "es": ""
+          },
+          "description": "Provide links under which the resource listed above can be accessed, or information on how else it can be accessed",
+          "description_i18n": {
+            "en": "Provide links under which the resource listed above can be accessed, or information on how else it can be accessed",
+            "fr": "",
+            "es": ""
+          },
+          "propertyOrder": 55,
+          "type": "string"
+        }
+      }
     }
   },
   "properties": {
@@ -3875,8 +3958,280 @@
         "es": ""
       },
       "type": "object",
-      "propertyOrder": 100,
+      "propertyOrder": 50,
       "properties": {
+        "GeneralInformation": {
+          "title": "General Information",
+          "title_i18n": {
+            "en": "General Information",
+            "fr": "",
+            "es": ""
+          },
+          "description": "",
+          "description_i18n": {
+            "en": "",
+            "fr": "",
+            "es": ""
+          },
+
+          "propertyOrder": 51,
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OJResource"
+          }
+
+        },
+        "SurveyInformation": {
+          "title": "Survey information",
+          "title_i18n": {
+            "en": "Survey information",
+            "fr": "",
+            "es": ""
+          },
+          "description": "",
+          "description_i18n": {
+            "en": "",
+            "fr": "",
+            "es": ""
+          },
+          "type": "object",
+          "propertyOrder": 70,
+          "properties": {
+            "GeographicalCoverageDetails": {
+              "title": "Geographical/administrative coverage of the study - details",
+              "title_i18n": {
+                "en": "Geographical/administrative coverage of the study - details",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Specify other geographical/administrative coverage",
+              "description_i18n": {
+                "en": "Specify other geographical/administrative coverage",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 71,
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
+            },
+            "StudyAreasDetails": {
+              "title": "Study areas - Details",
+              "title_i18n": {
+                "en": "Study areas - Details",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Provide detailed information on the study area(s)",
+              "description_i18n": {
+                "en": "Provide detailed information on the study area(s)",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 72,
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
+            },
+            "SeasonsCoverage": {
+              "title": "Seasons coverage",
+              "title_i18n": {
+                "en": "Seasons coverage",
+                "fr": "",
+                "es": ""
+              },
+              "description": "List the seasons covered by the survey (e.g. spring, rainy season, lean season, etc.)",
+              "description_i18n": {
+                "en": "List the seasons covered by the survey (e.g. spring, rainy season, lean season, etc.)",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 73,
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
+            },
+            "AssessmentMethod": {
+              "title": "Dietary assessment method",
+              "title_i18n": {
+                "en": "Dietary assessment method",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Specify the main dietary assessment method used for data collection",
+              "description_i18n": {
+                "en": "Specify the main dietary assessment method used for data collection",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 74,
+              "type": "object",
+              "$ref": "#/definitions/OjCodeList"
+            },
+            "AssessmentMethodDetails": {
+              "title": "Dietary assessment method - details",
+              "title_i18n": {
+                "en": "Dietary assessment method - details",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Provide detailed information on the main dietary assessment and, if relevant, complementary dietary assessment methods used for data collection",
+              "description_i18n": {
+                "en": "Provide detailed information on the main dietary assessment and, if relevant, complementary dietary assessment methods used for data collection",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 75,
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
+            },
+            "RepeatedDietary": {
+              "title": "Repeated dietary recall/record",
+              "title_i18n": {
+                "en": "Repeated dietary recall/record",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Provide information whether or not the dietary recall/record was repeated on the same individuals during the study",
+              "description_i18n": {
+                "en": "Provide information whether or not the dietary recall/record was repeated on the same individuals during the study",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 76,
+              "type": "object",
+              "$ref": "#/definitions/OjCodeList"
+            },
+            "SizeOfSample": {
+              "title": "Size of the sample on which the recall/record was repeated",
+              "title_i18n": {
+                "en": "Size of the sample on which the recall/record was repeated",
+                "fr": "",
+                "es": ""
+              },
+              "description": "",
+              "description_i18n": {
+                "en": "",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 77,
+              "type": "string"
+            },
+            "NumberOfRepeated": {
+              "title": "Number of repeated recalls/records per subject",
+              "title_i18n": {
+                "en": "Number of repeated recalls/records per subject",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Specify how many times was the dietary recall/record repeated on each subject",
+              "description_i18n": {
+                "en": "Specify how many times was the dietary recall/record repeated on each subject",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 78,
+              "type": "number"
+            },
+            "AverageTime": {
+              "title": "Average time interval between subsequent recalls/records",
+              "title_i18n": {
+                "en": "Average time interval between subsequent recalls/records",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Specify what was the average time interval between the following the dietary recalls/records",
+              "description_i18n": {
+                "en": "Specify what was the average time interval between the following the dietary recalls/records",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 79,
+              "type": "number"
+            },
+            "SurveyAdministrationMethod": {
+              "title": "Survey administration method",
+              "title_i18n": {
+                "en": "Survey administration method",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Name the method used to gather data from the respondents during the interview (e.g. paper questionnaire, electronic questionnaire)",
+              "description_i18n": {
+                "en": "Name the method used to gather data from the respondents during the interview (e.g. paper questionnaire, electronic questionnaire)",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 80,
+              "type": "object",
+              "$ref": "#/definitions/OjCodeList"
+            },
+            "SurveyAdministrationMethodDetails": {
+              "title": "Survey administration method - details",
+              "title_i18n": {
+                "en": "Survey administration method - details",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Specify other survey administration method",
+              "description_i18n": {
+                "en": "Specify other survey administration method",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 81,
+              "type": "string"
+            }
+          }
+        },
+        "SamplingInformation": {
+          "title": "Sampling information",
+          "title_i18n": {
+            "en": "Sampling information",
+            "fr": "",
+            "es": ""
+          },
+          "description": "",
+          "description_i18n": {
+            "en": "",
+            "fr": "",
+            "es": ""
+          },
+          "type": "object",
+          "propertyOrder": 98,
+          "properties": {
+            "SamplingInformationDetails": {
+              "title": "Sample selection method - details",
+              "title_i18n": {
+                "en": "Sample selection method - details",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Specify other sample selection method",
+              "description_i18n": {
+                "en": "Specify other sample selection method",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 99,
+              "type": "string"
+            }
+          }
+        },
         "sampledPopulationInformation": {
           "title": "Sampled population information",
           "title_i18n": {
@@ -4581,7 +4936,178 @@
                 "es": ""
               },
               "propertyOrder": 161,
-              "properties": {}
+              "properties": {
+                "Age": {
+                  "title": "Age (month or year) or birth date",
+                  "title_i18n": {
+                    "en": "Age (month or year) or birth date",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 162,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                },
+                "Sex": {
+                  "title": "Sex",
+                  "title_i18n": {
+                    "en": "Sex",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 163,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                },
+                "BodyWeight": {
+                  "title": "Body weight (reported or measured)",
+                  "title_i18n": {
+                    "en": "Body weight (reported or measured)",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 164,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                },
+                "BodyHeight": {
+                  "title": "Body height (reported or measured)",
+                  "title_i18n": {
+                    "en": "Body height (reported or measured)",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 165,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                },
+                "PhysicalActivityLevel": {
+                  "title": "Date of the interview (day, month, year)",
+                  "title_i18n": {
+                    "en": "Date of the interview (day, month, year)",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 166,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                },
+                "GeographicalLocalization": {
+                  "title": "Geographic localization (GPS)",
+                  "title_i18n": {
+                    "en": "Geographic localization (GPS)",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 167,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                }
+              }
+            },
+            "OtherVariablesAvailability": {
+              "title": "Availability of other variables at individual level",
+              "title_i18n": {
+                "en": "Availability of other variables at individual level",
+                "fr": "",
+                "es": ""
+              },
+              "description": "",
+              "description_i18n": {
+                "en": "",
+                "fr": "",
+                "es": ""
+              },
+              "propertyOrder": 168,
+              "properties": {
+                "SocioDemographic": {
+                  "title": "Socio-demographic",
+                  "title_i18n": {
+                    "en": "Socio-demographic",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "E.g. occupation, status in the household",
+                  "description_i18n": {
+                    "en": "E.g. occupation, status in the household",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 169,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                },
+                "EducationLiteracy": {
+                  "title": "Education/literacy",
+                  "title_i18n": {
+                    "en": "Education/literacy",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 170,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                },
+                "Ethnicity": {
+                  "title": "Ethnicity",
+                  "title_i18n": {
+                    "en": "Ethnicity",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 171,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                }
+              }
             }
           }
         }
