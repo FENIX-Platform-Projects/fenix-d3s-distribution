@@ -876,7 +876,7 @@
     "OJReportingIndividualLevel": {
       "type": "object",
       "properties": {
-        "underReporting": {
+        "underReportingPercentage": {
           "title": "Percentage of under-reporting at individual level",
           "title_i18n": {
             "en": "Percentage of under-reporting at individual level",
@@ -892,7 +892,7 @@
           "propertyOrder": 115,
           "type": "number"
         },
-        "overReporting": {
+        "overReportingPercentage": {
           "title": "Percentage of over-reporting at individual level",
           "title_i18n": {
             "en": "Percentage of over-reporting at individual level",
@@ -976,7 +976,7 @@
             "fr": "",
             "es": ""
           },
-          "propertyOrder": 52,
+          "propertyOrder": 54,
           "type": "object",
           "$ref": "#/definitions/OjCodeList"
         },
@@ -993,7 +993,7 @@
             "fr": "",
             "es": ""
           },
-          "propertyOrder": 53,
+          "propertyOrder": 55,
           "type": "string"
         },
         "ResourceCite": {
@@ -1009,7 +1009,7 @@
             "fr": "",
             "es": ""
           },
-          "propertyOrder": 54,
+          "propertyOrder": 56,
           "type": "string"
         },
         "ResourceLink": {
@@ -1025,7 +1025,7 @@
             "fr": "",
             "es": ""
           },
-          "propertyOrder": 55,
+          "propertyOrder": 57,
           "type": "string"
         }
       }
@@ -1071,6 +1071,47 @@
         }
       }
 
+    },
+
+    "MacroDietaryComponentsDetailsList":{
+      "title": "Macronutrients and dietary components available in the dataset - details list",
+      "title_i18n": {
+        "en": "Macronutrients and dietary components available in the dataset - details list",
+        "fr": "",
+        "es": ""
+      },
+      "description": "",
+      "description_i18n": {
+        "en": "",
+        "fr": "",
+        "es": ""
+      },
+      "type": "object",
+      "patternProperties": {
+        ".{1,}": {
+          "type": "string"
+        }
+      }
+    },
+    "MicroDietaryComponentsDetailsList":{
+      "title": "Micronutrients and minerals available in the dataset - details",
+      "title_i18n": {
+        "en": "Micronutrients and minerals available in the dataset - details",
+        "fr": "",
+        "es": ""
+      },
+      "description": "",
+      "description_i18n": {
+        "en": "",
+        "fr": "",
+        "es": ""
+      },
+      "type": "object",
+      "patternProperties": {
+        ".{1,}": {
+          "type": "string"
+        }
+      }
     }
 
   },
@@ -1394,27 +1435,6 @@
           "type": "object",
           "propertyOrder": 5,
           "properties": {
-            "statisticalPopulation": {
-              "title": "Study population",
-              "title_i18n": {
-                "en": "Study population",
-                "fr": "",
-                "es": ""
-              },
-              "description": "Specify the population group which was the basis for sampling",
-              "description_i18n": {
-                "en": "Specify the population group which was the basis for sampling",
-                "fr": "",
-                "es": ""
-              },
-              "type": "object",
-              "propertyOrder": 1,
-              "patternProperties": {
-                ".{1,}": {
-                  "type": "string"
-                }
-              }
-            },
             "statisticalUnit": {
               "title": "Statistical unit",
               "title_i18n": {
@@ -1739,23 +1759,6 @@
                   "type": "object",
                   "propertyOrder": 1,
                   "$ref": "#/definitions/OjResponsibleParty"
-                },
-                "typeOfCollection": {
-                  "title": "Sample selection method",
-                  "title_i18n": {
-                    "en": "Sample selection method",
-                    "fr": "",
-                    "es": ""
-                  },
-                  "description": "Name the method used in selecting the sample for the study",
-                  "description_i18n": {
-                    "en": "Name the method used in selecting the sample for the study",
-                    "fr": "",
-                    "es": ""
-                  },
-                  "type": "object",
-                  "propertyOrder": 2,
-                  "$ref": "#/definitions/OjCodeList"
                 },
                 "samplingProcedure": {
                   "title": "Sampling design",
@@ -4014,11 +4017,29 @@
             "fr": "",
             "es": ""
           },
-
+          "type": "object",
           "propertyOrder": 51,
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/OJResource"
+          "properties": {
+            "Resource":{
+              "title": "Type of resource",
+              "title_i18n": {
+                "en": "Type of resource",
+                "fr": "",
+                "es": ""
+              },
+              "description": "",
+              "description_i18n": {
+                "en": "",
+                "fr": "",
+                "es": ""
+              },
+
+              "propertyOrder": 52,
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/OJResource"
+              }
+            }
           }
 
         },
@@ -4279,7 +4300,29 @@
                 "es": ""
               },
               "propertyOrder": 99,
-              "type": "string"
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
+            },
+            "typeOfCollection": {
+              "title": "Sample selection method",
+              "title_i18n": {
+                "en": "Sample selection method",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Name the method used in selecting the sample for the study",
+              "description_i18n": {
+                "en": "Name the method used in selecting the sample for the study",
+                "fr": "",
+                "es": ""
+              },
+              "type": "object",
+              "propertyOrder": 100,
+              "$ref": "#/definitions/OjCodeList"
             }
           }
         },
@@ -4299,6 +4342,25 @@
           "type": "object",
           "propertyOrder": 101,
           "properties": {
+            "statisticalPopulation": {
+              "title": "Study population",
+              "title_i18n": {
+                "en": "Study population",
+                "fr": "",
+                "es": ""
+              },
+              "description": "Specify the population group which was the basis for sampling",
+              "description_i18n": {
+                "en": "Specify the population group which was the basis for sampling",
+                "fr": "",
+                "es": ""
+              },
+              "type": "object",
+              "propertyOrder": 1,
+              "$ref": "#/definitions/OjCodeList"
+
+            },
+
             "sampleSize": {
               "title": "Sample size",
               "title_i18n": {
@@ -4520,10 +4582,9 @@
                 "es": ""
               },
               "propertyOrder": 120,
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/OJReportingGroupLevel"
-              }
+              "type": "object",
+              "$ref": "#/definitions/OJReportingGroupLevel"
+
             },
             "DataAlreadyCorrected": {
               "title": "Data already corrected to assess usual intake",
@@ -4909,11 +4970,9 @@
                 "es": ""
               },
               "propertyOrder": 154,
-              "type": "object",
-              "patternProperties": {
-                ".{1,}": {
-                  "type": "string"
-                }
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MacroDietaryComponentsDetailsList"
               }
             },
             "MicroDietaryComponents": {
@@ -4947,11 +5006,9 @@
                 "es": ""
               },
               "propertyOrder": 156,
-              "type": "object",
-              "patternProperties": {
-                ".{1,}": {
-                  "type": "string"
-                }
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/MicroDietaryComponentsDetailsList"
               }
             }
           }
@@ -5056,9 +5113,9 @@
                   "$ref": "#/definitions/OjCodeList"
                 },
                 "PhysicalActivityLevel": {
-                  "title": "Date of the interview (day, month, year)",
+                  "title": "Physical activity level (estimated or measured)",
                   "title_i18n": {
-                    "en": "Date of the interview (day, month, year)",
+                    "en": "Physical activity level (estimated or measured)",
                     "fr": "",
                     "es": ""
                   },
@@ -5072,6 +5129,25 @@
                   "type": "object",
                   "$ref": "#/definitions/OjCodeList"
                 },
+                "InterviewDate": {
+                  "title": "Date of the interview (day, month, year)",
+                  "title_i18n": {
+                    "en": "Date of the interview (day, month, year)",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "description": "",
+                  "description_i18n": {
+                    "en": "",
+                    "fr": "",
+                    "es": ""
+                  },
+                  "propertyOrder": 167,
+                  "type": "object",
+                  "$ref": "#/definitions/OjCodeList"
+                },
+
+
                 "GeographicalLocalization": {
                   "title": "Geographic localization (GPS)",
                   "title_i18n": {

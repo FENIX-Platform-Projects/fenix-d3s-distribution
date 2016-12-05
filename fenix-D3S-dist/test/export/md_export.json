@@ -1,14 +1,16 @@
 {
   "resource": {
     "metadata": {
-      "uid": "test3"
+      "uid": "D3S_25302885650196260378646846313435409275"
     },
     "data": []
   },
   "input": {
     "plugin": "inputMD",
     "config": {
-      "template":"gift"
+      "template":"gift",
+      "lang": "EN"
+
 
     }
   },
