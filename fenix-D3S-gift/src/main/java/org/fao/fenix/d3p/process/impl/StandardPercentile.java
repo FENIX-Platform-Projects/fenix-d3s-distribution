@@ -74,37 +74,44 @@ public class StandardPercentile extends org.fao.fenix.d3p.process.Process<Percen
     }
 
     private String createQuery(Step source, PercentileParameters params, String tableName, Collection<Object> queryParams,Language[] languages) throws Exception {
+        Collection<Object> countQueryParams = new LinkedList<>();
 
-        String populationWhereCondition = buildWhereConditions(params, queryParams);
-
-        int population = 0, foodPopulation=0;
+        int population = 0, foodPopulation=0, percentilePopulation=0;
         Connection connection = source.getStorage().getConnection();
         try {
-            ResultSet resultSet = databaseUtils.fillStatement(connection.prepareStatement( "select count(*) from (select subject from " + tableName + " group by subject) population union all select count(*) from (select subject from " + tableName + populationWhereCondition + " group by subject) population" ),null,queryParams.toArray()).executeQuery();
+            ResultSet resultSet = databaseUtils.fillStatement(connection.prepareStatement(
+                    "select count(*) from (select subject from " + tableName + " group by subject) population" +
+                        " union all select count(*) from (select subject from " + tableName + buildWhereConditions(params, countQueryParams) + " group by subject) population" +
+                        " union all select count(*) from (select subject from " + tableName + buildWhereConditions(params, countQueryParams) + " group by subject, round, survey_day) population"
+            ),null,countQueryParams.toArray()).executeQuery();
             resultSet.next();
             population = resultSet.getInt(1);
             resultSet.next();
             foodPopulation = resultSet.getInt(1);
+            resultSet.next();
+            percentilePopulation = resultSet.getInt(1);
         } finally {
             connection.close();
         }
 
+        String populationWhereCondition = buildWhereConditions(params, queryParams);
 
-        long percentileFrom =  Math.round(Math.max(1,Math.ceil((foodPopulation * params.percentileSize) / 100.0)))-1;
-        long percentileTo =  Math.round(Math.max(1,Math.ceil((foodPopulation * (100-params.percentileSize)) / 100.0)))-1;
-        long percentileMedian =  Math.round(Math.max(1,Math.ceil(foodPopulation * 0.5)))-1;
-        String query = population>0 && foodPopulation>=3 ?
+        long percentileFrom =  Math.round(Math.max(1,Math.ceil((percentilePopulation * params.percentileSize) / 100.0)))-1;
+        long percentileTo =  Math.round(Math.max(1,Math.ceil((percentilePopulation * (100-params.percentileSize)) / 100.0)))-1;
+        long percentileMedian =  Math.round(Math.max(1,Math.ceil(percentilePopulation * 0.5)))-(percentilePopulation%2 == 0 ? 2 : 1);
+        int percentileMedianSize =  percentilePopulation%2 == 0 ? 2 : 1;
+        String query = population>0 && percentilePopulation>=3 ?
                 "with raw_data as (\n" +
                 "select subject, sum(value) as value, max(um) as um"+labelUnitColumns(languages)+" from "+tableName+
-                populationWhereCondition+"group by subject\n" +
-                "order by sum(value),subject)\n" +
+                populationWhereCondition+"group by subject, round, survey_day\n" +
+                "order by sum(value), subject, round, survey_day)\n" +
                 "select 'consumers'::text as indicator, "+((((float)foodPopulation)*100)/population)+"::float as value, 'perc'::text as um"+labelPercUnitColumns(languages)+"\n" +
                 "union all\n" +
                 "select 'perc_low'::text as indicator, avg(value) as value, max (um) as um"+labelUnitColumns(languages)+" from \n" +
                 "( select * from raw_data offset "+percentileFrom+" limit 1 ) perc_low\n" +
                 "union all\n" +
                 "select 'perc_middle'::text as indicator, avg(value) as value, max (um) as um"+labelUnitColumns(languages)+" from \n" +
-                "( select * from raw_data offset "+percentileMedian+" limit 1 ) perc_middle\n" +
+                "( select * from raw_data offset "+percentileMedian+" limit "+percentileMedianSize+" ) perc_middle\n" +
                 "union all\n" +
                 "select 'perc_high'::text as indicator, avg(value) as value, max (um) as um"+labelUnitColumns(languages)+" from \n" +
                 "( select * from raw_data offset "+percentileTo+" limit 1 ) perc_high"

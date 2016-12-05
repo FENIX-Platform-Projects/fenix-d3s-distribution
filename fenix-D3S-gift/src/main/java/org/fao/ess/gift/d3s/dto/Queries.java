@@ -25,11 +25,11 @@ public enum Queries {
     countSubjectRound("select count(*) as count from (select subject, round from subject where survey_code = ? group by subject, round) subjects"),
     countSubject("select count(*) as count from (select subject from subject where survey_code = ? group by subject) subjects"),
     loadFoodDailyTotalSubject(
-        "with subjects AS (select subject, age_year, age_month, special_condition, gender from subject where survey_code = ? and round = 1 group by subject, age_year, age_month, special_condition, gender)\n"+
-        "select consumption_total.item, consumption_total.subject as subject, survey_day, group_code, subgroup_code, foodex2_code, consumption_total.value, consumption_total.um, subjects.gender, subjects.special_condition, subjects.age_year, subjects.age_month, usa_hmd.value as suggested_value, 1::integer as increment from\n" +
+        "with subjects AS (select subject, round, age_year, age_month, special_condition, gender from subject where survey_code = ? and round = 1 group by subject, round, age_year, age_month, special_condition, gender)\n"+
+        "select consumption_total.item, consumption_total.subject as subject, consumption_total.round as round, survey_day, group_code, subgroup_code, foodex2_code, consumption_total.value, consumption_total.um, subjects.gender, subjects.special_condition, subjects.age_year, subjects.age_month, usa_hmd.value as suggested_value, 1::integer as increment from\n" +
         "(\n" +
-        "  select subject, survey_day, foodex2_code, max(subgroup_code) as subgroup_code, max(group_code) as group_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
-        "  from consumption where survey_code = ? group by subject, survey_day, foodex2_code\n" +
+        "  select subject, round, survey_day, foodex2_code, max(subgroup_code) as subgroup_code, max(group_code) as group_code, 'FOOD_AMOUNT_PROC'::varchar as item, sum(FOOD_AMOUNT_PROC) as value, 'g'::varchar as um\n" +
+        "  from consumption where survey_code = ? group by subject, round, survey_day, foodex2_code\n" +
         ") consumption_total\n" +
         "join subjects on (consumption_total.subject = subjects.subject)\n"+
         "left join usa_hmd on (\n" +
