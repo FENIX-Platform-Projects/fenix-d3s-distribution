@@ -994,7 +994,12 @@
             "es": ""
           },
           "propertyOrder": 55,
-          "type": "string"
+          "type": "object",
+          "patternProperties": {
+            ".{1,}": {
+              "type": "string"
+            }
+          }
         },
         "ResourceCite": {
           "title": "Preferred way to cite the resource",
@@ -1010,7 +1015,12 @@
             "es": ""
           },
           "propertyOrder": 56,
-          "type": "string"
+          "type": "object",
+          "patternProperties": {
+            ".{1,}": {
+              "type": "string"
+            }
+          }
         },
         "ResourceLink": {
           "title": "Access link to the online resource",
@@ -1026,7 +1036,12 @@
             "es": ""
           },
           "propertyOrder": 57,
-          "type": "string"
+          "type": "object",
+          "patternProperties": {
+            ".{1,}": {
+              "type": "string"
+            }
+          }
         }
       }
     },
@@ -4516,7 +4531,12 @@
                 "es": ""
               },
               "propertyOrder": 111,
-              "type": "string"
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
             },
             "ExclusionDataCleaning": {
               "title": "Exclusion criteria during data cleaning",
@@ -4532,7 +4552,12 @@
                 "es": ""
               },
               "propertyOrder": 112,
-              "type": "string"
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
             },
             "MethodReporting": {
               "title": "Method used to assess over-/under-reporting",
