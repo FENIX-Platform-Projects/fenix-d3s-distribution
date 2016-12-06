@@ -4548,7 +4548,12 @@
                 "es": ""
               },
               "propertyOrder": 113,
-              "type": "string"
+              "type": "object",
+              "patternProperties": {
+                ".{1,}": {
+                  "type": "string"
+                }
+              }
             },
             "ReportingIndividualLevel": {
               "title": "Under-/over-reporting at individual level",

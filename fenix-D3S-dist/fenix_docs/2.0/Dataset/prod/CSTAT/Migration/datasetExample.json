@@ -1,5 +1,4 @@
 {
-  "metadata" : {
     "creationDate" : 1392933600000,
     "title" : {
       "EN" : "Production",
@@ -37,6 +36,7 @@
       }
     } ],
 
+    "uid":"testDFD",
 
     "dsd" : {
       "contextSystem": "cstat_sen",
@@ -128,7 +128,6 @@
       ]
     },
 
-
     "language" : {
       "version" : "1998",
       "codes" : [ {
@@ -151,8 +150,4 @@
       } ],
       "idCodeList" : "ISO639-2"
     }
-  },
-  "data" : [
-
-  ]
 }

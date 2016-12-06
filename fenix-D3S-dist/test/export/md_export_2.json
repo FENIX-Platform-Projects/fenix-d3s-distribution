@@ -1,0 +1,24 @@
+{
+  "resource": {
+    "metadata": {
+      "uid": "testDFD"
+    },
+    "data": []
+  },
+  "input": {
+    "plugin": "inputMD",
+    "config": {
+      "lang": "EN"
+
+    }
+  },
+  "output": {
+    "plugin": "outputMD",
+    "config": {
+      "full": false,
+      "lang": "EN",
+      "template": "fao",
+      "fileName": "test.pdf"
+    }
+  }
+}
