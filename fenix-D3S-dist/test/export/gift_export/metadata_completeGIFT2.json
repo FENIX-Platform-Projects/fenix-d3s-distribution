@@ -1,0 +1,268 @@
+{
+  "language": {
+    "version": "1998",
+    "idCodeList": "GIFT_ISO639-2",
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "EN": "English"
+        }
+      }
+    ],
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    }
+  },
+  "title": {
+    "EN": "Giro3CompletoPreTypo3"
+  },
+  "uid": "testSample",
+  "meContent": {
+    "description": {
+      "EN": "Giro3CompletoPreTypo3"
+    },
+    "resourceRepresentationType": "dataset",
+    "seReferencePopulation": {
+      "referenceArea": {
+        "idCodeList": "GIFT_ReferenceArea",
+        "codes": [
+          {
+            "code": "5",
+            "label": {
+              "EN": "Other (please specify)"
+            }
+          }
+        ],
+        "extendedName": {
+          "EN": "WHO-FAO GIFT, area of reference"
+        }
+      }
+    },
+    "seCoverage": {
+      "coverageSectors": {
+        "idCodeList": "GIFT_CoverageSector",
+        "codes": [
+          {
+            "code": "3",
+            "label": {
+              "EN": "Both rural and urban"
+            }
+          }
+        ],
+        "extendedName": {
+          "EN": "WHO-FAO GIFT, coverage sectors"
+        }
+      },
+      "coverageSectorsDetails": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "coverageTime": {
+        "from": 1481065200000,
+        "to": 1481065200000
+      },
+      "coverageGeographic": {
+        "version": "2014",
+        "idCodeList": "GAUL0",
+        "codes": [
+          {
+            "code": "150",
+            "label": {
+              "PT": "Madagáscar",
+              "FR": "Madagascar",
+              "AR": "مدغشقر",
+              "EN": "Madagascar",
+              "RU": "Мадагаскар",
+              "ES": "Madagascar",
+              "ZH": "马达加斯加"
+            }
+          }
+        ],
+        "extendedName": {
+          "EN": "Global administrative unit layer country level"
+        }
+      }
+    },
+    "keywords": [
+      "Giro3CompletoPreTypo3"
+    ],
+    "resourceRepresentationTypeLabel": {
+      "EN": "Dataset"
+    }
+  },
+  "noDataValue": "Giro3CompletoPreTypo3",
+  "languageDetails": {
+    "EN": "Giro3CompletoPreTypo3"
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "position": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "role": "other",
+      "contactInfo": {
+        "address": "Giro3CompletoPreTypo3",
+        "phone": "Giro3CompletoPreTypo3",
+        "emailAddress": "Giro3CompletoPreTypo3",
+        "contactInstruction": {
+          "EN": "Giro3CompletoPreTypo3"
+        }
+      },
+      "pointOfContact": "Giro3CompletoPreTypo3",
+      "specify": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "organizationUnit": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "roleLabel": {
+        "FR": "Autre",
+        "EN": "Other"
+      }
+    },
+    {
+      "organization": {
+        "EN": "seconOrganization"
+      },
+      "position": {
+        "EN": "seconposition"
+      },
+      "role": "other",
+      "contactInfo": {
+        "address": "address2",
+        "phone": "phone2",
+        "emailAddress": "emailAddress2",
+        "contactInstruction": {
+          "EN": "contactInstruction2"
+        }
+      },
+      "pointOfContact": "pointOfContact2",
+      "specify": {
+        "EN": "specify2"
+      },
+      "organizationUnit": {
+        "EN": "organizationUnit2"
+      },
+      "roleLabel": {
+        "FR": "Autre2",
+        "EN": "Other"
+      }
+    }
+  ],
+  "additions": {
+    "sampledPopulationInformation": {
+      "sampleSize": 3,
+      "statisticalPopulation": {
+        "idCodeList": "GIFT_StatisticalPopulation",
+        "codes": [
+          {
+            "code": "2"
+          }
+        ]
+      },
+      "PopulationGroups": [
+        {
+          "PopulationGroupsList": {
+            "EN": "Giro3CompletoPreTypo3 1"
+          }
+        },
+        {
+          "PopulationGroupsList": {
+            "EN": "Giro3CompletoPreTypo3 2"
+          }
+        }
+      ],
+      "SampleSizeGroups": 4,
+      "PurposedlyGroups": [
+        {
+          "PurposedlyGroupsList": {
+            "EN": "Giro3CompletoPreTypo3 1"
+          }
+        },
+        {
+          "PurposedlyGroupsList": {
+            "EN": "Giro3CompletoPreTypo3 2"
+          }
+        }
+      ],
+      "PurposedlyGroupsDetails": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "MinumumAge": 5,
+      "MaximumAge": 6
+    }
+
+  },
+  "meInstitutionalMandate": {
+    "legalActsAgreements": {
+      "EN": "Giro3CompletoPreTypo3"
+    },
+    "institutionalMandateDataSharing": {
+      "EN": "Giro3CompletoPreTypo3"
+    }
+  },
+  "meAccessibility": {
+    "seConfidentiality": {
+      "confidentialityStatus": {
+        "idCodeList": "GIFT_ConfidentialityStatus",
+        "codes": [
+          {
+            "code": "5",
+            "label": {
+              "EN": "Data available in FAO/WHO GIFT"
+            }
+          }
+        ],
+        "extendedName": {
+          "EN": "WHO-FAO GIFT, available confidentiality status"
+        }
+      }
+    }
+  },
+  "meMaintenance": {
+    "seUpdate": {
+      "updateDate": 1481016951147
+    }
+  },
+  "meStatisticalProcessing": {
+    "seDataSource": {
+      "sePrimaryDataCollection": {
+        "samplingProcedure": {
+          "EN": "Giro3CompletoPreTypo3"
+        }
+      },
+      "seSecondaryDataCollection": {
+        "organization": {
+          "EN": "Giro3CompletoPreTypo3"
+        }
+      }
+    },
+    "seDataCompilation": {
+      "missingData": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "weights": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "dataAdjustment": {
+        "version": "1.1",
+        "idCodeList": "CL_ADJUSTMENT",
+        "codes": [
+          {
+            "code": "_Z",
+            "label": {
+              "FR": "N'est pas applicable",
+              "EN": "Not applicable"
+            }
+          }
+        ],
+        "extendedName": {
+          "EN": "Adjustment code list (ESTAT)"
+        }
+      }
+    }
+  }
+}

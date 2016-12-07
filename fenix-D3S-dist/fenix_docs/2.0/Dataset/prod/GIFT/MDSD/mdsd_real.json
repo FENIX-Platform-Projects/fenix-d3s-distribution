@@ -950,18 +950,7 @@
       }
     },
     "OJResource": {
-      "title": "Data, survey reports, publications and scientific papers related to the data",
-      "title_i18n": {
-        "en": "Data, survey reports, publications and scientific papers related to the data",
-        "fr": "",
-        "es": ""
-      },
-      "description": "",
-      "description_i18n": {
-        "en": "",
-        "fr": "",
-        "es": ""
-      },
+      "type": "object",
       "properties": {
         "ResourceType": {
           "title": "Type of resource",
@@ -1306,9 +1295,9 @@
       "$ref": "#/definitions/OjCodeList"
     },
     "contacts": {
-      "title": "Information on the person(s) to be contacted for further queries regarding the dataset and dataset analysis",
+      "title": "Contacts(s) information",
       "title_i18n": {
-        "en": "Information on the person(s) to be contacted for further queries regarding the dataset and dataset analysis",
+        "en": "Contacts(s) information",
         "fr": "",
         "es": ""
       },
@@ -3354,9 +3343,9 @@
       }
     },
     "meReferenceSystem": {
-      "title": "REFERENCE SYSTEM",
+      "title": "ADDITIONAL INFO",
       "title_i18n": {
-        "en": "REFERENCE SYSTEM",
+        "en": "ADDITIONAL INFO",
         "fr": "",
         "es": ""
       },
@@ -4004,9 +3993,9 @@
       }
     },
     "additions": {
-      "title": "REFERENCE SYSTEM",
+      "title": "Additional information",
       "title_i18n": {
-        "en": "REFERENCE SYSTEM",
+        "en": "Additional information",
         "fr": "",
         "es": ""
       },
@@ -4496,7 +4485,7 @@
                 "fr": "",
                 "es": ""
               },
-              "propertyOrder": 107,
+              "propertyOrder": 108,
               "type": "number"
             }
           }
@@ -4613,7 +4602,9 @@
               },
               "propertyOrder": 120,
               "type": "object",
-              "$ref": "#/definitions/OJReportingGroupLevel"
+              "items": {
+                "$ref": "#/definitions/OJReportingGroupLevel"
+              }
 
             },
             "DataAlreadyCorrected": {
@@ -5072,6 +5063,7 @@
                 "fr": "",
                 "es": ""
               },
+              "type": "object",
               "propertyOrder": 161,
               "properties": {
                 "Age": {

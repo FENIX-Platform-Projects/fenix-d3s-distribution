@@ -1,28 +1,39 @@
 {
+  "language": {
+    "version": "1998",
+    "idCodeList": "GIFT_ISO639-2",
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "EN": "English"
+        }
+      }
+    ],
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    }
+  },
   "title": {
-    "EN": "Completo Typo3"
+    "EN": "Giro3CompletoPreTypo3"
   },
-  "dsd": {
-    "rid": "66_3994"
-  },
-  "rid": "12_2457",
-  "uid": "D3S_56035228839373511978121177132216814813",
+  "uid": "D3S_89380185922997904549173970919267288726",
   "meContent": {
     "description": {
-      "EN": "Completo Typo3"
+      "EN": "Giro3CompletoPreTypo3"
     },
     "resourceRepresentationType": "dataset",
     "seReferencePopulation": {
       "referenceArea": {
+        "idCodeList": "GIFT_ReferenceArea",
         "codes": [
           {
-            "code": "3",
+            "code": "5",
             "label": {
-              "EN": "Community"
+              "EN": "Other (please specify)"
             }
           }
         ],
-        "idCodeList": "GIFT_ReferenceArea",
         "extendedName": {
           "EN": "WHO-FAO GIFT, area of reference"
         }
@@ -30,6 +41,7 @@
     },
     "seCoverage": {
       "coverageSectors": {
+        "idCodeList": "GIFT_CoverageSector",
         "codes": [
           {
             "code": "3",
@@ -38,91 +50,118 @@
             }
           }
         ],
-        "idCodeList": "GIFT_CoverageSector",
         "extendedName": {
           "EN": "WHO-FAO GIFT, coverage sectors"
         }
       },
       "coverageSectorsDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "coverageTime": {
-        "from": 1480978800000,
-        "to": 1480978800000
+        "from": 1481065200000,
+        "to": 1481065200000
       },
       "coverageGeographic": {
         "version": "2014",
+        "idCodeList": "GAUL0",
         "codes": [
           {
-            "code": "93",
+            "code": "150",
             "label": {
-              "PT": "Alemanha",
-              "FR": "Allemagne",
-              "AR": "ألمانيا",
-              "EN": "Germany",
-              "RU": "Германия",
-              "ES": "Alemania",
-              "ZH": "德 国"
+              "PT": "Madagáscar",
+              "FR": "Madagascar",
+              "AR": "مدغشقر",
+              "EN": "Madagascar",
+              "RU": "Мадагаскар",
+              "ES": "Madagascar",
+              "ZH": "马达加斯加"
             }
           }
         ],
-        "idCodeList": "GAUL0",
         "extendedName": {
           "EN": "Global administrative unit layer country level"
         }
       }
     },
     "keywords": [
-      "Completo Typo3"
+      "Giro3CompletoPreTypo3"
     ],
     "resourceRepresentationTypeLabel": {
       "EN": "Dataset"
     }
   },
-  "noDataValue": "Completo Typo3",
+  "noDataValue": "Giro3CompletoPreTypo3",
   "languageDetails": {
-    "EN": "Completo Typo3"
+    "EN": "Giro3CompletoPreTypo3"
   },
   "contacts": [
     {
-      "position": {
-        "EN": "Designation Completo Typo3"
-      },
       "organization": {
-        "EN": "Organization Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
-      "role": "owner",
+      "position": {
+        "EN": "Giro3CompletoPreTypo3"
+      },
+      "role": "other",
       "contactInfo": {
-        "phone": "1234567890987654321",
-        "emailAddress": "via.completo@typo.three",
+        "address": "Giro3CompletoPreTypo3",
+        "phone": "Giro3CompletoPreTypo3",
+        "emailAddress": "Giro3CompletoPreTypo3",
         "contactInstruction": {
-          "EN": "Completo Typo3"
-        },
-        "address": "Via Completo Typo, 3"
+          "EN": "Giro3CompletoPreTypo3"
+        }
       },
-      "pointOfContact": "Mr. Completo Typo3",
+      "pointOfContact": "Giro3CompletoPreTypo3",
       "specify": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "organizationUnit": {
-        "EN": "Division Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "roleLabel": {
-        "FR": "Propriétaire",
-        "EN": "Owner"
+        "FR": "Autre",
+        "EN": "Other"
+      }
+    },
+    {
+      "organization": {
+        "EN": "seconOrganization"
+      },
+      "position": {
+        "EN": "seconposition"
+      },
+      "role": "other",
+      "contactInfo": {
+        "address": "address2",
+        "phone": "phone2",
+        "emailAddress": "emailAddress2",
+        "contactInstruction": {
+          "EN": "contactInstruction2"
+        }
+      },
+      "pointOfContact": "pointOfContact2",
+      "specify": {
+        "EN": "specify2"
+      },
+      "organizationUnit": {
+        "EN": "organizationUnit2"
+      },
+      "roleLabel": {
+        "FR": "Autre2",
+        "EN": "Other"
       }
     }
   ],
   "additions": {
     "DataAnalysisInformation": {
       "ExclusionRecruitment": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "ExclusionDataCleaning": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "MethodReporting": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "ReportingIndividualLevel": {
         "underReportingPercentage": 7,
@@ -133,9 +172,9 @@
           "idCodeList": "YesNo",
           "codes": [
             {
-              "code": "yes",
+              "code": "no",
               "label": {
-                "EN": "Yes"
+                "EN": "No"
               }
             }
           ]
@@ -164,7 +203,7 @@
         ]
       },
       "AssessmentIntake": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       }
     },
     "sampledPopulationInformation": {
@@ -180,7 +219,12 @@
       "PopulationGroups": [
         {
           "PopulationGroupsList": {
-            "EN": "Completo Typo3"
+            "EN": "Giro3CompletoPreTypo3 1"
+          }
+        },
+        {
+          "PopulationGroupsList": {
+            "EN": "Giro3CompletoPreTypo3 2"
           }
         }
       ],
@@ -188,34 +232,33 @@
       "PurposedlyGroups": [
         {
           "PurposedlyGroupsList": {
-            "EN": "Completo Typo3"
+            "EN": "Giro3CompletoPreTypo3 1"
+          }
+        },
+        {
+          "PurposedlyGroupsList": {
+            "EN": "Giro3CompletoPreTypo3 2"
           }
         }
       ],
       "PurposedlyGroupsDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "MinumumAge": 5,
       "MaximumAge": 6
     },
     "FoodCompositionInformation": {
       "FoodComsumption": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "NumberOfFood": 10,
       "MacroDietaryComponents": {
         "idCodeList": "GIFT_Macronutrients",
         "codes": [
           {
-            "code": "6",
-            "label": {
-              "EN": "Total fat"
-            }
-          },
-          {
             "code": "9",
             "label": {
-              "EN": "Total fat"
+              "EN": "Other"
             }
           }
         ]
@@ -223,12 +266,7 @@
       "MacroDietaryComponentsDetails": [
         {
           "MacroDietaryComponentsDetailsList": {
-            "EN": "Total Fat"
-          }
-        },
-        {
-          "MacroDietaryComponentsDetailsList": {
-            "EN": "Other"
+            "EN": "Giro3CompletoPreTypo3"
           }
         }
       ],
@@ -246,7 +284,7 @@
       "MicroDietaryComponentsDetails": [
         {
           "MicroDietaryComponentsDetailsList": {
-            "EN": "Solo other"
+            "EN": "Giro3CompletoPreTypo3"
           }
         }
       ]
@@ -377,7 +415,7 @@
         ]
       },
       "SamplingInformationDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       }
     },
     "GeneralInformation": {
@@ -387,62 +425,34 @@
             "idCodeList": "GIFT_ResourceType",
             "codes": [
               {
-                "code": "1",
-                "label": {
-                  "EN": "Dataset"
-                }
-              }
-            ]
-          },
-          "ResourceDetails": {
-            "EN": ""
-          },
-          "ResourceCite": {
-            "EN": "Dataset Completo Typo3"
-          },
-          "ResourceLink": {
-            "EN": "Dataset Completo Typo3"
-          }
-        },
-        {
-          "ResourceType": {
-            "idCodeList": "GIFT_ResourceType",
-            "codes": [
-              {
                 "code": "5",
                 "label": {
                   "EN": "Other type of document"
                 }
-              },
-              {
-                "code": "1",
-                "label": {
-                  "EN": "Dataset"
-                }
               }
             ]
           },
           "ResourceDetails": {
-            "EN": ""
+            "EN": "Giro3CompletoPreTypo3"
           },
           "ResourceCite": {
-            "EN": "Other & Dataset Completo Typo3"
+            "EN": "Giro3CompletoPreTypo3"
           },
           "ResourceLink": {
-            "EN": "Completo Typo3"
+            "EN": "Giro3CompletoPreTypo3"
           }
         }
       ]
     },
     "SurveyInformation": {
       "GeographicalCoverageDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "StudyAreasDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "SeasonsCoverage": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "AssessmentMethod": {
         "idCodeList": "GIFT_DietaryMethod",
@@ -456,7 +466,7 @@
         ]
       },
       "AssessmentMethodDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "RepeatedDietary": {
         "idCodeList": "YesNo",
@@ -470,7 +480,7 @@
         ]
       },
       "SizeOfSample": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "NumberOfRepeated": 1,
       "AverageTime": 2,
@@ -486,7 +496,7 @@
         ]
       },
       "SurveyAdministrationMethodDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       }
     },
     "FoodConsumptionInformation": {
@@ -502,15 +512,15 @@
         ]
       },
       "FoodCoverageDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "DrinkingWater": {
         "idCodeList": "YesNo",
         "codes": [
           {
-            "code": "no",
+            "code": "yes",
             "label": {
-              "EN": "No"
+              "EN": "Yes"
             }
           }
         ]
@@ -527,14 +537,14 @@
         ]
       },
       "SupplementInformationDetails": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "NumberOfFood": 9,
       "PortionSizes": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "RecipesManagement": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "QuantitiesReported": {
         "idCodeList": "GIFT_QuantityReporting",
@@ -542,60 +552,36 @@
           {
             "code": "5",
             "label": {
-              "EN": "Edible amount consumed before processing"
-            }
-          },
-          {
-            "code": "1",
-            "label": {
-              "EN": "Edible amount consumed before processing"
-            }
-          },
-          {
-            "code": "2",
-            "label": {
-              "EN": "Edible amount consumed before processing"
-            }
-          },
-          {
-            "code": "3",
-            "label": {
-              "EN": "Edible amount consumed before processing"
-            }
-          },
-          {
-            "code": "4",
-            "label": {
-              "EN": "Edible amount consumed before processing"
+              "EN": "Other"
             }
           }
         ]
       },
       "QuantitiesReportedDetails": {
-        "EN": "Completo Typo3 (Ho messo tutto sopra)"
+        "EN": "Giro3CompletoPreTypo3"
       }
     }
   },
   "meInstitutionalMandate": {
     "legalActsAgreements": {
-      "EN": "Completo Typo3"
+      "EN": "Giro3CompletoPreTypo3"
     },
     "institutionalMandateDataSharing": {
-      "EN": "Completo Typo3"
+      "EN": "Giro3CompletoPreTypo3"
     }
   },
   "meAccessibility": {
     "seConfidentiality": {
       "confidentialityStatus": {
+        "idCodeList": "GIFT_ConfidentialityStatus",
         "codes": [
           {
-            "code": "1",
+            "code": "5",
             "label": {
-              "EN": "Off"
+              "EN": "Data available in FAO/WHO GIFT"
             }
           }
         ],
-        "idCodeList": "GIFT_ConfidentialityStatus",
         "extendedName": {
           "EN": "WHO-FAO GIFT, available confidentiality status"
         }
@@ -604,45 +590,45 @@
   },
   "meMaintenance": {
     "seUpdate": {
-      "updateDate": 1481013623919
+      "updateDate": 1481016951147
     }
   },
   "meStatisticalProcessing": {
     "seDataSource": {
       "sePrimaryDataCollection": {
         "samplingProcedure": {
-          "EN": "Completo Typo3"
+          "EN": "Giro3CompletoPreTypo3"
         }
       },
       "seSecondaryDataCollection": {
         "organization": {
-          "EN": "Completo Typo3"
+          "EN": "Giro3CompletoPreTypo3"
         }
       }
     },
     "seDataCompilation": {
       "missingData": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
       "weights": {
-        "EN": "Completo Typo3"
+        "EN": "Giro3CompletoPreTypo3"
       },
-      "dataAdjustment": {}
-    }
-  },
-  "language": {
-    "version": "1998",
-    "codes": [
-      {
-        "code": "eng",
-        "label": {
-          "EN": "English"
+      "dataAdjustment": {
+        "version": "1.1",
+        "idCodeList": "CL_ADJUSTMENT",
+        "codes": [
+          {
+            "code": "_Z",
+            "label": {
+              "FR": "N'est pas applicable",
+              "EN": "Not applicable"
+            }
+          }
+        ],
+        "extendedName": {
+          "EN": "Adjustment code list (ESTAT)"
         }
       }
-    ],
-    "idCodeList": "GIFT_ISO639-2",
-    "extendedName": {
-      "EN": "International Standard Organization - Language"
     }
   }
 }
