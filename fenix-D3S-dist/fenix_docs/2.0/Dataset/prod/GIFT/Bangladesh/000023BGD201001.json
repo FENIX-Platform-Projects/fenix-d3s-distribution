@@ -1,0 +1,51 @@
+{
+  "uid" : "000023BGD201001",
+  "title" : {
+    "EN" : "Bangladesh - 2010"
+  },
+  "meContent" : {
+    "resourceRepresentationType": "dataset",
+    "seCoverage" : {
+      "coverageGeographic" : {
+        "idCodeList" : "GAUL", "version" : "2014",
+        "codes" : [{"code" : "23"}]
+      },
+      "coverageTime" : {
+        "from" : 1478274133603,
+        "to" : 1478274153500
+      }
+    }
+  },
+  "meAccessibility" : {
+    "seConfidentiality" : {
+      "confidentialityStatus" : {
+        "codes" : [ { "code" : "1" } ],
+        "idCodeList" : "GIFT_ConfidentialityStatus"
+      }
+    }
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "WHO-FAO"
+      },
+      "organizationUnit": {
+        "EN" : "Institut de Recherche pour le Développement"
+      },
+      "name": "Pauline Allemand",
+      "position": null,
+      "role": "distributor",
+      "contactInfo": {
+        "phone ": "+390657053879",
+        "address": null,
+        "emailAddress": "pauline.allemand@gmail.com",
+        "hoursOfService": null,
+        "contactIntruction": null
+      }
+    }
+  ],
+
+  "dsd" : {
+    "contextSystem" : "gift"
+  }
+}

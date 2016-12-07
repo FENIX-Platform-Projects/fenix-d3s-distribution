@@ -17,14 +17,13 @@
     "name": "filter",
     "parameters": {
       "columns": [
-        "group_code",
         "subgroup_code",
         "foodex2_code",
         "value",
         "um"
       ],
       "rows": {
-        "!group_code": {
+        "group_code": {
           "codes": [
             {
               "uid": "GIFT_FoodGroups",
@@ -42,7 +41,6 @@
     "result" : true,
     "parameters": {
       "by": [
-        "group_code",
         "subgroup_code",
         "foodex2_code"
       ],
@@ -65,7 +63,6 @@
     "result" : true,
     "parameters": {
       "by": [
-        "group_code",
         "subgroup_code"
       ],
       "aggregations": [
@@ -83,11 +80,8 @@
 
   {
     "name": "group",
-    "rid" : {"uid":"food_group"},
+    "rid" : {"uid":"food_total"},
     "parameters": {
-      "by": [
-        "group_code"
-      ],
       "aggregations": [
         {
           "columns": [ "value" ],
@@ -100,5 +94,4 @@
       ]
     }
   }
-
 ]

@@ -109,7 +109,7 @@ public class PopulationFiltering extends org.fao.fenix.d3p.process.Process<Popul
                     where.append("?,?,");
                     queryParams.add("4");
                     queryParams.add("11");
-                } else if (specialCondition.equals("5")) { //Non pregnant and non lactating
+                } else if (specialCondition.equals("4")) { //Non pregnant and non lactating
                     where.append("?,?,?,?,?,");
                     queryParams.add("1");
                     queryParams.add("5");

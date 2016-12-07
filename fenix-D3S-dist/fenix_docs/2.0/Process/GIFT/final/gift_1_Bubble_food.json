@@ -4,11 +4,11 @@
     "sid": [ { "uid": "gift_process_total_weighted_food_consumption_000042BUR201001" } ],
     "parameters": {
       "item": "FOOD_AMOUNT_PROC",
-      "gender": null,
-      "special_condition": ["2"],
+      "gender": "2",
+      "special_condition": ["1","2","3","4"],
       "age_year": {
-        "from": 10.5,
-        "to": 67
+        "from": 0,
+        "to": 120
       }
     }
   },
@@ -24,7 +24,7 @@
         "um"
       ],
       "rows": {
-        "group_code": {
+        "!group_code": {
           "codes": [
             {
               "uid": "GIFT_FoodGroups",
@@ -62,6 +62,7 @@
   {
     "name": "group",
     "rid" : {"uid":"food_subgroup"},
+    "result" : true,
     "parameters": {
       "by": [
         "group_code",
@@ -78,5 +79,44 @@
         }
       ]
     }
+  },
+
+  {
+    "name": "group",
+    "rid" : {"uid":"food_group"},
+    "result" : true,
+    "parameters": {
+      "by": [
+        "group_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+
+  {
+    "name": "group",
+    "rid" : {"uid":"food_total"},
+    "parameters": {
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
   }
+
 ]
