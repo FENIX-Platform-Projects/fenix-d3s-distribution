@@ -121,7 +121,8 @@ public class PopulationFiltering extends org.fao.fenix.d3p.process.Process<Popul
 
             if (params.gender==null)
                 where.append(')');
-        } else if (params.gender!=null) {
+        }
+        if (params.gender!=null) {
             where.append(" AND gender = ?");
             queryParams.add(params.gender);
         }

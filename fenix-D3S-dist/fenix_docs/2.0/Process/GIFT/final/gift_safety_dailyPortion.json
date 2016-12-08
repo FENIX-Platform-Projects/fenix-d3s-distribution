@@ -4,11 +4,11 @@
     "sid": [ { "uid": "gift_process_food_consumption_000042BUR201001" } ],
     "parameters": {
       "item": "FOOD_AMOUNT_PROC",
-      "gender": "2",
-      "special_condition": ["1"],
+      "gender": null,
+      "special_condition": ["1","2","3","4"],
       "age_year": {
-        "from": 10.5,
-        "to": 67
+        "from": 0,
+        "to": 120
       }
     }
   },
@@ -21,9 +21,7 @@
     "name": "gift_std_percentile",
     "parameters": {
       "percentileSize" : 5,
-      "group" : "02",
-      "subgroup" : "0201",
-      "food" : null
+      "group" : "01"
     }
   }
 

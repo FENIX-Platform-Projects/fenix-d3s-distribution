@@ -4,7 +4,7 @@
     "sid": [ { "uid": "gift_process_total_weighted_food_consumption_000042BUR201001" } ],
     "parameters": {
       "item": "FOOD_AMOUNT_PROC",
-      "gender": "2",
+      "gender": null,
       "special_condition": ["1","2","3","4"],
       "age_year": {
         "from": 0,

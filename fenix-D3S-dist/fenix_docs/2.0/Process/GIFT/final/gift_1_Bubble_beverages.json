@@ -5,10 +5,10 @@
     "parameters": {
       "item": "FOOD_AMOUNT_PROC",
       "gender": null,
-      "special_condition": ["2"],
+      "special_condition": ["1","2","3","4"],
       "age_year": {
-        "from": 10.5,
-        "to": 67
+        "from": 0,
+        "to": 120
       }
     }
   },
@@ -19,8 +19,7 @@
       "columns": [
         "subgroup_code",
         "foodex2_code",
-        "value",
-        "um"
+        "value"
       ],
       "rows": {
         "group_code": {
@@ -34,6 +33,30 @@
       }
     }
   },
+
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "code",
+        "id": "um",
+        "subject" : "um",
+        "title": {
+          "EN": "Unit of measure"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "GIFT_UM"
+            }
+          ]
+        }
+      },
+      "value": "ml"
+    }
+  },
+
+
 
   {
     "name": "group",

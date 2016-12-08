@@ -4,10 +4,10 @@
     "sid": [ { "uid": "gift_process_total_weighted_food_consumption_000042BUR201001" } ],
     "parameters": {
       "gender": null,
-      "special_condition": ["2"],
+      "special_condition": ["1","2","3","4"],
       "age_year": {
-        "from": 10.5,
-        "to": 67
+        "from": 0,
+        "to": 120
       }
     }
   },

@@ -11,14 +11,6 @@
               "codes": [ "CARBOH", "PROTEIN", "FAT" ]
             }
           ]
-        },
-        "!group_code": {
-          "codes": [
-            {
-              "uid": "GIFT_FoodGroups",
-              "codes": [ "14" ]
-            }
-          ]
         }
       }
     }

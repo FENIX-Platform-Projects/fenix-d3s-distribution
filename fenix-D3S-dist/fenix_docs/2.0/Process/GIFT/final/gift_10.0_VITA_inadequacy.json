@@ -4,11 +4,11 @@
     "sid": [ { "uid": "gift_process_total_food_consumption_000042BUR201001" } ],
     "parameters": {
       "item": "VITA",
-      "gender": "2",
-      "special_condition": ["1"],
+      "gender": null,
+      "special_condition": ["1","2","3","4"],
       "age_year": {
-        "from": 10.5,
-        "to": 67
+        "from": 0,
+        "to": 120
       }
     }
   },
@@ -27,14 +27,6 @@
           "number": [
             {
               "from": 1
-            }
-          ]
-        },
-        "!group_code": {
-          "codes": [
-            {
-              "uid": "GIFT_FoodGroups",
-              "codes": [ "14" ]
             }
           ]
         }
