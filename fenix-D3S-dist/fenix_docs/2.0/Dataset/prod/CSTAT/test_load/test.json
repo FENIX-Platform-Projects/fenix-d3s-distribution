@@ -1,0 +1,426 @@
+{
+  "metadata" : {
+    "creationDate" : 1464011880000,
+    "language" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "fre",
+        "label" : {
+          "FR" : "French",
+          "EN" : "French"
+        }
+      } ],
+      "idCodeList" : "ISO639-2",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      }
+    },
+    "title" : {
+      "EN" : "Prévision de la population agricole (sous-national)"
+    },
+    "dsd" : {
+      "contextSystem" : "cstat_mli",
+      "datasources" : [ "D3S" ],
+      "columns" : [ {
+        "dataType" : "year",
+        "key" : true,
+        "id" : "DIMENSION0",
+        "title" : {
+          "FR" : "Année",
+          "EN" : "Year"
+        },
+        "subject" : "time"
+      }, {
+        "dataType" : "code",
+        "key" : true,
+        "id" : "DIMENSION1",
+        "title" : {
+          "FR" : "Indicateur",
+          "EN" : "Indicator"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_Indicators",
+            "extendedName" : {
+              "EN" : "CountrySTAT Indicators"
+            }
+          } ]
+        },
+        "subject" : "indicator"
+      }, {
+        "dataType" : "code",
+        "key" : true,
+        "id" : "DIMENSION2",
+        "title" : {
+          "FR" : "Niveau administratif 1",
+          "EN" : "Adminstrative level 1"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "2014",
+            "idCodeList" : "GAUL",
+            "extendedName" : {
+              "EN" : "Global administrative unit layer"
+            }
+          } ]
+        },
+        "subject" : "geo"
+      }, {
+        "dataType" : "code",
+        "key" : true,
+        "id" : "DIMENSION3",
+        "title" : {
+          "FR" : "Agricole",
+          "EN" : "Agricultural"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_Agricultural_Population",
+            "extendedName" : {
+              "EN" : "Agricultural population"
+            }
+          } ]
+        },
+        "subject" : "agriculturalPopulation"
+      }, {
+        "dataType" : "number",
+        "key" : false,
+        "id" : "VALUE0",
+        "title" : {
+          "FR" : "Valeur",
+          "EN" : "Value"
+        },
+        "subject" : "value"
+      }, {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "OTHER0",
+        "title" : {
+          "FR" : "Flag",
+          "EN" : "Flag"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "Flag",
+            "extendedName" : {
+              "EN" : "Flag"
+            }
+          } ]
+        },
+        "subject" : "flag"
+      }, {
+        "dataType" : "code",
+        "key" : false,
+        "id" : "OTHER1",
+        "title" : {
+          "FR" : "Unité",
+          "EN" : "Unit"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_UM",
+            "extendedName" : {
+              "EN" : "Units of measurement"
+            }
+          } ]
+        },
+        "subject" : "um"
+      } ]
+    },
+    "uid" : "test_update",
+    "meContent" : {
+      "description" : {
+        "EN" : ""
+      },
+      "resourceRepresentationType" : "dataset",
+      "seReferencePopulation" : {
+        "statisticalPopulation" : {
+          "EN" : ""
+        },
+        "statisticalUnit" : {
+          "EN" : ""
+        },
+        "referencePeriod" : {
+          "version" : "1.0",
+          "codes" : [ {
+            "code" : "9",
+            "label" : {
+              "FR" : "An",
+              "EN" : "Year"
+            }
+          } ],
+          "idCodeList" : "FAO_Period",
+          "extendedName" : {
+            "EN" : "FAO Reference Period"
+          }
+        },
+        "referenceArea" : {
+          "version" : "1.0",
+          "codes" : [ {
+            "code" : "ADM1",
+            "label" : {
+              "FR" : "Limites administratives de premier niveau",
+              "EN" : "First level administrative boundaries"
+            }
+          } ],
+          "idCodeList" : "GAUL_ReferenceArea",
+          "extendedName" : {
+            "EN" : "GAUL reference area"
+          }
+        }
+      },
+      "seCoverage" : {
+        "coverageSectors" : {
+          "codes" : [ {
+            "code" : "POP",
+            "label" : {
+              "FR" : "Population",
+              "EN" : "Population"
+            }
+          } ],
+          "idCodeList" : "CSTAT_Core",
+          "extendedName" : {
+            "EN" : "Classification of CountrySTAT indicator -National core"
+          }
+        },
+        "coverageSectorsDetails" : {
+          "EN" : ""
+        },
+        "coverageTime" : {
+          "from" : 1480633200000,
+          "to" : 1480633200000
+        },
+        "coverageGeographic" : {
+          "version" : "2014",
+          "codes" : [ {
+            "code" : "155",
+            "label" : {
+              "PT" : "Mali",
+              "FR" : "Mali",
+              "AR" : "مالي",
+              "EN" : "Mali",
+              "RU" : "Мали",
+              "ES" : "Malí",
+              "ZH" : "马 里"
+            }
+          } ],
+          "idCodeList" : "GAUL0",
+          "extendedName" : {
+            "EN" : "Global administrative unit layer country level"
+          }
+        }
+      },
+      "keywords" : [ "" ],
+      "statisticalConceptsDefinitions" : {
+        "EN" : ""
+      },
+      "resourceRepresentationTypeLabel" : {
+        "EN" : "Dataset"
+      }
+    },
+    "languageDetails" : {
+      "EN" : ""
+    },
+    "characterSet" : {
+      "codes" : [ {
+        "code" : "106",
+        "label" : {
+          "FR" : "UTF-8",
+          "EN" : "UTF-8"
+        }
+      } ],
+      "idCodeList" : "IANAcharacterSet",
+      "extendedName" : {
+        "EN" : "Internet Assigned Numbers Authority codelist"
+      }
+    },
+    "metadataStandardName" : "FENIX",
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "codes" : [ {
+        "code" : "fre",
+        "label" : {
+          "FR" : "French",
+          "EN" : "French"
+        }
+      } ],
+      "idCodeList" : "ISO639-2",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      }
+    },
+    "contacts" : [ {
+      "position" : {
+        "EN" : ""
+      },
+      "organization" : {
+        "EN" : "Institut National de la Statistique (INSTAT)"
+      },
+      "role" : "owner",
+      "contactInfo" : {
+        "address" : "",
+        "phone" : "",
+        "emailAddress" : "aichaguindo8@yahoo.fr",
+        "hoursOfService" : {
+          "EN" : ""
+        },
+        "contactInstruction" : {
+          "EN" : ""
+        }
+      },
+      "pointOfContact" : "",
+      "specify" : {
+        "EN" : ""
+      },
+      "organizationUnit" : {
+        "EN" : ""
+      },
+      "roleLabel" : {
+        "FR" : "Producteur",
+        "EN" : "Producer"
+      }
+    } ],
+    "meInstitutionalMandate" : {
+      "legalActsAgreements" : {
+        "EN" : ""
+      },
+      "institutionalMandateDataSharing" : {
+        "EN" : ""
+      }
+    },
+    "meAccessibility" : {
+      "seDataDissemination" : {
+        "seDistribution" : {
+          "disseminationFormat" : [ "" ]
+        },
+        "seReleasePolicy" : {
+          "releaseCalendar" : {
+            "EN" : ""
+          },
+          "embargoTime" : {
+            "from" : 1480633200000,
+            "to" : 1480633200000
+          }
+        }
+      },
+      "seClarity" : {
+        "clarity" : {
+          "EN" : ""
+        },
+        "metadataCompletenessRate" : 100
+      },
+      "seConfidentiality" : {
+        "confidentialityPolicy" : {
+          "EN" : ""
+        },
+        "confidentialityDataTreatment" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meDataQuality" : {
+      "qualityManagement" : {
+        "EN" : ""
+      },
+      "qualityAssessment" : {
+        "EN" : ""
+      },
+      "qualityAssurance" : {
+        "EN" : ""
+      },
+      "seAccuracy" : {
+        "accuracyNonSampling" : {
+          "EN" : ""
+        },
+        "accuracySampling" : {
+          "EN" : ""
+        },
+        "completeness" : {
+          "EN" : ""
+        }
+      },
+      "seDataRevision" : {
+        "revisionPolicy" : {
+          "EN" : ""
+        },
+        "revisionPractice" : {
+          "EN" : ""
+        }
+      },
+      "seComparability" : {
+        "comparabilityGeographical" : {
+          "EN" : ""
+        },
+        "comparabilityTime" : {
+          "EN" : ""
+        },
+        "coherenceIntern" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" : 1480688502000
+      },
+      "maintenanceAgency" : {
+        "EN" : ""
+      },
+      "seMetadataMaintenance" : { }
+    },
+    "meStatisticalProcessing" : {
+      "seDataSource" : {
+        "sePrimaryDataCollection" : {
+          "dataCollection" : {
+            "EN" : ""
+          },
+          "samplingProcedure" : {
+            "EN" : ""
+          }
+        },
+        "seSecondaryDataCollection" : {
+          "organization" : {
+            "EN" : ""
+          },
+          "rawDataDescription" : {
+            "EN" : ""
+          },
+          "dataCollection" : {
+            "EN" : ""
+          }
+        }
+      },
+      "seDataCompilation" : {
+        "missingData" : {
+          "EN" : ""
+        },
+        "weights" : {
+          "EN" : ""
+        },
+        "aggregationProcessing" : {
+          "EN" : ""
+        },
+        "dataAdjustmentDetails" : {
+          "EN" : ""
+        },
+        "indexType" : {
+          "EN" : ""
+        }
+      },
+      "seDataValidation" : {
+        "dataValidationIntermediate" : {
+          "EN" : ""
+        },
+        "dataValidationOutput" : {
+          "EN" : ""
+        },
+        "dataValidationSource" : {
+          "EN" : ""
+        }
+      }
+    }
+  },
+  "data" : [ [ 2017, "0501", "1926", "6002", 2673.0, "e", "0107" ], [ 2018, "0501", "1928", "6001", 1929.0, "e", "0107" ], [ 2017, "0501", "1929", "6002", 84.0, "e", "0107" ], [ 2017, "0501", "1926", "6001", 83.0, "e", "0107" ], [ 2017, "0501", "1927", "6002", 393.0, "e", "0107" ], [ 2017, "0501", "1929", "6001", 10.0, "e", "0107" ], [ 2017, "0501", "1934", "6002", 369.0, "e", "0107" ], [ 2017, "0501", "1927", "6001", 295.0, "e", "0107" ], [ 2017, "0501", "1931", "6002", 784.0, "e", "0107" ], [ 2017, "0501", "1934", "6001", 507.0, "e", "0107" ], [ 2017, "0501", "1932", "6002", 1177.0, "e", "0107" ], [ 2017, "0501", "1931", "6001", 1794.0, "e", "0107" ], [ 2017, "0501", "1933", "6002", 1628.0, "e", "0107" ], [ 2017, "0501", "1932", "6001", 2179.0, "e", "0107" ], [ 2017, "0501", "1930", "6002", 893.0, "e", "0107" ], [ 2017, "0501", "1933", "6001", 2666.0, "e", "0107" ], [ 2018, "0501", "1926", "6001", 87.0, "e", "0107" ], [ 2018, "0501", "1929", "6002", 88.0, "e", "0107" ], [ 2018, "0501", "1929", "6001", 11.0, "e", "0107" ], [ 2018, "0501", "1927", "6002", 405.0, "e", "0107" ], [ 2018, "0501", "1927", "6001", 305.0, "e", "0107" ], [ 2018, "0501", "1934", "6002", 381.0, "e", "0107" ], [ 2018, "0501", "1934", "6001", 524.0, "e", "0107" ], [ 2018, "0501", "1931", "6002", 807.0, "e", "0107" ], [ 2018, "0501", "1931", "6001", 1849.0, "e", "0107" ], [ 2018, "0501", "1932", "6002", 1214.0, "e", "0107" ], [ 2018, "0501", "1932", "6001", 2247.0, "e", "0107" ], [ 2018, "0501", "1933", "6002", 1687.0, "e", "0107" ], [ 2018, "0501", "1933", "6001", 2762.0, "e", "0107" ], [ 2018, "0501", "1930", "6002", 929.0, "e", "0107" ], [ 2018, "0501", "1930", "6001", 2310.0, "e", "0107" ], [ 2018, "0501", "1928", "6002", 788.0, "e", "0107" ], [ 2017, "0501", "1928", "6001", 1864.0, "e", "0107" ], [ 2017, "0501", "1930", "6001", 2221.0, "e", "0107" ], [ 2017, "0501", "1928", "6002", 761.0, "e", "0107" ], [ 2020, "0501", "1929", "6002", 96.0, "e", "0107" ], [ 2020, "0501", "1926", "6001", 97.0, "e", "0107" ], [ 2020, "0501", "1927", "6002", 430.0, "e", "0107" ], [ 2020, "0501", "1929", "6001", 12.0, "e", "0107" ], [ 2020, "0501", "1926", "6002", 3130.0, "e", "0107" ], [ 2019, "0501", "1932", "6002", 1251.0, "e", "0107" ], [ 2019, "0501", "1931", "6001", 1907.0, "e", "0107" ], [ 2019, "0501", "1931", "6002", 832.0, "e", "0107" ], [ 2019, "0501", "1934", "6001", 542.0, "e", "0107" ], [ 2019, "0501", "1934", "6002", 394.0, "e", "0107" ], [ 2019, "0501", "1927", "6001", 315.0, "e", "0107" ], [ 2019, "0501", "1927", "6002", 417.0, "e", "0107" ], [ 2019, "0501", "1929", "6001", 11.0, "e", "0107" ], [ 2018, "0501", "1926", "6002", 2817.0, "e", "0107" ], [ 2019, "0501", "1928", "6001", 1997.0, "e", "0107" ], [ 2019, "0501", "1928", "6002", 816.0, "e", "0107" ], [ 2019, "0501", "1930", "6001", 2402.0, "e", "0107" ], [ 2019, "0501", "1930", "6002", 966.0, "e", "0107" ], [ 2019, "0501", "1933", "6001", 2861.0, "e", "0107" ], [ 2019, "0501", "1933", "6002", 1748.0, "e", "0107" ], [ 2019, "0501", "1932", "6001", 2316.0, "e", "0107" ], [ 2020, "0501", "1932", "6001", 2388.0, "e", "0107" ], [ 2020, "0501", "1933", "6002", 1810.0, "e", "0107" ], [ 2020, "0501", "1931", "6001", 1966.0, "e", "0107" ], [ 2020, "0501", "1932", "6002", 1290.0, "e", "0107" ], [ 2020, "0501", "1934", "6001", 559.0, "e", "0107" ], [ 2020, "0501", "1931", "6002", 857.0, "e", "0107" ], [ 2020, "0501", "1927", "6001", 326.0, "e", "0107" ], [ 2020, "0501", "1934", "6002", 407.0, "e", "0107" ], [ 2019, "0501", "1926", "6001", 92.0, "e", "0107" ], [ 2019, "0501", "1929", "6002", 92.0, "e", "0107" ], [ 2020, "0501", "1928", "6001", 2067.0, "e", "0107" ], [ 2019, "0501", "1926", "6002", 2969.0, "e", "0107" ], [ 2020, "0501", "1930", "6001", 2498.0, "e", "0107" ], [ 2020, "0501", "1928", "6002", 844.0, "e", "0107" ], [ 2020, "0501", "1933", "6001", 2964.0, "e", "0107" ], [ 2020, "0501", "1930", "6002", 1004.0, "e", "0107" ] ],
+  "size" : 72
+}
