@@ -18,6 +18,7 @@ import org.fao.fenix.d3s.server.dto.DatabaseStandards;
 import javax.inject.Inject;
 import javax.ws.rs.BadRequestException;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 
@@ -45,14 +46,35 @@ public class PopulationFiltering extends org.fao.fenix.d3p.process.Process<Popul
         //Return query step
         Object[] existingParams = type==StepType.query ? ((QueryStep)source).getParams() : null;
         Collection<Object> queryParameters = existingParams!=null && existingParams.length>0 ? new LinkedList<>(Arrays.asList(existingParams)) : new LinkedList<>();
-        String query = createQuery(params, dsd, tableName, queryParameters);
+        //Create population variable
+        setGlobalVariable("raw_data_population_size", new Object[]{getPopulationSize(source,params,tableName,queryParameters)});
         //Return query step
+        String query = createQuery(params, dsd, tableName, queryParameters);
         QueryStep step = (QueryStep)stepFactory.getInstance(StepType.query);
         step.setDsd(dsd);
         step.setData(query);
         step.setParams(queryParameters.toArray());
         step.setTypes(null);
         return step;
+    }
+
+    private long getPopulationSize(Step source, PopulationParameters params, String tableName, Collection<Object> existingParams) throws Exception {
+        Collection<Object> queryParams = existingParams!=null ? new LinkedList<>(existingParams) : new LinkedList<>();
+
+        String query = "select count(*) from (select subject from " + tableName + buildWhereConditions(params, queryParams) + " group by subject) as subjects";
+
+        Connection connection = source.getStorage().getConnection();
+        try {
+            PreparedStatement statement = connection.prepareStatement(query);
+            databaseUtils.fillStatement(statement,null,queryParams.toArray());
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next())
+                return resultSet.getLong(1);
+            else
+                return 1;
+        } finally {
+            connection.close();
+        }
     }
 
     private void validate(PopulationParameters params, DSDDataset dsd) throws Exception {
