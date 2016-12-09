@@ -118,5 +118,5 @@ titleColumnIndex_EN=3
 
 --data--
 
-@1@Male
-@2@Female
+@1@Only male
+@2@Only female

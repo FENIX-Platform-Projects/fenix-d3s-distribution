@@ -84,14 +84,15 @@
   },
 
 
+
   {
     "name" : "select",
     "sid" : [{ "uid" : "subjects_data" }],
     "parameters" : {
       "values" : {
-        "value" : "(count(*)*100.0)/<<populationSize[0]>>"
+        "value" : "(count(*)*100.0)/case when <<populationSize[0]>>=0 then 1 else <<populationSize[0]>> end"
       },
-      "query" : "where value<suggested_value"
+      "query" : "where value<suggested_value having <<populationSize[0]>>>0"
     }
   },
 
@@ -116,6 +117,5 @@
       "value": "perc"
     }
   }
-
 
 ]
