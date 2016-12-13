@@ -1,0 +1,48 @@
+[
+  {
+    "name": "gift_population_filter",
+    "sid": [ { "uid": "GIFT_afc_000042BUR201001" } ],
+    "parameters": {
+      "item": "ENERGY",
+      "gender": "2",
+      "special_condition": ["2"],
+      "age_year": {
+        "from": 10.5,
+        "to": 67
+      }
+    }
+  },
+
+  {
+    "name" : "select",
+    "parameters" : {
+      "values" : {
+        "item" : null,
+        "group_code" : null,
+        "subgroup_code" : null,
+        "foodex2_code" : null,
+        "value" : "value/<<raw_data_population_size[0]>>",
+        "um" : null
+      }
+    }
+  },
+
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "group_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
+  }
+]

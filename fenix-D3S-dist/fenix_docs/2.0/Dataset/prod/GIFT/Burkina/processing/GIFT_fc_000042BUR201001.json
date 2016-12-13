@@ -1,7 +1,7 @@
 {
-  "uid" : "GIFT_afc_000042BUR201001",
+  "uid" : "GIFT_fc_000042BUR201001",
   "title": {
-    "EN": "Auto generated dataset for WHO-FAO GIFT processing purposes"
+    "EN": "Total food daily consumption by subject. Dataset is auto generated dataset for WHO-FAO GIFT processing purposes."
   },
   "meContent": {
     "resourceRepresentationType": "dataset"
@@ -30,12 +30,44 @@
     "contextSystem": "gift_process",
     "columns": [
       {
+        "dataType": "code",
+        "title": {
+          "EN": "Item"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "GIFT_Items"
+            }
+          ]
+        },
+        "subject": "item",
+        "key": true,
+        "id": "item"
+      },
+      {
         "dataType": "text",
         "title": {
           "EN": "ID Subject"
         },
         "key": true,
         "id": "subject"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Round"
+        },
+        "key": true,
+        "id": "round"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Day of consumption"
+        },
+        "key": true,
+        "id": "survey_day"
       },
       {
         "dataType": "code",
@@ -83,22 +115,6 @@
         "id": "foodex2_code"
       },
       {
-        "dataType": "code",
-        "title": {
-          "EN": "Item"
-        },
-        "domain": {
-          "codes": [
-            {
-              "idCodeList": "GIFT_Items"
-            }
-          ]
-        },
-        "subject": "item",
-        "key": true,
-        "id": "item"
-      },
-      {
         "dataType": "number",
         "title": {
           "EN": "Value"
@@ -120,6 +136,45 @@
         },
         "subject": "um",
         "id": "um"
+      },
+      {
+        "id" : "gender",
+        "title" : { "EN" : "Gender" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GIFT_Gender" } ] }
+      },
+      {
+        "id" : "special_condition",
+        "key": true,
+        "title" : { "EN" : "Special condition" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GIFT_SpecialConditions" } ] }
+      },
+      {
+        "id" : "age_year",
+        "key": true,
+        "title" : { "EN" : "Age (years)" },
+        "dataType" : "number"
+      },
+      {
+        "id" : "age_month",
+        "key": true,
+        "title" : { "EN" : "Age (months)" },
+        "dataType" : "number"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Suggested value"
+        },
+        "id": "suggested_value"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Increment"
+        },
+        "id": "increment"
       }
     ]
   }

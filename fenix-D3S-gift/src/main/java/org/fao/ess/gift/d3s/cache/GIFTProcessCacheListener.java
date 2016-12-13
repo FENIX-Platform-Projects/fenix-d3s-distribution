@@ -22,12 +22,6 @@ public class GIFTProcessCacheListener implements DatasetCacheListener {
             throw new UnsupportedOperationException("Dataset uid syntaxt not supported: "+uid);
 
         switch (datasetType) {
-            case dailySubjectAvgBySubgroup:
-            case subgroupSubjectTotal:
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (group_code, subgroup_code)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on "+datasetInfo.getTableName()+" (item, group_code, subgroup_code)");
-                return false;
-
             case foodSubjectConsumption:
             case foodSubjectDailyTotal:
             case foodSubjectTotal:

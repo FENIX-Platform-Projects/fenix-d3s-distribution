@@ -1,0 +1,136 @@
+[
+  {
+    "name": "gift_population_filter",
+    "sid": [ { "uid": "GIFT_afc_000042BUR201001" } ],
+    "parameters": {
+      "item": "FOOD_AMOUNT_PROC",
+      "gender": null,
+      "special_condition": ["1","2","3","4"],
+      "age_year": {
+        "from": 0,
+        "to": 120
+      }
+    }
+  },
+
+  {
+    "name" : "select",
+    "parameters" : {
+      "values" : {
+        "item" : null,
+        "group_code" : null,
+        "subgroup_code" : null,
+        "foodex2_code" : null,
+        "value" : "value/<<raw_data_population_size[0]>>",
+        "um" : null
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "group_code",
+        "subgroup_code",
+        "foodex2_code",
+        "value",
+        "um"
+      ],
+      "rows": {
+        "!group_code": {
+          "codes": [
+            {
+              "uid": "GIFT_FoodGroups",
+              "codes": [ "14" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name": "group",
+    "rid" : {"uid":"food_food"},
+    "result" : true,
+    "parameters": {
+      "by": [
+        "group_code",
+        "subgroup_code",
+        "foodex2_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+
+  {
+    "name": "group",
+    "rid" : {"uid":"food_subgroup"},
+    "result" : true,
+    "parameters": {
+      "by": [
+        "group_code",
+        "subgroup_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+
+  {
+    "name": "group",
+    "rid" : {"uid":"food_group"},
+    "result" : true,
+    "parameters": {
+      "by": [
+        "group_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+
+  {
+    "name": "group",
+    "rid" : {"uid":"food_total"},
+    "parameters": {
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
+  }
+
+]

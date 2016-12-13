@@ -60,11 +60,6 @@ public class GiftProcessDAO extends WDSDatasetDao {
     //Query management methods
     private String buildQuery(Connection connection, MeIdentification resource, String survey, DatasetType datasetType) throws Exception {
         switch (datasetType) {
-            //legacy
-            case dailySubjectAvgBySubgroup:
-            case subgroupSubjectTotal:
-                return Queries.loadSubgroupDailySubjectAvg.getQuery();
-
             //current
             case foodSubjectDailyTotal:
                 return Queries.loadFoodDailyTotalSubject.getQuery();
@@ -101,17 +96,13 @@ public class GiftProcessDAO extends WDSDatasetDao {
 
     private void fillStatement(MeIdentification resource, String survey, DatasetType datasetType, PreparedStatement statement) throws Exception {
         switch (datasetType) {
-            //legacy
-            case dailySubjectAvgBySubgroup:
-            case subgroupSubjectTotal:
-                for (int i=1; i<=4; i++)
-                    statement.setString(i, survey);
-                break;
-
             //current
             case foodSubjectTotal:
-            case foodSubjectTotalWeighted:
                 for (int i=1; i<=32; i++)
+                    statement.setString(i, survey);
+                break;
+            case foodSubjectTotalWeighted:
+                for (int i=1; i<=15; i++)
                     statement.setString(i, survey);
                 break;
             case foodSubjectDailyTotal:
