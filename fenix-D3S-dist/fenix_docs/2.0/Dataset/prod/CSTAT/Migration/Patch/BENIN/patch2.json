@@ -1,0 +1,114 @@
+{
+  "dsd" : {
+    "contextSystem" : "cstat_ben",
+    "datasources" : [ "D3S" ],
+    "rid" : "66_3589",
+    "columns" : [ {
+      "dataType" : "year",
+      "title" : {
+        "FR" : "Année",
+        "EN" : "Year"
+      },
+      "subject" : "time",
+      "key" : true,
+      "id" : "TIME"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "FR" : "Produit",
+        "EN" : "Product"
+      },
+      "domain" : {
+        "codes" : [ {
+          "version" : "full",
+          "extendedName" : {
+            "EN" : "Harmonized System"
+          },
+          "idCodeList" : "HS"
+        } ]
+      },
+      "subject" : "item",
+      "key" : true,
+      "id" : "ITEM"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "FR" : "Pays",
+        "EN" : "Country"
+      },
+      "domain" : {
+        "codes" : [ {
+          "version" : "2014",
+          "extendedName" : {
+            "EN" : "Global administrative unit layer"
+          },
+          "idCodeList" : "GAUL"
+        } ]
+      },
+      "subject" : "geo",
+      "key" : true,
+      "id" : "dim_Country"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "FR" : "Indicateur",
+        "EN" : "Indicator"
+      },
+      "domain" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "CountrySTAT Indicators"
+          },
+          "idCodeList" : "CountrySTAT_Indicators"
+        } ]
+      },
+      "subject" : "indicator",
+      "key" : true,
+      "id" : "INDICATOR"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "FR" : "Valeur",
+        "EN" : "Value"
+      },
+      "subject" : "value",
+      "id" : "VALUE"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "FR" : "Unité",
+        "EN" : "Unit"
+      },
+      "domain" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "Units of measurement"
+          },
+          "idCodeList" : "CountrySTAT_UM"
+        } ]
+      },
+      "subject" : "um",
+      "key" : false,
+      "id" : "UM"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "FR" : "Drapeau",
+        "EN" : "Flag"
+      },
+      "domain" : {
+        "codes" : [ {
+          "idCodeList" : "Flag"
+        } ]
+      },
+      "subject" : "flag",
+      "id" : "FLAG"
+    } ]
+  },
+  "uid" : "053CPE020",
+  "meMaintenance": {
+    "seUpdate": {
+      "updateDate": 1481551417509
+    }
+  }
+}

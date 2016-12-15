@@ -1,0 +1,26 @@
+{
+  "resource": {
+    "metadata": {
+      "uid": "D3S_28843996919497850746660192669255724170"
+    },
+    "data": []
+  },
+  "input": {
+    "plugin": "inputMD",
+    "config": {
+      "template":"gift",
+      "lang": "EN"
+
+
+    }
+  },
+  "output": {
+    "plugin": "outputMD",
+    "config": {
+      "full": false,
+      "lang": "EN",
+      "template": "fao",
+      "fileName": "test.pdf"
+    }
+  }
+}

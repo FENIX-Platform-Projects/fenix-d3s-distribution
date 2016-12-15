@@ -1,0 +1,109 @@
+{
+  "dsd" : {
+    "contextSystem" : "cstat_rwa",
+    "datasources" : [ "D3S" ],
+    "rid" : "66_3593",
+    "columns" : [ {
+      "dataType" : "year",
+      "title" : {
+        "EN" : "Year"
+      },
+      "subject" : "time",
+      "key" : true,
+      "id" : "TIME"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Commodity"
+      },
+      "domain" : {
+        "codes" : [ {
+          "version" : "full",
+          "extendedName" : {
+            "EN" : "Harmonized System"
+          },
+          "idCodeList" : "HS"
+        } ]
+      },
+      "subject" : "item",
+      "key" : true,
+      "id" : "ITEM"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "EN" : "Value"
+      },
+      "subject" : "value",
+      "id" : "VALUE"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Flag"
+      },
+      "domain" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "Flag"
+          },
+          "idCodeList" : "Flag"
+        } ]
+      },
+      "subject" : "flag",
+      "id" : "FLAG"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Area"
+      },
+      "domain" : {
+        "codes" : [ {
+          "version" : "2014",
+          "extendedName" : {
+            "EN" : "Global administrative unit layer"
+          },
+          "idCodeList" : "GAUL"
+        } ]
+      },
+      "subject" : "geo",
+      "key" : true,
+      "id" : "GEO"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Unit"
+      },
+      "domain" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "Units of measurement"
+          },
+          "idCodeList" : "CountrySTAT_UM"
+        } ]
+      },
+      "subject" : "um",
+      "id" : "UM"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Indicator"
+      },
+      "domain" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "CountrySTAT Indicators"
+          },
+          "idCodeList" : "CountrySTAT_Indicators"
+        } ]
+      },
+      "subject" : "indicator",
+      "key" : true,
+      "id" : "INDICATOR"
+    } ]
+  },
+  "uid" : "184CFE015",
+  "meMaintenance": {
+    "seUpdate": {
+      "updateDate": 1481554006667
+    }
+  }
+}

@@ -1,0 +1,929 @@
+{
+  "creationDate": 1462312800000,
+  "title": {
+    "EN": "Financial Flows"
+  },
+  "characterSet": {
+    "extendedName": {
+      "EN": "Internet Assigned Numbers Authority codelist"
+    },
+    "codes": [
+      {
+        "code": "106",
+        "label": {
+          "FR": "UTF-8",
+          "EN": "UTF-8"
+        }
+      }
+    ],
+    "idCodeList": "IANAcharacterSet"
+  },
+  "metadataStandardName": "FENIX",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "version": "1998",
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    },
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "FR": "English",
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "UNECA"
+      },
+      "contactInfo": {
+        "phone": "000"
+      },
+      "roleLabel": {
+        "FR": "Producteur",
+        "EN": "Producer"
+      },
+      "role": "owner"
+    }
+  ],
+  "meInstitutionalMandate": {},
+  "dsd": {
+    "contextSystem": "D3P",
+    "columns": [
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Topic"
+        },
+        "values": {
+          "codes": [
+            {
+              "version": "2.0",
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "codes": [
+                {
+                  "code": "0205",
+                  "label": {
+                    "EN": "Globalisation"
+                  }
+                },
+                {
+                  "code": "0210",
+                  "label": {
+                    "EN": "Official Development Assistance"
+                  }
+                }
+              ],
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2.0",
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "key": false,
+        "id": "TopicCode"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Indicator"
+        },
+        "values": {
+          "codes": [
+            {
+              "version": "2.0",
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "codes": [
+                {
+                  "code": "020501",
+                  "label": {
+                    "EN": "Net Foreign Direct Investment Inflows"
+                  }
+                },
+                {
+                  "code": "021001",
+                  "label": {
+                    "EN": "Net Total Official Development assistance"
+                  }
+                }
+              ],
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2.0",
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "subject": "item",
+        "key": true,
+        "id": "IndicatorCode"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Country"
+        },
+        "values": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA Country Codes"
+              },
+              "codes": [
+                {
+                  "code": "AGO",
+                  "label": {
+                    "FR": "Angola",
+                    "EN": "Angola"
+                  }
+                },
+                {
+                  "code": "BDI",
+                  "label": {
+                    "FR": "Burundi",
+                    "EN": "Burundi"
+                  }
+                },
+                {
+                  "code": "BEN",
+                  "label": {
+                    "FR": "Bénin",
+                    "EN": "Benin"
+                  }
+                },
+                {
+                  "code": "BFA",
+                  "label": {
+                    "FR": "Burkina Faso",
+                    "EN": "Burkina Faso"
+                  }
+                },
+                {
+                  "code": "BWA",
+                  "label": {
+                    "FR": "Botswana",
+                    "EN": "Botswana"
+                  }
+                },
+                {
+                  "code": "CAF",
+                  "label": {
+                    "FR": "République Centrafricaine",
+                    "EN": "Central African Republic"
+                  }
+                },
+                {
+                  "code": "CIV",
+                  "label": {
+                    "FR": "Côte d'Ivoire",
+                    "EN": "Cote d'Ivoire"
+                  }
+                },
+                {
+                  "code": "CMR",
+                  "label": {
+                    "FR": "Cameroun",
+                    "EN": "Cameroon"
+                  }
+                },
+                {
+                  "code": "COD",
+                  "label": {
+                    "FR": "République Démocratique du Congo",
+                    "EN": "Democratic Republic of the Congo"
+                  }
+                },
+                {
+                  "code": "COG",
+                  "label": {
+                    "FR": "Congo",
+                    "EN": "Congo"
+                  }
+                },
+                {
+                  "code": "COM",
+                  "label": {
+                    "FR": "Comores",
+                    "EN": "Comoros"
+                  }
+                },
+                {
+                  "code": "CPV",
+                  "label": {
+                    "FR": "Cap-Vert",
+                    "EN": "Cabo Verde"
+                  }
+                },
+                {
+                  "code": "DJI",
+                  "label": {
+                    "FR": "Djibouti",
+                    "EN": "Djibouti"
+                  }
+                },
+                {
+                  "code": "DZA",
+                  "label": {
+                    "FR": "Algérie",
+                    "EN": "Algeria"
+                  }
+                },
+                {
+                  "code": "EGY",
+                  "label": {
+                    "FR": "Egypte",
+                    "EN": "Egypt"
+                  }
+                },
+                {
+                  "code": "ERI",
+                  "label": {
+                    "FR": "Erythrée",
+                    "EN": "Eritrea"
+                  }
+                },
+                {
+                  "code": "ETH",
+                  "label": {
+                    "FR": "Ethiopie",
+                    "EN": "Ethiopia"
+                  }
+                },
+                {
+                  "code": "GAB",
+                  "label": {
+                    "FR": "Gabon",
+                    "EN": "Gabon"
+                  }
+                },
+                {
+                  "code": "GHA",
+                  "label": {
+                    "FR": "Ghana",
+                    "EN": "Ghana"
+                  }
+                },
+                {
+                  "code": "GIN",
+                  "label": {
+                    "FR": "Guinée",
+                    "EN": "Guinea"
+                  }
+                },
+                {
+                  "code": "GMB",
+                  "label": {
+                    "FR": "Gambie",
+                    "EN": "Gambia"
+                  }
+                },
+                {
+                  "code": "GNB",
+                  "label": {
+                    "FR": "Guinée-Bissau",
+                    "EN": "Guinea-Bissau"
+                  }
+                },
+                {
+                  "code": "GNQ",
+                  "label": {
+                    "FR": "Guinée équatoriale",
+                    "EN": "Equatorial Guinea"
+                  }
+                },
+                {
+                  "code": "KEN",
+                  "label": {
+                    "FR": "Kenya",
+                    "EN": "Kenya"
+                  }
+                },
+                {
+                  "code": "LBR",
+                  "label": {
+                    "FR": "Libéria",
+                    "EN": "Liberia"
+                  }
+                },
+                {
+                  "code": "LBY",
+                  "label": {
+                    "FR": "Libye",
+                    "EN": "Libya"
+                  }
+                },
+                {
+                  "code": "LSO",
+                  "label": {
+                    "FR": "Lesotho",
+                    "EN": "Lesotho"
+                  }
+                },
+                {
+                  "code": "MAR",
+                  "label": {
+                    "FR": "Maroc",
+                    "EN": "Morocco"
+                  }
+                },
+                {
+                  "code": "MDG",
+                  "label": {
+                    "FR": "Madagascar",
+                    "EN": "Madagascar"
+                  }
+                },
+                {
+                  "code": "MLI",
+                  "label": {
+                    "FR": "Mali",
+                    "EN": "Mali"
+                  }
+                },
+                {
+                  "code": "MOZ",
+                  "label": {
+                    "FR": "Mozambique",
+                    "EN": "Mozambique"
+                  }
+                },
+                {
+                  "code": "MRT",
+                  "label": {
+                    "FR": "Mauritanie",
+                    "EN": "Mauritania"
+                  }
+                },
+                {
+                  "code": "MUS",
+                  "label": {
+                    "FR": "Maurice",
+                    "EN": "Mauritius"
+                  }
+                },
+                {
+                  "code": "MWI",
+                  "label": {
+                    "FR": "Malawi",
+                    "EN": "Malawi"
+                  }
+                },
+                {
+                  "code": "NAM",
+                  "label": {
+                    "FR": "Namibie",
+                    "EN": "Namibia"
+                  }
+                },
+                {
+                  "code": "NER",
+                  "label": {
+                    "FR": "Niger",
+                    "EN": "Niger"
+                  }
+                },
+                {
+                  "code": "NGA",
+                  "label": {
+                    "FR": "Nigéria",
+                    "EN": "Nigeria"
+                  }
+                },
+                {
+                  "code": "RWA",
+                  "label": {
+                    "FR": "Rwanda",
+                    "EN": "Rwanda"
+                  }
+                },
+                {
+                  "code": "SDN",
+                  "label": {
+                    "FR": "Soudan",
+                    "EN": "Sudan"
+                  }
+                },
+                {
+                  "code": "SEN",
+                  "label": {
+                    "FR": "Sénégal",
+                    "EN": "Senegal"
+                  }
+                },
+                {
+                  "code": "SLE",
+                  "label": {
+                    "FR": "Sierra Leone",
+                    "EN": "Sierra Leone"
+                  }
+                },
+                {
+                  "code": "SOM",
+                  "label": {
+                    "FR": "Somalie",
+                    "EN": "Somalia"
+                  }
+                },
+                {
+                  "code": "STP",
+                  "label": {
+                    "FR": "Sao Tomé-et-Principe",
+                    "EN": "Sao Tome and Principe"
+                  }
+                },
+                {
+                  "code": "SWZ",
+                  "label": {
+                    "FR": "Swaziland",
+                    "EN": "Swaziland"
+                  }
+                },
+                {
+                  "code": "SYC",
+                  "label": {
+                    "FR": "Seychelles",
+                    "EN": "Seychelles"
+                  }
+                },
+                {
+                  "code": "TCD",
+                  "label": {
+                    "FR": "Tchad",
+                    "EN": "Chad"
+                  }
+                },
+                {
+                  "code": "TGO",
+                  "label": {
+                    "FR": "Togo",
+                    "EN": "Togo"
+                  }
+                },
+                {
+                  "code": "TUN",
+                  "label": {
+                    "FR": "Tunisie",
+                    "EN": "Tunisia"
+                  }
+                },
+                {
+                  "code": "TZA",
+                  "label": {
+                    "FR": "Tanzanie, République Unie de",
+                    "EN": "United Republic of Tanzania"
+                  }
+                },
+                {
+                  "code": "UGA",
+                  "label": {
+                    "FR": "Ouganda",
+                    "EN": "Uganda"
+                  }
+                },
+                {
+                  "code": "ZAF",
+                  "label": {
+                    "FR": "Afrique du Sud",
+                    "EN": "South Africa"
+                  }
+                },
+                {
+                  "code": "ZMB",
+                  "label": {
+                    "FR": "Zambie",
+                    "EN": "Zambia"
+                  }
+                },
+                {
+                  "code": "ZWE",
+                  "label": {
+                    "FR": "Zimbabwe",
+                    "EN": "Zimbabwe"
+                  }
+                }
+              ],
+              "idCodeList": "UNECA_ISO3"
+            }
+          ]
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA Country Codes"
+              },
+              "idCodeList": "UNECA_ISO3"
+            }
+          ]
+        },
+        "subject": "geo",
+        "key": true,
+        "id": "CountryCode"
+      },
+      {
+        "dataType": "year",
+        "title": {
+          "EN": "Year"
+        },
+        "values": {
+          "timeList": [
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014
+          ]
+        },
+        "subject": "time",
+        "key": true,
+        "id": "Year"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Partner"
+        },
+        "values": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA - Partner countries and institutions"
+              },
+              "codes": [
+                {
+                  "code": "AF",
+                  "label": {
+                    "EN": "Africa"
+                  }
+                },
+                {
+                  "code": "AFDB",
+                  "label": {
+                    "EN": "Africa Development Bank"
+                  }
+                },
+                {
+                  "code": "ARE",
+                  "label": {
+                    "EN": "United Arab Emirates"
+                  }
+                },
+                {
+                  "code": "AUS",
+                  "label": {
+                    "EN": "Australia"
+                  }
+                },
+                {
+                  "code": "AUT",
+                  "label": {
+                    "EN": "Austria"
+                  }
+                },
+                {
+                  "code": "BADEA",
+                  "label": {
+                    "EN": "BADEA"
+                  }
+                },
+                {
+                  "code": "BEL",
+                  "label": {
+                    "EN": "Belgium"
+                  }
+                },
+                {
+                  "code": "BRA",
+                  "label": {
+                    "EN": "Brazil"
+                  }
+                },
+                {
+                  "code": "CAN",
+                  "label": {
+                    "EN": "Canada"
+                  }
+                },
+                {
+                  "code": "CHE",
+                  "label": {
+                    "EN": "Switzerland"
+                  }
+                },
+                {
+                  "code": "DEU",
+                  "label": {
+                    "EN": "Germany"
+                  }
+                },
+                {
+                  "code": "DFID",
+                  "label": {
+                    "EN": "Department for International Development"
+                  }
+                },
+                {
+                  "code": "DNK",
+                  "label": {
+                    "EN": "Denmark"
+                  }
+                },
+                {
+                  "code": "ESP",
+                  "label": {
+                    "EN": "Spain"
+                  }
+                },
+                {
+                  "code": "FRA",
+                  "label": {
+                    "EN": "France"
+                  }
+                },
+                {
+                  "code": "GBR",
+                  "label": {
+                    "EN": "United Kingdom"
+                  }
+                },
+                {
+                  "code": "GEF",
+                  "label": {
+                    "EN": "GEF"
+                  }
+                },
+                {
+                  "code": "GLOBF",
+                  "label": {
+                    "EN": "Global Fund"
+                  }
+                },
+                {
+                  "code": "IDA",
+                  "label": {
+                    "EN": "IDA"
+                  }
+                },
+                {
+                  "code": "IDB",
+                  "label": {
+                    "EN": "Isl.Dev Bank"
+                  }
+                },
+                {
+                  "code": "IMF",
+                  "label": {
+                    "EN": "IMF (Concessional Trust Funds)"
+                  }
+                },
+                {
+                  "code": "IRL",
+                  "label": {
+                    "EN": "Ireland"
+                  }
+                },
+                {
+                  "code": "ITA",
+                  "label": {
+                    "EN": "Italy"
+                  }
+                },
+                {
+                  "code": "JPN",
+                  "label": {
+                    "EN": "Japan"
+                  }
+                },
+                {
+                  "code": "KOR",
+                  "label": {
+                    "EN": "Korea"
+                  }
+                },
+                {
+                  "code": "KWT",
+                  "label": {
+                    "EN": "Kuwait"
+                  }
+                },
+                {
+                  "code": "LUX",
+                  "label": {
+                    "EN": "Luxembourg"
+                  }
+                },
+                {
+                  "code": "N/A",
+                  "label": {
+                    "EN": "N/A"
+                  }
+                },
+                {
+                  "code": "NLD",
+                  "label": {
+                    "EN": "Netherlands"
+                  }
+                },
+                {
+                  "code": "NOR",
+                  "label": {
+                    "EN": "Norway"
+                  }
+                },
+                {
+                  "code": "PRT",
+                  "label": {
+                    "EN": "Portugal"
+                  }
+                },
+                {
+                  "code": "SWE",
+                  "label": {
+                    "EN": "Sweden"
+                  }
+                },
+                {
+                  "code": "TUR",
+                  "label": {
+                    "EN": "Turkey"
+                  }
+                },
+                {
+                  "code": "UNDP",
+                  "label": {
+                    "EN": "UNDP"
+                  }
+                },
+                {
+                  "code": "UNFPA",
+                  "label": {
+                    "EN": "UNFPA"
+                  }
+                },
+                {
+                  "code": "UNHCR",
+                  "label": {
+                    "EN": "UNHCR"
+                  }
+                },
+                {
+                  "code": "UNTA",
+                  "label": {
+                    "EN": "UNTA"
+                  }
+                },
+                {
+                  "code": "USA",
+                  "label": {
+                    "EN": "United States"
+                  }
+                },
+                {
+                  "code": "WB",
+                  "label": {
+                    "EN": "World Bank"
+                  }
+                }
+              ],
+              "idCodeList": "UNECA_Partner"
+            }
+          ]
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA - Partner countries and institutions"
+              },
+              "idCodeList": "UNECA_Partner"
+            }
+          ]
+        },
+        "key": true,
+        "id": "PartnerCode"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": "value",
+        "key": false,
+        "id": "Value"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Currency"
+        },
+        "values": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA - Currencies"
+              },
+              "codes": [
+                {
+                  "code": "USD",
+                  "label": {
+                    "EN": "USD"
+                  }
+                }
+              ],
+              "idCodeList": "UNECA_Currencies"
+            }
+          ]
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA - Currencies"
+              },
+              "idCodeList": "UNECA_Currencies"
+            }
+          ]
+        },
+        "subject": "um",
+        "key": false,
+        "id": "UnitCode"
+      }
+    ]
+  },
+  "uid": "UNECA_FinancialFlows",
+  "meContent": {
+    "seCoverage": {
+      "coverageSectors": {
+        "extendedName": {
+          "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+        },
+        "codes": [
+          {
+            "code": "0210",
+            "label": {
+              "EN": "Official Development Assistance"
+            }
+          }
+        ],
+        "idCodeList": "UNECA_ClassificationOfActivities"
+      },
+      "coverageTime": {}
+    },
+    "resourceRepresentationTypeLabel": {
+      "EN": "Dataset"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "language": {
+    "version": "1998",
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    },
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "FR": "English",
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  }
+}

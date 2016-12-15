@@ -1,0 +1,256 @@
+{
+  "creationDate": 1462312800000,
+  "title": {
+    "EN": "Inflation"
+  },
+  "characterSet": {
+    "extendedName": {
+      "EN": "Internet Assigned Numbers Authority codelist"
+    },
+    "codes": [
+      {
+        "code": "106",
+        "label": {
+          "FR": "UTF-8",
+          "EN": "UTF-8"
+        }
+      }
+    ],
+    "idCodeList": "IANAcharacterSet"
+  },
+  "metadataStandardName": "FENIX",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "version": "1998",
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    },
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "FR": "English",
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "ECA"
+      },
+      "contactInfo": {
+        "phone": "000"
+      },
+      "roleLabel": {
+        "FR": "Producteur",
+        "EN": "Producer"
+      },
+      "role": "owner"
+    }
+  ],
+  "meInstitutionalMandate": {},
+  "meMaintenance": {
+    "seUpdate": {
+      "updatePeriodicity": {
+        "version": "1.0",
+        "extendedName": {
+          "EN": "FAO Reference Period"
+        },
+        "codes": [
+          {}
+        ],
+        "idCodeList": "FAO_Period"
+      },
+      "updateDate": 1478510046797
+    }
+  },
+  "dsd": {
+    "contextSystem": "uneca",
+    "datasources": [
+      "D3S"
+    ],
+    "columns": [
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Topic"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2.0",
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "key": false,
+        "id": "TopicCode"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2.0",
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "subject": "item",
+        "key": true,
+        "id": "IndicatorCode"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Industry"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA - Economic sectors"
+              },
+              "idCodeList": "UNECA_EconomicSector"
+            }
+          ]
+        },
+        "subject": "sector",
+        "key": true,
+        "id": "CommodityCode"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Country"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA Country Codes"
+              },
+              "idCodeList": "UNECA_ISO3"
+            }
+          ]
+        },
+        "subject": "geo",
+        "key": true,
+        "id": "CountryCode"
+      },
+      {
+        "dataType": "year",
+        "title": {
+          "EN": "Year"
+        },
+        "subject": "time",
+        "key": true,
+        "id": "Year"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": "value",
+        "key": false,
+        "id": "Value"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Unit of measurement"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA - Unit of measure"
+              },
+              "idCodeList": "UNECA_UnitMeasure"
+            }
+          ]
+        },
+        "subject": "um",
+        "key": false,
+        "id": "UnitCode"
+      }
+    ]
+  },
+  "uid": "UNECA_Inflation",
+  "meContent": {
+    "seCoverage": {
+      "coverageSectors": {
+        "extendedName": {
+          "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+        },
+        "codes": [
+          {
+            "code": "0211",
+            "label": {
+              "EN": "Prices"
+            }
+          }
+        ],
+        "idCodeList": "UNECA_ClassificationOfActivities"
+      },
+      "coverageTime": {
+        "from": 631148400000,
+        "to": 1419980400000
+      },
+      "coverageGeographic": {
+        "version": "2014",
+        "extendedName": {
+          "EN": "Global administrative unit layer country level"
+        },
+        "codes": [
+          {
+            "code": "4",
+            "label": {
+              "PT": "Argélia",
+              "FR": "Algérie",
+              "AR": "الجزائر",
+              "EN": "Algeria",
+              "RU": "Алжир",
+              "ES": "Argelia",
+              "ZH": "阿尔及利亚"
+            }
+          }
+        ],
+        "idCodeList": "GAUL0"
+      }
+    },
+    "resourceRepresentationTypeLabel": {
+      "EN": "Dataset"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "language": {
+    "version": "1998",
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    },
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "FR": "English",
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  }
+}

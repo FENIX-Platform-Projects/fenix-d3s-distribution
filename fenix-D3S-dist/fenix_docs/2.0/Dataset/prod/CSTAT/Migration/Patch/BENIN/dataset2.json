@@ -1,0 +1,425 @@
+{
+  "metadata" : {
+    "creationDate" : 1400364000000,
+    "title" : {
+      "EN" : "Pesticides - Valeur des exportations"
+    },
+    "languageDetails" : {
+      "EN" : ""
+    },
+    "characterSet" : {
+      "extendedName" : {
+        "EN" : "Internet Assigned Numbers Authority codelist"
+      },
+      "codes" : [ {
+        "code" : "106",
+        "label" : {
+          "FR" : "UTF-8",
+          "EN" : "UTF-8"
+        }
+      } ],
+      "idCodeList" : "IANAcharacterSet"
+    },
+    "metadataStandardName" : "FENIX",
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      },
+      "codes" : [ {
+        "code" : "fre",
+        "label" : {
+          "FR" : "French",
+          "EN" : "French"
+        }
+      } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "contacts" : [ {
+      "position" : {
+        "EN" : ""
+      },
+      "organization" : {
+        "EN" : "Institut National de la Statistique et de l'Analyse Economique (INSAE)"
+      },
+      "contactInfo" : {
+        "phone" : "21 30 82 44 / 45",
+        "emailAddress" : "insae@insae-bj.org",
+        "hoursOfService" : {
+          "EN" : ""
+        },
+        "contactInstruction" : {
+          "EN" : ""
+        },
+        "address" : "01 BP 23 Cotonou"
+      },
+      "pointOfContact" : "",
+      "specify" : {
+        "EN" : ""
+      },
+      "organizationUnit" : {
+        "EN" : ""
+      },
+      "roleLabel" : {
+        "FR" : "Producteur",
+        "EN" : "Producer"
+      },
+      "role" : "owner"
+    } ],
+    "meInstitutionalMandate" : {
+      "legalActsAgreements" : {
+        "EN" : ""
+      },
+      "institutionalMandateDataSharing" : {
+        "EN" : ""
+      }
+    },
+    "meAccessibility" : {
+      "seDataDissemination" : {
+        "seDistribution" : {
+          "disseminationFormat" : [ "" ]
+        },
+        "seReleasePolicy" : {
+          "releaseCalendar" : {
+            "EN" : ""
+          },
+          "embargoTime" : {
+            "from" : -3600000,
+            "to" : 1480287600000
+          }
+        }
+      },
+      "seClarity" : {
+        "clarity" : {
+          "EN" : ""
+        },
+        "metadataCompletenessRate" : 100
+      },
+      "seConfidentiality" : {
+        "confidentialityPolicy" : {
+          "EN" : ""
+        },
+        "confidentialityDataTreatment" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meDataQuality" : {
+      "qualityManagement" : {
+        "EN" : ""
+      },
+      "qualityAssessment" : {
+        "EN" : ""
+      },
+      "qualityAssurance" : {
+        "EN" : ""
+      },
+      "seAccuracy" : {
+        "accuracyNonSampling" : {
+          "EN" : ""
+        },
+        "accuracySampling" : {
+          "EN" : ""
+        },
+        "completeness" : {
+          "EN" : ""
+        }
+      },
+      "seDataRevision" : {
+        "revisionPolicy" : {
+          "EN" : ""
+        },
+        "revisionPractice" : {
+          "EN" : ""
+        }
+      },
+      "seComparability" : {
+        "comparabilityGeographical" : {
+          "EN" : ""
+        },
+        "comparabilityTime" : {
+          "EN" : ""
+        },
+        "coherenceIntern" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" : 1480351677036
+      },
+      "maintenanceAgency" : {
+        "EN" : ""
+      },
+      "seMetadataMaintenance" : { }
+    },
+    "meStatisticalProcessing" : {
+      "seDataSource" : {
+        "sePrimaryDataCollection" : {
+          "dataCollection" : {
+            "EN" : ""
+          },
+          "samplingProcedure" : {
+            "EN" : ""
+          }
+        },
+        "seSecondaryDataCollection" : {
+          "organization" : {
+            "EN" : ""
+          },
+          "rawDataDescription" : {
+            "EN" : ""
+          },
+          "dataCollection" : {
+            "EN" : ""
+          }
+        }
+      },
+      "seDataCompilation" : {
+        "missingData" : {
+          "EN" : ""
+        },
+        "weights" : {
+          "EN" : ""
+        },
+        "aggregationProcessing" : {
+          "EN" : ""
+        },
+        "dataAdjustmentDetails" : {
+          "EN" : ""
+        },
+        "indexType" : {
+          "EN" : ""
+        }
+      },
+      "seDataValidation" : {
+        "dataValidationIntermediate" : {
+          "EN" : ""
+        },
+        "dataValidationOutput" : {
+          "EN" : ""
+        },
+        "dataValidationSource" : {
+          "EN" : ""
+        }
+      }
+    },
+    "dsd" : {
+      "contextSystem" : "cstat_ben",
+      "datasources" : [ "D3S" ],
+      "rid" : "66_3589",
+      "columns" : [ {
+        "dataType" : "year",
+        "title" : {
+          "FR" : "Année",
+          "EN" : "Year"
+        },
+        "subject" : "time",
+        "key" : true,
+        "id" : "TIME"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Produit",
+          "EN" : "Product"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "full",
+            "extendedName" : {
+              "EN" : "Harmonized System"
+            },
+            "idCodeList" : "HS"
+          } ]
+        },
+        "subject" : "item",
+        "key" : true,
+        "id" : "ITEM"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Pays",
+          "EN" : "Country"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "2014",
+            "extendedName" : {
+              "EN" : "Global administrative unit layer"
+            },
+            "idCodeList" : "GAUL"
+          } ]
+        },
+        "subject" : "geo",
+        "key" : true,
+        "id" : "dim_Country"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Indicateur",
+          "EN" : "Indicator"
+        },
+        "domain" : {
+          "codes" : [ {
+            "extendedName" : {
+              "EN" : "CountrySTAT Indicators"
+            },
+            "idCodeList" : "CountrySTAT_Indicators"
+          } ]
+        },
+        "subject" : "indicator",
+        "key" : true,
+        "id" : "INDICATOR"
+      }, {
+        "dataType" : "number",
+        "title" : {
+          "FR" : "Valeur",
+          "EN" : "Value"
+        },
+        "subject" : "value",
+        "id" : "VALUE"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Unité",
+          "EN" : "Unit"
+        },
+        "domain" : {
+          "codes" : [ {
+            "extendedName" : {
+              "EN" : "Units of measurement"
+            },
+            "idCodeList" : "CountrySTAT_UM"
+          } ]
+        },
+        "subject" : "um",
+        "key" : false,
+        "id" : "UM"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Drapeau",
+          "EN" : "Flag"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "1.0",
+            "idCodeList" : "Flag"
+          } ]
+        },
+        "subject" : "flag",
+        "id" : "FLAG"
+      } ]
+    },
+    "rid" : "12_2028",
+    "uid" : "053CPE020",
+    "meContent" : {
+      "description" : {
+        "EN" : ""
+      },
+      "seReferencePopulation" : {
+        "statisticalPopulation" : {
+          "EN" : ""
+        },
+        "statisticalUnit" : {
+          "EN" : ""
+        },
+        "referencePeriod" : {
+          "version" : "1.0",
+          "extendedName" : {
+            "EN" : "FAO Reference Period"
+          },
+          "codes" : [ {
+            "code" : "9",
+            "label" : {
+              "FR" : "An",
+              "EN" : "Year"
+            }
+          } ],
+          "idCodeList" : "FAO_Period"
+        },
+        "referenceArea" : {
+          "version" : "1.0",
+          "extendedName" : {
+            "EN" : "GAUL reference area"
+          },
+          "codes" : [ {
+            "code" : "ADM0",
+            "label" : {
+              "FR" : "Frontières internationales ou nationales",
+              "EN" : "International or country boundaries"
+            }
+          } ],
+          "idCodeList" : "GAUL_ReferenceArea"
+        }
+      },
+      "seCoverage" : {
+        "coverageSectors" : {
+          "extendedName" : {
+            "EN" : "Classification of CountrySTAT indicator -National core"
+          },
+          "codes" : [ {
+            "code" : "PES",
+            "label" : {
+              "FR" : "Pesticides",
+              "EN" : "Pesticides"
+            }
+          } ],
+          "idCodeList" : "CSTAT_Core"
+        },
+        "coverageSectorsDetails" : {
+          "EN" : ""
+        },
+        "coverageTime" : {
+          "from" : -3600000,
+          "to" : 1480287600000
+        },
+        "coverageGeographic" : {
+          "version" : "2014",
+          "extendedName" : {
+            "EN" : "Global administrative unit layer country level"
+          },
+          "codes" : [ {
+            "code" : "29",
+            "label" : {
+              "PT" : "Benim",
+              "FR" : "Bénin",
+              "AR" : "بنن",
+              "EN" : "Benin",
+              "RU" : "Бенин",
+              "ES" : "Benin",
+              "ZH" : "贝 宁"
+            }
+          } ],
+          "idCodeList" : "GAUL0"
+        }
+      },
+      "keywords" : [ "" ],
+      "statisticalConceptsDefinitions" : {
+        "EN" : ""
+      },
+      "resourceRepresentationTypeLabel" : {
+        "EN" : "Dataset"
+      },
+      "resourceRepresentationType" : "dataset"
+    },
+    "language" : {
+      "version" : "1998",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      },
+      "codes" : [ {
+        "code" : "fre",
+        "label" : {
+          "FR" : "French",
+          "EN" : "French"
+        }
+      } ],
+      "idCodeList" : "ISO639-2"
+    }
+  },
+  "data" : [ [ 2001, "380899", "29", "0302", null, "0104", null ], [ 2001, "380850", "29", "0302", null, "0104", null ], [ 2002, "380899", "29", "0302", null, "0104", null ], [ 2001, "380891", "29", "0302", null, "0104", null ], [ 2003, "380891", "29", "0302", null, "0104", null ], [ 2003, "380899", "29", "0302", null, "0104", null ], [ 2003, "380850", "29", "0302", null, "0104", null ], [ 2005, "380899", "29", "0302", null, "0104", null ], [ 2004, "380899", "29", "0302", null, "0104", null ], [ 2006, "380899", "29", "0302", null, "0104", null ], [ 2007, "380850", "29", "0302", null, "0104", null ], [ 2007, "380899", "29", "0302", null, "0104", null ], [ 2007, "380891", "29", "0302", null, "0104", null ], [ 2008, "380850", "29", "0302", null, "0104", null ], [ 2008, "380899", "29", "0302", null, "0104", null ], [ 2008, "380891", "29", "0302", null, "0104", null ], [ 2009, "380891", "29", "0302", null, "0104", null ], [ 2010, "380891", "29", "0302", null, "0104", null ], [ 2011, "380891", "29", "0302", null, "0104", null ], [ 2012, "380899", "29", "0302", null, "0104", null ], [ 2012, "380891", "29", "0302", 103970.4, "0104", null ], [ 2012, "380850", "29", "0302", 103970.4, "0104", null ], [ 2011, "380850", "29", "0302", 91755.028, "0104", null ], [ 2011, "380899", "29", "0302", 91755.028, "0104", null ], [ 2010, "380899", "29", "0302", 166573.736, "0104", null ], [ 2010, "380850", "29", "0302", 166573.736, "0104", null ], [ 2009, "380899", "29", "0302", 23130.46, "0104", null ], [ 2009, "380850", "29", "0302", 23130.46, "0104", null ], [ 2006, "380891", "29", "0302", 3112.0, "0104", null ], [ 2006, "380850", "29", "0302", 3112.0, "0104", null ], [ 2005, "380891", "29", "0302", 4657.6, "0104", null ], [ 2004, "380891", "29", "0302", 2273.6, "0104", null ], [ 2005, "380850", "29", "0302", 4657.6, "0104", null ], [ 2004, "380850", "29", "0302", 2273.6, "0104", null ], [ 2002, "380850", "29", "0302", 400.0, "0104", null ], [ 2002, "380891", "29", "0302", 400.0, "0104", null ] ],
+  "size" : 36
+}

@@ -1,0 +1,298 @@
+{
+  "creationDate" : 1462312800000,
+  "title" : {
+    "EN" : "Public Finance"
+  },
+  "characterSet" : {
+    "extendedName" : {
+      "EN" : "Internet Assigned Numbers Authority codelist"
+    },
+    "codes" : [ {
+      "code" : "106",
+      "label" : {
+        "FR" : "UTF-8",
+        "EN" : "UTF-8"
+      }
+    } ],
+    "idCodeList" : "IANAcharacterSet"
+  },
+  "metadataStandardName" : "FENIX",
+  "metadataStandardVersion" : "1.0",
+  "metadataLanguage" : {
+    "version" : "1998",
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    },
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "FR" : "English",
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "contacts" : [ {
+    "organization" : {
+      "EN" : "ECA"
+    },
+    "contactInfo" : {
+      "phone" : "00"
+    },
+    "roleLabel" : {
+      "FR" : "Producteur",
+      "EN" : "Producer"
+    },
+    "role" : "owner"
+  } ],
+  "meInstitutionalMandate" : { },
+  "meMaintenance" : {
+    "seUpdate" : {
+      "updatePeriodicity" : {
+        "version" : "1.0",
+        "extendedName" : {
+          "EN" : "FAO Reference Period"
+        },
+        "codes" : [ { } ],
+        "idCodeList" : "FAO_Period"
+      },
+      "updateDate" : 1462312800000
+    }
+  },
+  "dsd" : {
+    "contextSystem" : "uneca",
+    "datasources" : [ "D3S" ],
+    "columns" : [ {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Topic"
+      },
+      "values" : {
+        "codes" : [ {
+          "version" : "2.0",
+          "extendedName" : {
+            "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+          },
+          "codes" : [ {
+            "code" : "0212",
+            "label" : {
+              "EN" : "Public Finance"
+            }
+          } ],
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        } ]
+      },
+      "domain" : {
+        "codes" : [ {
+          "version" : "2.0",
+          "extendedName" : {
+            "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+          },
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        } ]
+      },
+      "key" : false,
+      "id" : "TopicCode"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Indicator"
+      },
+      "values" : {
+        "codes" : [ {
+          "version" : "2.0",
+          "extendedName" : {
+            "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+          },
+          "codes" : [ {
+            "code" : "021204",
+            "label" : {
+              "EN" : "Fiscal balance"
+            }
+          }, {
+            "code" : "021202",
+            "label" : {
+              "EN" : "Total grants"
+            }
+          }, {
+            "code" : "02120102",
+            "label" : {
+              "EN" : "Non tax revenue"
+            }
+          }, {
+            "code" : "02120101",
+            "label" : {
+              "EN" : "Tax revenue"
+            }
+          }, {
+            "code" : "021201",
+            "label" : {
+              "EN" : "Total revenues and grants"
+            }
+          }, {
+            "code" : "02120302",
+            "label" : {
+              "EN" : "Capital expenditure"
+            }
+          }, {
+            "code" : "02120301",
+            "label" : {
+              "EN" : "Current expenditure"
+            }
+          }, {
+            "code" : "02120303",
+            "label" : {
+              "EN" : "Net lending"
+            }
+          }, {
+            "code" : "021203",
+            "label" : {
+              "EN" : "Total expenditures and net lending"
+            }
+          }, {
+            "code" : "0212030101",
+            "label" : {
+              "EN" : "Wages and salaries"
+            }
+          } ],
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        } ]
+      },
+      "domain" : {
+        "codes" : [ {
+          "version" : "2.0",
+          "extendedName" : {
+            "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+          },
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        } ]
+      },
+      "subject" : "item",
+      "key" : true,
+      "id" : "IndicatorCode"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Country"
+      },
+      "domain" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "UNECA Country Codes"
+          },
+          "idCodeList" : "UNECA_ISO3"
+        } ]
+      },
+      "subject" : "geo",
+      "key" : true,
+      "id" : "CountryCode"
+    }, {
+      "dataType" : "year",
+      "title" : {
+        "EN" : "Year"
+      },
+      "values" : {
+        "timeList" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 ]
+      },
+      "subject" : "time",
+      "key" : true,
+      "id" : "Year"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "EN" : "Value"
+      },
+      "subject" : "value",
+      "key" : false,
+      "id" : "Value"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Currency"
+      },
+      "values" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "UNECA - Currencies"
+          },
+          "codes" : [ {
+            "code" : "USD",
+            "label" : {
+              "EN" : "USD"
+            }
+          } ],
+          "idCodeList" : "UNECA_Currencies"
+        } ]
+      },
+      "domain" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "UNECA - Currencies"
+          },
+          "idCodeList" : "UNECA_Currencies"
+        } ]
+      },
+      "subject" : "um",
+      "key" : false,
+      "id" : "UnitCode"
+    } ]
+  },
+  "uid" : "UNECA_PublicFinance",
+  "meContent" : {
+    "seCoverage" : {
+      "coverageSectors" : {
+        "extendedName" : {
+          "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+        },
+        "codes" : [ {
+          "code" : "0212",
+          "label" : {
+            "EN" : "Public Finance"
+          }
+        } ],
+        "idCodeList" : "UNECA_ClassificationOfActivities"
+      },
+      "coverageTime" : {
+        "from" : 631148400000,
+        "to" : 1419980400000
+      },
+      "coverageGeographic" : {
+        "version" : "2014",
+        "extendedName" : {
+          "EN" : "Global administrative unit layer country level"
+        },
+        "codes" : [ {
+          "code" : "4",
+          "label" : {
+            "PT" : "Argélia",
+            "FR" : "Algérie",
+            "AR" : "الجزائر",
+            "EN" : "Algeria",
+            "RU" : "Алжир",
+            "ES" : "Argelia",
+            "ZH" : "阿尔及利亚"
+          }
+        } ],
+        "idCodeList" : "GAUL0"
+      }
+    },
+    "resourceRepresentationTypeLabel" : {
+      "EN" : "Dataset"
+    },
+    "resourceRepresentationType" : "dataset"
+  },
+  "language" : {
+    "version" : "1998",
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    },
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "FR" : "English",
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  }
+}

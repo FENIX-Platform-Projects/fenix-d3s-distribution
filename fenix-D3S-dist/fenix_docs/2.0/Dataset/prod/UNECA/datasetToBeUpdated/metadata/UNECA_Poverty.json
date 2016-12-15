@@ -1,0 +1,288 @@
+{
+  "creationDate" : 1462222800000,
+  "title" : {
+    "EN" : "Poverty"
+  },
+  "characterSet" : {
+    "extendedName" : {
+      "EN" : "Internet Assigned Numbers Authority codelist"
+    },
+    "codes" : [ {
+      "code" : "106",
+      "label" : {
+        "FR" : "UTF-8",
+        "EN" : "UTF-8"
+      }
+    } ],
+    "idCodeList" : "IANAcharacterSet"
+  },
+  "metadataStandardName" : "FENIX",
+  "metadataStandardVersion" : "1.0",
+  "metadataLanguage" : {
+    "version" : "1998",
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    },
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "FR" : "English",
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  },
+  "contacts" : [ {
+    "organization" : {
+      "EN" : "ECA"
+    },
+    "contactInfo" : {
+      "address" : "http://www.uneca.org/acs"
+    },
+    "specify" : {
+      "EN" : "Country MDG reports, poverty surveys, World Bank, UNDP"
+    },
+    "organizationUnit" : {
+      "EN" : "African Centre for Statistics"
+    },
+    "roleLabel" : {
+      "FR" : "Producteur",
+      "EN" : "Producer"
+    },
+    "role" : "owner"
+  } ],
+  "meInstitutionalMandate" : { },
+  "meMaintenance" : {
+    "seUpdate" : {
+      "updatePeriodicity" : {
+        "version" : "1.0",
+        "extendedName" : {
+          "EN" : "FAO Reference Period"
+        },
+        "codes" : [ { } ],
+        "idCodeList" : "FAO_Period"
+      },
+      "updateDate" : 1462222800000
+    }
+  },
+  "dsd" : {
+    "contextSystem" : "uneca",
+    "datasources" : [ "D3S" ],
+    "columns" : [ {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Topic"
+      },
+      "values" : {
+        "codes" : [ {
+          "version" : "2.0",
+          "extendedName" : {
+            "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+          },
+          "codes" : [ {
+            "code" : "0303",
+            "label" : {
+              "EN" : "Poverty"
+            }
+          } ],
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        } ]
+      },
+      "domain" : {
+        "codes" : [ {
+          "version" : "2.0",
+          "extendedName" : {
+            "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+          },
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        } ]
+      },
+      "key" : false,
+      "id" : "TopicCode"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Indicator"
+      },
+      "values" : {
+        "codes" : [ {
+          "version" : "2.0",
+          "extendedName" : {
+            "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+          },
+          "codes" : [ {
+            "code" : "030301",
+            "label" : {
+              "EN" : "GNI Per Capita (US$)"
+            }
+          }, {
+            "code" : "030305",
+            "label" : {
+              "EN" : "Share of Income Held by Poorest 10%"
+            }
+          }, {
+            "code" : "030304",
+            "label" : {
+              "EN" : "Share of Income Held by Richest 10%"
+            }
+          }, {
+            "code" : "010114",
+            "label" : {
+              "EN" : "Population below $2 (PPP) per day"
+            }
+          }, {
+            "code" : "030306",
+            "label" : {
+              "EN" : "Gini�s index"
+            }
+          }, {
+            "code" : "030302",
+            "label" : {
+              "EN" : "Human Poverty Index (HPI-1) Value (%)"
+            }
+          } ],
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        } ]
+      },
+      "domain" : {
+        "codes" : [ {
+          "version" : "2.0",
+          "extendedName" : {
+            "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+          },
+          "idCodeList" : "UNECA_ClassificationOfActivities"
+        } ]
+      },
+      "subject" : "item",
+      "key" : true,
+      "id" : "IndicatorCode"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Country"
+      },
+      "domain" : {
+        "codes" : [ {
+          "extendedName" : {
+            "EN" : "UNECA Country Codes"
+          },
+          "idCodeList" : "UNECA_ISO3"
+        } ]
+      },
+      "subject" : "geo",
+      "key" : true,
+      "id" : "CountryCode"
+    }, {
+      "dataType" : "year",
+      "title" : {
+        "EN" : "Year"
+      },
+      "values" : {
+        "timeList" : [ 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013 ]
+      },
+      "subject" : "time",
+      "key" : true,
+      "id" : "Year"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "EN" : "Value"
+      },
+      "subject" : "value",
+      "key" : false,
+      "id" : "Value"
+    } ]
+  },
+  "uid" : "UNECA_Poverty",
+  "meContent" : {
+    "description" : {
+      "EN" : "Proportion of people living below the national poverty line is the proportion of the total population living in households with per-capita consumption or income that is below the national poverty line. It is calculated by dividing the number of persons living in households below the poverty line by the total number of persons. "
+    },
+    "seReferencePopulation" : {
+      "statisticalPopulation" : {
+        "EN" : "National population"
+      },
+      "referencePeriod" : {
+        "version" : "1.0",
+        "extendedName" : {
+          "EN" : "FAO Reference Period"
+        },
+        "codes" : [ {
+          "code" : "9",
+          "label" : {
+            "FR" : "An",
+            "EN" : "Year"
+          }
+        } ],
+        "idCodeList" : "FAO_Period"
+      },
+      "referenceArea" : {
+        "version" : "1.0",
+        "extendedName" : {
+          "EN" : "GAUL reference area"
+        },
+        "codes" : [ {
+          "code" : "ADM0",
+          "label" : {
+            "FR" : "Frontières internationales ou nationales",
+            "EN" : "International or country boundaries"
+          }
+        } ],
+        "idCodeList" : "GAUL_ReferenceArea"
+      }
+    },
+    "seCoverage" : {
+      "coverageSectors" : {
+        "extendedName" : {
+          "EN" : "UNECA Classification of Activities -Domains, topics and indicators"
+        },
+        "codes" : [ {
+          "code" : "0303",
+          "label" : {
+            "EN" : "Living conditions, poverty and cross-cutting social issues"
+          }
+        } ],
+        "idCodeList" : "UNECA_ClassificationOfActivities"
+      },
+      "coverageSectorsDetails" : {
+        "EN" : "Poverty"
+      },
+      "coverageTime" : {
+        "from" : 630284400000,
+        "to" : 1419116400000
+      },
+      "coverageGeographic" : {
+        "version" : "2014",
+        "extendedName" : {
+          "EN" : "Global administrative unit layer country level"
+        },
+        "codes" : [ {
+          "code" : "999900001"
+        } ],
+        "idCodeList" : "GAUL0"
+      }
+    },
+    "keywords" : [ "Poverty; Povery line; National Poverty line;  Living standards; Human development; Index; Poverty; Living standard; Health; Education; GNI" ],
+    "statisticalConceptsDefinitions" : {
+      "EN" : "Proportion of people living below the national poverty line is the proportion of the total population living in households with per-capita consumption or income that is below the national poverty line. It is calculated by dividing the number of persons living in households below the poverty line by the total number of persons. \n\nThe Human Development Index (HDI) is a summary measure of average achievement in key dimensions of human development: a long and healthy life, being knowledgeable and have a decent standard of living. The HDI is the geometric mean of normalized indices for each of the three dimensions: health (measured by life expectancy at birth), education (measured by mean of years of schooling for adults aged 25 years and more and expected years of schooling for children of school entering age) and standard of living (measured by logarithm of gross national income per capita).  The HDI simplifies and captures only part of what human development entails and it does not reflect on inequalities, poverty, human security, empowerment, etc. \"\n"
+    },
+    "resourceRepresentationTypeLabel" : {
+      "EN" : "Dataset"
+    },
+    "resourceRepresentationType" : "dataset"
+  },
+  "language" : {
+    "version" : "1998",
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    },
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "FR" : "English",
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2"
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "metadata" : {
+    "creationDate" : 1342389600000,
+    "title" : {
+      "EN" : "Pesticides - Valeur des importations"
+    },
+    "languageDetails" : {
+      "EN" : ""
+    },
+    "characterSet" : {
+      "extendedName" : {
+        "EN" : "Internet Assigned Numbers Authority codelist"
+      },
+      "codes" : [ {
+        "code" : "106",
+        "label" : {
+          "FR" : "UTF-8",
+          "EN" : "UTF-8"
+        }
+      } ],
+      "idCodeList" : "IANAcharacterSet"
+    },
+    "metadataStandardName" : "FENIX",
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      },
+      "codes" : [ {
+        "code" : "fre",
+        "label" : {
+          "FR" : "French",
+          "EN" : "French"
+        }
+      } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "contacts" : [ {
+      "position" : {
+        "EN" : ""
+      },
+      "organization" : {
+        "EN" : "Douane et MINCOMERCE"
+      },
+      "contactInfo" : {
+        "phone" : "237 22 06 17 08",
+        "emailAddress" : "",
+        "hoursOfService" : {
+          "EN" : ""
+        },
+        "contactInstruction" : {
+          "EN" : ""
+        },
+        "address" : ""
+      },
+      "pointOfContact" : "TEMFEMO Adidja",
+      "specify" : {
+        "EN" : ""
+      },
+      "organizationUnit" : {
+        "EN" : ""
+      },
+      "roleLabel" : {
+        "FR" : "Producteur",
+        "EN" : "Producer"
+      },
+      "role" : "owner"
+    } ],
+    "meInstitutionalMandate" : {
+      "legalActsAgreements" : {
+        "EN" : ""
+      },
+      "institutionalMandateDataSharing" : {
+        "EN" : ""
+      }
+    },
+    "meAccessibility" : {
+      "seDataDissemination" : {
+        "seDistribution" : {
+          "disseminationFormat" : [ "" ]
+        },
+        "seReleasePolicy" : {
+          "releaseCalendar" : {
+            "EN" : ""
+          },
+          "embargoTime" : {
+            "from" : 1480460400000,
+            "to" : 1480460400000
+          }
+        }
+      },
+      "seClarity" : {
+        "clarity" : {
+          "EN" : ""
+        },
+        "metadataCompletenessRate" : 100
+      },
+      "seConfidentiality" : {
+        "confidentialityPolicy" : {
+          "EN" : ""
+        },
+        "confidentialityDataTreatment" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meDataQuality" : {
+      "qualityManagement" : {
+        "EN" : ""
+      },
+      "qualityAssessment" : {
+        "EN" : ""
+      },
+      "qualityAssurance" : {
+        "EN" : ""
+      },
+      "seAccuracy" : {
+        "accuracyNonSampling" : {
+          "EN" : ""
+        },
+        "accuracySampling" : {
+          "EN" : ""
+        },
+        "completeness" : {
+          "EN" : ""
+        }
+      },
+      "seDataRevision" : {
+        "revisionPolicy" : {
+          "EN" : ""
+        },
+        "revisionPractice" : {
+          "EN" : ""
+        }
+      },
+      "seComparability" : {
+        "comparabilityGeographical" : {
+          "EN" : ""
+        },
+        "comparabilityTime" : {
+          "EN" : ""
+        },
+        "coherenceIntern" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" : 1479743679000
+      },
+      "maintenanceAgency" : {
+        "EN" : ""
+      },
+      "seMetadataMaintenance" : { }
+    },
+    "meStatisticalProcessing" : {
+      "seDataSource" : {
+        "sePrimaryDataCollection" : {
+          "dataCollection" : {
+            "EN" : ""
+          },
+          "samplingProcedure" : {
+            "EN" : ""
+          }
+        },
+        "seSecondaryDataCollection" : {
+          "organization" : {
+            "EN" : ""
+          },
+          "rawDataDescription" : {
+            "EN" : ""
+          },
+          "dataCollection" : {
+            "EN" : ""
+          }
+        }
+      },
+      "seDataCompilation" : {
+        "missingData" : {
+          "EN" : ""
+        },
+        "weights" : {
+          "EN" : ""
+        },
+        "aggregationProcessing" : {
+          "EN" : ""
+        },
+        "dataAdjustmentDetails" : {
+          "EN" : ""
+        },
+        "indexType" : {
+          "EN" : ""
+        }
+      },
+      "seDataValidation" : {
+        "dataValidationIntermediate" : {
+          "EN" : ""
+        },
+        "dataValidationOutput" : {
+          "EN" : ""
+        },
+        "dataValidationSource" : {
+          "EN" : ""
+        }
+      }
+    },
+    "dsd" : {
+      "contextSystem" : "cstat_cmr",
+      "datasources" : [ "D3S" ],
+      "rid" : "66_3591",
+      "columns" : [ {
+        "dataType" : "year",
+        "title" : {
+          "FR" : "Année",
+          "EN" : "Year"
+        },
+        "subject" : "time",
+        "key" : true,
+        "id" : "TIME"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Produit",
+          "EN" : "Product"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "full",
+            "extendedName" : {
+              "EN" : "Harmonized System"
+            },
+            "idCodeList" : "HS"
+          } ]
+        },
+        "subject" : "item",
+        "key" : true,
+        "id" : "ITEM"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Pays",
+          "EN" : "Country"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "2014",
+            "extendedName" : {
+              "EN" : "Global administrative unit layer"
+            },
+            "idCodeList" : "GAUL"
+          } ]
+        },
+        "subject" : "geo",
+        "key" : true,
+        "id" : "GEO"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Indicateur",
+          "EN" : "Indicator"
+        },
+        "domain" : {
+          "codes" : [ {
+            "extendedName" : {
+              "EN" : "CountrySTAT Indicators"
+            },
+            "idCodeList" : "CountrySTAT_Indicators"
+          } ]
+        },
+        "subject" : "indicator",
+        "key" : true,
+        "id" : "INDICATOR"
+      }, {
+        "dataType" : "number",
+        "title" : {
+          "FR" : "Valeur",
+          "EN" : "Value"
+        },
+        "subject" : "value",
+        "key" : false,
+        "id" : "VALUE"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Flag"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "1.0",
+            "idCodeList" : "Flag"
+          } ]
+        },
+        "subject" : "flag",
+        "id" : "FLAG"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Unité",
+          "EN" : "Unit"
+        },
+        "domain" : {
+          "codes" : [ {
+            "extendedName" : {
+              "EN" : "Units of measurement"
+            },
+            "idCodeList" : "CountrySTAT_UM"
+          } ]
+        },
+        "subject" : "um",
+        "key" : false,
+        "id" : "UM"
+      } ]
+    },
+    "rid" : "12_2030",
+    "uid" : "032CPE015",
+    "meContent" : {
+      "description" : {
+        "EN" : ""
+      },
+      "seReferencePopulation" : {
+        "statisticalPopulation" : {
+          "EN" : ""
+        },
+        "statisticalUnit" : {
+          "EN" : ""
+        },
+        "referencePeriod" : {
+          "version" : "1.0",
+          "extendedName" : {
+            "EN" : "FAO Reference Period"
+          },
+          "codes" : [ {
+            "code" : "9",
+            "label" : {
+              "FR" : "An",
+              "EN" : "Year"
+            }
+          } ],
+          "idCodeList" : "FAO_Period"
+        },
+        "referenceArea" : {
+          "version" : "1.0",
+          "extendedName" : {
+            "EN" : "GAUL reference area"
+          },
+          "codes" : [ {
+            "code" : "ADM0",
+            "label" : {
+              "FR" : "Frontières internationales ou nationales",
+              "EN" : "International or country boundaries"
+            }
+          } ],
+          "idCodeList" : "GAUL_ReferenceArea"
+        }
+      },
+      "seCoverage" : {
+        "coverageSectors" : {
+          "extendedName" : {
+            "EN" : "Classification of CountrySTAT indicator -National core"
+          },
+          "codes" : [ {
+            "code" : "PES",
+            "label" : {
+              "FR" : "Pesticides",
+              "EN" : "Pesticides"
+            }
+          }, {
+            "code" : "T",
+            "label" : {
+              "FR" : "Commerce",
+              "EN" : "Trade"
+            }
+          } ],
+          "idCodeList" : "CSTAT_Core"
+        },
+        "coverageSectorsDetails" : {
+          "EN" : ""
+        },
+        "coverageTime" : {
+          "from" : 1480460400000,
+          "to" : 1480460400000
+        },
+        "coverageGeographic" : {
+          "version" : "2014",
+          "extendedName" : {
+            "EN" : "Global administrative unit layer country level"
+          },
+          "codes" : [ {
+            "code" : "45",
+            "label" : {
+              "PT" : "Camarões",
+              "FR" : "Cameroun",
+              "AR" : "الكاميرون",
+              "EN" : "Cameroon",
+              "RU" : "Камерун",
+              "ES" : "Camerén",
+              "ZH" : "喀麦隆"
+            }
+          } ],
+          "idCodeList" : "GAUL0"
+        }
+      },
+      "keywords" : [ "pesticides importations" ],
+      "statisticalConceptsDefinitions" : {
+        "EN" : ""
+      },
+      "resourceRepresentationTypeLabel" : {
+        "EN" : "Dataset"
+      },
+      "resourceRepresentationType" : "dataset"
+    },
+    "language" : {
+      "version" : "1998",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      },
+      "codes" : [ {
+        "code" : "fre",
+        "label" : {
+          "FR" : "French",
+          "EN" : "French"
+        }
+      } ],
+      "idCodeList" : "ISO639-2"
+    }
+  },
+  "data" : [ [ 2008, "380899", "45", "0304", 500.887853, null, "0104" ], [ 2008, "380893", "45", "0304", 7280.043504, null, "0104" ], [ 2009, "380891", "45", "0304", 3479.875302, null, "0104" ], [ 2008, "380850", "45", "0304", 77.338884, null, "0104" ], [ 2011, "380892", "45", "0304", 8496.353559, null, "0104" ], [ 2011, "380893", "45", "0304", 8045.932115, null, "0104" ], [ 2010, "380850", "45", "0304", 110.932452, null, "0104" ], [ 2011, "380891", "45", "0304", 6150.462825, null, "0104" ], [ 2010, "380893", "45", "0304", 6499.65967, null, "0104" ], [ 2010, "380899", "45", "0304", 512.884114, null, "0104" ], [ 2010, "380891", "45", "0304", 2974.338261, null, "0104" ], [ 2010, "380892", "45", "0304", 7162.99465, null, "0104" ], [ 2011, "380899", "45", "0304", 436.832548, null, "0104" ], [ 2011, "380850", "45", "0304", 194.933638, null, "0104" ], [ 2000, "380891", "45", "0304", 4456.110706, null, "0104" ], [ 2000, "380892", "45", "0304", 4260.168476, null, "0104" ], [ 2001, "380891", "45", "0304", 5328.953095, null, "0104" ], [ 2000, "380850", "45", "0304", 94.353918, null, "0104" ], [ 2000, "380899", "45", "0304", 490.664678, null, "0104" ], [ 2000, "380893", "45", "0304", 3698.108367, null, "0104" ], [ 2001, "380850", "45", "0304", 79.762909, null, "0104" ], [ 2001, "380899", "45", "0304", 468.692299, null, "0104" ], [ 2001, "380893", "45", "0304", 2945.462939, null, "0104" ], [ 2001, "380892", "45", "0304", 4916.009047, null, "0104" ], [ 2002, "380899", "45", "0304", 530.126718, null, "0104" ], [ 2002, "380893", "45", "0304", 4394.046083, null, "0104" ], [ 2002, "380892", "45", "0304", 6030.70009, null, "0104" ], [ 2002, "380891", "45", "0304", 4852.825857, null, "0104" ], [ 2003, "380893", "45", "0304", 6118.964604, null, "0104" ], [ 2003, "380892", "45", "0304", 6860.497782, null, "0104" ], [ 2003, "380891", "45", "0304", 5750.938162, null, "0104" ], [ 2002, "380850", "45", "0304", 138.196959, null, "0104" ], [ 2004, "380893", "45", "0304", 5944.324077, null, "0104" ], [ 2004, "380899", "45", "0304", 500.863996, null, "0104" ], [ 2004, "380850", "45", "0304", 69.99668, null, "0104" ], [ 2005, "380891", "45", "0304", 4522.413338, null, "0104" ], [ 2003, "380899", "45", "0304", 533.789565, null, "0104" ], [ 2003, "380850", "45", "0304", 51.586104, null, "0104" ], [ 2004, "380891", "45", "0304", 5750.666357, null, "0104" ], [ 2004, "380892", "45", "0304", 5445.802813, null, "0104" ], [ 2006, "380891", "45", "0304", 5482.862108, null, "0104" ], [ 2006, "380892", "45", "0304", 5442.012662, null, "0104" ], [ 2006, "380893", "45", "0304", 5148.752827, null, "0104" ], [ 2006, "380899", "45", "0304", 537.370529, null, "0104" ], [ 2005, "380892", "45", "0304", 6190.094188, null, "0104" ], [ 2005, "380893", "45", "0304", 4340.374562, null, "0104" ], [ 2005, "380899", "45", "0304", 484.069215, null, "0104" ], [ 2005, "380850", "45", "0304", 44.934383, null, "0104" ], [ 2007, "380850", "45", "0304", 52.041593, null, "0104" ], [ 2007, "380899", "45", "0304", 443.070847, null, "0104" ], [ 2008, "380892", "45", "0304", 5445.981322, null, "0104" ], [ 2008, "380891", "45", "0304", 3738.825416, null, "0104" ], [ 2007, "380891", "45", "0304", 2502.952908, null, "0104" ], [ 2006, "380850", "45", "0304", 102.50523, null, "0104" ], [ 2007, "380893", "45", "0304", 7349.18529, null, "0104" ], [ 2007, "380892", "45", "0304", 4479.98846, null, "0104" ], [ 2009, "380893", "45", "0304", 6469.219583, null, "0104" ], [ 2009, "380892", "45", "0304", 5709.225657, null, "0104" ], [ 2009, "380850", "45", "0304", 95.031408, null, "0104" ], [ 2009, "380899", "45", "0304", 426.124753, null, "0104" ] ],
+  "size" : 60
+}

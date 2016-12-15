@@ -1,0 +1,125 @@
+{
+  "metadata" : {
+    "creationDate" : 1292367600000,
+    "title" : {
+      "EN" : "Fertilizers - Import Quantity"
+    },
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" : 1479741484852
+      }
+    },
+    "dsd" : {
+      "contextSystem" : "cstat_rwa",
+      "datasources" : [ "D3S" ],
+      "rid" : "66_3593",
+      "columns" : [ {
+        "dataType" : "year",
+        "title" : {
+          "EN" : "Year"
+        },
+        "subject" : "time",
+        "key" : true,
+        "id" : "TIME"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Commodity"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "full",
+            "extendedName" : {
+              "EN" : "Harmonized System"
+            },
+            "idCodeList" : "HS"
+          } ]
+        },
+        "subject" : "item",
+        "key" : true,
+        "id" : "ITEM"
+      }, {
+        "dataType" : "number",
+        "title" : {
+          "EN" : "Value"
+        },
+        "subject" : "value",
+        "id" : "VALUE"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Flag"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "1.0",
+            "extendedName" : {
+              "EN" : "Flag"
+            },
+            "idCodeList" : "Flag"
+          } ]
+        },
+        "subject" : "flag",
+        "id" : "FLAG"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Area"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "2014",
+            "extendedName" : {
+              "EN" : "Global administrative unit layer"
+            },
+            "idCodeList" : "GAUL"
+          } ]
+        },
+        "subject" : "geo",
+        "key" : true,
+        "id" : "GEO"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Unit"
+        },
+        "domain" : {
+          "codes" : [ {
+            "extendedName" : {
+              "EN" : "Units of measurement"
+            },
+            "idCodeList" : "CountrySTAT_UM"
+          } ]
+        },
+        "subject" : "um",
+        "id" : "UM"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Indicator"
+        },
+        "domain" : {
+          "codes" : [ {
+            "extendedName" : {
+              "EN" : "CountrySTAT Indicators"
+            },
+            "idCodeList" : "CountrySTAT_Indicators"
+          } ]
+        },
+        "subject" : "indicator",
+        "key" : true,
+        "id" : "INDICATOR"
+      } ]
+    },
+    "rid" : "12_2032",
+    "uid" : "184CFE015",
+    "meContent" : {
+      "resourceRepresentationTypeLabel" : {
+        "EN" : "Dataset"
+      },
+      "resourceRepresentationType" : "dataset"
+    }
+  },
+  "data" : [ [ 2005, "310210", 496.99, null, "205", "0103", "0303" ], [ 2005, "310430", 144.8, null, "205", "0103", "0303" ], [ 2009, "310530", 2909.64, null, "205", "0103", "0303" ], [ 2009, "310520", 42289.0, null, "205", "0103", "0303" ], [ 2007, "310520", 32001.65, null, "205", "0103", "0303" ], [ 2007, "310530", 127.61, null, "205", "0103", "0303" ], [ 2008, "310430", 5.95, null, "205", "0103", "0303" ], [ 2008, "310210", 6923.03, null, "205", "0103", "0303" ], [ 2008, "310520", 7531.47, null, "205", "0103", "0303" ], [ 2008, "310530", 97.04, null, "205", "0103", "0303" ], [ 2009, "310430", 24.31, null, "205", "0103", "0303" ], [ 2009, "310210", 416.1, null, "205", "0103", "0303" ], [ 2005, "310520", 7215.41, null, "205", "0103", "0303" ], [ 2005, "310530", 98.95, null, "205", "0103", "0303" ], [ 2006, "310430", 129.27, null, "205", "0103", "0303" ], [ 2006, "310210", 175.11, null, "205", "0103", "0303" ], [ 2006, "310520", 11097.41, null, "205", "0103", "0303" ], [ 2006, "310530", 60.0, null, "205", "0103", "0303" ], [ 2007, "310430", 60.59, null, "205", "0103", "0303" ], [ 2007, "310210", 1520.95, null, "205", "0103", "0303" ] ],
+  "size" : 20
+}

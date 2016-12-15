@@ -1,6 +1,6 @@
 {
-    "uid": "UNECA_UnitMeasure",
-	"version": null,
+    "uid": "CSTAT_OriginData",
+	"version": "1.0",
     "language": {
         "codes": [
             {
@@ -13,7 +13,7 @@
 
     "languageDetails": null,
     "title": {
-        "EN": "UNECA - Unit of measure"
+        "EN": "Origin of collected data"
     },
     "creationDate": null,
     "characterSet": {
@@ -40,9 +40,9 @@
     "contacts": [
         {
             "organization": {
-                "EN": "UNECA"
+                "EN": "FAO"
             },
-            "organizationUnit": null,
+            "organizationUnit": {"EN":"ESS"},
             "name": null,
             "position": null,
             "role": "distributor",
@@ -59,15 +59,15 @@
 
     "meContent": {
         "resourceRepresentationType": "codelist",
-        "keywords": ["currency"],
+        "keywords": null,
         "description": null,
         "statisticalConceptsDefinitions": null,
-				"seCoverage": {
+        "seCoverage": {
             "coverageSectors":
                 {
                     "codes": [
                         {
-                            "code": "05"
+                            "code": "10"
                         }
                     ],
                     "idCodeList": "FENIX_Subjects",
@@ -99,14 +99,13 @@
                 "version": "1.0"
             }
         }
-    },
-		"dsd":{
-      "contextSystem":"uneca"
-   }
+
+
+    }
 }
 
---structure--
 
+--structure--
 csvSeparator=@
 structure=tree
 dateFormat=dd/mm/yyyy
@@ -114,67 +113,15 @@ codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 titleColumnIndex_FR=4
 
+
 --data--
-@BAR@Barrels@Barils
-@CLO@LITRES@LITRES
-@CLQ@HECTOLITRES@HECTOLITRES
-@CLR@KILOLITRES@KILOLITRES
-@CLS@HUNDRED HECTOLITRES@HUNDRED HECTOLITRES
-@CLT@THOUSAND HECTOLITRES@000' HECTOLITRES
-@CLU@THOUSAND KILOLITRES@000' KILOLITRES
-@CSO@CUBIC METRES@METRES CUBES
-@CSR@THOUSAND CUBIC METRES@000' METRES CUBES
-@CSU@MILLION CUBIC METRES@MILLIONS METRES CUBES
-@CTO@GROSS TONS@GROSS TONS
-@CTR@000' GRT@000' GRT
-@CTU@MILLION GRT@MILLIONS GRT
-@CWO@PROOF GALLONS@PROOF GALLONS
-@CWR@THOUSAND PROOF GALLONS@THOUSAND PROOF GALLONS
-@ESO@KILOWATTS@KILOWATTS
-@ESR@THOUSAND KILOWATTS@000' KILOWATTS
-@ESU@MILLION KILOWATTS@MILLIONS KW
-@EVO@KVA@KVA
-@EVR@THOUSAND KVA@000' KVA
-@EVU@MILLION KVA@MILLIONS KVA
-@FEE3@Cubic Feet@Pieds cubes
-@HEC@Ha@
-@HGH@Hg/Ha@
-@HHO@HORSEPOWER@
-@HHR@THOUSAND HORSEPOWER@000' CV
-@HHU@MILLION HORSEPOWER@MILLIONS CV
-@HS0@TERAJOULES@TERAJOULES
-@HWO@KILOWATTHOUR@
-@HWR@THOUSAND KILOWATTHOUR@000' KWH
-@HWU@MILLION KWH@MILLIONS KWH
-@KWHM@kilowatt hours (millions) @
-@LSO@METRES@METRES
-@LSR@THOUSAND METRES@000' METRES
-@LSU@MILLION METRES@MILLIONS METRES
-@NA@NA@NA
-@NPO@PAIRS@PAIRES
-@NPR@THOUSAND PAIRS@000' PAIRES
-@NPU@MILLION PAIRS@MILLIONS PAIRES
-@NSO@UNITS@NOMBRE
-@NSR@THOUSAND UNITS@MILLIERS
-@NSU@MILLION UNITS@MILLIONS
-@NTO@NUMBER OF SPINDLES@NOMBRE DE BROCHES
-@Perc@%@%
-@SSO@SQUARE METRES@MT. CARRES
-@SSR@THOUSAND SQUARE METRES@000' MT. CARRES
-@SSU@MILLION SQUARE METRES@MILLIONS METRES CARRES
-@TON@Tons@Tonnes
-@USO@TONS OF STEAM PER HOUR@TONNES VAPEUR/HR
-@WKO@CARATS@CARATS
-@WKR@THOUSAND CARATS@000' CARATS
-@WSI@GRAMMES@GRAMMES
-@WSL@KILOGRAMS@KILOGRAMMES
-@WSO@METRIC TONS@TONNES
-@WSR@THOUSAND METRIC TONS@000' TONNES
-@WSU@MILLION METRIC TONS@MILLION TONNES
-@XXO@DWT@DWT
-@XXR@000' DWT@000' DWT
-@YRS@Year@An
 
-
-
+@A@Other IOs@Autres OI
+@B@Industry associations@Associations industrielles
+@C@Universities, research centers@Universités, centres de recherche
+@D@Consultants@Consultants
+@E@Newspapers, magazines@Journaux, magazines
+@F@Interviews@Entretiens
+@G@Other sources and mixture of data source@Autres sources et mélange de source de données
+@H@MDA (Ministry, Department, Agencies)@MO (Ministères et organismes)
 

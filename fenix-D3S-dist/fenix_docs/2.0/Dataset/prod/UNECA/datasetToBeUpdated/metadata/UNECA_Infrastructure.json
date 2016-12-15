@@ -1,0 +1,589 @@
+{
+  "creationDate": 1443736800000,
+  "title": {
+    "EN": "Infrastructure"
+  },
+  "characterSet": {
+    "extendedName": {
+      "EN": "Internet Assigned Numbers Authority codelist"
+    },
+    "codes": [
+      {
+        "code": "106",
+        "label": {
+          "FR": "UTF-8",
+          "EN": "UTF-8"
+        }
+      }
+    ],
+    "idCodeList": "IANAcharacterSet"
+  },
+  "metadataStandardName": "FENIX",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "version": "1998",
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    },
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "FR": "English",
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "ECA"
+      },
+      "contactInfo": {
+        "phone": "0000"
+      },
+      "roleLabel": {
+        "FR": "Producteur",
+        "EN": "Producer"
+      },
+      "role": "owner"
+    }
+  ],
+  "meInstitutionalMandate": {},
+  "meMaintenance": {
+    "seUpdate": {
+      "updatePeriodicity": {
+        "version": "1.0",
+        "extendedName": {
+          "EN": "FAO Reference Period"
+        },
+        "codes": [
+          {}
+        ],
+        "idCodeList": "FAO_Period"
+      },
+      "updateDate": 1449442800000
+    }
+  },
+  "dsd": {
+    "contextSystem": "uneca",
+    "datasources": [
+      "D3S"
+    ],
+    "columns": [
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Indicator"
+        },
+        "values": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "codes": [
+                {
+                  "code": "021423",
+                  "label": {
+                    "EN": "Roads, paved (% of total roads)"
+                  }
+                },
+                {
+                  "code": "021424",
+                  "label": {
+                    "EN": "Roads, total network"
+                  }
+                },
+                {
+                  "code": "030202",
+                  "label": {
+                    "EN": "Mobile-cellular subscriptions per 1000 inhabitants"
+                  }
+                },
+                {
+                  "code": "030201",
+                  "label": {
+                    "EN": "Fixed-telephone subscriptions per 1000 inhabitants"
+                  }
+                }
+              ],
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "subject": "item",
+        "key": true,
+        "id": "IndicatorCode"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Country"
+        },
+        "values": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "International Standard Organization - Geographic names"
+              },
+              "codes": [
+                {
+                  "code": "NER",
+                  "label": {
+                    "EN": "Niger"
+                  }
+                },
+                {
+                  "code": "CMR",
+                  "label": {
+                    "EN": "Cameroon"
+                  }
+                },
+                {
+                  "code": "NAM",
+                  "label": {
+                    "EN": "Namibia"
+                  }
+                },
+                {
+                  "code": "LSO",
+                  "label": {
+                    "EN": "Lesotho"
+                  }
+                },
+                {
+                  "code": "MUS",
+                  "label": {
+                    "EN": "Mauritius"
+                  }
+                },
+                {
+                  "code": "MOZ",
+                  "label": {
+                    "EN": "Mozambique"
+                  }
+                },
+                {
+                  "code": "MAR",
+                  "label": {
+                    "EN": "Morocco"
+                  }
+                },
+                {
+                  "code": "GMB",
+                  "label": {
+                    "EN": "Gambia"
+                  }
+                },
+                {
+                  "code": "CAF",
+                  "label": {
+                    "EN": "Central African Republic"
+                  }
+                },
+                {
+                  "code": "MLI",
+                  "label": {
+                    "EN": "Mali"
+                  }
+                },
+                {
+                  "code": "GNB",
+                  "label": {
+                    "EN": "Guinea-Bissau"
+                  }
+                },
+                {
+                  "code": "AGO",
+                  "label": {
+                    "EN": "Angola"
+                  }
+                },
+                {
+                  "code": "RWA",
+                  "label": {
+                    "EN": "Rwanda"
+                  }
+                },
+                {
+                  "code": "CIV",
+                  "label": {
+                    "EN": "CÃ´te d'Ivoire"
+                  }
+                },
+                {
+                  "code": "LBY",
+                  "label": {
+                    "EN": "Libyan Arab Jamahiriya"
+                  }
+                },
+                {
+                  "code": "MRT",
+                  "label": {
+                    "EN": "Mauritania"
+                  }
+                },
+                {
+                  "code": "LBR",
+                  "label": {
+                    "EN": "Liberia"
+                  }
+                },
+                {
+                  "code": "MDG",
+                  "label": {
+                    "EN": "Madagascar"
+                  }
+                },
+                {
+                  "code": "MWI",
+                  "label": {
+                    "EN": "Malawi"
+                  }
+                },
+                {
+                  "code": "NGA",
+                  "label": {
+                    "EN": "Nigeria"
+                  }
+                },
+                {
+                  "code": "KEN",
+                  "label": {
+                    "EN": "Kenya"
+                  }
+                },
+                {
+                  "code": "COG",
+                  "label": {
+                    "EN": "Congo"
+                  }
+                },
+                {
+                  "code": "BEN",
+                  "label": {
+                    "EN": "Benin"
+                  }
+                },
+                {
+                  "code": "BDI",
+                  "label": {
+                    "EN": "Burundi"
+                  }
+                },
+                {
+                  "code": "BWA",
+                  "label": {
+                    "EN": "Botswana"
+                  }
+                },
+                {
+                  "code": "ETH",
+                  "label": {
+                    "EN": "Ethiopia"
+                  }
+                },
+                {
+                  "code": "BFA",
+                  "label": {
+                    "EN": "Burkina Faso"
+                  }
+                },
+                {
+                  "code": "GHA",
+                  "label": {
+                    "EN": "Ghana"
+                  }
+                },
+                {
+                  "code": "ERI",
+                  "label": {
+                    "EN": "Eritrea"
+                  }
+                },
+                {
+                  "code": "ZAR"
+                },
+                {
+                  "code": "COM",
+                  "label": {
+                    "EN": "Comoros"
+                  }
+                },
+                {
+                  "code": "GAB",
+                  "label": {
+                    "EN": "Gabon"
+                  }
+                },
+                {
+                  "code": "DJI",
+                  "label": {
+                    "EN": "Djibouti"
+                  }
+                },
+                {
+                  "code": "GIN",
+                  "label": {
+                    "EN": "Guinea"
+                  }
+                },
+                {
+                  "code": "CPV",
+                  "label": {
+                    "EN": "Cape Verde"
+                  }
+                },
+                {
+                  "code": "EGY",
+                  "label": {
+                    "EN": "Egypt"
+                  }
+                },
+                {
+                  "code": "DZA",
+                  "label": {
+                    "EN": "Algeria"
+                  }
+                },
+                {
+                  "code": "ZMB",
+                  "label": {
+                    "EN": "Zambia"
+                  }
+                },
+                {
+                  "code": "SWZ",
+                  "label": {
+                    "EN": "Swaziland"
+                  }
+                },
+                {
+                  "code": "SEN",
+                  "label": {
+                    "EN": "Senegal"
+                  }
+                },
+                {
+                  "code": "STP",
+                  "label": {
+                    "EN": "Sao Tome and Principe"
+                  }
+                },
+                {
+                  "code": "SOM",
+                  "label": {
+                    "EN": "Somalia"
+                  }
+                },
+                {
+                  "code": "SYC",
+                  "label": {
+                    "EN": "Seychelles"
+                  }
+                },
+                {
+                  "code": "SDN",
+                  "label": {
+                    "EN": "Sudan"
+                  }
+                },
+                {
+                  "code": "TGO",
+                  "label": {
+                    "EN": "Togo"
+                  }
+                },
+                {
+                  "code": "TZA",
+                  "label": {
+                    "EN": "United Republic of Tanzania"
+                  }
+                },
+                {
+                  "code": "SLE",
+                  "label": {
+                    "EN": "Sierra Leone"
+                  }
+                },
+                {
+                  "code": "ZWE",
+                  "label": {
+                    "EN": "Zimbabwe"
+                  }
+                },
+                {
+                  "code": "ZAF",
+                  "label": {
+                    "EN": "South Africa"
+                  }
+                },
+                {
+                  "code": "TUN",
+                  "label": {
+                    "EN": "Tunisia"
+                  }
+                },
+                {
+                  "code": "UGA",
+                  "label": {
+                    "EN": "Uganda"
+                  }
+                },
+                {
+                  "code": "GNQ",
+                  "label": {
+                    "EN": "Equatorial Guinea"
+                  }
+                },
+                {
+                  "code": "TCD",
+                  "label": {
+                    "EN": "Chad"
+                  }
+                }
+              ],
+              "idCodeList": "ISO3"
+            }
+          ]
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "International Standard Organization - Geographic names"
+              },
+              "idCodeList": "ISO3"
+            }
+          ]
+        },
+        "subject": "geo",
+        "key": true,
+        "id": "CountryCode"
+      },
+      {
+        "dataType": "year",
+        "title": {
+          "EN": "Year"
+        },
+        "values": {
+          "timeList": [
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2000,
+            2001,
+            2002
+          ]
+        },
+        "subject": "time",
+        "key": true,
+        "id": "Year"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": "value",
+        "key": false,
+        "id": "Value"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Unit of measurement"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA - Unit of measure"
+              },
+              "idCodeList": "UNECA_UnitMeasure"
+            }
+          ]
+        },
+        "subject": "um",
+        "key": false,
+        "id": "UnitCode"
+      }
+    ]
+  },
+  "uid": "UNECA_Infrastructure",
+  "meContent": {
+    "seCoverage": {
+      "coverageSectors": {
+        "extendedName": {
+          "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+        },
+        "codes": [
+          {
+            "code": "0214",
+            "label": {
+              "EN": "Transport"
+            }
+          }
+        ],
+        "idCodeList": "UNECA_ClassificationOfActivities"
+      },
+      "coverageTime": {
+        "from": 1447714800000,
+        "to": 1464559200000
+      },
+      "coverageGeographic": {
+        "version": "2014",
+        "extendedName": {
+          "EN": "Global administrative unit layer country level"
+        },
+        "codes": [
+          {
+            "code": "999900001"
+          }
+        ],
+        "idCodeList": "GAUL0"
+      }
+    },
+    "resourceRepresentationTypeLabel": {
+      "EN": "Dataset"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "language": {
+    "version": "1998",
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    },
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "FR": "English",
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  }
+}

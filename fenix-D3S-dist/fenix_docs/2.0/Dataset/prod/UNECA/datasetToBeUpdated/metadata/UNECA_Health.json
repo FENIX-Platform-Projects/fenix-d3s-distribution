@@ -1,0 +1,333 @@
+{
+  "title": {
+    "EN": "Health"
+  },
+  "noDataValue": "...",
+  "characterSet": {
+    "extendedName": {
+      "EN": "Internet Assigned Numbers Authority codelist"
+    },
+    "codes": [
+      {
+        "code": "106",
+        "label": {
+          "FR": "UTF-8",
+          "EN": "UTF-8"
+        }
+      }
+    ],
+    "idCodeList": "IANAcharacterSet"
+  },
+  "metadataStandardName": "FENIX",
+  "metadataStandardVersion": "1.0",
+  "metadataLanguage": {
+    "version": "1998",
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    },
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "FR": "English",
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "ECA"
+      },
+      "contactInfo": {
+        "address": "http://www.uneca.org/acs"
+      },
+      "specify": {
+        "EN": "Civil registration systems, household surveys, population censuses, sample registration systems or UN Inter-agency Group for Child Mortality Estimation."
+      },
+      "organizationUnit": {
+        "EN": "African Centre for Statistics"
+      },
+      "roleLabel": {
+        "FR": "Producteur",
+        "EN": "Producer"
+      },
+      "role": "owner"
+    }
+  ],
+  "meInstitutionalMandate": {},
+  "meMaintenance": {
+    "seUpdate": {
+      "updatePeriodicity": {
+        "version": "1.0",
+        "extendedName": {
+          "EN": "FAO Reference Period"
+        },
+        "codes": [
+          {}
+        ],
+        "idCodeList": "FAO_Period"
+      },
+      "updateDate": 1479205051103
+    }
+  },
+  "meStatisticalProcessing": {
+    "seDataSource": {
+      "sePrimaryDataCollection": {
+        "dataCollection": {
+          "EN": "Civil registration systems, household surveys, population census, sample or sentinel registration systems, special studies or Trends in Maternal Mortality by WHO, UNICEF, UNFPA, the World Bank and the United Nations Population Division. Civil registration systems, household surveys, population censuses, sample registration systems or UN Inter-agency Group for Child Mortality Estimation. Civil registration systems, household surveys, population censuses, sample registration systems or UN Inter-agency Group for Child Mortality Estimation."
+        },
+        "dataCollector": {
+          "organization": {
+            "EN": "UN Inter-agency groups"
+          },
+          "contactInfo": {},
+          "organizationUnit": {
+            "EN": "WHO, UNICEF, UNFPA"
+          }
+        },
+        "typeOfCollection": {
+          "version": "1.0",
+          "extendedName": {
+            "EN": "Type or usage of  the data collection"
+          },
+          "codes": [
+            {}
+          ],
+          "idCodeList": "FAOSTAT_Collection"
+        },
+        "collectionPeriodicity": {
+          "version": "1.0",
+          "extendedName": {
+            "EN": "FAO Reference Period"
+          },
+          "codes": [
+            {}
+          ],
+          "idCodeList": "FAO_Period"
+        }
+      }
+    },
+    "seDataCompilation": {
+      "dataAdjustment": {
+        "version": "1.1",
+        "extendedName": {
+          "EN": "Adjustment code list (ESTAT)"
+        },
+        "codes": [
+          {}
+        ],
+        "idCodeList": "CL_ADJUSTMENT"
+      }
+    }
+  },
+  "dsd": {
+    "contextSystem": "uneca",
+    "datasources": [
+      "D3S"
+    ],
+    "columns": [
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Topic"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2.0",
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "key": false,
+        "id": "TopicCode"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "version": "2.0",
+              "extendedName": {
+                "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+              },
+              "idCodeList": "UNECA_ClassificationOfActivities"
+            }
+          ]
+        },
+        "subject": "item",
+        "key": true,
+        "id": "IndicatorCode"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Country"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA Country Codes"
+              },
+              "idCodeList": "UNECA_ISO3"
+            }
+          ]
+        },
+        "subject": "geo",
+        "key": true,
+        "id": "CountryCode"
+      },
+      {
+        "dataType": "year",
+        "title": {
+          "EN": "Year"
+        },
+        "subject": "time",
+        "key": true,
+        "id": "Year"
+      },
+      {
+        "dataType": "number",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": "value",
+        "key": false,
+        "id": "Value"
+      },
+      {
+        "dataType": "code",
+        "title": {
+          "EN": "Unit of measurement"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "UNECA - Unit of measure"
+              },
+              "idCodeList": "UNECA_UnitMeasure"
+            }
+          ]
+        },
+        "subject": "um",
+        "key": false,
+        "id": "Unit"
+      }
+    ]
+  },
+  "uid": "UNECA_Health",
+  "meContent": {
+    "description": {
+      "EN": "Maternal mortality ratio, Under five mortality rate (both sexes) per 1,000, and Infant mortality rate (both sexes) per 1,000"
+    },
+    "seReferencePopulation": {
+      "statisticalPopulation": {
+        "EN": "Country population"
+      },
+      "referencePeriod": {
+        "version": "1.0",
+        "extendedName": {
+          "EN": "FAO Reference Period"
+        },
+        "codes": [
+          {
+            "code": "9",
+            "label": {
+              "FR": "An",
+              "EN": "Year"
+            }
+          }
+        ],
+        "idCodeList": "FAO_Period"
+      },
+      "referenceArea": {
+        "version": "1.0",
+        "extendedName": {
+          "EN": "GAUL reference area"
+        },
+        "codes": [
+          {
+            "code": "ADM0",
+            "label": {
+              "FR": "Frontières internationales ou nationales",
+              "EN": "International or country boundaries"
+            }
+          }
+        ],
+        "idCodeList": "GAUL_ReferenceArea"
+      }
+    },
+    "seCoverage": {
+      "coverageSectors": {
+        "extendedName": {
+          "EN": "UNECA Classification of Activities -Domains, topics and indicators"
+        },
+        "codes": [
+          {
+            "code": "0103",
+            "label": {
+              "EN": "Health"
+            }
+          }
+        ],
+        "idCodeList": "UNECA_ClassificationOfActivities"
+      },
+      "coverageSectorsDetails": {
+        "EN": "Health"
+      },
+      "coverageTime": {
+        "from": 630025200000,
+        "to": 1419202800000
+      },
+      "coverageGeographic": {
+        "version": "2014",
+        "extendedName": {
+          "EN": "Global administrative unit layer country level"
+        },
+        "codes": [
+          {
+            "code": "999900001"
+          }
+        ],
+        "idCodeList": "GAUL0"
+      }
+    },
+    "keywords": [
+      "Infant mortality; Health; Maternal health; Maternal deaths; Health; Child mortality; Under-five mortality; "
+    ],
+    "statisticalConceptsDefinitions": {
+      "EN": "The annual number of female deaths from any cause related to or aggravated by pregnancy or its management (excluding accidental or incidental causes) during pregnancy and childbirth or within 42 days of termination of pregnancy, irrespective of the duration and site of the pregnancy, expressed per 100 000 live births, for a specified time period. \n\nThe under-five mortality rate (U5MR) is the probability for a child born in a specified year to die before reaching the age of five, if subject to current age-specific mortality rates, expressed as number of deaths per 1,000 live births. The indicator is calculated as equal to the number of deaths of children under five in a calendar year divided by the number of live births in the same year and multiplied by 1,000.\n\nThe infant mortality rate (IMR) is the probability that a child born in a specified year will die before reaching the age of one, if subject to current age-specific mortality rates, expressed in terms of deaths per 1,000 live births. The indicator is calculated by dividing the number of deaths of infants under one year of age in a calendar year by the number of live births in the same year and multiplied by 1,000.\n"
+    },
+    "resourceRepresentationTypeLabel": {
+      "EN": "Dataset"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "language": {
+    "version": "1998",
+    "extendedName": {
+      "EN": "International Standard Organization - Language"
+    },
+    "codes": [
+      {
+        "code": "eng",
+        "label": {
+          "FR": "English",
+          "EN": "English"
+        }
+      }
+    ],
+    "idCodeList": "ISO639-2"
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "metadata" : {
+    "creationDate" : 1378504800000,
+    "title" : {
+      "EN" : "Pesticides - Export Value"
+    },
+    "languageDetails" : {
+      "EN" : ""
+    },
+    "characterSet" : {
+      "extendedName" : {
+        "EN" : "Internet Assigned Numbers Authority codelist"
+      },
+      "codes" : [ {
+        "code" : "106",
+        "label" : {
+          "FR" : "UTF-8",
+          "EN" : "UTF-8"
+        }
+      } ],
+      "idCodeList" : "IANAcharacterSet"
+    },
+    "metadataStandardName" : "FENIX",
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      },
+      "codes" : [ {
+        "code" : "eng",
+        "label" : {
+          "FR" : "English",
+          "EN" : "English"
+        }
+      } ],
+      "idCodeList" : "ISO639-2"
+    },
+    "contacts" : [ {
+      "position" : {
+        "EN" : ""
+      },
+      "organization" : {
+        "EN" : "Central Statitical Office"
+      },
+      "contactInfo" : {
+        "phone" : "",
+        "emailAddress" : "mulenga01@yahoo.com",
+        "hoursOfService" : {
+          "EN" : ""
+        },
+        "contactInstruction" : {
+          "EN" : ""
+        },
+        "address" : ""
+      },
+      "pointOfContact" : "mulenga",
+      "specify" : {
+        "EN" : ""
+      },
+      "organizationUnit" : {
+        "EN" : "External Trade Section"
+      },
+      "roleLabel" : {
+        "FR" : "Producteur",
+        "EN" : "Producer"
+      },
+      "role" : "owner"
+    } ],
+    "meInstitutionalMandate" : {
+      "legalActsAgreements" : {
+        "EN" : ""
+      },
+      "institutionalMandateDataSharing" : {
+        "EN" : ""
+      }
+    },
+    "meAccessibility" : {
+      "seDataDissemination" : {
+        "seDistribution" : { },
+        "seReleasePolicy" : {
+          "releaseCalendar" : {
+            "EN" : ""
+          },
+          "embargoTime" : {
+            "from" : -3600000,
+            "to" : 1479942000000
+          }
+        }
+      },
+      "seClarity" : {
+        "clarity" : {
+          "EN" : ""
+        },
+        "metadataCompletenessRate" : 100
+      },
+      "seConfidentiality" : {
+        "confidentialityPolicy" : {
+          "EN" : ""
+        },
+        "confidentialityDataTreatment" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meDataQuality" : {
+      "qualityManagement" : {
+        "EN" : ""
+      },
+      "qualityAssessment" : {
+        "EN" : ""
+      },
+      "qualityAssurance" : {
+        "EN" : ""
+      },
+      "seAccuracy" : {
+        "accuracyNonSampling" : {
+          "EN" : ""
+        },
+        "accuracySampling" : {
+          "EN" : ""
+        },
+        "completeness" : {
+          "EN" : ""
+        }
+      },
+      "seDataRevision" : {
+        "revisionPolicy" : {
+          "EN" : ""
+        },
+        "revisionPractice" : {
+          "EN" : ""
+        }
+      },
+      "seComparability" : {
+        "comparabilityGeographical" : {
+          "EN" : ""
+        },
+        "comparabilityTime" : {
+          "EN" : ""
+        },
+        "coherenceIntern" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meMaintenance" : {
+      "seUpdate" : {
+        "updateDate" : 1479746160000
+      },
+      "maintenanceAgency" : {
+        "EN" : ""
+      }
+    },
+    "meStatisticalProcessing" : {
+      "seDataSource" : {
+        "sePrimaryDataCollection" : {
+          "dataCollection" : {
+            "EN" : ""
+          },
+          "samplingProcedure" : {
+            "EN" : ""
+          }
+        },
+        "seSecondaryDataCollection" : {
+          "organization" : {
+            "EN" : ""
+          },
+          "rawDataDescription" : {
+            "EN" : ""
+          },
+          "dataCollection" : {
+            "EN" : ""
+          }
+        }
+      },
+      "seDataCompilation" : {
+        "missingData" : {
+          "EN" : ""
+        },
+        "weights" : {
+          "EN" : ""
+        },
+        "aggregationProcessing" : {
+          "EN" : ""
+        },
+        "dataAdjustmentDetails" : {
+          "EN" : ""
+        },
+        "indexType" : {
+          "EN" : ""
+        }
+      },
+      "seDataValidation" : {
+        "dataValidationIntermediate" : {
+          "EN" : ""
+        },
+        "dataValidationOutput" : {
+          "EN" : ""
+        },
+        "dataValidationSource" : {
+          "EN" : ""
+        }
+      }
+    },
+    "dsd" : {
+      "contextSystem" : "cstat_zmb",
+      "datasources" : [ "D3S" ],
+      "rid" : "66_3624",
+      "columns" : [ {
+        "dataType" : "year",
+        "title" : {
+          "EN" : "Year"
+        },
+        "subject" : "time",
+        "key" : true,
+        "id" : "TIME"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Item"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "full",
+            "extendedName" : {
+              "EN" : "Harmonized System"
+            },
+            "idCodeList" : "HS"
+          } ]
+        },
+        "subject" : "item",
+        "key" : true,
+        "id" : "ITEM"
+      }, {
+        "dataType" : "number",
+        "title" : {
+          "EN" : "Value"
+        },
+        "subject" : "value",
+        "id" : "VALUE"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Flag"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "1.0",
+            "extendedName" : {
+              "EN" : "Flag"
+            },
+            "idCodeList" : "Flag"
+          } ]
+        },
+        "subject" : "flag",
+        "id" : "FLAG"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Area"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "2014",
+            "extendedName" : {
+              "EN" : "Global administrative unit layer"
+            },
+            "idCodeList" : "GAUL"
+          } ]
+        },
+        "subject" : "geo",
+        "key" : true,
+        "id" : "GEO"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Unit"
+        },
+        "domain" : {
+          "codes" : [ {
+            "extendedName" : {
+              "EN" : "Units of measurement"
+            },
+            "idCodeList" : "CountrySTAT_UM"
+          } ]
+        },
+        "subject" : "um",
+        "id" : "UM"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "EN" : "Indicator"
+        },
+        "domain" : {
+          "codes" : [ {
+            "extendedName" : {
+              "EN" : "CountrySTAT Indicators"
+            },
+            "idCodeList" : "CountrySTAT_Indicators"
+          } ]
+        },
+        "subject" : "indicator",
+        "key" : true,
+        "id" : "INDICATOR"
+      } ]
+    },
+    "rid" : "12_2063",
+    "uid" : "251CPE020",
+    "meContent" : {
+      "description" : {
+        "EN" : ""
+      },
+      "seReferencePopulation" : {
+        "statisticalPopulation" : {
+          "EN" : ""
+        },
+        "statisticalUnit" : {
+          "EN" : ""
+        },
+        "referencePeriod" : {
+          "version" : "1.0",
+          "extendedName" : {
+            "EN" : "FAO Reference Period"
+          },
+          "codes" : [ {
+            "code" : "9",
+            "label" : {
+              "FR" : "An",
+              "EN" : "Year"
+            }
+          } ],
+          "idCodeList" : "FAO_Period"
+        },
+        "referenceArea" : {
+          "version" : "1.0",
+          "extendedName" : {
+            "EN" : "GAUL reference area"
+          },
+          "codes" : [ {
+            "code" : "ADM0",
+            "label" : {
+              "FR" : "Frontières internationales ou nationales",
+              "EN" : "International or country boundaries"
+            }
+          } ],
+          "idCodeList" : "GAUL_ReferenceArea"
+        }
+      },
+      "seCoverage" : {
+        "coverageSectors" : {
+          "extendedName" : {
+            "EN" : "Classification of CountrySTAT indicator -National core"
+          },
+          "codes" : [ {
+            "code" : "T",
+            "label" : {
+              "FR" : "Commerce",
+              "EN" : "Trade"
+            }
+          } ],
+          "idCodeList" : "CSTAT_Core"
+        },
+        "coverageSectorsDetails" : {
+          "EN" : ""
+        },
+        "coverageTime" : {
+          "from" : -3600000,
+          "to" : 1479942000000
+        },
+        "coverageGeographic" : {
+          "version" : "2014",
+          "extendedName" : {
+            "EN" : "Global administrative unit layer country level"
+          },
+          "codes" : [ {
+            "code" : "270",
+            "label" : {
+              "PT" : "Zâmbia",
+              "FR" : "Zambie",
+              "AR" : "زامبيا",
+              "EN" : "Zambia",
+              "RU" : "Замбия",
+              "ES" : "Zambia",
+              "ZH" : "赞比亚"
+            }
+          } ],
+          "idCodeList" : "GAUL0"
+        }
+      },
+      "keywords" : [ "" ],
+      "statisticalConceptsDefinitions" : {
+        "EN" : ""
+      },
+      "resourceRepresentationTypeLabel" : {
+        "EN" : "Dataset"
+      },
+      "resourceRepresentationType" : "dataset"
+    },
+    "language" : {
+      "version" : "1998",
+      "extendedName" : {
+        "EN" : "International Standard Organization - Language"
+      },
+      "codes" : [ {
+        "code" : "eng",
+        "label" : {
+          "FR" : "English",
+          "EN" : "English"
+        }
+      } ],
+      "idCodeList" : "ISO639-2"
+    }
+  },
+  "data" : [ [ 2006, "380891", 1331.135, null, "270", "0104", "0302" ], [ 2006, "380850", 7434.342, null, "270", "0104", "0302" ], [ 2005, "380899", 277.4, null, "270", "0104", "0302" ], [ 2005, "380893", 1302.564, null, "270", "0104", "0302" ], [ 2005, "380892", 458.554, null, "270", "0104", "0302" ], [ 2005, "380891", 1127.945, null, "270", "0104", "0302" ], [ 2005, "380850", 3264.353, null, "270", "0104", "0302" ], [ 2009, "380891", 0.0, null, "270", "0104", "0302" ], [ 2009, "380892", 1.608, null, "270", "0104", "0302" ], [ 2008, "380899", 0.0, null, "270", "0104", "0302" ], [ 2009, "380850", 4949.474, null, "270", "0104", "0302" ], [ 2008, "380892", 14.269, null, "270", "0104", "0302" ], [ 2008, "380893", 0.0, null, "270", "0104", "0302" ], [ 2008, "380850", 4772.607, null, "270", "0104", "0302" ], [ 2008, "380891", 0.0, null, "270", "0104", "0302" ], [ 2007, "380893", 59.889, null, "270", "0104", "0302" ], [ 2007, "380899", 18.801, null, "270", "0104", "0302" ], [ 2007, "380891", 109.493, null, "270", "0104", "0302" ], [ 2007, "380892", 53.796, null, "270", "0104", "0302" ], [ 2006, "380899", 479.227, null, "270", "0104", "0302" ], [ 2007, "380850", 3841.561, null, "270", "0104", "0302" ], [ 2006, "380892", 530.135, null, "270", "0104", "0302" ], [ 2006, "380893", 4893.974, null, "270", "0104", "0302" ], [ 2009, "380899", 0.0, null, "270", "0104", "0302" ], [ 2009, "380893", 0.25, null, "270", "0104", "0302" ] ],
+  "size" : 25
+}
