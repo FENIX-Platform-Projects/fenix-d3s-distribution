@@ -64,6 +64,26 @@
     }
   },
   {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "commodityclass",
+        "element",
+        "country",
+        "startYear",
+        "um"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
     "name": "order",
     "parameters": {
       "startYear": "ASC"

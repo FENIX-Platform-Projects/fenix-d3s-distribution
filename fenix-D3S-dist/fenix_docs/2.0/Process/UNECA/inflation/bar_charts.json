@@ -16,18 +16,6 @@
       ],
       "rows": {
 
-        "IndicatorCode": {
-          "codes": [
-            {
-              "uid": "UNECA_ClassificationOfActivities",
-              "version":"2.0",
-              "codes": [
-                "02110114"
-
-              ]
-            }
-          ]
-        },
         "CountryCode": {
           "codes": [
             {

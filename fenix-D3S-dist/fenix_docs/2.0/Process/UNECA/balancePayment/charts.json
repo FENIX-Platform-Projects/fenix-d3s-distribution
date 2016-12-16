@@ -7,41 +7,12 @@
     }
   ],
   "parameters": {
-    "columns": [
-      "IndicatorCode",
-      "Year",
-      "Value",
-      "um"
-    ],
     "rows": {
 
-      "IndicatorCode": {
-        "codes": [
-          {
-            "uid": "UNECA_ClassificationOfActivities",
-            "version":"2.0",
-            "codes": [
-              "02020502"
-
-            ]
-          }
-        ]
-      },
-
-      "CountryCode": {
-        "codes": [
-          {
-            "uid": "UNECA_ISO3",
-            "codes": [
-              "AGO"
-            ]
-          }
-        ]
-      },
       "Year": {
         "time": [
           {
-            "from": 2000,
+            "from": 2011,
             "to": 2013
           }
         ]

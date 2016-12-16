@@ -1,79 +1,622 @@
 {
-  "creationDate": 1479719163779,
-  "title": {
-    "EN": "Burkina Faso - HarvestPlus/IRD, 2010"
+  "title" : {
+    "EN" : "Food consumption and iron status survey in two provinces of rural Burkina Faso"
   },
-  "dsd": {
-    "rid": "66_3567"
-  },
-  "uid": "000042BUR201002",
-  "meContent": {
-    "resourceRepresentationType": "dataset",
-    "seCoverage": {
-      "coverageTime": {
-        "from": 1478214000000,
-        "to": 1478214000000
-      },
-      "coverageGeographic": {
-        "version": "2014",
-        "codes": [
-          {
-            "code": "42",
-            "label": {
-              "PT": "Burkina Faso",
-              "FR": "Burkina Faso",
-              "AR": "بوركينا فاسو",
-              "EN": "Burkina Faso",
-              "RU": "Буркина-Фасо",
-              "ES": "Burkina Faso",
-              "ZH": "布基纳法索"
-            }
+
+  "uid" : "000042BUR201001",
+  "meContent" : {
+    "description" : {
+      "EN" : "In Burkina Faso very little is known about levels of vitamin A, iron, and zinc deficiencies. The lack of detailed knowledge about food and nutrients intake and deficiency levels is a substantial obstacle to the design, implementation and evaluation of effective food-based interventions such as biofortification. The present study, a preliminary study of a sorghum biofortification project, was conducted to contribute to fill that knowledge gap in two rural provinces of Burkina Faso.\n\nIts objectives were: (i) to provide reliable information on sorghum consumption, micronutrient intakes and micronutrient deficiencies among women of reproductive age and their preschool children, in order to better inform sorghum micronutrient content breeding targets and future interventions; and (ii) to investigate the relationship between biomarkers of status and dietary intakes of iron, zinc and vitamin A among the study subjects in order to better inform the evaluation design of future biofortification interventions.\n\nThis work is part of the Grand Challenges in Global Health (#9), an initiative of the Bill and Melinda Gates Foundation through a grant to the International Food Policy Research Institute; with additional funds from the Institut de Recherche pour le Développement."
+    },
+    "resourceRepresentationTypeLabel" : {
+      "EN" : "Dataset"
+    },
+    "resourceRepresentationType" : "dataset",
+    "keywords" : [ "diet, gender, women, seasons, nutrient intake, Burkina Faso, West Africa, Africa South of Sahara, Africa, food consumption, iron" ],
+    "seReferencePopulation" : {
+      "referenceArea" : {
+        "codes" : [ {
+          "code" : "2",
+          "label" : {
+            "EN" : "Sub-national"
           }
-        ],
-        "idCodeList": "GAUL",
-        "extendedName": {
-          "EN": "Global administrative unit layer"
+        } ],
+        "idCodeList" : "GIFT_ReferenceArea",
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, area of reference"
         }
       }
     },
-    "resourceRepresentationTypeLabel": {
-      "EN": "Dataset"
-    }
-  },
-  "contacts": [
-    {
-      "organization": {
-        "EN": "WHO-FAO"
+    "seCoverage" : {
+      "coverageSectors" : {
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "Only rural"
+          }
+        } ],
+        "idCodeList" : "GIFT_CoverageSector",
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, coverage sectors"
+        }
       },
-      "role": "distributor",
-      "contactInfo": {
-        "emailAddress": "pauline.allemand@gmail.com"
+      "coverageSectorsDetails" : {
+        "EN" : ""
       },
-      "organizationUnit": {
-        "EN": "Institut de Recherche pour le Développement"
+      "coverageTime" : {
+        "from" : 1279144800000,
+        "to" : 1292367600000
       },
-      "roleLabel": {
-        "FR": "Distributeur",
-        "EN": "Distributor"
+      "coverageGeographic" : {
+        "version" : "2014",
+        "codes" : [ {
+          "code" : "42",
+          "label" : {
+            "PT" : "Burkina Faso",
+            "FR" : "Burkina Faso",
+            "AR" : "بوركينا فاسو",
+            "EN" : "Burkina Faso",
+            "RU" : "Буркина-Фасо",
+            "ES" : "Burkina Faso",
+            "ZH" : "布基纳法索"
+          }
+        } ],
+        "idCodeList" : "GAUL0",
+        "extendedName" : {
+          "EN" : "Global administrative unit layer country level"
+        }
       }
     }
-  ],
-  "additions": {
-    "sampledPopulationInformation": {
-      "AssessmentIntake":{
-        "EN":"test",
-        "FR":"test2"
+  },
+  "languageDetails" : {
+    "EN" : ""
+  },
+  "contacts" : [ {
+    "position" : {
+      "EN" : ""
+    },
+    "organization" : {
+      "EN" : "HarvestPlus, International Food Policy Research Institute (IFPRI)"
+    },
+    "contactInfo" : {
+      "phone" : "",
+      "emailAddress" : "",
+      "contactInstruction" : {
+        "EN" : ""
+      },
+      "address" : ""
+    },
+    "pointOfContact" : "[object Object]",
+    "specify" : {
+      "EN" : ""
+    },
+    "organizationUnit" : {
+      "EN" : ""
+    }
+  }, {
+    "position" : {
+      "EN" : ""
+    },
+    "organization" : {
+      "EN" : "Institut de Recherche en Sciences de la Santé (IRSS)"
+    },
+    "contactInfo" : {
+      "phone" : "",
+      "emailAddress" : "",
+      "contactInstruction" : {
+        "EN" : ""
+      },
+      "address" : ""
+    },
+    "pointOfContact" : "[object Object]",
+    "specify" : {
+      "EN" : ""
+    },
+    "organizationUnit" : {
+      "EN" : ""
+    }
+  }, {
+    "position" : {
+      "EN" : ""
+    },
+    "organization" : {
+      "EN" : "Institut de Recherche pour le Développement (IRD)"
+    },
+    "contactInfo" : {
+      "phone" : "",
+      "emailAddress" : "fao-who-gift@fao.org",
+      "contactInstruction" : {
+        "EN" : ""
+      },
+      "address" : ""
+    },
+    "pointOfContact" : "Yves Martin-Prével",
+    "specify" : {
+      "EN" : ""
+    },
+    "organizationUnit" : {
+      "EN" : ""
+    }
+  } ],
+  "additions" : {
+    "DataAnalysisInformation" : {
+      "ExclusionRecruitment" : {
+        "EN" : "Eligible households were those living permanently in the village, having a pair of ‘mother + child aged 36-59 months’ and agreeing to participate in the study. There were no exclusion criteria. The desirable number of households was then selected for the survey, among the eligible ones, using a random number digits table."
+      },
+      "ExclusionDataCleaning" : {
+        "EN" : "The cut-off points described in the method section to define over/under reporters according to observed energy intakes were applied on all 24H recalls. This led to the exclusion of 106 recalls among children (8.1%) and 53 recalls among mothers (4.1%), all seasons and provinces combined, including repetitions."
+      },
+      "MethodReporting" : {
+        "EN" : "Outliers (over or under-reporters) were identified using an adaptation of the arbitrary threshold method proposed by Willett."
+      },
+      "ReportingIndividualLevel" : {
+        "underReportingPercentage" : 0,
+        "overReportingPercentage" : 0
+      },
+      "ReportingGroupLevel" : {
+        "underReporting" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        },
+        "overReporting" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        }
+      },
+      "DataAlreadyCorrected" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "AssessmentIntake" : {
+        "EN" : "The calculation of ‘usual intakes’ for energy and all nutrients (probability approach) using intra- and inter-subjects variances, estimated from those subjects who had a repeated 24H recall, was performed once outliers were removed, at each season and on the whole sample of mothers or children. From these usual intakes for each nutrient, the probability of adequacy (PA) of the intake was calculated using the EAR and their distribution in the population (see Table 2). As this approach can only be applied to nutrients with a symmetric distribution, the PA for iron was calculated using values given in Table A 7 which were adapted from IOM (2000) to give PA for various levels of iron intakes for two different levels of bioavailability. Considering the dietary pattern encountered in Burkina Faso, the lowest bioavailability was assumed for iron and zinc. Usual intakes and PA were calculated using an adaptation of the STATA syntax developed for the needs of the Women’s Dietary Diversity Project (WDDP) further developed in Arimond et al., 2008."
       }
-
+    },
+    "sampledPopulationInformation" : {
+      "sampleSize" : 960,
+      "statisticalPopulation" : {
+        "idCodeList" : "GIFT_StatisticalPopulation",
+        "codes" : [ {
+          "code" : "2",
+          "label" : {
+            "EN" : "Specific population"
+          }
+        } ]
+      },
+      "PopulationGroups" : [ {
+        "PopulationGroupsList" : {
+          "EN" : "Women of reproductive age (sample size: 480)"
+        }
+      }, {
+        "PopulationGroupsList" : {
+          "EN" : "Children aged 36–59 months (sample size: 480)"
+        }
+      } ],
+      "PurposedlyGroupsDetails" : {
+        "EN" : ""
+      },
+      "MinumumAge" : 3,
+      "MaximumAge" : 59
+    },
+    "FoodCompositionInformation" : {
+      "FoodComsumption" : {
+        "EN" : "The food composition table (FCT) was a revised version of the one built for a previous study carried out by the Institut de Recherche pour le Développement [16] updated using data from the World Food Dietary Assessment System (University of California at Berkeley International Minilist) and the National Nutrient Database for Standard Reference of the United States Department of Agriculture (Release 20, 2007)."
+      },
+      "MacroDietaryComponents" : {
+        "idCodeList" : "GIFT_Macronutrients",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "Total energy"
+          }
+        }, {
+          "code" : "2",
+          "label" : {
+            "EN" : "Total energy"
+          }
+        }, {
+          "code" : "3",
+          "label" : {
+            "EN" : "Total energy"
+          }
+        }, {
+          "code" : "6",
+          "label" : {
+            "EN" : "Total energy"
+          }
+        } ]
+      },
+      "MicroDietaryComponents" : {
+        "idCodeList" : "GIFT_Micronutrients",
+        "codes" : [ {
+          "code" : "01",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "02",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "03",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "04",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "05",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "06",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "07",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "09",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "11",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "10",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        } ]
+      }
+    },
+    "AdditionalInformation" : {
+      "VariablesAvailability" : {
+        "Age" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "Sex" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "BodyWeight" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "BodyHeight" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "PhysicalActivityLevel" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        },
+        "InterviewDate" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "GeographicalLocalization" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        }
+      },
+      "OtherVariablesAvailability" : {
+        "SocioDemographic" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "EducationLiteracy" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "Ethnicity" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        }
+      }
+    },
+    "SamplingInformation" : {
+      "typeOfCollection" : {
+        "idCodeList" : "GIFT_TypeOfCollection",
+        "codes" : [ {
+          "code" : "5",
+          "label" : {
+            "EN" : "Multistage sampling"
+          }
+        } ]
+      },
+      "SamplingInformationDetails" : {
+        "EN" : ""
+      }
+    },
+    "GeneralInformation" : {
+      "Resource" : [ {
+        "ResourceType" : {
+          "idCodeList" : "GIFT_ResourceType",
+          "codes" : [ {
+            "code" : "3",
+            "label" : {
+              "EN" : "Scientific article"
+            }
+          } ]
+        },
+        "ResourceDetails" : {
+          "EN" : ""
+        },
+        "ResourceCite" : {
+          "EN" : "Martin-Prevel Y, Allemand P, Nikiema L, Ayassou KA, Ouedraogo HG, Moursi M, et al. (2016) Biological Status and Dietary Intakes of Iron, Zinc and Vitamin A among Women and Preschool Children in Rural Burkina Faso. PLoS ONE 11(3): e0146810. doi:10.1371/journal.pone.0146810 / Arsenaut J, Nikiema L, Allemand P, Ayassou K, Lanou H, Moursi M, et al. Seasonal differences in food and nutrients intakes among young children and their mothers in rural Burkina Faso. Journal of Nutritional Science. 2014; 3(e55):1–9. doi: 10.1017/jns.2014.53"
+        },
+        "ResourceLink" : {
+          "EN" : "http://journals.plos.org/plosone/article/asset?id=10.1371/journal.pone.0146810.PDF / https://www.cambridge.org/core/journals/journal-of-nutritional-science/article/seasonal-differences-in-food-and-nutrient-intakes-among-young-children-and-their-mothers-in-rural-burkina-faso/76DF1AD3B7317597E2A4B569D1BB3A01"
+        }
+      }, {
+        "ResourceType" : {
+          "idCodeList" : "GIFT_ResourceType",
+          "codes" : [ {
+            "code" : "3",
+            "label" : {
+              "EN" : "Scientific article"
+            }
+          } ]
+        },
+        "ResourceDetails" : {
+          "EN" : ""
+        },
+        "ResourceCite" : {
+          "EN" : "Arsenault, Joanne E.; Nikiema, Laetitia; Allemand, Pauline; Ayassou, Kossiwavi A.; Lanou, Hermann; Moursi, Mourad; De Moura, Fabiana F.; and Martin-Prevel, Yves. 2014. Seasonal differences in food and nutrient intakes among young children and their mothers in rural Burkina Faso. Journal of Nutritional Science 3: e55. doi: 10.1017/jns.2014.53"
+        },
+        "ResourceLink" : {
+          "EN" : "http://dx.doi.org/10.1017/jns.2014.53 "
+        }
+      } ]
+    },
+    "SurveyInformation" : {
+      "GeographicalCoverageDetails" : {
+        "EN" : "Burkina Faso provinces: Sanguié and Sourou "
+      },
+      "StudyAreasDetails" : {
+        "EN" : ""
+      },
+      "SeasonsCoverage" : {
+        "EN" : "Two rounds of dietary data collection were carried out: one in the lean season (July-August 2010) and one in the post-harvest season (November-December 2010)."
+      },
+      "AssessmentMethod" : {
+        "idCodeList" : "GIFT_DietaryMethod",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "24-hour recall"
+          }
+        } ]
+      },
+      "AssessmentMethodDetails" : {
+        "EN" : ""
+      },
+      "RepeatedDietary" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "SizeOfSample" : {
+        "EN" : "Repeated 24h recalls on 33% of the sample (3 out of 8 individuals)."
+      },
+      "NumberOfRepeated" : 2,
+      "AverageTime" : 2,
+      "SurveyAdministrationMethod" : {
+        "idCodeList" : "GIFT_DataCollection",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "Paper questionnaire"
+          }
+        } ]
+      },
+      "SurveyAdministrationMethodDetails" : {
+        "EN" : ""
+      }
+    },
+    "FoodConsumptionInformation" : {
+      "FoodCoverageTotal" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "FoodCoverageDetails" : {
+        "EN" : ""
+      },
+      "DrinkingWater" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "SupplementInformation" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "no",
+          "label" : {
+            "EN" : "No"
+          }
+        } ]
+      },
+      "SupplementInformationDetails" : {
+        "EN" : ""
+      },
+      "NumberOfFood" : 274,
+      "PortionSizes" : {
+        "EN" : "A pre-determined preferred method of measurement was decided for each food or ingredient (i.e. direct weighing, standardize, calibrated household measures, photos, prices, units, etc.)."
+      },
+      "RecipesManagement" : {
+        "EN" : "Two types of recipes:\n- Individual recipes: raw quantities for all ingredients, including water, as well as the total volume of the mixed dish, had to be estimated on the field by the respondent with the help of the enumerator.\n- Standard recipes: direct observation of cooking methods of these dishes and weighing of all ingredients, as well as recording of weight and volume of the final cooked dish."
+      },
+      "QuantitiesReported" : {
+        "idCodeList" : "GIFT_QuantityReporting",
+        "codes" : [ {
+          "code" : "2",
+          "label" : {
+            "EN" : "Edible amount consumed after processing"
+          }
+        }, {
+          "code" : "4",
+          "label" : {
+            "EN" : "Edible amount consumed after processing"
+          }
+        } ]
+      },
+      "QuantitiesReportedDetails" : {
+        "EN" : ""
+      }
     }
   },
-  "meMaintenance": {
-    "seUpdate": {
-      "updateDate": 1480663561452
-
+  "meInstitutionalMandate" : {
+    "legalActsAgreements" : {
+      "EN" : ""
+    },
+    "institutionalMandateDataSharing" : {
+      "EN" : ""
     }
   },
-  "dsd": {
-    "contextSystem": "gift"
+  "meAccessibility" : {
+    "seConfidentiality" : {
+      "confidentialityStatus" : {
+        "codes" : [ {
+          "code" : "5",
+          "label" : {
+            "EN" : "Data available in FAO/WHO GIFT"
+          }
+        } ],
+        "idCodeList" : "GIFT_ConfidentialityStatus",
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, available confidentiality status"
+        }
+      }
+    }
+  },
+  "meMaintenance" : {
+    "seUpdate" : {
+      "updateDate" : 1481123722350
+    }
+  },
+  "meStatisticalProcessing" : {
+    "seDataSource" : {
+      "sePrimaryDataCollection" : {
+        "samplingProcedure" : {
+          "EN" : "The survey was cross-sectional and targeted women and preschool children in two rural provinces in western and north-western Burkina Faso: the Sanguié province, in the Region of the Centre-Ouest; and the Sourou province, in the Region of the Boucle du Mouhoun. The target population consisted of women and preschool children because of their high micronutrient requirements due to their needs for reproduction and growth, respectively. Children aged 36–59 months were selected because at this age they were consuming family dishes, were unlikely to be breastfed, and were more likely to benefit from biofortification due to greater intake of sorghum than younger children. Mothers were recruited along with their children for convenience. One index child from the target age range was randomly selected from a household. The sampling procedure was a multistage cluster selection process of 240 households in each province (five health areas per province × six clusters per area × eight households per cluster). At the first stage, the health areas were randomly selected proportionally to their population size. Population sizes in health areas and villages were obtained from medical districts' records and were further checked for consistency by comparison of the data available from the National Census of 2006. At the next stage, six clusters (villages) were selected in each health area through the same proportional to size technique. Eligible households were identified in each village through a census of all households. Eligible households were those living permanently in the village and having a mother of a child aged 36–59 months who agreed to participate in the study. Among eligible households, the desirable number of households was then selected for the survey using a random number digits table. Out of 480 households having eligible woman & child pair that were selected for data collection, 478 actually took part in the survey. After analysis of food intakes, over- or under-reporters were excluded (24 women and 32 children). Out of 180 child-mother pairs selected for blood puncture, 166 women and 155 children were actually sampled. Sampling weights for each province were created."
+        }
+      },
+      "seSecondaryDataCollection" : {
+        "organization" : {
+          "EN" : "Institut de Recherche pour le Développement (IRD), and Institut de Recherche en Sciences de la Santé (IRSS)"
+        }
+      }
+    },
+    "seDataCompilation" : {
+      "missingData" : {
+        "EN" : ""
+      },
+      "weights" : {
+        "EN" : ""
+      }
+    }
+  },
+  "language" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "GIFT_ISO639-2",
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    }
   }
 }
