@@ -143,6 +143,10 @@ titleColumnIndex_FR=3
 011@0114@Sorghum
 0114@01141@Sorghum, seed
 0114@01142@Sorghum, other
+0114@01142.01@white sorghum/guinea corn
+0114@01142@red sorghum/guinea corn
+
+
 011@0115@Barley
 0115@01151@Barley, seed
 0115@01152@Barley, other
@@ -184,6 +188,9 @@ titleColumnIndex_FR=3
 0123@01232@Cucumbers and gherkins
 0123@01233@Eggplants (aubergines)
 0123@01234@Tomatoes
+0123@01234.01@beef tomato/beefsteak tomato
+
+
 0123@01235@Pumpkins, squash and gourds
 0123@01239@Other fruit-bearing vegetables
 01239@01239.01@Okra
@@ -205,6 +212,9 @@ titleColumnIndex_FR=3
 01253@01253.02@Onions and shallots, dry (excluding dehydrated)
 0125@01254@Leeks and other alliaceous vegetables
 0125@01259@Other root, bulb and tuberous vegetables, n.e.c.
+0125@01259.02@table beet/garden beet/red beet/golden beet
+
+
 012@0126@Vegetable seeds, except beet seeds
 0126@01260@Vegetable seeds, except beet seeds
 012@0127@Mushrooms and truffles
@@ -306,6 +316,10 @@ titleColumnIndex_FR=3
 014@0142@Groundnuts, excluding shelled
 0142@01421@Groundnuts, seed for planting
 0142@01422@Groundnuts, in shell
+0142@01422.01@small groundnuts
+0142@01422.02@big groundnuts
+
+
 014@0143@Cottonseed
 0143@01431@Cottonseed, seed for planting
 0143@01432@Cottonseed, other
@@ -389,11 +403,20 @@ titleColumnIndex_FR=3
 01@017@Pulses (dried leguminous vegetables)
 017@0170@Pulses (dried leguminous vegetables)
 0170@01701@Beans, dry
+0170@01701.01@lima bean/butter bean/sieva bean
+0170@01701.02@White beans
+0170@01701.03@brown beans
+
+
+
 0170@01702@Broad beans and horse beans, dry
 0170@01703@Chick peas, dry
 0170@01704@Lentils, dry
 0170@01705@Peas, dry
 0170@01706@Cow peas, dry
+0170@01706.01@Voanemba
+
+
 0170@01707@Pigeon peas, dry
 0170@01708@Bambara beans, dry
 0170@01709@Pulses, n.e.c.
@@ -1452,6 +1475,9 @@ titleColumnIndex_FR=3
 24@241@Ethyl alcohol; spirits, liqueurs and other spirituous beverages
 241@2411@Undenatured ethyl alcohol of an alcoholic strength by volume of 80% vol or higher
 2411@24110@Undenatured ethyl alcohol of an alcoholic strength by volume of 80% vol or higher
+2411@24110.01@Alcohol 96 ° (derived from sugarcane)
+
+
 241@2413@Undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol; spirits, liqueurs and other spirituous beverages
 2413@24131@Spirits, liqueurs and other spirituous beverages of an alcoholic strength by volume of about 40% vol
 2413@24139@Other spirituous beverages and undenatured ethyl alcohol of an alcoholic strength by volume of less than 80% vol
