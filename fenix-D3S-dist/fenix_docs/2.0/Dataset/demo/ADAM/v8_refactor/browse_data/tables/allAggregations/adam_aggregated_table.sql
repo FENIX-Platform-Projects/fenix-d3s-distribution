@@ -1,5 +1,5 @@
 
-CREATE TABLE usd_aggregated_table2  as (
+CREATE TABLE usd_aggregated_table  as (
 
 with disbursement as (
 
