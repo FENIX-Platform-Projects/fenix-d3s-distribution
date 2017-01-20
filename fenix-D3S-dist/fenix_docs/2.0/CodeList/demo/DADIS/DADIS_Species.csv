@@ -1,0 +1,155 @@
+{
+    "uid": "DADIS_Species",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "Classification of DAD-IS species"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {"EN":"DAD-IS"},
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,	
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["species", "DADIS", "breeds"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": "06"
+                        }
+                    ],
+                    "idCodeList": "FENIX_Subjects",
+                    "version": "1.0"
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    }
+}
+
+--structure--
+csvSeparator=;
+structure=table
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1
+titleColumnIndex_EN=2
+
+
+
+--data--
+
+s50000083;Alpaca
+s50000017;American Bison
+s50000044;Ass
+s50000084;Bactrian camel
+s50000020;Buffalo
+s50000086;Cassowary
+s50000024;Cattle
+s50000047;Chicken
+s50000087;Chilean Tinamou
+s50000037;Deer
+s50000088;Dog
+s50000090;Dromedary
+s50000089;Dromedary/Bactrian Camel
+s50000003;Duck (domestic)
+s50000091;Duck (domestic)/Muscovy duck
+s50000092;Emu
+s50000035;Goat
+s50000010;Goose (domestic)
+s50000093;Guanaco
+s50000059;Guinea fowl
+s50000094;Guinea pig
+s50000045;Horse
+s50000095;Llama
+s50000033;Muscovy duck
+s50000096;Nandu
+s50000073;Ostrich
+s50000097;Partridge
+s50000098;Peacock
+s50000064;Pheasant
+s50000078;Pig
+s50000039;Pigeon
+s50000099;Quail
+s50000060;Rabbit
+s50000061;Sheep
+s50000051;Swallow
+s50000054;Turkey
+s50000100;Vicuña
+s50000066;Yak (domestic)

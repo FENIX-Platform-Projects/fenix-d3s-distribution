@@ -1,0 +1,39 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "DADIS_BreedsPresence_random"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "breed",
+        "value",
+        "um"
+      ],
+      "rows": {
+        "country": {
+          "codes": [
+            {
+              "uid": "GAUL0", "version" : "2014",
+              "codes": [
+                "115"
+              ]
+            }
+          ]
+        },
+        "species": {
+          "codes": [
+            {
+              "uid": "DADIS_Species",
+              "codes": [
+                "s50000061"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]
