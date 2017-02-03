@@ -206,6 +206,10 @@ titleColumnIndex_FR=3
 0124@01249@Other green leguminous vegetables
 012@0125@Root, bulb or tuberous vegetables
 0125@01251@Carrots and turnips
+0125@01251.01@Carrots
+0125@01251.02@Turnips
+
+
 0125@01252@Green garlic
 0125@01253@Onions
 01253@01253.01@Onions and shallots, green
@@ -403,9 +407,10 @@ titleColumnIndex_FR=3
 01@017@Pulses (dried leguminous vegetables)
 017@0170@Pulses (dried leguminous vegetables)
 0170@01701@Beans, dry
-0170@01701.01@lima bean/butter bean/sieva bean
+0170@01701.04@lima bean/butter bean/sieva bean (les pois du cap)
 0170@01701.02@White beans
 0170@01701.03@brown beans
+0170@01701.05@Antaka (dolique rouge, blanc, ondragne)
 
 
 
@@ -1395,9 +1400,17 @@ titleColumnIndex_FR=3
 2351@23511@Cane sugar
 23511@23511.01@Cane sugar, centrifugal
 23511@23511.02@Cane sugar, non-centrifugal
+23511@23511.03@sucre complet (whole sugar)
+
+
 2351@23512@Beet sugar
 235@2352@Refined sugar
 2352@23520@Refined sugar
+2352@23520.01@sucre brun (brown sugar)
+2352@23520.02@sucre blond (brown sugar)
+
+
+
 235@2353@Refined cane or beet sugar, in solid form, containing added flavouring or colouring matter; maple sugar and maple syrup
 2353@23530@Refined cane or beet sugar, in solid form, containing added flavouring or colouring matter; maple sugar and maple syrup
 235@2354@Molasses
