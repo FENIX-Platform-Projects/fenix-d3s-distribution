@@ -1,0 +1,48 @@
+{
+  "filter": {
+    "dsd.contextSystem" : {
+      "enumeration": [
+        "cstat_afg",
+        "cstat_ago",
+        "cstat_ben",
+        "cstat_bfa",
+        "cstat_cmr",
+        "cstat_civ",
+        "cstat_cog",
+        "cstat_eth",
+        "cstat_gha",
+        "cstat_gab",
+        "cstat_gnb",
+        "cstat_hti",
+        "cstat_ken",
+        "cstat_mdg",
+        "cstat_mwi",
+        "cstat_mli",
+        "cstat_moz",
+        "cstat_ner",
+        "cstat_nga",
+        "cstat_rwa",
+        "cstat_sen",
+        "cstat_tza",
+        "cstat_tgo",
+        "cstat_uga",
+        "cstat_zmb",
+        "cstat_training"
+      ]
+    },
+    "meContent.resourceRepresentationType" : {
+      "enumeration" : ["dataset"]
+    }
+  },
+  "metadata": {
+    "meAccessibility" : {
+      "seConfidentiality" : {
+        "confidentialityStatus" : {
+          "idCodeList" : "CL_CONF_STATUS",
+          "version" : "1.0",
+          "codes" : [ { "code" : "F" } ]
+        }
+      }
+    }
+  }
+}
