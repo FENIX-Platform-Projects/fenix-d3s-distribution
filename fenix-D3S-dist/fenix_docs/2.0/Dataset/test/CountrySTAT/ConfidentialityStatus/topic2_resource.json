@@ -1,0 +1,49 @@
+{
+  "metadata" : {
+    "uid" : "CSTAT_TOPIC_2B",
+    "title" : {
+      "EN" : "Production"
+    },
+    "meContent": {
+      "resourceRepresentationType": "dataset"
+    },
+
+    "dsd" : {
+      "contextSystem" : "cstat_cog",
+      "datasources" : ["D3S"],
+      "columns" : [
+        {
+          "id" : "country",
+          "subject" : "geo",
+          "title" : { "EN" : "Country" },
+          "dataType" : "code",
+          "key" : true,
+          "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014" } ] }
+        },
+        {
+          "id" : "year",
+          "subject" : "time",
+          "title" : { "EN" : "Year" },
+          "dataType" : "year",
+          "key" : true
+        },
+        {
+          "id" : "value",
+          "subject" : "value",
+          "title" : { "EN" : "Value" },
+          "dataType" : "number"
+        }
+      ]
+    }
+  },
+
+  "data" : [
+    ["12", 2000, 1528.3],
+    ["12", 2001, 1500],
+    ["12", 2002, 2128],
+    ["12", 2003, 1428.3],
+    ["12", 2004, 128.3],
+    ["12", 2005, 100028.3]
+  ]
+}
+

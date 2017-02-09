@@ -2,13 +2,9 @@ package org.fao.ess.gift.d3s.cache;
 
 import org.fao.ess.gift.d3s.dto.DatasetType;
 import org.fao.ess.gift.d3s.dto.Items;
-import org.fao.ess.gift.d3s.dto.Queries;
-import org.fao.fenix.d3s.cache.manager.listener.Context;
+import org.fao.fenix.commons.utils.Context;
 import org.fao.fenix.d3s.cache.manager.listener.DatasetAccessInfo;
 import org.fao.fenix.d3s.cache.manager.listener.DatasetCacheListener;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
 
 @Context({"gift_process"})
 public class GIFTProcessCacheListener implements DatasetCacheListener {

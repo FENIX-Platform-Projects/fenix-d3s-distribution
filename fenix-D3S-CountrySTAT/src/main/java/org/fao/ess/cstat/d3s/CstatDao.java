@@ -19,7 +19,7 @@ import javax.inject.Inject;
 import java.util.*;
 
 @ApplicationScoped
-public class CountrySTAT extends WDSDatasetDao {
+public class CstatDao extends WDSDatasetDao {
     @Inject private OrientClient dbClient;
     private boolean initialized = false;
 
