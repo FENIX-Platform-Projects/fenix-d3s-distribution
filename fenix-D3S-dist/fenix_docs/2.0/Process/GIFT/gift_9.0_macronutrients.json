@@ -55,6 +55,23 @@
   },
 
   {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "absolute_value",
+        "title": {
+          "EN": "Absolute value"
+        }
+      },
+      "value": {
+        "keys": [ "1 = 1" ],
+        "values": [ "value" ]
+      }
+    }
+  },
+
+  {
     "name": "asTable"
   },
 
@@ -80,7 +97,7 @@
           ]
         }
       },
-      "value": "perc"
+      "value": "kcal"
     }
   }
 

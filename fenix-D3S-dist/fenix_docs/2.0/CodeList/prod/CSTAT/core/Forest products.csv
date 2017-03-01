@@ -61,7 +61,7 @@
 
     "meContent": {
         "resourceRepresentationType": "codelist",
-        "keywords": ["forestry, forest"],
+        "keywords": ["forestry", "forest"],
         "description": null,
         "statisticalConceptsDefinitions": null,
         "seCoverage": {
@@ -110,6 +110,7 @@
 }
 
 --structure--
+
 csvSeparator=@
 structure=tree
 dateFormat=dd/mm/yyyy

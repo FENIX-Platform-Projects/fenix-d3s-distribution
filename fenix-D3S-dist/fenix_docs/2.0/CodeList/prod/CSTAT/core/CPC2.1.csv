@@ -1397,10 +1397,9 @@ titleColumnIndex_FR=3
 23490@23490.02@Communion wafers, empty cachets of a kind suitable for pharmaceutical use, sealing wafers, rice paper and similar products.
 23@235@Sugar and molasses
 235@2351@Raw cane or beet sugar
-2351@23511@Cane sugar
+2351@23511@Cane sugar (sucre complet)
 23511@23511.01@Cane sugar, centrifugal
 23511@23511.02@Cane sugar, non-centrifugal
-23511@23511.03@sucre complet (whole sugar)
 
 
 2351@23512@Beet sugar
@@ -1408,6 +1407,8 @@ titleColumnIndex_FR=3
 2352@23520@Refined sugar
 2352@23520.01@sucre brun (brown sugar)
 2352@23520.02@sucre blond (brown sugar)
+2352@23520.03@Sucre roux
+2352@23520.04@sucre blanc
 
 
 

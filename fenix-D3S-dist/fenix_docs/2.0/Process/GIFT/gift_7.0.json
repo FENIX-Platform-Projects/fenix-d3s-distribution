@@ -1,0 +1,67 @@
+[
+  {
+    "name": "gift_population_filter",
+    "sid": [ { "uid": "GIFT_afc_000042BUR201001" } ],
+    "parameters": {
+      "gender": null,
+      "special_condition": ["1","2","3","4"],
+      "age_year": {
+        "from": 0,
+        "to": 120
+      }
+    }
+  },
+
+  {
+    "name" : "select",
+    "parameters" : {
+      "values" : {
+        "item" : null,
+        "group_code" : null,
+        "subgroup_code" : null,
+        "foodex2_code" : null,
+        "value" : "value/<<raw_data_population_size[0]>>",
+        "um" : null
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "group_code",
+        "value",
+        "um"
+      ],
+      "rows": {
+        "item": {
+          "codes": [
+            {
+              "uid": "GIFT_Items",
+              "codes": [
+                "IRON"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name": "group",
+    "parameters": {
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
+  }
+]
