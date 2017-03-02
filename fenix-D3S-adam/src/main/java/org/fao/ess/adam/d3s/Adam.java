@@ -34,7 +34,7 @@ public class Adam extends WDSDatasetDao {
 
     @Override
     public Iterator<Object[]> loadData(MeIdentification resource) throws Exception {
-        DSD dsd = resource!=null ? resource.getDsd() : null;
+       /* DSD dsd = resource!=null ? resource.getDsd() : null;
         Collection<DSDColumn> columns = dsd!=null && dsd instanceof DSDDataset ? ((DSDDataset)dsd).getColumns() : null;
         if (columns==null)
             throw new Exception("Wrong table structure");
@@ -46,13 +46,15 @@ public class Adam extends WDSDatasetDao {
         Connection connection = dataSource.getConnection();
         connection.setAutoCommit(false);
         Statement statement = connection.createStatement(java.sql.ResultSet.TYPE_FORWARD_ONLY, java.sql.ResultSet.CONCUR_READ_ONLY);
-        statement.setFetchSize(1000);
-        return new DataIterator(
+        statement.setFetchSize(1000);*/
+
+        return new LinkedList<Object[]>().iterator();
+     /*   return new DataIterator(
                 statement.executeQuery(buildQuery(columns, topic)),
                 connection,
                 null,
                 buildNulls(columns)
-        );
+        );*/
     }
 
     @Override
