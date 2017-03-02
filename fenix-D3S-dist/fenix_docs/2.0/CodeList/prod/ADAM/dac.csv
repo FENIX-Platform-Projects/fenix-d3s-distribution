@@ -99,6 +99,282 @@ titleColumnIndex_EN=3
 
 --data--
 @110@Education
+@120@Health
+@130@Population policies / Programmes and reproductive health
+@140@Water and sanitation
+@150@Government and civil society
+@160@Other social infrastructure and services
+@210@Transport and storage
+@220@Communications
+@230@Energy generation, distribution and efficiency
+@240@Banking and financial services
+@250@Business and other services
+@311@Agriculture
+@312@Forestry
+@313@Fishing
+@321@Industry
+@322@Mineral resources and mining
+@323@Construction
+@331@Trade policy and regulations and trade related adjustment
+@332@Tourism
+@400@Multisector/Crosscutting
+@500@Commodity Aid And General Programme Assistance
+@600@Debt relief
+@700@Humanitarian Aid
+@910@Administrative costs of donors
+@930@Refugees in donor countries
+@998@Unallocated / Unspecified
+@9999@FAO-Related sectors
 110@11110@Education policy & administrative management
-
-
+110@11120@Education facilities and training
+110@11130@Teacher training
+110@11182@Educational research
+110@11220@Primary education
+110@11230@Basic life skills for youth & adults
+110@11240@Early childhood education
+110@11320@Secondary education
+110@11330@Vocational training
+110@11420@Higher education
+110@11430@Advanced technical & managerial training
+120@12110@Health policy & administrative management
+120@12181@Medical education/training
+120@12182@Medical research
+120@12191@Medical services
+120@12220@Basic health care
+120@12230@Basic health infrastructure
+120@12240@Basic nutrition
+120@12250@Infectious disease control
+120@12261@Health education
+120@12262@Malaria control
+120@12263@Tuberculosis control
+120@12281@Health personnel development
+130@13010@Population policy and administrative management
+130@13020@Reproductive health care
+130@13030@Family planning
+130@13040@Std control including hiv/aids
+130@13081@Personnel development for population & reproductive health
+140@14010@Water resources policy/administrative management
+140@14015@Water resources protection
+140@14020@Water supply and sanitation - large systems
+140@14021@Water supply - large systems
+140@14022@Sanitation - large systems
+140@14030@Basic drinking water supply and basic sanitation
+140@14031@Basic drinking water supply
+140@14032@Basic sanitation
+140@14040@River basins development
+140@14050@Waste management/disposal
+140@14081@Education and training in water supply and sanitation
+150@15110@Public sector policy and administrative management
+150@15111@Public finance management
+150@15112@Decentralisation and support to subnational government
+150@15113@Anti-corruption organisations and institutions
+150@15114@Tax policy and tax administration support
+150@15130@Legal and judicial development
+150@15150@Democratic participation and civil society
+150@15151@Elections
+150@15152@Legislatures and political parties
+150@15153@Media and free flow of information
+150@15160@Human rights
+150@15170@Women's equality organisations and institutions
+150@15210@Security system management and reform
+150@15220@Civilian peace-building, conflict prevention and resolution
+150@15230@Participation in international peacekeeping operations
+150@15240@Reintegration and SALW control
+150@15250@Removal of land mines and explosive remnants of war
+150@15261@Child soldiers (prevention and demobilisation)
+160@16010@Social/welfare services
+160@16020@Employment policy and administrative management
+160@16030@Housing policy and administrative management
+160@16040@Low-cost housing
+160@16050@Multisector aid for basic social services
+160@16061@Culture and recreation
+160@16062@Statistical capacity building
+160@16063@Narcotics control
+160@16064@Social mitigation of HIV/AIDS
+210@21010@Transport policy & administrative management
+210@21020@Road transport
+210@21030@Rail transport
+210@21040@Water transport
+210@21050@Air transport
+210@21061@Storage
+210@21081@Education and training in transport & storage
+220@22010@Communications policy & administrative management
+220@22020@Telecommunications
+220@22030@Radio/television/print media
+220@22040@Information and communication technology (ICT)
+230@23110@Energy policy and administrative management
+230@23181@Energy education/training
+230@23182@Energy research
+230@23183@Energy conservation and demand-side efficiency
+230@23210@Energy generation, renewable sources - multiple technologies
+230@23220@Hydro-electric power plants
+230@23230@Solar energy
+230@23240@Wind energy
+230@23250@Marine energy
+230@23260@Geothermal energy
+230@23270@Biofuel-fired power plants
+230@23310@Energy generation, non-renewable sources, unspecified
+230@23320@Coal-fired electric power plants
+230@23330@Oil-fired electric power plants
+230@23340@Natural gas-fired electric power plants
+230@23350@Fossil fuel electric power plants with carbon capture and storage (CCS)
+230@23360@Non-renewable waste-fired electric power plants
+230@23510@Nuclear energy electric power plants
+230@23620@District heating and cooling
+230@23630@Electric power transmission and distribution
+230@23640@Gas distribution
+240@24010@Financial policy & administrative management
+240@24020@Monetary institutions
+240@24030@Formal sector financial intermediaries
+240@24040@Informal/semi-formal financial intermediaries
+240@24081@Education/training in banking & financial services
+250@25010@Business support services & institutions
+250@25020@Privatisation
+311@31110@Agricultural policy & administrative management
+311@31120@Agricultural development
+311@31130@Agricultural land resources
+311@31140@Agricultural water resources
+311@31150@Agricultural inputs
+311@31161@Food crop production
+311@31162@Industrial crops/export crops
+311@31163@Livestock
+311@31164@Agrarian reform
+311@31165@Agricultural alternative development
+311@31166@Agricultural extension
+311@31181@Agricultural education/training
+311@31182@Agricultural research
+311@31191@Agricultural services
+311@31192@Plant and post-harvest protection and pest control
+311@31193@Agricultural financial services
+311@31194@Agricultural co-operatives
+311@31195@Livestock/veterinary services
+312@31210@Forestry policy & administrative management
+312@31220@Forestry development
+312@31261@Fuelwood/charcoal
+312@31281@Forestry education/training
+312@31282@Forestry research
+312@31291@Forestry services
+313@31310@Fishing policy and admin. management
+313@31320@Fishery development
+313@31381@Fishery education/training
+313@31382@Fishery research
+313@31391@Fishery services
+321@32110@Industrial policy & admin. mgmt
+321@32120@Industrial development
+321@32130@Small and medium-sized enterprises (SME) development
+321@32140@Cottage industries & handicraft
+321@32161@Agro-industries
+321@32162@Forest industries
+321@32163@Textiles - leather & substitutes
+321@32164@Chemicals
+321@32165@Fertilizer plants
+321@32166@Cement/lime/plaster
+321@32167@Energy manufacturing
+321@32168@Pharmaceutical production
+321@32169@Basic metal industries
+321@32170@Non-ferrous metal industries
+321@32171@Engineering
+321@32172@Transport equipment industry
+321@32182@Technological research & development
+322@32210@Mineral/mining policy & admin. mgmt
+322@32220@Mineral prospection and exploration
+322@32261@Coal
+322@32262@Oil and gas
+322@32263@Ferrous metals
+322@32264@Non-ferrous metals
+322@32265@Precious metals/materials
+322@32266@Industrial minerals
+322@32267@Fertilizer minerals
+322@32268@Off-shore minerals
+323@32310@Construction policy and admin. mgmt
+331@33110@Trade policy and admin. management
+331@33120@Trade facilitation
+331@33130@Regional trade agreements  (RTAs)
+331@33140@Multilateral trade negotiations
+331@33150@Trade-related adjustment
+331@33181@Trade education/training
+332@33210@Tourism policy and admin. management
+400@41010@Environmental policy and admin. mgmt
+400@41020@Biosphere protection
+400@41030@Bio-diversity
+400@41040@Site preservation
+400@41050@Flood prevention/control
+400@41081@Environmental education/training
+400@41082@Environmental research
+400@43010@Multisector aid
+400@43030@Urban development and management
+400@43040@Rural development
+400@43050@Non-agricultural alternative dvpt
+400@43081@Multisector education/training
+400@43082@Research/scientific institutions
+500@51010@General budget support-related aid
+500@52010@Food aid/Food security programmes
+500@53030@Import support (capital goods)
+500@53040@Import support (commodities)
+600@60010@Action relating to debt
+600@60020@Debt forgiveness
+600@60030@Relief of multilateral debt
+600@60040@Rescheduling and refinancing
+600@60061@Debt for development swap
+600@60062@Other debt swap
+600@60063@Debt buy-back
+700@72010@Material relief assistance and services
+700@72040@Emergency food aid
+700@72050@Relief co-ordination; protection and support services
+700@73010@Reconstruction relief and rehabilitation
+700@74010@Disaster prevention and preparedness
+910@91010@Administrative costs (non-sector allocable)
+930@93010@Refugees in donor countries (non-sector allocable)
+998@99810@Sectors not specified
+998@99820@Promotion of development awareness  (non-sector allocable)
+9999@12240@Basic nutrition
+9999@14030@Basic drinking water supply and basic sanitation
+9999@14031@Basic drinking water supply
+9999@15170@Women's equality organisations and institutions
+9999@16062@Statistical capacity building
+9999@31110@Agricultural policy & administrative management
+9999@31120@Agricultural development
+9999@31130@Agricultural land resources
+9999@31140@Agricultural water resources
+9999@31150@Agricultural inputs
+9999@31161@Food crop production
+9999@31162@Industrial crops/export crops
+9999@31163@Livestock
+9999@31164@Agrarian reform
+9999@31165@Agricultural alternative development
+9999@31166@Agricultural extension
+9999@31181@Agricultural education/training
+9999@31182@Agricultural research
+9999@31191@Agricultural services
+9999@31192@Plant and post-harvest protection and pest control
+9999@31193@Agricultural financial services
+9999@31194@Agricultural co-operatives
+9999@31195@Livestock/veterinary services
+9999@31210@Forestry policy & administrative management
+9999@31220@Forestry development
+9999@31261@Fuelwood/charcoal
+9999@31281@Forestry education/training
+9999@31282@Forestry research
+9999@31291@Forestry services
+9999@31310@Fishing policy and admin. management
+9999@31320@Fishery development
+9999@31381@Fishery education/training
+9999@31382@Fishery research
+9999@31391@Fishery services
+9999@32161@Agro-industries
+9999@32162@Forest industries
+9999@32163@Textiles - leather & substitutes
+9999@32165@Fertilizer plants
+9999@32267@Fertilizer minerals
+9999@41010@Environmental policy and admin. mgmt
+9999@41020@Biosphere protection
+9999@41030@Bio-diversity
+9999@41040@Site preservation
+9999@41050@Flood prevention/control
+9999@41081@Environmental education/training
+9999@41082@Environmental research
+9999@43040@Rural development
+9999@43050@Non-agricultural alternative dvpt
+9999@52010@Food aid/Food security programmes
+9999@72040@Emergency food aid
+9999@74010@Disaster prevention and preparedness
