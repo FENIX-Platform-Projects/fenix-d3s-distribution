@@ -1,0 +1,121 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "Organisation for Economic Co-operation and Development (OECD)"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "adam"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "OECD Creditor Reporting System (CRS) code list for Channel"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "1",
+         "typeOfCodeList": "list"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "02"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "OECD Channel"
+   },
+   "uid": "crs_channel",
+   "version": "2016"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@11000@Donor Government
+@12000@Recipient Government
+@13000@Third Country Government (Delegated co-operation)
+@21000@INTERNATIONAL NGO
+@22000@Donor country-based NGO
+@23000@Developing country-based NGO
+@31000@Public-Private Partnership (PPP)
+@32000@Network
+@41000@United Nations agency, fund or commission (UN)
+@42000@European Union Institution (EU)
+@43000@International Monetary Fund (IMF)
+@44000@World Bank Group (WB)
+@45000@World Trade Organisation
+@46000@Regional Development Bank
+@47000@Other multilateral institution
+@51000@University, college or other teaching institution, research institute or think‑tank
+@52000@OTHER
+@61000@Private sector in provider country
+@62000@Private sector in recipient country
+@63000@Private sector in third country
+@NA_Channel_Subcategory@Unspecified Channel Category

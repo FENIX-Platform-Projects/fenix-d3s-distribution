@@ -1,0 +1,263 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "Organisation for Economic Co-operation and Development (OECD)"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "adam"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "OECD Creditor Reporting System (CRS) code list for Fao Regions"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "2",
+         "typeOfCodeList": "tree"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "06"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "OECD Fao Regions"
+   },
+   "uid": "crs_fao_regions",
+   "version": "2016"
+}
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+titleColumnIndex_FR=4
+
+--data--
+@RAF@Africa@
+RAF@225@Angola@Angola
+RAF@236@Benin@Bénin
+RAF@227@Botswana@Botswana
+RAF@287@Burkina Faso@Burkina Faso
+RAF@228@Burundi@Burundi
+RAF@229@Cameroon@Cameroun
+RAF@230@Cape Verde@Cabo Verde
+RAF@231@Central African Republic@République centrafricaine
+RAF@232@Chad@Tchad
+RAF@233@Comoros@Comores
+RAF@234@Congo@Congo
+RAF@247@Côte d'Ivoire@Côte d'Ivoire
+RAF@235@Democratic Republic of the Congo@République démocratique du Congo
+RAF@274@Djibouti@Djibouti
+RAF@245@Equatorial Guinea@Guinée équatoriale
+RAF@271@Eritrea@Erythrée
+RAF@238@Ethiopia@Ethiopie
+RAF@239@Gabon@Gabon
+RAF@240@Gambia@Gambie
+RAF@241@Ghana@Ghana
+RAF@243@Guinea@Guinée
+RAF@244@Guinea-Bissau@Guinée-Bissau
+RAF@248@Kenya@Kenya
+RAF@249@Lesotho@Lesotho
+RAF@251@Liberia@Libéria
+RAF@252@Madagascar@Madagascar
+RAF@253@Malawi@Malawi
+RAF@255@Mali@Mali
+RAF@258@Mayotte@Mayotte
+RAF@257@Mauritius@Maurice
+RAF@259@Mozambique@Mozambique
+RAF@275@Namibia@Namibie
+RAF@260@Niger@Niger
+RAF@261@Nigeria@Nigéria
+RAF@266@Rwanda@Rwanda
+RAF@276@Saint Helena@Sainte-Hélène
+RAF@268@Sao Tome and Principe@Sao Tomé-et-Principe
+RAF@269@Senegal@Sénégal
+RAF@270@Seychelles@Seychelles
+RAF@272@Sierra Leone@Sierra Leone
+RAF@273@Somalia@Somalie
+RAF@218@South Africa@Afrique du Sud
+RAF@279@South Sudan@Soudan du sud
+RAF@280@Swaziland@Swaziland
+RAF@282@Tanzania@Tanzanie
+RAF@283@Togo@Togo
+RAF@285@Uganda@Ouganda
+RAF@288@Zambia@Zambie
+RAF@265@Zimbabwe@Zimbabwe
+@RAP@Asia and the Pacific@
+RAP@625@Afghanistan@Afghanistan
+RAP@666@Bangladesh@Bangladesh
+RAP@630@Bhutan@Bhoutan
+RAP@728@Cambodia@Cambodge
+RAP@730@China (People's Republic of)@Chine (République populaire de)
+RAP@831@Cook Islands@Iles Cook
+RAP@740@Democratic People's Republic of Korea@République populaire démocratique de Corée
+RAP@832@Fiji@Fidji
+RAP@645@India@Inde
+RAP@738@Indonesia@Indonésie
+RAP@836@Kiribati@Kiribati
+RAP@745@Lao People's Democratic Republic@République démocratique populaire lao
+RAP@751@Malaysia@Malaisie
+RAP@655@Maldives@Maldives
+RAP@859@Marshall Islands@Iles Marshall
+RAP@860@Micronesia@Micronésie
+RAP@753@Mongolia@Mongolie
+RAP@635@Myanmar@Myanmar
+RAP@845@Nauru@Nauru
+RAP@660@Nepal@Népal
+RAP@856@Niue@Niue
+RAP@665@Pakistan@Pakistan
+RAP@861@Palau@Palaos
+RAP@862@Papua New Guinea@Papouasie-Nouvelle-Guinée
+RAP@755@Philippines@Philippines
+RAP@880@Samoa@Samoa
+RAP@866@Solomon Islands@Iles Solomon
+RAP@640@Sri Lanka@Sri Lanka
+RAP@764@Thailand@Thaïlande
+RAP@765@Timor-Leste@Timor-Leste
+RAP@868@Tokelau@Tokélaou
+RAP@870@Tonga@Tonga
+RAP@872@Tuvalu@Tuvalu
+RAP@854@Vanuatu@Vanuatu
+RAP@769@Viet Nam@Viet Nam
+RAP@876@Wallis and Futuna@Wallis and Futuna
+@REU@Europe and Central Asia@
+REU@71@Albania@Albanie
+REU@610@Armenia@Arménie
+REU@611@Azerbaijan@Azerbaïdjan
+REU@86@Belarus@Bélarus
+REU@64@Bosnia and Herzegovina@Bosnie-Herzégovine
+REU@62@Croatia@Croatie
+REU@66@Former Yugoslav Republic of Macedonia@Ex-République yougoslave de Macédoine
+REU@612@Georgia@Géorgie
+REU@613@Kazakhstan@Kazakhstan
+REU@614@Kyrgyzstan@Kirghizistan
+REU@45@Malta@Malte
+REU@93@Moldova@Moldova
+REU@65@Montenegro@Monténégro
+REU@63@Serbia@Serbie
+REU@61@Slovenia@Slovénie
+REU@615@Tajikistan@Tadjikistan
+REU@55@Turkey@Turquie
+REU@616@Turkmenistan@Turkménistan
+REU@85@Ukraine@Ukraine
+REU@617@Uzbekistan@Ouzbékistan
+@RLC@Latin America and the Caribbean@
+RLC@376@Anguilla@Anguilla
+RLC@377@Antigua and Barbuda@Antigua-et-Barbuda
+RLC@425@Argentina@Argentine
+RLC@329@Barbados@Barbade
+RLC@352@Belize@Belize
+RLC@428@Bolivia@Bolivie
+RLC@431@Brazil@Brésil
+RLC@434@Chile@Chili
+RLC@437@Colombia@Colombie
+RLC@336@Costa Rica@Costa Rica
+RLC@338@Cuba@Cuba
+RLC@378@Dominica@Dominique
+RLC@340@Dominican Republic@République dominicaine
+RLC@440@Ecuador@Equateur
+RLC@342@El Salvador@El Salvador
+RLC@381@Grenada@Grenade
+RLC@347@Guatemala@Guatemala
+RLC@446@Guyana@Guyana
+RLC@349@Haiti@Haïti
+RLC@351@Honduras@Honduras
+RLC@354@Jamaica@Jamaïque
+RLC@358@Mexico@Mexique
+RLC@385@Montserrat@Montserrat
+RLC@364@Nicaragua@Nicaragua
+RLC@366@Panama@Panama
+RLC@451@Paraguay@Paraguay
+RLC@454@Peru@Pérou
+RLC@382@Saint Kitts and Nevis@Saint-Kitts-et-Nevis
+RLC@383@Saint Lucia@Sainte-Lucie
+RLC@384@Saint Vincent and the Grenadines@Saint-Vincent-et-les-Grenadines
+RLC@457@Suriname@Suriname
+RLC@375@Trinidad and Tobago@Trinité-et-Tobago
+RLC@387@Turks and Caicos Islands@Turks and Caicos Islands
+RLC@460@Uruguay@Uruguay
+RLC@463@Venezuela@Venezuela
+@RNE@Near East@
+RNE@130@Algeria@Algérie
+RNE@530@Bahrain@Bahreïn
+RNE@142@Egypt@Egypte
+RNE@540@Iran@Iran
+RNE@543@Iraq@Iraq
+RNE@549@Jordan@Jordanie
+RNE@555@Lebanon@Liban
+RNE@133@Libya@Libye
+RNE@256@Mauritania@Mauritanie
+RNE@136@Morocco@Maroc
+RNE@558@Oman@Oman
+RNE@566@Saudi Arabia@Arabie saoudite
+RNE@278@Sudan@Soudan
+RNE@573@Syrian Arab Republic@République arabe syrienne
+RNE@139@Tunisia@Tunisie
+RNE@550@West Bank and Gaza Strip@West Bank and Gaza Strip
+RNE@580@Yemen@Yémen

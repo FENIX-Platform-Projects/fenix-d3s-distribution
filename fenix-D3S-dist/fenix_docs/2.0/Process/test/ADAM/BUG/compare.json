@@ -1,0 +1,76 @@
+[
+  {
+    "name": "filter",
+    "sid":[{"uid":"adam_compare_analysis"}],
+    "parameters": {
+      "rows": {
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "55"
+              ]
+            }
+          ]
+        },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "918"
+              ]
+            }
+          ]
+        },
+        "parentsector_code": {
+          "codes": [
+            {
+              "uid": "crs_dac",
+              "version": "2016",
+              "codes": [
+                "311"
+              ]
+            }
+          ]
+        },
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "31163"
+              ]
+            }
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2014"
+            }
+          ]
+        }
+      },
+      "columns": [
+        "year",
+        "value",
+        "unitcode",
+        "donorcode",
+        "recipientcode",
+        "parentsector_code",
+        "purposecode"
+      ]
+    }
+  }
+]

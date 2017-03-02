@@ -1,0 +1,57 @@
+{
+  "title" : {
+    "EN" : "Population by gender"
+  },
+  "dsd" : {
+    "contextSystem" : "test"
+  },
+  "meContent" : {
+    "resourceRepresentationType" : "dataset",
+    "resourceRepresentationTypeLabel" : {
+      "EN" : "Dataset"
+    }
+  },
+  "characterSet" : {
+    "codes" : [ {
+      "code" : "106",
+      "label" : {
+        "EN" : "UTF-8"
+      }
+    } ],
+    "idCodeList" : "IANAcharacterSet",
+    "extendedName" : {
+      "EN" : "Internet Assigned Numbers Authority codelist"
+    }
+  },
+  "metadataStandardName" : "FENIX",
+  "metadataStandardVersion" : "1.0",
+  "metadataLanguage" : {
+    "version" : "1998",
+    "codes" : [ { } ],
+    "idCodeList" : "ISO639-2",
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    }
+  },
+  "contacts" : [ {
+    "organization" : {
+      "EN" : "Gambia Ministry of Agricukture"
+    },
+    "contactInfo" : {
+      "emailAddress" : "test@test.com"
+    }
+  } ],
+  "language" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "ISO639-2",
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    }
+  }
+}

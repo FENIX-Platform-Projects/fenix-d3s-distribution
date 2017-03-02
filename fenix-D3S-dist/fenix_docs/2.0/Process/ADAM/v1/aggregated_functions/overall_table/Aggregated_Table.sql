@@ -84,7 +84,7 @@ with disbursement as (
 			      '43050',
 			      '52010',
 			      '72040',
-                               '74010') THEN '1' ELSE '0' END as fao_sector,
+            '74010') THEN '1' ELSE '0' END as fao_sector,
                                cast('10' as text) as flowcategory
 
 
