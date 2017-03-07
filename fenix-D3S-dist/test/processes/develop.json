@@ -1,0 +1,365 @@
+{
+  "data": [
+    [
+      2010,
+      42.02781704,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2007,
+      39.47301287599999,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2000,
+      16.44385777,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2006,
+      39.71452237,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2003,
+      29.919284750000006,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2012,
+      32.500124078999995,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2002,
+      19.97644106,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2011,
+      32.19512518,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2001,
+      17.012565860000002,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2014,
+      44.944264133000004,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2005,
+      35.40752797,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2008,
+      44.068144170000004,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2013,
+      80.59670614800001,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2009,
+      55.269211988,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2004,
+      30.76076995,
+      "million_usd",
+      "ODA from Resource Partner in Sector"
+    ],
+    [
+      2007,
+      1358.7773295959998,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2010,
+      665.90409448,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2000,
+      326.75425839,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2006,
+      1078.695275141,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2003,
+      279.98865264330016,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2012,
+      706.2172842750003,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2002,
+      397.51915328300004,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2011,
+      536.9415424379999,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2001,
+      400.95490600399995,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2014,
+      672.4658590330998,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2005,
+      1252.76648463,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2008,
+      1265.7943963369999,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2013,
+      665.4557225430001,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2009,
+      537.4788658029997,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2004,
+      360.8155099629999,
+      "million_usd",
+      "Total ODA from Resource Partner"
+    ],
+    [
+      2010,
+      6.311391893876135,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2007,
+      2.9050391124597548,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2000,
+      5.032484611225269,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2006,
+      3.6817183949200833,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2003,
+      10.685891898667967,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2012,
+      4.602000659381267,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2002,
+      5.0252776237371535,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2011,
+      5.996020541420025,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2001,
+      4.243012270270184,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2014,
+      6.68350125575487,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2005,
+      2.8263470011697733,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2008,
+      3.4814614677965032,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2013,
+      12.111505456742398,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2009,
+      10.28304841445759,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2004,
+      8.525345807100805,
+      "percentage",
+      "% Sector/Total"
+    ],
+    [
+      2000,
+      335.865313553779,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2006,
+      408.8230517698347,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2013,
+      607.9072008306572,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2007,
+      513.5476037964096,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2012,
+      642.553877159827,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2011,
+      635.2162536300422,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2002,
+      326.73144817931376,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2008,
+      691.3591267288091,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2010,
+      764.9065479911037,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2003,
+      359.9944160168319,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2005,
+      432.49947728525916,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2009,
+      799.32243915763,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2004,
+      361.2950967679724,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2001,
+      313.29978697434,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ],
+    [
+      2014,
+      607.9274604134529,
+      "million_usd",
+      "OECD Average of ODA in Sector"
+    ]
+  ],
+  "size": 60
+}

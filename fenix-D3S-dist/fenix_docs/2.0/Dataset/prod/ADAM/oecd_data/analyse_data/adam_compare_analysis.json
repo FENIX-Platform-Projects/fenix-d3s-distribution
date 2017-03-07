@@ -56,7 +56,9 @@
         "title": {
           "EN": "FAO sector"
         },
-        "dataType": "text"
+        "dataType": "text",
+        "key": true
+
       },
       {
         "id" : "year",

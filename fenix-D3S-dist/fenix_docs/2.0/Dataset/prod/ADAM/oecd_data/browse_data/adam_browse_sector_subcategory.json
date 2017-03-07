@@ -28,7 +28,9 @@
         "id" : "parentsector_code",
         "title" : { "EN" : "Parent sector" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
-        "dataType" : "code"
+        "dataType" : "code",
+        "key": true
+
       },
 
       {
