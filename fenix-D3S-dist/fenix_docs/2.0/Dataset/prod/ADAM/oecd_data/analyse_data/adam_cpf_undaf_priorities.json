@@ -1,0 +1,62 @@
+{
+  "uid": "adam_cpf_undaf_priorities",
+  "title": {
+    "EN": "ADAM UNDAF (Recipient Country) and CPF (FAO) Priorities"
+  },
+  "meContent": {
+    "description": {
+      "EN": "ADAM UNDAF (Recipient Country) and CPF (FAO) Priorities by Recipient Country. Stated priorities are mapped to OECD DAC Sub Sectors (i.e. OECD DAC purposecode)."
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "adam",
+    "datasources": ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "OCED DAC Sub Sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "undaf_period",
+        "title" : { "EN" : "UNDAF Period"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "cpf_period",
+        "title" : { "EN" : "CPF Period"},
+        "dataType" : "text",
+        "key": true
+      },
+       {
+        "id" : "undaf_stated_priority",
+        "title" : { "EN" : "UNDAF Stated Priority"},
+        "dataType" : "text",
+         "key": true
+      },
+      {
+        "id" : "cpf_stated_priority",
+        "title" : { "EN" : "CPF stated Priority"},
+        "dataType" : "text",
+        "key": true
+
+      }
+     
+    ]
+  }
+}
