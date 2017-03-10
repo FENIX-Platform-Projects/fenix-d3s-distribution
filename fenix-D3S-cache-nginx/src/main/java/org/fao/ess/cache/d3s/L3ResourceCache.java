@@ -139,4 +139,14 @@ public class L3ResourceCache extends OrientDao implements ResourceListener {
     public void removedData(MeIdentification metadata) {
 
     }
+
+    @Override
+    public void updatingData(MeIdentification metadata) {
+
+    }
+
+    @Override
+    public void updatedData(MeIdentification metadata) {
+
+    }
 }

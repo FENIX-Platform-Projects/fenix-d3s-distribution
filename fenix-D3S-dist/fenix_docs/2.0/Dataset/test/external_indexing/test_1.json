@@ -1,0 +1,213 @@
+{
+"metadata" : {
+  "uid" : "ext_index_test1",
+  "version" : "resource",
+  "title" : {
+    "EN" : "Ivano Faso - HarvestPlus/IRD, 2010"
+  },
+  "meContent" : {
+    "resourceRepresentationType": "dataset",
+    "seCoverage" : {
+      "coverageGeographic" : {
+        "idCodeList" : "GAUL", "version" : "2014",
+        "codes" : [{"code" : "42"}]
+      },
+      "coverageTime" : {
+        "from" : 1478274133603,
+        "to" : 1478274153500
+      }
+    }
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "WHO-FAO"
+      },
+      "organizationUnit": {
+        "EN" : "Institut de Recherche pour le Développement"
+      },
+      "name": "Pauline Allemand",
+      "position": null,
+      "role": "distributor",
+      "contactInfo": {
+        "phone ": "+390657053879",
+        "address": null,
+        "emailAddress": "pauline.allemand@gmail.com",
+        "hoursOfService": null,
+        "contactIntruction": null
+      }
+    }
+  ],
+
+    "dsd" : {
+        "datasources" : ["D3S"],
+        "contextSystem" : "cstat_gha",
+      "columns": [
+        {
+          "id": "indicator",
+          "subject": "item",
+          "title": {
+            "EN": "Indicator"
+          },
+          "dataType": "code",
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "UNECA_Indicators"
+              }
+            ]
+          },
+          "values": {
+            "codes": [
+              {
+                "idCodeList": "UNECA_Indicators",
+                "codes": [
+                  {
+                    "code": "gdp_ppp"
+                  },
+                  {
+                    "code": "gdp_capita"
+                  },
+                  {
+                    "code": "gdp_growth"
+                  },
+                  {
+                    "code": "inflation"
+                  },
+                  {
+                    "code": "investment"
+                  },
+                  {
+                    "code": "export_growth"
+                  },
+                  {
+                    "code": "fdi_inward"
+                  },
+                  {
+                    "code": "fdi_outward"
+                  },
+                  {
+                    "code": "life_expectancy"
+                  }
+                ]
+              }
+            ]
+          },
+          "key": true
+        },
+        {
+          "id": "year",
+          "subject": "time",
+          "title": {
+            "EN": "Year"
+          },
+          "dataType": "year",
+          "domain": {
+            "period": {
+              "from": 2005,
+              "to": 2015
+            }
+          },
+          "values": {
+            "period": {
+              "from": 2005,
+              "to": 2015
+            }
+          },
+          "key": true
+        },
+        {
+          "id": "value",
+          "subject": "value",
+          "title": {
+            "EN": "Value"
+          },
+          "dataType": "number"
+        },
+        {
+          "id": "um",
+          "subject": "um",
+          "title": {
+            "EN": "Unit of measure"
+          },
+          "dataType": "code",
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "UNECA_UnitMeasure"
+              }
+            ]
+          },
+          "values": {
+            "codes": [
+              {
+                "idCodeList": "UNECA_UnitMeasure",
+                "codes": [
+                  {
+                    "code": "BIND"
+                  },
+                  {
+                    "code": "IND"
+                  },
+                  {
+                    "code": "Perc"
+                  },
+                  {
+                    "code": "MUSD"
+                  },
+                  {
+                    "code": "YRS"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "datasource",
+          "title": {
+            "EN": "Data source"
+          },
+          "dataType": "text"
+        }
+      ]
+    }
+},
+
+"data" :
+  [
+    ["gdp_ppp",2005,3.158,"BIND","IMF"],
+    ["gdp_ppp",2006,3.457,"BIND","IMF"],
+    ["gdp_ppp",2007,3.786,"BIND","IMF"],
+    ["gdp_ppp",2008,4.071,"BIND","IMF"],
+    ["gdp_ppp",2009,4.249,"BIND","IMF"],
+    ["gdp_ppp",2010,4.540,"BIND","IMF"],
+    ["gdp_ppp",2011,4.720,"BIND","IMF"],
+    ["gdp_ppp",2012,5.034,"BIND","IMF"],
+    ["gdp_ppp",2013,5.304,"BIND","IMF"],
+    ["gdp_ppp",2014,5.577,"BIND","IMF"],
+    ["gdp_ppp",2015,5.819,"BIND","IMF"],
+    ["gdp_capita",2005,1.209,"IND","IMF, UNPD"],
+    ["gdp_capita",2006,1.365,"IND","IMF, UNPD"],
+    ["gdp_capita",2007,1.561,"IND","IMF, UNPD"],
+    ["gdp_capita",2008,1.794,"IND","IMF, UNPD"],
+    ["gdp_capita",2009,1.655,"IND","IMF, UNPD"],
+    ["gdp_capita",2010,1.917,"IND","IMF, UNPD"],
+    ["gdp_capita",2011,2.087,"IND","IMF, UNPD"],
+    ["gdp_capita",2012,2.171,"IND","IMF, UNPD"],
+    ["gdp_capita",2013,2.199,"IND","IMF, UNPD"],
+    ["gdp_capita",2014,2.209,"IND","IMF, UNPD"],
+    ["gdp_capita",2015,1.966,"IND","IMF, UNPD"],
+    ["gdp_growth",2005,5.9,"YRS","UNSD"],
+    ["gdp_growth",2006,5.6,"YRS","UNSD"],
+    ["gdp_growth",2007,6.2,"YRS","UNSD"],
+    ["gdp_growth",2008,6.0,"YRS","UNSD"],
+    ["gdp_growth",2009,3.9,"YRS","UNSD"],
+    ["gdp_growth",2010,5.6,"YRS","UNSD"],
+    ["gdp_growth",2011,1.6,"YRS","UNSD"],
+    ["gdp_growth",2012,5.2,"YRS","UNSD"],
+    ["gdp_growth",2013,3.8,"YRS","UNSD"],
+    ["gdp_growth",2014,3.8,"YRS","UNSD"],
+    ["gdp_growth",2015,3.4,"YRS","UNSD"]
+  ]
+}
