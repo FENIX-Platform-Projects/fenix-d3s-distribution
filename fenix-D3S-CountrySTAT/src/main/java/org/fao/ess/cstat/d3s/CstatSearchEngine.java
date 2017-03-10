@@ -86,8 +86,7 @@ public class CstatSearchEngine implements SearchEngine {
 
     private Collection<String> getUids(Collection<Object> params, ConditionFilter... filter) throws Exception {
 
-        Collection<String> ids = getIdsFromDocument(getResources(createQuery(params, filter), params));
-        return null;
+        return getIdsFromDocument(getResources(createQuery(params, filter), params));
     }
 
     //Utils
