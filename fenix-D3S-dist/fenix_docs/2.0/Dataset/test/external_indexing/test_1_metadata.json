@@ -1,0 +1,174 @@
+{
+  "uid" : "ext_index_test1",
+  "version" : "resource",
+  "title" : {
+    "EN" : "Ivano Faso - HarvestPlus/IRD, 2010"
+  },
+  "meContent" : {
+    "resourceRepresentationType": "dataset",
+    "seCoverage" : {
+      "coverageGeographic" : {
+        "idCodeList" : "GAUL", "version" : "2014",
+        "codes" : [{"code" : "42"}]
+      },
+      "coverageTime" : {
+        "from" : 1478274133603,
+        "to" : 1478274153500
+      }
+    }
+  },
+  "contacts": [
+    {
+      "organization": {
+        "EN": "WHO-FAO"
+      },
+      "organizationUnit": {
+        "EN" : "Institut de Recherche pour le Développement"
+      },
+      "name": "Pauline Allemand",
+      "position": null,
+      "role": "distributor",
+      "contactInfo": {
+        "phone ": "+390657053879",
+        "address": null,
+        "emailAddress": "pauline.allemand@gmail.com",
+        "hoursOfService": null,
+        "contactIntruction": null
+      }
+    }
+  ],
+
+  "dsd" : {
+    "datasources" : ["D3S"],
+    "contextSystem" : "cstat_gha",
+    "columns": [
+      {
+        "id": "indicator",
+        "subject": "item",
+        "title": {
+          "EN": "Indicator"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "UNECA_Indicators"
+            }
+          ]
+        },
+        "values": {
+          "codes": [
+            {
+              "idCodeList": "UNECA_Indicators",
+              "codes": [
+                {
+                  "code": "gdp_ppp"
+                },
+                {
+                  "code": "gdp_capita"
+                },
+                {
+                  "code": "gdp_growth"
+                },
+                {
+                  "code": "inflation"
+                },
+                {
+                  "code": "investment"
+                },
+                {
+                  "code": "export_growth"
+                },
+                {
+                  "code": "fdi_inward"
+                },
+                {
+                  "code": "fdi_outward"
+                },
+                {
+                  "code": "life_expectancy"
+                }
+              ]
+            }
+          ]
+        },
+        "key": true
+      },
+      {
+        "id": "year",
+        "subject": "time",
+        "title": {
+          "EN": "Year"
+        },
+        "dataType": "year",
+        "domain": {
+          "period": {
+            "from": 2005,
+            "to": 2015
+          }
+        },
+        "values": {
+          "period": {
+            "from": 2005,
+            "to": 2015
+          }
+        },
+        "key": true
+      },
+      {
+        "id": "value",
+        "subject": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "dataType": "number"
+      },
+      {
+        "id": "um",
+        "subject": "um",
+        "title": {
+          "EN": "Unit of measure"
+        },
+        "dataType": "code",
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "UNECA_UnitMeasure"
+            }
+          ]
+        },
+        "values": {
+          "codes": [
+            {
+              "idCodeList": "UNECA_UnitMeasure",
+              "codes": [
+                {
+                  "code": "BIND"
+                },
+                {
+                  "code": "IND"
+                },
+                {
+                  "code": "Perc"
+                },
+                {
+                  "code": "MUSD"
+                },
+                {
+                  "code": "YRS"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "datasource",
+        "title": {
+          "EN": "Data source"
+        },
+        "dataType": "text"
+      }
+    ]
+  }
+}
