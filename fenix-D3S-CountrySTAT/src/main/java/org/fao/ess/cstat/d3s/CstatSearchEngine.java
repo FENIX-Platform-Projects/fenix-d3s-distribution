@@ -73,7 +73,7 @@ public class CstatSearchEngine implements SearchEngine {
                     break;
             }
         }
-        return "SELECT " + ID_FIELD + " FROM X" + (queryFilter.length() > 0 ? " WHERE " + queryFilter.substring(4) : "") + " group by " + ID_FIELD + "";
+        return "SELECT " + ID_FIELD + " FROM DataIndex" + (queryFilter.length() > 0 ? " WHERE " + queryFilter.substring(4) : "") + " group by " + ID_FIELD + "";
     }
 
 
