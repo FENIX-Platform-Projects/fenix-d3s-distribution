@@ -1,26 +1,37 @@
 {
-  "uid": "adam_browse_sector_oda",
+  "uid": "population_to_find",
   "title": {
-    "EN": "ADAM aggregated table"
+    "EN": "Population"
   },
   "meContent": {
     "description": {
-      "EN": "Dataset for aggregated data from different datasources"
+      "EN": "Population"
     },
     "resourceRepresentationType": "dataset"
   },
   "dsd" : {
-    "contextSystem" : "adam_agg",
-    "datasources" : ["adam"],
-    "cache":{
-      "storage":"postgres"
-    },
+    "contextSystem" : "cstat_cog",
+    "datasources" : ["D3S"],
     "columns": [
       {
         "id": "oda",
         "title": {"EN": "Oda name"},
         "domain" : { "codes" : [ { "idCodeList" : "oda_crs", "version" : "2016"} ] },
         "dataType" : "code",
+        "key": true
+      },
+      {
+        "id" : "parentsector_code",
+        "title" : { "EN" : "Parent sector" },
+        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
+        "dataType" : "code",
+        "key": true
+      },
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "Sub-sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
         "key": true
       },
       {
@@ -31,20 +42,18 @@
         "key": true
       },
       {
-        "id" : "parentsector_code",
-        "title" : { "EN" : "Parent sector" },
-        "domain" : { "codes" : [ { "idCodeList" : "crs_dac", "version" : "2016", "level" : 1 } ] },
-        "dataType" : "code",
+        "id": "fao_sector",
+        "title": {
+          "EN": "FAO sector"
+        },
+        "dataType": "text",
         "key": true
-
       },
-
       {
-        "id" : "purposecode",
-        "title" : { "EN" : "Sub-sector" },
+        "id" : "fao_region",
+        "title" : { "EN" : "FAO Region" },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
-        "key": true
+        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] }
       },
       {
         "id" : "year",
@@ -52,27 +61,6 @@
         "dataType" : "year",
         "subject" : "time",
         "key": true
-      },
-      {
-        "id" : "dac_member",
-        "title" : { "EN" : "OECD DAC Member Donor Country" },
-        "dataType" : "text",
-        "key": true
-      },
-      {
-      "id": "fao_sector",
-      "title": {
-        "EN": "FAO sector"
-      },
-      "dataType": "text",
-        "key": true
-
-      },
-      {
-        "id" : "flowcategory",
-        "title" : { "EN" : "Flow" },
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       },
       {
         "id": "value",
@@ -88,6 +76,20 @@
         "title" : { "EN" : "Measurement unit" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
+      },
+      {
+        "id" : "gaul0",
+        "subject" : "geo",
+        "title" : { "EN" : "GAUL Country" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "GAUL0", "version" : "2014", "level" : 1 } ] },
+        "key": true
+      },
+      {
+        "id" : "flowcategory",
+        "title" : { "EN" : "Flow" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_flow_types", "version" : "2016", "level" : 1 } ] }
       }
     ]
   }

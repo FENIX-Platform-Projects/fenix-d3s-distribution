@@ -1,0 +1,15 @@
+{
+  "dsd.contextSystem": {
+    "enumeration": [
+      "cstat_cog"
+    ]
+  },
+  "meContent.resourceRepresentationType": {
+    "enumeration": [
+      "dataset"
+    ]
+  },
+  "freetext": {
+    "text": "Population"
+  }
+}

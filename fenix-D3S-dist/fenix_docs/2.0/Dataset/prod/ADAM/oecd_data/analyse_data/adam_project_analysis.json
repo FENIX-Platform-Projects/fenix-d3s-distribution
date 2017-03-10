@@ -1,12 +1,9 @@
 {
-  "uid": "adam_compare_analysis",
-  "title": {
-    "EN": "ADAM aggregated table"
+  "uid" : "adam_project_analysis",
+  "title" : {
+    "EN" : "Project Analysis"
   },
-  "meContent": {
-    "description": {
-      "EN": "Dataset for aggregated data from different datasources"
-    },
+  "meContent" : {
     "resourceRepresentationType": "dataset"
   },
   "dsd" : {
@@ -15,12 +12,19 @@
     "cache":{
       "storage":"postgres"
     },
-    "columns": [
+    "columns" : [
       {
-        "id": "oda",
-        "title": {"EN": "Oda name"},
-        "domain" : { "codes" : [ { "idCodeList" : "oda_crs", "version" : "2016"} ] },
+        "id" : "fao_region",
+        "title" : { "EN" : "FAO Region" },
         "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] }
+      },
+
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
         "key": true
       },
       {
@@ -31,12 +35,12 @@
         "key": true
       },
       {
-        "id" : "recipientcode",
-        "title" : { "EN" : "Recipient Country"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] } ,
+        "id" : "fao_sector",
+        "title" : { "EN" : "Fao Sector" },
+        "dataType" : "text",
         "key": true
       },
+
       {
         "id" : "parentsector_code",
         "title" : { "EN" : "Parent sector" },
@@ -52,26 +56,26 @@
         "key": true
       },
       {
-        "id": "fao_sector",
-        "title": {
-          "EN": "FAO sector"
-        },
-        "dataType": "text"
-      },
-      {
         "id" : "year",
         "title" : { "EN" : "Year" },
         "dataType" : "year",
         "subject" : "time",
         "key": true
       },
+
+
+
       {
-        "id": "value",
-        "subject": "value",
-        "title": {
-          "EN": "Value"
-        },
-        "dataType": "number"
+        "id" : "projecttitle",
+        "title" : { "EN" : "Project title" },
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "value",
+        "subject" : "value",
+        "title" : { "EN" : "Value" },
+        "dataType" : "number"
       },
       {
         "id" : "unitcode",
@@ -79,9 +83,17 @@
         "title" : { "EN" : "Measurement unit" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
+      },
+      {
+        "id": "oda",
+        "title": {
+          "EN": "Oda name"
+        },
+        "dataType": "text",
+        "key": true
       }
-
 
     ]
   }
 }
+
