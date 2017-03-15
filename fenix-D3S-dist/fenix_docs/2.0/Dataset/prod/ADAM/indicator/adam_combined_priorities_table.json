@@ -1,0 +1,58 @@
+{
+  "uid": "adam_combined_priorities_table",
+  "title": {
+    "EN": "ADAM Resource Partner, Recipient Country and FAO Priorities"
+  },
+  "meContent": {
+    "description": {
+      "EN": "ADAM Resource Partner (Derived priorities), Recipient Country (UNDAF) and FAO (CPF) Priorities as represented through OECD-DAC Sub Sectors (purposescode)."
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "adam",
+    "datasources": ["adam"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "typecode",
+        "title" : { "EN" : "Type"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "adam_priority_types", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
+        "id" : "source",
+        "title" : { "EN" : "Source"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "recipientcode",
+        "title" : { "EN" : "Recipient Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_recipients", "version" : "2016", "level" : 1 } ] },
+        "key": true
+
+      },
+      {
+        "id" : "donorcode",
+        "title" : { "EN" : "Resource Partner"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_donors", "version" : "2016", "level" : 1 } ] },
+        "key": true
+
+      },
+      {
+        "id" : "purposecode",
+        "title" : { "EN" : "OCED DAC Sub Sector" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      }
+    ]
+  }
+}

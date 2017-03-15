@@ -1,0 +1,480 @@
+{
+  "metadata": {
+    "title": {
+      "FR": "Fertizl "
+    },
+    "languageDetails": {
+      "FR": "français standard"
+    },
+    "characterSet": {
+      "codes": [
+        {
+          "code": "106"
+        }
+      ],
+      "idCodeList": "IANAcharacterSet"
+    },
+    "metadataStandardName": "FENIX",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+      "version": "1998",
+      "codes": [
+        {
+          "code": "fre"
+        }
+      ],
+      "idCodeList": "ISO639-2"
+    },
+    "contacts": [
+      {
+        "position": {
+          "FR": "coordonnateur national"
+        },
+        "organization": {
+          "FR": "ministère de l'agriculture, de l'élevage et de la pêche"
+        },
+        "contactInfo": {
+          "phone": "002426451639",
+          "emailAddress": "tsemiphillpe@yahoo.fr",
+          "hoursOfService": {
+            "FR": "de 07 heures à 14 heures"
+          },
+          "contactInstruction": {
+            "FR": "peut rester au bureau jusqu'à 16 heures"
+          },
+          "address": "BP2354"
+        },
+        "pointOfContact": "tsemi phillipe",
+        "specify": {
+          "FR": "coordonner les activités du bureau central"
+        },
+        "organizationUnit": {
+          "FR": "bureau central de recensement général de l'agriculture"
+        },
+        "role": "owner"
+      }
+    ],
+    "meInstitutionalMandate": {
+      "legalActsAgreements": {
+        "FR": "decret n°2013-732 du 18 Novembre 2013 portant organisation du Recensement Général de l’Agriculture."
+      },
+      "institutionalMandateDataSharing": {
+        "FR": "accord de partenariat"
+      }
+    },
+    "meAccessibility": {
+      "seDataDissemination": {
+        "seDistribution": {}
+      },
+      "seConfidentiality": {
+        "confidentialityStatus": {
+          "version": "1.0",
+          "codes": [
+            {
+              "code": "F"
+            }
+          ],
+          "idCodeList": "CL_CONF_STATUS"
+        }
+      }
+    },
+    "meDataQuality": {},
+    "meMaintenance": {
+      "seUpdate": {
+        "updatePeriodicity": {
+          "version": "1.0",
+          "codes": [
+            {}
+          ],
+          "idCodeList": "FAO_Period"
+        }
+      }
+    },
+    "meStatisticalProcessing": {
+      "seDataSource": {
+        "sePrimaryDataCollection": {
+          "dataCollection": {
+            "FR": "2014"
+          },
+          "dataCollector": {
+            "position": {
+              "FR": "coordonnateur national"
+            },
+            "organization": {
+              "FR": "bureau central du recensement général de l'agriculture"
+            },
+            "contactInfo": {
+              "phone": "00242066451639",
+              "hoursOfService": {
+                "FR": "de 07 heures à 14 heures"
+              },
+              "contactInstruction": {
+                "FR": "peut rester au bureau jusqu'à 16 heures"
+              },
+              "address": "BP 2354"
+            },
+            "pointOfContact": "phillipe tsemi",
+            "specify": {
+              "FR": "coordonner les activites du bureau central du recensement general de l'agriculture"
+            },
+            "organizationUnit": {
+              "FR": "coordination nationale du BCRGA"
+            },
+            "role": "owner"
+          },
+          "typeOfCollection": {
+            "version": "1.0",
+            "codes": [
+              {
+                "code": "01"
+              }
+            ],
+            "idCodeList": "FAOSTAT_Collection"
+          },
+          "samplingProcedure": {
+            "FR": "tirage aléatoire"
+          },
+          "collectionPeriodicity": {
+            "version": "1.0",
+            "codes": [
+              {
+                "code": "11"
+              }
+            ],
+            "idCodeList": "FAO_Period"
+          }
+        },
+        "seSecondaryDataCollection": {
+          "originOfCollectedData": {
+            "version": "1.0",
+            "codes": [
+              {
+                "code": "D"
+              }
+            ],
+            "idCodeList": "FAOSTAT_OriginData"
+          },
+          "rawDataDescription": {
+            "FR": "données provenant directement du terrain"
+          },
+          "dataCollection": {
+            "FR": "2014-2015"
+          }
+        }
+      },
+      "seDataCompilation": {
+        "dataAdjustment": {
+          "version": "1.1",
+          "codes": [
+            {}
+          ],
+          "idCodeList": "CL_ADJUSTMENT"
+        }
+      },
+      "seDataValidation": {}
+    },
+    "dsd": {
+      "contextSystem": "cstat_cog",
+      "datasources": [
+        "D3S"
+      ],
+      "columns": [
+        {
+          "dataType": "year",
+          "title": {
+            "EN": "annee"
+          },
+          "values": {
+            "timeList": [
+              2015
+            ]
+          },
+          "subject": "time",
+          "key": true,
+          "id": "DIMENSION0"
+        },
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "departement"
+          },
+          "values": {
+            "codes": [
+              {
+                "version": "2014",
+                "codes": [
+                  {
+                    "code": "190433"
+                  },
+                  {
+                    "code": "976"
+                  },
+                  {
+                    "code": "974"
+                  },
+                  {
+                    "code": "970"
+                  },
+                  {
+                    "code": "190431"
+                  },
+                  {
+                    "code": "977"
+                  },
+                  {
+                    "code": "971"
+                  },
+                  {
+                    "code": "972"
+                  },
+                  {
+                    "code": "979"
+                  },
+                  {
+                    "code": "975"
+                  },
+                  {
+                    "code": "190432"
+                  },
+                  {
+                    "code": "190434"
+                  }
+                ],
+                "idCodeList": "GAUL"
+              }
+            ]
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2014",
+                "idCodeList": "GAUL"
+              }
+            ]
+          },
+          "subject": "geo",
+          "key": true,
+          "id": "DIMENSION1"
+        },
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "indicateur"
+          },
+          "values": {
+            "codes": [
+              {
+                "codes": [
+                  {
+                    "code": "01"
+                  }
+                ],
+                "idCodeList": "Indicateurs_Recensement"
+              }
+            ]
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "Indicateurs_Recensement"
+              }
+            ]
+          },
+          "subject": "census",
+          "key": true,
+          "id": "DIMENSION2"
+        },
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "sexe"
+          },
+          "values": {
+            "codes": [
+              {
+                "codes": [
+                  {
+                    "code": "5002"
+                  },
+                  {
+                    "code": "5001"
+                  }
+                ],
+                "idCodeList": "CountrySTAT_Gender"
+              }
+            ]
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "CountrySTAT_Gender"
+              }
+            ]
+          },
+          "key": true,
+          "id": "DIMENSION3"
+        },
+        {
+          "dataType": "number",
+          "title": {
+            "EN": "valeur"
+          },
+          "subject": "value",
+          "key": false,
+          "id": "VALUE0"
+        },
+        {
+          "dataType": "text",
+          "title": {
+            "EN": "flag"
+          },
+          "subject": "flag",
+          "key": false,
+          "id": "OTHER0"
+        },
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "unite"
+          },
+          "values": {
+            "codes": [
+              {
+                "codes": [
+                  {
+                    "code": "0108"
+                  }
+                ],
+                "idCodeList": "CountrySTAT_UM"
+              }
+            ]
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "CountrySTAT_UM"
+              }
+            ]
+          },
+          "subject": "um",
+          "key": false,
+          "id": "OTHER1"
+        }
+      ]
+    },
+    "meContent": {
+      "description": {
+        "FR": "effectif des ménages agricoles cultivant le caféier par département selon le sexe du chef de menage"
+      },
+      "statisticalConceptsDefinitions": {
+        "FR": "Un ménage agricole est un ménage dont un membre au moins possède une ou plusieurs parcelles agricoles ou élève du bétail/volaille ou pratique la pêche/ l’aquaculture ou la sylviculture pour le compte du ménage..\nLe Département est l’entité administrative qui assure le relai de l’action gouvernementale. Il en existe douze (12) dans le pays."
+      },
+      "seReferencePopulation": {
+        "statisticalPopulation": {
+          "FR": "menages"
+        },
+        "statisticalUnit": {
+          "FR": "ménages agricoles"
+        },
+        "referencePeriod": {
+          "version": "1.0",
+          "codes": [
+            {
+              "code": "11"
+            }
+          ],
+          "idCodeList": "FAO_Period"
+        },
+        "referenceArea": {
+          "version": "1.0",
+          "codes": [
+            {
+              "code": "ADM1"
+            }
+          ],
+          "idCodeList": "GAUL_ReferenceArea"
+        }
+      },
+      "seCoverage": {
+        "coverageSectors": {
+          "codes": [
+            {
+              "code": "0102"
+            }
+          ],
+          "idCodeList": "CountrySTAT_Indicators"
+        },
+        "coverageTime": {
+          "from": 1414796400000,
+          "to": 1426374000000
+        },
+        "coverageGeographic": {
+          "version": "2014",
+          "codes": [
+            {
+              "code": "59"
+            }
+          ],
+          "idCodeList": "GAUL0"
+        }
+      },
+      "resourceRepresentationType": "dataset"
+    },
+    "language": {
+      "version": "1998",
+      "codes": [
+        {
+          "code": "fre"
+        }
+      ],
+      "idCodeList": "ISO639-2"
+    }
+  },
+  "data": [
+    [
+      2015,
+      "190433",
+      "01",
+      "5002",
+      106.0,
+      "cats",
+      "0108"
+    ],
+    [
+      2015,
+      "976",
+      "01",
+      "5002",
+      786.0,
+      "dogs",
+      "0108"
+    ],
+    [
+      2015,
+      "974",
+      "01",
+      "5002",
+      1283.0,
+      "animals",
+      "0108"
+    ],
+    [
+      2013,
+      "976",
+      "04",
+      "5022",
+      1283.0,
+      "Population",
+      "0109"
+    ],
+    [
+      2013,
+      "975",
+      "05",
+      "5012",
+      1283.0,
+      "Fertilizers",
+      "01110"
+    ]
+  ]
+}
