@@ -119,6 +119,7 @@ public class ResourceExportProvider  implements MessageBodyWriter<ResourceProxy>
         Iterator<Object[]> csvIterator = dataUtils.getCSV(data!=null ? data.iterator() : new LinkedList<Object[]>().iterator(), columns, columnsName, DatabaseStandards.getLanguageInfo(), request.getParameter("codeFormat"));
         //create flexmonster format stream
         return Compressor.compressStream(dataUtils.getFastInputStream(columnsName,csvIterator));
+        //return dataUtils.getFastInputStream(columnsName,csvIterator);
     }
 
 

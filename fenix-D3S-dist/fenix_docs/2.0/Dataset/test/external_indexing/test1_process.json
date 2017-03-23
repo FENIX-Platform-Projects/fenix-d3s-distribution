@@ -1,0 +1,17 @@
+[
+  {
+    "sid" : [{"uid" : "ext_index_test1", "version" : "resource"}],
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "year": {
+          "time": [
+            {
+              "from": 2010
+            }
+          ]
+        }
+      }
+    }
+  }
+]
