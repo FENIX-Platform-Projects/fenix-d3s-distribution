@@ -1,0 +1,378 @@
+{
+    "uid": "fao_region",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "FAO regions and countries"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "WIEWS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["country"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+        "dsd": {
+           "contextSystem": "wiews"
+    }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@5000@World
+5000@5100@Africa
+5000@5200@Americas
+5000@5300@Asia
+5000@5400@Europe
+5000@5500@Oceania
+5100@5101@Eastern Africa
+5100@5102@Middle Africa
+5100@5103@Northern Africa
+5100@5104@Southern Africa
+5100@5105@Western Africa
+5101@114@Kenya
+5101@129@Madagascar
+5101@130@Malawi
+5101@137@Mauritius
+5101@144@Mozambique
+5101@178@Eritrea
+5101@181@Zimbabwe
+5101@182@Réunion
+5101@184@Rwanda
+5101@196@Seychelles
+5101@201@Somalia
+5101@215@United Republic of Tanzania
+5101@226@Uganda
+5101@238@Ethiopia
+5101@251@Zambia
+5101@270@Mayotte
+5101@277@South Sudan
+5101@29@Burundi
+5101@45@Comoros
+5101@72@Djibouti
+5102@193@Sao Tome and Principe
+5102@250@Democratic Republic of the Congo
+5102@32@Cameroon
+5102@37@Central African Republic
+5102@39@Chad
+5102@46@Congo
+5102@61@Equatorial Guinea
+5102@7@Angola
+5102@74@Gabon
+5103@124@Libya
+5103@143@Morocco
+5103@205@Western Sahara
+5103@222@Tunisia
+5103@276@Sudan
+5103@4@Algeria
+5103@59@Egypt
+5104@122@Lesotho
+5104@147@Namibia
+5104@20@Botswana
+5104@202@South Africa
+5104@209@Swaziland
+5105@107@Côte d'Ivoire
+5105@123@Liberia
+5105@133@Mali
+5105@136@Mauritania
+5105@158@Niger
+5105@159@Nigeria
+5105@175@Guinea-Bissau
+5105@187@Saint Helena, Ascension and Tristan da Cunha
+5105@195@Senegal
+5105@197@Sierra Leone
+5105@217@Togo
+5105@233@Burkina Faso
+5105@35@Cabo Verde
+5105@53@Benin
+5105@75@Gambia
+5105@81@Ghana
+5105@90@Guinea
+5200@5203@Northern America
+5200@5204@Central America
+5200@5206@Caribbean
+5200@5207@South America
+5203@17@Bermuda
+5203@190@Saint Pierre and Miquelon
+5203@231@United States of America
+5203@33@Canada
+5203@85@Greenland
+5204@138@Mexico
+5204@157@Nicaragua
+5204@166@Panama
+5204@23@Belize
+5204@48@Costa Rica
+5204@60@El Salvador
+5204@89@Guatemala
+5204@95@Honduras
+5206@109@Jamaica
+5206@12@Bahamas
+5206@135@Martinique
+5206@14@Barbados
+5206@142@Montserrat
+5206@177@Puerto Rico
+5206@188@Saint Kitts and Nevis
+5206@189@Saint Lucia
+5206@191@Saint Vincent and the Grenadines
+5206@22@Aruba
+5206@220@Trinidad and Tobago
+5206@224@Turks and Caicos Islands
+5206@239@British Virgin Islands
+5206@240@United States Virgin Islands
+5206@258@Anguilla
+5206@36@Cayman Islands
+5206@49@Cuba
+5206@55@Dominica
+5206@56@Dominican Republic
+5206@8@Antigua and Barbuda
+5206@86@Grenada
+5206@87@Guadeloupe
+5206@93@Haiti
+5207@169@Paraguay
+5207@170@Peru
+5207@19@Bolivia (Plurinational State of)
+5207@207@Suriname
+5207@21@Brazil
+5207@234@Uruguay
+5207@236@Venezuela (Bolivarian Republic of)
+5207@40@Chile
+5207@44@Colombia
+5207@58@Ecuador
+5207@65@Falkland Islands (Malvinas)
+5207@69@French Guiana
+5207@9@Argentina
+5207@91@Guyana
+5300@5301@Central Asia
+5300@5302@Eastern Asia
+5300@5303@Southern Asia
+5300@5304@South-Eastern Asia
+5300@5305@Western Asia
+5301@108@Kazakhstan
+5301@113@Kyrgyzstan
+5301@208@Tajikistan
+5301@213@Turkmenistan
+5301@235@Uzbekistan
+5302@110@Japan
+5302@116@Democratic People's Republic of Korea
+5302@117@Republic of Korea
+5302@128@China, Macao SAR
+5302@141@Mongolia
+5302@96@China, Hong Kong SAR
+5303@100@India
+5303@102@Iran (Islamic Republic of)
+5303@132@Maldives
+5303@149@Nepal
+5303@16@Bangladesh
+5303@165@Pakistan
+5303@18@Bhutan
+5303@2@Afghanistan
+5303@38@Sri Lanka
+5304@101@Indonesia
+5304@115@Cambodia
+5304@120@Lao People's Democratic Republic
+5304@131@Malaysia
+5304@171@Philippines
+5304@176@Timor-Leste
+5304@200@Singapore
+5304@216@Thailand
+5304@237@Viet Nam
+5304@26@Brunei Darussalam
+5304@28@Myanmar
+5305@1@Armenia
+5305@103@Iraq
+5305@105@Israel
+5305@112@Jordan
+5305@118@Kuwait
+5305@121@Lebanon
+5305@13@Bahrain
+5305@179@Qatar
+5305@194@Saudi Arabia
+5305@212@Syrian Arab Republic
+5305@221@Oman
+5305@223@Turkey
+5305@225@United Arab Emirates
+5305@249@Yemen
+5305@299@Occupied Palestinian Territory
+5305@50@Cyprus
+5305@52@Azerbaijan
+5305@73@Georgia
+5400@5401@Eastern Europe
+5400@5402@Northern Europe
+5400@5403@Southern Europe
+5400@5404@Western Europe
+5401@146@Republic of Moldova
+5401@167@Czechia
+5401@173@Poland
+5401@183@Romania
+5401@185@Russian Federation
+5401@199@Slovakia
+5401@230@Ukraine
+5401@27@Bulgaria
+5401@57@Belarus
+5401@97@Hungary
+5402@104@Ireland
+5402@119@Latvia
+5402@126@Lithuania
+5402@162@Norway
+5402@210@Sweden
+5402@229@United Kingdom
+5402@259@Channel Islands
+5402@260@Svalbard and Jan Mayen Islands
+5402@264@Isle of Man
+5402@54@Denmark
+5402@63@Estonia
+5402@64@Faroe Islands
+5402@67@Finland
+5402@99@Iceland
+5403@106@Italy
+5403@134@Malta
+5403@154@The former Yugoslav Republic of Macedonia
+5403@174@Portugal
+5403@192@San Marino
+5403@198@Slovenia
+5403@203@Spain
+5403@272@Serbia
+5403@273@Montenegro
+5403@3@Albania
+5403@6@Andorra
+5403@80@Bosnia and Herzegovina
+5403@82@Gibraltar
+5403@84@Greece
+5403@94@Holy See
+5403@98@Croatia
+5404@11@Austria
+5404@125@Liechtenstein
+5404@140@Monaco
+5404@150@Netherlands
+5404@211@Switzerland
+5404@255@Belgium
+5404@256@Luxembourg
+5404@68@France
+5404@79@Germany
+5500@5501@Australia & New Zealand
+5500@5502@Melanesia
+5500@5503@Micronesia
+5500@5504@Polynesia
+5501@10@Australia
+5501@156@New Zealand
+5501@161@Norfolk Island
+5502@153@New Caledonia
+5502@155@Vanuatu
+5502@168@Papua New Guinea
+5502@25@Solomon Islands
+5502@66@Fiji
+5503@127@Marshall Islands
+5503@145@Micronesia (Federated States of)
+5503@148@Nauru
+5503@163@Northern Mariana Islands
+5503@180@Palau
+5503@83@Kiribati
+5503@88@Guam
+5504@160@Niue
+5504@172@Pitcairn Islands
+5504@218@Tokelau
+5504@219@Tonga
+5504@227@Tuvalu
+5504@243@Wallis and Futuna Islands
+5504@244@Samoa
+5504@47@Cook Islands
+5504@5@American Samoa
+5504@70@French Polynesia

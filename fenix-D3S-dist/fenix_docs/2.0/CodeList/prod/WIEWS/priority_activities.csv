@@ -1,0 +1,236 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "World Information and Early Warning System ( WIEWS )"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "wiews"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "WIEWS priority indicators"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "2",
+         "typeOfCodeList": "tree"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "06"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "WIEWS priority activities"
+   },
+   "uid": "priority_activity"
+}
+
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+titleColumnIndex_FR=4
+shortTitleColumnIndex_EN=5
+
+--data--
+@1000@In situ conservation and management
+
+1000@1100@Surveys and inventories
+1100@1110@Surveys and inventories
+1100@1120@Surveyed species/varieties
+1100@1130@Threatened species/varieties
+
+
+1000@1200@On-farm management and improvement
+1200@1210@Farming communities
+1200@1220@Cultivated land under farmers’ varieties/landraces
+1200@1230@Farmers’ varieties/landraces delivered from genebanks to farmers
+
+
+1000@1300@Disaster situations
+1300@1310@Households receiving seed aid
+1300@1320@Seed aid with local seeds
+1300@1330@Disaster risk management policies
+
+
+1000@1400@Crop wild relatives and wild food plants
+1400@1410@In situ conservation sites managing crop wild relatives and wild food plants
+1400@1420@In situ conservation and management actions with institutional support
+1400@1430@Species actively conserved in situ
+
+
+
+@2000@Ex situ conservation
+
+2000@2100@Targeted collecting
+2100@2110@Strategy for identification of gaps and for targeted collecting missions
+2100@2120@Crops requiring targeted collecting
+2100@2130@Targeted collecting missions
+2100@2140@Samples collected
+
+
+
+2000@2200@Germplasm collections
+2200@2210@Capacity for sustaining collections
+2200@2220@Crops conserved
+2200@2230@Species conserved
+2200@2240@Accessions conserved
+2200@2250@Safety duplication
+
+
+
+
+2000@2300@Regeneration of accessions
+2300@2310@Accessions at risk
+2300@2320@Accessions regenerated
+2300@2330@Accessions in need of regeneration
+
+
+
+@3000@Sustainable use
+
+3000@3100@Characterization and evaluation
+3100@3110@Morphological characterization
+3100@3120@Germplasm evaluation and molecular characterization
+3100@3130@Trait-specific collection subsets
+3100@3140@Accessions distributed
+3100@3150@Samples distributed
+
+
+
+3000@3200@Plant breeding
+3200@3210@Public programmes
+3200@3220@Private programmes
+3200@3230@Orientation of breeding activities
+3200@3240@Public crop breeders
+3200@3250@Private crop breeders
+
+
+
+3000@3300@Crop diversification
+3300@3310@Programmes, projects, activities
+3300@3320@New crops and/or wild species
+
+
+3000@3400@Development and commercialization of varieties
+3400@3410@National policies
+3400@3420@Programmes, projects, activities
+3400@3430@Farmers’ varieties and underutilized species with potential
+
+
+3000@3500@Seed production and distribution
+3500@3510@Varieties released
+3500@3520@Seed enterprises
+3500@3530@Field diversity of major crops
+3500@3540@Outreach of formal seed sector for major crops
+3500@3550@National seed policy and seed law
+
+
+@4000@Building sustainable institutional and human capacities
+
+4000@4100@National programmes
+4100@4110@National coordination entities
+4100@4120@National Focal Point
+4100@4130@Policy framework and strategies
+4100@4140@Information sharing mechanism
+
+
+4000@4200@Networks
+4200@4210@Regional networks
+4200@4220@Crop improvement networks
+4200@4230@Publications
+
+
+
+4000@4300@Information systems
+4300@4310@Documentation of crop wild relatives conserved in situ
+4300@4320@Documentation of farmers’ varieties cultivated on-farm
+4300@4330@Documentation of accessions in ex situ collections
+4300@4340@Documentation of released varieties
+4300@4350@Participation in international/regional systems
+
+
+
+4000@4400@Monitoring and safeguarding genetic diversity
+4400@4410@National systems
+4400@4420@Remedial actions
+
+
+
+4000@4500@Human resource capacity
+4500@4510@Educational and training programmes
+4500@4520@Staff skills upgrading
+
+
+
+4000@4600@Public awareness
+4600@4610@Programmes
+4600@4620@Contributing stakeholder groups
+4600@4630@Types of products developed

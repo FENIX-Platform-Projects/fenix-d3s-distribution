@@ -1,75 +1,79 @@
 [
   {
     "name": "filter",
-    "sid":[{"uid":"adam_compare_analysis"}],
+    "sid": [
+      {
+        "uid": "adam_browse_sector_recipient"
+      }
+    ],
     "parameters": {
+      "columns": [
+        "gaul0",
+        "value",
+        "unitcode"
+      ],
       "rows": {
-        "recipientcode": {
+        "!gaul0": {
           "codes": [
             {
-              "uid": "crs_recipients",
-              "version": "2016",
+              "uid": "GAUL0",
+              "version": "2014",
               "codes": [
-                "55"
-              ]
-            }
-          ]
-        },
-        "donorcode": {
-          "codes": [
-            {
-              "uid": "crs_donors",
-              "version": "2016",
-              "codes": [
-                "918"
-              ]
-            }
-          ]
-        },
-        "parentsector_code": {
-          "codes": [
-            {
-              "uid": "crs_dac",
-              "version": "2016",
-              "codes": [
-                "311"
-              ]
-            }
-          ]
-        },
-        "purposecode": {
-          "codes": [
-            {
-              "uid": "crs_purposes",
-              "version": "2016",
-              "codes": [
-                "31163"
+                "NA",
+                "ZZZZZ"
               ]
             }
           ]
         },
         "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "fao_sector": {
           "enumeration": [
-            "usd_commitment"
+            "1"
           ]
         },
         "year": {
           "time": [
             {
               "from": "2000",
-              "to": "2014"
+              "to": "2015"
             }
           ]
         }
-      },
-      "columns": [
-        "year",
-        "value",
-        "unitcode",
-        "donorcode",
-        "recipientcode",
-        "parentsector_code",
-        "purposecode"
+      }
+    },
+    "rid": {
+      "uid": "filter_map"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "gaul0"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        }
       ]
     }
   }

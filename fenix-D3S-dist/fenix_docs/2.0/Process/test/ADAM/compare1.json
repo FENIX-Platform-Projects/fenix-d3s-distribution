@@ -3,68 +3,21 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_donor_recipient"
+        "uid": "adam_browse_sector_recipient"
       }
     ],
     "parameters": {
+      "columns": [ "gaul0", "value", "unitcode"],
       "rows": {
-        "!recipientcode": {
+        "!gaul0": {
           "codes": [
             {
-              "uid": "crs_recipients",
-              "version": "2016",
+              "uid": "GAUL0",
+              "version": "2014",
               "codes": [
-                "298",
-                "498",
-                "798",
-                "89",
-                "589",
-                "889",
-                "189",
-                "289",
-                "389",
-                "380",
-                "489",
-                "789",
-                "689",
-                "619",
-                "679"
+                "NA",
+                "ZZZZZ"
               ]
-            }
-          ]
-        },
-        "fao_sector": {
-          "enumeration": [
-            "1"
-          ]
-        },
-        "donorcode": {
-          "codes": [
-            {
-              "uid": "crs_donors",
-              "version": "2016",
-              "codes": [
-                "8"
-              ]
-            }
-          ]
-        },
-        "purposecode": {
-          "codes": [
-            {
-              "uid": "crs_purposes",
-              "version": "2016",
-              "codes": [
-                "31195"
-              ]
-            }
-          ]
-        },
-        "year": {
-          "time": [
-            {
-              "from": "2001",
-              "to": "2015"
             }
           ]
         },
@@ -78,53 +31,37 @@
               ]
             }
           ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2015
+            }
+          ]
         }
       }
     },
-    "rid": {
-      "uid": "filter_recipients"
-    }
+    "rid":{"uid":"filter_map"}
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "recipientcode",
-        "flowcategory"
+        "gaul0"
       ],
       "aggregations": [
         {
-          "columns": [
-            "value"
-          ],
+          "columns": ["value"],
           "rule": "SUM"
         },
         {
-          "columns": [
-            "unitcode"
-          ],
-          "rule": "max"
-        },
-        {
-          "columns": [
-            "flowcategory"
-          ],
+          "columns": ["unitcode"],
           "rule": "max"
         }
       ]
     }
-  },
-  {
-    "name": "order",
-    "parameters": {
-      "value": "DESC"
-    }
-  },
-  {
-    "name": "page",
-    "parameters": {
-      "perPage": 10,
-      "page": 1
-    }
   }
 ]
+
+

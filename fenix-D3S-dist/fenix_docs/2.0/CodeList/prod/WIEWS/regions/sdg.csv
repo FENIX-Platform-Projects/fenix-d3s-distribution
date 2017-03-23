@@ -1,0 +1,366 @@
+
+
+{
+    "uid": "sdg_region",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "SDG regions and countries"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "WIEWS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["country"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+        "dsd": {
+           "contextSystem": "wiews"
+    }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+
+
+
+
+@1@World
+1@202@Sub-Saharan Africa
+1@419@Latin America and the Caribbean
+1@513@Northern America  and Europe
+1@53@Australia and New Zealand
+1@543@Oceania  excluding Australia and New Zealand
+1@62@Central Asia  and Southern Asia
+1@747@Western Asia  and Northern Africa
+1@753@Eastern Asia  and South-eastern Asia
+202@108@Burundi
+202@120@Cameroon
+202@132@Cabo Verde
+202@140@Central African Republic
+202@148@Chad
+202@174@Comoros
+202@175@Mayotte
+202@178@Congo
+202@180@Democratic Republic of the Congo
+202@204@Benin
+202@226@Equatorial Guinea
+202@231@Ethiopia
+202@232@Eritrea
+202@24@Angola
+202@262@Djibouti
+202@266@Gabon
+202@270@Gambia
+202@288@Ghana
+202@324@Guinea
+202@384@Côte d'Ivoire
+202@404@Kenya
+202@426@Lesotho
+202@430@Liberia
+202@450@Madagascar
+202@454@Malawi
+202@466@Mali
+202@478@Mauritania
+202@480@Mauritius
+202@508@Mozambique
+202@516@Namibia
+202@562@Niger
+202@566@Nigeria
+202@624@Guinea-Bissau
+202@638@Réunion
+202@646@Rwanda
+202@654@Saint Helena
+202@678@Sao Tome and Principe
+202@686@Senegal
+202@690@Seychelles
+202@694@Sierra Leone
+202@706@Somalia
+202@710@South Africa
+202@716@Zimbabwe
+202@72@Botswana
+202@728@South Sudan
+202@748@Swaziland
+202@768@Togo
+202@800@Uganda
+202@834@United Republic of Tanzania
+202@854@Burkina Faso
+202@894@Zambia
+419@136@Cayman Islands
+419@152@Chile
+419@170@Colombia
+419@188@Costa Rica
+419@192@Cuba
+419@212@Dominica
+419@214@Dominican Republic
+419@218@Ecuador
+419@222@El Salvador
+419@238@Falkland Islands (Malvinas)
+419@254@French Guiana
+419@28@Antigua and Barbuda
+419@308@Grenada
+419@312@Guadeloupe
+419@32@Argentina
+419@320@Guatemala
+419@328@Guyana
+419@332@Haiti
+419@340@Honduras
+419@388@Jamaica
+419@44@Bahamas
+419@474@Martinique
+419@484@Mexico
+419@500@Montserrat
+419@52@Barbados
+419@533@Aruba
+419@558@Nicaragua
+419@591@Panama
+419@600@Paraguay
+419@604@Peru
+419@630@Puerto Rico
+419@659@Saint Kitts and Nevis
+419@660@Anguilla
+419@662@Saint Lucia
+419@670@Saint Vincent and the Grenadines
+419@68@Bolivia (Plurinational State of)
+419@740@Suriname
+419@76@Brazil
+419@780@Trinidad and Tobago
+419@796@Turks and Caicos Islands
+419@84@Belize
+419@850@United States Virgin Islands
+419@858@Uruguay
+419@862@Venezuela (Bolivarian Republic of)
+419@92@British Virgin Islands
+513@100@Bulgaria
+513@112@Belarus
+513@124@Canada
+513@191@Croatia
+513@20@Andorra
+513@203@Czechia
+513@208@Denmark
+513@233@Estonia
+513@234@Faroe Islands
+513@246@Finland
+513@250@France
+513@276@Germany
+513@292@Gibraltar
+513@300@Greece
+513@304@Greenland
+513@336@Holy See
+513@348@Hungary
+513@352@Iceland
+513@372@Ireland
+513@380@Italy
+513@40@Austria
+513@428@Latvia
+513@438@Liechtenstein
+513@440@Lithuania
+513@442@Luxembourg
+513@470@Malta
+513@492@Monaco
+513@498@Republic of Moldova
+513@499@Montenegro
+513@528@Netherlands
+513@56@Belgium
+513@578@Norway
+513@60@Bermuda
+513@616@Poland
+513@620@Portugal
+513@642@Romania
+513@643@Russian Federation
+513@666@Saint Pierre and Miquelon
+513@674@San Marino
+513@688@Serbia
+513@70@Bosnia and Herzegovina
+513@703@Slovakia
+513@705@Slovenia
+513@724@Spain
+513@744@Svalbard and Jan Mayen Islands
+513@752@Sweden
+513@756@Switzerland
+513@8@Albania
+513@804@Ukraine
+513@807@The former Yugoslav Republic of Macedonia
+513@826@United Kingdom of Great Britain and Northern Ireland
+513@830@Channel Islands
+513@833@Isle of Man
+513@840@United States of America
+53@36@Australia
+53@554@New Zealand
+53@574@Norfolk Island
+543@16@American Samoa
+543@184@Cook Islands
+543@242@Fiji
+543@258@French Polynesia
+543@296@Kiribati
+543@316@Guam
+543@520@Nauru
+543@540@New Caledonia
+543@548@Vanuatu
+543@570@Niue
+543@580@Northern Mariana Islands
+543@583@Micronesia (Federated States of)
+543@584@Marshall Islands
+543@585@Palau
+543@598@Papua New Guinea
+543@612@Pitcairn
+543@772@Tokelau
+543@776@Tonga
+543@798@Tuvalu
+543@876@Wallis and Futuna Islands
+543@882@Samoa
+543@90@Solomon Islands
+62@144@Sri Lanka
+62@356@India
+62@364@Iran (Islamic Republic of)
+62@398@Kazakhstan
+62@4@Afghanistan
+62@417@Kyrgyzstan
+62@462@Maldives
+62@50@Bangladesh
+62@524@Nepal
+62@586@Pakistan
+62@64@Bhutan
+62@762@Tajikistan
+62@795@Turkmenistan
+62@860@Uzbekistan
+747@12@Algeria
+747@196@Cyprus
+747@268@Georgia
+747@275@State of Palestine
+747@31@Azerbaijan
+747@368@Iraq
+747@376@Israel
+747@400@Jordan
+747@414@Kuwait
+747@422@Lebanon
+747@434@Libya
+747@48@Bahrain
+747@504@Morocco
+747@51@Armenia
+747@512@Oman
+747@634@Qatar
+747@682@Saudi Arabia
+747@729@Sudan
+747@732@Western Sahara
+747@760@Syrian Arab Republic
+747@784@United Arab Emirates
+747@788@Tunisia
+747@792@Turkey
+747@818@Egypt
+747@887@Yemen
+753@104@Myanmar
+753@116@Cambodia
+753@344@China, Hong Kong Special Administrative Region
+753@360@Indonesia
+753@392@Japan
+753@408@Democratic People's Republic of Korea
+753@410@Republic of Korea
+753@418@Lao People's Democratic Republic
+753@446@China, Macao Special Administrative Region
+753@458@Malaysia
+753@496@Mongolia
+753@608@Philippines
+753@626@Timor-Leste
+753@702@Singapore
+753@704@Viet Nam
+753@764@Thailand
+753@96@Brunei Darussalam
+

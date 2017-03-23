@@ -1,5 +1,26 @@
 [
   {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "donor_sector_oda"
+      },
+      {
+        "uid": "total_donor_oda"
+      },
+      {
+        "uid": "percentage_ODA"
+      },
+      {
+        "uid": "OECD_AVG"
+      }
+    ],
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
+    }
+  },
+  {
     "name": "filter",
     "sid": [
       {
@@ -14,8 +35,19 @@
       ],
       "rows": {
         "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "fao_sector": {
           "enumeration": [
-            "usd_commitment"
+            "1"
           ]
         },
         "donorcode": {
@@ -24,7 +56,7 @@
               "uid": "crs_donors",
               "version": "2016",
               "codes": [
-                "1"
+                "1312"
               ]
             }
           ]
@@ -32,15 +64,15 @@
         "year": {
           "time": [
             {
-              "from": "2000",
-              "to": "2014"
+              "from": "2004",
+              "to": "2015"
             }
           ]
         }
       }
     },
     "rid": {
-      "uid": "filter_total_ODA"
+      "uid": "filter_donor_sector_oda"
     }
   },
   {
@@ -60,7 +92,109 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "max"
+        }
+      ]
+    },
+    "rid": {
+      "uid": "tt"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "tt"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "ODA from Resource Partner in Sector"
+    },
+    "rid": {
+      "uid": "donor_sector_oda"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_sector_oda"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "year",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
+
+        "year": {
+          "time": [
+            {
+              "from": "2004",
+              "to": "2015"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_total_donor_oda"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "year"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
         }
       ]
     },
@@ -96,98 +230,10 @@
     }
   },
   {
-    "name": "filter",
-    "sid": [
-      {
-        "uid": "adam_donors_gni"
-      }
-    ],
-    "parameters": {
-      "columns": [
-        "year",
-        "value",
-        "unitcode"
-      ],
-      "rows": {
-        "donorcode": {
-          "codes": [
-            {
-              "uid": "crs_donors",
-              "version": "2016",
-              "codes": [
-                "1"
-              ]
-            }
-          ]
-        },
-        "year": {
-          "time": [
-            {
-              "from": "2000",
-              "to": "2014"
-            }
-          ]
-        }
-      }
-    },
-    "rid": {
-      "uid": "filter_gni_donor_oda"
-    }
-  },
-  {
-    "name": "group",
-    "parameters": {
-      "by": [
-        "year"
-      ],
-      "aggregations": [
-        {
-          "columns": [
-            "value"
-          ],
-          "rule": "SUM"
-        },
-        {
-          "columns": [
-            "unitcode"
-          ],
-          "rule": "first"
-        }
-      ]
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "dataType": "text",
-        "id": "indicator",
-        "title": {
-          "EN": "Indicator"
-        },
-        "domain": {
-          "codes": [
-            {
-              "extendedName": {
-                "EN": "Adam Processes"
-              },
-              "idCodeList": "adam_processes"
-            }
-          ]
-        },
-        "subject": null
-      },
-      "value": "Resource Partner GNI"
-    },
-    "rid": {
-      "uid": "gni_donor_oda"
-    }
-  },
-  {
     "name": "join",
     "sid": [
       {
-        "uid": "gni_donor_oda"
+        "uid": "donor_sector_oda"
       },
       {
         "uid": "total_donor_oda"
@@ -211,14 +257,14 @@
       "values": []
     },
     "rid": {
-      "uid": "join_process_oda_gni"
+      "uid": "join_process"
     }
   },
   {
     "name": "addcolumn",
     "sid": [
       {
-        "uid": "join_process_oda_gni"
+        "uid": "join_process"
       }
     ],
     "parameters": {
@@ -235,7 +281,7 @@
           "1 = 1"
         ],
         "values": [
-          " ( total_donor_oda_value / gni_donor_oda_value)*100"
+          " ( donor_sector_oda_value / total_donor_oda_value )*100"
         ]
       }
     }
@@ -248,6 +294,9 @@
         "value"
       ],
       "rows": {}
+    },
+    "rid": {
+      "uid": "percentage_with_two_values"
     }
   },
   {
@@ -294,10 +343,10 @@
         },
         "subject": null
       },
-      "value": "% ODA/GNI"
+      "value": "% Sector/Total"
     },
     "rid": {
-      "uid": "ODA_on_GNI"
+      "uid": "percentage_ODA"
     }
   },
   {
@@ -315,39 +364,12 @@
       ],
       "rows": {
         "oda": {
-          "enumeration": [
-            "usd_commitment"
-          ]
-        },
-        "parentsector_code": {
           "codes": [
             {
-              "uid": "crs_dac",
+              "uid": "oda_crs",
               "version": "2016",
               "codes": [
-                "NA"
-              ]
-            }
-          ]
-        },
-        "purposecode": {
-          "codes": [
-            {
-              "uid": "crs_purposes",
-              "version": "2016",
-              "codes": [
-                "NA"
-              ]
-            }
-          ]
-        },
-        "donorcode": {
-          "codes": [
-            {
-              "uid": "crs_donors",
-              "version": "2016",
-              "codes": [
-                "NA"
+                "usd_commitment"
               ]
             }
           ]
@@ -357,46 +379,23 @@
             "t"
           ]
         },
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
         "year": {
           "time": [
             {
-              "from": 2000,
-              "to": 2014
+              "from": "2004",
+              "to": "2015"
             }
           ]
         }
       }
     },
     "rid": {
-      "uid": "all_subsectors_sum"
-    }
-  },
-  {
-    "name": "filter",
-    "sid": [
-      {
-        "uid": "adam_donors_gni"
-      }
-    ],
-    "parameters": {
-      "columns": [
-        "year",
-        "value",
-        "unitcode"
-      ],
-      "rows": {
-        "year": {
-          "time": [
-            {
-              "from": 2000,
-              "to": 2014
-            }
-          ]
-        }
-      }
-    },
-    "rid": {
-      "uid": "filter_GNI_sum"
+      "uid": "filter_total_oda_dac_members_by_year"
     }
   },
   {
@@ -416,12 +415,211 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "max"
         }
       ]
     },
     "rid": {
-      "uid": "GNI_sum"
+      "uid": "aggregated_oecd"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_sector_oda"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "year",
+        "donorcode"
+      ],
+      "rows": {
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "dac_member": {
+          "enumeration": [
+            "t"
+          ]
+        },
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2004",
+              "to": "2015"
+            }
+          ]
+        },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "1312"
+              ]
+            }
+          ]
+        }
+
+      }
+    },
+    "rid": {
+      "uid": "filter_dac_members_by_donor_year"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "donorcode",
+        "year"
+      ],
+      "aggregations": []
+    },
+    "rid": {
+      "uid": "sd"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value_count",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": null
+      },
+      "value": 1
+    },
+    "rid": {
+      "uid": "percentage_Value"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "year"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value_count"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    },
+    "rid": {
+      "uid": "count_dac_members"
+    }
+  },
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "count_dac_members"
+      },
+      {
+        "uid": "aggregated_oecd"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "year"
+          }
+        ],
+        [
+          {
+            "type": "id",
+            "value": "year"
+          }
+        ]
+      ],
+      "values": []
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": null
+      },
+      "value": {
+        "keys": [
+          "1 = 1"
+        ],
+        "values": [
+          " ( aggregated_oecd_value / count_dac_members_value_count )"
+        ]
+      }
+    },
+    "rid": {
+      "uid": "avg_value"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "year",
+        "value",
+        "aggregated_oecd_unitcode"
+      ],
+      "rows": {}
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "OECD Average of ODA in Sector"
+    },
+    "rid": {
+      "uid": "OECD_AVG"
     }
   }
 ]
