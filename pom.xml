@@ -22,6 +22,7 @@
         <module>fenix-D3S-adam</module>
         <module>fenix-D3S-policy</module>
         <module>fenix-D3S-gift</module>
+        <module>fenix-D3S-wiews</module>
         <module>fenix-D3S-flexmonster</module>
         <module>fenix-D3S-dist</module>
     </modules>
