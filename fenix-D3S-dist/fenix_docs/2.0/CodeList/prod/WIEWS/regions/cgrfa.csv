@@ -1,0 +1,405 @@
+{
+    "uid": "cgrfa",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "CGRFA regions and countries"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "WIEWS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["country"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+        "dsd": {
+           "contextSystem": "wiews"
+    }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+
+
+@1@World
+1@1@Near East
+1@10@Europe
+1@100@Latin America and the Caribbean
+1@101@Latin America and the Caribbean
+1@102@Asia
+1@103@Europe
+1@104@Europe
+1@105@Near East
+1@106@Asia
+1@107@Europe
+1@108@Europe
+1@109@Africa
+1@11@Africa
+1@110@Latin America and the Caribbean
+1@111@South West Pacific
+1@112@Africa
+1@113@Near East
+1@114@Africa
+1@115@Europe
+1@116@Africa
+1@117@Africa
+1@118@Europe
+1@119@Europe
+1@12@Asia
+1@120@Europe
+1@121@Asia
+1@122@Not a member
+1@123@Africa
+1@124@Europe
+1@125@Europe
+1@126@Near East
+1@127@Africa
+1@128@South West Pacific
+1@129@Latin America and the Caribbean
+1@13@Latin America and the Caribbean
+1@130@Africa
+1@131@Europe
+1@132@Not a member
+1@133@Africa
+1@134@Near East
+1@135@Europe
+1@136@Africa
+1@137@North America
+1@138@Latin America and the Caribbean
+1@139@Latin America and the Caribbean
+1@14@Latin America and the Caribbean
+1@140@Near East
+1@141@Africa
+1@142@Africa
+1@15@Europe
+1@16@Africa
+1@17@Africa
+1@18@Asia
+1@19@Africa
+1@2@Europe
+1@20@North America
+1@21@Africa
+1@22@Africa
+1@23@Latin America and the Caribbean
+1@24@Africa
+1@25@South West Pacific
+1@26@Latin America and the Caribbean
+1@27@Europe
+1@28@Latin America and the Caribbean
+1@29@Europe
+1@3@Africa
+1@30@Europe
+1@31@Africa
+1@32@Asia
+1@33@Africa
+1@34@Europe
+1@35@Not a member
+1@36@Latin America and the Caribbean
+1@37@Near East
+1@38@Latin America and the Caribbean
+1@39@Africa
+1@4@Africa
+1@40@Europe
+1@41@Africa
+1@42@South West Pacific
+1@43@Europe
+1@44@Europe
+1@45@Africa
+1@46@Europe
+1@47@Africa
+1@48@Europe
+1@49@Latin America and the Caribbean
+1@5@Latin America and the Caribbean
+1@50@Africa
+1@51@Africa
+1@52@Latin America and the Caribbean
+1@53@Latin America and the Caribbean
+1@54@Europe
+1@55@Europe
+1@56@Asia
+1@57@Asia
+1@58@Near East
+1@59@Near East
+1@6@Europe
+1@60@Europe
+1@61@Europe
+1@62@Latin America and the Caribbean
+1@63@Asia
+1@64@Near East
+1@65@Africa
+1@66@Not a member
+1@67@Near East
+1@68@Asia
+1@69@Asia
+1@7@South West Pacific
+1@70@Europe
+1@71@Near East
+1@72@Africa
+1@73@Africa
+1@74@Near East
+1@75@Europe
+1@76@Europe
+1@77@Africa
+1@78@Africa
+1@79@Asia
+1@8@Europe
+1@80@Asia
+1@81@Africa
+1@82@Europe
+1@83@South West Pacific
+1@84@Not a member
+1@85@Africa
+1@86@Not a member
+1@87@Africa
+1@88@Asia
+1@89@Africa
+1@9@Asia
+1@90@Asia
+1@91@Europe
+1@92@Latin America and the Caribbean
+1@93@Africa
+1@94@Europe
+1@95@Near East
+1@96@Asia
+1@97@South West Pacific
+1@98@Latin America and the Caribbean
+1@99@South West Pacific
+10@56@Belgium
+100@600@Paraguay
+101@604@Peru
+102@608@Philippines
+103@616@Poland
+104@620@Portugal
+105@634@Qatar
+106@410@Republic of Korea
+107@498@Republic of Moldova
+108@642@Romania
+109@646@Rwanda
+11@204@Benin
+110@662@Saint Lucia
+111@882@Samoa
+112@678@Sao Tome and Principe
+113@682@Saudi Arabia
+114@686@Senegal
+115@688@Serbia
+116@690@Seychelles
+117@694@Sierra Leone
+118@703@Slovakia
+119@705@Slovenia
+12@64@Bhutan
+120@724@Spain
+121@144@Sri Lanka
+122@729@Sudan
+123@748@Swaziland
+124@752@Sweden
+125@756@Switzerland
+126@760@Syrian Arab Republic
+127@768@Togo
+128@776@Tonga
+129@780@Trinidad and Tobago
+13@68@Bolivia (Plurinational State of)
+130@788@Tunisia
+131@792@Turkey
+132@798@Tuvalu
+133@800@Uganda
+134@784@United Arab Emirates
+135@826@United Kingdom of Great Britain and Northern Ireland
+136@834@United Republic of Tanzania
+137@840@United States of America
+138@858@Uruguay
+139@862@Venezuela (Bolivarian Republic of)
+14@76@Brazil
+140@887@Yemen
+141@894@Zambia
+142@716@Zimbabwe
+15@100@Bulgaria
+16@854@Burkina Faso
+17@108@Burundi
+18@116@Cambodia
+19@120@Cameroon
+2@8@Albania
+20@124@Canada
+21@140@Central African Republic
+22@148@Chad
+23@152@Chile
+24@178@Congo
+25@184@Cook Islands
+26@188@Costa Rica
+27@191@Croatia
+28@192@Cuba
+29@196@Cyprus
+3@12@Algeria
+30@203@Czechia
+31@384@Côte d'Ivoire
+32@408@Democratic People's Republic of Korea
+33@180@Democratic Republic of the Congo
+34@208@Denmark
+35@262@Djibouti
+36@218@Ecuador
+37@818@Egypt
+38@222@El Salvador
+39@232@Eritrea
+4@24@Angola
+40@233@Estonia
+41@231@Ethiopia
+42@242@Fiji
+43@246@Finland
+44@250@France
+45@266@Gabon
+46@276@Germany
+47@288@Ghana
+48@300@Greece
+49@320@Guatemala
+5@32@Argentina
+50@324@Guinea
+51@624@Guinea-Bissau
+52@328@Guyana
+53@340@Honduras
+54@348@Hungary
+55@352@Iceland
+56@356@India
+57@360@Indonesia
+58@364@Iran (Islamic Republic of)
+59@368@Iraq
+6@51@Armenia
+60@372@Ireland
+61@380@Italy
+62@388@Jamaica
+63@392@Japan
+64@400@Jordan
+65@404@Kenya
+66@296@Kiribati
+67@414@Kuwait
+68@417@Kyrgyzstan
+69@418@Lao People's Democratic Republic
+7@36@Australia
+70@428@Latvia
+71@422@Lebanon
+72@426@Lesotho
+73@430@Liberia
+74@434@Libya
+75@440@Lithuania
+76@442@Luxembourg
+77@450@Madagascar
+78@454@Malawi
+79@458@Malaysia
+8@40@Austria
+80@462@Maldives
+81@466@Mali
+82@470@Malta
+83@584@Marshall Islands
+84@478@Mauritania
+85@480@Mauritius
+86@499@Montenegro
+87@504@Morocco
+88@104@Myanmar
+89@516@Namibia
+9@50@Bangladesh
+90@524@Nepal
+91@528@Netherlands
+92@558@Nicaragua
+93@562@Niger
+94@578@Norway
+95@512@Oman
+96@586@Pakistan
+97@585@Palau
+98@591@Panama
+99@598@Papua New Guinea

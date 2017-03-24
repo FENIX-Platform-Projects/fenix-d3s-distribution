@@ -1,0 +1,259 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "World Information and Early Warning System ( WIEWS )"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "wiews"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "WIEWS crops"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "2",
+         "typeOfCodeList": "tree"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "06"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "WIEWS crops"
+   },
+   "uid": "wiews_crop"
+}
+
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+titleColumnIndex_FR=4
+titleColumnIndex_ES=5
+titleColumnIndex_AR=6
+
+--data--
+@1@Alfalfa@Luzerne@Alfalfa@البرسيم /  فصفصة / فصة
+@2@Almonds@Amandes@Almendras@اللوز
+@3@Amaranth@Amarante@Amaranto@قطيفة
+@4@Anise, badian, fennel, coriander@Anis, badiane, fenouil, coriandre@Anís, badián, hinojo, cilantro@اليانسون، باديان والشمار والكزبرة
+@5@Apples@Pommes@Manzanas@التفاح
+@6@Apricots@Abricots@Albaricoques@المشمش
+@7@Areca nuts@Noix d'arec@Nueces de areca@المكسرات الفوفل
+@8@Artichokes@Artichauts@Alcachofas@الخرشوف
+@9@Asparagus@Asperges@Esparragos@الهليون / سكوم
+@10@Avocados@Avocats@Aguacates@الأفوكادو
+@11@Bambara groundnut@Pois bambara@Bambara@بامبارا الفول السوداني
+@12@Bananas@Bananes@Bananos@الموز
+@13@Barley@Orge@Cebada@الشعير
+@14@Beans@Haricots@Frijoles@فاصوليا /  لوبيا
+@15@Beet@Betterave@Remolacha@البنجر
+@16@Blueberries@Myrtilles@Arándanos@العنب البري
+@17@Brazil nuts@Noix du brésil@Nueces del brasil@جوز البرازيل
+@18@Bread wheat@Blé tendre@Trigo harinero@القمح الطري
+@19@Broad beans, horse beans@Fèves@Haba comun y haba caballar@الفول، الفاصوليا الحصان
+@20@Buckwheat@Sarrasin, blé noir@Trigo sarraceno, alforfon@الحنطة السوداء
+@21@Cabbages and other brassicas@Choux et autres brassicacée@Coles y otras crucíferas@الكرنب (الملفوف) وbrassicas في أخرى
+@22@Cantaloupe@Cantaloup@Cantalupo@الشمام
+@23@Carob tree@Caroubier@Algarrobo@شجرة الخروب
+@24@Carrots@Carottes@Zanahorias@الجزر
+@25@Carrots and turnips@Carottes et navets@Zanahorias y nabos@الجزر واللفت
+@26@Cashew@Noix d'acajou@Anacardos@الكاجو
+@27@Cassava@Manioc@Yuca@الكسافا
+@28@Castor oil plant@Ricin@Ricino@الخروع
+@29@Cauliflowers and broccoli@Choux-fleurs et brocolis@Coliflor y brécol@القرنبيط والبروكلي
+@30@Cereals@Céréales@Cereales@الحبوب
+@31@Cherries@Cerises@Cerezas@الكرز
+@32@Chestnut@Châtaignes@Castañas@الكستناء
+@33@Chick peas@Pois chiches@Garbanzos@الحمص
+@34@Chillies and peppers@Piments doux et épicé@Chiles (ajíes) y pimientos@فلفل حريف والفلفل
+@35@Cinnamon (canella)@Cannelle@Canela@القرفة (كانيلا)
+@36@Citrus@Agrumes@Cítricos@الحمضيات
+@37@Cloves@Girofles@Clavo de olor@القرنفل
+@38@Cocksfoot@Dactyle@Dactylis@إصبعية
+@39@Cocoa@Cacao@Cacao@الكاكاو
+@40@Coconuts@Noix de coco@Nuez de coco@جوز الهند
+@41@Coffee@Café@Café@القهوة
+@42@Cotton@Coton@Algodón@القطن
+@43@Cow peas@Pois à vache@Caupis@البازلاء البقر
+@44@Cranberries@Canneberges@Arándanos trepadores@التوت البري
+@45@Cucumbers and gherkins@Concombres, cornichons@Pepinos, pepinillos@الخيار وخيار المخلل
+@46@Currants@Cassis et groseilles@Grosellas@الكشمش
+@47@Dates@Dattes@Dátiles@تَمْر
+@48@Durum wheat@Blé dur@Trigo duro@القمح القاسي
+@49@Eggplants (aubergines)@Aubergines@Berenjenas@الباذنجان
+@50@Faba bean@Fèves et féverolles@Haba@الفول
+@51@Figs@Figues@Higos@التين
+@52@Finger millet@Éleusine@Coracán@الدخن
+@53@Flax@Lin@Lino@الكتان
+@54@Fonio@Fonio@Digitaria@الديجيتاريا
+@55@Forages@Fourrage@Forraje@الأعلاف
+@56@Garlic@Ail@Ajo@الثوم
+@57@Ginger@Gingembre@Jengibre@الزنجبيل
+@58@Gooseberries@Groseilles à maquereaux@Uva espina@الكشمش / الحرنكش
+@59@Grapefruit (inc. pomelos)@Pamplemousses et pomelos@Toronja y pomelo@الجريب فروت
+@60@Grapevine@Vigne@Uvas@الكرمة
+@61@Groundnuts, peanuts@Arachides@Manís (cacahuete)@الفول السوداني
+@62@Hazelnuts@Noisettes@Avellanas@البندق
+@63@Jute plants@Jute (usines de jute)@Yute (plantas de yute)@الجوت /   القنب
+@64@Kapok (silk cotton)@Kapkier (fromager)@Ceiba@الكابوك (القطن والحرير)
+@65@Leguminous vegetables@Légumes à cosse@Hortalizas de vaina@الخضروات البقولية
+@66@Lemons and limes@Citrons et limes@Limones y limas@الليمون والليمون الحامض
+@67@Lentils@Lentilles@Lentejas@العدس
+@68@Lettuce and chicory@Laitue et chicorée@Lechuga y achicoria@الخس والهندباء
+@69@Lupins@Lupins@Altramuz@نباتات الترمس
+@70@Maize@Maïs@Maíz@الذرة
+@71@Mangoes, mangosteens, guavas@Mangues, mangoustans et goyaves@Mangos, mangostanes y guayabas@المانجو، مانجوستين، الجوافة
+@72@Millet@Mils@Mijo@الدخن
+@73@Mustard@Moutarde@Mostaza@الخردل
+@74@Nutmeg, mace and cardamoms@Muscade, macis et cardamome@Nuez moscada, macis, cardamomo@جوزة الطيب والصولجان وحب الهال
+@75@Oats@Avoine@Avena@الشوفان
+@76@Oil palm@Huile, noix de palme@Aceite, nuez de palma@جَو النخيل
+@77@Okra@Gombo@Gombo@البامية
+@78@Olives@Olives@Aceitunas, olivas@الزيتون
+@79@Onions (inc. shallots)@Oignons, echalotes, frais@Cebollas (incl. chalotes)@البصل والكراث  أخضر
+@80@Oranges@Oranges@Naranjas@البرتقال
+@81@Papayas@Papayes@Papayas@البابايا
+@82@Peach palm@Palmier pêche, péjibaie ou parépou@Pejibaye (chontaduro, pijuayo, tembé, pibá)@الخوخ النخيل
+@83@Peaches and nectarines@Pêches et nectarines@Melocotones (duraznos) y nectarinas@الخوخ والنكتارين
+@84@Pearl millet@Millet perle@Mijo perla@الدخن
+@85@Pears@Poires@Peras@الكمثرى
+@86@Peas@Pois@Guisantes, arvejas@البازلاء
+@87@Pepper (Piper spp.)@Poivre (sous-espèces piper)@Pimienta (piper spp.)@فلفل
+@88@Peppermint@Menthe poivrée, menthe verte@Menta, hierbabuena@النعناع
+@89@Persimmons@Plaqueminiers/kakis@Caquis@الكاكي
+@90@Physic nut@Jatropha@Jatropha@حب الملوك
+@91@Pigeon peas@Pois cajan@Guandu@حمامة البازلاء
+@92@Pineapples@Ananas@Piña tropical@الأناناس
+@93@Pistachios@Pistaches@Pistachos@الفستق
+@94@Plantains@Bananes plantains@Plátanos@موز
+@95@Plums and sloes@Prunes et prunelles@Ciruelas y endrinas@الخوخ وبرقوق السياج
+@96@Poppy@Oeillette@Adormidera@الخشخاش
+@97@Potatoes@Pommes de terre@Papas, patatas@البطاطا
+@98@Pulses@Légumineuses@Legumbres@البقول
+@99@Pumpkins, squash and gourds@Citrouilles, courges et potirons@Calabazas, zapayo, calabaza confitera@القرع، والكوسا والقرع
+@100@Pyrethrum@Pyrèthre@Pelitre@عاقر قرحا
+@101@Quinces@Coings@Membrillos@السفرجل
+@102@Quinoa@Quinoa@Quinua@الكينوا
+@103@Radish@Radis@Rábano@الفجل
+@104@Ramie@Ramie@Ramio@الرامي
+@105@Rapeseed@Colza@Colza@اللفت
+@106@Raspberries@Framboises@Frambuesas@التوت
+@107@Rice@Riz@Arroz@الأرز
+@108@Roots and tubers@Racines et tubercules@Raices y tuberculos@الجذور والدرنات
+@109@Rose@Rosiers@Rosa@روز
+@110@Rubber, natural@Caoutchouc naturel@Caucho natural@المطاط الطبيعي
+@111@Rye@Seigle@Centeno@الجاودار
+@112@Safflower@Carthame@Cartamo@القرطم
+@113@Sesame@Sésame@Sésamo@السمسم
+@114@Sisal@Sisal@Sisal@السيزال
+@115@Sorghum@Sorgho@Sorgo@الذرة الرفيعة
+@116@Sour cherries@Cerisier acide@Guindo, cerezo ácido@الكرز الحامض
+@117@Soybeans@Soja@Soja@فول الصويا
+@118@Spices@Epices@Especias@التوابل
+@119@Spinach@Epinards@Espinacas@السبانخ
+@120@Strawberries@Fraises@Fresas@الفراولة
+@121@String beans/green beans@Haricots verts@Judías verdes con hilo@الفاصوليا / الفاصوليا الخضراء
+@122@Sugar beet@Sucre, betterave@Azucar, remolacha@بنجر السكر
+@123@Sugar cane@Sucre, canne@Azucar, caña@قصب السكر
+@124@Sugar crops@Sucre, plantes sucrières@Azucar, cultivos@المحاصيل السكرية
+@125@Sunflower@Tournesol@Girasol@عباد الشمس
+@126@Sweet peppers@Poivron@Pimiento morrón, pimentón@الفلفل الحلو
+@127@Sweet potatoes@Patates douces@Batatas, boniatos@البطاطا الحلوة
+@128@Tall fescue@Fétuque élevée@Festuca alta@العكرش طويل القامة
+@129@Tangerines, mandarins, clementines, satsumas@Tangerines, mandarines, clémentines, satsumas@Tangerinas, mandarinas, clementinas, satsumas@اليوسفي، اليوسفي، الكلمنتينا، الساتسوماس
+@130@Taro (cocoyam)@Taros (colocases)@Taro (cocoyam)@القلقاس (الكوكويام)
+@131@Tea@Thé@Té@الشاي
+@132@Tef@Tef@Tef@عوامل مختلفة
+@133@Tobacco@Tabac@Tabaco@التبغ
+@134@Tomatoes@Tomates@Tomates@الطماطم (البندورة)
+@135@Treenuts@Fruits à coque@Nueces de árbol@Treenuts
+@136@Triticale@Triticale@Triticale@التريتيكال
+@137@Tung nuts@Noix d'abrasin@Nueces de tung@المكسرات تونغ
+@138@Vanilla@Vanille@Vainilla@الفانيليا
+@139@Vegetables@Légumes@Verduras@الخضر
+@140@Vetches@Vesces@Veza@الجلبانات / البِيْقة
+@141@Watermelons@Pastèques@Sandías@البطيخ  الأحمر
+@142@Wheat@Blé@Trigo@القمح
+@143@Winged beans@Haricot ailé@Frijol alado@الفاصوليا المجنحة
+@144@Yams@Ignames@Ñames@اليام
+@145@Yautia (cocoyam)@Chou caraibe@Yautia (cocoyam)@الياوتيا (الكوكويام)
+@146@Hops@Houblon@Lúpulo@حشيشة الدينار
+@147@Forage legumes@Légumineuses fourragères@Leguminosas forrajeras@البقوليات العلفية
+@148@Pomegranate@Granate@Granada@رمان
+@149@Walnuts@Noyer commun@Nogal común@جوز شائع
+@150@Mangoes@Mangues@Mangos@مانجو
+@151@Achiote@Roucou@Achiote@درخت آناتو
+@152@Muskmelon@Melon@Melón@الشمام
+@153@Lettuce@Laitue@Lechuga@الخس
+@154@Linseed@Graines de lin@Linaza@بذر الكتان
+@155@Broccoli@Brocolis@Brécol@بروكلي
+@156@Cabbages@Choux@Coles@الكرنب (الملفوف)

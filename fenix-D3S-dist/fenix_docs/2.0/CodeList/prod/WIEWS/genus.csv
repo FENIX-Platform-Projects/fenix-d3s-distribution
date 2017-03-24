@@ -1,0 +1,602 @@
+
+
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "World Information and Early Warning System ( WIEWS )"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "wiews"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "WIEWS genus"
+      },
+      "keywords": [
+         "crs",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "2",
+         "typeOfCodeList": "tree"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "06"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "WIEWS genus"
+   },
+   "uid": "wiews_genus"
+}
+
+--structure--
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+@aa@Aa
+@abarema@Abarema
+@abbevillea@Abbevillea
+@abelia@Abelia
+@abeliophyllum@Abeliophyllum
+@abelmoschus@Abelmoschus
+@abelmoscus@Abelmoscus
+@aberia@Aberia
+@abies@Abies
+@abildgaardia@Abildgaardia
+@abortopetalum@Abortopetalum
+@abroma@Abroma
+@abromeitiella@Abromeitiella
+@abronia@Abronia
+@abrus@Abrus
+@absinthium@Absinthium
+@abumon@Abumon
+@abuta@Abuta
+@abutilon@Abutilon
+@abutua@Abutua
+@acacia@Acacia
+@acaciopsis@Acaciopsis
+@acaena@Acaena
+@acalypha@Acalypha
+@acampe@Acampe
+@acanthephippium@Acanthephippium
+@acanthocereus@Acanthocereus
+@acantholimon@Acantholimon
+@acantholippia@Acantholippia
+@acanthomintha@Acanthomintha
+@acanthopanax@Acanthopanax
+@acanthophoenix@Acanthophoenix
+@acanthophyllum@Acanthophyllum
+@acanthorrhiza@Acanthorrhiza
+@acanthosabal@Acanthosabal
+@acanthosicyos@Acanthosicyos
+@acanthospermum@Acanthospermum
+@acanthostachys@Acanthostachys
+@acanthostyles@Acanthostyles
+@acanthosyris@Acanthosyris
+@acanthus@Acanthus
+@acca@Acca
+@acer@Acer
+@aceriphyllum@Aceriphyllum
+@acetosa@Acetosa
+@acetosella@Acetosella
+@achania@Achania
+@achantia@Achantia
+@achasma@Achasma
+@achatocarpus@Achatocarpus
+@achillea@Achillea
+@achimenes@Achimenes
+@achlys@Achlys
+@achnatherum@Achnatherum
+@achnella@Achnella
+@achradelpha@Achradelpha
+@achras@Achras
+@achyrachaena@Achyrachaena
+@achyranthes@Achyranthes
+@achyrocline@Achyrocline
+@achyrophorus@Achyrophorus
+@achyropsis@Achyropsis
+@achyrospermum@Achyrospermum
+@achyrothalamus@Achyrothalamus
+@acicarpha@Acicarpha
+@acidanthera@Acidanthera
+@acidoton@Acidoton
+@acineta@Acineta
+@acinos@Acinos
+@acioa@Acioa
+@aciotis@Aciotis
+@aciphylla@Aciphylla
+@ackermania@Ackermania
+@acmella@Acmella
+@acmena@Acmena
+@acmispon@Acmispon
+@acmopyle@Acmopyle
+@acnida@Acnida
+@acnistus@Acnistus
+@acoelorraphe@Acoelorraphe
+@acokanthera@Acokanthera
+@aconitum@Aconitum
+@aconogonon@Aconogonon
+@acontias@Acontias
+@acorus@Acorus
+@acosmium@Acosmium
+@acourtia@Acourtia
+@acradelpha@Acradelpha
+@acridocarpus@Acridocarpus
+@acrista@Acrista
+@acrocarpus@Acrocarpus
+@acroceras@Acroceras
+@acroclinium@Acroclinium
+@acrocomia@Acrocomia
+@acrodiclidium@Acrodiclidium
+@acronychia@Acronychia
+@acroptilon@Acroptilon
+@acrostichum@Acrostichum
+@acrotriche@Acrotriche
+@actaea@Actaea
+@actinella@Actinella
+@actinidia@Actinidia
+@actinodaphne@Actinodaphne
+@actinolema@Actinolema
+@actinomeris@Actinomeris
+@actinophloeus@Actinophloeus
+@actinorhytis@Actinorhytis
+@actinoscirpus@Actinoscirpus
+@actinospora@Actinospora
+@actinostachys@Actinostachys
+@actinostemma@Actinostemma
+@actinostrobus@Actinostrobus
+@actinotus@Actinotus
+@acuan@Acuan
+@ada@Ada
+@adamboe@Adamboe
+@adansonia@Adansonia
+@adathoda@Adathoda
+@adelaster@Adelaster
+@adelia@Adelia
+@adenachaena@Adenachaena
+@adenandra@Adenandra
+@adenanthera@Adenanthera
+@adenia@Adenia
+@adenium@Adenium
+@adenocalymma@Adenocalymma
+@adenocarpus@Adenocarpus
+@adenocaulon@Adenocaulon
+@adenodolichos@Adenodolichos
+@adenogyne@Adenogyne
+@adenolimon@Adenolimon
+@adenophora@Adenophora
+@adenophorus@Adenophorus
+@adenopus@Adenopus
+@adenoropium@Adenoropium
+@adenosacme@Adenosacme
+@adenosma@Adenosma
+@adenostegia@Adenostegia
+@adenostemma@Adenostemma
+@adenostephanus@Adenostephanus
+@adenostoma@Adenostoma
+@adesmia@Adesmia
+@adhatoda@Adhatoda
+@adianthum@Adianthum
+@adiantopsis@Adiantopsis
+@adiantum@Adiantum
+@adina@Adina
+@adinandra@Adinandra
+@adlumia@Adlumia
+@adolia@Adolia
+@adonidia@Adonidia
+@adonis@Adonis
+@adromischus@Adromischus
+@adventina@Adventina
+@aechmea@Aechmea
+@aechmia@Aechmia
+@aegiceras@Aegiceras
+@aegilemma@Aegilemma
+@aegilonearum@Aegilonearum
+@aegilopodes@Aegilopodes
+@aegilops@Aegilops
+@aegilotrichum@Aegilotrichum
+@aegilotriticum@Aegilotriticum
+@aeginetia@Aeginetia
+@aegiphila@Aegiphila
+@aegle@Aegle
+@aeglopsis@Aeglopsis
+@aegopodium@Aegopodium
+@aegopogon@Aegopogon
+@aellenia@Aellenia
+@aeluropus@Aeluropus
+@aeollanthus@Aeollanthus
+@aeonium@Aeonium
+@aerangis@Aerangis
+@aeranthes@Aeranthes
+@aeria@Aeria
+@aerides@Aerides
+@aeridovanda@Aeridovanda
+@aerva@Aerva
+@aesandra@Aesandra
+@aeschynanthus@Aeschynanthus
+@aeschynomene@Aeschynomene
+@aesculus@Aesculus
+@aethionema@Aethionema
+@aethusa@Aethusa
+@aextoxicon@Aextoxicon
+@afgekia@Afgekia
+@afraegle@Afraegle
+@aframomum@Aframomum
+@afrocarpus@Afrocarpus
+@afrolimon@Afrolimon
+@afrormosia@Afrormosia
+@afzelia@Afzelia
+@agalinis@Agalinis
+@agalma@Agalma
+@agalmyla@Agalmyla
+@agaloma@Agaloma
+@aganonerion@Aganonerion
+@aganope@Aganope
+@aganosma@Aganosma
+@agapanthus@Agapanthus
+@agapetes@Agapetes
+@agarista@Agarista
+@agastache@Agastache
+@agathaea@Agathaea
+@agathi@Agathi
+@agathis@Agathis
+@agathisanthemum@Agathisanthemum
+@agathisanthes@Agathisanthes
+@agathosma@Agathosma
+@agati@Agati
+@agave@Agave
+@agelaea@Agelaea
+@ageratina@Ageratina
+@ageratinastrum@Ageratinastrum
+@ageratum@Ageratum
+@aglaia@Aglaia
+@aglaodorum@Aglaodorum
+@aglaomorpha@Aglaomorpha
+@aglaonema@Aglaonema
+@agonandra@Agonandra
+@agonis@Agonis
+@agoseris@Agoseris
+@agrimonia@Agrimonia
+@agriophyllum@Agriophyllum
+@agrocharis@Agrocharis
+@agroelymus@Agroelymus
+@agrohordeum@Agrohordeum
+@agropyron@Agropyron
+@agrositanion@Agrositanion
+@agrostemma@Agrostemma
+@agrostis@Agrostis
+@agrostophyllum@Agrostophyllum
+@agrotriticum@Agrotriticum
+@aguilaria@Aguilaria
+@agyneia@Agyneia
+@ahzolia@Ahzolia
+@aichryson@Aichryson
+@aidia@Aidia
+@ailanthus@Ailanthus
+@ainsliaea@Ainsliaea
+@ainsworthia@Ainsworthia
+@aiphanes@Aiphanes
+@aira@Aira
+@airochloa@Airochloa
+@aizoon@Aizoon
+@ajania@Ajania
+@ajax@Ajax
+@ajuga@Ajuga
+@akebia@Akebia
+@akersia@Akersia
+@alafia@Alafia
+@alangium@Alangium
+@albertinia@Albertinia
+@albizia@Albizia
+@albizzia@Albizzia
+@albovia@Albovia
+@albuca@Albuca
+@alcea@Alcea
+@alchemilla@Alchemilla
+@alchornea@Alchornea
+@alcimandra@Alcimandra
+@alcina@Alcina
+@aldrovanda@Aldrovanda
+@alectorolophus@Alectorolophus
+@alectra@Alectra
+@alectryon@Alectryon
+@alegria@Alegria
+@alepidea@Alepidea
+@alepidocalyx@Alepidocalyx
+@aletes@Aletes
+@aletris@Aletris
+@aleurites@Aleurites
+@aleuritopteris@Aleuritopteris
+@alfonsia@Alfonsia
+@alhagi@Alhagi
+@alibertia@Alibertia
+@alicastrum@Alicastrum
+@alisma@Alisma
+@alkanna@Alkanna
+@allaeanthus@Allaeanthus
+@allagoptera@Allagoptera
+@allamanda@Allamanda
+@allanblackia@Allanblackia
+@alliaria@Alliaria
+@allionia@Allionia
+@allium@Allium
+@allocarya@Allocarya
+@allocasuarina@Allocasuarina
+@allophyllus@Allophyllus
+@allophylus@Allophylus
+@alloplectus@Alloplectus
+@allosorus@Allosorus
+@alloteropsis@Alloteropsis
+@alloxylon@Alloxylon
+@alluaudia@Alluaudia
+@almeidea@Almeidea
+@alnaster@Alnaster
+@alnus@Alnus
+@alocasia@Alocasia
+@aloe@Aloe
+@alomia@Alomia
+@alona@Alona
+@alonsoa@Alonsoa
+@alopecurus@Alopecurus
+@alophia@Alophia
+@aloysia@Aloysia
+@alphitonia@Alphitonia
+@alphonsea@Alphonsea
+@alpingera@Alpingera
+@alpinia@Alpinia
+@alseodaphne@Alseodaphne
+@alsine@Alsine
+@alsinidendron@Alsinidendron
+@alsobia@Alsobia
+@alsomitra@Alsomitra
+@alsophila@Alsophila
+@alstonia@Alstonia
+@alstroemeria@Alstroemeria
+@altamiranoa@Altamiranoa
+@alternanthera@Alternanthera
+@althaea@Althaea
+@altingia@Altingia
+@alvaradoa@Alvaradoa
+@alvesia@Alvesia
+@alyogyne@Alyogyne
+@alysicarpus@Alysicarpus
+@alyssoides@Alyssoides
+@alyssum@Alyssum
+@alyxia@Alyxia
+@alzatea@Alzatea
+@amalocalyx@Amalocalyx
+@amaralia@Amaralia
+@amaranthus@Amaranthus
+@amarathus@Amarathus
+@amarine@Amarine
+@amaryllis@Amaryllis
+@amasonia@Amasonia
+@ambelania@Ambelania
+@amberboa@Amberboa
+@amblygonocarpus@Amblygonocarpus
+@amblygonum@Amblygonum
+@amblynotus@Amblynotus
+@amblyolepis@Amblyolepis
+@amblyopappus@Amblyopappus
+@amblyopyrum@Amblyopyrum
+@ambora@Ambora
+@ambraria@Ambraria
+@ambrina@Ambrina
+@ambrosia@Ambrosia
+@ambulia@Ambulia
+@amburana@Amburana
+@amelancheir@Amelancheir
+@amelanchier@Amelanchier
+@amelasorbus@Amelasorbus
+@amelichloa@Amelichloa
+@amellus@Amellus
+@amentotaxus@Amentotaxus
+@amerimnon@Amerimnon
+@amethystea@Amethystea
+@amherstia@Amherstia
+@amianthium@Amianthium
+@amicia@Amicia
+@ammannia@Ammannia
+@ammi@Ammi
+@ammobium@Ammobium
+@ammobroma@Ammobroma
+@ammocalamagrostis@Ammocalamagrostis
+@ammocallis@Ammocallis
+@ammocharis@Ammocharis
+@ammodendron@Ammodendron
+@ammolirion@Ammolirion
+@ammophila@Ammophila
+@ammopiptanthus@Ammopiptanthus
+@ammoselinum@Ammoselinum
+@ammothamnus@Ammothamnus
+@amomum@Amomum
+@amomyrtus@Amomyrtus
+@amoora@Amoora
+@amoreuxia@Amoreuxia
+@amoria@Amoria
+@amorpha@Amorpha
+@amorphophallus@Amorphophallus
+@ampelamus@Ampelamus
+@ampelocissus@Ampelocissus
+@ampelodesmos@Ampelodesmos
+@ampelopsis@Ampelopsis
+@ampelosicyos@Ampelosicyos
+@ampherephis@Ampherephis
+@amphiachyris@Amphiachyris
+@amphianthus@Amphianthus
+@amphibromus@Amphibromus
+@amphicarpaea@Amphicarpaea
+@amphicarpum@Amphicarpum
+@amphicome@Amphicome
+@amphilophis@Amphilophis
+@amphilophium@Amphilophium
+@amphipterygium@Amphipterygium
+@amphiraphis@Amphiraphis
+@amphirhapis@Amphirhapis
+@amphitecna@Amphitecna
+@amphithalea@Amphithalea
+@amsinckia@Amsinckia
+@amsonia@Amsonia
+@amydrium@Amydrium
+@amygdalus@Amygdalus
+@amyrea@Amyrea
+@amyris@Amyris
+@anabasis@Anabasis
+@anacampseros@Anacampseros
+@anacardium@Anacardium
+@anacharis@Anacharis
+@anacheilium@Anacheilium
+@anacolosa@Anacolosa
+@anacyclus@Anacyclus
+@anadenanthera@Anadenanthera
+@anadendrum@Anadendrum
+@anadenia@Anadenia
+@anagallis@Anagallis
+@anagalloides@Anagalloides
+@anagyris@Anagyris
+@anamirta@Anamirta
+@ananas@Ananas
+@ananassa@Ananassa
+@anandria@Anandria
+@anapalina@Anapalina
+@anaphalis@Anaphalis
+@anaphrenium@Anaphrenium
+@anaphyllopsis@Anaphyllopsis
+@anapseudananas@Anapseudananas
+@anarthrophyllum@Anarthrophyllum
+@anasser@Anasser
+@anastatica@Anastatica
+@anatherum@Anatherum
+@anaua@Anaua
+@anaxagorea@Anaxagorea
+@anchomanes@Anchomanes
+@anchusa@Anchusa
+@ancistrachne@Ancistrachne
+@ancistrocactus@Ancistrocactus
+@ancistrothyrsus@Ancistrothyrsus
+@ancistrum@Ancistrum
+@ancylobotrys@Ancylobotrys
+@ancylocladus@Ancylocladus
+@ancylostemon@Ancylostemon
+@andersonia@Andersonia
+@andira@Andira
+@andrachne@Andrachne
+@androcymbium@Androcymbium
+@andrographis@Andrographis
+@andromeda@Andromeda
+@andropogon@Andropogon
+@androsace@Androsace
+@androstachys@Androstachys
+@androstephium@Androstephium
+@androtrichum@Androtrichum
+@anechites@Anechites
+@aneilema@Aneilema
+@anelsonia@Anelsonia
+@anemanthele@Anemanthele
+@anemarrhena@Anemarrhena
+@anemia@Anemia
+@anemoclema@Anemoclema
+@anemone@Anemone
+@anemopaegma@Anemopaegma
+@anemopsis@Anemopsis
+@anethum@Anethum
+@anetium@Anetium
+@aneurolepidium@Aneurolepidium
+@angadenia@Angadenia
+@angelica@Angelica
+@angelonia@Angelonia
+@angianthus@Angianthus
+@angiopteris@Angiopteris
+@angophora@Angophora
+@angostura@Angostura
+@angraecum@Angraecum
+@anguillaria@Anguillaria
+@anguloa@Anguloa
+@anguria@Anguria
+@anhalonium@Anhalonium
+@aniba@Aniba
+@anigozanthos@Anigozanthos
+@aniotum@Aniotum
+@anisacanthus@Anisacanthus
+@anisantha@Anisantha
+@aniseia@Aniseia
+@anisochilus@Anisochilus
+@anisodontea@Anisodontea
+@anisomeles@Anisomeles
+@anisopappus@Anisopappus
+@anisoptera@Anisoptera
+@anisostichus@Anisostichus
+@anisotes@Anisotes
+@anisum@Anisum
+@annacardium@Annacardium
+@annamocarya@Annamocarya
+@anneslea@Anneslea
+@anneslia@Anneslia
+@annickia@Annickia
