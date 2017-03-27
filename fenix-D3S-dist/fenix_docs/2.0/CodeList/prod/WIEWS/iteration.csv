@@ -1,5 +1,3 @@
-
-
 {
    "characterSet": {
       "codes": [
@@ -53,7 +51,7 @@
    },
    "meContent": {
       "description": {
-         "EN": "WIEWS iterations"
+         "EN": "WIEWS measurement units"
       },
       "keywords": [
          "crs",

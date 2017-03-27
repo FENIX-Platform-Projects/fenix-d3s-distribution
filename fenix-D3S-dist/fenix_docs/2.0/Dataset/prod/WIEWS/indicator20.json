@@ -5,7 +5,7 @@
   },
   "meContent": {
     "description": {
-      "EN": "iews indicator 20"
+      "EN": "wiews indicator 20"
     },
     "resourceRepresentationType": "dataset"
   },
@@ -21,7 +21,7 @@
         "id" : "iteration",
         "title" : { "EN" : "Iteration"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "iteration" } ] } ,
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
         "key": true
       },
       {
@@ -33,16 +33,16 @@
       },
       {
         "id" : "element",
-        "title" : { "EN" : "Domain"},
+        "title" : { "EN" : "Element"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "priority_activity" } ] } ,
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_indicators" } ] } ,
         "key": true
       },
       {
         "id" : "biologicalAccessionId",
         "title" : { "EN" : "Biological Accession"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "biological" } ] }
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_biological" } ] }
       },
       {
         "id" : "country",
@@ -56,7 +56,7 @@
         "id" : "stakeholder",
         "title" : { "EN" : "Stakeholder"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "stakeholder" } ] },
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] },
         "key": true
 
       },
