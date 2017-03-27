@@ -117,149 +117,149 @@ codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 
 --data--
-@1@World
-1@1@Asia
-1@10@Europe
-1@100@Latin America and the Caribbean
-1@101@Latin America and the Caribbean
-1@102@Asia
-1@103@Europe
-1@104@Europe
-1@105@Near East
-1@106@Asia
-1@107@Europe
-1@108@Europe
-1@109@Africa
-1@11@Africa
-1@110@Latin America and the Caribbean
-1@111@South West Pacific
-1@112@Africa
-1@113@Near East
-1@114@Africa
-1@115@Europe
-1@116@Africa
-1@117@Africa
-1@118@Europe
-1@119@Europe
-1@12@Asia
-1@120@Europe
-1@121@Asia
-1@122@Near East
-1@123@Africa
-1@124@Europe
-1@125@Europe
-1@126@Near East
-1@127@Africa
-1@128@South West Pacific
-1@129@Latin America and the Caribbean
-1@13@Latin America and the Caribbean
-1@130@Near East
-1@131@Near East
-1@132@South West Pacific
-1@133@Africa
-1@134@Near East
-1@135@Europe
-1@136@Africa
-1@137@North America
-1@138@Latin America and the Caribbean
-1@139@Latin America and the Caribbean
-1@14@Latin America and the Caribbean
-1@140@Near East
-1@141@Africa
-1@142@Africa
-1@15@Europe
-1@16@Africa
-1@17@Africa
-1@18@Asia
-1@19@Africa
-1@2@Europe
-1@20@North America
-1@21@Africa
-1@22@Africa
-1@23@Latin America and the Caribbean
-1@24@Africa
-1@25@South West Pacific
-1@26@Latin America and the Caribbean
-1@27@Europe
-1@28@Latin America and the Caribbean
-1@29@Near East
-1@3@Near East
-1@30@Europe
-1@31@Africa
-1@32@Asia
-1@33@Africa
-1@34@Europe
-1@35@Near East
-1@36@Latin America and the Caribbean
-1@37@Near East
-1@38@Latin America and the Caribbean
-1@39@Africa
-1@4@Africa
-1@40@Europe
-1@41@Africa
-1@42@South West Pacific
-1@43@Europe
-1@44@Europe
-1@45@Africa
-1@46@Europe
-1@47@Africa
-1@48@Europe
-1@49@Latin America and the Caribbean
-1@5@Latin America and the Caribbean
-1@50@Africa
-1@51@Africa
-1@52@Latin America and the Caribbean
-1@53@Latin America and the Caribbean
-1@54@Europe
-1@55@Europe
-1@56@Asia
-1@57@Asia
-1@58@Asia
-1@59@Near East
-1@6@Europe
-1@60@Europe
-1@61@Europe
-1@62@Latin America and the Caribbean
-1@63@Asia
-1@64@Near East
-1@65@Africa
-1@66@South West Pacific
-1@67@Near East
-1@68@Near East
-1@69@Asia
-1@7@South West Pacific
-1@70@Europe
-1@71@Near East
-1@72@Africa
-1@73@Africa
-1@74@Near East
-1@75@Europe
-1@76@Europe
-1@77@Africa
-1@78@Africa
-1@79@Asia
-1@8@Europe
-1@80@Asia
-1@81@Africa
-1@82@Near East
-1@83@South West Pacific
-1@84@Near East
-1@85@Africa
-1@86@Europe
-1@87@Near East
-1@88@Asia
-1@89@Africa
-1@9@Asia
-1@90@Asia
-1@91@Europe
-1@92@Latin America and the Caribbean
-1@93@Africa
-1@94@Europe
-1@95@Near East
-1@96@Asia
-1@97@South West Pacific
-1@98@Latin America and the Caribbean
-1@99@South West Pacific
+@0@World
+0@1@Asia
+0@10@Europe
+0@100@Latin America and the Caribbean
+0@101@Latin America and the Caribbean
+0@102@Asia
+0@103@Europe
+0@104@Europe
+0@105@Near East
+0@106@Asia
+0@107@Europe
+0@108@Europe
+0@109@Africa
+0@11@Africa
+0@110@Latin America and the Caribbean
+0@111@South West Pacific
+0@112@Africa
+0@113@Near East
+0@114@Africa
+0@115@Europe
+0@116@Africa
+0@117@Africa
+0@118@Europe
+0@119@Europe
+0@12@Asia
+0@120@Europe
+0@121@Asia
+0@122@Near East
+0@123@Africa
+0@124@Europe
+0@125@Europe
+0@126@Near East
+0@127@Africa
+0@128@South West Pacific
+0@129@Latin America and the Caribbean
+0@13@Latin America and the Caribbean
+0@130@Near East
+0@131@Near East
+0@132@South West Pacific
+0@133@Africa
+0@134@Near East
+0@135@Europe
+0@136@Africa
+0@137@North America
+0@138@Latin America and the Caribbean
+0@139@Latin America and the Caribbean
+0@14@Latin America and the Caribbean
+0@140@Near East
+0@141@Africa
+0@142@Africa
+0@15@Europe
+0@16@Africa
+0@17@Africa
+0@18@Asia
+0@19@Africa
+0@2@Europe
+0@20@North America
+0@21@Africa
+0@22@Africa
+0@23@Latin America and the Caribbean
+0@24@Africa
+0@25@South West Pacific
+0@26@Latin America and the Caribbean
+0@27@Europe
+0@28@Latin America and the Caribbean
+0@29@Near East
+0@3@Near East
+0@30@Europe
+0@31@Africa
+0@32@Asia
+0@33@Africa
+0@34@Europe
+0@35@Near East
+0@36@Latin America and the Caribbean
+0@37@Near East
+0@38@Latin America and the Caribbean
+0@39@Africa
+0@4@Africa
+0@40@Europe
+0@41@Africa
+0@42@South West Pacific
+0@43@Europe
+0@44@Europe
+0@45@Africa
+0@46@Europe
+0@47@Africa
+0@48@Europe
+0@49@Latin America and the Caribbean
+0@5@Latin America and the Caribbean
+0@50@Africa
+0@51@Africa
+0@52@Latin America and the Caribbean
+0@53@Latin America and the Caribbean
+0@54@Europe
+0@55@Europe
+0@56@Asia
+0@57@Asia
+0@58@Asia
+0@59@Near East
+0@6@Europe
+0@60@Europe
+0@61@Europe
+0@62@Latin America and the Caribbean
+0@63@Asia
+0@64@Near East
+0@65@Africa
+0@66@South West Pacific
+0@67@Near East
+0@68@Near East
+0@69@Asia
+0@7@South West Pacific
+0@70@Europe
+0@71@Near East
+0@72@Africa
+0@73@Africa
+0@74@Near East
+0@75@Europe
+0@76@Europe
+0@77@Africa
+0@78@Africa
+0@79@Asia
+0@8@Europe
+0@80@Asia
+0@81@Africa
+0@82@Near East
+0@83@South West Pacific
+0@84@Near East
+0@85@Africa
+0@86@Europe
+0@87@Near East
+0@88@Asia
+0@89@Africa
+0@9@Asia
+0@90@Asia
+0@91@Europe
+0@92@Latin America and the Caribbean
+0@93@Africa
+0@94@Europe
+0@95@Near East
+0@96@Asia
+0@97@South West Pacific
+0@98@Latin America and the Caribbean
+0@99@South West Pacific
 10@56@Belgium
 100@600@Paraguay
 101@604@Peru
