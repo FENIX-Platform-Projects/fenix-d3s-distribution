@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class DataSource {
     static {
         try {
-            Class.forName("org.postgresql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         }

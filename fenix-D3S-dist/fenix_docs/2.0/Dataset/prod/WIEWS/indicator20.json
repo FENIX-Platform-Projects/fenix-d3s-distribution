@@ -48,15 +48,16 @@
         "id" : "country",
         "title" : { "EN" : "Country"},
         "subject" : "geo",
-
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "key": true
       },
       {
         "id" : "stakeholder",
         "title" : { "EN" : "Stakeholder"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "stakeholder" } ] }
+        "domain" : { "codes" : [ { "idCodeList" : "stakeholder" } ] },
+        "key": true
 
       },
       {
@@ -70,8 +71,7 @@
         "subject" : "um",
         "title" : { "EN" : "Measurement unit" },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
-        "key": true
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] }
       }
     ]
   }

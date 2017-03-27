@@ -1,5 +1,5 @@
 {
-    "uid": "wiews_fao_region",
+    "uid": "fao_region",
 	"version": null,
     "language": {
         "codes": [
@@ -376,4 +376,3 @@ titleColumnIndex_EN=3
 5504@47@Cook Islands
 5504@5@American Samoa
 5504@70@French Polynesia
-@WITC@World + International Centers

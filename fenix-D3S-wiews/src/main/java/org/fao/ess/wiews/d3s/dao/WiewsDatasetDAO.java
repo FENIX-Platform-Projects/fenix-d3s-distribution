@@ -4,7 +4,6 @@ import org.fao.ess.wiews.d3s.dto.Query;
 import org.fao.ess.wiews.d3s.utils.DataSource;
 import org.fao.fenix.commons.msd.dto.full.*;
 import org.fao.fenix.commons.utils.database.DataIterator;
-import org.fao.fenix.commons.utils.database.DatabaseUtils;
 import org.fao.fenix.d3s.wds.dataset.WDSDatasetDao;
 
 import javax.inject.Inject;
@@ -13,10 +12,7 @@ import java.sql.Statement;
 import java.util.*;
 
 public class WiewsDatasetDAO extends WDSDatasetDao {
-    @Inject private DataSource dataSource;
-    @Inject private DatabaseUtils databaseUtils;
-
-
+    @Inject  DataSource dataSource;
     private boolean initialized = false;
 
     @Override
@@ -42,7 +38,7 @@ public class WiewsDatasetDAO extends WDSDatasetDao {
         Statement statement = connection.createStatement(java.sql.ResultSet.TYPE_FORWARD_ONLY, java.sql.ResultSet.CONCUR_READ_ONLY);
         statement.setFetchSize(1000);
         return new DataIterator(
-                statement.executeQuery(query.toString()),
+                statement.executeQuery(query.getQuery().toString()),
                 connection,
                 null,
                 null

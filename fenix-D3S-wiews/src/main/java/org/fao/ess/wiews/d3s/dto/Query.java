@@ -26,7 +26,7 @@ public enum Query {
             "'nfp' as element,\n" +
             "null as biologicalAccessionId,\n" +
             "country,\n" +
-            "null as stakeholder,\n" +
+            "'ZZZ' as stakeholder,\n" +
             "nfp_rating as VALUE ,\n" +
             "'%' as um\n" +
             "from ( SELECT\n" +
@@ -52,7 +52,7 @@ public enum Query {
             "'ind' as element,\n" +
             "null as biologicalAccessionId,\n" +
             "b.ISO as country,\n" +
-            "null as stakeholder,\n" +
+            "'ZZZ' as stakeholder,\n" +
             "\n" +
             "count(*) as value,\n" +
             "'1' as um\n" +
