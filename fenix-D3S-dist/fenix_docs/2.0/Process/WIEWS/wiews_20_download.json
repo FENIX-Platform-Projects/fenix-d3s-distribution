@@ -1,0 +1,61 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_regions_mapping" } ],
+    "result" : false,
+    "parameters": {
+      "m49": {
+        "codes": [
+          {
+            "uid": "wiews_m49",
+            "codes": [ "150" ]
+          }
+        ]
+      }
+    }
+  },
+
+  {
+    "sid": [ { "uid": "indicator20" } ],
+    "name" : "select",
+    "parameters" : {
+      "query" : "where country in <<required_countries>>",
+      "values" : {
+        "iteration" : null,
+        "domain" : null,
+        "element" : null,
+        "biologicalAccessionId" : null,
+        "country" : null,
+        "stakeholder" : null,
+        "value" : null,
+        "um" : null
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "domain",
+        "country",
+        "element",
+        "stakeholder",
+        "iteration",
+        "value"
+      ],
+      "rows": {
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_indicators",
+              "codes": [ "ind" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+
+
+]

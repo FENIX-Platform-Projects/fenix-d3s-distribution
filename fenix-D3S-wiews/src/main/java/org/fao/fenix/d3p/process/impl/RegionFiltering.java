@@ -23,7 +23,7 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<StandardF
     @Inject DatabaseUtils databaseUtils;
     @Inject StepFactory stepFactory;
 
-    private static final String internationalGeneBanksCode = "";
+    private static final String internationalGeneBanksCode = "WITC";
 
     @Override
     public Step process(StandardFilter params, Step[] sourceStep) throws Exception {
@@ -38,7 +38,7 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<StandardF
         setGlobalVariable("required_countries", getCountriesCode(source, type, params, tableName, dsd));
         //Create international gene banks variable when needed (to exclude them)
         if (!includeInternationalGeneBanks(params))
-            setGlobalVariable("required_countries", getInternationalGeneBanks());
+            setGlobalVariable("stakeholders_exclusion", getInternationalGeneBanks());
         //Return ghost step
         Step step = stepFactory.getInstance(type);
         step.setDsd(dsd);
@@ -78,11 +78,11 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<StandardF
                 for (int i=0, l=columnCodesEntry.getValue().size(); i<l; i++)
                     query.append("?,");
                 query.setCharAt(query.length()-1,')');
-
+                query.append(" or");
                 params.addAll(columnCodesEntry.getValue());
             }
         }
-        return query.toString();
+        return columnsCodes.size()>0 ? query.substring(0, query.length()-3) : query.toString();
     }
 
 
