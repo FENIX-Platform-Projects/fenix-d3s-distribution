@@ -37,7 +37,7 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<StandardF
         //Create countries variable
         setGlobalVariable("required_countries", getCountriesCode(source, type, params, tableName, dsd));
         //Create international gene banks variable when needed (to exclude them)
-        if (!includeInternationalGeneBanks(params))
+        //if (!includeInternationalGeneBanks(params))
             setGlobalVariable("stakeholders_exclusion", getInternationalGeneBanks());
         //Return ghost step
         Step step = stepFactory.getInstance(type);

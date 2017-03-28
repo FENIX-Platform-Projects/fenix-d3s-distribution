@@ -9,7 +9,8 @@ public enum Query {
             "\n" +
             "\n" +
             "       '2240' as domain,\n" +
-            "       '20' as element,\n" +
+            "       'stk' as element,\n" +
+            "       '20' as indicator,\n" +
             "       cast(a.biologicalAccessionId as CHAR(50)) as biologicalAccessionId,\n" +
             "       b.ISO as country,\n" +
             "       (SELECT it.WIEWS_INSTCODE FROM ref_instab it WHERE  it.id = a.orgId) as stakeholder,\n" +
@@ -28,6 +29,7 @@ public enum Query {
             "  cast(iteration as CHAR(50)) as iteration,\n" +
             "  '2240' as domain,\n" +
             "  'nfp' as element,\n" +
+            "  '20' as indicator,\n" +
             "  cast(null as CHAR(50)) as biologicalAccessionId,\n" +
             "  country,\n" +
             "  'ZZZ' as stakeholder,\n" +
@@ -55,6 +57,7 @@ public enum Query {
             "\n" +
             "  '2240' as domain,\n" +
             "  'ind' as element,\n" +
+            "  '20' as indicator,\n" +
             "  cast(null as CHAR(50)) as biologicalAccessionId,\n" +
             "  b.ISO as country,\n" +
             "  'ZZZ' as stakeholder,\n" +

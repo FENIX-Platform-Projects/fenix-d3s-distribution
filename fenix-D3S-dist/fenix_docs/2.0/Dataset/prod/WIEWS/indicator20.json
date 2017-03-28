@@ -33,6 +33,13 @@
       },
       {
         "id" : "element",
+        "title" : { "EN" : "Indicator"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_elements" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "indicator",
         "title" : { "EN" : "Element"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_indicators" } ] } ,
