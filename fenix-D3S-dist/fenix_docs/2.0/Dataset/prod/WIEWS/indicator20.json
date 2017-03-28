@@ -33,14 +33,14 @@
       },
       {
         "id" : "element",
-        "title" : { "EN" : "Indicator"},
+        "title" : { "EN" : "Element"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_elements" } ] } ,
         "key": true
       },
       {
         "id" : "indicator",
-        "title" : { "EN" : "Element"},
+        "title" : { "EN" : "Indicator"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_indicators" } ] } ,
         "key": true
@@ -53,17 +53,32 @@
       },
       {
         "id" : "country",
-        "title" : { "EN" : "Country"},
+        "title" : { "EN" : "Country "},
         "subject" : "geo",
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
+      },
+      {
+        "id" : "country_m49",
+        "title" : { "EN" : "Country "},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] },
         "key": true
+
       },
       {
         "id" : "stakeholder",
         "title" : { "EN" : "Stakeholder"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] },
+        "key": true
+
+      },
+      {
+        "id" : "genus",
+        "title" : { "EN" : "Genus"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_genus" } ] },
         "key": true
 
       },
