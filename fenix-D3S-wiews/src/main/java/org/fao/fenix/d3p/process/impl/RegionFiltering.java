@@ -65,12 +65,39 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<StandardF
             connection.close();
         }
 
-        return countries.toArray();
+        return addWorldCodes(countries, params).toArray();
+    }
+
+    private Collection<String> addWorldCodes(Collection<String> countries, StandardFilter params) {
+        boolean add_w = false;
+        boolean add_w_i = false;
+        if (params!=null)
+            for (Map.Entry<String, FieldFilter> paramsEntry : params.entrySet()) {
+                String worldCode = null;
+                if (paramsEntry.getKey().equals("m49") || paramsEntry.getKey().equals("mdg") || paramsEntry.getKey().equals("sdg"))
+                    worldCode = "1";
+                else if (paramsEntry.getKey().equals("fao"))
+                    worldCode = "5000";
+                else if (paramsEntry.getKey().equals("itpgrfa") || paramsEntry.getKey().equals("cgrfa"))
+                    worldCode = "0";
+
+                for (CodesFilter codesFilter : paramsEntry.getValue().codes) {
+                    add_w_i |= codesFilter.codes.contains(internationalGeneBanksCode);
+                    add_w |= codesFilter.codes.contains(worldCode);
+                }
+            }
+
+        if (add_w)
+            countries.add("1");
+        if (add_w_i)
+            countries.add(internationalGeneBanksCode);
+
+        return countries;
     }
 
 
     private String createQuery(Map<String, Collection<String>> columnsCodes, String tableName, Collection<Object> params) {
-        StringBuilder query = new StringBuilder("select distinct (country) as country from ").append(tableName);
+        StringBuilder query = new StringBuilder("select distinct (m49_country) as m49_country from ").append(tableName);
         if (columnsCodes.size()>0) {
             query.append(" where");
             for (Map.Entry<String, Collection<String>> columnCodesEntry : columnsCodes.entrySet()) {

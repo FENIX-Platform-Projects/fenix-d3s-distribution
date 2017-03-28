@@ -8,7 +8,7 @@
         "codes": [
           {
             "uid": "wiews_m49",
-            "codes": [ "150" ]
+            "codes": [ "WITC","150" ]
           }
         ]
       }
@@ -19,13 +19,14 @@
     "sid": [ { "uid": "indicator20" } ],
     "name" : "select",
     "parameters" : {
-      "query" : "where country in <<required_countries>>",
+      "query" : "where m49_country in <<required_countries>>",
       "values" : {
         "iteration" : null,
         "domain" : null,
         "element" : null,
         "biologicalAccessionId" : null,
         "country" : null,
+        "m49_country" : null,
         "stakeholder" : null,
         "value" : null,
         "um" : null
@@ -39,6 +40,7 @@
       "columns": [
         "domain",
         "country",
+        "m49_country",
         "element",
         "stakeholder",
         "iteration",
@@ -49,7 +51,7 @@
           "codes": [
             {
               "uid": "wiews_elements",
-              "codes": [ "ind" ]
+              "codes": [ "ind", "nfp", "nfpa" ]
             }
           ]
         }

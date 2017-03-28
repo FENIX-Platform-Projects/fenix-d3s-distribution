@@ -59,7 +59,7 @@
         "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
       },
       {
-        "id" : "country_m49",
+        "id" : "m49_country",
         "title" : { "EN" : "Country "},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] },
