@@ -12,8 +12,8 @@ public class BatchCountGenreSpecies {
         Collection<Integer> speciesCount = new LinkedList<>();
 
         Connection connection = DriverManager.getConnection("jdbc:postgresql://faostat3.fao.org:5432/wiews", "fenix", "Qwaszx");
-        PreparedStatement statementGenre = connection.prepareStatement("select count(*) from ( select genre from ref_species WHERE \"year\"<=? OR \"year\" IS NULL GROUP BY genre) genres");
-        PreparedStatement statementSpecie = connection.prepareStatement("select count(*) from ( select genre, specie from ref_species WHERE \"year\"<=? OR \"year\" IS NULL GROUP BY genre, specie) species");
+        PreparedStatement statementGenre = connection.prepareStatement("select count(*) from ( select lower(genre) from ref_species WHERE \"year\"<=? OR \"year\" IS NULL GROUP BY lower(genre)) genres");
+        PreparedStatement statementSpecie = connection.prepareStatement("select count(*) from ( select lower(genre), lower(specie) from ref_species WHERE \"year\"<=? OR \"year\" IS NULL GROUP BY lower(genre), lower(specie)) species");
 
         ResultSet resultSet = connection.createStatement().executeQuery("select max (year), min (year) from ref_species");
         resultSet.next();
