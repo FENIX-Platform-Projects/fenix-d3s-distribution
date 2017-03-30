@@ -2,17 +2,14 @@ package org.fao.ess.cstat.d3s;
 
 import com.orientechnologies.orient.core.record.impl.ODocument;
 import com.orientechnologies.orient.core.sql.query.OSQLSynchQuery;
-import com.orientechnologies.orient.object.db.OObjectDatabaseTx;
 import org.fao.fenix.commons.find.dto.condition.ConditionFilter;
-import org.fao.fenix.commons.utils.Context;
-import org.fao.fenix.commons.utils.find.Engine;
+import org.fao.fenix.commons.utils.annotations.find.Engine;
 import org.fao.fenix.d3s.msd.find.engine.SearchEngine;
 import org.fao.fenix.d3s.server.dto.DatabaseStandards;
 
 import javax.inject.Inject;
 import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
 
 
 @Engine("cstat")
