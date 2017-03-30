@@ -1,0 +1,92 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_regions_mapping" } ],
+    "result" : false,
+    "parameters": {
+      "m49": {
+        "codes": [
+          {
+            "uid": "wiews_m49",
+            "codes": [ "150" ]
+          }
+        ]
+      }
+    }
+  },
+
+  {
+    "sid": [ { "uid": "indicator20" } ],
+    "name" : "select",
+    "parameters" : {
+      "query" : "where m49_country in <<required_countries>>",
+      "values" : {
+        "genus":null,
+        "iteration" : null,
+        "domain" : null,
+        "element" : null,
+        "biologicalAccessionId" : null,
+        "country" : null,
+        "stakeholder" : null,
+        "value" : null,
+        "um" : null
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "biologicalAccessionId",
+        "value"
+      ],
+      "rows": {
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "genus": {
+          "codes": [
+            {
+              "uid": "wiews_genus",
+              "codes": [ "abarema" ]
+            }
+          ]
+        }
+
+      }
+    }
+  },
+
+  {
+    "name": "select",
+    "parameters": {
+      "query": "WHERE biologicalAccessionId is not NULL",
+      "queryParameters": []
+    }
+  },
+
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "biologicalAccessionId"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  }
+
+
+
+
+]
