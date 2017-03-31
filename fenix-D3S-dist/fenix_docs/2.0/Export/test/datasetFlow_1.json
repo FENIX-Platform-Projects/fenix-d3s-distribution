@@ -1,0 +1,92 @@
+{
+  "flow" : [
+    {
+      "name": "wiews_area_filter",
+      "sid": [ { "uid": "wiews_regions_mapping" } ],
+      "result" : false,
+      "parameters": {
+        "m49": {
+          "codes": [
+            {
+              "uid": "wiews_m49",
+              "codes": [ "WITC","150" ]
+            }
+          ]
+        }
+      }
+    },
+
+    {
+      "sid": [ { "uid": "indicator20" } ],
+      "name":"addcolumn",
+      "parameters":{
+        "column":{
+          "dataType":"text",
+          "id":"indicator_label",
+          "title":{
+            "EN":"Indicator"
+          }
+        },
+        "value": ""
+      }
+    },
+
+    {
+      "name" : "select",
+      "parameters" : {
+        "query" : "where m49_country in <<required_countries>>",
+        "values" : {
+          "iteration" : null,
+          "domain" : null,
+          "element" : null,
+          "biologicalAccessionId" : null,
+          "country" : null,
+          "m49_country" : null,
+          "stakeholder" : null,
+          "value" : null,
+          "um" : null,
+          "indicator_label" : "case when element = 'stk' then 'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')' else element_en end"
+        }
+      }
+    },
+
+    {
+      "name": "filter",
+      "parameters": {
+        "columns": [
+          "domain",
+          "m49_country",
+          "indicator",
+          "indicator_label",
+          "iteration",
+          "value",
+          "um",
+          "country",
+          "element"
+        ],
+        "rows": {
+          "element": {
+            "codes": [
+              {
+                "uid": "wiews_elements",
+                "codes": [ "ind", "nfp", "nfpa", "stk" ]
+              }
+            ]
+          },
+          "iteration": {
+            "codes": [
+              {
+                "uid": "wiews_iteration",
+                "codes": [ "1" ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "flowManagerList" : null,
+  "outConfig" : {
+    "plugin" : "outputTable"
+  }
+}
