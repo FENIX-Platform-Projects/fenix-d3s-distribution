@@ -1,0 +1,1450 @@
+{
+  "metadata": {
+    "uid": "adam_resource_matrix_oda",
+    "meContent" : {
+      "resourceRepresentationType" : "dataset"
+    },
+    "dsd": {
+      "columns": [
+        {
+          "dataType": "code",
+          "key": true,
+          "id": "recipientcode",
+          "title": {
+            "EN": "Recipient Country"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2016",
+                "idCodeList": "crs_recipients",
+                "extendedName": {
+                  "EN": "OECD Recipients"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "dataType": "code",
+          "key": true,
+          "id": "donorcode",
+          "title": {
+            "EN": "Resource Partner"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2016",
+                "idCodeList": "crs_donors",
+                "extendedName": {
+                  "EN": "OECD Donors"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "dataType": "number",
+          "key": false,
+          "id": "value",
+          "title": {
+            "EN": "Value"
+          },
+          "subject": "value"
+        },
+        {
+          "dataType": "code",
+          "key": false,
+          "id": "unitcode",
+          "title": {
+            "EN": "Measurement unit"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2016",
+                "idCodeList": "crs_units",
+                "extendedName": {
+                  "EN": "OECD Units"
+                }
+              }
+            ]
+          },
+          "subject": "um"
+        },
+        {
+          "dataType": "text",
+          "key": false,
+          "id": "donorcode_EN",
+          "title": {
+            "EN": "Resource Partner"
+          },
+          "virtual": false,
+          "transposed": false
+        },
+        {
+          "dataType": "text",
+          "key": false,
+          "id": "recipientcode_EN",
+          "title": {
+            "EN": "Recipient Country"
+          },
+          "virtual": false,
+          "transposed": false
+        },
+        {
+          "dataType": "text",
+          "key": false,
+          "id": "unitcode_EN",
+          "title": {
+            "EN": "Measurement unit"
+          },
+          "virtual": false,
+          "transposed": false
+        },
+        {
+          "dataType": "text",
+          "key": true,
+          "id": "indicator",
+          "title": {
+            "EN": "Indicator"
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "adam_processes",
+                "extendedName": {
+                  "EN": "Adam Processes"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "contextSystem": "D3P"
+    }
+  },
+  "data": [
+    [
+      "275",
+      "18",
+      75.76473644000002,
+      "million_usd",
+      "Finland",
+      "Namibia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "377",
+      "932",
+      100,
+      "percentage",
+      "Food and Agriculture Organisation",
+      "Antigua and Barbuda",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "431",
+      "988",
+      31.615112,
+      "million_usd",
+      "IFAD",
+      "Brazil",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "854",
+      "11",
+      0.48873500000000003,
+      "million_usd",
+      "Switzerland",
+      "Vanuatu",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "555",
+      "18",
+      0.4992435,
+      "million_usd",
+      "Finland",
+      "Lebanon",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "666",
+      "742",
+      1.6757745430021775,
+      "percentage",
+      "Korea",
+      "Bangladesh",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "351",
+      "971",
+      2.9387210424259513,
+      "percentage",
+      "UNAIDS",
+      "Honduras",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "189",
+      "4",
+      4.207839215375884,
+      "percentage",
+      "France",
+      "North of Sahara, regional",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "437",
+      "801",
+      6.021517213999999,
+      "million_usd",
+      "Australia",
+      "Colombia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "745",
+      "918",
+      37.92516085435905,
+      "percentage",
+      "EU Institutions",
+      "Lao People's Democratic Republic",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "231",
+      "928",
+      0.74732993,
+      "million_usd",
+      "World Health Organisation",
+      "Central African Republic",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "278",
+      "963",
+      10.30464020859122,
+      "percentage",
+      "UNICEF",
+      "Sudan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "285",
+      "552",
+      22.9712,
+      "million_usd",
+      "Kuwait (KFAED)",
+      "Uganda",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "866",
+      "5",
+      27.9039220494787,
+      "percentage",
+      "Germany",
+      "Solomon Islands",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "255",
+      "913",
+      0.996445,
+      "million_usd",
+      "African Development Bank",
+      "Mali",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "860",
+      "905",
+      5.5,
+      "million_usd",
+      "International Development Association",
+      "Micronesia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "252",
+      "905",
+      31.11194556451613,
+      "percentage",
+      "International Development Association",
+      "Madagascar",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "278",
+      "576",
+      161.284647284,
+      "million_usd",
+      "United Arab Emirates",
+      "Sudan",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "738",
+      "820",
+      26.262715896548894,
+      "percentage",
+      "New Zealand",
+      "Indonesia",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "57",
+      "959",
+      0.34737176999999997,
+      "million_usd",
+      "UNDP",
+      "Kosovo",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "261",
+      "5",
+      19.05061459,
+      "million_usd",
+      "Germany",
+      "Nigeria",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "740",
+      "68",
+      22.167323573685042,
+      "percentage",
+      "Czech Republic",
+      "Democratic People's Republic of Korea",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "139",
+      "918",
+      90.28487,
+      "million_usd",
+      "EU Institutions",
+      "Tunisia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "243",
+      "301",
+      27.916684063542313,
+      "percentage",
+      "Canada",
+      "Guinea",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "289",
+      "971",
+      0.4303757771954546,
+      "percentage",
+      "UNAIDS",
+      "South of Sahara, regional",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "336",
+      "21",
+      0.0263768,
+      "million_usd",
+      "Ireland",
+      "Costa Rica",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "232",
+      "918",
+      34.22202010454984,
+      "percentage",
+      "EU Institutions",
+      "Chad",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "614",
+      "811",
+      26.479459,
+      "million_usd",
+      "Global Environment Facility",
+      "Kyrgyzstan",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "238",
+      "9",
+      0.558375339,
+      "million_usd",
+      "Portugal",
+      "Ethiopia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "279",
+      "302",
+      43.51126477738422,
+      "percentage",
+      "United States",
+      "South Sudan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "440",
+      "820",
+      2.03847064,
+      "million_usd",
+      "New Zealand",
+      "Ecuador",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "630",
+      "5",
+      16.64595057745399,
+      "percentage",
+      "Germany",
+      "Bhutan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "845",
+      "918",
+      5.506199,
+      "million_usd",
+      "EU Institutions",
+      "Nauru",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "589",
+      "811",
+      7.17,
+      "million_usd",
+      "Global Environment Facility",
+      "Middle East, regional",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "434",
+      "959",
+      8.677931009999998,
+      "million_usd",
+      "UNDP",
+      "Chile",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "338",
+      "576",
+      0.0666437,
+      "million_usd",
+      "United Arab Emirates",
+      "Cuba",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "252",
+      "7",
+      16.120880000000003,
+      "million_usd",
+      "Netherlands",
+      "Madagascar",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "862",
+      "959",
+      41.36700437004281,
+      "percentage",
+      "UNDP",
+      "Papua New Guinea",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "872",
+      "932",
+      100,
+      "percentage",
+      "Food and Agriculture Organisation",
+      "Tuvalu",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "85",
+      "12",
+      3.3470599432857693,
+      "percentage",
+      "United Kingdom",
+      "Ukraine",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "615",
+      "301",
+      16.60361361,
+      "million_usd",
+      "Canada",
+      "Tajikistan",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "660",
+      "928",
+      5.012104345696103,
+      "percentage",
+      "World Health Organisation",
+      "Nepal",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "270",
+      "918",
+      3.98036,
+      "million_usd",
+      "EU Institutions",
+      "Seychelles",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "261",
+      "2",
+      0.06633204,
+      "million_usd",
+      "Belgium",
+      "Nigeria",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "454",
+      "301",
+      57.369512797999995,
+      "million_usd",
+      "Canada",
+      "Peru",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "280",
+      "742",
+      0.762533,
+      "million_usd",
+      "Korea",
+      "Swaziland",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "274",
+      "1012",
+      4.65856,
+      "million_usd",
+      "Adaptation Fund",
+      "Djibouti",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "62",
+      "6",
+      1.596694026,
+      "million_usd",
+      "Italy",
+      "Croatia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "832",
+      "21",
+      0.0432713,
+      "million_usd",
+      "Ireland",
+      "Fiji",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "347",
+      "3",
+      10.519097488393031,
+      "percentage",
+      "Denmark",
+      "Guatemala",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "862",
+      "4",
+      1.423457088,
+      "million_usd",
+      "France",
+      "Papua New Guinea",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "610",
+      "951",
+      45.15,
+      "million_usd",
+      "OPEC Fund for International Development",
+      "Armenia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "252",
+      "701",
+      17.7908782426734,
+      "percentage",
+      "Japan",
+      "Madagascar",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "860",
+      "701",
+      31.499145389999995,
+      "million_usd",
+      "Japan",
+      "Micronesia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "89",
+      "918",
+      184.06645178899998,
+      "million_usd",
+      "EU Institutions",
+      "Europe, regional",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "434",
+      "4",
+      3.0664428945292053,
+      "percentage",
+      "France",
+      "Chile",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "257",
+      "959",
+      0.63397716,
+      "million_usd",
+      "UNDP",
+      "Mauritius",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "745",
+      "12",
+      0.6809225202022118,
+      "percentage",
+      "United Kingdom",
+      "Lao People's Democratic Republic",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "765",
+      "742",
+      53.069391,
+      "million_usd",
+      "Korea",
+      "Timor-Leste",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "256",
+      "932",
+      0.16601371999999998,
+      "million_usd",
+      "Food and Agriculture Organisation",
+      "Mauritania",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "279",
+      "967",
+      60.487899999999996,
+      "million_usd",
+      "UNHCR",
+      "South Sudan",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "755",
+      "988",
+      88.67006091712902,
+      "percentage",
+      "IFAD",
+      "Philippines",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "437",
+      "302",
+      4138.328599,
+      "million_usd",
+      "United States",
+      "Colombia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "611",
+      "8",
+      8.249303609876176,
+      "percentage",
+      "Norway",
+      "Azerbaijan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "233",
+      "976",
+      3.9368999999999996,
+      "million_usd",
+      "Islamic Development Bank",
+      "Comoros",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "251",
+      "701",
+      18.57596972508683,
+      "percentage",
+      "Japan",
+      "Liberia",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "274",
+      "302",
+      34.64417860126795,
+      "percentage",
+      "United States",
+      "Djibouti",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "63",
+      "4",
+      17.25455446105512,
+      "percentage",
+      "France",
+      "Serbia",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "489",
+      "3",
+      0.908757,
+      "million_usd",
+      "Denmark",
+      "South America, regional",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "259",
+      "20",
+      79.78200831921859,
+      "percentage",
+      "Iceland",
+      "Mozambique",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "679",
+      "18",
+      6.445454999999999,
+      "million_usd",
+      "Finland",
+      "South Asia, regional",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "861",
+      "940",
+      0.02,
+      "million_usd",
+      "International Labour Organisation",
+      "Palau",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "463",
+      "6",
+      0.04051435,
+      "million_usd",
+      "Italy",
+      "Venezuela",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "139",
+      "12",
+      0.9965792200000001,
+      "million_usd",
+      "United Kingdom",
+      "Tunisia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "660",
+      "3",
+      361.37780396,
+      "million_usd",
+      "Denmark",
+      "Nepal",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "238",
+      "22",
+      3.68548838,
+      "million_usd",
+      "Luxembourg",
+      "Ethiopia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "289",
+      "742",
+      42.42138799999999,
+      "million_usd",
+      "Korea",
+      "South of Sahara, regional",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "265",
+      "21",
+      88.29233338800002,
+      "million_usd",
+      "Ireland",
+      "Zimbabwe",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "753",
+      "905",
+      30.94,
+      "million_usd",
+      "International Development Association",
+      "Mongolia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "282",
+      "811",
+      84.34616528528787,
+      "percentage",
+      "Global Environment Facility",
+      "Tanzania",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "798",
+      "963",
+      0.63945892,
+      "million_usd",
+      "UNICEF",
+      "Asia, regional",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "251",
+      "7",
+      71.00503280000001,
+      "million_usd",
+      "Netherlands",
+      "Liberia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "236",
+      "958",
+      150.3889,
+      "million_usd",
+      "IMF (Concessional Trust Funds)",
+      "Benin",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "63",
+      "959",
+      10.388299479999997,
+      "million_usd",
+      "UNDP",
+      "Serbia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "298",
+      "5",
+      2926.42301228,
+      "million_usd",
+      "Germany",
+      "Africa, regional",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "285",
+      "7",
+      84.832369,
+      "million_usd",
+      "Netherlands",
+      "Uganda",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "870",
+      "916",
+      28.22,
+      "million_usd",
+      "AsDB Special Funds",
+      "Tonga",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "251",
+      "905",
+      4.957636821616671,
+      "percentage",
+      "International Development Association",
+      "Liberia",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "248",
+      "932",
+      0.5649562150000002,
+      "million_usd",
+      "Food and Agriculture Organisation",
+      "Kenya",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "615",
+      "978",
+      14.383502636008583,
+      "percentage",
+      "OSCE",
+      "Tajikistan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "269",
+      "958",
+      187.5222,
+      "million_usd",
+      "IMF (Concessional Trust Funds)",
+      "Senegal",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "85",
+      "918",
+      3.778695617024583,
+      "percentage",
+      "EU Institutions",
+      "Ukraine",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "218",
+      "22",
+      45.77700685799982,
+      "percentage",
+      "Luxembourg",
+      "South Africa",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "845",
+      "12",
+      0.0370506,
+      "million_usd",
+      "United Kingdom",
+      "Nauru",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "728",
+      "4",
+      93.171109463,
+      "million_usd",
+      "France",
+      "Cambodia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "665",
+      "68",
+      1.7250515888695033,
+      "percentage",
+      "Czech Republic",
+      "Pakistan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "232",
+      "12",
+      6.18927115643799,
+      "percentage",
+      "United Kingdom",
+      "Chad",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "645",
+      "10",
+      18.869641117999997,
+      "million_usd",
+      "Sweden",
+      "India",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "889",
+      "928",
+      1.01697398,
+      "million_usd",
+      "World Health Organisation",
+      "Oceania, regional",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "617",
+      "928",
+      1.8559662799999999,
+      "million_usd",
+      "World Health Organisation",
+      "Uzbekistan",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "279",
+      "801",
+      29.52116024540442,
+      "percentage",
+      "Australia",
+      "South Sudan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "241",
+      "9",
+      0.035867979,
+      "million_usd",
+      "Portugal",
+      "Ghana",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "65",
+      "10",
+      0.02334409,
+      "million_usd",
+      "Sweden",
+      "Montenegro",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "130",
+      "932",
+      0.1495551,
+      "million_usd",
+      "Food and Agriculture Organisation",
+      "Algeria",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "89",
+      "12",
+      0.0936519,
+      "million_usd",
+      "United Kingdom",
+      "Europe, regional",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "93",
+      "82",
+      0.32273167,
+      "million_usd",
+      "Estonia",
+      "Moldova",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "616",
+      "918",
+      6.932797,
+      "million_usd",
+      "EU Institutions",
+      "Turkmenistan",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "655",
+      "18",
+      1.38673762,
+      "million_usd",
+      "Finland",
+      "Maldives",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "555",
+      "76",
+      0.15378508,
+      "million_usd",
+      "Poland",
+      "Lebanon",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "298",
+      "2",
+      91.726883697,
+      "million_usd",
+      "Belgium",
+      "Africa, regional",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "666",
+      "971",
+      4.425092996999999,
+      "million_usd",
+      "UNAIDS",
+      "Bangladesh",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "389",
+      "104",
+      42.633989,
+      "million_usd",
+      "Nordic Development Fund",
+      "North & Central America, regional",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "364",
+      "8",
+      46.529739968,
+      "million_usd",
+      "Norway",
+      "Nicaragua",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "351",
+      "742",
+      101.276689,
+      "million_usd",
+      "Korea",
+      "Honduras",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "389",
+      "10",
+      71.04173906899999,
+      "million_usd",
+      "Sweden",
+      "North & Central America, regional",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "235",
+      "963",
+      37.46539388,
+      "million_usd",
+      "UNICEF",
+      "Democratic Republic of the Congo",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "635",
+      "18",
+      26.41215220652008,
+      "percentage",
+      "Finland",
+      "Myanmar",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "753",
+      "701",
+      86.335491656,
+      "million_usd",
+      "Japan",
+      "Mongolia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "270",
+      "12",
+      0.08814188,
+      "million_usd",
+      "United Kingdom",
+      "Seychelles",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "268",
+      "742",
+      0.116591,
+      "million_usd",
+      "Korea",
+      "Sao Tome and Principe",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "550",
+      "951",
+      54.79430000000001,
+      "million_usd",
+      "OPEC Fund for International Development",
+      "West Bank and Gaza Strip",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "66",
+      "928",
+      0.03485714,
+      "million_usd",
+      "World Health Organisation",
+      "Former Yugoslav Republic of Macedonia",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "679",
+      "8",
+      29.362634971883182,
+      "percentage",
+      "Norway",
+      "South Asia, regional",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "253",
+      "988",
+      97.5689684519579,
+      "percentage",
+      "IFAD",
+      "Malawi",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "451",
+      "959",
+      9.88375528,
+      "million_usd",
+      "UNDP",
+      "Paraguay",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "589",
+      "302",
+      77.49327999999997,
+      "million_usd",
+      "United States",
+      "Middle East, regional",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "549",
+      "959",
+      19.41813209392034,
+      "percentage",
+      "UNDP",
+      "Jordan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "614",
+      "302",
+      546.1396189999999,
+      "million_usd",
+      "United States",
+      "Kyrgyzstan",
+      "Million USD",
+      "Total ODA (mil $)"
+    ],
+    [
+      "611",
+      "18",
+      0.6389248,
+      "million_usd",
+      "Finland",
+      "Azerbaijan",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "278",
+      "5",
+      17.723189452208466,
+      "percentage",
+      "Germany",
+      "Sudan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "279",
+      "811",
+      82.14285714285714,
+      "percentage",
+      "Global Environment Facility",
+      "South Sudan",
+      "%",
+      "FAO Sectors (%)"
+    ],
+    [
+      "275",
+      "974",
+      10.723132640000001,
+      "million_usd",
+      "UNFPA",
+      "Namibia",
+      "Million USD",
+      "Total ODA (mil $)"
+    ]
+  ]
+}
