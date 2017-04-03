@@ -53,14 +53,14 @@
       },
       {
         "id" : "country",
-        "title" : { "EN" : "Country "},
+        "title" : { "EN" : "Country ISO3"},
         "subject" : "geo",
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
       },
       {
         "id" : "m49_country",
-        "title" : { "EN" : "Country "},
+        "title" : { "EN" : "Country M49"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] },
         "key": true
