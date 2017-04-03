@@ -100,10 +100,10 @@ codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 
 --data--
-@0@label_0
-@1064@label_1064
-@1065@label_1065
-@1066@label_1066
-@1067@label_1067
-@1068@label_1068
-@1069@label_1069
+@0@Unknown
+@1064@Wild
+@1065@Weedy
+@1066@Traditional cultivar/Landrace
+@1067@Breeding/research material
+@1068@Advanced/Improved cultivar
+@1069@GMO

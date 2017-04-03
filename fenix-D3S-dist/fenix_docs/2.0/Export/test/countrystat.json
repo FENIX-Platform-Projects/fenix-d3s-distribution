@@ -1,0 +1,18 @@
+{
+  "resource": {
+    "metadata" : {
+      "uid":"D3S_53597070985563513349079044773059815072"
+    },
+    "data" : [ ]
+  },
+  "input": {
+    "plugin": "inputTable",
+    "config": {}
+  },
+  "output": {
+    "plugin": "outputTable",
+    "config": {
+      "lang": "EN"
+    }
+  }
+}
