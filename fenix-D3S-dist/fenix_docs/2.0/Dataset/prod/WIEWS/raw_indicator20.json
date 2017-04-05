@@ -1,0 +1,141 @@
+{
+  "uid": "raw_indicator20",
+  "title": {
+    "EN": "Wiews indicator 20 for download"
+  },
+  "meContent": {
+    "description": {
+      "EN": "wiews indicator 20"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "iteration",
+        "title" : { "EN" : "Iteration"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] }
+
+      },
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country"},
+        "subject" : "geo",
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
+
+
+      },
+      {
+        "id" : "orgID",
+        "title" : { "EN" : "Organization id"},
+        "dataType" : "text"
+      },
+
+      {
+        "id" : "stakeholder",
+        "title" : { "EN" : "Stakeholder"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] }
+      },
+      {
+        "id" : "id",
+        "title" : { "EN" : "ID"},
+        "dataType" : "text",
+        "key": true
+
+      },
+      {
+        "id" : "accessionno",
+        "title" : { "EN" : "Accession number"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "taxonid",
+        "title" : { "EN" : "Taxon id"},
+        "subject": "value",
+        "dataType" : "text"
+      },
+      {
+        "id" : "taxontext",
+        "title" : { "EN" : "Taxon Free text"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop",
+        "title" : { "EN" : "Crop"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_crop" } ] }
+      },
+      {
+        "id" : "croptext",
+        "title" : { "EN" : "Crop Free text"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "acquisitiondate",
+        "title" : { "EN" : "Acquisition date"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "origincountry",
+        "title" : { "EN" : "Origin Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
+
+      },
+      {
+        "id" : "biologicalaccessionid",
+        "title" : { "EN" : "Biological accession id"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_biological" } ] }
+      },
+      {
+        "id" : "genebankid",
+        "title" : { "EN" : "Genetical bank id"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_genebank" } ] }
+      },
+
+      {
+        "id" : "genebank_freetext",
+        "title" : { "EN" : "Genetical bank free text"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "latitude",
+        "title" : { "EN" : "Latitude"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "longitude",
+        "title" : { "EN" : "Longitude"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "collectionsourceid",
+        "title" : { "EN" : "Collection source id"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "germplasmastoreid",
+        "title" : { "EN" : "Germplasm store id"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_genebank" } ] }
+      },
+      {
+        "id" : "multilateralsystemstatusid",
+        "title" : { "EN" : "Multilateral System Status id"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_multilateral" } ] }
+      }
+    ]
+  }
+}

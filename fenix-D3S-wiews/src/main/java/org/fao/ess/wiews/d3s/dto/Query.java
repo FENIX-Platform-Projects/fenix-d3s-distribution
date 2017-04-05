@@ -2,7 +2,36 @@ package org.fao.ess.wiews.d3s.dto;
 
 public enum Query {
 
-
+    raw_indicator20 ("SELECT\n" +
+            "\n" +
+            "  cast(a.ITERATION as CHAR(50)) as iteration,\n" +
+            "  cast(d.iso   as CHAR(50)) as country,\n" +
+            "  cast(a.orgid  as CHAR(50)) as orgid,\n" +
+            "  cast(c.wiews_instcode   as CHAR(50))as stakeholder,\n" +
+            "  cast(a.id  as CHAR(50)) as id,\n" +
+            "  cast(a.accessionno  as CHAR(50)) as accessionno,\n" +
+            "  cast(a.taxonid  as CHAR(50)) as taxonid,\n" +
+            "  cast(a.taxon_freetext  as CHAR(50)) as taxon_freetext,\n" +
+            "  cast(a.cropid  as CHAR(50)) as cropid,\n" +
+            "  cast(a.crop_freetext  as CHAR(50)) as crop_freetext,\n" +
+            "  cast(a.acquisitiondate  as CHAR(50)) as acquisitiondate,\n" +
+            "  cast(ref.iso  as CHAR(50)) as origincountry,\n" +
+            "  cast(a.biologicalaccessionid  as CHAR(50)) as biologicalaccessionid,\n" +
+            "  cast(a.genebankid  as CHAR(50)) as genebankid,\n" +
+            "  cast(a.genebank_freetext  as CHAR(50)) as genebank_freetext,\n" +
+            "  cast(a.latitude  as CHAR(50)) as latitude,\n" +
+            "  cast(a.longitude  as CHAR(50)) as longitude,\n" +
+            "  cast(a.collectionsourceid  as CHAR(50)) as collectionsourceid,\n" +
+            "  cast(a.germplasmastoreid  as CHAR(50)) as germplasmastoreid,\n" +
+            "  cast(a.multilateralsystemstatusid  as CHAR(50)) as multilateralsystemstatusid\n" +
+            "\n" +
+            "\n" +
+            "FROM answer_q14 a\n" +
+            "  JOIN\n" +
+            "  ref_instab c\n" +
+            "    on a.orgId = c.ID\n" +
+            "  JOIN ref_country d ON a.country_id = d.country_id\n" +
+            "  JOIN ref_country ref on a.countryoriginid = ref.country_id "),
     indicator20 ("SELECT\n" +
             "  cast(ITERATION as CHAR(50)) as iteration,\n" +
             "  '2240' as domain,\n" +

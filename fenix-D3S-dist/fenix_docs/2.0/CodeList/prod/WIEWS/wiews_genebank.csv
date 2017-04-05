@@ -1,0 +1,237 @@
+{
+    "uid": "wiews_genebank",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "WIEWS genebank"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "WIEWS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["country"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+      "dsd": {
+           "contextSystem": "wiews"
+       }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+
+
+--data--
+@0@label_0
+@213@label_213
+@649@label_649
+@813@label_813
+@841@label_841
+@842@label_842
+@1358@label_1358
+@1795@label_1795
+@1874@label_1874
+@1908@label_1908
+@1950@label_1950
+@1976@label_1976
+@1982@label_1982
+@2024@label_2024
+@2033@label_2033
+@2079@label_2079
+@2091@label_2091
+@2215@label_2215
+@2250@label_2250
+@2282@label_2282
+@2376@label_2376
+@2443@label_2443
+@2497@label_2497
+@2605@label_2605
+@2690@label_2690
+@4003@label_4003
+@4008@label_4008
+@4036@label_4036
+@4106@label_4106
+@4149@label_4149
+@4230@label_4230
+@4326@label_4326
+@4352@label_4352
+@4545@label_4545
+@4691@label_4691
+@4697@label_4697
+@4698@label_4698
+@4699@label_4699
+@4700@label_4700
+@4701@label_4701
+@4702@label_4702
+@4703@label_4703
+@4704@label_4704
+@4705@label_4705
+@4706@label_4706
+@4750@label_4750
+@4915@label_4915
+@4959@label_4959
+@5451@label_5451
+@5524@label_5524
+@5528@label_5528
+@5533@label_5533
+@5553@label_5553
+@7722@label_7722
+@7818@label_7818
+@8440@label_8440
+@9036@label_9036
+@9635@label_9635
+@10543@label_10543
+@10601@label_10601
+@10908@label_10908
+@11058@label_11058
+@12118@label_12118
+@12252@label_12252
+@12599@label_12599
+@12859@label_12859
+@12932@label_12932
+@13068@label_13068
+@13739@label_13739
+@13868@label_13868
+@13949@label_13949
+@13965@label_13965
+@14487@label_14487
+@14514@label_14514
+@15318@label_15318
+@15326@label_15326
+@15333@label_15333
+@15986@label_15986
+@16424@label_16424
+@17359@label_17359
+@17881@label_17881
+@18239@label_18239
+@18644@label_18644
+@18677@label_18677
+@18684@label_18684
+@18691@label_18691
+@18701@label_18701
+@18703@label_18703
+@18705@label_18705
+@18719@label_18719
+@18738@label_18738
+@19582@label_19582
+@19731@label_19731
+@19878@label_19878
+@19912@label_19912
+@19944@label_19944
+@19997@label_19997
+@20208@label_20208
+@20301@label_20301
+@20555@label_20555
+@20594@label_20594
+@20696@label_20696
+@20743@label_20743
+@20765@label_20765
+@20821@label_20821
+@20824@label_20824
+@20827@label_20827
+@20829@label_20829
+@20871@label_20871
+@32884@label_32884
+@32931@label_32931
+@32981@label_32981
+@33009@label_33009
+@33308@label_33308
+@33357@label_33357
+@33406@label_33406

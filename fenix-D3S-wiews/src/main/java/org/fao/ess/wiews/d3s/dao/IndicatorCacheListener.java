@@ -16,6 +16,20 @@ public class IndicatorCacheListener implements DatasetCacheListener {
 
     @Override
     public boolean updating(DatasetAccessInfo datasetInfo) throws Exception {
+
+        String uid = datasetInfo.getMetadata().getUid();
+
+        switch (uid) {
+
+            case "raw_indicator20" :
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( iteration, country)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( iteration)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( country)");
+                break;
+        }
         return false;
     }
 

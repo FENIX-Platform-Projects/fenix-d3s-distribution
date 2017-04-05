@@ -268,7 +268,7 @@ public class PostgresDefaultStorage extends PostgresStorage {
 
     private int insertData(Connection connection, String tableName, Column[] structure, int[] columnsType, Iterator<Object[]> data, int size) throws Exception {
         //Build query
-        StringBuilder query = new StringBuilder("COPY ").append(getTableName(tableName)).append(" FROM STDIN WITH (FORMAT CSV, DELIMITER ';', QUOTE '\"', ENCODING 'UTF8')");
+        StringBuilder query = new StringBuilder("COPY ").append(getTableName(tableName)).append(" FROM STDIN WITH (FORMAT CSV, DELIMITER '@', QUOTE '\"', ENCODING 'UTF8')");
 
         //Prepare store session
         CopyManager cpManager = ((PGConnection)connection).getCopyAPI();
@@ -279,7 +279,7 @@ public class PostgresDefaultStorage extends PostgresStorage {
         //Store data
         while (count<size && data.hasNext()) {
             StringWriter buffer = new StringWriter();
-            CSVWriter csvWriter = new CSVWriter(buffer,';',true,false,true,null,null,null);
+            CSVWriter csvWriter = new CSVWriter(buffer,'@',true,false,true,null,null,null);
             count += csvWriter.write(data, Math.min(MAX_PAGE_SIZE,size));
 
             byte[] csvData = buffer.toString().getBytes();

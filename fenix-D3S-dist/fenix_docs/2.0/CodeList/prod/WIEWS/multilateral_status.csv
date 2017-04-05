@@ -1,5 +1,3 @@
-
-
 {
    "characterSet": {
       "codes": [
@@ -53,7 +51,7 @@
    },
    "meContent": {
       "description": {
-         "EN": "WIEWS biological"
+         "EN": "WIEWS multilateral status"
       },
       "keywords": [
          "crs",
@@ -89,21 +87,22 @@
    "metadataStandardName": "FENIX metadata",
    "metadataStandardVersion": "1.0",
    "title": {
-      "EN": "WIEWS biological"
+      "EN": "WIEWS multilateral status"
    },
-   "uid": "wiews_biological"
+   "uid": "wiews_multilateral"
 }
 
 --structure--
 csvSeparator=@
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
+titleColumnIndex_FR=4
+titleColumnIndex_ES=5
+titleColumnIndex_RU=6
+titleColumnIndex_AR=7
+
 
 --data--
-@0@Unknown
-@1064@Wild
-@1065@Weedy
-@1066@300) Traditional cultivar/Landrace
-@1067@400) Breeding/research material
-@1068@500) Advanced/Improved cultivar
-@1069@GMO
+@1070@Not included@Non inclus@No incluido@Не включен@لم يتم تضمينه
+@1071@Included@Inclus@Incluido@Включен@تم تضمينهّ
+
