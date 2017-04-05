@@ -3,6 +3,9 @@
     "metadata": {
       "rid": "9_11464",
       "uid": "adam_resource_matrix_oda",
+      "meContent" : {
+        "resourceRepresentationType" : "dataset"
+      },
       "dsd": {
         "columns": [
           {
