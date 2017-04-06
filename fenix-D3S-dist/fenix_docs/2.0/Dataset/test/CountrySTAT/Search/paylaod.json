@@ -1,0 +1,24 @@
+{
+  "dsd.contextSystem": {
+    "enumeration": [
+      "cstat_nga"
+    ]
+  },
+  "meContent.resourceRepresentationType": {
+    "enumeration": [
+      "dataset"
+    ]
+  },
+  "meContent.seReferencePopulation.referencePeriod": {
+    "codes": [
+      {
+        "uid": "FAO_Period_cstat",
+        "version": "1.0",
+        "codes": [
+          "10"
+        ]
+      }
+    ]
+  },
+  "freetext":{"text":"test*"}
+}

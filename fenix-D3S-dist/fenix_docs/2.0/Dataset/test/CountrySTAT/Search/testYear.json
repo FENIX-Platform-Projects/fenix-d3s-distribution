@@ -1,0 +1,352 @@
+{
+  "metadata" : {
+    "uid":"testYear2",
+    "title" : {
+      "EN" : "Food availability (sub-national)"
+    },
+    "dsd" : {
+      "contextSystem" : "cstat_nga",
+      "datasources" : [ "D3S" ],
+      "columns" : [ {
+        "dataType" : "year",
+        "title" : {
+          "FR" : "Année",
+          "EN" : "Year"
+        },
+        "subject" : "time",
+        "key" : true,
+        "id" : "DIMENSION0"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Indicateur",
+          "EN" : "Indicator"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_Indicators"
+          } ]
+        },
+        "subject" : "indicator",
+        "key" : true,
+        "id" : "DIMENSION1"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Produit",
+          "EN" : "Product"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "2.1",
+            "idCodeList" : "CPC"
+          } ]
+        },
+        "subject" : "item",
+        "key" : true,
+        "id" : "DIMENSION2"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Niveau administratif 1",
+          "EN" : "Administrative level 1"
+        },
+        "domain" : {
+          "codes" : [ {
+            "version" : "2014",
+            "idCodeList" : "GAUL"
+          } ]
+        },
+        "subject" : "geo",
+        "key" : true,
+        "id" : "DIMENSION3"
+      }, {
+        "dataType" : "number",
+        "title" : {
+          "FR" : "Valeur",
+          "EN" : "Value"
+        },
+        "subject" : "value",
+        "key" : false,
+        "id" : "VALUE0"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Flag",
+          "EN" : "Flag"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "Flag"
+          } ]
+        },
+        "subject" : "flag",
+        "key" : false,
+        "id" : "OTHER0"
+      }, {
+        "dataType" : "code",
+        "title" : {
+          "FR" : "Unité",
+          "EN" : "Unit"
+        },
+        "domain" : {
+          "codes" : [ {
+            "idCodeList" : "CountrySTAT_UM"
+          } ]
+        },
+        "subject" : "um",
+        "key" : false,
+        "id" : "OTHER1"
+      } ]
+    },
+    "meContent" : {
+      "description" : {
+        "EN" : ""
+      },
+      "resourceRepresentationType" : "dataset",
+      "keywords" : [ "food availability" ],
+      "statisticalConceptsDefinitions" : {
+        "EN" : ""
+      },
+      "seReferencePopulation" : {
+        "statisticalPopulation" : {
+          "EN" : ""
+        },
+        "statisticalUnit" : {
+          "EN" : ""
+        },
+        "referencePeriod" : {
+          "version" : "1.0",
+          "idCodeList" : "FAO_Period",
+          "codes" : [ {
+            "code" : "9"
+          } ]
+        },
+        "referenceArea" : {
+          "version" : "1.0",
+          "idCodeList" : "GAUL_ReferenceArea",
+          "codes" : [ {
+            "code" : "ADM1"
+          } ]
+        }
+      },
+      "seCoverage" : {
+        "coverageSectors" : {
+          "idCodeList" : "CSTAT_Core",
+          "codes" : [ {
+            "code" : "FA"
+          } ]
+        },
+        "coverageSectorsDetails" : {
+          "EN" : ""
+        },
+        "coverageTime" : {
+          "from" : -3600000,
+          "to" : 1479942000000
+        },
+        "coverageGeographic" : {
+          "version" : "2014",
+          "idCodeList" : "GAUL0",
+          "codes" : [ {
+            "code" : "182"
+          } ]
+        }
+      }
+    },
+    "languageDetails" : {
+      "EN" : ""
+    },
+    "characterSet" : {
+      "idCodeList" : "IANAcharacterSet",
+      "codes" : [ {
+        "code" : "106"
+      } ]
+    },
+    "metadataStandardName" : "FENIX",
+    "metadataStandardVersion" : "1.0",
+    "metadataLanguage" : {
+      "version" : "1998",
+      "idCodeList" : "ISO639-2",
+      "codes" : [ {
+        "code" : "eng"
+      } ]
+    },
+    "contacts" : [ {
+      "position" : {
+        "EN" : ""
+      },
+      "organization" : {
+        "EN" : "Federal Ministry of Agriculture and Rural Development"
+      },
+      "role" : "owner",
+      "contactInfo" : {
+        "phone" : "",
+        "emailAddress" : "nconyeri@yahoo.com",
+        "hoursOfService" : {
+          "EN" : ""
+        },
+        "contactInstruction" : {
+          "EN" : ""
+        },
+        "address" : ""
+      },
+      "pointOfContact" : "",
+      "specify" : {
+        "EN" : ""
+      },
+      "organizationUnit" : {
+        "EN" : ""
+      }
+    } ],
+    "meInstitutionalMandate" : {
+      "legalActsAgreements" : {
+        "EN" : ""
+      },
+      "institutionalMandateDataSharing" : {
+        "EN" : ""
+      }
+    },
+    "meAccessibility" : {
+      "seDataDissemination" : {
+        "seDistribution" : { },
+        "seReleasePolicy" : {
+          "releaseCalendar" : {
+            "EN" : ""
+          },
+          "embargoTime" : {
+            "from" : -3600000,
+            "to" : 1479942000000
+          }
+        }
+      },
+      "seClarity" : {
+        "clarity" : {
+          "EN" : ""
+        },
+        "metadataCompletenessRate" : 100
+      },
+      "seConfidentiality" : {
+        "confidentialityPolicy" : {
+          "EN" : ""
+        },
+        "confidentialityDataTreatment" : {
+          "EN" : ""
+        },
+        "confidentialityStatus" : {
+          "version" : "1.0",
+          "idCodeList" : "CL_CONF_STATUS",
+          "codes" : [ {
+            "code" : "F"
+          } ]
+        }
+      }
+    },
+    "meDataQuality" : {
+      "qualityManagement" : {
+        "EN" : ""
+      },
+      "qualityAssessment" : {
+        "EN" : ""
+      },
+      "qualityAssurance" : {
+        "EN" : ""
+      },
+      "seAccuracy" : {
+        "accuracyNonSampling" : {
+          "EN" : ""
+        },
+        "accuracySampling" : {
+          "EN" : ""
+        },
+        "completeness" : {
+          "EN" : ""
+        }
+      },
+      "seDataRevision" : {
+        "revisionPolicy" : {
+          "EN" : ""
+        },
+        "revisionPractice" : {
+          "EN" : ""
+        }
+      },
+      "seComparability" : {
+        "comparabilityGeographical" : {
+          "EN" : ""
+        },
+        "comparabilityTime" : {
+          "EN" : ""
+        },
+        "coherenceIntern" : {
+          "EN" : ""
+        }
+      }
+    },
+    "meMaintenance" : {
+      "seUpdate" : { },
+      "maintenanceAgency" : {
+        "EN" : ""
+      }
+    },
+    "meStatisticalProcessing" : {
+      "seDataSource" : {
+        "sePrimaryDataCollection" : {
+          "dataCollection" : {
+            "EN" : ""
+          },
+          "samplingProcedure" : {
+            "EN" : ""
+          }
+        },
+        "seSecondaryDataCollection" : {
+          "organization" : {
+            "EN" : ""
+          },
+          "rawDataDescription" : {
+            "EN" : ""
+          },
+          "dataCollection" : {
+            "EN" : ""
+          }
+        }
+      },
+      "seDataCompilation" : {
+        "missingData" : {
+          "EN" : ""
+        },
+        "weights" : {
+          "EN" : ""
+        },
+        "aggregationProcessing" : {
+          "EN" : ""
+        },
+        "dataAdjustmentDetails" : {
+          "EN" : ""
+        },
+        "indexType" : {
+          "EN" : ""
+        }
+      },
+      "seDataValidation" : {
+        "dataValidationIntermediate" : {
+          "EN" : ""
+        },
+        "dataValidationOutput" : {
+          "EN" : ""
+        },
+        "dataValidationSource" : {
+          "EN" : ""
+        }
+      }
+    },
+    "language" : {
+      "version" : "1998",
+      "idCodeList" : "ISO639-2",
+      "codes" : [ {
+        "code" : "eng"
+      } ]
+    }
+  },
+  "data" : [ [ 2008, "0203", "0114", "65699", 6300.0, null, "0103" ], [ 2008, "0203", "0114", "2216", 1700.0, null, "0103" ], [ 2008, "0203", "0114", "65704", 1920.0, null, "0103" ], [ 2008, "0203", "0114", "2224", 41000.0, null, "0103" ], [ 2008, "0203", "0114", "2223", 2610.0, null, "0103" ], [ 2008, "0203", "0114", "2225", 1200.0, null, "0103" ], [ 2008, "0203", "0114", "2211", 340.0, null, "0103" ], [ 2008, "0203", "0113", "2211", 130.0, null, "0103" ], [ 2008, "0203", "0114", "2221", 660.0, null, "0103" ], [ 2008, "0203", "0114", "2227", 1830.0, null, "0103" ], [ 2008, "0203", "0114", "2228", 611.0, null, "0103" ], [ 2008, "0203", "0114", "65705", 690.0, null, "0103" ], [ 2008, "0203", "0114", "2231", 840.0, null, "0103" ], [ 2008, "0203", "0114", "65707", 690.0, null, "0103" ], [ 2008, "0203", "0114", "2234", 360.0, null, "0103" ], [ 2008, "0203", "0114", "2235", 300.0, null, "0103" ], [ 2008, "0203", "0112", "2234", 240.0, null, "0103" ], [ 2008, "0203", "0112", "2235", 300.0, null, "0103" ], [ 2008, "0203", "0112", "65705", 210.0, null, "0103" ], [ 2008, "0203", "0112", "2231", 510.0, null, "0103" ], [ 2008, "0203", "0112", "2225", 1200.0, null, "0103" ], [ 2008, "0203", "0112", "65704", 600.0, null, "0103" ], [ 2008, "0203", "0112", "2223", 660.0, null, "0103" ], [ 2008, "0203", "0112", "2216", 820.0, null, "0103" ], [ 2008, "0203", "0112", "65699", 3600.0, null, "0103" ], [ 2008, "0203", "0118", "2227", 360.0, null, "0103" ], [ 2008, "0203", "0118", "2225", 1200.0, null, "0103" ], [ 2008, "0203", "0118", "2223", 180.0, null, "0103" ], [ 2008, "0203", "0118", "65704", 180.0, null, "0103" ], [ 2008, "0203", "0118", "2216", 180.0, null, "0103" ], [ 2008, "0203", "0112", "2221", 240.0, null, "0103" ], [ 2008, "0203", "0112", "65707", 510.0, null, "0103" ] ],
+  "size" : 32
+}
