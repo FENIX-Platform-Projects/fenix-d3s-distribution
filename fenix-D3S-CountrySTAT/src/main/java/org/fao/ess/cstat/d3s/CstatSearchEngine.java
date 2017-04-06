@@ -22,14 +22,10 @@ public class CstatSearchEngine implements SearchEngine {
     @Override
     public Collection<String> getUids(ConditionFilter... filter) throws Exception {
         Collection<Object> params = new LinkedList<>();
-        return getUids(params, filter);
+        return containsFreeText(filter)? getUids(params, filter): new LinkedList<String>();
     }
 
-/*
-    private Collection<String> getUids(Collection<Object> params, ConditionFilter... filter) throws Exception {
-        return getIdsFromDocument(getResources(createQuery(params, filter), params));
-    }
-*/
+
     private Collection<String> getUids(Collection<Object> params, ConditionFilter... filter) throws Exception {
         String query = createQuery(params, filter);
         return getIdsFromDocument(getResources(query, params));
@@ -73,6 +69,13 @@ public class CstatSearchEngine implements SearchEngine {
 
     private Collection<ODocument> getResources(String query, Collection<Object> params) {
         return (Collection<ODocument>)databaseStandards.getConnection().getUnderlying().query(new OSQLSynchQuery<ODocument>(query), params.toArray());
+    }
+
+    private boolean containsFreeText ( ConditionFilter... filter) {
+        for (ConditionFilter filterCondition : filter)
+            if(filterCondition.fieldName.equals("freetext"))
+                return true;
+        return false;
     }
 
 }
