@@ -200,7 +200,67 @@ public enum Query {
             "  iteration,\n" +
             "  stakeholder,\n" +
             "  country,\n" +
-            "  genus" );
+            "  genus" ),
+    indicator3("with raw as (\n" +
+            " select * \n" +
+            " from answer a\n" +
+            " join answer_detail ad\n" +
+            " on (a.id = answerid)\n" +
+            " where iteration = 1 and questionid = 2\n" +
+            "),\n" +
+            "answer_1_2 as (\n" +
+            " select iteration, iso as country_iso3, species, threatened, varieties, threatened_varieties, spec.answerid as answer_id\n" +
+            " from\n" +
+            " (select answerid, answer_freetext as species, iteration, country_id from raw where subquestionid = 1003) spec\n" +
+            " join\n" +
+            " (select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
+            " on (spec.answerid = tspec.answerid)\n" +
+            " join\n" +
+            " (select answerid, answer_freetext::int as varieties from raw where subquestionid = 1005) var\n" +
+            " on (spec.answerid = var.answerid)\n" +
+            " join\n" +
+            " (select answerid, answer_freetext::int as threatened_varieties from raw where subquestionid = 1006) tvar\n" +
+            " on (spec.answerid = tvar.answerid)\n" +
+            "\n" +
+            " join ref_country on (ref_country.country_id = spec.country_id)\n" +
+            "\n" +
+            " order by country_iso3, species\n" +
+            ")\n" +
+            "\n" +
+            "select '3_1' as indicator, iteration, country_iso3, count(*) as species_number, sum (threatened_inc) as threatened_species_number, (sum (threatened_inc)::real / count(*)) * 100 as threatened_percentage, 'perc' as um from\n" +
+            "(select *, case when threatened then 1 else 0 end as threatened_inc from answer_1_2) raw\n" +
+            "group by iteration, country_iso3\n" +
+            "union\n" +
+            "select '3_2' as indicator, iteration, country_iso3, sum (varieties) as varieties_number, sum (threatened_varieties) as threatened_varieties_number, (sum (threatened_varieties)::real / sum (varieties)) * 100 as threatened_percentage, 'perc' as um from\n" +
+            "(select *, case when threatened then 1 else 0 end as threatened_inc from answer_1_2) raw\n" +
+            "group by iteration, country_iso3\n" +
+            "having sum (varieties)>0\n" +
+            "\n" +
+            "order by indicator, iteration, country_iso3"),
+    raw_indicator3 ("with raw as (\n" +
+            " select * \n" +
+            " from answer a\n" +
+            " join answer_detail ad\n" +
+            " on (a.id = answerid)\n" +
+            " where iteration = 1 and questionid = 2\n" +
+            ")\n" +
+            "\n" +
+            "select iteration, iso as country_iso3, species, threatened, varieties, threatened_varieties, spec.answerid as answer_id\n" +
+            "from\n" +
+            "(select answerid, answer_freetext as species, iteration, country_id from raw where subquestionid = 1003) spec\n" +
+            "join\n" +
+            "(select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
+            "on (spec.answerid = tspec.answerid)\n" +
+            "join\n" +
+            "(select answerid, answer_freetext::int as varieties from raw where subquestionid = 1005) var\n" +
+            "on (spec.answerid = var.answerid)\n" +
+            "join\n" +
+            "(select answerid, answer_freetext::int as threatened_varieties from raw where subquestionid = 1006) tvar\n" +
+            "on (spec.answerid = tvar.answerid)\n" +
+            "\n" +
+            "join ref_country on (ref_country.country_id = spec.country_id)\n" +
+            "\n" +
+            "order by country_iso3, species\n");
 
     private String query;
     Query(String query) {

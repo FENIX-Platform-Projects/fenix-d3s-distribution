@@ -1,0 +1,66 @@
+{
+  "uid": "indicator3",
+  "title": {
+    "EN": "Wiews indicator 3"
+  },
+  "meContent": {
+    "description": {
+      "EN": "wiews indicator 3"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "indicator",
+        "title" : { "EN" : "Indicator"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_indicators" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "iteration",
+        "title" : { "EN" : "Iteration"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country ISO3"},
+        "subject" : "geo",
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "key": true
+      },
+      {
+        "id" : "species",
+        "title" : { "EN" : "Species Number"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "threatened_species",
+        "title" : { "EN" : "Threatened Species Number"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "threatened_percentage",
+        "title" : { "EN" : "Threatened Percentage"},
+        "dataType" : "number",
+        "subject":"value"
+      },
+      {
+        "id" : "um",
+        "title" : { "EN" : "Measurement unit"},
+        "dataType" : "code",
+        "subject":"um"
+      }
+    ]
+  }
+}

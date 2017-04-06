@@ -29,6 +29,26 @@ public class IndicatorCacheListener implements DatasetCacheListener {
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
                         " ( country)");
                 break;
+
+            case "raw_indicator3" :
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( iteration, country)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( iteration)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( country)");
+                break;
+
+            case "indicator3" :
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( INDICATOR , iteration, country)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( INDICATOR ,iteration)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( INDICATOR ,country)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
+                        " ( iteration ,country)");
+                break;
         }
         return false;
     }
