@@ -128,7 +128,7 @@
         "id" : "germplasmastoreid",
         "title" : { "EN" : "Germplasm store id"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_genebank" } ] }
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_germplasma" } ] }
       },
       {
         "id" : "multilateralsystemstatusid",
