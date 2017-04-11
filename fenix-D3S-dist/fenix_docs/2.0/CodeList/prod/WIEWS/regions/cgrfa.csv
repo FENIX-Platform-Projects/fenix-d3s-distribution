@@ -117,289 +117,154 @@ codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 
 --data--
-
-
-@0@World
-0@10@Europe
-0@1@Near East
-0@100@Latin America and the Caribbean
-0@101@Latin America and the Caribbean
-0@102@Asia
-0@103@Europe
-0@104@Europe
-0@105@Near East
-0@106@Asia
-0@107@Europe
-0@108@Europe
-0@109@Africa
-0@11@Africa
-0@110@Latin America and the Caribbean
-0@111@South West Pacific
-0@112@Africa
-0@113@Near East
-0@114@Africa
-0@115@Europe
-0@116@Africa
-0@117@Africa
-0@118@Europe
-0@119@Europe
-0@12@Asia
-0@120@Europe
-0@121@Asia
-0@122@Not a member
-0@123@Africa
-0@124@Europe
-0@125@Europe
-0@126@Near East
-0@127@Africa
-0@128@South West Pacific
-0@129@Latin America and the Caribbean
-0@13@Latin America and the Caribbean
-0@130@Africa
-0@131@Europe
-0@132@Not a member
-0@133@Africa
-0@134@Near East
-0@135@Europe
-0@136@Africa
-0@137@North America
-0@138@Latin America and the Caribbean
-0@139@Latin America and the Caribbean
-0@14@Latin America and the Caribbean
-0@140@Near East
-0@141@Africa
-0@142@Africa
-0@15@Europe
-0@16@Africa
-0@17@Africa
-0@18@Asia
-0@19@Africa
-0@2@Europe
-0@20@North America
-0@21@Africa
-0@22@Africa
-0@23@Latin America and the Caribbean
-0@24@Africa
-0@25@South West Pacific
-0@26@Latin America and the Caribbean
-0@27@Europe
-0@28@Latin America and the Caribbean
-0@29@Europe
-0@3@Africa
-0@30@Europe
-0@31@Africa
-0@32@Asia
-0@33@Africa
-0@34@Europe
-0@35@Not a member
-0@36@Latin America and the Caribbean
-0@37@Near East
-0@38@Latin America and the Caribbean
-0@39@Africa
-0@4@Africa
-0@40@Europe
-0@41@Africa
-0@42@South West Pacific
-0@43@Europe
-0@44@Europe
-0@45@Africa
-0@46@Europe
-0@47@Africa
-0@48@Europe
-0@49@Latin America and the Caribbean
-0@5@Latin America and the Caribbean
-0@50@Africa
-0@51@Africa
-0@52@Latin America and the Caribbean
-0@53@Latin America and the Caribbean
-0@54@Europe
-0@55@Europe
-0@56@Asia
-0@57@Asia
-0@58@Near East
-0@59@Near East
-0@6@Europe
-0@60@Europe
-0@61@Europe
-0@62@Latin America and the Caribbean
-0@63@Asia
-0@64@Near East
-0@65@Africa
-0@66@Not a member
-0@67@Near East
-0@68@Asia
-0@69@Asia
-0@7@South West Pacific
-0@70@Europe
-0@71@Near East
-0@72@Africa
-0@73@Africa
-0@74@Near East
-0@75@Europe
-0@76@Europe
-0@77@Africa
-0@78@Africa
-0@79@Asia
-0@8@Europe
-0@80@Asia
-0@81@Africa
-0@82@Europe
-0@83@South West Pacific
-0@84@Not a member
-0@85@Africa
-0@86@Not a member
-0@87@Africa
-0@88@Asia
-0@89@Africa
-0@9@Asia
-0@90@Asia
-0@91@Europe
-0@92@Latin America and the Caribbean
-0@93@Africa
-0@94@Europe
-0@95@Near East
-0@96@Asia
-1@97@South West Pacific
-1@98@Latin America and the Caribbean
-1@99@South West Pacific
-10@56@Belgium
-100@600@Paraguay
-101@604@Peru
-102@608@Philippines
-103@616@Poland
-104@620@Portugal
-105@634@Qatar
-106@410@Republic of Korea
-107@498@Republic of Moldova
-108@642@Romania
-109@646@Rwanda
-11@204@Benin
-110@662@Saint Lucia
-111@882@Samoa
-112@678@Sao Tome and Principe
-113@682@Saudi Arabia
-114@686@Senegal
-115@688@Serbia
-116@690@Seychelles
-117@694@Sierra Leone
-118@703@Slovakia
-119@705@Slovenia
-12@64@Bhutan
-120@724@Spain
-121@144@Sri Lanka
-122@729@Sudan
-123@748@Swaziland
-124@752@Sweden
-125@756@Switzerland
-126@760@Syrian Arab Republic
-127@768@Togo
-128@776@Tonga
-129@780@Trinidad and Tobago
-13@68@Bolivia (Plurinational State of)
-130@788@Tunisia
-131@792@Turkey
-132@798@Tuvalu
-133@800@Uganda
-134@784@United Arab Emirates
-135@826@United Kingdom of Great Britain and Northern Ireland
-136@834@United Republic of Tanzania
-137@840@United States of America
-138@858@Uruguay
-139@862@Venezuela (Bolivarian Republic of)
-14@76@Brazil
-140@887@Yemen
-141@894@Zambia
-142@716@Zimbabwe
-15@100@Bulgaria
-16@854@Burkina Faso
-17@108@Burundi
-18@116@Cambodia
-19@120@Cameroon
-2@8@Albania
-20@124@Canada
-21@140@Central African Republic
-22@148@Chad
-23@152@Chile
-24@178@Congo
-25@184@Cook Islands
-26@188@Costa Rica
-27@191@Croatia
-28@192@Cuba
-29@196@Cyprus
-3@12@Algeria
-30@203@Czechia
-31@384@Côte d'Ivoire
-32@408@Democratic People's Republic of Korea
-33@180@Democratic Republic of the Congo
-34@208@Denmark
-35@262@Djibouti
-36@218@Ecuador
-37@818@Egypt
-38@222@El Salvador
-39@232@Eritrea
-4@24@Angola
-40@233@Estonia
-41@231@Ethiopia
-42@242@Fiji
-43@246@Finland
-44@250@France
-45@266@Gabon
-46@276@Germany
-47@288@Ghana
-48@300@Greece
-49@320@Guatemala
-5@32@Argentina
-50@324@Guinea
-51@624@Guinea-Bissau
-52@328@Guyana
-53@340@Honduras
-54@348@Hungary
-55@352@Iceland
-56@356@India
-57@360@Indonesia
-58@364@Iran (Islamic Republic of)
-59@368@Iraq
-6@51@Armenia
-60@372@Ireland
-61@380@Italy
-62@388@Jamaica
-63@392@Japan
-64@400@Jordan
-65@404@Kenya
-66@296@Kiribati
-67@414@Kuwait
-68@417@Kyrgyzstan
-69@418@Lao People's Democratic Republic
-7@36@Australia
-70@428@Latvia
-71@422@Lebanon
-72@426@Lesotho
-73@430@Liberia
-74@434@Libya
-75@440@Lithuania
-76@442@Luxembourg
-77@450@Madagascar
-78@454@Malawi
-79@458@Malaysia
-8@40@Austria
-80@462@Maldives
-81@466@Mali
-82@470@Malta
-83@584@Marshall Islands
-84@478@Mauritania
-85@480@Mauritius
-86@499@Montenegro
-87@504@Morocco
-88@104@Myanmar
-89@516@Namibia
-9@50@Bangladesh
-90@524@Nepal
-91@528@Netherlands
-92@558@Nicaragua
-93@562@Niger
-94@578@Norway
-95@512@Oman
-96@586@Pakistan
-97@585@Palau
-98@591@Panama
-99@598@Papua New Guinea
+@1@World
+1@001@Africa
+1@002@Asia
+1@003@Europe
+1@004@Latin America and the Caribbean
+1@005@Near East
+1@006@North America
+@007@Not a member
+@008@South West Pacific
+001@108@Burundi
+001@12@Algeria
+001@120@Cameroon
+001@140@Central African Republic
+001@148@Chad
+001@178@Congo
+001@180@Democratic Republic of the Congo
+001@204@Benin
+001@231@Ethiopia
+001@232@Eritrea
+001@24@Angola
+001@266@Gabon
+001@288@Ghana
+001@324@Guinea
+001@384@Côte d'Ivoire
+001@404@Kenya
+001@426@Lesotho
+001@430@Liberia
+001@450@Madagascar
+001@454@Malawi
+001@466@Mali
+001@480@Mauritius
+001@504@Morocco
+001@516@Namibia
+001@562@Niger
+001@624@Guinea-Bissau
+001@646@Rwanda
+001@678@Sao Tome and Principe
+001@686@Senegal
+001@690@Seychelles
+001@694@Sierra Leone
+001@716@Zimbabwe
+001@748@Swaziland
+001@768@Togo
+001@788@Tunisia
+001@800@Uganda
+001@834@United Republic of Tanzania
+001@854@Burkina Faso
+001@894@Zambia
+002@104@Myanmar
+002@116@Cambodia
+002@144@Sri Lanka
+002@356@India
+002@360@Indonesia
+002@392@Japan
+002@408@Democratic People's Republic of Korea
+002@410@Republic of Korea
+002@417@Kyrgyzstan
+002@418@Lao People's Democratic Republic
+002@458@Malaysia
+002@462@Maldives
+002@50@Bangladesh
+002@524@Nepal
+002@586@Pakistan
+002@608@Philippines
+002@64@Bhutan
+003@100@Bulgaria
+003@191@Croatia
+003@196@Cyprus
+003@203@Czechia
+003@208@Denmark
+003@233@Estonia
+003@246@Finland
+003@250@France
+003@276@Germany
+003@300@Greece
+003@348@Hungary
+003@352@Iceland
+003@372@Ireland
+003@380@Italy
+003@40@Austria
+003@428@Latvia
+003@440@Lithuania
+003@442@Luxembourg
+003@470@Malta
+003@498@Republic of Moldova
+003@51@Armenia
+003@528@Netherlands
+003@56@Belgium
+003@578@Norway
+003@616@Poland
+003@620@Portugal
+003@642@Romania
+003@688@Serbia
+003@703@Slovakia
+003@705@Slovenia
+003@724@Spain
+003@752@Sweden
+003@756@Switzerland
+003@792@Turkey
+003@8@Albania
+003@826@United Kingdom of Great Britain and Northern Ireland
+004@152@Chile
+004@188@Costa Rica
+004@192@Cuba
+004@218@Ecuador
+004@222@El Salvador
+004@32@Argentina
+004@320@Guatemala
+004@328@Guyana
+004@340@Honduras
+004@388@Jamaica
+004@558@Nicaragua
+004@591@Panama
+004@600@Paraguay
+004@604@Peru
+004@662@Saint Lucia
+004@68@Bolivia (Plurinational State of)
+004@76@Brazil
+004@780@Trinidad and Tobago
+004@858@Uruguay
+004@862@Venezuela (Bolivarian Republic of)
+005@364@Iran (Islamic Republic of)
+005@368@Iraq
+005@4@Afghanistan
+005@400@Jordan
+005@414@Kuwait
+005@422@Lebanon
+005@434@Libya
+005@512@Oman
+005@634@Qatar
+005@682@Saudi Arabia
+005@760@Syrian Arab Republic
+005@784@United Arab Emirates
+005@818@Egypt
+005@887@Yemen
+006@124@Canada
+006@840@United States of America
+007@262@Djibouti
+007@296@Kiribati
+007@478@Mauritania
+007@499@Montenegro
+007@729@Sudan
+007@798@Tuvalu
+008@184@Cook Islands
+008@242@Fiji
+008@36@Australia
+008@584@Marshall Islands
+008@585@Palau
+008@598@Papua New Guinea
+008@776@Tonga
+008@882@Samoa
