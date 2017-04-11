@@ -1,0 +1,160 @@
+
+{
+    "uid": "wiews_regions",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "WIEWS regions"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "WIEWS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": ["country"],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+        "dsd": {
+           "contextSystem": "wiews"
+    }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+
+--data--
+
+@WITC@World + International Centers
+@5000@World
+@5100@Africa
+@5200@Americas
+@5300@Asia
+@5400@Europe
+@5500@Oceania
+@5101@Eastern Africa
+@5102@Middle Africa
+@5103@Northern Africa
+@5104@Southern Africa
+@5105@Western Africa
+@5203@Northern America
+@5204@Central America
+@5206@Caribbean
+@5207@South America
+@5301@Central Asia
+@5302@Eastern Asia
+@5303@Southern Asia
+@5304@South-Eastern Asia
+@5305@Western Asia
+@5401@Eastern Europe
+@5402@Northern Europe
+@5403@Southern Europe
+@5404@Western Europe
+@5501@Australia & New Zealand
+@5502@Melanesia
+@5503@Micronesia
+@5504@Polynesia
+@202@Sub-Saharan Africa
+@419@Latin America and the Caribbean
+@135@Caucasus and Central Asia
+@514@Developed regions
+@513@Northern America and Europe
+@543@Oceania excluding Australia and New Zealand
+@62@Central Asia and Southern Asia
+@747@Western Asia and Northern Africa
+@753@Eastern Asia and South-eastern Asia

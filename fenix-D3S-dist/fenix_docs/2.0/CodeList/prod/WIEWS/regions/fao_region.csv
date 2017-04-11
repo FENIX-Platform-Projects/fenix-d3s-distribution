@@ -128,6 +128,25 @@ titleColumnIndex_EN=3
 5100@5103@Northern Africa
 5100@5104@Southern Africa
 5100@5105@Western Africa
+5200@5203@Northern America
+5200@5204@Central America
+5200@5206@Caribbean
+5200@5207@South America
+5300@5301@Central Asia
+5300@5302@Eastern Asia
+5300@5303@Southern Asia
+5300@5304@South-Eastern Asia
+5300@5305@Western Asia
+5400@5401@Eastern Europe
+5400@5402@Northern Europe
+5400@5403@Southern Europe
+5400@5404@Western Europe
+5500@5501@Australia & New Zealand
+5500@5502@Melanesia
+5500@5503@Micronesia
+5500@5504@Polynesia
+@WITC@World + International Centers
+
 5101@114@Kenya
 5101@129@Madagascar
 5101@130@Malawi
@@ -186,10 +205,7 @@ titleColumnIndex_EN=3
 5105@75@Gambia
 5105@81@Ghana
 5105@90@Guinea
-5200@5203@Northern America
-5200@5204@Central America
-5200@5206@Caribbean
-5200@5207@South America
+
 5203@17@Bermuda
 5203@190@Saint Pierre and Miquelon
 5203@231@United States of America
@@ -240,11 +256,7 @@ titleColumnIndex_EN=3
 5207@69@French Guiana
 5207@9@Argentina
 5207@91@Guyana
-5300@5301@Central Asia
-5300@5302@Eastern Asia
-5300@5303@Southern Asia
-5300@5304@South-Eastern Asia
-5300@5305@Western Asia
+
 5301@108@Kazakhstan
 5301@113@Kyrgyzstan
 5301@208@Tajikistan
@@ -294,10 +306,7 @@ titleColumnIndex_EN=3
 5305@50@Cyprus
 5305@52@Azerbaijan
 5305@73@Georgia
-5400@5401@Eastern Europe
-5400@5402@Northern Europe
-5400@5403@Southern Europe
-5400@5404@Western Europe
+
 5401@146@Republic of Moldova
 5401@167@Czechia
 5401@173@Poland
@@ -347,10 +356,7 @@ titleColumnIndex_EN=3
 5404@256@Luxembourg
 5404@68@France
 5404@79@Germany
-5500@5501@Australia & New Zealand
-5500@5502@Melanesia
-5500@5503@Micronesia
-5500@5504@Polynesia
+
 5501@10@Australia
 5501@156@New Zealand
 5501@161@Norfolk Island
@@ -376,4 +382,3 @@ titleColumnIndex_EN=3
 5504@47@Cook Islands
 5504@5@American Samoa
 5504@70@French Polynesia
-@WITC@World + International Centers
