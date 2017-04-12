@@ -158,6 +158,22 @@ titleColumnIndex_EN=3
 @62@Central Asia and Southern Asia
 @747@Western Asia and Northern Africa
 @753@Eastern Asia and South-eastern Asia
+@I001@Africa
+@I002@Asia
+@I003@Europe
+@I004@Latin America and the Caribbean
+@I005@Near East
+@I006@North America
+@I007@South West Pacific
+@001@Africa
+@002@Asia
+@003@Europe
+@004@Latin America and the Caribbean
+@005@Near East
+@006@North America
+@007@Not a member
+@008@South West Pacific
+
 
 @AFG@Afghanistan
 @ALB@Albania
@@ -339,7 +355,7 @@ titleColumnIndex_EN=3
 @ROU@Romania
 @RUS@Russian Federation
 @RWA@Rwanda
-@REU@RÃ©union
+@REU@Réunion
 @SHN@Saint Helena
 @KNA@Saint Kitts and Nevis
 @LCA@Saint Lucia
