@@ -1,7 +1,7 @@
 [
   {
     "name": "wiews_area_filter",
-    "sid": [ { "uid": "wiews_regions_mapping" } ],
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
     "result" : false,
     "parameters": {
       "m49": {
@@ -9,6 +9,22 @@
           {
             "uid": "wiews_m49",
             "codes": [ "WITC","150" ]
+          }
+        ]
+      },
+      "fao": {
+        "codes": [
+          {
+            "uid": "wiews_m49",
+            "codes": [ "5400" ]
+          }
+        ]
+      },
+      "iso3": {
+        "codes": [
+          {
+            "uid": "ISO3",
+            "codes": [ "SSD","EGY" ]
           }
         ]
       }
@@ -39,8 +55,9 @@
         "domain" : null,
         "element" : null,
         "biologicalAccessionId" : null,
+        "rank" : null,
         "country" : null,
-        "m49_country" : null,
+        "region" : null,
         "stakeholder" : null,
         "value" : null,
         "um" : null,
@@ -54,7 +71,8 @@
     "parameters": {
       "columns": [
         "domain",
-        "m49_country",
+        "rank",
+        "region",
         "indicator",
         "indicator_label",
         "iteration",

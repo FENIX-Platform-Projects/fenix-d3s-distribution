@@ -1,0 +1,129 @@
+{
+  "metadata" : {
+    "uid": "wiews_region_mapping",
+    "title": {
+      "EN": "WIEWS regions codelist mapping"
+    },
+    "meContent": {
+      "description": {
+        "EN": "Mappings between WIEWS regions and other codelists regions"
+      },
+      "resourceRepresentationType": "dataset"
+    },
+    "dsd": {
+      "contextSystem": "wiews",
+      "datasources": ["D3S"],
+      "cache":{
+        "storage":"postgres"
+      },
+
+      "columns": [
+        {
+          "id" : "w",
+          "title" : { "EN" : "WIEWS regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
+          "key": true
+        },
+        {
+          "id" : "fao",
+          "title" : { "EN" : "FAO regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_fao_region" } ] }
+        },
+        {
+          "id" : "m49",
+          "title" : { "EN" : "M49 regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] }
+        },
+        {
+          "id" : "mdg",
+          "title" : { "EN" : "MDG regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "mdg_region" } ] }
+        },
+        {
+          "id" : "sdg",
+          "title" : { "EN" : "SDG regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "sdg_region" } ] }
+        },
+        {
+          "id" : "cgrfa",
+          "title" : { "EN" : "CGRFA regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_cgrfa" } ] }
+        },
+        {
+          "id" : "itpgrfa",
+          "title" : { "EN" : "ITPGRFA regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_itpgrfa" } ] }
+        },
+        {
+          "id" : "rank",
+          "title" : { "EN" : "Index"},
+          "dataType" : "number"
+        }
+      ]
+    }
+  },
+  "data" : [
+    ["5300","5300","142",null,null,null,null,249],
+    ["5304","5304","35","35",null,null,null,287],
+    ["5102","5102","17",null,null,null,null,271],
+    ["5400","5400","150",null,null,null,null,263],
+    ["5104","5104","18",null,null,null,null,288],
+    ["5303","5303","34","34",null,null,null,289],
+    ["135",null,null,"135",null,null,null,254],
+    ["5206","5206","29",null,null,null,null,253],
+    ["202",null,"202","738","202",null,null,291],
+    ["419",null,"419","419","419",null,null,266],
+    ["5403","5403","39",null,null,null,null,290],
+    ["005",null,null,null,null,"005",null,273],
+    ["5200","5200",null,null,null,null,null,248],
+    ["5301","5301","143",null,null,null,null,256],
+    ["I006",null,null,null,null,null,"I006",274],
+    ["513",null,null,null,"513",null,null,278],
+    ["007",null,null,null,null,"007",null,280],
+    ["I003",null,null,null,null,null,"I003",264],
+    ["5502","5502","54",null,null,null,null,269],
+    ["5401","5401","151",null,null,null,null,262],
+    ["5504","5504","61",null,null,null,null,283],
+    ["5105","5105","11",null,null,null,null,292],
+    ["62",null,null,null,"62",null,null,257],
+    ["I004",null,null,null,null,null,"I004",267],
+    ["008",null,null,null,null,"008",null,286],
+    ["I007",null,null,null,null,null,"I007",285],
+    ["747",null,null,null,"747",null,null,294],
+    ["5204","5204","13",null,null,null,null,255],
+    ["5501","5501","53",null,"53",null,null,252],
+    ["5203","5203","21",null,null,null,null,277],
+    ["5305","5305","145","485",null,null,null,293],
+    ["001",null,null,null,null,"001",null,247],
+    ["003",null,null,null,null,"003",null,265],
+    ["004",null,null,null,null,"004",null,268],
+    ["5500","5500","9","543",null,null,null,281],
+    ["5207","5207","5",null,null,null,null,284],
+    ["5000","5000","1","1","1","1","1",297],
+    ["5103","5103","15","746",null,null,null,276],
+    ["5101","5101","14",null,null,null,null,259],
+    ["5402","5402","154",null,null,null,null,279],
+    ["5404","5404","155",null,null,null,null,295],
+    ["5100","5100",null,null,null,null,null,245],
+    ["002",null,null,null,null,"002",null,251],
+    ["I005",null,null,null,null,null,"I005",272],
+    ["I001",null,null,null,null,null,"I001",246],
+    ["543",null,null,null,"543",null,null,282],
+    ["I002",null,null,null,null,null,"I002",250],
+    ["5302","5302","30","518",null,null,null,260],
+    ["753",null,null,null,"753",null,null,261],
+    ["514",null,null,"514",null,null,null,258],
+    ["5503","5503","57",null,null,null,null,270],
+    ["006",null,null,null,null,"006",null,275],
+    ["WITC","WITC","WITC","WITC","WITC","WITC","WITC",500]
+  ]
+}
+
+
