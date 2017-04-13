@@ -1,4 +1,4 @@
-DROP TABLE indicator20
+DROP TABLE indicator20;
 
 CREATE TABLE indicator20 as (
   with rating as (   SELECT

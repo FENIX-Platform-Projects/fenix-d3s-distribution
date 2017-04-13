@@ -42,28 +42,36 @@
         "id" : "indicator",
         "title" : { "EN" : "Indicator"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_indicators" } ] } ,
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_output_indicators" } ] } ,
         "key": true
       },
       {
         "id" : "biologicalAccessionId",
         "title" : { "EN" : "Biological Accession"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_biological" } ] }
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_biological" } ] },
+        "key": true
       },
       {
         "id" : "country",
         "title" : { "EN" : "Country ISO3"},
         "subject" : "geo",
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "key": true
       },
       {
         "id" : "m49_country",
         "title" : { "EN" : "Country M49"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] },
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
         "key": true
+
+      },
+      {
+        "id" : "rank",
+        "title" : { "EN" : "Rank"},
+        "dataType" : "number"
 
       },
       {
