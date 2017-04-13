@@ -107,247 +107,252 @@ titleColumnIndex_EN=3
 
 --data--
 
+@ABW@Aruba
 @AFG@Afghanistan
-@ALB@Albania
-@DZA@Algeria
-@ASM@American Samoa
-@AND@Andorra
 @AGO@Angola
 @AIA@Anguilla
-@ATA@Antarctica
-@ATG@Antigua and Barbuda
+@ALA@Åland Islands
+@ALB@Albania
+@AND@Andorra
+@ARE@United Arab Emirates
 @ARG@Argentina
 @ARM@Armenia
-@ABW@Aruba
+@ASM@American Samoa
+@ATA@Antarctica
+@ATF@French Southern Territories
+@ATG@Antigua and Barbuda
 @AUS@Australia
 @AUT@Austria
 @AZE@Azerbaijan
-@BHS@Bahamas
-@BHR@Bahrain
-@UMI@Baker Island
-@BGD@Bangladesh
-@BRB@Barbados
-@BLR@Belarus
-@BEL@Belgium
-@BLZ@Belize
-@BEN@Benin
-@BMU@Bermuda
-@BTN@Bhutan
-@BOL@Bolivia
-@BIH@Bosnia and Herzegovina
-@BWA@Botswana
-@BVT@Bouvet Island
-@BRA@Brazil
-@IOT@British Indian Ocean Territory
-@VGB@British Virgin Islands
-@BRN@Brunei Darussalam
-@BGR@Bulgaria
-@BFA@Burkina Faso
 @BDI@Burundi
-@KHM@Cambodia
-@CMR@Cameroon
-@CAN@Canada
-@CPV@Cape Verde
-@CYM@Cayman Islands
+@BEL@Belgium
+@BEN@Benin
+@BES@Bonaire, Sint Eustatius and Saba
+@BFA@Burkina Faso
+@BGD@Bangladesh
+@BGR@Bulgaria
+@BHR@Bahrain
+@BHS@Bahamas
+@BIH@Bosnia and Herzegovina
+@BLM@Saint Barthélemy
+@BLR@Belarus
+@BLZ@Belize
+@BMU@Bermuda
+@BOL@Bolivia, Plurinational State of
+@BRA@Brazil
+@BRB@Barbados
+@BRN@Brunei Darussalam
+@BTN@Bhutan
+@BVT@Bouvet Island
+@BWA@Botswana
 @CAF@Central African Republic
-@TCD@Chad
+@CAN@Canada
+@CCK@Cocos (Keeling) Islands
+@CHE@Switzerland
 @CHL@Chile
 @CHN@China
-@CXR@Christmas Island
-@CCK@Cocos (Keeling) Islands
-@COL@Colombia
-@COM@Comoros
+@CIV@Côte d'Ivoire
+@CMR@Cameroon
+@COD@Congo, the Democratic Republic of the
 @COG@Congo
 @COK@Cook Islands
+@COL@Colombia
+@COM@Comoros
+@CPV@Cabo Verde
 @CRI@Costa Rica
-@HRV@Croatia
 @CUB@Cuba
+@CUW@Curaçao
+@CXR@Christmas Island
+@CYM@Cayman Islands
 @CYP@Cyprus
-@CZE@Czech Republic
-@CIV@Côte d'Ivoire
-@PRK@Dem People's Rep of Korea
-@COD@Congo, Democratic Republic
-@DNK@Denmark
+@CZE@Czechia
+@DEU@Germany
 @DJI@Djibouti
 @DMA@Dominica
+@DNK@Denmark
 @DOM@Dominican Republic
+@DZA@Algeria
 @ECU@Ecuador
-@SLV@El Salvador
-@GNQ@Equatorial Guinea
+@EGY@Egypt
 @ERI@Eritrea
+@ESH@Western Sahara
+@ESP@Spain
 @EST@Estonia
 @ETH@Ethiopia
-@FLK@Falkland Islands (Malvinas)
-@FRO@Faroe Islands
-@FJI@Fiji
 @FIN@Finland
+@FJI@Fiji
+@FLK@Falkland Islands (Malvinas)
 @FRA@France
-@GUF@French Guiana
-@PYF@French Polynesia
-@ATF@French Southern and Antarctic Territories
+@FRO@Faroe Islands
+@FSM@Micronesia, Federated States of
 @GAB@Gabon
-@GMB@Gambia
+@GBR@United Kingdom
 @GEO@Georgia
-@DEU@Germany
+@GGY@Guernsey
 @GHA@Ghana
 @GIB@Gibraltar
-@GRC@Greece
-@GRL@Greenland
-@GRD@Grenada
-@GLP@Guadeloupe
-@GUM@Guam
-@GTM@Guatemala
-@GGY@Guernsey
-@GNB@Guinea-Bissau
 @GIN@Guinea
+@GLP@Guadeloupe
+@GMB@Gambia
+@GNB@Guinea-Bissau
+@GNQ@Equatorial Guinea
+@GRC@Greece
+@GRD@Grenada
+@GRL@Greenland
+@GTM@Guatemala
+@GUF@French Guiana
+@GUM@Guam
 @GUY@Guyana
-@HTI@Haiti
+@HKG@Hong Kong
 @HMD@Heard Island and McDonald Islands
-@VAT@Holy See
 @HND@Honduras
+@HRV@Croatia
+@HTI@Haiti
 @HUN@Hungary
-@ISL@Iceland
-@IND@India
 @IDN@Indonesia
-@IRN@Iran  (Islamic Republic of)
-@IRQ@Iraq
-@IRL@Ireland
 @IMN@Isle of Man
+@IND@India
+@IOT@British Indian Ocean Territory
+@IRL@Ireland
+@IRN@Iran, Islamic Republic of
+@IRQ@Iraq
+@ISL@Iceland
 @ISR@Israel
 @ITA@Italy
 @JAM@Jamaica
-@JPN@Japan
 @JEY@Jersey
-@JTN@Johnston Atoll
 @JOR@Jordan
+@JPN@Japan
 @KAZ@Kazakhstan
 @KEN@Kenya
-@KIR@Kiribati
-@KWT@Kuwait
 @KGZ@Kyrgyzstan
+@KHM@Cambodia
+@KIR@Kiribati
+@KNA@Saint Kitts and Nevis
+@KOR@Korea, Republic of
+@KWT@Kuwait
 @LAO@Lao People's Democratic Republic
-@LVA@Latvia
 @LBN@Lebanon
-@LSO@Lesotho
 @LBR@Liberia
-@LBY@Libyan Arab Jamahiriya
+@LBY@Libya
+@LCA@Saint Lucia
 @LIE@Liechtenstein
+@LKA@Sri Lanka
+@LSO@Lesotho
 @LTU@Lithuania
 @LUX@Luxembourg
-@MAC@Macau
+@LVA@Latvia
+@MAC@Macao
+@MAF@Saint Martin (French part)
+@MAR@Morocco
+@MCO@Monaco
+@MDA@Moldova, Republic of
 @MDG@Madagascar
-@MWI@Malawi
-@MYS@Malaysia
 @MDV@Maldives
+@MEX@Mexico
+@MHL@Marshall Islands
+@MKD@Macedonia, the former Yugoslav Republic of
 @MLI@Mali
 @MLT@Malta
-@MHL@Marshall Islands
-@MTQ@Martinique
-@MRT@Mauritania
-@MUS@Mauritius
-@MYT@Mayotte
-@MEX@Mexico
-@FSM@Micronesia (Federated States of)
-@MID@Midway Island
-@MDA@Republic of Moldova
-@MCO@Monaco
-@MNG@Mongolia
-@MSR@Montserrat
-@MAR@Morocco
-@MOZ@Mozambique
 @MMR@Myanmar
-@NAM@Namibia
-@NRU@Nauru
-@NPL@Nepal
-@ANT@Netherlands Antilles
-@NLD@Netherlands
-@NCL@New Caledonia
-@NZL@New Zealand
-@NIC@Nicaragua
-@NER@Niger
-@NGA@Nigeria
-@NIU@Niue
-@NFK@Norfolk Island
+@MNE@Montenegro
+@MNG@Mongolia
 @MNP@Northern Mariana Islands
+@MOZ@Mozambique
+@MRT@Mauritania
+@MSR@Montserrat
+@MTQ@Martinique
+@MUS@Mauritius
+@MWI@Malawi
+@MYS@Malaysia
+@MYT@Mayotte
+@NAM@Namibia
+@NCL@New Caledonia
+@NER@Niger
+@NFK@Norfolk Island
+@NGA@Nigeria
+@NIC@Nicaragua
+@NIU@Niue
+@NLD@Netherlands
 @NOR@Norway
+@NPL@Nepal
+@NRU@Nauru
+@NZL@New Zealand
 @OMN@Oman
 @PAK@Pakistan
-@PLW@Palau
 @PAN@Panama
-@PNG@Papua New Guinea
-@PRY@Paraguay
+@PCN@Pitcairn
 @PER@Peru
 @PHL@Philippines
-@PCN@Pitcairn
+@PLW@Palau
+@PNG@Papua New Guinea
 @POL@Poland
-@PRT@Portugal
 @PRI@Puerto Rico
+@PRK@Korea, Democratic People's Republic of
+@PRT@Portugal
+@PRY@Paraguay
+@PSE@Palestine, State of
+@PYF@French Polynesia
 @QAT@Qatar
-@KOR@Republic of Korea
+@REU@Réunion
 @ROU@Romania
 @RUS@Russian Federation
 @RWA@Rwanda
-@REU@RÃ©union
-@SHN@Saint Helena
-@KNA@Saint Kitts and Nevis
-@LCA@Saint Lucia
-@SPM@Saint Pierre et Miquelon
-@VCT@Saint Vincent and the Grenadines
-@WSM@Samoa
-@SMR@San Marino
-@STP@Sao Tome and Principe
 @SAU@Saudi Arabia
+@SDN@Sudan
 @SEN@Senegal
-@SYC@Seychelles
-@SLE@Sierra Leone
 @SGP@Singapore
+@SGS@South Georgia and the South Sandwich Islands
+@SHN@Saint Helena, Ascension and Tristan da Cunha
+@SJM@Svalbard and Jan Mayen
+@SLB@Solomon Islands
+@SLE@Sierra Leone
+@SLV@El Salvador
+@SMR@San Marino
+@SOM@Somalia
+@SPM@Saint Pierre and Miquelon
+@SRB@Serbia
+@SSD@South Sudan
+@STP@Sao Tome and Principe
+@SUR@Suriname
 @SVK@Slovakia
 @SVN@Slovenia
-@SLB@Solomon Islands
-@SOM@Somalia
-@ZAF@South Africa
-@SGS@South Georgia and the South Sandwich Islands
-@ESP@Spain
-@LKA@Sri Lanka
-@SUR@Suriname
-@SJM@Svalbard and Jan Mayen Islands
-@SWZ@Swaziland
 @SWE@Sweden
-@CHE@Switzerland
+@SWZ@Swaziland
+@SXM@Sint Maarten (Dutch part)
+@SYC@Seychelles
 @SYR@Syrian Arab Republic
-@TJK@Tajikistan
-@THA@Thailand
-@MKD@The former Yugoslav Republic of Macedonia
-@TLS@Timor-Leste
+@TCA@Turks and Caicos Islands
+@TCD@Chad
 @TGO@Togo
+@THA@Thailand
+@TJK@Tajikistan
 @TKL@Tokelau
+@TKM@Turkmenistan
+@TLS@Timor-Leste
 @TON@Tonga
 @TTO@Trinidad and Tobago
 @TUN@Tunisia
 @TUR@Turkey
-@TKM@Turkmenistan
-@TCA@Turks and Caicos islands
 @TUV@Tuvalu
+@TWN@Taiwan, Province of China
+@TZA@Tanzania, United Republic of
 @UGA@Uganda
 @UKR@Ukraine
-@ARE@United Arab Emirates
-@GBR@U.K. of Great Britain and Northern Ireland
-@TZA@United Republic of Tanzania
-@VIR@United States Virgin Islands
-@USA@United States of America
+@UMI@United States Minor Outlying Islands
 @URY@Uruguay
+@USA@United States of America
 @UZB@Uzbekistan
-@VUT@Vanuatu
-@VEN@Venezuela
+@VAT@Holy See
+@VCT@Saint Vincent and the Grenadines
+@VEN@Venezuela, Bolivarian Republic of
+@VGB@Virgin Islands, British
+@VIR@Virgin Islands, U.S.
 @VNM@Viet Nam
-@WAK@Wake Island
+@VUT@Vanuatu
 @WLF@Wallis and Futuna
-@ESH@Western Sahara
+@WSM@Samoa
 @YEM@Yemen
+@ZAF@South Africa
 @ZMB@Zambia
 @ZWE@Zimbabwe
-@MNE@Montenegro
-@SRB@Serbia
-@HKG@Hong Kong
-@SDN@Sudan
-@EGY@Egypt
