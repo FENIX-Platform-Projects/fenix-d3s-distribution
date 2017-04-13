@@ -66,7 +66,7 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<WiewsRegi
     private Collection<String> getCountriesCode (String tableName, Map<String, Collection<String>> columnsCodes, Collection<String> regions, Step source) throws Exception {
         //Create query
         Collection<Object> queryParams = new LinkedList<>();
-        StringBuilder queryBuffer = new StringBuilder("select distinct (country_iso3) from ").append(tableName);
+        StringBuilder queryBuffer = new StringBuilder("select distinct (country) from ").append(tableName);
         if (columnsCodes.size()>0) {
             queryBuffer.append(" where");
             if (regions.size()>0) {
@@ -79,7 +79,7 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<WiewsRegi
             }
             for (Map.Entry<String, Collection<String>> columnCodesEntry : columnsCodes.entrySet())
                 if (columnCodesEntry.getKey().equals("iso3")) {
-                    queryBuffer.append(' ').append("country_iso3").append(" in (");
+                    queryBuffer.append(' ').append("country").append(" in (");
                     for (int i=0, l=columnCodesEntry.getValue().size(); i<l; i++)
                         queryBuffer.append("?,");
                     queryBuffer.setCharAt(queryBuffer.length()-1,')');
@@ -106,16 +106,17 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<WiewsRegi
         if (columnsCodes.size()>0) {
             //Create query
             Collection<Object> queryParams = new LinkedList<>();
-            StringBuilder queryBuffer = new StringBuilder("select distinct (w) from ").append(tableName).append(" where");
-            for (Map.Entry<String, Collection<String>> columnCodesEntry : columnsCodes.entrySet()) {
-                queryBuffer.append(' ').append(columnCodesEntry.getKey()).append(" in (");
-                for (int i=0, l=columnCodesEntry.getValue().size(); i<l; i++)
-                    queryBuffer.append("?,");
-                queryBuffer.setCharAt(queryBuffer.length()-1,')');
-                queryBuffer.append(" or");
-                queryParams.addAll(columnCodesEntry.getValue());
-            }
-            String query = queryBuffer.substring(0, queryBuffer.length()-3);
+            StringBuilder where = new StringBuilder();
+            for (Map.Entry<String, Collection<String>> columnCodesEntry : columnsCodes.entrySet())
+                if (!columnCodesEntry.getKey().equals("iso3")) {
+                    where.append(' ').append(columnCodesEntry.getKey()).append(" in (");
+                    for (int i=0, l=columnCodesEntry.getValue().size(); i<l; i++)
+                        where.append("?,");
+                    where.setCharAt(where.length()-1,')');
+                    where.append(" or");
+                    queryParams.addAll(columnCodesEntry.getValue());
+                }
+            String query = "select distinct (w) from "+tableName+(where.length()>0 ? " where"+where.substring(0, where.length()-3) : "");
             //Parse result
             Connection connection = source.getStorage().getConnection();
             try {

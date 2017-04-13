@@ -49,6 +49,10 @@ public class IndicatorCacheListener implements DatasetCacheListener {
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
                         " ( iteration ,country)");
                 break;
+            case "indicator20":
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, element, country )");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, element, genus )");
+                break;
         }
         return false;
     }
@@ -57,7 +61,7 @@ public class IndicatorCacheListener implements DatasetCacheListener {
     public boolean updated(DatasetAccessInfo datasetInfo) throws Exception {
         String uid = datasetInfo.getMetadata().getUid();
         //Indicator 20
-        try {
+/*        try {
             if (uid.equals("indicator20")) {
                 String tableName = datasetInfo.getTableName();
                 String tmpTableName = "tmp_"+uidUtils.getId();
@@ -96,7 +100,7 @@ public class IndicatorCacheListener implements DatasetCacheListener {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return false;
+*/        return false;
     }
 
     @Override
