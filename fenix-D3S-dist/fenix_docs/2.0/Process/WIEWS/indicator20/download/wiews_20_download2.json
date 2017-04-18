@@ -1,0 +1,30 @@
+[
+
+  {
+    "name": "filter",
+    "sid": [ { "uid": "indicator20" } ],
+    "parameters": {
+      "columns": [
+        "domain",
+        "m49_country",
+        "country",
+        "element",
+        "stakeholder",
+        "iteration",
+        "value"
+      ],
+      "rows": {
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "nfpa" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+
+
+]
