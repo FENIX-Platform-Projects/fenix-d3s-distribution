@@ -4,26 +4,26 @@ public enum Query {
 
     raw_indicator20 ("SELECT\n" +
             "\n" +
-            "  cast(a.ITERATION as CHAR(50)) as iteration,\n" +
-            "  cast(d.iso   as CHAR(50)) as country,\n" +
-            "  cast(a.orgid  as CHAR(50)) as orgid,\n" +
-            "  cast(c.wiews_instcode   as CHAR(50))as stakeholder,\n" +
-            "  cast(a.id  as CHAR(50)) as id,\n" +
-            "  cast(a.accessionno  as CHAR(50)) as accessionno,\n" +
-            "  cast(a.taxonid  as CHAR(50)) as taxonid,\n" +
-            "  cast(a.taxon_freetext  as CHAR(50)) as taxon_freetext,\n" +
-            "  cast(a.cropid  as CHAR(50)) as cropid,\n" +
-            "  cast(a.crop_freetext  as CHAR(50)) as crop_freetext,\n" +
-            "  cast(a.acquisitiondate  as CHAR(50)) as acquisitiondate,\n" +
-            "  cast(ref.iso  as CHAR(50)) as origincountry,\n" +
-            "  cast(a.biologicalaccessionid  as CHAR(50)) as biologicalaccessionid,\n" +
-            "  cast(a.genebankid  as CHAR(50)) as genebankid,\n" +
-            "  cast(a.genebank_freetext  as CHAR(50)) as genebank_freetext,\n" +
-            "  cast(a.latitude  as CHAR(50)) as latitude,\n" +
-            "  cast(a.longitude  as CHAR(50)) as longitude,\n" +
-            "  cast(a.collectionsourceid  as CHAR(50)) as collectionsourceid,\n" +
-            "  cast(a.germplasmastoreid  as CHAR(50)) as germplasmastoreid,\n" +
-            "  cast(a.multilateralsystemstatusid  as CHAR(50)) as multilateralsystemstatusid\n" +
+            "  a.ITERATION::text as iteration,\n" +
+            "  d.iso::text as country,\n" +
+            "  a.orgid::text as orgid,\n" +
+            "  c.wiews_instcode::text as stakeholder,\n" +
+            "  a.id::text as id,\n" +
+            "  a.accessionno::text as accessionno,\n" +
+            "  a.taxonid::text as taxonid,\n" +
+            "  a.taxon_freetext::text as taxon_freetext,\n" +
+            "  a.cropid::text as cropid,\n" +
+            "  a.crop_freetext::text as crop_freetext,\n" +
+            "  a.acquisitiondate::text as acquisitiondate,\n" +
+            "  ref.iso::text as origincountry,\n" +
+            "  a.biologicalaccessionid::text as biologicalaccessionid,\n" +
+            "  a.genebankid::text as genebankid,\n" +
+            "  a.genebank_freetext::text as genebank_freetext,\n" +
+            "  a.latitude::text as latitude,\n" +
+            "  a.longitude::text as longitude,\n" +
+            "  a.collectionsourceid::text as collectionsourceid,\n" +
+            "  a.germplasmastoreid::text as germplasmastoreid,\n" +
+            "  a.multilateralsystemstatusid::text as multilateralsystemstatusid\n" +
             "\n" +
             "\n" +
             "FROM answer_q14 a\n" +
