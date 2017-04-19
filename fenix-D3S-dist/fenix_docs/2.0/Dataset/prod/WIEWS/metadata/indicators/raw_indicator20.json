@@ -26,7 +26,7 @@
       },
       {
         "id" : "country",
-        "title" : { "EN" : "Country"},
+        "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
