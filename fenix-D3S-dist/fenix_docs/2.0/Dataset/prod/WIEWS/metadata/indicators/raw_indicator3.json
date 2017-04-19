@@ -36,12 +36,13 @@
       {
         "id" : "species",
         "title" : { "EN" : "Species"},
-        "dataType" : "text"
+        "dataType" : "text",
+        "key": true
       },
       {
         "id" : "threatened_species",
         "title" : { "EN" : "Threatened Species Number"},
-        "dataType" : "number"
+        "dataType" : "bool"
       },
       {
         "id" : "varieties",

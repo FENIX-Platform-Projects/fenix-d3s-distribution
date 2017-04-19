@@ -47,7 +47,7 @@
       },
       {
         "id" : "country",
-        "title" : { "EN" : "Country ISO3"},
+        "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
@@ -55,7 +55,7 @@
       },
       {
         "id" : "wiews_region",
-        "title" : { "EN" : "Wiews rEGION"},
+        "title" : { "EN" : "Region"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
         "key": true
@@ -86,6 +86,7 @@
         "id" : "um",
         "title" : { "EN" : "Measurement unit"},
         "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
         "subject":"um"
       }
     ]

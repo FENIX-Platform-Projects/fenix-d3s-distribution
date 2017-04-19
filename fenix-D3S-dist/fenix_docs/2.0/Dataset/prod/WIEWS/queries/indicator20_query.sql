@@ -1,6 +1,6 @@
-DROP TABLE indicator20;
+DROP TABLE IF EXISTS indicators.indicator20;
 
-CREATE TABLE indicator20 as (
+CREATE TABLE indicators.indicator20 as (
   with rating as (   SELECT
                        cast(iteration as TEXT) as iteration,
                        cast('2240' as TEXT) as domain,
@@ -8,12 +8,12 @@ CREATE TABLE indicator20 as (
                        cast('20' as TEXT) as indicator,
                        cast('na' as TEXT) as biologicalAccessionId,
                        country,
-                       country as m49_country,
+                       country as wiews_region,
                        rank,
                        cast('na' as TEXT) as stakeholder,
                        cast('na' as TEXT) as genus,
                        nfp_rating as VALUE,
-                       cast('%' as TEXT) as um
+                       cast('per' as TEXT) as um
                      from (
                             SELECT
                               b.ISO as country,
@@ -44,7 +44,7 @@ CREATE TABLE indicator20 as (
                     max(indicator) as indicator,
                     cast('na' as TEXT) as biologicalAccessionId,
                     country,
-                    m49_country,
+                    wiews_region,
                     rank,
                     max(stakeholder) as stakeholder,
                     max(genus) as genus,
@@ -57,12 +57,12 @@ CREATE TABLE indicator20 as (
                            cast('ind'  as TEXT) as element,
                            cast('20'  as TEXT)  as indicator,
                            b.ISO as country,
-                           b.iso as m49_country,
+                           b.iso as wiews_region,
                            cast(1 as INTEGER) as rank,
                            cast('na' as TEXT)  as stakeholder,
                            cast('na'  as TEXT)  as genus,
                            count(*) as VALUE ,
-                           cast('1'  as TEXT)   as um
+                           cast('num'  as TEXT)   as um
                          FROM
                            answer_q14 a
                            JOIN ref_country b ON a.Country_ID = b.COUNTRY_ID
@@ -93,70 +93,70 @@ CREATE TABLE indicator20 as (
                   GROUP BY
                     iteration,
                     country,
-                    m49_country,
+                    wiews_region,
                     rank
-     ),
+    ),
 
       worlds as ( SELECT
-               cast(a.iteration as text) as iteration,
-               cast('2240' as TEXT) as domain,
-               cast('ind'  as TEXT) as element,
-               cast('20'  as TEXT)  as indicator,
-               cast('na' as TEXT) as biologicalAccessionId,
-               cast('na'  as TEXT) as country,
-               cast('WITC'  as TEXT) as m49_country,
-               cast(500  as INTEGER) as rank,
-               cast('na' as TEXT)  as stakeholder,
-               cast('na'  as TEXT)  as genus,
-               count(*) as VALUE ,
-               cast('1'  as TEXT)   as um
-             FROM
-               answer_q14 a
+                    cast(a.iteration as text) as iteration,
+                    cast('2240' as TEXT) as domain,
+                    cast('ind'  as TEXT) as element,
+                    cast('20'  as TEXT)  as indicator,
+                    cast('na' as TEXT) as biologicalAccessionId,
+                    cast('na'  as TEXT) as country,
+                    cast('WITC'  as TEXT) as wiews_region,
+                    cast(500  as INTEGER) as rank,
+                    cast('na' as TEXT)  as stakeholder,
+                    cast('na'  as TEXT)  as genus,
+                    count(*) as VALUE ,
+                    cast('num'  as TEXT)   as um
+                  FROM
+                    answer_q14 a
 
-             WHERE
-               a.approved  = 1
+                  WHERE
+                    a.approved  = 1
 
-             GROUP BY
-               iteration
+                  GROUP BY
+                    iteration
 
-            UNION
+                  UNION
 
-                SELECT
-                  cast(a.iteration as text) as iteration,
-                  cast('2240' as TEXT) as domain,
-                  cast('ind'  as TEXT) as element,
-                  cast('20'  as TEXT)  as indicator,
-                  cast('na' as TEXT) as biologicalAccessionId,
-                  cast('na'  as TEXT) as country,
-                  cast('1'  as TEXT) as m49_country,
-                  cast(297  as INTEGER) as rank,
-                  cast('na' as TEXT)  as stakeholder,
-                  cast('na'  as TEXT)  as genus,
-                  count(*) as VALUE ,
-                  cast('1'  as TEXT)   as um
-                FROM
-                  answer_q14 a
-                  JOIN ref_instab c on a.orgId = c.ID
+                  SELECT
+                    cast(a.iteration as text) as iteration,
+                    cast('2240' as TEXT) as domain,
+                    cast('ind'  as TEXT) as element,
+                    cast('20'  as TEXT)  as indicator,
+                    cast('na' as TEXT) as biologicalAccessionId,
+                    cast('na'  as TEXT) as country,
+                    cast('1'  as TEXT) as wiews_region,
+                    cast(297  as INTEGER) as rank,
+                    cast('na' as TEXT)  as stakeholder,
+                    cast('na'  as TEXT)  as genus,
+                    count(*) as VALUE ,
+                    cast('num'  as TEXT)   as um
+                  FROM
+                    answer_q14 a
+                    JOIN ref_instab c on a.orgId = c.ID
 
-                WHERE
-                  a.approved  = 1  AND c.WIEWS_INSTCODE not in (
-                    'BEL084',
-                    'CIV033',
-                    'COL003',
-                    'ETH013',
-                    'IND002',
-                    'KEN056',
-                    'MEX002',
-                    'NGA039',
-                    'PER001',
-                    'PHL001',
-                    'SYR002',
-                    'TWN001',
-                    'FJI049',
-                    'SWE054')
+                  WHERE
+                    a.approved  = 1  AND c.WIEWS_INSTCODE not in (
+                      'BEL084',
+                      'CIV033',
+                      'COL003',
+                      'ETH013',
+                      'IND002',
+                      'KEN056',
+                      'MEX002',
+                      'NGA039',
+                      'PER001',
+                      'PHL001',
+                      'SYR002',
+                      'TWN001',
+                      'FJI049',
+                      'SWE054')
 
-                GROUP BY
-                  iteration
+                  GROUP BY
+                    iteration
     ),
 
 
@@ -167,12 +167,12 @@ CREATE TABLE indicator20 as (
                    cast('20' as TEXT) as indicator,
                    cast(a.biologicalAccessionId as TEXT) as biologicalAccessionId,
                    b.ISO as country,
-                   b.ISO as  m49_country,
+                   b.ISO as  wiews_region,
                    cast(1 as INTEGER) as rank,
                    d.WIEWS_INSTCODE as stakeholder,
                    cast(lower(COALESCE(c.GENUS,'NA')) as TEXT) as genus,
                    count(distinct(CASE WHEN a.taxonid>0 THEN a.taxonid::TEXT ELSE a.taxon_freetext end  )) as VALUE ,
-                   cast('1'as TEXT) as um
+                   cast('num'as TEXT) as um
 
                  FROM answer_q14 a
 
@@ -181,7 +181,7 @@ CREATE TABLE indicator20 as (
                    JOIN ref_instab d on d.ID = a.orgId
 
                  WHERE a.approved = 1
-                 AND d.WIEWS_INSTCODE not in (
+                       AND d.WIEWS_INSTCODE not in (
                    'BEL084',
                    'CIV033',
                    'COL003',
@@ -208,46 +208,46 @@ CREATE TABLE indicator20 as (
 
       stakeholders as (SELECT
 
-                    cast(ITERATION as TEXT) as iteration,
-                    cast('2240'as TEXT) as domain,
-                    cast('stk'as TEXT) as element,
-                    cast('20' as TEXT) as indicator,
-                    cast('na' as TEXT) as biologicalAccessionId,
-                    b.ISO as country,
-                    b.ISO as m49_country,
-                    cast(1 as INTEGER) as rank,
-                    c.WIEWS_INSTCODE as stakeholder,
-                    cast('na' as TEXT) as genus,
-                    count(distinct(CASE WHEN a.taxonid>0 THEN a.taxonid::TEXT ELSE a.taxon_freetext end  )) as VALUE ,
-                    cast('1' as TEXT) as um
+                         cast(ITERATION as TEXT) as iteration,
+                         cast('2240'as TEXT) as domain,
+                         cast('stk'as TEXT) as element,
+                         cast('20' as TEXT) as indicator,
+                         cast('na' as TEXT) as biologicalAccessionId,
+                         b.ISO as country,
+                         b.ISO as wiews_region,
+                         cast(1 as INTEGER) as rank,
+                         c.WIEWS_INSTCODE as stakeholder,
+                         cast('na' as TEXT) as genus,
+                         count(distinct(CASE WHEN a.taxonid>0 THEN a.taxonid::TEXT ELSE a.taxon_freetext end  )) as VALUE ,
+                         cast('num' as TEXT) as um
 
-                  FROM answer_q14 a
+                       FROM answer_q14 a
 
-                    JOIN ref_country b ON a.Country_ID = b.COUNTRY_ID
-                    JOIN ref_instab c on a.orgId = c.ID
+                         JOIN ref_country b ON a.Country_ID = b.COUNTRY_ID
+                         JOIN ref_instab c on a.orgId = c.ID
 
-                  WHERE a.approved = 1
-                  AND c.WIEWS_INSTCODE not in (
-                    'BEL084',
-                    'CIV033',
-                    'COL003',
-                    'ETH013',
-                    'IND002',
-                    'KEN056',
-                    'MEX002',
-                    'NGA039',
-                    'PER001',
-                    'PHL001',
-                    'SYR002',
-                    'TWN001',
-                    'FJI049',
-                    'SWE054')
+                       WHERE a.approved = 1
+                             AND c.WIEWS_INSTCODE not in (
+                         'BEL084',
+                         'CIV033',
+                         'COL003',
+                         'ETH013',
+                         'IND002',
+                         'KEN056',
+                         'MEX002',
+                         'NGA039',
+                         'PER001',
+                         'PHL001',
+                         'SYR002',
+                         'TWN001',
+                         'FJI049',
+                         'SWE054')
 
-                  GROUP BY
-                    iteration,
-                    stakeholder,
-                    country,
-                    rank
+                       GROUP BY
+                         iteration,
+                         stakeholder,
+                         country,
+                         rank
     )
 
 
@@ -272,7 +272,7 @@ CREATE TABLE indicator20 as (
 
 
 /* regional aggregation for indicator*/
-INSERT INTO indicator20
+INSERT INTO indicators.indicator20
   SELECT
     a.iteration,
     max(a.domain) as domain,
@@ -280,7 +280,7 @@ INSERT INTO indicator20
     max(a.indicator) as indicator,
     max(a.biologicalAccessionId) as biologicalAccessionId,
     cast('na' as TEXT) as country,
-    b.w as m49_country,
+    b.w as wiews_region,
     b.rank as rank,
     max(a.stakeholder) as stakeholder,
     max(a.genus) as genus,
@@ -289,38 +289,38 @@ INSERT INTO indicator20
 
 
 
-  from codelist.ref_region_country b JOIN (SELECT * from indicator20 WHERE element = 'ind')a ON a.country = b.country_iso3
+  from codelist.ref_region_country b JOIN (SELECT * from indicators.indicator20 WHERE element = 'ind')a ON a.country = b.country_iso3
   GROUP BY a.iteration,
     b.w,
     b.rank
   ORDER BY
     iteration,
-    rank
+    rank;
 
 /* regional aggregation for nfp*/
-INSERT INTO indicator20
+INSERT INTO indicators.indicator20
   SELECT
-  a.iteration,
-  max(a.domain) as domain,
-  max(a.element) as element,
-  max(a.indicator) as indicator,
-  max(a.biologicalAccessionId) as biologicalAccessionId,
-  cast('na' as TEXT) as country,
-  b.w as m49_country,
-  b.rank as rank,
-  max(a.stakeholder) as stakeholder,
-  max(a.genus) as genus,
-  avg(value) as value,
-  max(um) as um
+    a.iteration,
+    max(a.domain) as domain,
+    max(a.element) as element,
+    max(a.indicator) as indicator,
+    max(a.biologicalAccessionId) as biologicalAccessionId,
+    cast('na' as TEXT) as country,
+    b.w as wiews_region,
+    b.rank as rank,
+    max(a.stakeholder) as stakeholder,
+    max(a.genus) as genus,
+    avg(value) as value,
+    max(um) as um
   from codelist.ref_region_country b
-    JOIN (SELECT * from indicator20 WHERE element = 'nfp')a ON a.country = b.country_iso3
-        GROUP BY
-          a.iteration,
-          b.w,
-          b.rank
-          ORDER BY
-          iteration,
-          rank
+    JOIN (SELECT * from indicators.indicator20 WHERE element = 'nfp')a ON a.country = b.country_iso3
+  GROUP BY
+    a.iteration,
+    b.w,
+    b.rank
+  ORDER BY
+    iteration,
+    rank;
 
 
 

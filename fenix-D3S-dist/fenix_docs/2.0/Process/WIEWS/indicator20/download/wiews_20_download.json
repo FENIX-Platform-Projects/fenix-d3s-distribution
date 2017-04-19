@@ -33,14 +33,14 @@
   {
     "name" : "select",
     "parameters" : {
-      "query" : "where m49_country in <<required_countries>>",
+      "query" : "where wiews_region in <<required_countries>>",
       "values" : {
         "iteration" : null,
         "domain" : null,
         "element" : null,
         "biologicalAccessionId" : null,
         "country" : null,
-        "m49_country" : null,
+        "wiews_region" : null,
         "stakeholder" : null,
         "value" : null,
         "um" : null,
@@ -54,7 +54,7 @@
     "parameters": {
       "columns": [
         "domain",
-        "m49_country",
+        "wiews_region",
         "indicator",
         "indicator_label",
         "iteration",
