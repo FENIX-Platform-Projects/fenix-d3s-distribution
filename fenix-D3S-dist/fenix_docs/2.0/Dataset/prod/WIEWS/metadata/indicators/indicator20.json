@@ -19,7 +19,7 @@
     "columns": [
       {
         "id" : "iteration",
-        "title" : { "EN" : "Iteration"},
+        "title" : { "EN" : "Period"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
         "key": true
@@ -33,14 +33,14 @@
       },
       {
         "id" : "element",
-        "title" : { "EN" : "Element"},
+        "title" : { "EN" : "Indicator and rating"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_elements" } ] } ,
         "key": true
       },
       {
         "id" : "indicator",
-        "title" : { "EN" : "Indicator"},
+        "title" : { "EN" : "Element"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_output_indicators" } ] } ,
         "key": true
@@ -62,7 +62,7 @@
       },
       {
         "id" : "wiews_region",
-        "title" : { "EN" : "Region"},
+        "title" : { "EN" : "Country"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
         "key": true

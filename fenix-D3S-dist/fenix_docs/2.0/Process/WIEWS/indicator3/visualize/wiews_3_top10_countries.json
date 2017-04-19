@@ -1,0 +1,112 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "total" : false,
+      "filter" : {
+        "m49": {
+          "codes": [
+            {
+              "uid": "wiews_m49_regions",
+              "codes": [ "WITC","150" ]
+            }
+          ]
+        },
+        "fao": {
+          "codes": [
+            {
+              "uid": "wiews_fao_region",
+              "codes": [ "5400" ]
+            }
+          ]
+        },
+        "iso3": {
+          "codes": [
+            {
+              "uid": "ISO3",
+              "codes": [ "SSD","EGY" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "sid": [ { "uid": "indicator20" }, { "uid": "area_selection" } ],
+    "name" : "select",
+    "parameters" : {
+      "query" : "where wiews_region in <<required_countries>>",
+      "values" : {
+        "genus":null,
+        "iteration" : null,
+        "domain" : null,
+        "element" : null,
+        "biologicalAccessionId" : null,
+        "country" : null,
+        "stakeholder" : null,
+        "value" : null,
+        "um" : null
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "country",
+        "value",
+        "um"
+      ],
+      "rows": {
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "country"
+      ],
+      "aggregations": [
+        {
+          "columns": [ "value" ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [ "um" ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  }
+
+
+
+
+]

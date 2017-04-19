@@ -26,21 +26,21 @@
       },
       {
         "id" : "indicator",
-        "title" : { "EN" : "Indicator"},
+        "title" : { "EN" : "Element"},
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_indicators" } ] } ,
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_output_indicators" } ] } ,
         "key": true
       },
       {
         "id" : "iteration",
-        "title" : { "EN" : "Iteration"},
+        "title" : { "EN" : "Period"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
         "key": true
       },
       {
         "id" : "element",
-        "title" : { "EN" : "Element"},
+        "title" : { "EN" : "Indicator and rating"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_elements" } ] } ,
         "key": true
@@ -55,7 +55,7 @@
       },
       {
         "id" : "wiews_region",
-        "title" : { "EN" : "Region"},
+        "title" : { "EN" : "Country"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
         "key": true
@@ -78,7 +78,7 @@
       },
       {
         "id" : "threatened_percentage",
-        "title" : { "EN" : "Threatened Percentage"},
+        "title" : { "EN" : "Value"},
         "dataType" : "number",
         "subject":"value"
       },
