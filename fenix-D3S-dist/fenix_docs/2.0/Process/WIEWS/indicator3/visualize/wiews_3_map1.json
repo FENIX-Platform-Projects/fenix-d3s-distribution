@@ -1,0 +1,50 @@
+[
+  {
+    "name": "filter",
+    "sid": [ { "uid": "indicator3" }],
+    "parameters": {
+      "columns": [
+        "country",
+        "indicator",
+        "species",
+        "threatened_species",
+        "threatened_percentage",
+        "um"
+      ],
+      "rows": {
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "3_1" ]
+            }
+          ]
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind" ]
+            }
+          ]
+        },
+        "!country": {
+          "codes": [
+            {
+              "uid": "ISO3",
+              "codes": [ "na" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]
