@@ -21,22 +21,8 @@
     }
   },
   {
-    "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
-    "name" : "select",
-    "parameters" : {
-      "query" : "where wiews_region in <<required_countries>>",
-      "values" : {
-        "wiews_region" : null,
-        "indicator" : null,
-        "element" : null,
-        "iteration" : null,
-        "species" : null,
-        "threatened_species" : null
-      }
-    }
-  },
-  {
     "name": "filter",
+    "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
     "parameters": {
       "columns": [
 
@@ -45,6 +31,14 @@
         "threatened_species"
       ],
       "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "3_2" ]
+            }
+          ]
+        },
         "iteration": {
           "codes": [
             {
@@ -53,13 +47,8 @@
             }
           ]
         },
-        "indicator": {
-          "codes": [
-            {
-              "uid": "wiews_output_indicators",
-              "codes": [ "3_2" ]
-            }
-          ]
+        "wiews_region" : {
+          "variable" : "required_countries"
         },
         "element": {
           "codes": [

@@ -12,14 +12,6 @@
         "um"
       ],
       "rows": {
-        "iteration": {
-          "codes": [
-            {
-              "uid": "wiews_iteration",
-              "codes": [ "1" ]
-            }
-          ]
-        },
         "indicator": {
           "codes": [
             {
@@ -28,11 +20,11 @@
             }
           ]
         },
-        "element": {
+        "iteration": {
           "codes": [
             {
-              "uid": "wiews_elements",
-              "codes": [ "ind" ]
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
             }
           ]
         },
@@ -41,6 +33,14 @@
             {
               "uid": "ISO3",
               "codes": [ "na" ]
+            }
+          ]
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind" ]
             }
           ]
         }
