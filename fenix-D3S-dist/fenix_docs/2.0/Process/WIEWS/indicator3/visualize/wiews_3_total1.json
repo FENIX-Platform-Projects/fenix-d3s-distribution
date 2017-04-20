@@ -57,7 +57,7 @@
           "codes": [
             {
               "uid": "wiews_output_indicators",
-              "codes": [ "3_2" ]
+              "codes": [ "3_1" ]
             }
           ]
         },
@@ -70,8 +70,6 @@
           ]
         }
       }
-    },
-    "rid":{"uid":"data_by_region"}
-
+    }
   }
 ]
