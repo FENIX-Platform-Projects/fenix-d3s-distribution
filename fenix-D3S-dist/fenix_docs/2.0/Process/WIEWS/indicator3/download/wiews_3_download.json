@@ -36,27 +36,11 @@
 
   {
     "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
-    "name" : "select",
-    "parameters" : {
-      "query" : "where wiews_region in <<required_countries>>",
-      "values" : {
-        "domain" : null,
-        "wiews_region" : null,
-        "indicator" : null,
-        "element" : null,
-        "iteration" : null,
-        "threatened_percentage" : null,
-        "um" : null,
-        "rank" : null
-      }
-    }
-  },
-
-  {
     "name": "filter",
     "parameters": {
       "columns": [
         "domain",
+        "rank",
         "wiews_region",
         "indicator",
         "element",
@@ -65,6 +49,14 @@
         "um"
       ],
       "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "3_1", "3_2" ]
+            }
+          ]
+        },
         "iteration": {
           "codes": [
             {
@@ -73,15 +65,18 @@
             }
           ]
         },
-        "indicator": {
-          "codes": [
-            {
-              "uid": "wiews_output_indicators",
-              "codes": [ "3_1", "3_2" ]
-            }
-          ]
+        "wiews_region" : {
+          "variable" : "required_countries"
         }
       }
     }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "rank" : "ASC",
+      "wiews_region" : "ASC"
+    }
   }
+
 ]

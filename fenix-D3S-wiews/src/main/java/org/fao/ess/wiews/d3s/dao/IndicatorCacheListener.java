@@ -21,36 +21,18 @@ public class IndicatorCacheListener implements DatasetCacheListener {
 
         switch (uid) {
 
-            case "raw_indicator20" :
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( iteration, country)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( iteration)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( country)");
-                break;
-
             case "raw_indicator3" :
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( iteration, country)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( iteration)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( country)");
+            case "raw_indicator20" :
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, country)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( country, iteration)");
                 break;
-
             case "indicator3" :
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( INDICATOR , iteration, country)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( INDICATOR ,iteration)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( INDICATOR ,country)");
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() +
-                        " ( iteration ,country)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( INDICATOR , iteration, wiews_region)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( INDICATOR ,iteration)");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( INDICATOR ,wiews_region)");
                 break;
             case "indicator20":
-                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, element, country )");
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, element, wiews_region )");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, element, genus )");
                 break;
         }
