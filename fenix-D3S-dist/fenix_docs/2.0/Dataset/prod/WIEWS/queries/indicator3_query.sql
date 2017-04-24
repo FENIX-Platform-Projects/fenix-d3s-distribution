@@ -62,7 +62,7 @@ CREATE TABLE indicators.indicator3 as (
               iteration,
               country_id
             FROM
-              raw
+              raw_witc
             WHERE
               subquestionid = 1003 ) spec
           JOIN
@@ -72,7 +72,7 @@ CREATE TABLE indicators.indicator3 as (
                 THEN TRUE
               ELSE FALSE END AS threatened
             FROM
-              raw
+              raw_witc
             WHERE
               subquestionid = 1004 ) tspec
             ON ( spec.answerid = tspec.answerid )
@@ -81,7 +81,7 @@ CREATE TABLE indicators.indicator3 as (
               answerid,
               answer_freetext :: INT AS varieties
             FROM
-              raw
+              raw_witc
             WHERE
               subquestionid = 1005 ) var
             ON ( spec.answerid = var.answerid )
@@ -90,7 +90,7 @@ CREATE TABLE indicators.indicator3 as (
               answerid,
               answer_freetext :: INT AS threatened_varieties
             FROM
-              raw
+              raw_witc
             WHERE
               subquestionid = 1006 ) tvar
             ON ( spec.answerid = tvar.answerid )
@@ -229,7 +229,7 @@ CREATE TABLE indicators.indicator3 as (
               THEN 1
             ELSE 0 END AS threatened_inc
           FROM
-            answer_1_2 ) raw
+            answer_1_2_witc ) raw
       GROUP BY
         iteration
       UNION
@@ -251,7 +251,7 @@ CREATE TABLE indicators.indicator3 as (
               THEN 1
             ELSE 0 END AS threatened_inc
           FROM
-            answer_1_2 ) raw
+            answer_1_2_witc ) raw
       GROUP BY
         iteration
       HAVING sum (varieties) > 0

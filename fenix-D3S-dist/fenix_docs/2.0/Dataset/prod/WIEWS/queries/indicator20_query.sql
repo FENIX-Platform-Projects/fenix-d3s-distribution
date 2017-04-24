@@ -171,7 +171,7 @@ CREATE TABLE indicators.indicator20 as (
                    cast(1 as INTEGER) as rank,
                    d.WIEWS_INSTCODE as stakeholder,
                    cast(lower(COALESCE(c.GENUS,'NA')) as TEXT) as genus,
-                   count(distinct(CASE WHEN a.taxonid>0 THEN a.taxonid::TEXT ELSE a.taxon_freetext end  )) as VALUE ,
+                   count(*) as VALUE ,
                    cast('num'as TEXT) as um
 
                  FROM answer_q14 a
@@ -218,7 +218,7 @@ CREATE TABLE indicators.indicator20 as (
                          cast(1 as INTEGER) as rank,
                          c.WIEWS_INSTCODE as stakeholder,
                          cast('na' as TEXT) as genus,
-                         count(distinct(CASE WHEN a.taxonid>0 THEN a.taxonid::TEXT ELSE a.taxon_freetext end  )) as VALUE ,
+                         count(*) as VALUE ,
                          cast('num' as TEXT) as um
 
                        FROM answer_q14 a
@@ -302,7 +302,7 @@ INSERT INTO indicators.indicator20
   SELECT
     a.iteration,
     max(a.domain) as domain,
-    max(a.element) as element,
+    'nfpa' as element,
     max(a.indicator) as indicator,
     max(a.biologicalAccessionId) as biologicalAccessionId,
     cast('na' as TEXT) as country,
@@ -321,6 +321,7 @@ INSERT INTO indicators.indicator20
   ORDER BY
     iteration,
     rank;
+
 
 
 
