@@ -115,6 +115,8 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<WiewsRegi
                     where.setCharAt(where.length()-1,')');
                     where.append(" or");
                     queryParams.addAll(columnCodesEntry.getValue());
+                } else {
+                    where.append(" 1<>1 or");
                 }
             String query = "select distinct (w) from "+tableName+(where.length()>0 ? " where"+where.substring(0, where.length()-3) : "");
             //Parse result
