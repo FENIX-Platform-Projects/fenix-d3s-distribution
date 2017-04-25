@@ -19,7 +19,7 @@ CREATE TABLE indicators.indicator3 as (
         answer_detail ad
           ON ( a.id = answerid )
       WHERE
-        iteration = 1 AND questionid = 2 )a
+        questionid = 2 )a
     JOIN
     ref_instab d
       ON d.ID = a.orgId
@@ -44,7 +44,7 @@ CREATE TABLE indicators.indicator3 as (
                      answer_detail ad
                        ON ( a.id = answerid )
                    WHERE
-                     iteration = 1 AND questionid = 2 ),
+                      questionid = 2 ),
 
       answer_1_2_witc AS (
         SELECT
@@ -229,7 +229,7 @@ CREATE TABLE indicators.indicator3 as (
               THEN 1
             ELSE 0 END AS threatened_inc
           FROM
-            answer_1_2_witc ) raw
+            answer_1_2 ) raw
       GROUP BY
         iteration
       UNION
@@ -251,7 +251,7 @@ CREATE TABLE indicators.indicator3 as (
               THEN 1
             ELSE 0 END AS threatened_inc
           FROM
-            answer_1_2_witc ) raw
+            answer_1_2 ) raw
       GROUP BY
         iteration
       HAVING sum (varieties) > 0

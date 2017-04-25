@@ -101,6 +101,8 @@ titleColumnIndex_EN=3
 
 @stk@Stakeholder
 @ind@Indicator
+@ind_t@Indicator, total
+@ind_a@Indicator, annual average
 @nfp@National Focal Point rating
 @nfpa@National Focal Point rating, average
 @gen@Genus
