@@ -35,6 +35,9 @@ public enum Query {
             "  JOIN ref_country ref on a.countryoriginid = ref.country_id "),
 
     indicator3 ("select * from indicators.indicator3" ),
+    indicator2 ("select * from indicators.indicator2" ),
+
+
     raw_indicator3 ("with raw as (\n" +
             " select * \n" +
             " from answer a\n" +
@@ -59,6 +62,7 @@ public enum Query {
             "join ref_country on (ref_country.country_id = spec.country_id)\n" +
             "\n" +
             "order by country_iso3, species\n"),
+    raw_indicator2 ("")
 
     ;private String query;
     Query(String query) {

@@ -372,7 +372,6 @@ CREATE TABLE indicators.indicator3 as (
                 cast (indicator_id AS TEXT) AS indicator,
                 iteration,
                 'nfp'::text as element,
-
                 cast (iso AS TEXT)          AS country,
                 cast (iso AS TEXT)          AS wiews_region,
                 1::INTEGER                  AS rank,

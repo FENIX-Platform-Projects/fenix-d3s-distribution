@@ -1,0 +1,64 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "total" : true,
+      "list":  "false",
+      "filter" : {
+
+        "fao": {
+          "codes": [
+            {
+              "uid": "wiews_fao_region",
+              "codes": [ "5000" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
+    "parameters": {
+      "columns": [
+
+        "wiews_region",
+        "species",
+        "threatened_species"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "3_2" ]
+            }
+          ]
+        },
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]
