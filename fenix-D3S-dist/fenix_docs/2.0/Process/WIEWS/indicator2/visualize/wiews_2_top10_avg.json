@@ -5,18 +5,14 @@
     "rid" : { "uid" : "area_selection" },
     "result" : false,
     "parameters": {
-      "total" : true,
-      "list":  false,
+      "total" : false,
+      "list":  true,
       "filter" : {
-        "fao": {
+        "m49": {
           "codes": [
             {
               "uid": "wiews_fao_region",
-              "codes": [
-                "5100",
-                "5200",
-                "5300",
-                "5400"]
+              "codes": [ "5000" ]
             }
           ]
         }
@@ -59,37 +55,44 @@
           "codes": [
             {
               "uid": "wiews_elements",
-              "codes": [ "ind_t" ]
+              "codes": [ "ind_a" ]
             }
           ]
         }
       }
-    },
-    "rid": {
-      "uid": "top_10_varieties"
     }
 
   },
+  {
+    "name": "order",
+    "parameters": {
+      "value" : "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    },
+    "rid":{"uid":"top_10_species"}
 
-
+  },
+  
   {
     "name": "wiews_area_filter",
     "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
     "rid" : { "uid" : "area_selection_varieties" },
     "result" : false,
     "parameters": {
-      "total" : true,
-      "list":  false,
+      "total" : false,
+      "list":  true,
       "filter" : {
-        "fao": {
+        "m49": {
           "codes": [
             {
               "uid": "wiews_fao_region",
-              "codes": [
-                "5100",
-                "5200",
-                "5300",
-                "5400"]
+              "codes": [ "5000" ]
             }
           ]
         }
@@ -132,17 +135,29 @@
           "codes": [
             {
               "uid": "wiews_elements",
-              "codes": [ "ind_t" ]
+              "codes": [ "ind_a" ]
             }
           ]
         }
       }
-    },
-    "rid": {
-      "uid": "top_10_species"
     }
 
   },
+  {
+    "name": "order",
+    "parameters": {
+      "value" : "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    },
+    "rid":{"uid":"top_10_varieties"}
+  },
+
   {
     "name": "union",
     "sid": [
@@ -184,6 +199,25 @@
     },
     "rid": {
       "uid": "final_with_values"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "final_with_values"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "element",
+        "indicator_type",
+        "wiews_region",
+        "value",
+        "um"
+      ],
+      "rows": {
+      }
     }
   }
 ]

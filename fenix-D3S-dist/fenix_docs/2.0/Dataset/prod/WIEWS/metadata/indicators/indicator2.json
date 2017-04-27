@@ -67,14 +67,6 @@
         "dataType" : "number"
       },
       {
-        "id" : "value_indicator",
-        "title" : { "EN" : "Value Indicator"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_value_indicators" } ] },
-        "key": true
-
-      },
-      {
         "id" : "value",
         "title" : { "EN" : "Value"},
         "dataType" : "number",

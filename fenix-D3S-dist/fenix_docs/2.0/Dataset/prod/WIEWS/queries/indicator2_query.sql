@@ -133,7 +133,6 @@ SELECT
   country_iso3,
   wiews_region,
   rank,
-  'num' as value_indicator,
   value,
   'num' AS um
 FROM     total_country
@@ -157,7 +156,6 @@ SELECT
   country_iso3,
   wiews_region,
   rank,
-  'avg' as value_indicator,
   avg   AS value ,
   'num' AS um
 FROM     total_country
@@ -178,7 +176,6 @@ SELECT
   country,
   wiews_region,
   rank,
-  'nfp' as value_indicator,
   value,
   um
 FROM
@@ -194,7 +191,6 @@ SELECT
   'na' as country,
   b.w as wiews_region,
   b.rank,
-  'nfp_cal' as value_indicator,
   avg(value) as value,
   'per' as um
 
@@ -215,7 +211,6 @@ SELECT
   'na' as country_iso3,
   wiews_region,
   rank,
-  'num_cal' as value_indicator,
   value,
   'num' as um
 FROM
@@ -227,11 +222,10 @@ SELECT
   domain,
   indicator,
   iteration,
-  'ind_t' as element,
+  'ind_a' as element,
   'na' as country_iso3,
   wiews_region,
   rank,
-  'avg_cal' as value_indicator,
   AVG as value,
   'num' as um
 FROM

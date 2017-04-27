@@ -5,37 +5,38 @@
     "rid" : { "uid" : "area_selection" },
     "result" : false,
     "parameters": {
-      "total" : true,
-      "list":  "false",
+      "total" : false,
+      "list":  true,
       "filter" : {
-
-        "fao": {
+        "iso3": {
           "codes": [
             {
               "uid": "wiews_fao_region",
-              "codes": [ "5000" ]
+              "codes": [ "ALB" ]
             }
           ]
         }
+
       }
     }
   },
   {
     "name": "filter",
-    "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
+    "sid": [ { "uid": "indicator2" }, { "uid": "area_selection" } ],
     "parameters": {
       "columns": [
-
+        "element",
+        "indicator",
         "wiews_region",
-        "species",
-        "threatened_species"
+        "value",
+        "um"
       ],
       "rows": {
         "indicator": {
           "codes": [
             {
               "uid": "wiews_output_indicators",
-              "codes": [ "3_1" ]
+              "codes": [ "2_1","2_2" ]
             }
           ]
         },
@@ -54,11 +55,18 @@
           "codes": [
             {
               "uid": "wiews_elements",
-              "codes": [ "ind" ]
+              "codes": [ "ind_t","ind_a" ]
             }
           ]
         }
       }
+    }
+
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "wiews_region" : "ASC"
     }
   }
 ]

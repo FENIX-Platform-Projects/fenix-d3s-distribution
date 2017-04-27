@@ -7,7 +7,46 @@ public enum Query {
     indicator10 ("select * from indicators.indicator10" ),
     indicator20 ("select * from indicators.indicator20" ),
 
-    raw_indicator2 (""),
+    raw_indicator2 ("WITH\n" +
+            "    raw AS (\n" +
+            "      SELECT a.questionid,\n" +
+            "        a.approved,\n" +
+            "        a.country_id,\n" +
+            "        a.iteration,\n" +
+            "        subquestionid,\n" +
+            "        answerid,\n" +
+            "        answer_freetext,\n" +
+            "        reference_id,\n" +
+            "        a.orgid\n" +
+            "      FROM   answer a\n" +
+            "        JOIN   answer_detail ad\n" +
+            "          ON     (\n" +
+            "          a.id = answerid )\n" +
+            "      WHERE  questionid = 2\n" +
+            "  )\n" +
+            "SELECT   iteration,\n" +
+            "  iso AS country_iso3,\n" +
+            "  species,\n" +
+            "  varieties,\n" +
+            "  spec.answerid AS answer_id\n" +
+            "FROM\n" +
+            "  ( SELECT answerid,\n" +
+            "      answer_freetext AS species,\n" +
+            "      iteration,\n" +
+            "      country_id\n" +
+            "    FROM   raw\n" +
+            "    WHERE  subquestionid = 1003 ) spec\n" +
+            "  JOIN (\n" +
+            "         SELECT\n" +
+            "           answerid,\n" +
+            "           answer_freetext :: int AS varieties\n" +
+            "         FROM   raw\n" +
+            "         WHERE  subquestionid = 1005 ) var\n" +
+            "    ON (spec.answerid = var.answerid )\n" +
+            "  JOIN ref_country ON ( ref_country.country_id = spec.country_id )\n" +
+            "ORDER BY\n" +
+            "  country_iso3,\n" +
+            "  species"),
 
     raw_indicator3 ("with raw as (\n" +
             " select * \n" +

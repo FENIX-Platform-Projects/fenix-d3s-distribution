@@ -39,7 +39,7 @@
     },
 
     {
-      "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
+      "sid": [ { "uid": "indicator2" }, { "uid": "area_selection" } ],
       "name": "filter",
       "parameters": {
         "columns": [
