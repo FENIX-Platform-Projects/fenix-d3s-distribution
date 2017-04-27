@@ -1,0 +1,96 @@
+{
+  "uid": "raw_indicator10",
+  "title": {
+    "EN": "Wiews donwload indicator 10"
+  },
+  "meContent": {
+    "description": {
+      "EN": "wiews download indicator 10"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country (ISO3)"},
+        "subject" : "geo",
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "key": true
+      },
+      {
+        "id" : "answer_id",
+        "title" : { "EN" : "Answer id"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "question_id",
+        "title" : { "EN" : "Question id"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "organization_id",
+        "title" : { "EN" : "Organization id"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "approved",
+        "title" : { "EN" : "Approved"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "created_by",
+        "title" : { "EN" : "Created by"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "created_date",
+        "title" : { "EN" : "Created date"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "modified_by",
+        "title" : { "EN" : "Modified by"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "modified_date",
+        "title" : { "EN" : "Modified date"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "iteration",
+        "title" : { "EN" : "Iteration"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "datasource",
+        "title" : { "EN" : "Data source"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "managed_sites",
+        "title" : { "EN" : "Managed sites number"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "total_sites",
+        "title" : { "EN" : "Total sites number"},
+        "dataType" : "number"
+      }
+    ]
+  }
+}

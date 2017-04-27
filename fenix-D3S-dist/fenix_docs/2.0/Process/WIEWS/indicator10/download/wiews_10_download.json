@@ -1,0 +1,66 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "filter" : {
+        "m49": {
+          "codes": [
+            {
+              "uid": "wiews_m49_regions",
+              "codes": [ "WITC","1" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "sid": [ { "uid": "indicator10" }, { "uid": "area_selection" } ],
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "domain",
+        "wiews_region",
+        "indicator",
+        "element",
+        "iteration",
+        "value",
+        "um",
+        "rank"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "10" ]
+            }
+          ]
+        },
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        }
+      }
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "rank" : "ASC",
+      "wiews_region" : "ASC"
+    }
+  }
+
+]

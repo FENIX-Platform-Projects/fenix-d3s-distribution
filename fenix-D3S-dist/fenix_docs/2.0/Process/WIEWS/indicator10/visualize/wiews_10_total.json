@@ -1,0 +1,139 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "list":  false,
+      "filter" : {
+        "fao": {
+          "codes": [
+            {
+              "uid": "wiews_fao_region",
+              "codes": [ "5000" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [ { "uid": "indicator10" }, { "uid": "area_selection" } ],
+    "rid" : {"uid" : "indicator_data"},
+    "parameters": {
+      "columns": [
+        "managed_sites",
+        "total_sites"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "10" ]
+            }
+          ]
+        },
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name" : "select",
+    "sid": [ { "uid": "indicator_data" } ],
+    "parameters" : {
+      "values" : {
+        "managed_sites" : null
+      }
+    }
+  },
+  {
+    "name": "addcolumn",
+    "rid" : {"uid" : "managed_sites"},
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "item",
+        "title": { "EN": "Item" },
+        "subject": "item",
+        "key" : true
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "Managed sites" ]
+      }
+    }
+  },
+
+  {
+    "name" : "select",
+    "sid": [ { "uid": "indicator_data" } ],
+    "parameters" : {
+      "values" : {
+        "managed_sites" : "(total_sites-managed_sites)"
+      }
+    }
+  },
+  {
+    "name": "addcolumn",
+    "rid" : {"uid" : "total_sites"},
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "item",
+        "title": { "EN": "Item" },
+        "subject": "item",
+        "key" : true
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "Other sites" ]
+      }
+    }
+  },
+
+  {
+    "name" : "union",
+    "sid": [ { "uid": "managed_sites" }, { "uid": "total_sites" } ],
+    "parameters" : {
+      "logic" : "extend"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "id" : "um",
+        "title" : { "EN" : "Measurement unit"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
+        "subject":"um"
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "num" ]
+      }
+    }
+  }
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "name": "filter",
+    "sid": [ { "uid": "indicator10" }],
+    "parameters": {
+      "columns": [
+        "country",
+        "value",
+        "um",
+        "managed_sites",
+        "total_sites"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "10" ]
+            }
+          ]
+        },
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "!country": {
+          "codes": [
+            {
+              "uid": "ISO3",
+              "codes": [ "na" ]
+            }
+          ]
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind" ]
+            }
+          ]
+        }
+      }
+    }
+  }
+]

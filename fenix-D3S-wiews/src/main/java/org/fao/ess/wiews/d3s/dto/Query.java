@@ -34,7 +34,27 @@ public enum Query {
             "\n" +
             "order by country_iso3, species\n"),
 
-    raw_indicator10 (""),
+    raw_indicator10 (
+            "SELECT\n" +
+            "  c.iso as country_iso3,\n" +
+            "  a.id::text as answer_id,\n" +
+            "  questionid::text as question_id,\n" +
+            "  a.orgid::text as organization_id,\n" +
+            "  case when approved=1 then TRUE ELSE FALSE end as approved,\n" +
+            "  created_by,\n" +
+            "  created_date::text as created_date,\n" +
+            "  modified_by,\n" +
+            "  modified_date::text as modified_date,\n" +
+            "  iteration::text as iteration,\n" +
+            "  datasource,\n" +
+            "  coalesce(t1.answer_freetext, '0') :: REAL AS sites_with_management,\n" +
+            "  coalesce(t2.answer_freetext, '0') :: REAL AS sites_total\n" +
+            "FROM answer a\n" +
+            "  JOIN answer_detail t1 ON (t1.answerId = a.id)\n" +
+            "  JOIN answer_detail t2 ON (t2.answerId = a.id)\n" +
+            "  JOIN ref_country c ON (c.country_id = a.country_id)\n" +
+            "WHERE a.approved = 1 AND t1.subquestionid = 1043 AND t2.subquestionid = 1042"
+    ),
 
     raw_indicator20 ("SELECT\n" +
             "\n" +
