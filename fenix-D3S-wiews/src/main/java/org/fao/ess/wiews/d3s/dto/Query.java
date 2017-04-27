@@ -2,7 +2,40 @@ package org.fao.ess.wiews.d3s.dto;
 
 public enum Query {
 
+    indicator2 ("select * from indicators.indicator2" ),
+    indicator3 ("select * from indicators.indicator3" ),
+    indicator10 ("select * from indicators.indicator10" ),
     indicator20 ("select * from indicators.indicator20" ),
+
+    raw_indicator2 (""),
+
+    raw_indicator3 ("with raw as (\n" +
+            " select * \n" +
+            " from answer a\n" +
+            " join answer_detail ad\n" +
+            " on (a.id = answerid)\n" +
+            " where iteration = 1 and questionid = 2\n" +
+            ")\n" +
+            "\n" +
+            "select iteration::text, iso as country_iso3, species, threatened, varieties, threatened_varieties, spec.answerid as answer_id\n" +
+            "from\n" +
+            "(select answerid, answer_freetext as species, iteration, country_id from raw where subquestionid = 1003) spec\n" +
+            "join\n" +
+            "(select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
+            "on (spec.answerid = tspec.answerid)\n" +
+            "join\n" +
+            "(select answerid, answer_freetext::int as varieties from raw where subquestionid = 1005) var\n" +
+            "on (spec.answerid = var.answerid)\n" +
+            "join\n" +
+            "(select answerid, answer_freetext::int as threatened_varieties from raw where subquestionid = 1006) tvar\n" +
+            "on (spec.answerid = tvar.answerid)\n" +
+            "\n" +
+            "join ref_country on (ref_country.country_id = spec.country_id)\n" +
+            "\n" +
+            "order by country_iso3, species\n"),
+
+    raw_indicator10 (""),
+
     raw_indicator20 ("SELECT\n" +
             "\n" +
             "  a.ITERATION::text as iteration,\n" +
@@ -34,35 +67,7 @@ public enum Query {
             "  JOIN ref_country d ON a.country_id = d.country_id\n" +
             "  JOIN ref_country ref on a.countryoriginid = ref.country_id "),
 
-    indicator3 ("select * from indicators.indicator3" ),
-    indicator2 ("select * from indicators.indicator2" ),
 
-
-    raw_indicator3 ("with raw as (\n" +
-            " select * \n" +
-            " from answer a\n" +
-            " join answer_detail ad\n" +
-            " on (a.id = answerid)\n" +
-            " where iteration = 1 and questionid = 2\n" +
-            ")\n" +
-            "\n" +
-            "select iteration::text, iso as country_iso3, species, threatened, varieties, threatened_varieties, spec.answerid as answer_id\n" +
-            "from\n" +
-            "(select answerid, answer_freetext as species, iteration, country_id from raw where subquestionid = 1003) spec\n" +
-            "join\n" +
-            "(select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
-            "on (spec.answerid = tspec.answerid)\n" +
-            "join\n" +
-            "(select answerid, answer_freetext::int as varieties from raw where subquestionid = 1005) var\n" +
-            "on (spec.answerid = var.answerid)\n" +
-            "join\n" +
-            "(select answerid, answer_freetext::int as threatened_varieties from raw where subquestionid = 1006) tvar\n" +
-            "on (spec.answerid = tvar.answerid)\n" +
-            "\n" +
-            "join ref_country on (ref_country.country_id = spec.country_id)\n" +
-            "\n" +
-            "order by country_iso3, species\n"),
-    raw_indicator2 ("")
 
     ;private String query;
     Query(String query) {

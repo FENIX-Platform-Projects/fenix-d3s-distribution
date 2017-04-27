@@ -2,25 +2,26 @@ DROP TABLE IF EXISTS indicators.indicator10;
 
 CREATE TABLE indicators.indicator10 as (
 
-  WITH raw AS (
-      SELECT
-        c.iso,
-        a.*,
-        coalesce(t1.answer_freetext, '0') :: REAL AS sites_with_management,
-        coalesce(t2.answer_freetext, '0') :: REAL    sites_total
-      FROM answer a
-        JOIN answer_detail t1 ON (t1.answerId = a.id)
-        JOIN answer_detail t2 ON (t2.answerId = a.id)
-        JOIN ref_country c ON (c.country_id = a.country_id)
-      WHERE a.approved = 1 AND t1.subquestionid = 1043 AND t2.subquestionid = 1042
-  ),
+  WITH
+      raw AS (
+        SELECT
+          c.iso,
+          a.*,
+          coalesce(t1.answer_freetext, '0') :: REAL AS sites_with_management,
+          coalesce(t2.answer_freetext, '0') :: REAL    sites_total
+        FROM answer a
+          JOIN answer_detail t1 ON (t1.answerId = a.id)
+          JOIN answer_detail t2 ON (t2.answerId = a.id)
+          JOIN ref_country c ON (c.country_id = a.country_id)
+        WHERE a.approved = 1 AND t1.subquestionid = 1043 AND t2.subquestionid = 1042
+    ),
       indicator AS (
         SELECT
           '1410' :: TEXT                                                 AS domain,
           iso                                                            AS wiews_region,
           '10' :: TEXT                                                   AS indicator,
           'ind' :: TEXT                                                  AS element,
-          iteration,
+          iteration :: TEXT,
           CASE WHEN sum(sites_total) = 0
             THEN 0
           ELSE (sum(sites_with_management) / sum(sites_total)) * 100 END AS value,
@@ -38,7 +39,7 @@ CREATE TABLE indicators.indicator10 as (
           c.iso              AS wiews_region,
           '10' :: TEXT       AS indicator,
           'nfp' :: TEXT      AS element,
-          iteration,
+          iteration :: TEXT,
           nfp_rating :: REAL AS value,
           'per' :: TEXT      AS um,
           0 :: REAL          AS sites_with_management,
