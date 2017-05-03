@@ -1,0 +1,91 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "filter" : {
+        "m49": {
+          "codes": [
+            {
+              "uid": "wiews_m49_regions",
+              "codes": [ "WITC","1" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "sid": [ { "uid": "indicator20" }, { "uid": "area_selection" } ],
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "domain",
+        "rank",
+        "wiews_region",
+        "indicator",
+        "iteration",
+        "value",
+        "um",
+        "country",
+        "element",
+        "biologicalAccessionId",
+        "stakeholder"
+      ],
+      "rows": {
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind", "nfp", "nfpa", "stk" ]
+            }
+          ]
+        },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        }
+      }
+    }
+  },
+
+  {
+    "name":"addcolumn",
+    "index" : -2,
+    "parameters":{
+      "column":{
+        "dataType":"text",
+        "id":"indicator_label",
+        "title":{
+          "EN":"Indicator"
+        }
+      },
+      "value": {
+        "keys": [
+          "element = 'stk'", "element <> 'stk'"
+        ],
+        "values": [
+          "'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')'","element_en"
+        ]
+      }
+    }
+  },
+
+  {
+    "name": "order",
+    "parameters": {
+      "rank" : "ASC",
+      "wiews_region" : "ASC"
+    }
+  }
+]
