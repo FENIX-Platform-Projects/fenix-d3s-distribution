@@ -5,6 +5,8 @@ public enum Query {
     indicator2 ("select * from indicators.indicator2" ),
     indicator3 ("select * from indicators.indicator3" ),
     indicator10 ("select * from indicators.indicator10" ),
+    indicator14 ("select * from indicators.indicator14" ),
+
     indicator20 ("select * from indicators.indicator20" ),
 
     raw_indicator2 ("WITH\n" +
