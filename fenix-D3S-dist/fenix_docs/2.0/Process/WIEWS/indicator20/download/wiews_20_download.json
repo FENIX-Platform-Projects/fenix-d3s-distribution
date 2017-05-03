@@ -49,6 +49,7 @@
         "stakeholder" : null,
         "value" : null,
         "um" : null,
+        "indicator":null,
         "indicator_label" : "case when element = 'stk' then 'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')' else element_en end"
       }
     }
