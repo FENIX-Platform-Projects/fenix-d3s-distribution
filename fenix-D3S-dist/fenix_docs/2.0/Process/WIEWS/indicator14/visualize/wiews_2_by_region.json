@@ -1,0 +1,189 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "total" : true,
+      "list":  false,
+      "filter" : {
+        "fao": {
+          "codes": [
+            {
+              "uid": "wiews_fao_region",
+              "codes": [
+                "5100",
+                "5200",
+                "5300",
+                "5400"]
+            }
+          ]
+        }
+
+      }
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [ { "uid": "indicator2" }, { "uid": "area_selection" } ],
+    "parameters": {
+      "columns": [
+        "element",
+        "indicator",
+        "wiews_region",
+        "value",
+        "um"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "2_1" ]
+            }
+          ]
+        },
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind_t" ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "top_10_varieties"
+    }
+
+  },
+
+
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection_varieties" },
+    "result" : false,
+    "parameters": {
+      "total" : true,
+      "list":  false,
+      "filter" : {
+        "fao": {
+          "codes": [
+            {
+              "uid": "wiews_fao_region",
+              "codes": [
+                "5100",
+                "5200",
+                "5300",
+                "5400"]
+            }
+          ]
+        }
+
+      }
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [ { "uid": "indicator2" }, { "uid": "area_selection_varieties" } ],
+    "parameters": {
+      "columns": [
+        "element",
+        "indicator",
+        "wiews_region",
+        "value",
+        "um"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "2_2" ]
+            }
+          ]
+        },
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind_t" ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "top_10_species"
+    }
+
+  },
+  {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "top_10_species"
+      },
+      {
+        "uid": "top_10_varieties"
+      }
+
+    ],
+    "parameters": {},
+    "rid" :{"uid":"union_species_var"}
+  },
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "union_species_var"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator_type",
+        "title": {
+          "EN": "Indicator"
+        },
+        "subject": null
+      },
+      "value": {
+        "keys": [
+          "indicator = '2_2'", "indicator = '2_1'"
+        ],
+        "values": [
+          "Varieties","Species"
+        ]
+      }
+    },
+    "rid": {
+      "uid": "final_with_values"
+    }
+  }
+]
