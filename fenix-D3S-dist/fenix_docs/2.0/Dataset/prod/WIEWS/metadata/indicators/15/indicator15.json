@@ -1,0 +1,103 @@
+{
+  "uid": "indicator15",
+  "title": {
+    "EN": "Wiews indicator 15"
+  },
+  "meContent": {
+    "description": {
+      "EN": "wiews indicator 15"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "domain",
+        "title" : { "EN" : "Domain"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "priority_activity" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "wiews_region",
+        "title" : { "EN" : "Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
+        "key": true
+
+      },
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country (ISO3)"},
+        "subject" : "geo",
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "key": true
+      },
+      {
+        "id" : "stakeholder",
+        "title" : { "EN" : "Stakeholder"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] },
+        "key": true
+
+      },
+      {
+        "id" : "indicator",
+        "title" : { "EN" : "Element"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_output_indicators" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "element",
+        "title" : { "EN" : "Indicator and rating"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_elements" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "iteration",
+        "title" : { "EN" : "Period"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "startDate",
+        "title" : { "EN" : "Start date"},
+        "dataType" : "year",
+        "subject":"time"
+      },
+      {
+        "id" : "endDate",
+        "title" : { "EN" : "End date"},
+        "dataType" : "year"
+      },
+      {
+        "id" : "value",
+        "title" : { "EN" : "Value"},
+        "dataType" : "number",
+        "subject":"value"
+      },
+      {
+        "id" : "um",
+        "title" : { "EN" : "Measurement unit"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
+        "subject":"um"
+      },
+      {
+        "id" : "rank",
+        "title" : { "EN" : "Rank"},
+        "dataType" : "number"
+      }
+    ]
+  }
+}

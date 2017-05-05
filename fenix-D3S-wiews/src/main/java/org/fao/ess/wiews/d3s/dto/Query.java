@@ -6,7 +6,7 @@ public enum Query {
     indicator3 ("select * from indicators.indicator3" ),
     indicator10 ("select * from indicators.indicator10" ),
     indicator14 ("select * from indicators.indicator14" ),
-
+    indicator15 ("select * from indicators.indicator15" ),
     indicator20 ("select * from indicators.indicator20" ),
 
     raw_indicator2 ("WITH\n" +
@@ -95,6 +95,46 @@ public enum Query {
             "  JOIN answer_detail t2 ON (t2.answerId = a.id)\n" +
             "  JOIN ref_country c ON (c.country_id = a.country_id)\n" +
             "WHERE a.approved = 1 AND t1.subquestionid = 1043 AND t2.subquestionid = 1042"
+    ),
+
+    raw_indicator15 (
+            "WITH crops AS (\n" +
+                    "  SELECT\n" +
+                    "    c.answerid,\n" +
+                    "    c.subquestionid,\n" +
+                    "    crop_id,\n" +
+                    "    coalesce(crop_name, answer_freetext) AS crop_name_en\n" +
+                    "  FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id AND lang = 'EN')\n" +
+                    "  WHERE c.subquestionid = 1068\n" +
+                    ")\n" +
+                    "\n" +
+                    "SELECT\n" +
+                    "  co.iso                                                             AS country_iso,\n" +
+                    "  it.WIEWS_INSTCODE                                                  AS stakeholder_code,\n" +
+                    "  a.id::text                                                         AS answare_id,\n" +
+                    "  a.questionid::text                                                 AS question_id,\n" +
+                    "  a.orgid::text                                                      AS organization_id,\n" +
+                    "  a.created_by,\n" +
+                    "  a.created_date::text,\n" +
+                    "  a.modified_by,\n" +
+                    "  a.modified_date::text,\n" +
+                    "  a.iteration::text,\n" +
+                    "  a.datasource,\n" +
+                    "  c.crop_name_en,\n" +
+                    "  replace(f.answer_freetext, '\"', '''')                             AS answare,\n" +
+                    "  t_start_date.answer_freetext                                       AS start_date,\n" +
+                    "  coalesce(t_end_date.answer_freetext, t_start_date.answer_freetext) AS end_date\n" +
+                    "FROM\n" +
+                    "  (SELECT *\n" +
+                    "   FROM answer\n" +
+                    "   WHERE questionid = 12) a\n" +
+                    "  LEFT JOIN answer_detail f ON (f.answerId = a.id AND f.subquestionId = 1065)\n" +
+                    "  LEFT JOIN answer_detail t_start_date ON (t_start_date.answerId = a.id AND t_start_date.subquestionId = 1066)\n" +
+                    "  LEFT JOIN answer_detail t_end_date ON (t_end_date.answerId = a.id AND t_end_date.subquestionId = 1067)\n" +
+                    "  LEFT JOIN crops c ON (c.answerId = a.id)\n" +
+                    "  LEFT JOIN ref_instab it ON (it.id = a.orgId)\n" +
+                    "  LEFT JOIN ref_country co ON (co.country_id = a.country_id)\n" +
+                    "WHERE a.approved = 1"
     ),
 
     raw_indicator20 ("SELECT\n" +

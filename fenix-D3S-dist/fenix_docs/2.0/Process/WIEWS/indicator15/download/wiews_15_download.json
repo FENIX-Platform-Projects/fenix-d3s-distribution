@@ -10,7 +10,7 @@
           "codes": [
             {
               "uid": "wiews_m49_regions",
-              "codes": [ "WITC","1" ]
+              "codes": [ "1" ]
             }
           ]
         }
@@ -19,21 +19,19 @@
   },
 
   {
-    "sid": [ { "uid": "indicator20" }, { "uid": "area_selection" } ],
+    "sid": [ { "uid": "indicator15" }, { "uid": "area_selection" } ],
     "name": "filter",
     "parameters": {
       "columns": [
         "domain",
-        "rank",
         "wiews_region",
+        "stakeholder",
         "indicator",
+        "element",
         "iteration",
         "value",
         "um",
-        "country",
-        "element",
-        "biologicalAccessionId",
-        "stakeholder"
+        "rank"
       ],
       "rows": {
         "iteration": {
@@ -44,16 +42,16 @@
             }
           ]
         },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        },
         "element": {
           "codes": [
             {
               "uid": "wiews_elements",
-              "codes": [ "ind", "nfp", "nfpa", "stk" ]
+              "codes": [ "ind_t", "ind_a", "nfp", "nfpa", "stk_t", "stk_a" ]
             }
           ]
-        },
-        "wiews_region" : {
-          "variable" : "required_countries"
         }
       }
     }
@@ -71,10 +69,10 @@
       },
       "value": {
         "keys": [
-          "element = 'stk'", "element <> 'stk'"
+          "element = 'stk_t' or element = 'stk_a'", "element <> 'stk_t' and element <> 'stk_a'"
         ],
         "values": [
-          "@@direct'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')'","@@directelement_en"
+          "@@direct element_en || ' (' || stakeholder || ' / ' || stakeholder_en || ')'","@@direct element_en"
         ]
       }
     }
@@ -87,4 +85,5 @@
       "wiews_region" : "ASC"
     }
   }
+
 ]

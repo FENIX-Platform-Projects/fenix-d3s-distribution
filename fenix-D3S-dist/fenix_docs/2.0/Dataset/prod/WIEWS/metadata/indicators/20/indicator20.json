@@ -72,7 +72,6 @@
         "id" : "rank",
         "title" : { "EN" : "Rank"},
         "dataType" : "number"
-
       },
       {
         "id" : "stakeholder",
