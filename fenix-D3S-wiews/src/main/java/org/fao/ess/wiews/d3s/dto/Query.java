@@ -166,7 +166,8 @@ public enum Query {
             "  ref_instab c\n" +
             "    on a.orgId = c.ID\n" +
             "  JOIN ref_country d ON a.country_id = d.country_id\n" +
-            "  JOIN ref_country ref on a.countryoriginid = ref.country_id "),
+            "  JOIN ref_country ref on a.countryoriginid = ref.country_id\n" +
+            "ORDER BY a.ITERATION, d.iso, a.id"),
 
 
 

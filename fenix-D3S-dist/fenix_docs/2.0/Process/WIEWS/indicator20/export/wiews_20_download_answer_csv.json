@@ -56,13 +56,6 @@
           }
         }
       }
-    },
-    {
-      "name": "order",
-      "parameters": {
-        "country" : "ASC",
-        "id" : "ASC"
-      }
     }
   ]
 }
