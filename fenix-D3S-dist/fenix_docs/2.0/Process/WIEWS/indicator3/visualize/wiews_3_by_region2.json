@@ -25,7 +25,6 @@
     "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
     "parameters": {
       "columns": [
-
         "wiews_region",
         "species",
         "threatened_species"
@@ -59,8 +58,18 @@
           ]
         }
       }
-    },
-    "rid":{"uid":"data_by_region"}
+    }
+  },
 
+  {
+    "name": "select",
+    "rid":{"uid":"data_by_region"},
+    "parameters": {
+      "values": {
+        "wiews_region" : null,
+        "species": "species - threatened_species",
+        "threatened_species" : null
+      }
+    }
   }
 ]

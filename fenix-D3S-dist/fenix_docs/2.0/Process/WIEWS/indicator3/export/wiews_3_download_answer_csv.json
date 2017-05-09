@@ -14,23 +14,7 @@
             "codes": [
               {
                 "uid": "wiews_m49_regions",
-                "codes": [ "WITC","150" ]
-              }
-            ]
-          },
-          "fao": {
-            "codes": [
-              {
-                "uid": "wiews_fao_region",
-                "codes": [ "5400" ]
-              }
-            ]
-          },
-          "iso3": {
-            "codes": [
-              {
-                "uid": "ISO3",
-                "codes": [ "SSD","EGY" ]
+                "codes": [ "WITC","1" ]
               }
             ]
           }
