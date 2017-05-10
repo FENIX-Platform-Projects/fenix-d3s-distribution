@@ -23,6 +23,7 @@ public class IndicatorCacheListener implements DatasetCacheListener {
 
             case "raw_indicator3" :
             case "raw_indicator20" :
+            case "raw_indicator22" :
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, country)");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( country, iteration)");
                 break;
@@ -35,6 +36,9 @@ public class IndicatorCacheListener implements DatasetCacheListener {
             case "indicator20":
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, element, wiews_region )");
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, element, genus )");
+                break;
+            case "indicator22":
+                datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, element, wiews_region )");
                 break;
             case "indicator2" :
                 datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( iteration, country)");

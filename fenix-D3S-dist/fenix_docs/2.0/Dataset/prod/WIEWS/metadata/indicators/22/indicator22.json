@@ -1,0 +1,101 @@
+{
+  "uid": "indicator22",
+  "title": {
+    "EN": "Wiews indicator 22"
+  },
+  "meContent": {
+    "description": {
+      "EN": "wiews indicator 22"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "domain",
+        "title" : { "EN" : "Domain"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "priority_activity" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "wiews_region",
+        "title" : { "EN" : "Country"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
+        "key": true
+
+      },
+      {
+        "id" : "stakeholder",
+        "title" : { "EN" : "Stakeholder"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "indicator",
+        "title" : { "EN" : "Element"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_output_indicators" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "element",
+        "title" : { "EN" : "Indicator and rating"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_elements" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "iteration",
+        "title" : { "EN" : "Period"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "value",
+        "title" : { "EN" : "Value"},
+        "dataType" : "number",
+        "subject":"value"
+      },
+      {
+        "id" : "um",
+        "title" : { "EN" : "Measurement unit"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
+        "subject":"um"
+      },
+      {
+        "id" : "accessions_out_of_budget",
+        "title" : { "EN" : "Number of accessions in need of regeneration without budget"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_num",
+        "title" : { "EN" : "Number of accessions"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "country_iso3",
+        "title" : { "EN" : "Country (ISO3)"},
+        "subject" : "geo",
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "key": true
+      },
+      {
+        "id" : "rank",
+        "title" : { "EN" : "Rank"},
+        "dataType" : "number"
+      }
+    ]
+  }
+}
