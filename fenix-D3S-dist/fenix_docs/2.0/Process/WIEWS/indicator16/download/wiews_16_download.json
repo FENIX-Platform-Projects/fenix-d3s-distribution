@@ -1,0 +1,89 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "filter" : {
+        "m49": {
+          "codes": [
+            {
+              "uid": "wiews_m49_regions",
+              "codes": [ "1" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "sid": [ { "uid": "indicator16" }, { "uid": "area_selection" } ],
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "domain",
+        "wiews_region",
+        "stakeholder",
+        "indicator",
+        "element",
+        "iteration",
+        "value",
+        "um",
+        "rank"
+      ],
+      "rows": {
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind_t", "ind_a", "nfp", "nfpa", "stk_t", "stk_a" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name":"addcolumn",
+    "parameters":{
+      "column":{
+        "dataType":"text",
+        "id":"indicator_label",
+        "title":{
+          "EN":"Indicator"
+        }
+      },
+      "value": {
+        "keys": [
+          "element = 'stk_t' or element = 'stk_a'", "element <> 'stk_t' and element <> 'stk_a'"
+        ],
+        "values": [
+          "@@direct element_en || ' (' || stakeholder || ' / ' || stakeholder_en || ')'","@@direct element_en"
+        ]
+      }
+    }
+  },
+
+  {
+    "name": "order",
+    "parameters": {
+      "rank" : "ASC",
+      "wiews_region" : "ASC"
+    }
+  }
+
+]

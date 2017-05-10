@@ -1,0 +1,53 @@
+{
+  "outConfig": {
+    "plugin": "outputCSV"
+  },
+  "flow": [
+    {
+      "name": "wiews_area_filter",
+      "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+      "rid" : { "uid" : "area_selection" },
+      "result" : false,
+      "parameters": {
+        "total" : false,
+        "filter" : {
+          "m49": {
+            "codes": [
+              {
+                "uid": "wiews_m49_regions",
+                "codes": [ "1" ]
+              }
+            ]
+          }
+        }
+      }
+    },
+
+    {
+      "name": "filter",
+      "sid": [ { "uid": "raw_indicator16" }, { "uid": "area_selection" } ],
+      "parameters": {
+        "rows": {
+          "iteration": {
+            "codes": [
+              {
+                "uid": "wiews_iteration",
+                "codes": [ "1" ]
+              }
+            ]
+          },
+          "country_iso3" : {
+            "variable" : "required_countries"
+          }
+        }
+      }
+    },
+    {
+      "name": "order",
+      "parameters": {
+        "country_iso3" : "ASC",
+        "datasource" : "ASC"
+      }
+    }
+  ]
+}
