@@ -24,7 +24,7 @@
 
     {
       "name": "filter",
-      "sid": [ { "uid": "indicator14" }, { "uid": "area_selection" } ],
+      "sid": [ { "uid": "raw_indicator14" }, { "uid": "area_selection" } ],
       "parameters": {
         "rows": {
           "iteration": {

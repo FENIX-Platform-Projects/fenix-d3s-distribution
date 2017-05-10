@@ -1,0 +1,63 @@
+{
+  "uid": "raw_indicator14",
+  "title": {
+    "EN": "Wiews raw indicator 14"
+  },
+  "meContent": {
+    "description": {
+      "EN": "wiews raw indicator 14"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+    "columns": [
+      {
+        "id" : "iteration",
+        "title" : { "EN" : "Period"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country (ISO3)"},
+        "subject" : "geo",
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "key": true
+      },
+
+      {
+        "id" : "stakeholder",
+        "title" : { "EN" : "Stakeholder"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] },
+        "key": true
+      },
+      {
+        "id" : "crop",
+        "title" : { "EN" : "Crop"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "value",
+        "title" : { "EN" : "Value"},
+        "dataType" : "number",
+        "subject":"value"
+      },
+      {
+        "id" : "um",
+        "title" : { "EN" : "Measurement unit"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
+        "subject":"um"
+      }
+    ]
+  }
+}

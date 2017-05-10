@@ -8,11 +8,11 @@
       "total" : false,
       "list":  true,
       "filter" : {
-        "iso3": {
+        "m49": {
           "codes": [
             {
               "uid": "wiews_fao_region",
-              "codes": [ "ALB" ]
+              "codes": [ "5000" ]
             }
           ]
         }
@@ -36,7 +36,7 @@
           "codes": [
             {
               "uid": "wiews_output_indicators",
-              "codes": [ "2_1","2_2" ]
+              "codes": [ "2_1" ]
             }
           ]
         },
@@ -55,7 +55,7 @@
           "codes": [
             {
               "uid": "wiews_elements",
-              "codes": [ "ind_t","ind_a" ]
+              "codes": [ "ind_t" ]
             }
           ]
         }
@@ -66,7 +66,16 @@
   {
     "name": "order",
     "parameters": {
-      "wiews_region" : "ASC"
+      "value" : "DESC"
     }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    },
+    "rid":{"uid":"top_10_species"}
+
   }
 ]

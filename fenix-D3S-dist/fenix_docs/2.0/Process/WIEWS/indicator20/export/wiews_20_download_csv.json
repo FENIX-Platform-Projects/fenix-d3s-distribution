@@ -88,7 +88,7 @@
           "wiews_region" : null,
           "value" : null,
           "um" : null,
-          "indicator_label" : "case when element = 'stk' then 'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')' else element_en end"
+          "indicator_label" : "@@inject case when element = 'stk' then 'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')' else element_en end"
         }
       }
     },

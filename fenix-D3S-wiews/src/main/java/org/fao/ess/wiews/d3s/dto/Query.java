@@ -7,6 +7,8 @@ public enum Query {
     indicator10 ("select * from indicators.indicator10" ),
     indicator14 ("select * from indicators.indicator14" ),
     indicator15 ("select * from indicators.indicator15" ),
+    indicator16 ("select * from indicators.indicator16" ),
+
     indicator20 ("select * from indicators.indicator20" ),
     indicator22 ("select * from indicators.indicator22" ),
 
@@ -97,6 +99,83 @@ public enum Query {
             "  JOIN ref_country c ON (c.country_id = a.country_id)\n" +
             "WHERE a.approved = 1 AND t1.subquestionid = 1043 AND t2.subquestionid = 1042"
     ),
+    raw_indicator16 ("SELECT  *\n" +
+            "FROM\n" +
+            "  ( SELECT\n" +
+            "      a.iteration,\n" +
+            "      a.id                     AS answer_ID,\n" +
+            "      co.iso                   AS country,\n" +
+            "      it.wiews_instcode        AS stakeholder,\n" +
+            "      a.questionid :: TEXT  AS question_id,\n" +
+            "      c.subquestionid :: TEXT  AS subquestion_id,\n" +
+            "      CASE WHEN c.reference_id IS NOT NULL\n" +
+            "        THEN crop_name\n" +
+            "      ELSE answer_freetext END AS crop\n" +
+            "    FROM\n" +
+            "      answer a\n" +
+            "      FULL OUTER JOIN\n" +
+            "      answer_detail c\n" +
+            "        ON ( c.answerid = a.id AND\n" +
+            "             c.subquestionid IN ( 1068, 1070 ) )\n" +
+            "      FULL OUTER JOIN\n" +
+            "      ref_crop ref\n" +
+            "        ON ( ref.crop_id :: TEXT = c.reference_id :: TEXT AND\n" +
+            "             ref.lang = 'EN' )\n" +
+            "      JOIN\n" +
+            "      ref_instab it\n" +
+            "        ON ( it.id = a.orgId )\n" +
+            "      LEFT JOIN\n" +
+            "      ref_country co\n" +
+            "        ON ( co.country_id = a.country_id ) ) f\n" +
+            "WHERE\n" +
+            "  crop IS NOT NULL"),
+
+    raw_indicator14 ("with raw as (\n" +
+            "    SELECT\n" +
+            "      ref_c.iso,\n" +
+            "      iteration::TEXT,\n" +
+            "      c.wiews_instcode as stakeholder,\n" +
+            "      answer_freetext,\n" +
+            "      answer_freetext_local,\n" +
+            "      reference_id\n" +
+            "\n" +
+            "    FROM\n" +
+            "      answer a\n" +
+            "      JOIN\n" +
+            "      answer_detail ad\n" +
+            "        ON ( a.id = answerid )\n" +
+            "      JOIN\n" +
+            "      ref_instab c\n" +
+            "        ON a.orgid = c.id\n" +
+            "      JOIN\n" +
+            "      ref_country ref_c\n" +
+            "        ON ref_c.country_id = a.country_id\n" +
+            "\n" +
+            "    WHERE questionid = 11 and ad.subquestionid= 1058 and ref_c.lang = 'EN' ),\n" +
+            "\n" +
+            "    ind_14 as (\n" +
+            "\n" +
+            "      SELECT\n" +
+            "        iteration::TEXT,\n" +
+            "        iso as country,\n" +
+            "        stakeholder,\n" +
+            "        CASE\n" +
+            "        WHEN reference_id is null or reference_id = '0'  and answer_freetext is not null THEN answer_freetext\n" +
+            "        WHEN reference_id is null or reference_id = '0'  and answer_freetext is null and  answer_freetext_local is not null THEN  answer_freetext_local\n" +
+            "        WHEN reference_id is not null then crop_name end as crop,\n" +
+            "        count(*) as value,\n" +
+            "        'num'::TEXT as um \n" +
+            "      FROM\n" +
+            "        raw a\n" +
+            "        FULL JOIN ( SELECT * FROM\n" +
+            "        ref_crop WHERE lang = 'EN')b on (a.reference_id = b.crop_id::TEXT )\n" +
+            "      WHERE iteration is not null\n" +
+            "      GROUP BY iteration,\n" +
+            "        iso,\n" +
+            "        stakeholder,\n" +
+            "        crop)\n" +
+            "\n" +
+            "SELECT * from ind_14"),
 
     raw_indicator15 (
             "WITH crops AS (\n" +

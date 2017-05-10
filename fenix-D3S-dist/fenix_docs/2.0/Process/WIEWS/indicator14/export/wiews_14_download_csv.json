@@ -10,27 +10,11 @@
       "result" : false,
       "parameters": {
         "filter" : {
-          "m49": {
-            "codes": [
-              {
-                "uid": "wiews_m49_regions",
-                "codes": [ "WITC","150" ]
-              }
-            ]
-          },
-          "fao": {
-            "codes": [
-              {
-                "uid": "wiews_fao_region",
-                "codes": [ "5400" ]
-              }
-            ]
-          },
           "iso3": {
             "codes": [
               {
-                "uid": "ISO3",
-                "codes": [ "SSD","EGY" ]
+                "uid": "wiews_m49_regions",
+                "codes": [ "ALB", "BGD" ]
               }
             ]
           }
@@ -39,28 +23,22 @@
     },
 
     {
-      "sid": [ { "uid": "indicator2" }, { "uid": "area_selection" } ],
+      "sid": [ { "uid": "indicator14" }, { "uid": "area_selection" } ],
       "name": "filter",
       "parameters": {
         "columns": [
           "domain",
-          "rank",
           "wiews_region",
+          "rank",
           "indicator",
           "element",
+          "stakeholder",
           "iteration",
-          "threatened_percentage",
+          "value",
           "um"
         ],
         "rows": {
-          "indicator": {
-            "codes": [
-              {
-                "uid": "wiews_output_indicators",
-                "codes": [ "3_1", "3_2" ]
-              }
-            ]
-          },
+
           "iteration": {
             "codes": [
               {
@@ -71,7 +49,36 @@
           },
           "wiews_region" : {
             "variable" : "required_countries"
+          },
+          "element": {
+            "codes": [
+              {
+                "uid": "wiews_elements",
+                "codes": [ "ind", "nfp", "nfpa", "stk" ]
+              }
+            ]
           }
+        }
+      }
+    },
+
+    {
+      "name":"addcolumn",
+      "parameters":{
+        "column":{
+          "dataType":"text",
+          "id":"indicator_label",
+          "title":{
+            "EN":"Indicator"
+          }
+        },
+        "value": {
+          "keys": [
+            "element = 'stk'", "element <> 'stk'"
+          ],
+          "values": [
+            "@@direct 'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')'","element_en"
+          ]
         }
       }
     },

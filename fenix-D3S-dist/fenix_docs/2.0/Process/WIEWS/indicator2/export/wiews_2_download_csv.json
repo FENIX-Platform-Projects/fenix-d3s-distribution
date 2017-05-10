@@ -10,27 +10,11 @@
       "result" : false,
       "parameters": {
         "filter" : {
-          "m49": {
-            "codes": [
-              {
-                "uid": "wiews_m49_regions",
-                "codes": [ "WITC","150" ]
-              }
-            ]
-          },
-          "fao": {
-            "codes": [
-              {
-                "uid": "wiews_fao_region",
-                "codes": [ "5400" ]
-              }
-            ]
-          },
           "iso3": {
             "codes": [
               {
-                "uid": "ISO3",
-                "codes": [ "SSD","EGY" ]
+                "uid": "wiews_m49_regions",
+                "codes": [ "ALB" ]
               }
             ]
           }
@@ -49,7 +33,7 @@
           "indicator",
           "element",
           "iteration",
-          "threatened_percentage",
+          "value",
           "um"
         ],
         "rows": {
@@ -57,7 +41,7 @@
             "codes": [
               {
                 "uid": "wiews_output_indicators",
-                "codes": [ "3_1", "3_2" ]
+                "codes": [ "2_1", "2_2" ]
               }
             ]
           },
