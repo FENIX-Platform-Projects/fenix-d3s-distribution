@@ -11,6 +11,7 @@ public enum Query {
 
     indicator20 ("select * from indicators.indicator20" ),
     indicator22 ("select * from indicators.indicator22" ),
+    indicator24 ("select * from indicators.indicator24" ),
 
     raw_indicator2 ("WITH\n" +
             "    raw AS (\n" +
@@ -265,6 +266,28 @@ public enum Query {
             "  coalesce(add.answer_freetext, '0') :: REAL AS accessions_num\n" +
             "FROM answer a\n" +
             "  JOIN answer_detail adn ON (adn.subquestionid = 1090 AND a.id = adn.answerid)\n" +
+            "  JOIN answer_detail add ON (add.subquestionid = 1087 AND a.id = add.answerid)\n" +
+            "  JOIN ref_country c ON (a.country_id = c.country_id)\n" +
+            "  JOIN ref_instab it ON (it.id = a.orgId)\n" +
+            "WHERE a.approved = 1\n"+
+            "ORDER BY a.iteration, c.iso, a.id"),
+
+    raw_indicator24 (
+            "SELECT\n" +
+            "  a.questionid,\n" +
+            "  a.id                                       AS answer_id,\n" +
+            "  a.iteration :: TEXT,\n" +
+            "  c.iso                                      AS country_iso3,\n" +
+            "  it.wiews_instcode                          AS stakeholder,\n" +
+            "  a.datasource,\n" +
+            "  a.created_by,\n" +
+            "  a.created_date :: TEXT,\n" +
+            "  a.modified_by,\n" +
+            "  a.modified_date :: TEXT,\n" +
+            "  coalesce(adn.answer_freetext, '0') :: REAL AS accessions_regeneration,\n" +
+            "  coalesce(add.answer_freetext, '0') :: REAL AS accessions_num\n" +
+            "FROM answer a\n" +
+            "  JOIN answer_detail adn ON (adn.subquestionid = 1089 AND a.id = adn.answerid)\n" +
             "  JOIN answer_detail add ON (add.subquestionid = 1087 AND a.id = add.answerid)\n" +
             "  JOIN ref_country c ON (a.country_id = c.country_id)\n" +
             "  JOIN ref_instab it ON (it.id = a.orgId)\n" +

@@ -74,8 +74,8 @@
         "subject":"um"
       },
       {
-        "id" : "accessions_out_of_budget",
-        "title" : { "EN" : "Number of accessions in need of regeneration without budget"},
+        "id" : "accessions_regeneration",
+        "title" : { "EN" : "Number of accessions in need of regeneration"},
         "dataType" : "number"
       },
       {

@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS indicators.indicator22;
+DROP TABLE IF EXISTS indicators.indicator24;
 
-CREATE TABLE indicators.indicator22 as (
+CREATE TABLE indicators.indicator24 as (
 
   WITH raw AS (
       SELECT
@@ -14,10 +14,10 @@ CREATE TABLE indicators.indicator22 as (
         a.created_date :: TEXT,
         a.modified_by,
         a.modified_date :: TEXT,
-        coalesce(adn.answer_freetext, '0') :: REAL AS accessions_out_of_budget,
+        coalesce(adn.answer_freetext, '0') :: REAL AS accessions_regeneration,
         coalesce(add.answer_freetext, '0') :: REAL AS accessions_num
       FROM answer a
-        JOIN answer_detail adn ON (adn.subquestionid = 1090 AND a.id = adn.answerid)
+        JOIN answer_detail adn ON (adn.subquestionid = 1089 AND a.id = adn.answerid)
         JOIN answer_detail add ON (add.subquestionid = 1087 AND a.id = add.answerid)
         JOIN ref_country c ON (a.country_id = c.country_id)
         JOIN ref_instab it ON (it.id = a.orgId)
@@ -28,11 +28,11 @@ CREATE TABLE indicators.indicator22 as (
           iteration,
           country_iso3,
           stakeholder,
-          sum(accessions_out_of_budget)                                        AS accessions_out_of_budget,
+          sum(accessions_regeneration)                                        AS accessions_regeneration,
           sum(accessions_num)                                                  AS accessions_num,
           CASE WHEN sum(accessions_num) = 0
             THEN 0
-          ELSE (sum(accessions_out_of_budget) / sum(accessions_num)) * 100 END AS value
+          ELSE (sum(accessions_regeneration) / sum(accessions_num)) * 100 END AS value
         FROM raw
         GROUP BY iteration, country_iso3, stakeholder
     ),
@@ -40,11 +40,11 @@ CREATE TABLE indicators.indicator22 as (
         SELECT
           iteration,
           country_iso3,
-          sum(accessions_out_of_budget)                                        AS accessions_out_of_budget,
+          sum(accessions_regeneration)                                        AS accessions_regeneration,
           sum(accessions_num)                                                  AS accessions_num,
           CASE WHEN sum(accessions_num) = 0
             THEN 0
-          ELSE (sum(accessions_out_of_budget) / sum(accessions_num)) * 100 END AS value
+          ELSE (sum(accessions_regeneration) / sum(accessions_num)) * 100 END AS value
         FROM stakeholder_raw
         GROUP BY iteration, country_iso3
     ),
@@ -63,12 +63,12 @@ CREATE TABLE indicators.indicator22 as (
     '2310' :: TEXT AS domain,
     country_iso3   AS wiews_region,
     stakeholder,
-    '22' :: TEXT   AS indicator,
+    '24' :: TEXT   AS indicator,
     'stk' :: TEXT  AS element,
     iteration :: TEXT,
     value,
     'per' :: TEXT  AS um,
-    accessions_out_of_budget,
+    accessions_regeneration,
     accessions_num,
     country_iso3,
     1 :: INTEGER   AS rank
@@ -79,12 +79,12 @@ CREATE TABLE indicators.indicator22 as (
     '2310' :: TEXT AS domain,
     country_iso3   AS wiews_region,
     'na'           AS stakeholder,
-    '22' :: TEXT   AS indicator,
+    '24' :: TEXT   AS indicator,
     'ind' :: TEXT  AS element,
     iteration :: TEXT,
     value,
     'per' :: TEXT  AS um,
-    accessions_out_of_budget,
+    accessions_regeneration,
     accessions_num,
     country_iso3,
     1 :: INTEGER   AS rank
@@ -95,14 +95,14 @@ CREATE TABLE indicators.indicator22 as (
     '2310' :: TEXT                                                       AS domain,
     w                                                                    AS wiews_region,
     'na'                                                                 AS stakeholder,
-    '22' :: TEXT                                                         AS indicator,
+    '24' :: TEXT                                                         AS indicator,
     'ind' :: TEXT                                                        AS element,
     iteration :: TEXT,
     CASE WHEN sum(accessions_num) = 0
       THEN 0
-    ELSE (sum(accessions_out_of_budget) / sum(accessions_num)) * 100 END AS value,
+    ELSE (sum(accessions_regeneration) / sum(accessions_num)) * 100 END AS value,
     'per' :: TEXT                                                        AS um,
-    sum(accessions_out_of_budget)                                        AS accessions_out_of_budget,
+    sum(accessions_regeneration)                                        AS accessions_regeneration,
     sum(accessions_num)                                                  AS accessions_num,
     'na'                                                                 AS country_iso3,
     rank
@@ -115,12 +115,12 @@ CREATE TABLE indicators.indicator22 as (
     '2310' :: TEXT AS domain,
     country_iso3   AS wiews_region,
     'na'           AS stakeholder,
-    '22' :: TEXT   AS indicator,
+    '24' :: TEXT   AS indicator,
     'nfp' :: TEXT  AS element,
     iteration :: TEXT,
     value,
     'per' :: TEXT  AS um,
-    NULL           AS accessions_out_of_budget,
+    NULL           AS accessions_regeneration,
     NULL           AS accessions_num,
     country_iso3,
     1 :: INTEGER   AS rank
@@ -131,12 +131,12 @@ CREATE TABLE indicators.indicator22 as (
     '2310' :: TEXT AS domain,
     w              AS wiews_region,
     'na'           AS stakeholder,
-    '22' :: TEXT   AS indicator,
+    '24' :: TEXT   AS indicator,
     'nfpa' :: TEXT AS element,
     iteration :: TEXT,
     avg(value)     AS value,
     'per' :: TEXT  AS um,
-    NULL           AS accessions_out_of_budget,
+    NULL           AS accessions_regeneration,
     NULL           AS accessions_num,
     'na'           AS country_iso3,
     rank
@@ -145,4 +145,5 @@ CREATE TABLE indicators.indicator22 as (
   GROUP BY iteration, w, rank
 
   ORDER BY rank, wiews_region, element
+
 );
