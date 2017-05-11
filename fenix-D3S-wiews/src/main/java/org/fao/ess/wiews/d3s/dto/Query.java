@@ -13,6 +13,8 @@ public enum Query {
     indicator22 ("select * from indicators.indicator22" ),
     indicator24 ("select * from indicators.indicator24" ),
 
+    indicator28 ("select * from indicators.indicator28" ),
+
     raw_indicator2 ("WITH\n" +
             "    raw AS (\n" +
             "      SELECT a.questionid,\n" +
@@ -293,6 +295,38 @@ public enum Query {
             "  JOIN ref_instab it ON (it.id = a.orgId)\n" +
             "WHERE a.approved = 1\n"+
             "ORDER BY a.iteration, c.iso, a.id"),
+
+
+    raw_indicator28 ("SELECT  * \n" +
+            "FROM \n" +
+            "  ( SELECT \n" +
+            "      a.iteration, \n" +
+            "      a.id                     AS answer_ID, \n" +
+            "      co.iso                   AS country, \n" +
+            "      it.wiews_instcode        AS stakeholder, \n" +
+            "      a.questionid :: TEXT  AS question_id, \n" +
+            "      c.subquestionid :: TEXT  AS subquestion_id, \n" +
+            "      CASE WHEN c.reference_id IS NOT NULL \n" +
+            "        THEN crop_name \n" +
+            "      ELSE answer_freetext END AS crop \n" +
+            "    FROM \n" +
+            "      answer a \n" +
+            "      FULL OUTER JOIN \n" +
+            "      answer_detail c \n" +
+            "        ON ( c.answerid = a.id AND \n" +
+            "             c.subquestionid IN ( 1102, 1103 ) )\n" +
+            "      FULL OUTER JOIN \n" +
+            "      ref_crop ref \n" +
+            "        ON ( ref.crop_id :: TEXT = c.reference_id :: TEXT AND \n" +
+            "             ref.lang = 'EN' ) \n" +
+            "      JOIN \n" +
+            "      ref_instab it \n" +
+            "        ON ( it.id = a.orgId ) \n" +
+            "      LEFT JOIN \n" +
+            "      ref_country co \n" +
+            "        ON ( co.country_id = a.country_id ) ) f \n" +
+            "WHERE \n" +
+            "  crop IS NOT NULL")
 
 
 
