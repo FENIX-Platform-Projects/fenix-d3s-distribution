@@ -1,7 +1,26 @@
 [
   {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "total":  false,
+      "filter" : {
+        "fao": {
+          "codes": [
+            {
+              "uid": "wiews_fao_region",
+              "codes": [ "5000" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
     "name": "filter",
-    "sid": [ { "uid": "indicator10" }],
+    "sid": [ { "uid": "indicator10" }, { "uid": "area_selection" } ],
     "parameters": {
       "columns": [
         "country",
@@ -27,13 +46,8 @@
             }
           ]
         },
-        "!country": {
-          "codes": [
-            {
-              "uid": "ISO3",
-              "codes": [ "na" ]
-            }
-          ]
+        "wiews_region" : {
+          "variable" : "required_countries"
         },
         "element": {
           "codes": [

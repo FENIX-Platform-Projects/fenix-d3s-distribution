@@ -1,12 +1,28 @@
 [
   {
+    "name": "addcolumn",
+    "sid": [ { "uid": "indicator3" } ],
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": { "EN": "Value" },
+        "subject": "value"
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "@@direct species" ]
+      }
+    }
+  },
+
+  {
     "name": "filter",
-    "sid": [ { "uid": "indicator3" }],
     "parameters": {
       "columns": [
         "country",
         "indicator",
-        "species",
+        "value",
         "threatened_species",
         "threatened_percentage",
         "um"

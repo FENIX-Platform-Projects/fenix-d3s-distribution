@@ -21,7 +21,6 @@
   {
     "name": "filter",
     "sid": [ { "uid": "indicator10" }, { "uid": "area_selection" } ],
-    "rid" : {"uid" : "indicator_data"},
     "parameters": {
       "columns": [
         "managed_sites",
@@ -60,11 +59,27 @@
   },
 
   {
+    "name": "addcolumn",
+    "rid" : {"uid" : "indicator_data"},
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": { "EN": "Item" },
+        "subject": "value"
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "0" ]
+      }
+    }
+  },
+
+  {
     "name" : "select",
-    "sid": [ { "uid": "indicator_data" } ],
     "parameters" : {
       "values" : {
-        "managed_sites" : null
+        "value" : "managed_sites"
       }
     }
   },
@@ -91,7 +106,7 @@
     "sid": [ { "uid": "indicator_data" } ],
     "parameters" : {
       "values" : {
-        "managed_sites" : "(total_sites-managed_sites)"
+        "value" : "(total_sites-managed_sites)"
       }
     }
   },

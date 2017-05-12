@@ -20,15 +20,30 @@
       }
     }
   },
+
   {
-    "name": "filter",
+    "name": "addcolumn",
     "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
     "parameters": {
-      "columns": [
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": { "EN": "Value" },
+        "subject": "value"
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "@@direct species - threatened_species" ]
+      }
+    }
+  },
 
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
         "wiews_region",
-        "species",
-        "threatened_species"
+        "value"
       ],
       "rows": {
         "indicator": {
@@ -58,18 +73,6 @@
             }
           ]
         }
-      }
-    }
-  },
-
-  {
-    "name": "select",
-    "rid":{"uid":"data_by_region"},
-    "parameters": {
-      "values": {
-        "wiews_region" : null,
-        "species": "species - threatened_species",
-        "threatened_species" : null
       }
     }
   }
