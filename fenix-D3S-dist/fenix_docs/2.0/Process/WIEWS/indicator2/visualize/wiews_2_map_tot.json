@@ -11,7 +11,7 @@
         "iso3": {
           "codes": [
             {
-              "uid": "wiews_fao_region",
+              "uid": "ISO3",
               "codes": [ "ALB" ]
             }
           ]

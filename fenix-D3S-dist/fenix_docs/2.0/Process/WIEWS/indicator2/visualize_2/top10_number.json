@@ -11,7 +11,7 @@
         "m49": {
           "codes": [
             {
-              "uid": "wiews_fao_region",
+              "uid": "wiews_m49_region_only",
               "codes": [ "5000" ]
             }
           ]
@@ -91,7 +91,7 @@
         "m49": {
           "codes": [
             {
-              "uid": "wiews_fao_region",
+              "uid": "wiews_m49_region_only",
               "codes": [ "5000" ]
             }
           ]

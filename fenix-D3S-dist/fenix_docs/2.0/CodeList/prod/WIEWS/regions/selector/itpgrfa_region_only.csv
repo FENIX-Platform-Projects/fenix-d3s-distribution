@@ -1,6 +1,5 @@
-
 {
-    "uid": "wiews_m49_regions",
+    "uid": "wiews_itpgrfa_region_only",
 	"version": null,
     "language": {
         "codes": [
@@ -14,7 +13,7 @@
 
     "languageDetails": null,
     "title": {
-        "EN": "M49 regions"
+        "EN": "ITPGRFA regions and countries"
     },
     "creationDate": null,
     "characterSet": {
@@ -117,34 +116,13 @@ dateFormat=dd/mm/yyyy
 codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 
-
 --data--
 @WITC@World + International Centers
 @1@World
-1@142@Asia 
-1@150@Europe 
-1@202@Sub-Saharan Africa 
-1@21@Northern America 
-1@9@Oceania 
-1@15@Northern Africa 
-1@419@Latin America and the Caribbean 
-142@145@Western Asia 
-142@143@Central Asia 
-142@30@Eastern Asia 
-142@34@Southern Asia 
-142@35@South-eastern Asia 
-150@154@Northern Europe
-150@155@Western Europe 
-150@151@Eastern Europe 
-150@39@Southern Europe 
-202@17@Middle Africa 
-202@14@Eastern Africa 
-202@11@Western Africa 
-202@18@Southern Africa 
-419@13@Central America
-419@29@Caribbean 
-419@5@South America 
-9@54@Melanesia 
-9@53@Australia and New Zealand 
-9@61@Polynesia 
-9@57@Micronesia 
+1@I001@Africa
+1@I002@Asia
+1@I003@Europe
+1@I004@Latin America and the Caribbean
+1@I005@Near East
+1@I006@North America
+1@I007@South West Pacific

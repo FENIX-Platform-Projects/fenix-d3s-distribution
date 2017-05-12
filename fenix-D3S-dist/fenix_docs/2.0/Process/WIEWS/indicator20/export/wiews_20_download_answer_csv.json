@@ -13,7 +13,7 @@
           "m49": {
             "codes": [
               {
-                "uid": "wiews_m49_regions",
+                "uid": "wiews_m49_region_only",
                 "codes": [ "WITC","150" ]
               }
             ]
@@ -21,7 +21,7 @@
           "fao": {
             "codes": [
               {
-                "uid": "wiews_fao_region",
+                "uid": "wiews_fao_region_only",
                 "codes": [ "5400" ]
               }
             ]

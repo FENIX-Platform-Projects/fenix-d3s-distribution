@@ -6,11 +6,11 @@
     "result" : false,
     "parameters": {
       "filter" : {
-        "m49": {
+        "sdg": {
           "codes": [
             {
-              "uid": "wiews_m49_regions",
-              "codes": [ "WITC","1" ]
+              "uid": "sd_region",
+              "codes": [ "744" ]
             }
           ]
         }

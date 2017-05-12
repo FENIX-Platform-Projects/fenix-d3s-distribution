@@ -12,7 +12,7 @@
         "fao": {
           "codes": [
             {
-              "uid": "wiews_fao_region",
+              "uid": "wiews_fao_region_only",
               "codes": [ "5000" ]
             }
           ]
