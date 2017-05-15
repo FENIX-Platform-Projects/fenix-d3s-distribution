@@ -303,7 +303,7 @@ UNION
     'na' :: TEXT as country,
     'na' :: TEXT as stakeholder,
     max(indicator) as indicator,
-    'ind_t' as element,
+    'ind_a' as element,
     iteration,
     'na' :: TEXT as crop,
     sum(value) as value,
