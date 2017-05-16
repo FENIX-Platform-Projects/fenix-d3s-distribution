@@ -1,0 +1,308 @@
+[
+  {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "top_10_recipients_sum"
+      },
+      {
+        "uid": "others"
+      }
+    ],
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_sector_recipient"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "!recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "298",
+                "498",
+                "798",
+                "89",
+                "589",
+                "889",
+                "189",
+                "289",
+                "389",
+                "380",
+                "489",
+                "789",
+                "689",
+                "619",
+                "679"
+              ]
+            }
+          ]
+        },
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2015"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_top_10_recipients_sum"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    },
+    "rid": {
+      "uid": "filtered_dataset"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "unitcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "Top Recipient Countries"
+    },
+    "rid": {
+      "uid": "top_10_recipients_sum"
+    }
+  },
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "filtered_dataset"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "unitcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "sum of all recipients"
+    },
+    "rid": {
+      "uid": "top_all_recipients_sum"
+    }
+  },
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "top_all_recipients_sum"
+      },
+      {
+        "uid": "top_10_recipients_sum"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "unitcode"
+          }
+        ],
+        [
+          {
+            "type": "id",
+            "value": "unitcode"
+          }
+        ]
+      ],
+      "values": []
+    },
+    "rid": {
+      "uid": "join_process_total_recipients"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "join_process_total_recipients"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": null
+      },
+      "value": {
+        "keys": [
+          "1 = 1"
+        ],
+        "values": [
+          "@@direct top_all_recipients_sum_value - top_10_recipients_sum_value"
+        ]
+      }
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "value",
+        "unitcode"
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "Other Recipients"
+    },
+    "rid": {
+      "uid": "others"
+    }
+  }
+]
