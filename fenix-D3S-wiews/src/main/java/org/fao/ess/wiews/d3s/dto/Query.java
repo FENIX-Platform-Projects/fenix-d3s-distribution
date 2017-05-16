@@ -105,7 +105,7 @@ public enum Query {
     raw_indicator16 ("SELECT  *\n" +
             "FROM\n" +
             "  ( SELECT\n" +
-            "      a.iteration,\n" +
+            "      a.iteration :: TEXT,\n" +
             "      a.id                     AS answer_ID,\n" +
             "      co.iso                   AS country,\n" +
             "      it.wiews_instcode        AS stakeholder,\n" +

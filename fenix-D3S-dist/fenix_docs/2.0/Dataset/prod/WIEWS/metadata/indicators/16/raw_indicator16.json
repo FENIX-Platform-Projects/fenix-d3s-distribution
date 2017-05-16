@@ -32,7 +32,7 @@
       },
 
       {
-        "id" : "country_iso3",
+        "id" : "country",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
         "dataType" : "code",

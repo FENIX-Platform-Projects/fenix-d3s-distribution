@@ -1,0 +1,172 @@
+[
+  {
+    "name": "wiews_area_filter",
+    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
+    "rid" : { "uid" : "area_selection" },
+    "result" : false,
+    "parameters": {
+      "total" : true,
+      "list":  "false",
+      "filter" : {
+
+        "fao": {
+          "codes": [
+            {
+              "uid": "wiews_fao_region_only",
+              "codes": [ "5100","5200","5300","5400" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+
+  {
+    "name": "filter",
+    "sid": [ { "uid": "indicator3" }, { "uid": "area_selection" } ],
+    "rid" : {"uid": "indicator_data"},
+    "parameters": {
+      "columns": [
+        "wiews_region",
+        "threatened_species",
+        "species"
+      ],
+      "rows": {
+        "indicator": {
+          "codes": [
+            {
+              "uid": "wiews_output_indicators",
+              "codes": [ "3_2" ]
+            }
+          ]
+        },
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        },
+        "wiews_region" : {
+          "variable" : "required_countries"
+        },
+        "element": {
+          "codes": [
+            {
+              "uid": "wiews_elements",
+              "codes": [ "ind" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+
+  {
+    "name": "addcolumn",
+    "sid": [ { "uid": "indicator_data" } ],
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "item",
+        "title": { "EN": "Item" },
+        "subject": "item",
+        "key" : true
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "Threatened" ]
+      }
+    }
+  },
+
+  {
+    "name": "addcolumn",
+    "rid" : { "uid" : "threatened_data" },
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": { "EN": "Value" },
+        "subject": "value"
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "@@direct threatened_species" ]
+      }
+    }
+  },
+
+  {
+    "name": "addcolumn",
+    "sid": [ { "uid": "indicator_data" } ],
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "item",
+        "title": { "EN": "Item" },
+        "subject": "item",
+        "key" : true
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "Not threatened" ]
+      }
+    }
+  },
+
+  {
+    "name": "addcolumn",
+    "rid" : { "uid" : "non_threatened_data" },
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": { "EN": "Value" },
+        "subject": "value"
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "@@direct species - threatened_species" ]
+      }
+    }
+  },
+
+  {
+    "name": "union",
+    "sid": [ { "uid": "threatened_data" }, { "uid": "non_threatened_data" } ],
+    "parameters": {}
+  },
+
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "id" : "um",
+        "title" : { "EN" : "Measurement unit"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
+        "subject":"um"
+      },
+      "value": {
+        "keys": [ "1=1" ],
+        "values": [ "num" ]
+      }
+    }
+  },
+
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "wiews_region",
+        "item",
+        "value",
+        "um"
+      ]
+    }
+  }
+
+]
