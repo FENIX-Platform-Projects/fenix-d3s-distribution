@@ -98,47 +98,52 @@ codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 
 --data--
-@1012@Adaptation Fund
-@913@African Development Bank
-@914@African Development Fund
-@953@Arab Bank for Economic Development in Africa
+
+@913@AfDB
+@914@AfDF
+@130@Algeria
 @921@Arab Fund (AFESD)
+@915@AsDB
 @916@AsDB Special Funds
 @801@Australia
 @1@Austria
+@953@BADEA
 @2@Belgium
+@1601@Bill & Melinda Gates Foundation
 @72@Bulgaria
 @301@Canada
-@906@Caribbean Development Bank
+@906@CarDB
 @732@Chinese Taipei
-@1011@Climate Investment Funds
-@1013@Council of Europe Development Bank
+@1011@Climate Investment Funds [CIF]
 @62@Croatia
 @30@Cyprus
 @68@Czech Republic
 @3@Denmark
+@990@EBRD
 @82@Estonia
 @918@EU Institutions
 @18@Finland
-@932@Food and Agriculture Organisation
 @4@France
+@1311@GAVI
+@811@GEF
 @5@Germany
-@1311@Global Alliance for Vaccines and Immunization
-@811@Global Environment Facility
 @1312@Global Fund
-@1313@Global Green Growth Institute
+@1313@Global Green Growth Institute  (GGGI)
 @40@Greece
 @75@Hungary
+@944@IAEA
+@901@IBRD
 @20@Iceland
-@912@IDB Special Fund
+@905@IDA
+@909@IDB
+@912@IDB Sp.Fund
 @988@IFAD
+@903@IFC
+@907@IMF
 @958@IMF (Concessional Trust Funds)
-@909@Inter-American Development Bank
-@944@International Atomic Energy Agency
-@905@International Development Association
-@940@International Labour Organisation
+@543@Iraq
 @21@Ireland
-@976@Islamic Development Bank
+@976@Isl.Dev Bank
 @546@Israel
 @6@Italy
 @701@Japan
@@ -146,6 +151,7 @@ titleColumnIndex_EN=3
 @742@Korea
 @552@Kuwait (KFAED)
 @83@Latvia
+@133@Libya
 @70@Liechtenstein
 @84@Lithuania
 @22@Luxembourg
@@ -153,12 +159,13 @@ titleColumnIndex_EN=3
 @812@Montreal Protocol
 @7@Netherlands
 @820@New Zealand
-@104@Nordic Development Fund
+@104@Nordic Dev.Fund
 @8@Norway
-@951@OPEC Fund for International Development
+@951@OFID
 @978@OSCE
 @76@Poland
 @9@Portugal
+@561@Qatar
 @77@Romania
 @87@Russia
 @566@Saudi Arabia
@@ -168,8 +175,8 @@ titleColumnIndex_EN=3
 @10@Sweden
 @11@Switzerland
 @764@Thailand
-@765@Timor Leste
 @55@Turkey
+@992@UN Agencies
 @971@UNAIDS
 @959@UNDP
 @948@UNECE
@@ -180,96 +187,8 @@ titleColumnIndex_EN=3
 @576@United Arab Emirates
 @12@United Kingdom
 @302@United States
-@923@UN Peacebuilding Fund
+@923@UNPBF
 @964@UNRWA
+@960@UNTA
 @966@WFP
-@928@World Health Organisation
-@751@Malaysia
-@655@Maldives
-@255@Mali
-@45@Malta
-@859@Marshall Islands
-@256@Mauritania
-@257@Mauritius
-@258@Mayotte
-@358@Mexico
-@860@Micronesia
-@589@Middle East, regional
-@93@Moldova
-@753@Mongolia
-@65@Montenegro
-@385@Montserrat
-@136@Morocco
-@259@Mozambique
-@635@Myanmar
-@275@Namibia
-@845@Nauru
-@660@Nepal
-@364@Nicaragua
-@260@Niger
-@261@Nigeria
-@856@Niue
-@389@North & Central America, regional
-@189@North of Sahara, regional
-@889@Oceania, regional
-@558@Oman
-@665@Pakistan
-@861@Palau
-@366@Panama
-@862@Papua New Guinea
-@451@Paraguay
-@454@Peru
-@755@Philippines
-@266@Rwanda
-@276@Saint Helena
-@382@Saint Kitts and Nevis
-@383@Saint Lucia
-@384@Saint Vincent and the Grenadines
-@880@Samoa
-@268@Sao Tome and Principe
-@566@Saudi Arabia
-@269@Senegal
-@63@Serbia
-@270@Seychelles
-@272@Sierra Leone
-@61@Slovenia
-@866@Solomon Islands
-@273@Somalia
-@218@South Africa
-@489@South America, regional
-@679@South Asia, regional
-@689@South & Central Asia, regional
-@289@South of Sahara, regional
-@279@South Sudan
-@640@Sri Lanka
-@88@States Ex-Yugoslavia
-@278@Sudan
-@457@Suriname
-@280@Swaziland
-@573@Syrian Arab Republic
-@615@Tajikistan
-@282@Tanzania
-@764@Thailand
-@765@Timor-Leste
-@283@Togo
-@868@Tokelau
-@870@Tonga
-@375@Trinidad and Tobago
-@139@Tunisia
-@55@Turkey
-@616@Turkmenistan
-@387@Turks and Caicos Islands
-@872@Tuvalu
-@285@Uganda
-@85@Ukraine
-@460@Uruguay
-@617@Uzbekistan
-@854@Vanuatu
-@463@Venezuela
-@769@Viet Nam
-@876@Wallis and Futuna
-@550@West Bank and Gaza Strip
-@380@West Indies, regional
-@580@Yemen
-@288@Zambia
-@265@Zimbabwe
+@928@WHO
