@@ -296,7 +296,7 @@
       },
       "value": {
         "keys":  ["1 = 1"],
-        "values":[" ( sector_oda_value / total_oda_value )*100"]
+        "values":["@@direct ( sector_oda_value / total_oda_value )*100"]
 
       }
     },

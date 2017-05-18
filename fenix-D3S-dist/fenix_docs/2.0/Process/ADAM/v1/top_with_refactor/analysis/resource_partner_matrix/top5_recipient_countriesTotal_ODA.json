@@ -1,0 +1,146 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_resource_matrix_oda"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "value"
+      ],
+      "rows": {
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "302"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        }
+
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 5,
+      "page": 1
+    },
+    "rid":{"uid":"top_5"}
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_resource_matrix_oda"
+      },
+      {
+        "uid": "top_5"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "year",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "302"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": 2000,
+              "to": 2013
+            }
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "recipientcode":{
+          "tables":[
+            {
+              "uid":"top_5",
+              "column":"recipientcode"
+            }
+          ]
+        },
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        }
+
+      }
+    }
+  }
+]

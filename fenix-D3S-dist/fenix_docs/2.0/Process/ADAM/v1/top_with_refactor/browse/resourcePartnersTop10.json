@@ -24,6 +24,7 @@
             }
           ]
         },
+
         "year":{
           "time":[
             {
@@ -42,14 +43,14 @@
       }
     },
     "rid":{
-      "uid":"filter_subsectors"
+      "uid":"filter_donor"
     }
   },
   {
     "name":"group",
     "parameters":{
       "by":[
-        "purposecode"
+        "donorcode"
       ],
       "aggregations":[
         {
@@ -63,8 +64,13 @@
             "unitcode"
           ],
           "rule":"max"
+        },
+        {
+          "columns":[
+            "flowcategory"
+          ],
+          "rule":"max"
         }
-
       ]
     }
   },

@@ -1,42 +1,58 @@
 [
   {
     "name": "wiews_area_filter",
-    "sid": [ { "uid": "wiews_region_mapping" },{ "uid": "wiews_region_countries" } ],
-    "rid" : { "uid" : "area_selection" },
-    "result" : false,
+    "sid": [
+      {
+        "uid": "wiews_region_mapping"
+      },
+      {
+        "uid": "wiews_region_countries"
+      }
+    ],
+    "rid": {
+      "uid": "area_selection"
+    },
+    "result": false,
     "parameters": {
-      "total" : false,
-      "list":true,
-      "filter" : {
+      "total": false,
+      "list": true,
+      "filter": {
         "m49": {
           "codes": [
             {
               "uid": "wiews_m49_region_only",
-              "codes": [ "1" ]
+              "codes": [
+                "1"
+              ]
             }
           ]
         }
       }
     }
   },
-
   {
-    "sid": [ { "uid": "indicator16" }, { "uid": "area_selection" } ],
-    "name" : "select",
-    "parameters" : {
-      "query" : "where wiews_region in <<required_countries>>",
-      "values" : {
-        "iteration" : null,
-        "domain" : null,
-        "element" : null,
-        "country" : null,
-        "stakeholder" : null,
-        "value" : null,
-        "um" : null
+    "sid": [
+      {
+        "uid": "indicator16"
+      },
+      {
+        "uid": "area_selection"
+      }
+    ],
+    "name": "select",
+    "parameters": {
+      "query": "where wiews_region in <<required_countries>>",
+      "values": {
+        "iteration": null,
+        "domain": null,
+        "element": null,
+        "country": null,
+        "stakeholder": null,
+        "value": null,
+        "um": null
       }
     }
   },
-
   {
     "name": "filter",
     "parameters": {
@@ -50,7 +66,9 @@
           "codes": [
             {
               "uid": "wiews_iteration",
-              "codes": [ "1" ]
+              "codes": [
+                "1"
+              ]
             }
           ]
         },
@@ -58,16 +76,13 @@
           "codes": [
             {
               "uid": "wiews_elements",
-              "codes": [ "ind_a" ]
+              "codes": [
+                "ind_a"
+              ]
             }
           ]
         }
-
       }
     }
   }
-
-
-
-
 ]

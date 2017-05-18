@@ -239,7 +239,7 @@
           "1 = 1"
         ],
         "values": [
-          "top_all_donors_sum_value - top_10_donors_sum_value"
+          "@@direct top_all_donors_sum_value - top_10_donors_sum_value"
         ]
       }
     }

@@ -290,7 +290,7 @@
           "1 = 1"
         ],
         "values": [
-          " ( subsector_donor_oda_value  / sector_donor_oda_value )*100"
+          "@@direct ( subsector_donor_oda_value  / sector_donor_oda_value )*100"
         ]
       }
     }
@@ -572,7 +572,7 @@
           "1 = 1"
         ],
         "values": [
-          " ( aggregated_oecd_value / count_dac_members_value_count )"
+          "@@direct ( aggregated_oecd_value / count_dac_members_value_count )"
         ]
       }
     },

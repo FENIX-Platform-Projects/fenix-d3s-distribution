@@ -269,7 +269,7 @@
           "1 = 1"
         ],
         "values": [
-          "top_all_recipients_sum_value - top_10_recipients_sum_value"
+          "@@direct top_all_recipients_sum_value - top_10_recipients_sum_value"
         ]
       }
     }

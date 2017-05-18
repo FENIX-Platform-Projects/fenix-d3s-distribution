@@ -28,6 +28,17 @@
               }
             ]
           },
+          "fao_region": {
+            "codes": [
+              {
+                "uid": "crs_fao_regions",
+                "version": "2016",
+                "codes": [
+                  "RAP"
+                ]
+              }
+            ]
+          },
           "recipientcode": {
             "codes": [
               {

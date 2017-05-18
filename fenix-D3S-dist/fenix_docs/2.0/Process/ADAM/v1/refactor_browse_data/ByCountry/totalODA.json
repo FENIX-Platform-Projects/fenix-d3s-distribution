@@ -270,7 +270,7 @@
           "1 = 1"
         ],
         "values":[
-          " ( total_country_subsector_oda_value / total_country_sector_oda_value )*100"
+          "@@direct ( total_country_subsector_oda_value / total_country_sector_oda_value )*100"
         ]
       }
     },

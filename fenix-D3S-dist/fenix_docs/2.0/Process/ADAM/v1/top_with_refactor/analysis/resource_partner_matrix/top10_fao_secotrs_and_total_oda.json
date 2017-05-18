@@ -1,18 +1,16 @@
 [
-
   {
     "name": "union",
     "sid": [
       {
-        "uid": "total_oda"
+        "uid": "fao_sector"
       },
       {
-        "uid": "country_oda"
+       "uid":"total_oda"
       },
       {
-        "uid":"percentage_ODA"
+        "uid":"percentage_oda"
       }
-
     ],
     "parameters": {
     },
@@ -24,37 +22,35 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_usd_aggregation_table"
+        "uid": "adam_resource_matrix_oda"
       }
     ],
     "parameters": {
       "columns": [
-        "year",
-        "value",
-        "unitcode"
+        "donorcode",
+        "value"
       ],
       "rows": {
-        "oda": {
-          "enumeration": [
-            "usd_commitment"
-          ]
-        },
         "recipientcode": {
           "codes": [
             {
               "uid": "crs_recipients",
               "version": "2016",
               "codes": [
-                "998"
+                "130"
               ]
             }
           ]
         },
-        "year": {
-          "time": [
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "value": {
+          "number": [
             {
-              "from": 2000,
-              "to": 2013
+              "from": 0.00001
             }
           ]
         }
@@ -65,7 +61,83 @@
     "name": "group",
     "parameters": {
       "by": [
-        "year"
+        "donorcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    },
+    "rid":{"uid":"top_10"}
+  },
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_resource_matrix_oda"
+      },
+      {
+        "uid": "top_10"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "donorcode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "donorcode": {
+          "tables":[
+            {
+              "uid":"top_10",
+              "column":"donorcode"
+            }
+          ]
+        },
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "donorcode"
       ],
       "aggregations": [
         {
@@ -78,12 +150,10 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "MAX"
         }
       ]
-    },
-    "rid":{"uid":"total_ODA"}
-
+    }
   },
   {
     "name": "addcolumn",
@@ -106,25 +176,26 @@
         },
         "subject": null
       },
-      "value": "TOTAL ODA in the country"
+      "value": "ODA in FAO Sectors"
     },
-    "rid": {
-      "uid": "total_oda"
-    }
-  },
+    "rid":{"uid":"fao_sector"}
 
+  },
 
 
   {
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_usd_aggregation_table"
+        "uid": "adam_resource_matrix_oda"
+      },
+      {
+        "uid": "top_10"
       }
     ],
     "parameters": {
       "columns": [
-        "year",
+        "donorcode",
         "value",
         "unitcode"
       ],
@@ -134,46 +205,22 @@
             "usd_commitment"
           ]
         },
-        "parentsector_code": {
-          "codes": [
+        "donorcode": {
+          "tables":[
             {
-              "uid" : "crs_dac",
-              "version" : "2016",
-              "codes": [
-                "430"
-              ]
-            }
-          ]
-        },
-        "recipientcode": {
-          "codes": [
-            {
-              "uid": "crs_recipients",
-              "version": "2016",
-              "codes": [
-                "998"
-              ]
-            }
-          ]
-        },
-
-        "year": {
-          "time": [
-            {
-              "from": 2000,
-              "to": 2013
+              "uid":"top_10",
+              "column":"donorcode"
             }
           ]
         }
       }
     }
-
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "year"
+        "donorcode"
       ],
       "aggregations": [
         {
@@ -186,11 +233,10 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "MAX"
         }
       ]
     }
-
   },
   {
     "name": "addcolumn",
@@ -213,10 +259,11 @@
         },
         "subject": null
       },
-      "value": "country ODA"
+      "value": "Total ODA"
     },
-    "rid":{"uid":"country_oda"}
+    "rid":{"uid":"total_oda"}
   },
+
   {
     "name": "join",
     "sid": [
@@ -224,22 +271,21 @@
         "uid": "total_oda"
       },
       {
-        "uid": "country_oda"
+        "uid": "fao_sector"
       }
     ],
     "parameters": {
       "joins": [
         [
-
           {
             "type": "id",
-            "value": "year"
+            "value": "donorcode"
           }
         ],
         [
           {
             "type": "id",
-            "value": "year"
+            "value": "donorcode"
           }
 
         ]
@@ -257,54 +303,38 @@
         "dataType": "number",
         "id": "value",
         "title": {
-          "EN": "Value"
+          "EN": "FAO Sector (%)"
         },
         "subject": null
       },
       "value": {
         "keys":  ["1 = 1"],
-        "values":["@@direct ( country_oda_value / total_oda_value )*100"]
+        "values":["@@direct ( fao_sector_value / total_oda_value )*100"]
 
       }
-    },
-    "rid": {
-      "uid": "percentage_Value"
     }
   },
   {
-    "name": "filter",
+    "name": "addcolumn",
     "parameters": {
-      "columns": [
-        "year",
-        "value"
-      ],
-      "rows": {}
-    },
-    "rid": {
-      "uid": "percentage_with_two_values"
+      "column": {
+        "id": "unitcode",
+        "title": {
+          "EN": "Measurement Unit"
+        },
+        "domain": {
+          "codes": [{
+            "idCodeList": "crs_units",
+            "version": "2016",
+            "level": 1
+          }]
+        },
+        "dataType": "code",
+        "subject": null
+      },
+      "value": "percentage"
     }
   },
-  {
-  "name": "addcolumn",
-  "parameters": {
-    "column": {
-      "id": "unitcode",
-      "title": {
-        "EN": "Measurement Unit"
-      },
-      "domain": {
-        "codes": [{
-          "idCodeList": "crs_units",
-          "version": "2016",
-          "level": 1
-        }]
-      },
-      "dataType": "code",
-      "subject": "um"
-    },
-    "value": "percentage"
-  }
-},
   {
     "name": "addcolumn",
     "parameters": {
@@ -326,17 +356,24 @@
         },
         "subject": null
       },
-      "value": "Percentage"
+      "value": "Percentage oda"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "donorcode",
+        "value",
+        "unitcode",
+        "indicator"
+      ],
+      "rows": {
+      }
     },
     "rid": {
-      "uid": "percentage_ODA"
+      "uid": "percentage_oda"
     }
   }
-
-
-
-
-
-
-
 ]

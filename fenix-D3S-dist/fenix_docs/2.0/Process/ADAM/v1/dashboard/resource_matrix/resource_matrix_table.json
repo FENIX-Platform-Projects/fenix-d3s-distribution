@@ -9,17 +9,14 @@
         "uid": "related_oda"
       },
       {
-        "uid":"percentage_oda"
+        "uid": "percentage_oda"
       }
-
     ],
-    "parameters": {
-    },
-    "rid":{"uid":"union_process"}
-
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
+    }
   },
-
-
   {
     "name": "filter",
     "sid": [
@@ -35,13 +32,13 @@
         "unitcode"
       ],
       "rows": {
-        "donorcode": {
+        "recipientcode": {
           "codes": [
             {
-              "uid": "crs_donors",
+              "uid": "crs_recipients",
               "version": "2016",
               "codes": [
-                "302"
+                "625"
               ]
             }
           ]
@@ -49,8 +46,8 @@
         "year": {
           "time": [
             {
-              "from": 2000,
-              "to": 2013
+              "from": "2000",
+              "to": "2015"
             }
           ]
         },
@@ -60,6 +57,9 @@
           ]
         }
       }
+    },
+    "rid": {
+      "uid": "filter_all_subsectors"
     }
   },
   {
@@ -94,6 +94,7 @@
       "column": {
         "dataType": "text",
         "id": "indicator",
+        "key": true,
         "title": {
           "EN": "Indicator"
         },
@@ -109,13 +110,12 @@
         },
         "subject": null
       },
-      "value": "TOTAL ODA"
+      "value": "Total ODA (mil $)"
     },
     "rid": {
       "uid": "total_oda"
     }
   },
-
   {
     "name": "filter",
     "sid": [
@@ -131,13 +131,13 @@
         "unitcode"
       ],
       "rows": {
-        "donorcode": {
+        "recipientcode": {
           "codes": [
             {
-              "uid": "crs_donors",
+              "uid": "crs_recipients",
               "version": "2016",
               "codes": [
-                "302"
+                "625"
               ]
             }
           ]
@@ -145,8 +145,8 @@
         "year": {
           "time": [
             {
-              "from": 2000,
-              "to": 2013
+              "from": "2000",
+              "to": "2015"
             }
           ]
         },
@@ -161,6 +161,9 @@
           ]
         }
       }
+    },
+    "rid": {
+      "uid": "filter_faosubsectors"
     }
   },
   {
@@ -181,16 +184,18 @@
           "columns": [
             "unitcode"
           ],
-          "rule": "first"
+          "rule": "max"
         }
       ]
-    }},
+    }
+  },
   {
     "name": "addcolumn",
     "parameters": {
       "column": {
         "dataType": "text",
         "id": "indicator",
+        "key": true,
         "title": {
           "EN": "Indicator"
         },
@@ -206,7 +211,7 @@
         },
         "subject": null
       },
-      "value": "semi oda"
+      "value": "ODA in FAO sectors (mil $)"
     },
     "rid": {
       "uid": "related_oda"
@@ -225,7 +230,6 @@
     "parameters": {
       "joins": [
         [
-
           {
             "type": "id",
             "value": "recipientcode"
@@ -244,17 +248,21 @@
             "type": "id",
             "value": "donorcode"
           }
-
         ]
       ],
-      "values": [
-      ]
+      "values": []
     },
-    "rid":{"uid":"join_process"}
+    "rid": {
+      "uid": "join_process"
+    }
   },
   {
     "name": "addcolumn",
-    "sid":[{"uid":"join_process"}],
+    "sid": [
+      {
+        "uid": "join_process"
+      }
+    ],
     "parameters": {
       "column": {
         "dataType": "number",
@@ -265,9 +273,12 @@
         "subject": null
       },
       "value": {
-        "keys":  ["1 = 1"],
-        "values":[" ( related_oda_value / total_oda_value )*100"]
-
+        "keys": [
+          "1 = 1"
+        ],
+        "values": [
+          "@@direct ( related_oda_value / total_oda_value )*100"
+        ]
       }
     }
   },
@@ -280,11 +291,13 @@
           "EN": "Measurement Unit"
         },
         "domain": {
-          "codes": [{
-            "idCodeList": "crs_units",
-            "version": "2016",
-            "level": 1
-          }]
+          "codes": [
+            {
+              "idCodeList": "crs_units",
+              "version": "2016",
+              "level": 1
+            }
+          ]
         },
         "dataType": "code",
         "subject": null
@@ -298,6 +311,7 @@
       "column": {
         "dataType": "text",
         "id": "indicator",
+        "key": true,
         "title": {
           "EN": "Indicator"
         },
@@ -313,11 +327,9 @@
         },
         "subject": null
       },
-      "value": "Percentage oda"
+      "value": "FAO Sectors (%)"
     }
-
   },
-
   {
     "name": "filter",
     "parameters": {
@@ -328,13 +340,39 @@
         "unitcode",
         "indicator"
       ],
-      "rows": {
-      }
+      "rows": {}
     },
     "rid": {
       "uid": "percentage_oda"
     }
+  },
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "union_process"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "recipientcode",
+        "donorcode",
+        "indicator"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        }
+      ]
+    }
   }
-
-
 ]

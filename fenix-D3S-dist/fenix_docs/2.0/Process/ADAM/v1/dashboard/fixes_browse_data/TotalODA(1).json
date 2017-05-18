@@ -339,7 +339,7 @@
           "1=1"
         ],
         "values": [
-          "(total_sector_oda_value/total_oda_value)*100"
+          "@@direct (total_sector_oda_value/total_oda_value)*100"
         ]
       }
     },

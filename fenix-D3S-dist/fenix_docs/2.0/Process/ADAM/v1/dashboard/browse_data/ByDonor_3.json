@@ -295,7 +295,7 @@
       },
       "value": {
         "keys":  ["1 = 1"],
-        "values":[" ( subsector_donor_oda_value / sector_oda_value)*100"]
+        "values":["@@direct ( subsector_donor_oda_value / sector_oda_value)*100"]
 
       }
     }
@@ -586,7 +586,7 @@
       },
       "value": {
         "keys":  ["1 = 1"],
-        "values":[" ( aggregated_oecd_value / count_dac_members_value_count )"]
+        "values":["@@direct ( aggregated_oecd_value / count_dac_members_value_count )"]
       }
     },
     "rid": {

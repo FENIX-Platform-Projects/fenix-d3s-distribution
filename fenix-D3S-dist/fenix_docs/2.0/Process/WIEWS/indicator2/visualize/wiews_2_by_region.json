@@ -20,7 +20,7 @@
         "fao": {
           "codes": [
             {
-              "uid": "wiews_fao_region_only",
+              "uid": "wiews_fao_region",
               "codes": [
                 "5100",
                 "5200",
@@ -57,7 +57,7 @@
             {
               "uid": "wiews_output_indicators",
               "codes": [
-                "2_2"
+                "2_1"
               ]
             }
           ]

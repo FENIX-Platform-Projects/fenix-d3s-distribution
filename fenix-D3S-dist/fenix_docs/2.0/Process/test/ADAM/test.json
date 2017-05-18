@@ -1,0 +1,750 @@
+{
+  "metadata": {
+    "dsd": {
+      "columns": [
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "Recipient Country"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2016",
+                "idCodeList": "crs_recipients",
+                "extendedName": {
+                  "EN": "OECD Recipients"
+                }
+              }
+            ]
+          },
+          "key": true,
+          "id": "recipientcode"
+        },
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "Resource Partner"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2016",
+                "idCodeList": "crs_donors",
+                "extendedName": {
+                  "EN": "OECD Donors"
+                }
+              }
+            ]
+          },
+          "key": true,
+          "id": "donorcode"
+        },
+        {
+          "dataType": "text",
+          "title": {
+            "EN": "Recipient Country"
+          },
+          "virtual": false,
+          "transposed": false,
+          "key": false,
+          "id": "recipientcode_EN"
+        },
+        {
+          "dataType": "text",
+          "title": {
+            "EN": "Resource Partner"
+          },
+          "virtual": false,
+          "transposed": false,
+          "key": false,
+          "id": "donorcode_EN"
+        },
+        {
+          "dataType": "number",
+          "title": {
+            "EN": "Value"
+          },
+          "subject": "value",
+          "key": false,
+          "id": "total_oda_value"
+        },
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "Measurement unit"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2016",
+                "idCodeList": "crs_units",
+                "extendedName": {
+                  "EN": "OECD Units"
+                }
+              }
+            ]
+          },
+          "subject": "um",
+          "key": false,
+          "id": "total_oda_unitcode"
+        },
+        {
+          "dataType": "text",
+          "title": {
+            "EN": "Measurement unit"
+          },
+          "virtual": false,
+          "transposed": false,
+          "key": false,
+          "id": "total_oda_unitcode_EN"
+        },
+        {
+          "dataType": "text",
+          "title": {
+            "EN": "Indicator"
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "adam_processes",
+                "extendedName": {
+                  "EN": "Adam Processes"
+                }
+              }
+            ]
+          },
+          "key": true,
+          "id": "total_oda_indicator"
+        },
+        {
+          "dataType": "number",
+          "title": {
+            "EN": "Value"
+          },
+          "subject": "value",
+          "key": false,
+          "id": "related_oda_value"
+        },
+        {
+          "dataType": "code",
+          "title": {
+            "EN": "Measurement unit"
+          },
+          "domain": {
+            "codes": [
+              {
+                "version": "2016",
+                "idCodeList": "crs_units",
+                "extendedName": {
+                  "EN": "OECD Units"
+                }
+              }
+            ]
+          },
+          "subject": "um",
+          "key": false,
+          "id": "related_oda_unitcode"
+        },
+        {
+          "dataType": "text",
+          "title": {
+            "EN": "Measurement unit"
+          },
+          "virtual": false,
+          "transposed": false,
+          "key": false,
+          "id": "related_oda_unitcode_EN"
+        },
+        {
+          "dataType": "text",
+          "title": {
+            "EN": "Indicator"
+          },
+          "domain": {
+            "codes": [
+              {
+                "idCodeList": "adam_processes",
+                "extendedName": {
+                  "EN": "Adam Processes"
+                }
+              }
+            ]
+          },
+          "key": true,
+          "id": "related_oda_indicator"
+        }
+      ],
+      "contextSystem": "D3P"
+    },
+    "uid": "join_process",
+    "meContent": {
+      "resourceRepresentationType": "dataset",
+      "resourceRepresentationTypeLabel": {
+        "EN": "Dataset"
+      }
+    }
+  },
+  "data": [
+    [
+      "625",
+      "76",
+      "Afghanistan",
+      "Poland",
+      5.3134349,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.3396096,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "20",
+      "Afghanistan",
+      "Iceland",
+      4.313693000000001,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.5748299,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "22",
+      "Afghanistan",
+      "Luxembourg",
+      40.249642363999996,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      11.605564,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "3",
+      "Afghanistan",
+      "Denmark",
+      819.2070770629998,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      135.644562665,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "576",
+      "Afghanistan",
+      "United Arab Emirates",
+      369.923926508,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      26.719786639999995,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "820",
+      "Afghanistan",
+      "New Zealand",
+      96.40141923000002,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      14.4630844,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "963",
+      "Afghanistan",
+      "UNICEF",
+      419.08907631,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      46.93549998,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "68",
+      "Afghanistan",
+      "Czech Republic",
+      37.980983974999994,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      3.98751962,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "5",
+      "Afghanistan",
+      "Germany",
+      4898.069751649,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      498.20237023000004,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "916",
+      "Afghanistan",
+      "AsDB Special Funds",
+      2091.9032618100005,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      242.76500000000001,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "82",
+      "Afghanistan",
+      "Estonia",
+      7.3296293,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.4673762,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "301",
+      "Afghanistan",
+      "Canada",
+      2407.274615715,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      361.07167241999997,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "4",
+      "Afghanistan",
+      "France",
+      539.026327168,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      156.99315249699998,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "801",
+      "Afghanistan",
+      "Australia",
+      1242.435487313,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      356.313462908,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "12",
+      "Afghanistan",
+      "United Kingdom",
+      3438.4423680626005,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      353.776496261,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "50",
+      "Afghanistan",
+      "Spain",
+      362.05955316499995,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      49.180578601,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "69",
+      "Afghanistan",
+      "Slovak Republic",
+      1.15049,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.00133,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "959",
+      "Afghanistan",
+      "UNDP",
+      138.83808211000002,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      12.786023110000002,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "988",
+      "Afghanistan",
+      "IFAD",
+      136.35778,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      126.27605,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "8",
+      "Afghanistan",
+      "Norway",
+      1535.3665502209997,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      289.35419466999997,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "18",
+      "Afghanistan",
+      "Finland",
+      409.436255968,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      34.545465670000006,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "2",
+      "Afghanistan",
+      "Belgium",
+      143.431931985,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      29.41318818,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "84",
+      "Afghanistan",
+      "Lithuania",
+      0.0741162,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.0356898,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "976",
+      "Afghanistan",
+      "Islamic Development Bank",
+      77.93100000000001,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      10.8,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "811",
+      "Afghanistan",
+      "Global Environment Facility",
+      28.391820000000003,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      26.565820000000002,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "1",
+      "Afghanistan",
+      "Austria",
+      63.887327074999995,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.35609559999999996,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "7",
+      "Afghanistan",
+      "Netherlands",
+      1633.4338473229998,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      146.81470955299997,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "61",
+      "Afghanistan",
+      "Slovenia",
+      2.2176525899999997,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.36246820999999996,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "701",
+      "Afghanistan",
+      "Japan",
+      4955.147531338999,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      718.4832749509999,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "932",
+      "Afghanistan",
+      "Food and Agriculture Organisation",
+      0.56535088,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.56535088,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "6",
+      "Afghanistan",
+      "Italy",
+      844.1474081340002,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      105.05279559000002,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "11",
+      "Afghanistan",
+      "Switzerland",
+      356.03177464500004,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      95.03951323000001,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "10",
+      "Afghanistan",
+      "Sweden",
+      1103.111452319,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      28.050599577999996,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "302",
+      "Afghanistan",
+      "United States",
+      29970.155305000004,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      3895.738952,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "40",
+      "Afghanistan",
+      "Greece",
+      103.50202173,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      2.7179767900000003,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "918",
+      "Afghanistan",
+      "EU Institutions",
+      4734.505355331,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      928.659795789,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "928",
+      "Afghanistan",
+      "World Health Organisation",
+      10.055484270000001,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      0.08986612000000001,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "742",
+      "Afghanistan",
+      "Korea",
+      439.87295600000004,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      69.729294,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "905",
+      "Afghanistan",
+      "International Development Association",
+      3367.1890013900006,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      365.45435000000003,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ],
+    [
+      "625",
+      "21",
+      "Afghanistan",
+      "Ireland",
+      86.13834229199998,
+      "million_usd",
+      "Million USD",
+      "Total ODA (mil $)",
+      18.414774969999996,
+      "million_usd",
+      "Million USD",
+      "ODA in FAO sectors (mil $)"
+    ]
+  ],
+}

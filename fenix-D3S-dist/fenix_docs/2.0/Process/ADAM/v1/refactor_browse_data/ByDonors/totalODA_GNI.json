@@ -256,7 +256,7 @@
           "1 = 1"
         ],
         "values": [
-          " ( total_donor_oda_value / gni_donor_oda_value)*100"
+          "@@direct ( total_donor_oda_value / gni_donor_oda_value)*100"
         ]
       }
     }
@@ -497,7 +497,7 @@
           "1 = 1"
         ],
         "values": [
-          " ( all_subsectors_sum_value / GNI_sum_value)*100"
+          "@@direct ( all_subsectors_sum_value / GNI_sum_value)*100"
         ]
       }
     }
