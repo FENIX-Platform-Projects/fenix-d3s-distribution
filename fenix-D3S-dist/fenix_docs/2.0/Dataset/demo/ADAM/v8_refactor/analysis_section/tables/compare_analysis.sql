@@ -2,6 +2,7 @@ create table compare_analysis as (
    select
       oda,
       donorcode,
+      fao_region,
       recipientcode,
       parentsector_code,
       purposecode,
@@ -18,10 +19,12 @@ create table compare_analysis as (
     recipientcode != 'NA' AND
     parentsector_code != 'NA' AND
     purposecode  != 'NA' AND
-    fao_sector != 'NA'
+    fao_sector != 'NA' AND
+    fao_region!= 'NA'
    group by
       oda,
       donorcode,
+      fao_region,
       recipientcode,
       parentsector_code,
       purposecode,
@@ -30,6 +33,7 @@ create table compare_analysis as (
    order by
       oda,
       donorcode,
+      fao_region,
       recipientcode,
       parentsector_code,
       purposecode,

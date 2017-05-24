@@ -40,6 +40,8 @@ public class AdamAggregatedCacheListener implements DatasetCacheListener {
                     datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( parentsector_code,purposecode)");
                     // new indexes
                     datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( donorcode, year)");
+                    datasetInfo.getConnection().createStatement().executeUpdate("create index on " + datasetInfo.getTableName() + " ( fao_region, recipientcode)");
+
 
 
                     break;
