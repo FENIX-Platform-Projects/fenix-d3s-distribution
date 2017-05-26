@@ -9,6 +9,7 @@ create table resource_matrix_oda as (
 	sum(value) as value,
 	max(unitcode) as unitcode
 	from usd_aggregated_table
+	WHERE donorcode != 'NA'
 	group by
 	oda,
 	donorcode,

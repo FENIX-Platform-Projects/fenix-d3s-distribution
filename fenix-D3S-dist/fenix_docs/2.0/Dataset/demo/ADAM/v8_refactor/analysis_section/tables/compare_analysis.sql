@@ -29,7 +29,7 @@ create table compare_analysis as (
       parentsector_code,
       purposecode,
       year,
-      fao_sector,
+      fao_sector
    order by
       oda,
       donorcode,

@@ -1,0 +1,429 @@
+{
+  "resource": {
+    "metadata": {
+      "rid": "9_11455",
+      "uid": "adam_browse_recipient_oda",
+      "dsd": {
+        "columns": [
+          {
+            "dataType": "year",
+            "title": {
+              "EN": "Year"
+            },
+            "subject": "time",
+            "key": false,
+            "id": "year"
+          },
+          {
+            "dataType": "number",
+            "title": {
+              "EN": "Value"
+            },
+            "subject": "value",
+            "key": false,
+            "id": "value"
+          },
+          {
+            "dataType": "code",
+            "title": {
+              "EN": "Measurement unit"
+            },
+            "domain": {
+              "codes": [
+                {
+                  "version": "2016",
+                  "idCodeList": "crs_units",
+                  "extendedName": {
+                    "EN": "OECD Units"
+                  }
+                }
+              ]
+            },
+            "subject": "um",
+            "key": false,
+            "id": "unitcode"
+          },
+          {
+            "dataType": "text",
+            "title": {
+              "EN": "Measurement unit"
+            },
+            "virtual": false,
+            "transposed": false,
+            "key": false,
+            "id": "unitcode_EN"
+          },
+          {
+            "dataType": "text",
+            "title": {
+              "EN": "Indicator"
+            },
+            "domain": {
+              "codes": [
+                {
+                  "idCodeList": "adam_processes",
+                  "extendedName": {
+                    "EN": "Adam Processes"
+                  }
+                }
+              ]
+            },
+            "key": false,
+            "id": "indicator"
+          }
+        ],
+        "contextSystem": "D3P"
+      }
+    },
+    "data": [
+      [
+        2010,
+        7287.7613104600005,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2000,
+        132.426981047,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2006,
+        3320.973542847,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2003,
+        2465.3925524849997,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2012,
+        5637.3466156776,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2011,
+        7216.238413262002,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2002,
+        1611.545933768,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2001,
+        451.70217449600005,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2014,
+        5405.083746725001,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2005,
+        3446.806195402001,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2008,
+        6016.987669445001,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2013,
+        6974.462465742,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2015,
+        4506.492059316999,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2009,
+        5732.213439248,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2004,
+        2893.1309985459984,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2007,
+        4478.1344778349985,
+        "million_usd",
+        "Million USD",
+        "Total ODA in the Country"
+      ],
+      [
+        2010,
+        1018.1301323099999,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2006,
+        366.24301562,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2000,
+        17.540265199999997,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2003,
+        258.48756173,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2012,
+        730.4770307020001,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2002,
+        362.83270705999996,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2011,
+        1007.834981092,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2001,
+        46.6292172,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2014,
+        680.5818319300001,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2005,
+        513.246873267,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2008,
+        920.653797036,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2013,
+        939.6657476089999,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2009,
+        860.4678578510001,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2015,
+        518.836908206,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2004,
+        343.2280048,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2007,
+        579.4922129999999,
+        "million_usd",
+        "Million USD",
+        "ODA in the Sector for the Country"
+      ],
+      [
+        2010,
+        13.970409964562025,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2000,
+        13.245235269521652,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2006,
+        11.02818227531038,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2003,
+        10.48464113633574,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2012,
+        12.95781651372164,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2011,
+        13.966209586975411,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2002,
+        22.514574326258938,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2001,
+        10.3230003822824,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2014,
+        12.591513172064579,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2005,
+        14.890505707912016,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2008,
+        15.300908820391845,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2013,
+        13.472948664138098,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2015,
+        11.513099354814676,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2009,
+        15.011092433499536,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2004,
+        11.863548694217311,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ],
+      [
+        2007,
+        12.940482602035692,
+        "percentage",
+        "%",
+        "% Sector/Total"
+      ]
+    ]
+  },
+  "input": {
+    "plugin": "inputTable",
+    "config": {}
+  },
+  "output": {
+    "plugin": "outputTable",
+    "config": {
+      "lang": "EN",
+      "notes": "Asia and the Pacific / Afghanistan / FAO-Related sectors / Commitment Current Prices (USD Mil) / 2000-2015",
+      "fileName": "Total ODA"
+    }
+  }
+}
