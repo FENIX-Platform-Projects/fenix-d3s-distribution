@@ -1,0 +1,288 @@
+[
+  {
+    "name":"filter",
+    "sid":[
+      {
+        "uid":"adam_browse_sector_oda"
+      }
+    ],
+    "parameters":{
+      "rows":{
+        "fao_sector":{
+          "enumeration":[
+            "1"
+          ]
+        },
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "year":{
+          "time":[
+            {
+              "from":"2000",
+              "to":"2014"
+            }
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        }
+      }
+    },
+    "rid":{
+      "uid":"filter_subsectors"
+    }
+  },
+  {
+    "name":"group",
+    "parameters":{
+      "by":[
+        "purposecode"
+      ],
+      "aggregations":[
+        {
+          "columns":[
+            "value"
+          ],
+          "rule":"SUM"
+        },
+        {
+          "columns":[
+            "unitcode"
+          ],
+          "rule":"max"
+        }
+
+      ]
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "value":"DESC"
+    }
+  },
+  {
+    "name":"page",
+    "parameters":{
+      "perPage":10,
+      "page":1
+    },
+    "rid": {"uid":"top10Subs"}
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator_label",
+        "title": {
+          "EN": "Purposecode"
+        }
+      },
+      "value": {
+        "keys": [
+          "1=1"
+        ],
+        "values": [
+          "@@direct purposecode_EN"
+        ]
+      }
+    }
+  },
+  {
+    "name":"filter",
+    "parameters":{
+      "rows":{},
+      "columns":[
+        "indicator_label",
+        "value",
+        "unitcode"
+      ]
+    },
+    "rid":{
+      "uid":"filter_top10_subsectors"
+    }
+  },
+
+
+
+  {
+    "name":"filter",
+    "sid":[
+      {"uid": "filter_subsectors"},
+      {
+        "uid":"top10Subs"
+      }
+    ],
+    "parameters":{
+      "rows":{
+        "!purposecode" : {
+          "tables":[
+            {
+              "uid":"top10Subs",
+              "column":"purposecode"
+            }
+          ]
+        }
+      }
+    },
+    "rid":{"uid":"xxx"}
+  },
+  {
+    "name":"group",
+    "parameters":{
+      "by":[
+        "unitcode"
+      ],
+      "aggregations":[
+        {
+          "columns":[
+            "value"
+          ],
+          "rule":"SUM"
+        },
+        {
+          "columns":[
+            "unitcode"
+          ],
+          "rule":"max"
+        }
+
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator_label",
+        "title": {
+          "EN": "Purposecode"
+        }
+      },
+      "value": {
+        "keys": [
+          "1=1"
+        ],
+        "values": [
+          "Others"
+        ]
+      }
+    }
+  },
+  {
+    "name":"filter",
+    "parameters":{
+      "rows":{},
+      "columns":[
+        "indicator_label",
+        "value",
+        "unitcode"
+      ]
+    },
+    "rid":{
+      "uid":"filter_others_subsectors"
+    }
+  },
+  {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "filter_top10_subsectors"
+      },
+      {
+        "uid": "filter_others_subsectors"
+      }
+    ],
+    "parameters": {},
+    "rid":{
+      "uid":"union_proc"
+    }
+
+  },
+  {
+    "name": "addcolumn",
+    "sid":[{
+      "uid":"union_proc"
+    }],
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "percent",
+        "title": {
+          "EN": "Percentage"
+        }
+      },
+      "value": {
+        "keys": [
+          "1=1"
+        ],
+        "values": [
+          "@@direct value"
+        ]
+      }
+    }
+  },
+
+  {
+    "name":"group",
+    "parameters":{
+      "by":[
+        "indicator_label",
+        "percent"
+
+      ],
+      "aggregations":[
+        {
+          "columns":[
+            "value"
+          ],
+          "rule":"SUM"
+        },
+        {
+          "columns":[
+            "unitcode"
+          ],
+          "rule":"max"
+        }
+
+      ]
+    }
+  },
+
+
+  {
+    "name": "percentage",
+
+    "parameters": {
+      "valueColumnId": "percent"
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "value":"DESC"
+    }
+  }
+
+
+
+
+
+
+
+]

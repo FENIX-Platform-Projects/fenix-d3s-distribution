@@ -1,0 +1,74 @@
+{
+  "flow": [
+    {
+      "name": "filter",
+      "sid": [
+        {
+          "uid": "adam_project_analysis"
+        }
+      ],
+      "parameters": {
+        "columns": [
+          "recipientcode",
+          "oda",
+          "donorcode",
+          "projecttitle",
+          "year",
+          "parentsector_code",
+          "purposecode",
+          "value",
+          "unitcode"
+        ],
+        "rows": {
+          "year": {
+            "time": [
+              {
+                "from": 2000,
+                "to": 2015
+              }
+            ]
+          },
+          "!recipientcode": {
+            "codes": [
+              {
+                "uid": "crs_recipients",
+                "version": "2016",
+                "codes": [
+                  "298",
+                  "498",
+                  "798",
+                  "89",
+                  "589",
+                  "889",
+                  "189",
+                  "289",
+                  "389",
+                  "380",
+                  "489",
+                  "789",
+                  "689",
+                  "619",
+                  "679"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "rid": {
+        "uid": "filter_projects"
+      }
+    },
+    {
+      "name": "order",
+      "parameters": {
+        "year": "DESC",
+        "recipientcode": "DESC"
+      }
+    }
+  ],
+  "flowManagerList": null,
+  "outConfig": {
+    "plugin": "outputCSV"
+  }
+}
