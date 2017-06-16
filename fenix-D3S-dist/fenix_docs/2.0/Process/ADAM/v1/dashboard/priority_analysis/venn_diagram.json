@@ -1,0 +1,213 @@
+[
+  {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "recipient"
+      },
+      {
+        "uid": "fao"
+      },
+      {
+        "uid": "partner"
+      }
+    ],
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
+    }
+  },
+
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_combined_priorities_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "typecode",
+        "purposecode"
+      ],
+      "rows": {
+        "typecode": {
+          "enumeration": [
+            "recipient"
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "285"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_recipient"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "typecode",
+        "purposecode"
+      ],
+      "aggregations": []
+    },
+    "rid": {
+      "uid": "total_ODA"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        }
+      },
+      "value": "Recipient Country (Uganda)"
+    },
+    "rid": {
+      "uid": "recipient"
+    }
+  },
+
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_combined_priorities_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "typecode",
+        "purposecode"
+      ],
+      "rows": {
+        "typecode": {
+          "enumeration": [
+            "fao"
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "285"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_fao"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "typecode",
+        "purposecode"
+      ],
+      "aggregations": []
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        }
+      },
+      "value": "FAO (Uganda)"
+    },
+    "rid": {
+      "uid": "fao"
+    }
+  },
+
+
+
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_combined_priorities_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "typecode",
+        "purposecode"
+      ],
+      "rows": {
+        "typecode": {
+          "enumeration": [
+            "partner"
+          ]
+        },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_partner"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "typecode",
+        "purposecode"
+      ],
+      "aggregations": []
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        }
+      },
+      "value": "Resource Partner (UNICEF)"
+    },
+    "rid": {
+      "uid": "partner"
+    }
+  }
+]

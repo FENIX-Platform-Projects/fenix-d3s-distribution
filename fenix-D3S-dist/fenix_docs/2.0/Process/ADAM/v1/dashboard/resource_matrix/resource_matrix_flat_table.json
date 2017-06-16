@@ -246,7 +246,7 @@
         "id": "fao_sector_val",
         "key": true,
         "title": {
-          "EN": "FAO sector %"
+          "EN": "ODA in FAO sector (MIL $)"
         },
         "subject": null
       },
@@ -261,7 +261,7 @@
         "id": "percentage_val",
         "key": true,
         "title": {
-          "EN": "ODA in FAO sector (MIL $)"
+          "EN": "FAO sector %"
         },
         "subject": null
       },

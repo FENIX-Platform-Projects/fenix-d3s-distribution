@@ -1,38 +1,23 @@
 SELECT
   recipientcode,
-  recipientcode_en as recipientcode_label,
-  oda,
+  recipientcode_en     AS recipient,
   donorcode,
-  donorcode_en as donorcode_label,
+  donorcode_en         AS donor,
   projecttitle,
   year,
   parentsector_code,
-  parentsector_code_en as parentsector_code_label,
+  parentsector_code_en AS parentsector,
   purposecode,
-  parentsector_code_en as purposecode_label,
-  value,
+  purposecode_en       AS purpose,
+  commitment_value,
+  disbursement_value,
   unitcode,
-  unitcode_en as unitcode_label
+  unitcode_en          AS unit
 FROM data.adam_project_analysis
-WHERE recipientcode not in (
-  '298',
-  '498',
-  '798',
-  '89',
-  '589',
-  '889',
-  '189',
-  '289',
-  '389',
-  '380',
-  '489',
-  '789',
-  '689',
-  '619',
-  '679')
+WHERE year BETWEEN 2000 and 2015
 ORDER BY
-year,
-recipientcode_label,
-donorcode_label,
-parentsector_code_label,
-purposecode_label;
+  year,
+  recipient,
+  donor,
+  parentsector,
+  purpose;
