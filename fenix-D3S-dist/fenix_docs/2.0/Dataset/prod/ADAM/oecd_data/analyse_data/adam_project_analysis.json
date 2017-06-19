@@ -69,6 +69,13 @@
         "key": true
       },
       {
+        "id" : "oda_grp",
+        "title" : { "EN" : "Current/Constant prices" },
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "oda_grp", "version" : "2016", "level" : 1 } ] } ,
+        "key": true
+      },
+      {
         "id" : "commitment_value",
         "subject" : "value",
         "title" : { "EN" : "Commitment (USD Mil) " },
