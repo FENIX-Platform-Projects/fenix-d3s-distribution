@@ -1,0 +1,106 @@
+{
+   "characterSet": {
+      "codes": [
+         {
+            "code": "106"
+         }
+      ],
+      "idCodeList": "IANAcharacterSet",
+      "version": null
+   },
+   "contacts": [
+      {
+         "contactInfo": {
+            "address": null,
+            "emailAddress": null,
+            "phone ": null
+         },
+         "name": null,
+         "organization": {
+            "EN": "Food and Agriculture Organization of the United Nations (FAO)"
+         },
+         "organizationUnit": null,
+         "role": null
+      }
+   ],
+   "dsd": {
+      "contextSystem": "adam"
+   },
+   "language": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "languageDetails": null,
+   "meAccessibility": {
+      "seConfidentiality": {
+         "confidentialityStatus": {
+            "codes": [
+               {
+                  "code": "F"
+               }
+            ],
+            "idCodeList": "CL_CONF_STATUS",
+            "version": "1.0"
+         }
+      }
+   },
+   "meContent": {
+      "description": {
+         "EN": "ODA types"
+      },
+      "keywords": [
+         "adam",
+         "code",
+         "codes"
+      ],
+      "resourceRepresentationType": "codelist",
+      "seCodeList": {
+         "numberOfLevels": "1",
+         "typeOfCodeList": "list"
+      },
+      "seCoverage": {
+         "coverageSectors": {
+            "codes": [
+               {
+                  "code": "06"
+               }
+            ],
+            "idCodeList": "FENIX_Subjects",
+            "version": "1.0"
+         }
+      }
+   },
+   "metadataLanguage": {
+      "codes": [
+         {
+            "code": "eng"
+         }
+      ],
+      "idCodeList": "ISO639-2",
+      "version": "1998"
+   },
+   "metadataStandardName": "FENIX metadata",
+   "metadataStandardVersion": "1.0",
+   "title": {
+      "EN": "OECD CRS ODA"
+   },
+   "uid": "oda_grp",
+   "version": "2016"
+}
+
+
+--structure--
+
+csvSeparator=@
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+
+--data--
+
+@current@Current Prices (USD Mil)
+@deflated@Constant Prices deflated (USD Mil)
