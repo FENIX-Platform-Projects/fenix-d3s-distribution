@@ -62,9 +62,6 @@
         "subject" : "time",
         "key": true
       },
-
-
-
       {
         "id" : "projecttitle",
         "title" : { "EN" : "Project title" },
@@ -72,9 +69,15 @@
         "key": true
       },
       {
-        "id" : "value",
+        "id" : "commitment_value",
         "subject" : "value",
-        "title" : { "EN" : "Value" },
+        "title" : { "EN" : "Commitment (USD Mil) " },
+        "dataType" : "number"
+      },
+      {
+        "id" : "disbursement_value",
+        "subject" : "value",
+        "title" : { "EN" : "Disbursement (USD Mil)" },
         "dataType" : "number"
       },
       {
@@ -83,16 +86,7 @@
         "title" : { "EN" : "Measurement unit" },
         "domain" : { "codes" : [ { "idCodeList" : "crs_units", "version" : "2016", "level" : 1 } ] },
         "dataType" : "code"
-      },
-      {
-        "id": "oda",
-        "title": {
-          "EN": "Oda name"
-        },
-        "dataType": "text",
-        "key": true
       }
-
     ]
   }
 }

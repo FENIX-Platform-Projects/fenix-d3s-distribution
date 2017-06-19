@@ -1,0 +1,279 @@
+{
+    "uid": "gabon_free",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "Gabon codelist"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "ESS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": [],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+"dsd":{
+      "contextSystem":"cstat"
+   }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+titleColumnIndex_FR=3
+
+--data--
+
+@001@AMERGER GABON
+@002@APG
+@003@SIGAPECHE
+@004@SOCIPEG
+@006@Aucun
+@007@Alphabétisé
+@008@Primaire
+@009@Secondaire
+@010@1er degré
+@011@Secondaire 2nd degré
+@012@Supérieur
+@013@Terrain familial
+@014@Terrain sous bail location
+@015@Terrain acheté
+@016@Donation/Terrain cédé
+@017@Terrain public en contrat de gestion
+@018@Moins de 10016.67
+@019@De 10016.67 à 20013.33
+@020@De 20013.33 à 30010
+@021@De 30010 à 40006.67
+@022@De 40006.67 à 50003.33
+@023@De 50003.33 à 60000
+@024@60000 et plus
+@025@FMF
+@026@FMS
+@027@F Sard
+@028@LF
+@029@Autres
+@030@Célibataire
+@031@Marié(e)
+@032@Divorcé(e)
+@033@Veuve(f)
+@034@Concubinage
+@035@moins de 20
+@036@20-30
+@037@31-40
+@038@41-50
+@039@51-60
+@040@61 et plus
+@041@Filière Ruminant
+@042@Filière Porcine
+@043@Filière Volaille
+@044@Elevage
+@045@Administration
+@046@Agriculture
+@047@Retraité
+@048@Privé
+@049@Commerce
+@050@Métiers de bâtiment
+@051@Vendeuse en pharmacie
+@052@Pisciculteur
+@053@Gardiennage
+@054@Evangéliste
+@055@Femme au foyer
+@058@Accès aux intrants agricoles
+@059@Conflit homme faune
+@060@Financement
+@061@Oui
+@062@Non
+@064@116
+@065@105
+@066@97
+@067@96
+@068@95
+@069@93
+@070@92
+@071@91
+@072@90
+@073@89
+@074@88
+@075@87
+@076@86
+@077@85
+@078@84
+@079@83
+@080@82
+@081@81
+@082@80
+@083@79
+@084@78
+@085@77
+@086@76
+@087@75
+@088@74
+@089@73
+@090@72
+@091@71
+@092@70
+@093@69
+@094@68
+@095@67
+@096@66
+@097@65
+@098@64
+@099@63
+@100@62
+@101@61
+@102@60
+@103@59
+@104@58
+@105@57
+@106@56
+@107@55
+@108@54
+@109@53
+@110@52
+@111@51
+@112@50
+@113@49
+@114@48
+@115@47
+@116@46
+@117@45
+@118@44
+@119@43
+@120@42
+@121@41
+@122@40
+@123@39
+@124@38
+@125@37
+@126@36
+@127@35
+@128@34
+@129@33
+@130@32
+@131@31
+@132@30
+@133@29
+@134@28
+@135@27
+@136@26
+@137@25
+@138@24
+@139@23
+@140@22
+@141@21
+@142@20
+@143@19
+@144@18
+@145@17
+@146@16
+@147@Non réponse
+@148@Aide familiale
+@150@Financement personnel
+@151@Prêt bancaire
+@152@Tontine
+@153@Autoconsommation
+@154@Autoconsommation + vente
+@156@Non concerné
+@157@Transformation
+@158@Commercialisation
+@160@0
+@161@1
+@162@2
+@163@3
+@164@Apiculture
+
