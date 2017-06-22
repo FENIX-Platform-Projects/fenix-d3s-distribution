@@ -79,6 +79,22 @@
       }
     },
     {
+      "name" : "select",
+      "parameters" : {
+        "values" : {
+          "recipientcode" : null,
+          "donorcode" : null,
+          "projecttitle" : null,
+          "year" : null,
+          "parentsector_code" : null,
+          "purposecode" : null,
+          "commitment_value" : "round(commitment_value::numeric,2)",
+          "disbursement_value" : "round(disbursement_value::numeric,2)",
+          "unitcode" : null
+        }
+      }
+    },
+    {
       "name": "order",
       "parameters": {
         "year": "DESC",
