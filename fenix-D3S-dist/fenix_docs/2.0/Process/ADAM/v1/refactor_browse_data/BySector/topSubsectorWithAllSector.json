@@ -3,7 +3,7 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_sector_oda"
+        "uid": "adam_browse_subsector"
       }
     ],
     "parameters": {
@@ -12,17 +12,6 @@
           "number": [
             {
               "from": 0.00001
-            }
-          ]
-        },
-        "!purposecode":{
-          "codes": [
-            {
-              "uid": "crs_purposes",
-              "version": "2016",
-              "codes": [
-                "NA"
-              ]
             }
           ]
         },
