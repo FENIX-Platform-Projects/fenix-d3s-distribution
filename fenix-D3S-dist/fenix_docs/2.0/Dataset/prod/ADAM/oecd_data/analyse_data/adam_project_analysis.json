@@ -69,22 +69,16 @@
         "key": true
       },
       {
-        "id" : "oda_grp",
-        "title" : { "EN" : "Current/Constant prices" },
+        "id": "oda",
+        "title": {"EN": "Oda name"},
+        "domain" : { "codes" : [ { "idCodeList" : "oda_crs", "version" : "2016"} ] },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "oda_grp", "version" : "2016", "level" : 1 } ] } ,
         "key": true
       },
       {
-        "id" : "commitment_value",
+        "id" : "value",
         "subject" : "value",
-        "title" : { "EN" : "Commitment (USD Mil) " },
-        "dataType" : "number"
-      },
-      {
-        "id" : "disbursement_value",
-        "subject" : "value",
-        "title" : { "EN" : "Disbursement (USD Mil)" },
+        "title" : { "EN" : "Value" },
         "dataType" : "number"
       },
       {

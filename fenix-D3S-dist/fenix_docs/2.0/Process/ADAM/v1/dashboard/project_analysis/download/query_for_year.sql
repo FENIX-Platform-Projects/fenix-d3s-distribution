@@ -1,5 +1,5 @@
 SELECT
-  oda_grp_en           AS CURRENT
+  oda_grp_en           AS CURRENT,
   recipientcode,
   recipientcode_en     AS recipient,
   donorcode,
