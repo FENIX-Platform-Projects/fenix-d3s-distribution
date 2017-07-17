@@ -1,5 +1,5 @@
 to run it, after configuring environment and variables:
 
-$ ansible-playbook site.yml --extra-vars "env=environment"
+$ ansible-playbook site.yml --extra-vars "env=environment" -i hosts.yml
 
 where environment can be develop, demo or production
