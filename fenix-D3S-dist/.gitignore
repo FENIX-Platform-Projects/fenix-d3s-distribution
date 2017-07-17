@@ -1,2 +1,5 @@
 /target/
 *.iml
+/fenix_docs/2.0/Deploy/hosts.yml
+/fenix_docs/2.0/Deploy/vars/*/*
+
