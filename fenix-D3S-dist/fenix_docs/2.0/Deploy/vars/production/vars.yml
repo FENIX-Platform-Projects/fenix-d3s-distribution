@@ -1,0 +1,4 @@
+# variables
+D3S_rootPath: /D3S_rootPath
+process: d3s_process
+service: http://service/d3s_process

@@ -1,0 +1,28 @@
+#  Build D3S on local environment
+#  ******************************************
+
+- name: "Build maven on local copy"
+  hosts: 127.0.0.1
+  connection: local
+
+  # load variables
+  vars_files:
+   - vars/common/vars.yml
+  roles:
+   - { role: local}
+#---
+
+#  Deploy D3S on remote environment
+#  ******************************************
+
+
+- name: "Deploy on server"
+  hosts: "{{ env }}"
+  become: True
+  vars_files:
+     - vars/common/vars.yml
+     - "vars/{{ env }}/vars.yml"
+
+  roles:
+   - { role: remote}
+

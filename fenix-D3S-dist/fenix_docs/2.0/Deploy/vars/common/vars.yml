@@ -1,0 +1,3 @@
+# LOCAL environment variables
+localD3S_rootPath: /rootPath #D3S root path
+localD3S_distPath: /rootPath/d3s-distribution/fenix-D3S-dist/dist

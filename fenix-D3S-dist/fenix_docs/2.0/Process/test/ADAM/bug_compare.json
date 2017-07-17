@@ -1,0 +1,6 @@
+[
+{"uid":"crs_purposes","version":"2016","levels":2,"codes":["311"]},
+
+//instead of
+
+{"uid":"crs_dac","version":"2016","levels":2,"codes":["311"]}]

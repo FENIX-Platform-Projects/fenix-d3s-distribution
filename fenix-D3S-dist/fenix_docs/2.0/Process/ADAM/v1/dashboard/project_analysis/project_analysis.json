@@ -20,13 +20,13 @@
           "unitcode"
         ],
         "rows": {
-          "oda_grp": {
+          "oda": {
             "codes": [
               {
-                "uid": "oda_grp",
+                "uid": "oda_crs",
                 "version": "2016",
                 "codes": [
-                  "current"
+                  "usd_commitment"
                 ]
               }
             ]
@@ -35,7 +35,7 @@
             "time": [
               {
                 "from": 2000,
-                "to": 2014
+                "to": 2015
               }
             ]
           },
@@ -71,6 +71,11 @@
                 ]
               }
             ]
+          },
+          "fao_sector":{
+            "enumeration":[
+              "1"
+            ]
           }
         }
       },
@@ -88,8 +93,7 @@
           "year" : null,
           "parentsector_code" : null,
           "purposecode" : null,
-          "commitment_value" : "round(commitment_value::numeric,2)",
-          "disbursement_value" : "round(disbursement_value::numeric,2)",
+          "value" : "round(value::numeric,2)",
           "unitcode" : null
         }
       }
