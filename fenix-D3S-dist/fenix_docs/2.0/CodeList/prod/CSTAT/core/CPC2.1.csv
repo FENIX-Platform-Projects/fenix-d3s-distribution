@@ -1,4 +1,4 @@
-
+﻿
 
 {
     "uid": "CPC",
@@ -132,6 +132,10 @@ titleColumnIndex_FR=3
 0112@01121@Maize (corn), seed
 0112@01122@Maize (corn), other
 011@0113@Rice
+0113@0113.01@White Parboiled Rice
+0113@0113.02@Red Parboiled Rice
+0113@0113.03@Local Rice - Gambiaka
+0113@0113.04@NERICA Rice
 0113@01131@Rice, seed
 0113@01132@Rice paddy, other (not husked)
 01132@01132.01@Rice, white
@@ -187,6 +191,7 @@ titleColumnIndex_FR=3
 0123@01231@Chillies and peppers, green (<i>Capsicum</i> spp. and <i>Pimenta</i> spp.)
 0123@01232@Cucumbers and gherkins
 0123@01233@Eggplants (aubergines)
+01233@01233.01@Jaxatu (aubergines africaine)
 0123@01234@Tomatoes
 0123@01234.01@beef tomato/beefsteak tomato
 
@@ -2105,6 +2110,7 @@ titleColumnIndex_FR=3
 3466@34664@Disinfectants
 3466@34666@Hazardous pesticides
 3466@34669@Other insecticides, fungicides, herbicides and disinfectants
+3466@34669.01@Rodenticides (rat poison)
 34@347@Plastics in primary forms
 347@3471@Polymers of ethylene, in primary forms
 3471@34710@Polymers of ethylene, in primary forms

@@ -1,4 +1,4 @@
-{
+﻿{
     "uid": "CountrySTAT_Indicators",
 	"version": null,
     "language": {
@@ -128,6 +128,9 @@ titleColumnIndex_FR=4
 01@0104@Area Harvested@Superficie récoltée
 01@0105@Area sown@Superficie ensemencée
 01@0106@Seeds quantity@Quantité des semences
+01@0107@Number of producers@Nombres de producteurs
+01@0108@Number of operators@Nombres d'exploitants
+01@0109@Number of beneficiaries@Nombres d'attributaires
 @02@Food availability@Disponibilité alimentaire
 02@0201@Protein quantity@Disponibilité de protéines en quantité
 02@0202@Lipid quantity@Disponibilité de lipides en quantité
@@ -144,6 +147,12 @@ titleColumnIndex_FR=4
 03@0309@Re-import value@Valeur des réimportations
 03@0310@Inventory of available products@Quantité des stocks des produits disponibles
 03@0311@Consumption rate@Taux de consommation
+03@0312@Import dependency ratio@Taux de dépendance aux importations
+03@0313@Rate of dependence on trade@Taux de dépendance au commerce
+03@0314@Stock dependency ratio@Taux de dépendance aux stocks
+03@0315@Self-sufficiency rate@Taux d’autosuffisance
+03@0316@Initial stocks@Stocks initiaux
+03@0317@Final stocks@Stocks finaux
 @04@Machinery@Machines
 04@0401@Machines in service@Machines en service
 @05@Population@Population
