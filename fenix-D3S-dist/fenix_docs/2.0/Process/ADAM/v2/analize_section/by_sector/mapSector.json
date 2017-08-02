@@ -1,0 +1,87 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_sector_recipient"
+      }
+    ],
+    "parameters": {
+      "rows": {
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_disbursement_defl"
+              ]
+            }
+          ]
+        },
+        "!gaul0": {
+          "codes": [
+            {
+              "uid": "GAUL0",
+              "version": "2014",
+              "codes": [
+                "NA",
+                "ZZZZZ"
+              ]
+            }
+          ]
+        },
+        "fao_sector":{
+          "enumeration":[
+            "1"
+          ]
+        },
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "31110"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2014"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_region"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "gaul0"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        }
+
+      ]
+    }
+  }
+]

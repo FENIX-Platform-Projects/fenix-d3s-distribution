@@ -1,0 +1,47 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_comparative_advantage"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "sector",
+        "purposecode",
+        "year",
+        "delivery",
+        "fao_delivery",
+        "total_fao_delivery",
+        "advantage_ratio",
+        "ratio"
+      ],
+      "rows": {
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2015"
+            }
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "625"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_fca"
+    }
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_donor_faoregion"
+      }
+    ],
+    "parameters": {
+      "rows": {
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "4"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2014"
+            }
+          ]
+        },
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_disbursement_defl"
+              ]
+            }
+          ]
+        },
+        "fao_sector":{
+          "enumeration":[
+            "1"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "select",
+    "parameters": {
+      "query": "WHERE fao_region IS NOT NULL",
+      "queryParameters": []
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "fao_region"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_donor_recipient"
+      }
+    ],
+    "parameters": {
+      "rows": {
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_disbursement_defl"
+          ]
+        },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "4"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2014"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_recipients"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        },
+        {
+          "columns": [
+            "flowcategory"
+          ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  }
+]

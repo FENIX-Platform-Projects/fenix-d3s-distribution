@@ -1,0 +1,87 @@
+[
+  {
+    "name":"filter",
+    "sid":[{
+        "uid":"adam_browse_sector_recipient"
+      }],
+    "parameters":{
+      "rows":{
+        "fao_sector":{
+          "enumeration":[
+            "1"
+          ]
+        },
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "year":{
+          "time":[
+            {
+              "from":"2000",
+              "to":"2014"
+            }
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        }
+      }
+    },
+    "rid":{
+      "uid":"filter_recipients"
+    }
+  },
+  {
+    "name":"group",
+    "parameters":{
+      "by":[
+        "recipientcode"
+      ],
+      "aggregations":[
+        {
+          "columns":[
+            "value"
+          ],
+          "rule":"SUM"
+        },
+        {
+          "columns":[
+            "unitcode"
+          ],
+          "rule":"max"
+        },
+        {
+          "columns":[
+            "flowcategory"
+          ],
+          "rule":"max"
+        }
+      ]
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "value":"DESC"
+    }
+  },
+  {
+    "name":"page",
+    "parameters":{
+      "perPage":10,
+      "page":1
+    }
+  }
+]

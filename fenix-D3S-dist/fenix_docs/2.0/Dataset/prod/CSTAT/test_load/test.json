@@ -1,6 +1,5 @@
 {
   "metadata" : {
-    "creationDate" : 1464011880000,
     "language" : {
       "version" : "1998",
       "codes" : [ {
@@ -360,15 +359,7 @@
         }
       }
     },
-    "meMaintenance" : {
-      "seUpdate" : {
-        "updateDate" : 1480688502000
-      },
-      "maintenanceAgency" : {
-        "EN" : ""
-      },
-      "seMetadataMaintenance" : { }
-    },
+
     "meStatisticalProcessing" : {
       "seDataSource" : {
         "sePrimaryDataCollection" : {

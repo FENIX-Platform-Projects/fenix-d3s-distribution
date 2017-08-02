@@ -1,0 +1,79 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_recipient_subcategory"
+      }
+    ],
+    "parameters": {
+      "rows": {
+        "oda": {
+          "enumeration": [
+            "usd_disbursement"
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "625"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2000",
+              "to": "2014"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "channelsubcategory_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        },
+        {
+          "columns": [
+            "flowcategory_code"
+          ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  }
+]
