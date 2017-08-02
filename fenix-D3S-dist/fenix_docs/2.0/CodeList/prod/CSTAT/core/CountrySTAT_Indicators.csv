@@ -136,7 +136,7 @@ titleColumnIndex_FR=4
 02@0202@Lipid quantity@Disponibilité de lipides en quantité
 02@0203@Food supply quantity@Disponibilité alimentaire en quantité
 @03@Trade@Commerce
-03@0301@Export quantity@Quantités des exportations 
+03@0301@Export quantity@Quantités des exportations
 03@0302@Export value@Valeur des exportations
 03@0303@Import quantity@Quantités des importations
 03@0304@Import value@Valeur des importations
@@ -163,6 +163,9 @@ titleColumnIndex_FR=4
 05@0505@Life expectancy@Espérance de vie
 05@0506@Chronic malnutrition rate@Taux de malnutrition chronique
 05@0507@Households@Ménages
+05@0508@Mortality rate@Taux de mortalité
+05@0509@Birth-rate@Taux de natalité
+05@0510@Unemployment (% of total labor force)@Chômage (% sur la population active)
 @06@Prices@Prix
 06@0601@Consumer price@Prix à la consommation
 06@0602@Producer price@Prix au producteur
@@ -219,6 +222,11 @@ titleColumnIndex_FR=4
 11@1104@Dead Animals@Animaux morts
 11@1105@Total Input@Entrée totale
 11@1106@Total Output@Sortie totale
+11@1107@Flesh chicken@Poulet de chair
+11@1108@Reformed laying hens@Pondeuses reformées
+11@1109@Chicken droppings@Fientes de poules
+11@1110@Meat cut into pieces (Ruminants)@Découpes (ruminants)
+11@1111@Chicken farmer@Poulet fermier
 @12@National account@Comptes nationaux
 12@1201@GPD@PIB
 12@1202@GDP growth@Croissance du PIB
@@ -243,15 +251,16 @@ titleColumnIndex_FR=4
 14@1401@Reforested area@Superficie reboisée
 14@1402@Seedlings planted@Plants mises en terre
 14@1403@Burned area@Superficie brûlée
-1403@140301@Burned meadows@Prairies  brûlées                    
-1403@140302@Burned natural forests@Forêts naturelles brûlées 
+1403@140301@Burned meadows@Prairies  brûlées
+1403@140302@Burned natural forests@Forêts naturelles brûlées
 1403@140303@Burned reafforestation@Reboisement brûlé
 1403@140304@Authorized clearing@Défrichements Autorisés
 1403@140305@Non-authorized clearing@Défrichements Non Autorisés
 14@1404@Deforested area@Superficie déforéstée
 14@1405@Deforestation rate@Taux de déforestation
-
-
+@15@Education@Education
+15@1501@Literacy rate@Taux d'alphabetisation
+15@1502@Primary Literacy rate@Taux d'alphabetisation au primaire
 
 
 
