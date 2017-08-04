@@ -1,0 +1,4 @@
+1) Sector only is selected (1)
+2) Sector and subsectro are selected (2)
+3) Subsector only is selected (3)
+4) ALL-ALL is selected (4)

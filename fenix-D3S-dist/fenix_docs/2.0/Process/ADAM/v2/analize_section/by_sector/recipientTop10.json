@@ -1,14 +1,51 @@
 [
   {
-    "name":"filter",
-    "sid":[{
-        "uid":"adam_browse_sector_recipient"
-      }],
-    "parameters":{
-      "rows":{
-        "fao_sector":{
-          "enumeration":[
-            "1"
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_browse_sector_recipient"
+      }
+    ],
+    "parameters": {
+      "rows": {
+        "!recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "298",
+                "498",
+                "798",
+                "89",
+                "589",
+                "889",
+                "189",
+                "289",
+                "389",
+                "380",
+                "489",
+                "789",
+                "689",
+                "619",
+                "679"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2001",
+              "to": "2015"
+            }
           ]
         },
         "oda": {
@@ -22,66 +59,63 @@
             }
           ]
         },
-        "year":{
-          "time":[
+        "purposecode": {
+          "codes": [
             {
-              "from":"2000",
-              "to":"2014"
-            }
-          ]
-        },
-        "value": {
-          "number": [
-            {
-              "from": 0.00001
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "60010"
+              ]
             }
           ]
         }
       }
     },
-    "rid":{
-      "uid":"filter_recipients"
+    "rid": {
+      "uid": "filter_recipients"
     }
   },
   {
-    "name":"group",
-    "parameters":{
-      "by":[
-        "recipientcode"
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode",
+        "flowcategory"
       ],
-      "aggregations":[
+      "aggregations": [
         {
-          "columns":[
+          "columns": [
             "value"
           ],
-          "rule":"SUM"
+          "rule": "SUM"
         },
         {
-          "columns":[
+          "columns": [
             "unitcode"
           ],
-          "rule":"max"
+          "rule": "max"
         },
         {
-          "columns":[
+          "columns": [
             "flowcategory"
           ],
-          "rule":"max"
+          "rule": "max"
         }
       ]
     }
   },
   {
-    "name":"order",
-    "parameters":{
-      "value":"DESC"
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
     }
   },
   {
-    "name":"page",
-    "parameters":{
-      "perPage":10,
-      "page":1
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
     }
   }
 ]

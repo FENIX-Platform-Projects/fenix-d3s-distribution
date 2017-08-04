@@ -1,6 +1,5 @@
 [
   {
-
     "name": "filter",
     "sid": [
       {
@@ -9,11 +8,24 @@
     ],
     "parameters": {
       "rows": {
+        "!fao_region": {
+          "codes": [
+            {
+              "uid": "crs_fao_regions",
+              "version": "2016",
+              "codes": [
+                "NA",
+                "ZZZZZ",
+                "UNSP"
+              ]
+            }
+          ]
+        },
         "year": {
           "time": [
             {
               "from": "2000",
-              "to": "2014"
+              "to": "2015"
             }
           ]
         },
@@ -23,26 +35,29 @@
               "uid": "oda_crs",
               "version": "2016",
               "codes": [
-                "usd_disbursement_defl"
+                "usd_commitment"
               ]
             }
           ]
         },
-        "fao_sector":{
-          "enumeration":[
-            "1"
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "31164"
+              ]
+            }
           ]
         }
       }
+    },
+    "rid": {
+      "uid": "filter_regions"
     }
   },
-  {
-    "name": "select",
-    "parameters": {
-      "query": "WHERE fao_region <>",
-      "queryParameters": ["ZZZZZ"]
-    }
-  },
+
   {
     "name": "group",
     "parameters": {
@@ -65,7 +80,6 @@
       ]
     }
   },
-
   {
     "name": "order",
     "parameters": {
