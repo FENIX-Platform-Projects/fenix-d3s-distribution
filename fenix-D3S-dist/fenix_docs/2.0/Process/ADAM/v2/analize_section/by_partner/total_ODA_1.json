@@ -35,8 +35,14 @@
       ],
       "rows": {
         "oda": {
-          "enumeration": [
-            "usd_commitment"
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
           ]
         },
         "fao_sector": {
@@ -58,7 +64,7 @@
         "year": {
           "time": [
             {
-              "from": "2000",
+              "from": "2002",
               "to": "2015"
             }
           ]
@@ -141,8 +147,14 @@
       ],
       "rows": {
         "oda": {
-          "enumeration": [
-            "usd_commitment"
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
           ]
         },
         "donorcode": {
@@ -159,7 +171,7 @@
         "year": {
           "time": [
             {
-              "from": "2000",
+              "from": "2002",
               "to": "2015"
             }
           ]
@@ -357,8 +369,14 @@
       ],
       "rows": {
         "oda": {
-          "enumeration": [
-            "usd_commitment"
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
           ]
         },
         "dac_member": {
@@ -374,7 +392,7 @@
         "year": {
           "time": [
             {
-              "from": "2000",
+              "from": "2002",
               "to": "2015"
             }
           ]
@@ -424,8 +442,14 @@
       ],
       "rows": {
         "oda": {
-          "enumeration": [
-            "usd_commitment"
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
           ]
         },
         "dac_member": {
@@ -441,7 +465,7 @@
         "year": {
           "time": [
             {
-              "from": "2000",
+              "from": "2002",
               "to": "2015"
             }
           ]

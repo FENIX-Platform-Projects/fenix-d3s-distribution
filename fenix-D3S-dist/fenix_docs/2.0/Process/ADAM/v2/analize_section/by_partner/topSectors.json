@@ -3,36 +3,11 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_donor_recipient"
+        "uid": "adam_browse_sector_oda"
       }
     ],
     "parameters": {
       "rows": {
-        "!recipientcode": {
-          "codes": [
-            {
-              "uid": "crs_recipients",
-              "version": "2016",
-              "codes": [
-                "298",
-                "498",
-                "798",
-                "89",
-                "589",
-                "889",
-                "189",
-                "289",
-                "389",
-                "380",
-                "489",
-                "789",
-                "689",
-                "619",
-                "679"
-              ]
-            }
-          ]
-        },
         "fao_sector": {
           "enumeration": [
             "1"
@@ -71,14 +46,14 @@
       }
     },
     "rid": {
-      "uid": "filter_recipients"
+      "uid": "filter_sectors"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "recipientcode",
+        "parentsector_code",
         "flowcategory"
       ],
       "aggregations": [

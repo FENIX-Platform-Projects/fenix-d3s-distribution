@@ -1,22 +1,16 @@
 [
   {
     "name": "filter",
-    "sid":[
+    "sid": [
       {
-        "uid":"adam_browse_donor_subcategory"
+        "uid": "adam_browse_donor_subcategory"
       }
     ],
     "parameters": {
       "rows": {
-        "oda": {
-          "codes": [
-            {
-              "uid": "oda_crs",
-              "version": "2016",
-              "codes": [
-                "usd_commitment"
-              ]
-            }
+        "fao_sector": {
+          "enumeration": [
+            "1"
           ]
         },
         "donorcode": {
@@ -33,19 +27,34 @@
         "year": {
           "time": [
             {
-              "from": "2000",
-              "to": "2014"
+              "from": "2002",
+              "to": "2015"
+            }
+          ]
+        },
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
             }
           ]
         }
       }
+    },
+    "rid": {
+      "uid": "filter_channels"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "channelsubcategory_code"
+        "channelsubcategory_code",
+        "flowcategory"
       ],
       "aggregations": [
         {
@@ -59,8 +68,13 @@
             "unitcode"
           ],
           "rule": "max"
+        },
+        {
+          "columns": [
+            "flowcategory"
+          ],
+          "rule": "max"
         }
-
       ]
     }
   },

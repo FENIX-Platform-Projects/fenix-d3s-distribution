@@ -3,7 +3,7 @@
     "name": "union",
     "sid": [
       {
-        "uid": "top_10_recipients_sum"
+        "uid": "top_10_channels_sum"
       },
       {
         "uid": "others"
@@ -18,41 +18,16 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_donor_recipient"
+        "uid": "adam_browse_donor_subcategory"
       }
     ],
     "parameters": {
       "columns": [
-        "recipientcode",
+        "channelsubcategory_code",
         "value",
         "unitcode"
       ],
       "rows": {
-        "!recipientcode": {
-          "codes": [
-            {
-              "uid": "crs_recipients",
-              "version": "2016",
-              "codes": [
-                "298",
-                "498",
-                "798",
-                "89",
-                "589",
-                "889",
-                "189",
-                "289",
-                "389",
-                "380",
-                "489",
-                "789",
-                "689",
-                "619",
-                "679"
-              ]
-            }
-          ]
-        },
         "oda": {
           "codes": [
             {
@@ -91,14 +66,14 @@
       }
     },
     "rid": {
-      "uid": "filter_top_10_recipients_sum"
+      "uid": "filter_top_10_channels_sum"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "recipientcode"
+        "channelsubcategory_code"
       ],
       "aggregations": [
         {
@@ -169,10 +144,10 @@
         },
         "subject": null
       },
-      "value": "Top Recipient Countries"
+      "value": "Top Channels of Delivery"
     },
     "rid": {
-      "uid": "top_10_recipients_sum"
+      "uid": "top_10_channels_sum"
     }
   },
   {
@@ -217,20 +192,20 @@
         },
         "subject": null
       },
-      "value": "sum of all recipients"
+      "value": "sum of all channels"
     },
     "rid": {
-      "uid": "top_all_recipients_sum"
+      "uid": "top_all_channels_sum"
     }
   },
   {
     "name": "join",
     "sid": [
       {
-        "uid": "top_all_recipients_sum"
+        "uid": "top_all_channels_sum"
       },
       {
-        "uid": "top_10_recipients_sum"
+        "uid": "top_10_channels_sum"
       }
     ],
     "parameters": {
@@ -251,14 +226,14 @@
       "values": []
     },
     "rid": {
-      "uid": "join_process_total_recipients"
+      "uid": "join_process_total_channels"
     }
   },
   {
     "name": "addcolumn",
     "sid": [
       {
-        "uid": "join_process_total_recipients"
+        "uid": "join_process_total_channels"
       }
     ],
     "parameters": {
@@ -275,7 +250,7 @@
           "1 = 1"
         ],
         "values": [
-          "@@direct top_all_recipients_sum_value - top_10_recipients_sum_value"
+          "@@direct top_all_channels_sum_value - top_10_channels_sum_value"
         ]
       }
     }
@@ -310,7 +285,7 @@
         },
         "subject": null
       },
-      "value": "Other Recipients"
+      "value": "Other Channels of Delivery"
     },
     "rid": {
       "uid": "others"
