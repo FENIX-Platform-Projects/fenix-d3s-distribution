@@ -3,16 +3,11 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_recipient_donor"
+        "uid": "adam_browse_recipient_oda"
       }
     ],
     "parameters": {
       "rows": {
-        "fao_sector": {
-          "enumeration": [
-            "1"
-          ]
-        },
         "recipientcode": {
           "codes": [
             {
@@ -64,14 +59,14 @@
       }
     },
     "rid": {
-      "uid": "filter_donor"
+      "uid": "filter_sectors"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "donorcode",
+        "parentsector_code",
         "flowcategory"
       ],
       "aggregations": [

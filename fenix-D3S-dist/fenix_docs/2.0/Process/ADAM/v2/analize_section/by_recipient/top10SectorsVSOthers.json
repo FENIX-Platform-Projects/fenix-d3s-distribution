@@ -3,7 +3,7 @@
     "name": "union",
     "sid": [
       {
-        "uid": "top_10_donors_sum"
+        "uid": "top_10_sectors_sum"
       },
       {
         "uid": "others"
@@ -18,12 +18,12 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_recipient_donor"
+        "uid": "adam_browse_recipient_oda"
       }
     ],
     "parameters": {
       "columns": [
-        "donorcode",
+        "parentsector_code",
         "value",
         "unitcode"
       ],
@@ -48,11 +48,6 @@
                 "625"
               ]
             }
-          ]
-        },
-        "fao_sector": {
-          "enumeration": [
-            "1"
           ]
         },
         "value": {
@@ -84,14 +79,14 @@
       }
     },
     "rid": {
-      "uid": "filter_top_10_donors_sum"
+      "uid": "filter_top_10_sectors_sum"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "donorcode"
+        "parentsector_code"
       ],
       "aggregations": [
         {
@@ -162,10 +157,10 @@
         },
         "subject": null
       },
-      "value": "Top Resource Partners"
+      "value": "Top Sectors"
     },
     "rid": {
-      "uid": "top_10_donors_sum"
+      "uid": "top_10_sectors_sum"
     }
   },
   {
@@ -210,20 +205,20 @@
         },
         "subject": null
       },
-      "value": "sum of all donors"
+      "value": "sum of all sectors"
     },
     "rid": {
-      "uid": "top_all_donors_sum"
+      "uid": "top_all_sectors_sum"
     }
   },
   {
     "name": "join",
     "sid": [
       {
-        "uid": "top_all_donors_sum"
+        "uid": "top_all_sectors_sum"
       },
       {
-        "uid": "top_10_donors_sum"
+        "uid": "top_10_sectors_sum"
       }
     ],
     "parameters": {
@@ -244,14 +239,14 @@
       "values": []
     },
     "rid": {
-      "uid": "join_process_total_donors"
+      "uid": "join_process_total_sectors"
     }
   },
   {
     "name": "addcolumn",
     "sid": [
       {
-        "uid": "join_process_total_donors"
+        "uid": "join_process_total_sectors"
       }
     ],
     "parameters": {
@@ -268,7 +263,7 @@
           "1 = 1"
         ],
         "values": [
-          "@@direct top_all_donors_sum_value - top_10_donors_sum_value"
+          "@@direct top_all_sectors_sum_value - top_10_sectors_sum_value"
         ]
       }
     }
@@ -303,7 +298,7 @@
         },
         "subject": null
       },
-      "value": "Other Resource Partners"
+      "value": "Other Sectors"
     },
     "rid": {
       "uid": "others"

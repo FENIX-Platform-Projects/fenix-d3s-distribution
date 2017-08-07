@@ -7,6 +7,9 @@
       },
       {
         "uid": "total_oda"
+      },
+      {
+        "uid":"percentage_ODA"
       }
     ],
     "parameters": {},
@@ -41,11 +44,7 @@
             }
           ]
         },
-        "fao_sector": {
-          "enumeration": [
-            "1"
-          ]
-        },
+
         "purposecode": {
           "codes": [
             {
@@ -60,8 +59,8 @@
         "year": {
           "time": [
             {
-              "from": "2000",
-              "to": "2015"
+              "from": 2000,
+              "to": 2015
             }
           ]
         }
@@ -184,8 +183,8 @@
         "year": {
           "time": [
             {
-              "from": "2000",
-              "to": "2015"
+              "from": 2000,
+              "to": 2015
             }
           ]
         }
@@ -242,6 +241,130 @@
     },
     "rid": {
       "uid": "total_oda"
+    }
+  },
+
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "total_oda"
+      },
+      {
+        "uid": "total_subsector_oda"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "year"
+          }
+        ],
+        [
+          {
+            "type": "id",
+            "value": "year"
+          }
+        ]
+      ],
+      "values": []
+    },
+    "rid": {
+      "uid": "join_process"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "sid": [
+      {
+        "uid": "join_process"
+      }
+    ],
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": null
+      },
+      "value": {
+        "keys": [
+          "1=1"
+        ],
+        "values": [
+          "@@direct (total_subsector_oda_value/total_oda_value)*100"
+        ]
+      }
+    },
+    "rid": {
+      "uid": "percentage_Value"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "year",
+        "value"
+      ],
+      "rows": {}
+    },
+    "rid": {
+      "uid": "percentage_with_two_values"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "id": "unitcode",
+        "title": {
+          "EN": "Measurement Unit"
+        },
+        "domain": {
+          "codes": [
+            {
+              "idCodeList": "crs_units",
+              "version": "2016",
+              "level": 1
+            }
+          ]
+        },
+        "dataType": "code",
+        "subject": "um"
+      },
+      "value": "percentage"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "% Sub Sector/Total ODA"
+    },
+    "rid": {
+      "uid": "percentage_ODA"
     }
   }
 

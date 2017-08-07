@@ -8,9 +8,9 @@
     ],
     "parameters": {
       "rows": {
-        "oda": {
+        "fao_sector": {
           "enumeration": [
-            "usd_disbursement"
+            "1"
           ]
         },
         "recipientcode": {
@@ -24,22 +24,55 @@
             }
           ]
         },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        },
         "year": {
           "time": [
             {
               "from": "2000",
-              "to": "2014"
+              "to": "2015"
+            }
+          ]
+        },
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "fao_region": {
+          "codes": [
+            {
+              "uid": "crs_fao_regions",
+              "version": "2016",
+              "codes": [
+                "RAP"
+              ]
             }
           ]
         }
       }
+    },
+    "rid": {
+      "uid": "filter_channel"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "channelsubcategory_code"
+        "channelsubcategory_code",
+        "flowcategory"
       ],
       "aggregations": [
         {
@@ -56,7 +89,7 @@
         },
         {
           "columns": [
-            "flowcategory_code"
+            "flowcategory"
           ],
           "rule": "max"
         }

@@ -1,0 +1,48 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_country_indicators"
+      }
+    ],
+    "parameters": {
+      "rows": {
+        "countrycode": {
+          "codes": [
+            {
+              "uid": "crs_recipientdonors",
+              "version": "2016",
+              "codes": [
+                "625"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "filter",
+
+    "parameters": {
+      "columns": [
+        "period",
+        "value",
+        "indicatorcode",
+        "source",
+        "note",
+        "link",
+        "itemcode",
+        "unitcode",
+        "countrycode"
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "indicatorcode": "ASC"
+    }
+  }
+]

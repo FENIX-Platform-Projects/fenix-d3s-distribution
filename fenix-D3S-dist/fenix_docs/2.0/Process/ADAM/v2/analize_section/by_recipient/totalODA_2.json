@@ -3,14 +3,25 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_recipient_donor"
+        "uid": "adam_browse_recipient_oda"
       }
     ],
     "parameters": {
+      "columns": [
+        "year",
+        "value",
+        "unitcode"
+      ],
       "rows": {
-        "fao_sector": {
-          "enumeration": [
-            "1"
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
           ]
         },
         "recipientcode": {
@@ -24,29 +35,11 @@
             }
           ]
         },
-        "value": {
-          "number": [
-            {
-              "from": 0.00001
-            }
-          ]
-        },
         "year": {
           "time": [
             {
               "from": "2000",
               "to": "2015"
-            }
-          ]
-        },
-        "oda": {
-          "codes": [
-            {
-              "uid": "oda_crs",
-              "version": "2016",
-              "codes": [
-                "usd_commitment"
-              ]
             }
           ]
         },
@@ -64,15 +57,14 @@
       }
     },
     "rid": {
-      "uid": "filter_donor"
+      "uid": "filter_total_ODA"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "donorcode",
-        "flowcategory"
+        "year"
       ],
       "aggregations": [
         {
@@ -86,27 +78,35 @@
             "unitcode"
           ],
           "rule": "max"
-        },
-        {
-          "columns": [
-            "flowcategory"
-          ],
-          "rule": "max"
         }
       ]
+    },
+    "rid": {
+      "uid": "total_oda"
     }
   },
   {
-    "name": "order",
+    "name": "addcolumn",
     "parameters": {
-      "value": "DESC"
-    }
-  },
-  {
-    "name": "page",
-    "parameters": {
-      "perPage": 10,
-      "page": 1
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "ODA"
     }
   }
 ]

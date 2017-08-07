@@ -3,7 +3,7 @@
     "name": "union",
     "sid": [
       {
-        "uid": "top_10_donors_sum"
+        "uid": "top_10_channels_sum"
       },
       {
         "uid": "others"
@@ -18,12 +18,12 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "adam_browse_recipient_donor"
+        "uid": "adam_browse_recipient_subcategory"
       }
     ],
     "parameters": {
       "columns": [
-        "donorcode",
+        "channelsubcategory_code",
         "value",
         "unitcode"
       ],
@@ -55,13 +55,6 @@
             "1"
           ]
         },
-        "value": {
-          "number": [
-            {
-              "from": 0.00001
-            }
-          ]
-        },
         "year": {
           "time": [
             {
@@ -84,14 +77,14 @@
       }
     },
     "rid": {
-      "uid": "filter_top_10_donors_sum"
+      "uid": "filter_top_10_channels_sum"
     }
   },
   {
     "name": "group",
     "parameters": {
       "by": [
-        "donorcode"
+        "channelsubcategory_code"
       ],
       "aggregations": [
         {
@@ -162,10 +155,10 @@
         },
         "subject": null
       },
-      "value": "Top Resource Partners"
+      "value": "Top Channels of Delivery"
     },
     "rid": {
-      "uid": "top_10_donors_sum"
+      "uid": "top_10_channels_sum"
     }
   },
   {
@@ -210,20 +203,20 @@
         },
         "subject": null
       },
-      "value": "sum of all donors"
+      "value": "sum of all channels"
     },
     "rid": {
-      "uid": "top_all_donors_sum"
+      "uid": "top_all_channels_sum"
     }
   },
   {
     "name": "join",
     "sid": [
       {
-        "uid": "top_all_donors_sum"
+        "uid": "top_all_channels_sum"
       },
       {
-        "uid": "top_10_donors_sum"
+        "uid": "top_10_channels_sum"
       }
     ],
     "parameters": {
@@ -244,14 +237,14 @@
       "values": []
     },
     "rid": {
-      "uid": "join_process_total_donors"
+      "uid": "join_process_total_channels"
     }
   },
   {
     "name": "addcolumn",
     "sid": [
       {
-        "uid": "join_process_total_donors"
+        "uid": "join_process_total_channels"
       }
     ],
     "parameters": {
@@ -268,7 +261,7 @@
           "1 = 1"
         ],
         "values": [
-          "@@direct top_all_donors_sum_value - top_10_donors_sum_value"
+          "@@direct top_all_channels_sum_value - top_10_channels_sum_value"
         ]
       }
     }
@@ -303,7 +296,7 @@
         },
         "subject": null
       },
-      "value": "Other Resource Partners"
+      "value": "Other Channels of Delivery"
     },
     "rid": {
       "uid": "others"
