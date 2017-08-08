@@ -1,0 +1,257 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_priority_analysis"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "purposecode",
+        "value"
+      ],
+      "rows": {
+        "year": {
+          "time": [
+            {
+              "from": "2010",
+              "to": "2015"
+            }
+          ]
+        },
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "31120",
+                "31130",
+                "41010",
+                "52010"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_top_10"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "purposecode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    },
+    "rid": {
+      "uid": "top_10_purposes"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_priority_analysis"
+      },
+      {
+        "uid": "top_10_purposes"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "purposecode",
+        "donorcode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "purposecode": {
+          "tables": [
+            {
+              "uid": "top_10_purposes",
+              "column": "purposecode"
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2010",
+              "to": "2015"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_top_10_purposes"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "purposecode",
+        "donorcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "rank",
+        "title": {
+          "EN": "Rank"
+        },
+        "subject": null
+      },
+      "value": "@@direct rank() over (partition by purposecode order by value DESC)"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "purposecode",
+        "donorcode",
+        "value",
+        "rank",
+        "unitcode"
+      ],
+      "rows": {
+        "rank": {
+          "number": [
+            {
+              "from": 1,
+              "to": 5
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_top_10_purposes_donors"
+    }
+  },
+  {
+    "name": "group",
+    "sid": [
+      {
+        "uid": "filter_top_10_purposes_donors"
+      }
+    ],
+    "parameters": {
+      "by": [
+        "purposecode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    },
+    "rid": {
+      "uid": "filter_aggregated_top10"
+    }
+  },
+  {
+    "name": "join",
+    "sid": [
+      {
+        "uid": "filter_top_10_purposes_donors"
+      },
+      {
+        "uid": "filter_aggregated_top10"
+      }
+    ],
+    "parameters": {
+      "joins": [
+        [
+          {
+            "type": "id",
+            "value": "purposecode"
+          }
+        ],
+        [
+          {
+            "type": "id",
+            "value": "purposecode"
+          }
+        ]
+      ],
+      "values": []
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "value",
+        "title": {
+          "EN": "Value"
+        },
+        "subject": "value"
+      },
+      "value": "@@direct filter_top_10_purposes_donors_value"
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "filter_aggregated_top10_value": "DESC",
+      "purposecode": "DESC",
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "filter",
+    "parameters": {
+      "columns": [
+        "purposecode",
+        "filter_top_10_purposes_donors_donorcode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {}
+    }
+  }
+]

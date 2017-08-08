@@ -1,0 +1,133 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_resource_matrix_oda"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "donorcode",
+        "value"
+      ],
+      "rows": {
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "625"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2001",
+              "to": "2015"
+            }
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_top_partners"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "donorcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 5,
+      "page": 1
+    },
+    "rid": {
+      "uid": "top_5"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_resource_matrix_oda"
+      },
+      {
+        "uid": "top_5"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "donorcode",
+        "year",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "625"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2001",
+              "to": "2015"
+            }
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "donorcode": {
+          "tables": [
+            {
+              "uid": "top_5",
+              "column": "donorcode"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_partners"
+    }
+  }
+]

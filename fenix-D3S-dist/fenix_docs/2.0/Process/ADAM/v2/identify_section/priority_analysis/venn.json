@@ -1,0 +1,228 @@
+[
+  {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "recipient"
+      },
+      {
+        "uid": "fao"
+      },
+      {
+        "uid": "partner"
+      }
+    ],
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_combined_priorities_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "typecode",
+        "purposecode"
+      ],
+      "rows": {
+        "typecode": {
+          "enumeration": [
+            "recipient"
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "625"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_recipient"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "typecode",
+        "purposecode"
+      ],
+      "aggregations": []
+    },
+    "rid": {
+      "uid": "total_ODA"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "Recipient Countries (Afghanistan)"
+    },
+    "rid": {
+      "uid": "recipient"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_combined_priorities_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "typecode",
+        "purposecode"
+      ],
+      "rows": {
+        "typecode": {
+          "enumeration": [
+            "fao"
+          ]
+        },
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "625"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_fao"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "typecode",
+        "purposecode"
+      ],
+      "aggregations": []
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "FAO (Afghanistan)"
+    },
+    "rid": {
+      "uid": "fao"
+    }
+  },
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_combined_priorities_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "typecode",
+        "purposecode"
+      ],
+      "rows": {
+        "typecode": {
+          "enumeration": [
+            "partner"
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_partner"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "typecode",
+        "purposecode"
+      ],
+      "aggregations": []
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "Resource Partner (All)"
+    },
+    "rid": {
+      "uid": "partner"
+    }
+  }
+]

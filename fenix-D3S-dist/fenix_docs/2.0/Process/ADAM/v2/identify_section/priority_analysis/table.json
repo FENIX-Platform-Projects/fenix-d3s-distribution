@@ -1,0 +1,50 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_cpf_undaf_priorities_table"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "purposecode",
+        "undaf_stated_priority",
+        "cpf_stated_priority",
+        "undaf_period",
+        "cpf_period",
+        "recipientcode"
+      ],
+      "rows": {
+        "recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "625"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_priorities"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "purposecode",
+        "undaf_stated_priority",
+        "cpf_stated_priority",
+        "undaf_period",
+        "cpf_period",
+        "recipientcode"
+      ],
+      "aggregations": []
+    }
+  }
+]

@@ -1,23 +1,5 @@
 [
   {
-    "name": "union",
-    "sid": [
-      {
-        "uid": "total_oda"
-      },
-      {
-        "uid": "related_oda"
-      },
-      {
-        "uid": "percentage_oda"
-      }
-    ],
-    "parameters": {},
-    "rid": {
-      "uid": "union_process"
-    }
-  },
-  {
     "name": "filter",
     "sid": [
       {
@@ -258,76 +240,32 @@
   },
   {
     "name": "addcolumn",
-    "sid": [
-      {
-        "uid": "join_process"
-      }
-    ],
     "parameters": {
       "column": {
         "dataType": "number",
-        "id": "value",
-        "title": {
-          "EN": "FAO Sector (%)"
-        },
-        "subject": null
-      },
-      "value": {
-        "keys": [
-          "1 = 1"
-        ],
-        "values": [
-          "@@direct ( related_oda_value / total_oda_value )*100"
-        ]
-      }
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "id": "unitcode",
-        "title": {
-          "EN": "Measurement Unit"
-        },
-        "domain": {
-          "codes": [
-            {
-              "idCodeList": "crs_units",
-              "version": "2016",
-              "level": 1
-            }
-          ]
-        },
-        "dataType": "code",
-        "subject": null
-      },
-      "value": "percentage"
-    }
-  },
-  {
-    "name": "addcolumn",
-    "parameters": {
-      "column": {
-        "dataType": "text",
-        "id": "indicator",
+        "id": "ODA",
         "key": true,
         "title": {
-          "EN": "Indicator"
-        },
-        "domain": {
-          "codes": [
-            {
-              "extendedName": {
-                "EN": "Adam Processes"
-              },
-              "idCodeList": "adam_processes"
-            }
-          ]
+          "EN": "ODA to FAO-related sectors ($)"
         },
         "subject": null
       },
-      "value": "FAO Sectors (%)"
+      "value": "@@direct related_oda_value"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "number",
+        "id": "SHARE",
+        "key": true,
+        "title": {
+          "EN": "Share (%)"
+        },
+        "subject": null
+      },
+      "value": "@@direct ( related_oda_value / total_oda_value )*100"
     }
   },
   {
@@ -336,43 +274,29 @@
       "columns": [
         "recipientcode",
         "donorcode",
-        "value",
-        "unitcode",
-        "indicator"
+        "total_oda_value",
+        "ODA",
+        "SHARE"
       ],
       "rows": {}
-    },
-    "rid": {
-      "uid": "percentage_oda"
     }
   },
   {
-    "name": "group",
-    "sid": [
-      {
-        "uid": "union_process"
-      }
-    ],
+    "name": "select",
     "parameters": {
-      "by": [
-        "recipientcode",
-        "donorcode",
-        "indicator"
-      ],
-      "aggregations": [
-        {
-          "columns": [
-            "value"
-          ],
-          "rule": "SUM"
-        },
-        {
-          "columns": [
-            "unitcode"
-          ],
-          "rule": "max"
-        }
-      ]
+      "values": {
+        "recipientcode": null,
+        "donorcode": null,
+        "total_oda_value": "round(total_oda_value::numeric,2)",
+        "ODA": "round(ODA::numeric,2)",
+        "SHARE": "round(SHARE::numeric,2)"
+      }
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "donorcode_EN": "ASC"
     }
   }
 ]

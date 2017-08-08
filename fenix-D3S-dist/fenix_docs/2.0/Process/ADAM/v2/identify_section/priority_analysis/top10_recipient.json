@@ -1,0 +1,109 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_priority_analysis"
+      }
+    ],
+    "parameters": {
+      "columns": [
+        "recipientcode",
+        "value",
+        "unitcode"
+      ],
+      "rows": {
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "31120",
+                "31130",
+                "41010",
+                "52010"
+              ]
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2010",
+              "to": "2015"
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_top_10_recipients"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "first"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    },
+    "rid": {
+      "uid": "top_10"
+    }
+  },
+  {
+    "name": "addcolumn",
+    "parameters": {
+      "column": {
+        "dataType": "text",
+        "id": "indicator",
+        "title": {
+          "EN": "Indicator"
+        },
+        "domain": {
+          "codes": [
+            {
+              "extendedName": {
+                "EN": "Adam Processes"
+              },
+              "idCodeList": "adam_processes"
+            }
+          ]
+        },
+        "subject": null
+      },
+      "value": "ODA"
+    },
+    "rid": {
+      "uid": "oda"
+    }
+  }
+]
