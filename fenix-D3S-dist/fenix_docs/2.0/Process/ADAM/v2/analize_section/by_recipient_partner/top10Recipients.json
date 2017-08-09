@@ -1,0 +1,143 @@
+[
+  {
+    "name": "filter",
+    "sid": [
+      {
+        "uid": "adam_usd_aggregated_table"
+      }
+    ],
+    "parameters": {
+      "rows": {
+        "!recipientcode": {
+          "codes": [
+            {
+              "uid": "crs_recipients",
+              "version": "2016",
+              "codes": [
+                "298",
+                "498",
+                "798",
+                "89",
+                "589",
+                "889",
+                "189",
+                "289",
+                "389",
+                "380",
+                "489",
+                "789",
+                "689",
+                "619",
+                "679"
+              ]
+            }
+          ]
+        },
+        "donorcode": {
+          "codes": [
+            {
+              "uid": "crs_donors",
+              "version": "2016",
+              "codes": [
+                "1"
+              ]
+            }
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2001",
+              "to": "2015"
+            }
+          ]
+        },
+        "oda": {
+          "codes": [
+            {
+              "uid": "oda_crs",
+              "version": "2016",
+              "codes": [
+                "usd_commitment"
+              ]
+            }
+          ]
+        },
+        "fao_region": {
+          "codes": [
+            {
+              "uid": "crs_fao_regions",
+              "version": "2016",
+              "codes": [
+                "RAP"
+              ]
+            }
+          ]
+        },
+        "purposecode": {
+          "codes": [
+            {
+              "uid": "crs_purposes",
+              "version": "2016",
+              "codes": [
+                "15170"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "rid": {
+      "uid": "filter_recipients"
+    }
+  },
+  {
+    "name": "group",
+    "parameters": {
+      "by": [
+        "recipientcode",
+        "flowcategory"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "max"
+        },
+        {
+          "columns": [
+            "flowcategory"
+          ],
+          "rule": "max"
+        }
+      ]
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "value": "DESC"
+    }
+  },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  }
+]

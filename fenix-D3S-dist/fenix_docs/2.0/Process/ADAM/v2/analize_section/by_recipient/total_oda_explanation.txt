@@ -1,4 +1,4 @@
 1) FAO Sector  is selected (1)
 2) ALL sector and ALL subsector is selected (2)
 3) A sector and a subsector are selected (3)
-4) ALL-a subsector is selected (3)
+4) ALL-a subsector is selected (4)
