@@ -101,9 +101,15 @@
     {
       "name": "order",
       "parameters": {
-        "year": "DESC",
         "value":"DESC"
       }
+    },
+  {
+    "name": "page",
+    "parameters": {
+      "perPage": 500,
+      "page": 1
     }
+  }
 
 ]
