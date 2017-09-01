@@ -34,30 +34,41 @@
         "key": true
       },
       {
+        "id" : "organization_id",
+        "title" : { "EN" : "ORG ID"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "organization_name",
+        "title" : { "EN" : "StakeHolder"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "answer_id",
+        "title" : { "EN" : "ID"},
+        "dataType" : "text"
+      },
+      {
         "id" : "species",
-        "title" : { "EN" : "Species"},
+        "title" : { "EN" : "PGRFA species surveyed/inventoried"},
         "dataType" : "text",
         "key": true
       },
       {
         "id" : "threatened_species",
-        "title" : { "EN" : "Threatened Species Number"},
+        "title" : { "EN" : "Threatened species"},
         "dataType" : "bool"
       },
       {
         "id" : "varieties",
-        "title" : { "EN" : "Varieties"},
+        "title" : { "EN" : "Number of varieties surveyed/inventoried"},
         "dataType" : "number"
       },
       {
         "id" : "threathened_varieties",
-        "title" : { "EN" : "Threathened Varieties"},
+        "title" : { "EN" : "Number of varieties threatened"},
         "dataType" : "number"
-      },
-      {
-        "id" : "answer_id",
-        "title" : { "EN" : "Answer id"},
-        "dataType" : "text"
       }
     ]
   }

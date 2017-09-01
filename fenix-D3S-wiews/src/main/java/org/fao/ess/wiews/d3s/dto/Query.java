@@ -57,16 +57,16 @@ public enum Query {
             "  species"),
 
     raw_indicator3 ("with raw as (\n" +
-            " select * \n" +
+            " select *, a.orgid as organization_id \n" +
             " from answer a\n" +
             " join answer_detail ad\n" +
             " on (a.id = answerid)\n" +
             " where iteration = 1 and questionid = 2\n" +
             ")\n" +
             "\n" +
-            "select iteration::text, iso as country_iso3, species, threatened, varieties, threatened_varieties, spec.answerid as answer_id\n" +
+            "select iteration::text, iso as country_iso3, organization_id::text, orgname_l as organization_name, spec.answerid as answer_id, species, threatened, varieties, threatened_varieties\n" +
             "from\n" +
-            "(select answerid, answer_freetext as species, iteration, country_id from raw where subquestionid = 1003) spec\n" +
+            "(select answerid, answer_freetext as species, iteration, country_id, organization_id from raw where subquestionid = 1003) spec\n" +
             "join\n" +
             "(select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
             "on (spec.answerid = tspec.answerid)\n" +
@@ -77,7 +77,8 @@ public enum Query {
             "(select answerid, answer_freetext::int as threatened_varieties from raw where subquestionid = 1006) tvar\n" +
             "on (spec.answerid = tvar.answerid)\n" +
             "\n" +
-            "join ref_country on (ref_country.country_id = spec.country_id)\n" +
+            "left join ref_instab on (ref_instab.id = spec.organization_id)\n" +
+            "left join ref_country on (ref_country.country_id = spec.country_id)\n" +
             "\n" +
             "order by country_iso3, species\n"),
 
