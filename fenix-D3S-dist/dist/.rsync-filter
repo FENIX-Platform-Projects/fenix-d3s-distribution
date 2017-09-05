@@ -1,0 +1,6 @@
+# rsync exclusions
+
+include lib/
+exclude lib/*
+exclude .gitignore
+exclude .rsync-filter

@@ -1,3 +1,5 @@
+---
+# Build and zip D3S sources.
 
 - name: "Debug print"
   debug:
@@ -7,10 +9,13 @@
   command: "mvn clean install -f {{ localD3S_rootPath }}/D3S.pom"
   register: maven_debug
 
-#
 - name: "Maven print"
   debug:
     var: maven_debug.stdout
+  when: maven_debug|failed
+
+
+# Zip libs for easier transfer.
 
 - name: "Create a zip for performance reasons"
   archive:

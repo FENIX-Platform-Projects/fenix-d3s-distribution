@@ -1,11 +1,9 @@
-   - name: "Run script to stop the server"
-     become: True
-     command: sh stop.sh arg1
-     register: d3s_stop_debug
-     args:
-         chdir: "{{ D3S_rootPath }}"
-     ignore_errors: yes
+---
+# Update D3S libs and restart the server.
 
+# ******************************************************************
+# STOP
+# ******************************************************************
 
    - name: "Get PID of the server "
      become: True
@@ -16,10 +14,17 @@
    - name: "Show PID of the server"
      debug:
        var: pid_proc.stdout
-     when: pid_proc|failed
+     #when: pid_proc|failed
 
+   - name: "Run script to stop the server"
+     become: True
+     command: bash stop.sh arg1
+     register: d3s_stop_debug
+     args:
+         chdir: "{{ localD3S_distPath }}"
+     ignore_errors: yes
 
-   - name: "Waiting the process stops"
+   - name: "Waiting the process to stop"
      wait_for:
        path: "/proc/{{pid_proc.stdout}}/status"
        state: absent
@@ -30,20 +35,29 @@
      when: d3s_stop_debug|succeeded
 
 
-   - name: "D3S remove folder"
-     shell: "rm {{ D3S_rootPath }}/lib/*"
+# ******************************************************************
+# REPLACE ASSETS
+# ******************************************************************
 
+   - name: "D3S remove libs if present"
+     file:
+        path: "{{ D3S_rootPath }}/lib/*"
+        state: absent
 
    - name: "Move lib into server"
      copy:
       src: "{{ localD3S_distPath }}/libs.tgz"
       dest: "{{  D3S_rootPath }}/lib/"
 
+   - name: "Create destination config folder, if it does not exist"
+     file:
+        path: "{{  D3S_rootPath }}/config"
+        state: directory
+
    - name: "Move config datasources properties into server"
      copy:
       src: "{{ localD3S_distPath }}/config/datasources.properties"
-      dest: "{{  D3S_rootPath }}//config/datasources.properties"
-
+      dest: "{{  D3S_rootPath }}/config/datasources.properties"
 
    - name: "Unzip libs into lib"
      unarchive:
@@ -56,14 +70,17 @@
       path: "{{ D3S_rootPath}}/lib/libs.tgz"
       state: absent
 
+# ******************************************************************
+# START
+# ******************************************************************
+
    - name: "Start server"
-     shell: ./start.sh
+     shell: bash start.sh
      register: d3s_start_debug
      args:
-       chdir: "{{ D3S_rootPath}}"
+       chdir: "{{ D3S_rootPath }}"
      async: 1000
      poll: 0
-
 
    - name: "Wait for d3s to come up"
      uri:

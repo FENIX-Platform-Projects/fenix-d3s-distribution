@@ -1,0 +1,16 @@
+---
+# ------------------------------------------------------------------
+# [Create] (re)start OrientDB container
+# ------------------------------------------------------------------
+  
+   # Asserts there is a running container matching the name and any provided configuration.
+   # If no container matches the name, a container will be created and started.
+   - name: [Create] (re)start the D3S OrientDB container
+     docker_container:
+        name: d3s_orientdb
+        image: broadinstitute/orientdb
+        state: started
+        restart: yes
+        ports:
+          - "2424:2424"
+          - "2480:2480"

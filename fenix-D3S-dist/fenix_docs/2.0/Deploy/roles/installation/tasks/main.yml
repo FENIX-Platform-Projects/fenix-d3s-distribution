@@ -1,0 +1,91 @@
+---
+# Install a new D3S instance (replace the former, if any).
+
+
+# ******************************************************************
+# STOP D3S
+# ******************************************************************
+   
+   - name: "Get PID of D3S server "
+     become: True
+     shell:  "ps -ef | grep {{ D3S_process }} | grep -v grep | awk '{print $2}'"
+     register: pid_proc
+
+   - name: "Show current PID of D3S server"
+     debug:
+       var: pid_proc.stdout
+
+   - name: "Run script to stop the D3S server"
+     become: True
+     command: bash stop.sh
+     register: d3s_stop_debug
+     args:
+         chdir: "{{ D3S_rootPath }}"
+     ignore_errors: yes
+
+   - name: "Wait for the process to stop"
+     wait_for:
+       path: "/proc/{{pid_proc.stdout}}/status"
+       state: absent
+
+   - name: "D3S stopped"
+     debug:
+       var: d3s_stop_debug.stdout
+     when: d3s_stop_debug|succeeded
+     
+     
+# ******************************************************************
+# COPY ASSETS
+# ******************************************************************
+    
+   - name: "Remove D3S libs if present"
+     file:
+        path: "{{ D3S_rootPath }}/lib/"
+        state: absent
+
+   - name: "Load assets"
+     synchronize:
+        # src final '/' means 'copy folder content without folder itself'
+        # Check for .rsync-filter for exclusions
+        src: "{{ localD3S_distPath }}/"
+        dest: "{{ D3S_rootPath }}"
+        # Delete files in dest not present in src (after the copy)?
+        delete: no
+
+   - name: "Extract D3S libs (remotely)"
+     unarchive:
+      src: "{{ D3S_rootPath }}/libs.tgz"
+      dest: "{{  D3S_rootPath }}/lib/"
+      remote_src: True
+         
+   - name: "Remove libs archive"
+     file:
+        path: "{{ D3S_rootPath}}/libs.tgz"
+        state: absent
+
+
+# ******************************************************************
+# START D3S
+# ******************************************************************
+    
+   - name: "D3S Start server"
+     command: bash start.sh
+     register: d3s_start_debug
+     args:
+       chdir: "{{ D3S_rootPath }}"
+     async: 1000
+     poll: 0
+
+   - name: "Wait for D3S server to come up"
+     uri:
+       url: "{{ D3S_service }}/mdsd"
+     register: result_get
+     until: result_get.status == 200
+     retries: 6
+     delay: 10
+
+   - name: "D3S debug status"
+     debug:
+       var: d3s_start_debug
+     when: d3s_start_debug
+

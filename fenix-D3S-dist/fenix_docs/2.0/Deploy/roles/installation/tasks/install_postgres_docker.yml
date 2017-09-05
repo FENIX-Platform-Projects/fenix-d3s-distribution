@@ -1,0 +1,19 @@
+---
+# ------------------------------------------------------------------
+# [Create] (re)start Postgres container
+# ------------------------------------------------------------------
+  
+   # Asserts there is a running container matching the name and any provided configuration.
+   # If no container matches the name, a container will be created and started.
+   - name: [Create] (re)start the D3S Postgres Container
+     docker_container:
+        name: d3s_postgres
+        image: postgres
+        state: started
+        restart: yes
+        ports:
+          - "5432:5432"
+        env:
+          - POSTGRES_USER: user
+          - POSTGRES_PASSWORD: password
+          - POSTGRES_DB: database

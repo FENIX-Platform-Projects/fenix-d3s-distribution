@@ -6,4 +6,5 @@ out
 *.war
 *.ear
 hs_err_pid*
-
+*.retry
+libs.tgz
