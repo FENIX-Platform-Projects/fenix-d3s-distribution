@@ -118,7 +118,7 @@ WITH
        iso::TEXT              AS wiews_region,
        1::integer         AS rank,
        nfp_rating         AS value,
-       'per'::text        AS um
+       'num'::text        AS um
      FROM   indicator_analysis spec
        JOIN   ref_country ON ( ref_country.country_id = spec.country_id )
      WHERE  indicator_id = 2
@@ -176,7 +176,7 @@ SELECT
   country,
   wiews_region,
   rank,
-  value,
+  CASE WHEN value > 0 THEN VALUE ELSE NULL END as value,
   um
 FROM
   nfp_rating
@@ -192,12 +192,13 @@ SELECT
   b.w as wiews_region,
   b.rank,
   avg(value) as value,
-  'per' as um
+  'num' as um
 
 FROM
   nfp_rating a  join
   codelist.ref_region_country b
     on a.country = b.country_iso3
+    WHERE value > 0
 GROUP BY domain, indicator, iteration, b.w, b.rank
 
 union

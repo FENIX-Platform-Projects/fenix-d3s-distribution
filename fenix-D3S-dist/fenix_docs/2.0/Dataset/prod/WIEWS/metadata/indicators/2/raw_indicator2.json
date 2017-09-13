@@ -29,25 +29,45 @@
         "id" : "country",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
-        "key": true
+        "dataType" : "text"
       },
       {
-        "id" : "species",
-        "title" : { "EN" : "Species"},
+        "id" : "org_id",
+        "title" : { "EN" : "ORG ID"},
         "dataType" : "text",
         "key": true
       },
       {
-        "id" : "varieties",
-        "title" : { "EN" : "Varieties"},
-        "dataType" : "number"
+        "id" : "organization_name",
+        "title" : { "EN" : "StakeHolder"},
+        "dataType" : "text"
       },
       {
         "id" : "answer_id",
-        "title" : { "EN" : "Answer id"},
-        "dataType" : "text"
+        "title" : { "EN" : "ID"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "species",
+        "title" : { "EN" : "PGRFA species surveyed/inventoried"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "threatened_species",
+        "title" : { "EN" : "Threatened species"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "varieties",
+        "title" : { "EN" : "Number of varieties surveyed/inventoried"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "threathened_varieties",
+        "title" : { "EN" : "Number of varieties threatened"},
+        "dataType" : "number"
       }
     ]
   }

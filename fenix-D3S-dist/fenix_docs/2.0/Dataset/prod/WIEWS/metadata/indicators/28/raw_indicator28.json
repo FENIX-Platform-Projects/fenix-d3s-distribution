@@ -19,50 +19,118 @@
     "columns": [
       {
         "id" : "iteration",
-        "title" : { "EN" : "Period"},
+        "title" : { "EN" : "Iteration"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
         "key": true
       },
       {
-        "id" : "answer_id",
-        "title" : { "EN" : "Answer id"},
-        "dataType" : "text",
-        "key": true
-      },
-
-      {
-        "id" : "country_iso3",
+        "id" : "country",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
-        "key": true
-      },
-      {
-        "id" : "stakeholder",
-        "title" : { "EN" : "Stakeholder"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] },
-        "key": true
-      },
-      {
-        "id" : "question_id",
-        "title" : { "EN" : "Question id"},
-        "dataType" : "text",
-        "key": true
-      },
-      {
-        "id" : "subquestion_id",
-        "title" : { "EN" : "Subquestion id"},
-        "dataType" : "text",
-        "key": true
-      },
-
-      {
-        "id" : "crop",
-        "title" : { "EN" : "Crop"},
         "dataType" : "text"
+      },
+      {
+        "id" : "org_id",
+        "title" : { "EN" : "ORG ID"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "organization_name",
+        "title" : { "EN" : "StakeHolder"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "answer_id",
+        "title" : { "EN" : "ID"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "crop_id",
+        "title" : { "EN" : "Name of crop/crop group(ID)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_name",
+        "title" : { "EN" : "Name of crop/crop group"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_name_local",
+        "title" : { "EN" : "Name of crop/crop group*"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "accessions_by_genebank",
+        "title" : { "EN" : "Total number of accessions distributed by the national genebank(s)"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_by_research_centre",
+        "title" : { "EN" : "Number of accessions distributed to National Agricultural Research Centres"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_by_private_sector",
+        "title" : { "EN" : "Number of accessions distributed to the private sector"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_by_farmer",
+        "title" : { "EN" : "Number of accessions distributed to farmers or NGOs"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_by_other_national",
+        "title" : { "EN" : "Number of accessions distributed to others (national)"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_by_stakeholder",
+        "title" : { "EN" : "Number of accessions distributed to foreign stakeholders"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_by_unknown",
+        "title" : { "EN" : "Number of accessions distributed to unknown"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "samples_by_genebank",
+        "title" : { "EN" : "Total number of samples distributed by the national genebank(s)"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "samples_by_research_centre",
+        "title" : { "EN" : "Number of samples distributed to National Agricultural Research Centres"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "samples_by_private_sector",
+        "title" : { "EN" : "Number of samples distributed to the private sector"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "samples_by_farmer",
+        "title" : { "EN" : "Number of samples distributed to farmers or NGOs"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "samples_by_other_national",
+        "title" : { "EN" : "Number of samples distributed to others (national)"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "samples_by_stakeholder",
+        "title" : { "EN" : "Number of samples distributed to foreign stakeholders"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "samples_by_unknown",
+        "title" : { "EN" : "Number of samples distributed to unknown"},
+        "dataType" : "number"
       }
     ]
   }

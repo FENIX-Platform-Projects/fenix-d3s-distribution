@@ -18,7 +18,7 @@
     "columns": [
       {
         "id" : "iteration",
-        "title" : { "EN" : "Period"},
+        "title" : { "EN" : "Iteration"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
         "key": true
@@ -27,36 +27,74 @@
         "id" : "country",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
-        "key": true
-      },
-
-      {
-        "id" : "stakeholder",
-        "title" : { "EN" : "Stakeholder"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] },
-        "key": true
+        "dataType" : "text"
       },
       {
-        "id" : "crop",
-        "title" : { "EN" : "Crop"},
+        "id" : "org_id",
+        "title" : { "EN" : "ORG ID"},
         "dataType" : "text",
         "key": true
       },
       {
-        "id" : "value",
-        "title" : { "EN" : "Value"},
-        "dataType" : "number",
-        "subject":"value"
+        "id" : "organization_name",
+        "title" : { "EN" : "StakeHolder"},
+        "dataType" : "text"
       },
       {
-        "id" : "um",
-        "title" : { "EN" : "Measurement unit"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
-        "subject":"um"
+        "id" : "answer_id",
+        "title" : { "EN" : "ID"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "strategy",
+        "title" : { "EN" : "A strategy"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_id",
+        "title" : { "EN" : "Targeted collecting is required for the following crop(ID)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_name",
+        "title" : { "EN" : "Targeted collecting is required for the following crop"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_name_local",
+        "title" : { "EN" : "Targeted collecting is required for the following crop*"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "gaps",
+        "title" : { "EN" : "Gaps detected"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "other_gaps_local",
+        "title" : { "EN" : "Other gaps detected*"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "other_gaps",
+        "title" : { "EN" : "Other gaps detected"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "methods",
+        "title" : { "EN" : "Methods used to detect gaps"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "other_methods_local",
+        "title" : { "EN" : "Other methods*"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "other_methods",
+        "title" : { "EN" : "Other methods"},
+        "dataType" : "text"
       }
     ]
   }

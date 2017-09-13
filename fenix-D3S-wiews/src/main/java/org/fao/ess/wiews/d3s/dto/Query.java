@@ -32,154 +32,139 @@ public enum Query {
             "          a.id = answerid )\n" +
             "      WHERE  questionid = 2\n" +
             "  )\n" +
-            "SELECT   iteration,\n" +
+            "\n" +
+            "select\n" +
+            "  iteration::text,\n" +
             "  iso AS country_iso3,\n" +
+            "  orgid::text as org_id,\n" +
+            "  orgname_l as org_name,\n" +
+            "  spec.answerid AS answer_id,\n" +
             "  species,\n" +
-            "  varieties,\n" +
-            "  spec.answerid AS answer_id\n" +
-            "FROM\n" +
-            "  ( SELECT answerid,\n" +
-            "      answer_freetext AS species,\n" +
-            "      iteration,\n" +
-            "      country_id\n" +
-            "    FROM   raw\n" +
-            "    WHERE  subquestionid = 1003 ) spec\n" +
-            "  JOIN (\n" +
-            "         SELECT\n" +
-            "           answerid,\n" +
-            "           answer_freetext :: int AS varieties\n" +
-            "         FROM   raw\n" +
-            "         WHERE  subquestionid = 1005 ) var\n" +
-            "    ON (spec.answerid = var.answerid )\n" +
-            "  JOIN ref_country ON ( ref_country.country_id = spec.country_id )\n" +
-            "ORDER BY\n" +
-            "  country_iso3,\n" +
-            "  species"),
-
-    raw_indicator3 ("with raw as (\n" +
-            " select *, a.orgid as organization_id \n" +
-            " from answer a\n" +
-            " join answer_detail ad\n" +
-            " on (a.id = answerid)\n" +
-            " where iteration = 1 and questionid = 2\n" +
-            ")\n" +
-            "\n" +
-            "select iteration::text, iso as country_iso3, organization_id::text, orgname_l as organization_name, spec.answerid as answer_id, species, threatened, varieties, threatened_varieties\n" +
+            "  coalesce(threatened,false) as threatened,\n" +
+            "  coalesce(varieties,0) as varieties,\n" +
+            "  coalesce(threatened_varieties,0) as threatened_varieties\n" +
             "from\n" +
-            "(select answerid, answer_freetext as species, iteration, country_id, organization_id from raw where subquestionid = 1003) spec\n" +
-            "join\n" +
-            "(select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
-            "on (spec.answerid = tspec.answerid)\n" +
-            "join\n" +
-            "(select answerid, answer_freetext::int as varieties from raw where subquestionid = 1005) var\n" +
-            "on (spec.answerid = var.answerid)\n" +
-            "join\n" +
-            "(select answerid, answer_freetext::int as threatened_varieties from raw where subquestionid = 1006) tvar\n" +
-            "on (spec.answerid = tvar.answerid)\n" +
+            "  (select answerid, answer_freetext as species, iteration, country_id, orgid from raw where subquestionid = 1003) spec\n" +
+            "  left join (select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
+            "    on (spec.answerid = tspec.answerid)\n" +
+            "  left join (select answerid, answer_freetext::int as varieties from raw where subquestionid = 1005) var\n" +
+            "    on (spec.answerid = var.answerid)\n" +
+            "  left join (select answerid, answer_freetext::int as threatened_varieties from raw where subquestionid = 1006) tvar\n" +
+            "    on (spec.answerid = tvar.answerid)\n" +
             "\n" +
-            "left join ref_instab on (ref_instab.id = spec.organization_id)\n" +
-            "left join ref_country on (ref_country.country_id = spec.country_id)\n" +
+            "  left join ref_instab on (ref_instab.id = spec.orgid)\n" +
+            "  left join ref_country on (ref_country.country_id = spec.country_id)\n" +
             "\n" +
-            "order by country_iso3, species\n"),
+            "order by country_iso3, species"),
+
+    raw_indicator3 ("WITH\n" +
+            "    raw AS (\n" +
+            "      SELECT a.questionid,\n" +
+            "        a.approved,\n" +
+            "        a.country_id,\n" +
+            "        a.iteration,\n" +
+            "        subquestionid,\n" +
+            "        answerid,\n" +
+            "        answer_freetext,\n" +
+            "        reference_id,\n" +
+            "        a.orgid\n" +
+            "      FROM   answer a\n" +
+            "        JOIN   answer_detail ad\n" +
+            "          ON     (\n" +
+            "          a.id = answerid )\n" +
+            "      WHERE  questionid = 2\n" +
+            "  )\n" +
+            "\n" +
+            "select\n" +
+            "  iteration::text,\n" +
+            "  iso AS country_iso3,\n" +
+            "  orgid::text as org_id,\n" +
+            "  orgname_l as org_name,\n" +
+            "  spec.answerid AS answer_id,\n" +
+            "  species,\n" +
+            "  coalesce(threatened,false) as threatened,\n" +
+            "  coalesce(varieties,0) as varieties,\n" +
+            "  coalesce(threatened_varieties,0) as threatened_varieties\n" +
+            "from\n" +
+            "  (select answerid, answer_freetext as species, iteration, country_id, orgid from raw where subquestionid = 1003) spec\n" +
+            "  left join (select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
+            "    on (spec.answerid = tspec.answerid)\n" +
+            "  left join (select answerid, answer_freetext::int as varieties from raw where subquestionid = 1005) var\n" +
+            "    on (spec.answerid = var.answerid)\n" +
+            "  left join (select answerid, answer_freetext::int as threatened_varieties from raw where subquestionid = 1006) tvar\n" +
+            "    on (spec.answerid = tvar.answerid)\n" +
+            "\n" +
+            "  left join ref_instab on (ref_instab.id = spec.orgid)\n" +
+            "  left join ref_country on (ref_country.country_id = spec.country_id)\n" +
+            "\n" +
+            "order by country_iso3, species"),
 
     raw_indicator10 (
             "SELECT\n" +
-            "  c.iso as country_iso3,\n" +
-            "  a.id::text as answer_id,\n" +
-            "  questionid::text as question_id,\n" +
-            "  a.orgid::text as organization_id,\n" +
-            "  case when approved=1 then TRUE ELSE FALSE end as approved,\n" +
-            "  created_by,\n" +
-            "  created_date::text as created_date,\n" +
-            "  modified_by,\n" +
-            "  modified_date::text as modified_date,\n" +
             "  iteration::text as iteration,\n" +
-            "  datasource,\n" +
-            "  coalesce(t1.answer_freetext, '0') :: REAL AS sites_with_management,\n" +
-            "  coalesce(t2.answer_freetext, '0') :: REAL AS sites_total\n" +
+            "  c.iso as country_iso3,\n" +
+            "  a.orgid::text as org_id,\n" +
+            "  orgname_l as org_name,\n" +
+            "  a.id::text as answer_id,\n" +
+            "  coalesce(t2.answer_freetext, '0') :: REAL AS sites_total,\n" +
+            "  coalesce(t1.answer_freetext, '0') :: REAL AS sites_with_management\n" +
             "FROM answer a\n" +
-            "  JOIN answer_detail t1 ON (t1.answerId = a.id)\n" +
-            "  JOIN answer_detail t2 ON (t2.answerId = a.id)\n" +
-            "  JOIN ref_country c ON (c.country_id = a.country_id)\n" +
+            "  left JOIN answer_detail t1 ON (t1.answerId = a.id)\n" +
+            "  left JOIN answer_detail t2 ON (t2.answerId = a.id)\n" +
+            "\n" +
+            "  left JOIN ref_country c ON (c.country_id = a.country_id)\n" +
+            "  left join ref_instab on (ref_instab.id = a.orgid)\n" +
             "WHERE a.approved = 1 AND t1.subquestionid = 1043 AND t2.subquestionid = 1042"
     ),
-    raw_indicator16 ("SELECT  *\n" +
-            "FROM\n" +
-            "  ( SELECT\n" +
-            "      a.iteration :: TEXT,\n" +
-            "      a.id                     AS answer_ID,\n" +
-            "      co.iso                   AS country,\n" +
-            "      it.wiews_instcode        AS stakeholder,\n" +
-            "      a.questionid :: TEXT  AS question_id,\n" +
-            "      c.subquestionid :: TEXT  AS subquestion_id,\n" +
-            "      CASE WHEN c.reference_id IS NOT NULL\n" +
-            "        THEN crop_name\n" +
-            "      ELSE answer_freetext END AS crop\n" +
-            "    FROM\n" +
-            "      answer a\n" +
-            "      FULL OUTER JOIN\n" +
-            "      answer_detail c\n" +
-            "        ON ( c.answerid = a.id AND\n" +
-            "             c.subquestionid IN ( 1068, 1070 ) )\n" +
-            "      FULL OUTER JOIN\n" +
-            "      ref_crop ref\n" +
-            "        ON ( ref.crop_id :: TEXT = c.reference_id :: TEXT AND\n" +
-            "             ref.lang = 'EN' )\n" +
-            "      JOIN\n" +
-            "      ref_instab it\n" +
-            "        ON ( it.id = a.orgId )\n" +
-            "      LEFT JOIN\n" +
-            "      ref_country co\n" +
-            "        ON ( co.country_id = a.country_id ) ) f\n" +
-            "WHERE\n" +
-            "  crop IS NOT NULL"),
 
-    raw_indicator14 ("with raw as (\n" +
+    raw_indicator14 (
+            "WITH crops AS (\n" +
             "    SELECT\n" +
-            "      ref_c.iso,\n" +
-            "      iteration::TEXT,\n" +
-            "      c.wiews_instcode as stakeholder,\n" +
-            "      answer_freetext,\n" +
-            "      answer_freetext_local,\n" +
-            "      reference_id\n" +
-            "\n" +
-            "    FROM\n" +
-            "      answer a\n" +
-            "      JOIN\n" +
-            "      answer_detail ad\n" +
-            "        ON ( a.id = answerid )\n" +
-            "      JOIN\n" +
-            "      ref_instab c\n" +
-            "        ON a.orgid = c.id\n" +
-            "      JOIN\n" +
-            "      ref_country ref_c\n" +
-            "        ON ref_c.country_id = a.country_id\n" +
-            "\n" +
-            "    WHERE questionid = 11 and ad.subquestionid= 1058 and ref_c.lang = 'EN' ),\n" +
-            "\n" +
-            "    ind_14 as (\n" +
-            "\n" +
-            "      SELECT\n" +
-            "        iteration::TEXT,\n" +
-            "        iso as country,\n" +
-            "        stakeholder,\n" +
-            "        CASE\n" +
-            "        WHEN reference_id is null or reference_id = '0'  and answer_freetext is not null THEN answer_freetext\n" +
-            "        WHEN reference_id is null or reference_id = '0'  and answer_freetext is null and  answer_freetext_local is not null THEN  answer_freetext_local\n" +
-            "        WHEN reference_id is not null then crop_name end as crop,\n" +
-            "        count(*) as value,\n" +
-            "        'num'::TEXT as um \n" +
+            "      c.answerid, c.subquestionid, crop_id,\n" +
+            "      coalesce(crop_name, answer_freetext) AS crop_name_en,\n" +
+            "      answer_freetext_local AS crop_name_local\n" +
+            "    FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id::text AND lang = 'EN')\n" +
+            "    WHERE c.subquestionid = 1058\n" +
+            "),\n" +
+            "answers AS (\n" +
+            "      select answerid, subquestionid, lang,\n" +
+            "        string_agg(sl.option_value,'; ') AS value\n" +
             "      FROM\n" +
-            "        raw a\n" +
-            "        FULL JOIN ( SELECT * FROM\n" +
-            "        ref_crop WHERE lang = 'EN')b on (a.reference_id = b.crop_id::TEXT )\n" +
-            "      WHERE iteration is not null\n" +
-            "      GROUP BY iteration,\n" +
-            "        iso,\n" +
-            "        stakeholder,\n" +
-            "        crop)\n" +
-            "\n" +
-            "SELECT * from ind_14"),
+            "        answer_detail s\n" +
+            "        LEFT JOIN ref_enum_options sl ON (s.reference_id = sl.id::text AND lang = 'EN')\n" +
+            "      WHERE s.subquestionid IN (1057, 1059, 1060, 1061, 1062, 1063, 1064)\n" +
+            "      GROUP BY answerid, subquestionid, lang\n" +
+            ")\n" +
+            "SELECT\n" +
+            "  a.iteration :: TEXT,\n" +
+            "  c.iso                                      AS country_iso3,\n" +
+            "  a.orgid::text                              AS org_id,\n" +
+            "  orgname_l                                  AS org_name,\n" +
+            "  a.id                                       AS answer_id,\n" +
+            "  s.value                                    AS strategy,\n" +
+            "  crops.crop_id::text,\n" +
+            "  crops.crop_name_en                         AS crop_name,\n" +
+            "  crops.crop_name_local,\n" +
+            "  gd.value                                   AS gaps,\n" +
+            "  ogdl.value                                 AS other_gaps_local,\n" +
+            "  ogd.value                                  AS other_gaps,\n" +
+            "  m.value                                    AS methods,\n" +
+            "  oml.value                                  AS other_methods_local,\n" +
+            "  om.value                                   AS other_methods\n" +
+            "FROM answer a\n" +
+            "  LEFT JOIN answers s ON (s.subquestionid = 1057 AND a.id = s.answerid)\n" +
+            "  LEFT JOIN answers gd ON (gd.subquestionid = 1059 AND a.id = gd.answerid)\n" +
+            "  LEFT JOIN answers ogdl ON (ogdl.subquestionid = 1060 AND a.id = ogdl.answerid)\n" +
+            "  LEFT JOIN answers ogd ON (ogd.subquestionid = 1061 AND a.id = ogd.answerid)\n" +
+            "  LEFT JOIN answers m ON (m.subquestionid = 1062 AND a.id = m.answerid)\n" +
+            "  LEFT JOIN answers oml ON (oml.subquestionid = 1063 AND a.id = oml.answerid)\n" +
+            "  LEFT JOIN answers om ON (om.subquestionid = 1064 AND a.id = om.answerid)\n" +
+            "  LEFT JOIN ref_country c ON (a.country_id = c.country_id)\n" +
+            "  LEFT JOIN ref_instab it ON (it.id = a.orgId)\n" +
+            "  LEFT JOIN crops ON (crops.answerId = a.id)\n" +
+            "WHERE a.questionid = 11 AND a.approved = 1\n" +
+            "ORDER BY a.iteration, c.iso, a.id"
+    ),
 
     raw_indicator15 (
             "WITH crops AS (\n" +
@@ -221,6 +206,37 @@ public enum Query {
                     "WHERE a.approved = 1"
     ),
 
+    raw_indicator16 ("SELECT  *\n" +
+            "FROM\n" +
+            "  ( SELECT\n" +
+            "      a.iteration :: TEXT,\n" +
+            "      a.id                     AS answer_ID,\n" +
+            "      co.iso                   AS country,\n" +
+            "      it.wiews_instcode        AS stakeholder,\n" +
+            "      a.questionid :: TEXT  AS question_id,\n" +
+            "      c.subquestionid :: TEXT  AS subquestion_id,\n" +
+            "      CASE WHEN c.reference_id IS NOT NULL\n" +
+            "        THEN crop_name\n" +
+            "      ELSE answer_freetext END AS crop\n" +
+            "    FROM\n" +
+            "      answer a\n" +
+            "      FULL OUTER JOIN\n" +
+            "      answer_detail c\n" +
+            "        ON ( c.answerid = a.id AND\n" +
+            "             c.subquestionid IN ( 1068, 1070 ) )\n" +
+            "      FULL OUTER JOIN\n" +
+            "      ref_crop ref\n" +
+            "        ON ( ref.crop_id :: TEXT = c.reference_id :: TEXT AND\n" +
+            "             ref.lang = 'EN' )\n" +
+            "      JOIN\n" +
+            "      ref_instab it\n" +
+            "        ON ( it.id = a.orgId )\n" +
+            "      LEFT JOIN\n" +
+            "      ref_country co\n" +
+            "        ON ( co.country_id = a.country_id ) ) f\n" +
+            "WHERE\n" +
+            "  crop IS NOT NULL"),
+
     raw_indicator20 ("SELECT\n" +
             "\n" +
             "  a.ITERATION::text as iteration,\n" +
@@ -254,80 +270,136 @@ public enum Query {
             "ORDER BY a.ITERATION, d.iso, a.id"),
 
     raw_indicator22 (
+            "WITH crops AS (\n" +
+            "    SELECT\n" +
+            "      c.answerid,\n" +
+            "      c.subquestionid,\n" +
+            "      crop_id,\n" +
+            "      coalesce(crop_name, answer_freetext) AS crop_name_en,\n" +
+            "      answer_freetext_local AS crop_name_local\n" +
+            "    FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id::text AND lang = 'EN')\n" +
+            "    WHERE c.subquestionid = 1086\n" +
+            ")\n" +
+            "\n" +
             "SELECT\n" +
-            "  a.questionid,\n" +
-            "  a.id                                       AS answer_id,\n" +
             "  a.iteration :: TEXT,\n" +
             "  c.iso                                      AS country_iso3,\n" +
-            "  it.wiews_instcode                          AS stakeholder,\n" +
-            "  a.datasource,\n" +
-            "  a.created_by,\n" +
-            "  a.created_date :: TEXT,\n" +
-            "  a.modified_by,\n" +
-            "  a.modified_date :: TEXT,\n" +
-            "  coalesce(adn.answer_freetext, '0') :: REAL AS accessions_out_of_budget,\n" +
-            "  coalesce(add.answer_freetext, '0') :: REAL AS accessions_num\n" +
+            "  a.orgid::text                              AS org_id,\n" +
+            "  orgname_l                                  AS org_name,\n" +
+            "  a.id                                       AS answer_id,\n" +
+            "  crops.crop_id::text,\n" +
+            "  crops.crop_name_en                         AS crop_name,\n" +
+            "  crops.crop_name_local,\n" +
+            "  coalesce(adn.answer_freetext, '0') :: REAL AS accessions_num,\n" +
+            "  coalesce(adr.answer_freetext, '0') :: REAL AS accessions_regenerated,\n" +
+            "  coalesce(adnr.answer_freetext, '0') :: REAL AS accessions_need_regeneration,\n" +
+            "  coalesce(ado.answer_freetext, '0') :: REAL AS accessions_out_of_budget\n" +
             "FROM answer a\n" +
-            "  JOIN answer_detail adn ON (adn.subquestionid = 1090 AND a.id = adn.answerid)\n" +
-            "  JOIN answer_detail add ON (add.subquestionid = 1087 AND a.id = add.answerid)\n" +
-            "  JOIN ref_country c ON (a.country_id = c.country_id)\n" +
-            "  JOIN ref_instab it ON (it.id = a.orgId)\n" +
-            "WHERE a.approved = 1\n"+
-            "ORDER BY a.iteration, c.iso, a.id"),
+            "  LEFT JOIN answer_detail ado ON (ado.subquestionid = 1090 AND a.id = ado.answerid)\n" +
+            "  LEFT JOIN answer_detail adn ON (adn.subquestionid = 1087 AND a.id = adn.answerid)\n" +
+            "  LEFT JOIN answer_detail adr ON (adr.subquestionid = 1088 AND a.id = adr.answerid)\n" +
+            "  LEFT JOIN answer_detail adnr ON (adnr.subquestionid = 1089 AND a.id = adnr.answerid)\n" +
+            "  LEFT JOIN ref_country c ON (a.country_id = c.country_id)\n" +
+            "  LEFT JOIN ref_instab it ON (it.id = a.orgId)\n" +
+            "  LEFT JOIN crops ON (crops.answerId = a.id)\n" +
+            "WHERE a.questionid = 15 AND a.approved = 1\n" +
+            "ORDER BY a.iteration, c.iso, a.id"
+    ),
 
     raw_indicator24 (
+            "WITH crops AS (\n" +
+            "    SELECT\n" +
+            "      c.answerid,\n" +
+            "      c.subquestionid,\n" +
+            "      crop_id,\n" +
+            "      coalesce(crop_name, answer_freetext) AS crop_name_en,\n" +
+            "      answer_freetext_local AS crop_name_local\n" +
+            "    FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id::text AND lang = 'EN')\n" +
+            "    WHERE c.subquestionid = 1086\n" +
+            ")\n" +
+            "\n" +
             "SELECT\n" +
-            "  a.questionid,\n" +
-            "  a.id                                       AS answer_id,\n" +
             "  a.iteration :: TEXT,\n" +
             "  c.iso                                      AS country_iso3,\n" +
-            "  it.wiews_instcode                          AS stakeholder,\n" +
-            "  a.datasource,\n" +
-            "  a.created_by,\n" +
-            "  a.created_date :: TEXT,\n" +
-            "  a.modified_by,\n" +
-            "  a.modified_date :: TEXT,\n" +
-            "  coalesce(adn.answer_freetext, '0') :: REAL AS accessions_regeneration,\n" +
-            "  coalesce(add.answer_freetext, '0') :: REAL AS accessions_num\n" +
+            "  a.orgid::text                              AS org_id,\n" +
+            "  orgname_l                                  AS org_name,\n" +
+            "  a.id                                       AS answer_id,\n" +
+            "  crops.crop_id::text,\n" +
+            "  crops.crop_name_en                         AS crop_name,\n" +
+            "  crops.crop_name_local,\n" +
+            "  coalesce(adn.answer_freetext, '0') :: REAL AS accessions_num,\n" +
+            "  coalesce(adr.answer_freetext, '0') :: REAL AS accessions_regenerated,\n" +
+            "  coalesce(adnr.answer_freetext, '0') :: REAL AS accessions_need_regeneration,\n" +
+            "  coalesce(ado.answer_freetext, '0') :: REAL AS accessions_out_of_budget\n" +
             "FROM answer a\n" +
-            "  JOIN answer_detail adn ON (adn.subquestionid = 1089 AND a.id = adn.answerid)\n" +
-            "  JOIN answer_detail add ON (add.subquestionid = 1087 AND a.id = add.answerid)\n" +
-            "  JOIN ref_country c ON (a.country_id = c.country_id)\n" +
-            "  JOIN ref_instab it ON (it.id = a.orgId)\n" +
-            "WHERE a.approved = 1\n"+
-            "ORDER BY a.iteration, c.iso, a.id"),
+            "  LEFT JOIN answer_detail ado ON (ado.subquestionid = 1090 AND a.id = ado.answerid)\n" +
+            "  LEFT JOIN answer_detail adn ON (adn.subquestionid = 1087 AND a.id = adn.answerid)\n" +
+            "  LEFT JOIN answer_detail adr ON (adr.subquestionid = 1088 AND a.id = adr.answerid)\n" +
+            "  LEFT JOIN answer_detail adnr ON (adnr.subquestionid = 1089 AND a.id = adnr.answerid)\n" +
+            "  LEFT JOIN ref_country c ON (a.country_id = c.country_id)\n" +
+            "  LEFT JOIN ref_instab it ON (it.id = a.orgId)\n" +
+            "  LEFT JOIN crops ON (crops.answerId = a.id)\n" +
+            "WHERE a.questionid = 15 AND a.approved = 1\n" +
+            "ORDER BY a.iteration, c.iso, a.id"
+    ),
 
 
-    raw_indicator28 ("SELECT  * \n" +
-            "FROM \n" +
-            "  ( SELECT \n" +
-            "      a.iteration, \n" +
-            "      a.id                     AS answer_ID, \n" +
-            "      co.iso                   AS country, \n" +
-            "      it.wiews_instcode        AS stakeholder, \n" +
-            "      a.questionid :: TEXT  AS question_id, \n" +
-            "      c.subquestionid :: TEXT  AS subquestion_id, \n" +
-            "      CASE WHEN c.reference_id IS NOT NULL \n" +
-            "        THEN crop_name \n" +
-            "      ELSE answer_freetext END AS crop \n" +
-            "    FROM \n" +
-            "      answer a \n" +
-            "      FULL OUTER JOIN \n" +
-            "      answer_detail c \n" +
-            "        ON ( c.answerid = a.id AND \n" +
-            "             c.subquestionid IN ( 1102, 1103 ) )\n" +
-            "      FULL OUTER JOIN \n" +
-            "      ref_crop ref \n" +
-            "        ON ( ref.crop_id :: TEXT = c.reference_id :: TEXT AND \n" +
-            "             ref.lang = 'EN' ) \n" +
-            "      JOIN \n" +
-            "      ref_instab it \n" +
-            "        ON ( it.id = a.orgId ) \n" +
-            "      LEFT JOIN \n" +
-            "      ref_country co \n" +
-            "        ON ( co.country_id = a.country_id ) ) f \n" +
-            "WHERE \n" +
-            "  crop IS NOT NULL")
+    raw_indicator28 (
+            "WITH crops AS (\n" +
+            "    SELECT\n" +
+            "      c.answerid,\n" +
+            "      c.subquestionid,\n" +
+            "      crop_id,\n" +
+            "      coalesce(crop_name, answer_freetext) AS crop_name_en,\n" +
+            "      answer_freetext_local AS crop_name_local\n" +
+            "    FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id::text AND lang = 'EN')\n" +
+            "    WHERE c.subquestionid = 1102\n" +
+            ")\n" +
+            "SELECT\n" +
+            "  a.iteration :: TEXT,\n" +
+            "  c.iso                                      AS country_iso3,\n" +
+            "  a.orgid::text                              AS org_id,\n" +
+            "  orgname_l                                  AS org_name,\n" +
+            "  a.id                                       AS answer_id,\n" +
+            "  crops.crop_id::text,\n" +
+            "  crops.crop_name_en                         AS crop_name,\n" +
+            "  crops.crop_name_local,\n" +
+            "  coalesce(adg.answer_freetext, '0') :: REAL AS accessions_by_genebank,\n" +
+            "  coalesce(adr.answer_freetext, '0') :: REAL AS accessions_by_research_centre,\n" +
+            "  coalesce(adp.answer_freetext, '0') :: REAL AS accessions_by_private_sector,\n" +
+            "  coalesce(adf.answer_freetext, '0') :: REAL AS accessions_by_farmer,\n" +
+            "  coalesce(ado.answer_freetext, '0') :: REAL AS accessions_by_other_national,\n" +
+            "  coalesce(ads.answer_freetext, '0') :: REAL AS accessions_by_stakeholder,\n" +
+            "  coalesce(adu.answer_freetext, '0') :: REAL AS accessions_by_unknown,\n" +
+            "  coalesce(sdg.answer_freetext, '0') :: REAL AS samples_by_genebank,\n" +
+            "  coalesce(sdr.answer_freetext, '0') :: REAL AS samples_by_research_centre,\n" +
+            "  coalesce(sdp.answer_freetext, '0') :: REAL AS samples_by_private_sector,\n" +
+            "  coalesce(sdf.answer_freetext, '0') :: REAL AS samples_by_farmer,\n" +
+            "  coalesce(sdo.answer_freetext, '0') :: REAL AS samples_by_other_national,\n" +
+            "  coalesce(sds.answer_freetext, '0') :: REAL AS samples_by_stakeholder,\n" +
+            "  coalesce(sdu.answer_freetext, '0') :: REAL AS samples_by_unknown\n" +
+            "FROM\n" +
+            "  answer a\n" +
+            "  LEFT JOIN answer_detail adg ON (adg.subquestionid = 1103 AND a.id = adg.answerid)\n" +
+            "  LEFT JOIN answer_detail adr ON (adr.subquestionid = 1104 AND a.id = adr.answerid)\n" +
+            "  LEFT JOIN answer_detail adp ON (adp.subquestionid = 1105 AND a.id = adp.answerid)\n" +
+            "  LEFT JOIN answer_detail adf ON (adf.subquestionid = 1106 AND a.id = adf.answerid)\n" +
+            "  LEFT JOIN answer_detail ado ON (ado.subquestionid = 1107 AND a.id = ado.answerid)\n" +
+            "  LEFT JOIN answer_detail ads ON (ads.subquestionid = 1108 AND a.id = ads.answerid)\n" +
+            "  LEFT JOIN answer_detail adu ON (adu.subquestionid = 1109 AND a.id = adu.answerid)\n" +
+            "  LEFT JOIN answer_detail sdg ON (sdg.subquestionid = 1110 AND a.id = sdg.answerid)\n" +
+            "  LEFT JOIN answer_detail sdr ON (sdr.subquestionid = 1111 AND a.id = sdr.answerid)\n" +
+            "  LEFT JOIN answer_detail sdp ON (sdp.subquestionid = 1112 AND a.id = sdp.answerid)\n" +
+            "  LEFT JOIN answer_detail sdf ON (sdf.subquestionid = 1113 AND a.id = sdf.answerid)\n" +
+            "  LEFT JOIN answer_detail sdo ON (sdo.subquestionid = 1114 AND a.id = sdo.answerid)\n" +
+            "  LEFT JOIN answer_detail sds ON (sds.subquestionid = 1115 AND a.id = sds.answerid)\n" +
+            "  LEFT JOIN answer_detail sdu ON (sdu.subquestionid = 1116 AND a.id = sdu.answerid)\n" +
+            "  LEFT JOIN ref_country c ON (a.country_id = c.country_id)\n" +
+            "  LEFT JOIN ref_instab it ON (it.id = a.orgId)\n" +
+            "  LEFT JOIN crops ON (crops.answerId = a.id)\n" +
+            "WHERE a.questionid = 19 AND a.approved = 1\n" +
+            "ORDER BY a.iteration, c.iso, a.id"
+    )
 
 
 

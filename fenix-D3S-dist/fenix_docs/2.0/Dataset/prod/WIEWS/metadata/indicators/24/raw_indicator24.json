@@ -17,19 +17,6 @@
     },
 
     "columns": [
-
-      {
-        "id" : "question_id",
-        "title" : { "EN" : "Question id"},
-        "dataType" : "text",
-        "key": true
-      },
-      {
-        "id" : "answer_id",
-        "title" : { "EN" : "Answer id"},
-        "dataType" : "text",
-        "key": true
-      },
       {
         "id" : "iteration",
         "title" : { "EN" : "Iteration"},
@@ -41,50 +28,58 @@
         "id" : "country",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "dataType" : "text"
+      },
+      {
+        "id" : "org_id",
+        "title" : { "EN" : "ORG ID"},
+        "dataType" : "text",
         "key": true
       },
       {
-        "id" : "stakeholder",
-        "title" : { "EN" : "Stakeholder"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] } ,
+        "id" : "organization_name",
+        "title" : { "EN" : "StakeHolder"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "answer_id",
+        "title" : { "EN" : "ID"},
+        "dataType" : "text",
         "key": true
       },
       {
-        "id" : "datasource",
-        "title" : { "EN" : "Data source"},
+        "id" : "crop_id",
+        "title" : { "EN" : "Name of crop/crop group(ID)"},
         "dataType" : "text"
       },
       {
-        "id" : "created_by",
-        "title" : { "EN" : "Created by"},
+        "id" : "crop_name",
+        "title" : { "EN" : "Name of crop/crop group"},
         "dataType" : "text"
       },
       {
-        "id" : "created_date",
-        "title" : { "EN" : "Created date"},
+        "id" : "crop_name_local",
+        "title" : { "EN" : "Name of crop/crop group*"},
         "dataType" : "text"
       },
       {
-        "id" : "modified_by",
-        "title" : { "EN" : "Modified by"},
-        "dataType" : "text"
+        "id" : "accessions_num",
+        "title" : { "EN" : "Total number of accessions in the national genebank(s)"},
+        "dataType" : "number"
       },
       {
-        "id" : "modified_date",
-        "title" : { "EN" : "Modified date"},
-        "dataType" : "text"
+        "id" : "accessions_regenerated",
+        "title" : { "EN" : "Number of accessions regenerated and/or multiplied"},
+        "dataType" : "number"
       },
       {
-        "id" : "accessions_regeneration",
+        "id" : "accessions_need_regeneration",
         "title" : { "EN" : "Number of accessions in need of regeneration"},
         "dataType" : "number"
       },
       {
-        "id" : "accessions_num",
-        "title" : { "EN" : "Number of accessions"},
+        "id" : "accessions_out_of_budget",
+        "title" : { "EN" : "Number of accessions in need of regeneration without a budget for regeneration"},
         "dataType" : "number"
       }
     ]
