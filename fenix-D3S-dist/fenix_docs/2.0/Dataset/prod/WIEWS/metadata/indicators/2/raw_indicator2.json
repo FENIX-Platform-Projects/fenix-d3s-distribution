@@ -20,7 +20,7 @@
 
       {
         "id" : "iteration",
-        "title" : { "EN" : "Iteration"},
+        "title" : { "EN" : "Period"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
         "key": true
@@ -57,7 +57,7 @@
       {
         "id" : "threatened_species",
         "title" : { "EN" : "Threatened species"},
-        "dataType" : "bool"
+        "dataType" : "text"
       },
       {
         "id" : "varieties",

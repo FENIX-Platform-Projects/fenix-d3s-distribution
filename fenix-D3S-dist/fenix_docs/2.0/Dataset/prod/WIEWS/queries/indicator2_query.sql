@@ -195,10 +195,8 @@ SELECT
   'num' as um
 
 FROM
-  nfp_rating a  join
-  codelist.ref_region_country b
-    on a.country = b.country_iso3
-    WHERE value > 0
+  nfp_rating a  join codelist.ref_region_country b on a.country = b.country_iso3
+WHERE value > 0
 GROUP BY domain, indicator, iteration, b.w, b.rank
 
 union

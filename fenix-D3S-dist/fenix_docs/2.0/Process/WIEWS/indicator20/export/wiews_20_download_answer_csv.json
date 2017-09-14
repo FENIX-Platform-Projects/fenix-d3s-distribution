@@ -10,27 +10,11 @@
       "result" : false,
       "parameters": {
         "filter" : {
-          "m49": {
-            "codes": [
-              {
-                "uid": "wiews_m49_region_only",
-                "codes": [ "WITC","150" ]
-              }
-            ]
-          },
-          "fao": {
-            "codes": [
-              {
-                "uid": "wiews_fao_region_only",
-                "codes": [ "5400" ]
-              }
-            ]
-          },
           "iso3": {
             "codes": [
               {
                 "uid": "ISO3",
-                "codes": [ "SSD","EGY" ]
+                "codes": [ "ALB" ]
               }
             ]
           }
@@ -56,6 +40,43 @@
           }
         }
       }
+    },
+    {
+      "name":"order",
+      "parameters":{
+        "iteration":"ASC",
+        "country":"ASC",
+        "stakeholder":"ASC",
+        "taxon_freetext":"ASC",
+        "crop_freetext":"ASC"
+      }
+    },
+    {
+      "name": "columns",
+      "parameters" : {
+        "columns" : [
+          "iteration",
+          "country",
+          "orgid",
+          "stakeholder",
+          "holdinginstitutecode",
+          "accessionno",
+          "taxonid",
+          "taxon_freetext",
+          "cropid",
+          "crop_freetext",
+          "acquisitiondate",
+          "origincountry",
+          "biologicalaccession",
+          "genebankid",
+          "genebank_freetext",
+          "latitude",
+          "longitude",
+          "germplasmastore",
+          "multilateralsystemstatus"
+        ]
+      }
     }
+
   ]
 }

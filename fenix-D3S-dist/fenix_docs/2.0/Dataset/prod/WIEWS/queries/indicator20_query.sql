@@ -7,13 +7,13 @@ CREATE TABLE indicators.indicator20 as (
                        cast('nfp' as TEXT) as element,
                        cast('20' as TEXT) as indicator,
                        cast('na' as TEXT) as biologicalAccessionId,
-                       country,
-                       country as wiews_region,
+                       country::text,
+                       country::text as wiews_region,
                        rank,
                        cast('na' as TEXT) as stakeholder,
                        cast('na' as TEXT) as genus,
                        nfp_rating as VALUE,
-                       cast('per' as TEXT) as um
+                       cast('num' as TEXT) as um
                      from (
                             SELECT
                               b.ISO as country,
@@ -27,7 +27,7 @@ CREATE TABLE indicators.indicator20 as (
 
                             FROM indicator_analysis a
                               JOIN ref_country b ON (a.country_id = b.COUNTRY_ID)
-                            WHERE indicator_id = 20) t
+                            WHERE indicator_id = 20 and a.nfp_rating > 0) t
                      GROUP BY
                        iteration,
                        domain,
@@ -43,8 +43,8 @@ CREATE TABLE indicators.indicator20 as (
                     max(element) as element,
                     max(indicator) as indicator,
                     cast('na' as TEXT) as biologicalAccessionId,
-                    country,
-                    wiews_region,
+                    country::text,
+                    wiews_region::text,
                     rank,
                     max(stakeholder) as stakeholder,
                     max(genus) as genus,
@@ -56,7 +56,7 @@ CREATE TABLE indicators.indicator20 as (
                            cast('2240' as TEXT) as domain,
                            cast('ind'  as TEXT) as element,
                            cast('20'  as TEXT)  as indicator,
-                           b.ISO as country,
+                           b.iso as country,
                            b.iso as wiews_region,
                            cast(1 as INTEGER) as rank,
                            cast('na' as TEXT)  as stakeholder,
@@ -166,8 +166,8 @@ CREATE TABLE indicators.indicator20 as (
                    cast('gen' as TEXT) as element,
                    cast('20' as TEXT) as indicator,
                    cast(a.biologicalAccessionId as TEXT) as biologicalAccessionId,
-                   b.ISO as country,
-                   b.ISO as  wiews_region,
+                   b.ISO::text as country,
+                   b.ISO::text as  wiews_region,
                    cast(1 as INTEGER) as rank,
                    d.WIEWS_INSTCODE as stakeholder,
                    cast(lower(COALESCE(c.GENUS,'NA')) as TEXT) as genus,
@@ -213,8 +213,8 @@ CREATE TABLE indicators.indicator20 as (
                          cast('stk'as TEXT) as element,
                          cast('20' as TEXT) as indicator,
                          cast('na' as TEXT) as biologicalAccessionId,
-                         b.ISO as country,
-                         b.ISO as wiews_region,
+                         b.ISO::text as country,
+                         b.ISO::text as wiews_region,
                          cast(1 as INTEGER) as rank,
                          c.WIEWS_INSTCODE as stakeholder,
                          cast('na' as TEXT) as genus,
@@ -265,9 +265,9 @@ CREATE TABLE indicators.indicator20 as (
   /* By genus*/
   select * from genus
 
-  UNION
+--  UNION
 
-  select * from worlds
+--  select * from worlds
 );
 
 

@@ -19,38 +19,36 @@
     "columns": [
       {
         "id" : "iteration",
-        "title" : { "EN" : "Iteration"},
+        "title" : { "EN" : "Period"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] }
-
       },
       {
         "id" : "country",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
-
-
-      },
-      {
-        "id" : "orgID",
-        "title" : { "EN" : "Organization id"},
         "dataType" : "text"
       },
-
+      {
+        "id" : "orgid",
+        "title" : { "EN" : "ORG ID"},
+        "dataType" : "text"
+      },
       {
         "id" : "stakeholder",
-        "title" : { "EN" : "Stakeholder"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] }
+        "title" : { "EN" : "StakeHolder"},
+        "dataType" : "text"
       },
       {
         "id" : "id",
         "title" : { "EN" : "ID"},
         "dataType" : "text",
         "key": true
-
+      },
+      {
+        "id" : "holdinginstitutecode",
+        "title" : { "EN" : "Holding institute code"},
+        "dataType" : "text"
       },
       {
         "id" : "accessionno",
@@ -59,82 +57,70 @@
       },
       {
         "id" : "taxonid",
-        "title" : { "EN" : "Taxon id"},
+        "title" : { "EN" : "Name of taxon(ID)"},
         "subject": "value",
         "dataType" : "text"
       },
       {
-        "id" : "taxontext",
-        "title" : { "EN" : "Taxon Free text"},
+        "id" : "taxon_freetext",
+        "title" : { "EN" : "Name of taxon"},
         "dataType" : "text"
       },
       {
-        "id" : "crop",
-        "title" : { "EN" : "Crop"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_crop" } ] }
+        "id" : "cropid",
+        "title" : { "EN" : "Name of crop(ID)"},
+        "dataType" : "text"
       },
       {
-        "id" : "croptext",
-        "title" : { "EN" : "Crop Free text"},
+        "id" : "crop_freetext",
+        "title" : { "EN" : "Name of crop"},
         "dataType" : "text"
       },
       {
         "id" : "acquisitiondate",
-        "title" : { "EN" : "Acquisition date"},
+        "title" : { "EN" : "Acquisition Date (YYYY/MM)"},
         "dataType" : "text"
       },
       {
         "id" : "origincountry",
-        "title" : { "EN" : "Origin Country"},
-        "dataType" : "code",
+        "title" : { "EN" : "Country of origin"},
+        "dataType" : "text",
         "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
-
       },
       {
-        "id" : "biologicalaccessionid",
-        "title" : { "EN" : "Biological accession id"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_biological" } ] }
+        "id" : "biologicalaccession",
+        "title" : { "EN" : "Biological status of accession"},
+        "dataType" : "text"
       },
       {
         "id" : "genebankid",
-        "title" : { "EN" : "Genetical bank id"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_genebank" } ] }
+        "title" : { "EN" : "Genebank(s) holding safety duplications(ID)"},
+        "dataType" : "text"
       },
-
       {
         "id" : "genebank_freetext",
-        "title" : { "EN" : "Genetical bank free text"},
+        "title" : { "EN" : "Genebank(s) holding safety duplications"},
         "dataType" : "text"
       },
       {
         "id" : "latitude",
-        "title" : { "EN" : "Latitude"},
+        "title" : { "EN" : "Latitude of collecting site (decimal degrees format)"},
         "dataType" : "text"
       },
       {
         "id" : "longitude",
-        "title" : { "EN" : "Longitude"},
+        "title" : { "EN" : "Longitude of collecting site (decimal degrees format)"},
         "dataType" : "text"
       },
       {
-        "id" : "collectionsourceid",
-        "title" : { "EN" : "Collection source id"},
+        "id" : "germplasmastore",
+        "title" : { "EN" : "Type of germplasm storage"},
         "dataType" : "text"
       },
       {
-        "id" : "germplasmastoreid",
-        "title" : { "EN" : "Germplasm store id"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_germplasma" } ] }
-      },
-      {
-        "id" : "multilateralsystemstatusid",
-        "title" : { "EN" : "Multilateral System Status id"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_multilateral" } ] }
+        "id" : "multilateralsystemstatus",
+        "title" : { "EN" : "Status under the Multilateral System"},
+        "dataType" : "text"
       }
     ]
   }

@@ -40,12 +40,12 @@ public enum Query {
             "  orgname_l as org_name,\n" +
             "  spec.answerid AS answer_id,\n" +
             "  species,\n" +
-            "  coalesce(threatened,false) as threatened,\n" +
-            "  coalesce(varieties,0) as varieties,\n" +
-            "  coalesce(threatened_varieties,0) as threatened_varieties\n" +
+            "  threatened,\n" +
+            "  varieties,\n" +
+            "  threatened_varieties\n" +
             "from\n" +
             "  (select answerid, answer_freetext as species, iteration, country_id, orgid from raw where subquestionid = 1003) spec\n" +
-            "  left join (select answerid, case when reference_id = '1001' then true else false end as threatened from raw where subquestionid = 1004) tspec\n" +
+            "  left join (select answerid, case when reference_id = '1001' then 'yes' else 'no' end as threatened from raw where subquestionid = 1004) tspec\n" +
             "    on (spec.answerid = tspec.answerid)\n" +
             "  left join (select answerid, answer_freetext::int as varieties from raw where subquestionid = 1005) var\n" +
             "    on (spec.answerid = var.answerid)\n" +
@@ -237,13 +237,14 @@ public enum Query {
             "WHERE\n" +
             "  crop IS NOT NULL"),
 
-    raw_indicator20 ("SELECT\n" +
-            "\n" +
-            "  a.ITERATION::text as iteration,\n" +
+    raw_indicator20 (
+            "SELECT\n" +
+            "  a.iteration::text as iteration,\n" +
             "  d.iso::text as country,\n" +
             "  a.orgid::text as orgid,\n" +
-            "  c.wiews_instcode::text as stakeholder,\n" +
+            "  c.orgname_l::text as stakeholder,\n" +
             "  a.id::text as id,\n" +
+            "  a.holdinginstitutecode::text as holdinginstitutecode,\n" +
             "  a.accessionno::text as accessionno,\n" +
             "  a.taxonid::text as taxonid,\n" +
             "  a.taxon_freetext::text as taxon_freetext,\n" +
@@ -251,23 +252,24 @@ public enum Query {
             "  a.crop_freetext::text as crop_freetext,\n" +
             "  a.acquisitiondate::text as acquisitiondate,\n" +
             "  ref.iso::text as origincountry,\n" +
-            "  a.biologicalaccessionid::text as biologicalaccessionid,\n" +
+            "  lb.wiews_codelist_title_en::text as biologicalaccession,\n" +
             "  a.genebankid::text as genebankid,\n" +
             "  a.genebank_freetext::text as genebank_freetext,\n" +
             "  a.latitude::text as latitude,\n" +
             "  a.longitude::text as longitude,\n" +
-            "  a.collectionsourceid::text as collectionsourceid,\n" +
-            "  a.germplasmastoreid::text as germplasmastoreid,\n" +
-            "  a.multilateralsystemstatusid::text as multilateralsystemstatusid\n" +
+            "  lg.wiews_codelist_title_en::text as germplasmastore,\n" +
+            "  lm.wiews_codelist_title_en::text as multilateralsystemstatus\n" +
             "\n" +
             "\n" +
             "FROM answer_q14 a\n" +
-            "  JOIN\n" +
-            "  ref_instab c\n" +
-            "    on a.orgId = c.ID\n" +
+            "  JOIN ref_instab c on a.orgId = c.id\n" +
             "  JOIN ref_country d ON a.country_id = d.country_id\n" +
             "  JOIN ref_country ref on a.countryoriginid = ref.country_id\n" +
-            "ORDER BY a.ITERATION, d.iso, a.id"),
+            "  LEFT JOIN codelist.wiews_codelist lg on (lg.wiews_codelist_uid='wiews_germplasma' AND a.germplasmastoreid::text = lg.wiews_codelist_code)\n" +
+            "  LEFT JOIN codelist.wiews_codelist lb on (lb.wiews_codelist_uid='wiews_biological' AND a.biologicalaccessionid::text = lb.wiews_codelist_code)\n" +
+            "  LEFT JOIN codelist.wiews_codelist lm on (lm.wiews_codelist_uid='wiews_multilateral' AND a.multilateralsystemstatusid::text = lm.wiews_codelist_code)\n" +
+            "ORDER BY a.iteration, d.iso, a.id"
+    ),
 
     raw_indicator22 (
             "WITH crops AS (\n" +
