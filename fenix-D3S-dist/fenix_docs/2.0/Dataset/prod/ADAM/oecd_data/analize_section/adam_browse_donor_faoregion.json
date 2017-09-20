@@ -56,7 +56,8 @@
         "id" : "fao_region",
         "title" : { "EN" : "FAO Region" },
         "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] }
+        "domain" : { "codes" : [ { "idCodeList" : "crs_fao_regions", "version" : "2016", "level" : 1 } ] },
+        "key" : true
       },
       {
         "id" : "year",

@@ -1,6 +1,6 @@
 {
   "outConfig" : {
-    "plugin" : "outputCSV"
+    "plugin" : "wiewsOutputCSV"
   },
   "flow" : [
     {
