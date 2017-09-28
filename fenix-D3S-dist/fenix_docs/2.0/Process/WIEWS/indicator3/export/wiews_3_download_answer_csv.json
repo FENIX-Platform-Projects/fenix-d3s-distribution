@@ -35,7 +35,7 @@
               }
             ]
           },
-          "country" : {
+          "country_iso3" : {
             "variable" : "required_countries"
           }
         }
@@ -44,9 +44,25 @@
     {
       "name": "order",
       "parameters": {
+        "iteration" : "ASC",
         "country" : "ASC",
         "species" : "ASC"
       }
+    },
+    {
+      "name": "columns",
+      "parameters" : {
+        "columns" : [
+          "iteration",
+          "country",
+          "organization_name",
+          "species",
+          "threatened_species",
+          "varieties",
+          "threathened_varieties"
+        ]
+      }
+
     }
   ]
 }

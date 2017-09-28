@@ -3,7 +3,7 @@
     "name": "filter",
     "sid": [
       {
-        "uid": "GIFT_afc_000023BGD201001"
+        "uid": "GIFT_afc_000253UGA201001"
       }
     ],
     "parameters": {
@@ -65,12 +65,6 @@
     }
   },
   {
-    "name": "asTable"
-  },
-  {
-    "name": "percentage"
-  },
-  {
     "name": "addcolumn",
     "parameters": {
       "column": {
@@ -88,7 +82,7 @@
           ]
         }
       },
-      "value": "perc"
+      "value": "kcal"
     }
   }
 ]

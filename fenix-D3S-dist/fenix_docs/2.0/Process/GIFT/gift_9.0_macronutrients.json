@@ -1,7 +1,7 @@
 [
   {
     "name": "filter",
-    "sid" : [{"uid":"GIFT_afc_000042BUR201001"}],
+    "sid" : [{"uid":"GIFT_afc_000253UGA201001"}],
     "parameters": {
       "rows": {
         "item": {
@@ -21,10 +21,10 @@
     "parameters": {
       "item": null,
       "gender": "2",
-      "special_condition": ["1"],
+      "special_condition": ["1","2","3","4"],
       "age_year": {
-        "from": 10.5,
-        "to": 67
+        "from": 0,
+        "to": 120
       }
     }
   },

@@ -35,7 +35,7 @@
               }
             ]
           },
-          "country" : {
+          "country_iso3" : {
             "variable" : "required_countries"
           }
         }
@@ -55,7 +55,6 @@
         "columns" : [
           "iteration",
           "country",
-          "org_id",
           "organization_name",
           "species",
           "threatened_species",
