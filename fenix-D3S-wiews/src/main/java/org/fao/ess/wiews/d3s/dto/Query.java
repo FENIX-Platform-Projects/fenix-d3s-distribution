@@ -103,6 +103,7 @@ public enum Query {
             "SELECT\n" +
             "  iteration::text as iteration,\n" +
             "  c.iso as country_iso3,\n" +
+            "  c.name as country,\n" +
             "  a.orgid::text as org_id,\n" +
             "  orgname_l as org_name,\n" +
             "  a.id::text as answer_id,\n" +

@@ -74,10 +74,10 @@
       "parameters" : {
         "columns" : [
           "domain",
+          "iteration",
           "wiews_region",
           "indicator",
           "element",
-          "iteration",
           "value",
           "um"
         ]

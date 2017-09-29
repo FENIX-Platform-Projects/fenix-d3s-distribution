@@ -36,7 +36,7 @@
               }
             ]
           },
-          "country" : {
+          "country_iso3" : {
             "variable" : "required_countries"
           }
         }
@@ -46,8 +46,21 @@
       "name": "order",
       "parameters": {
         "country" : "ASC",
-        "datasource" : "ASC"
+        "organization_name" : "ASC"
       }
+    },
+    {
+      "name": "columns",
+      "parameters" : {
+        "columns" : [
+          "iteration",
+          "country",
+          "organization_name",
+          "sites_total",
+          "sites_with_management"
+        ]
+      }
+
     }
   ]
 }

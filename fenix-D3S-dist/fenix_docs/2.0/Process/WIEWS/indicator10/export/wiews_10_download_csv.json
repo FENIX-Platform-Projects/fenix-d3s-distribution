@@ -62,10 +62,26 @@
     {
       "name": "order",
       "parameters": {
+        "iteration" : "ASC",
         "rank" : "ASC",
-        "wiews_region" : "ASC"
+        "wiews_region" : "ASC",
+        "indicator" : "ASC",
+        "element" : "ASC"
+      }
+    },
+    {
+      "name": "columns",
+      "parameters": {
+        "columns": [
+          "domain",
+          "iteration",
+          "wiews_region",
+          "indicator",
+          "element",
+          "value",
+          "um"
+        ]
       }
     }
-
   ]
 }
