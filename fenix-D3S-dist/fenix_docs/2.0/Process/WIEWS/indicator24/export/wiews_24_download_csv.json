@@ -81,20 +81,20 @@
         }
       }
     },
-
     {
-      "name": "order",
-      "parameters": {
-        "rank" : "ASC",
-        "wiews_region" : "ASC",
-        "element" : "ASC"
+      "name":"order",
+      "parameters":{
+        "iteration":"ASC",
+        "rank":"ASC",
+        "wiews_region":"ASC",
+        "indicator":"ASC",
+        "indicator_label":"ASC"
       }
     },
-
     {
-      "name": "filter",
-      "parameters": {
-        "columns": [
+      "name": "columns",
+      "parameters" : {
+        "columns" : [
           "domain",
           "wiews_region",
           "indicator",

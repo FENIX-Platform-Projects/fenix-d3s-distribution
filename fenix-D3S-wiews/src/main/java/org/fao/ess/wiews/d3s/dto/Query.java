@@ -287,16 +287,17 @@ public enum Query {
             "SELECT\n" +
             "  a.iteration :: TEXT,\n" +
             "  c.iso                                      AS country_iso3,\n" +
+            "  c.name::text                               AS country,\n" +
             "  a.orgid::text                              AS org_id,\n" +
             "  orgname_l                                  AS org_name,\n" +
             "  a.id                                       AS answer_id,\n" +
             "  crops.crop_id::text,\n" +
             "  crops.crop_name_en                         AS crop_name,\n" +
             "  crops.crop_name_local,\n" +
-            "  coalesce(adn.answer_freetext, '0') :: REAL AS accessions_num,\n" +
-            "  coalesce(adr.answer_freetext, '0') :: REAL AS accessions_regenerated,\n" +
-            "  coalesce(adnr.answer_freetext, '0') :: REAL AS accessions_need_regeneration,\n" +
-            "  coalesce(ado.answer_freetext, '0') :: REAL AS accessions_out_of_budget\n" +
+            "  adn.answer_freetext :: REAL AS accessions_num,\n" +
+            "  adr.answer_freetext :: REAL AS accessions_regenerated,\n" +
+            "  adnr.answer_freetext :: REAL AS accessions_need_regeneration,\n" +
+            "  ado.answer_freetext :: REAL AS accessions_out_of_budget\n" +
             "FROM answer a\n" +
             "  LEFT JOIN answer_detail ado ON (ado.subquestionid = 1090 AND a.id = ado.answerid)\n" +
             "  LEFT JOIN answer_detail adn ON (adn.subquestionid = 1087 AND a.id = adn.answerid)\n" +
@@ -324,16 +325,17 @@ public enum Query {
             "SELECT\n" +
             "  a.iteration :: TEXT,\n" +
             "  c.iso                                      AS country_iso3,\n" +
+            "  c.name::text                               AS country,\n" +
             "  a.orgid::text                              AS org_id,\n" +
             "  orgname_l                                  AS org_name,\n" +
             "  a.id                                       AS answer_id,\n" +
             "  crops.crop_id::text,\n" +
             "  crops.crop_name_en                         AS crop_name,\n" +
             "  crops.crop_name_local,\n" +
-            "  coalesce(adn.answer_freetext, '0') :: REAL AS accessions_num,\n" +
-            "  coalesce(adr.answer_freetext, '0') :: REAL AS accessions_regenerated,\n" +
-            "  coalesce(adnr.answer_freetext, '0') :: REAL AS accessions_need_regeneration,\n" +
-            "  coalesce(ado.answer_freetext, '0') :: REAL AS accessions_out_of_budget\n" +
+            "  adn.answer_freetext :: REAL AS accessions_num,\n" +
+            "  adr.answer_freetext :: REAL AS accessions_regenerated,\n" +
+            "  adnr.answer_freetext :: REAL AS accessions_need_regeneration,\n" +
+            "  ado.answer_freetext :: REAL AS accessions_out_of_budget\n" +
             "FROM answer a\n" +
             "  LEFT JOIN answer_detail ado ON (ado.subquestionid = 1090 AND a.id = ado.answerid)\n" +
             "  LEFT JOIN answer_detail adn ON (adn.subquestionid = 1087 AND a.id = adn.answerid)\n" +
@@ -361,26 +363,27 @@ public enum Query {
             "SELECT\n" +
             "  a.iteration :: TEXT,\n" +
             "  c.iso                                      AS country_iso3,\n" +
+            "  c.name::text                               AS country,\n" +
             "  a.orgid::text                              AS org_id,\n" +
             "  orgname_l                                  AS org_name,\n" +
             "  a.id                                       AS answer_id,\n" +
             "  crops.crop_id::text,\n" +
             "  crops.crop_name_en                         AS crop_name,\n" +
             "  crops.crop_name_local,\n" +
-            "  coalesce(adg.answer_freetext, '0') :: REAL AS accessions_by_genebank,\n" +
-            "  coalesce(adr.answer_freetext, '0') :: REAL AS accessions_by_research_centre,\n" +
-            "  coalesce(adp.answer_freetext, '0') :: REAL AS accessions_by_private_sector,\n" +
-            "  coalesce(adf.answer_freetext, '0') :: REAL AS accessions_by_farmer,\n" +
-            "  coalesce(ado.answer_freetext, '0') :: REAL AS accessions_by_other_national,\n" +
-            "  coalesce(ads.answer_freetext, '0') :: REAL AS accessions_by_stakeholder,\n" +
-            "  coalesce(adu.answer_freetext, '0') :: REAL AS accessions_by_unknown,\n" +
-            "  coalesce(sdg.answer_freetext, '0') :: REAL AS samples_by_genebank,\n" +
-            "  coalesce(sdr.answer_freetext, '0') :: REAL AS samples_by_research_centre,\n" +
-            "  coalesce(sdp.answer_freetext, '0') :: REAL AS samples_by_private_sector,\n" +
-            "  coalesce(sdf.answer_freetext, '0') :: REAL AS samples_by_farmer,\n" +
-            "  coalesce(sdo.answer_freetext, '0') :: REAL AS samples_by_other_national,\n" +
-            "  coalesce(sds.answer_freetext, '0') :: REAL AS samples_by_stakeholder,\n" +
-            "  coalesce(sdu.answer_freetext, '0') :: REAL AS samples_by_unknown\n" +
+            "  adg.answer_freetext :: REAL AS accessions_by_genebank,\n" +
+            "  adr.answer_freetext :: REAL AS accessions_by_research_centre,\n" +
+            "  adp.answer_freetext :: REAL AS accessions_by_private_sector,\n" +
+            "  adf.answer_freetext :: REAL AS accessions_by_farmer,\n" +
+            "  ado.answer_freetext :: REAL AS accessions_by_other_national,\n" +
+            "  ads.answer_freetext :: REAL AS accessions_by_stakeholder,\n" +
+            "  adu.answer_freetext :: REAL AS accessions_by_unknown,\n" +
+            "  sdg.answer_freetext :: REAL AS samples_by_genebank,\n" +
+            "  sdr.answer_freetext :: REAL AS samples_by_research_centre,\n" +
+            "  sdp.answer_freetext :: REAL AS samples_by_private_sector,\n" +
+            "  sdf.answer_freetext :: REAL AS samples_by_farmer,\n" +
+            "  sdo.answer_freetext :: REAL AS samples_by_other_national,\n" +
+            "  sds.answer_freetext :: REAL AS samples_by_stakeholder,\n" +
+            "  sdu.answer_freetext :: REAL AS samples_by_unknown\n" +
             "FROM\n" +
             "  answer a\n" +
             "  LEFT JOIN answer_detail adg ON (adg.subquestionid = 1103 AND a.id = adg.answerid)\n" +

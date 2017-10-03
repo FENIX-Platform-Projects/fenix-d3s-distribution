@@ -25,9 +25,14 @@
         "key": true
       },
       {
-        "id" : "country",
+        "id" : "country_iso3",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
+        "dataType" : "text"
+      },
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country"},
         "dataType" : "text"
       },
       {
