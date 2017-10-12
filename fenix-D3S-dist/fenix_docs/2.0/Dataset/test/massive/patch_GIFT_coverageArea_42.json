@@ -1,0 +1,33 @@
+{
+  "filter": {
+    "dsd.contextSystem" : {
+      "enumeration": [
+        "gift"
+      ]
+    },
+    "meContent.resourceRepresentationType" : {
+      "enumeration" : ["dataset"]
+    },
+    "meContent.seCoverage.coverageGeographic" : {
+      "codes" : [
+        {
+          "uid" : "GAUL0",
+          "version" : "2014",
+          "codes" : ["42"]
+        }
+      ]
+    }
+  },
+
+
+  "metadata": {
+    "meContent" : {
+      "seCoverage" : {
+        "coverageGeographic" : {
+          "idCodeList" : "ISO3",
+          "codes" : [ { "code" : "BFA" } ]
+        }
+      }
+    }
+  }
+}

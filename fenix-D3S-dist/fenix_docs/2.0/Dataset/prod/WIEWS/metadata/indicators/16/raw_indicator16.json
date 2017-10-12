@@ -19,49 +19,112 @@
     "columns": [
       {
         "id" : "iteration",
-        "title" : { "EN" : "Period"},
+        "title" : { "EN" : "Iteration"},
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
         "key": true
       },
       {
-        "id" : "answer_id",
-        "title" : { "EN" : "Answer id"},
-        "dataType" : "text",
-        "key": true
-      },
-
-      {
-        "id" : "country",
+        "id" : "country_iso3",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
-        "key": true
+        "dataType" : "text"
       },
       {
-        "id" : "stakeholder",
-        "title" : { "EN" : "Stakeholder"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_stakeholder" } ] },
-        "key": true
+        "id" : "country",
+        "title" : { "EN" : "Country"},
+        "dataType" : "text"
       },
       {
-        "id" : "question_id",
-        "title" : { "EN" : "Question id"},
+        "id" : "org_id",
+        "title" : { "EN" : "ORG ID"},
         "dataType" : "text",
         "key": true
       },
       {
-        "id" : "subquestion_id",
-        "title" : { "EN" : "Subquestion id"},
+        "id" : "org_name",
+        "title" : { "EN" : "StakeHolder"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "answer_id",
+        "title" : { "EN" : "ID"},
         "dataType" : "text",
         "key": true
       },
-
       {
-        "id" : "crop",
-        "title" : { "EN" : "Crop"},
+        "id" : "mission_id",
+        "title" : { "EN" : "Name of collecting mission(ID)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "mission_name",
+        "title" : { "EN" : "Name of collecting mission"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "mission_name_local",
+        "title" : { "EN" : "Name of collecting mission*"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "start_date",
+        "title" : { "EN" : "Starting date (YYYY/MM)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "end_date",
+        "title" : { "EN" : "Ending date (YYYY/MM)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_id",
+        "title" : { "EN" : "Name of collected crop(ID)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_name",
+        "title" : { "EN" : "Name of collected crop"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_name_local",
+        "title" : { "EN" : "Name of collected crop*"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "taxon_id",
+        "title" : { "EN" : "Name of collected taxon(ID)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "taxon_name_local",
+        "title" : { "EN" : "Name of collected taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "accessions_number",
+        "title" : { "EN" : "Number of collected accessions"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "secured_accessions_number",
+        "title" : { "EN" : "Number of collected accessions secured in long-term conservation"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "area_id",
+        "title" : { "EN" : "Name of collection area(ID)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "area_name",
+        "title" : { "EN" : "Name of collection area"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "area_name_local",
+        "title" : { "EN" : "Name of collection area*"},
         "dataType" : "text"
       }
     ]

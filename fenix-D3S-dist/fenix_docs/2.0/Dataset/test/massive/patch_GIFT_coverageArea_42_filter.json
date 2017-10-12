@@ -1,0 +1,19 @@
+{
+    "dsd.contextSystem" : {
+      "enumeration": [
+        "gift"
+      ]
+    },
+    "meContent.resourceRepresentationType" : {
+      "enumeration" : ["dataset"]
+    },
+    "meContent.seCoverage.coverageGeographic" : {
+      "codes" : [
+        {
+          "uid" : "GAUL0",
+          "version" : "2014",
+          "codes" : ["42"]
+        }
+      ]
+    }
+}

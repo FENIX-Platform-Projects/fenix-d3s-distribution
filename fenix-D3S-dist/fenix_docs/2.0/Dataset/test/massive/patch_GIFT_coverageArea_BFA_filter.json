@@ -1,0 +1,18 @@
+{
+    "dsd.contextSystem" : {
+      "enumeration": [
+        "gift"
+      ]
+    },
+    "meContent.resourceRepresentationType" : {
+      "enumeration" : ["dataset"]
+    },
+    "meContent.seCoverage.coverageGeographic" : {
+      "codes" : [
+        {
+          "uid" : "ISO3",
+          "codes" : ["BFA"]
+        }
+      ]
+    }
+}

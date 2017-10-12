@@ -35,7 +35,7 @@
               }
             ]
           },
-          "country" : {
+          "country_iso3" : {
             "variable" : "required_countries"
           }
         }
@@ -44,8 +44,30 @@
     {
       "name": "order",
       "parameters": {
+        "iteration" : "ASC",
         "country" : "ASC",
-        "species" : "ASC"
+        "org_name" : "ASC",
+        "crop_name" : "ASC"
+      }
+    },
+    {
+      "name": "columns",
+      "parameters" : {
+        "columns" : [
+          "iteration",
+          "country",
+          "org_name",
+          "strategy",
+          "crop_id",
+          "crop_name",
+          "crop_name_local",
+          "gaps",
+          "other_gaps_local",
+          "other_gaps",
+          "methods",
+          "other_methods_local",
+          "other_methods"
+        ]
       }
     }
   ]

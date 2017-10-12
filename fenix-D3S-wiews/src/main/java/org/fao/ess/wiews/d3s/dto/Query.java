@@ -119,45 +119,53 @@ public enum Query {
     ),
 
     raw_indicator14 (
-            "WITH crops AS (\n" +
-            "    SELECT\n" +
-            "      c.answerid, c.subquestionid, crop_id,\n" +
-            "      coalesce(crop_name, answer_freetext) AS crop_name_en,\n" +
-            "      answer_freetext_local AS crop_name_local\n" +
-            "    FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id::text AND lang = 'EN')\n" +
-            "    WHERE c.subquestionid = 1058\n" +
+            "WITH\n" +
+            "crops AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid, crop_id,\n" +
+            "    coalesce(crop_name, answer_freetext) AS crop_name_en,\n" +
+            "    answer_freetext_local AS crop_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id::text AND lang = 'EN')\n" +
+            "  WHERE c.subquestionid = 1058\n" +
+            "),\n" +
+            "enums AS (\n" +
+            "  select answerid, subquestionid, string_agg(sl.option_value,'; ') AS value\n" +
+            "  FROM\n" +
+            "    answer_detail s\n" +
+            "    LEFT JOIN ref_enum_options sl ON (s.reference_id = sl.id::text AND lang = 'EN')\n" +
+            "  WHERE s.subquestionid IN (1057, 1059, 1062)\n" +
+            "  GROUP BY answerid, subquestionid\n" +
             "),\n" +
             "answers AS (\n" +
-            "      select answerid, subquestionid, lang,\n" +
-            "        string_agg(sl.option_value,'; ') AS value\n" +
-            "      FROM\n" +
-            "        answer_detail s\n" +
-            "        LEFT JOIN ref_enum_options sl ON (s.reference_id = sl.id::text AND lang = 'EN')\n" +
-            "      WHERE s.subquestionid IN (1057, 1059, 1060, 1061, 1062, 1063, 1064)\n" +
-            "      GROUP BY answerid, subquestionid, lang\n" +
+            "  select answerid, subquestionid, string_agg(answer_freetext,'; ') AS value\n" +
+            "  FROM answer_detail\n" +
+            "  WHERE subquestionid IN (1060, 1061, 1063, 1064)\n" +
+            "  GROUP BY answerid, subquestionid\n" +
             ")\n" +
+            "\n" +
             "SELECT\n" +
             "  a.iteration :: TEXT,\n" +
-            "  c.iso                                      AS country_iso3,\n" +
-            "  a.orgid::text                              AS org_id,\n" +
-            "  orgname_l                                  AS org_name,\n" +
-            "  a.id                                       AS answer_id,\n" +
-            "  s.value                                    AS strategy,\n" +
+            "  c.iso                   AS country_iso3,\n" +
+            "  c.name                  AS country,\n" +
+            "  a.orgid::text           AS org_id,\n" +
+            "  orgname_l               AS org_name,\n" +
+            "  a.id::text              AS answer_id,\n" +
+            "  s.value                 AS strategy,\n" +
             "  crops.crop_id::text,\n" +
-            "  crops.crop_name_en                         AS crop_name,\n" +
+            "  crops.crop_name_en      AS crop_name,\n" +
             "  crops.crop_name_local,\n" +
-            "  gd.value                                   AS gaps,\n" +
-            "  ogdl.value                                 AS other_gaps_local,\n" +
-            "  ogd.value                                  AS other_gaps,\n" +
-            "  m.value                                    AS methods,\n" +
-            "  oml.value                                  AS other_methods_local,\n" +
-            "  om.value                                   AS other_methods\n" +
+            "  gd.value                AS gaps,\n" +
+            "  ogdl.value              AS other_gaps_local,\n" +
+            "  ogd.value               AS other_gaps,\n" +
+            "  m.value                 AS methods,\n" +
+            "  oml.value               AS other_methods_local,\n" +
+            "  om.value                AS other_methods\n" +
             "FROM answer a\n" +
-            "  LEFT JOIN answers s ON (s.subquestionid = 1057 AND a.id = s.answerid)\n" +
-            "  LEFT JOIN answers gd ON (gd.subquestionid = 1059 AND a.id = gd.answerid)\n" +
+            "  LEFT JOIN enums s ON (s.subquestionid = 1057 AND a.id = s.answerid)\n" +
+            "  LEFT JOIN enums gd ON (gd.subquestionid = 1059 AND a.id = gd.answerid)\n" +
             "  LEFT JOIN answers ogdl ON (ogdl.subquestionid = 1060 AND a.id = ogdl.answerid)\n" +
             "  LEFT JOIN answers ogd ON (ogd.subquestionid = 1061 AND a.id = ogd.answerid)\n" +
-            "  LEFT JOIN answers m ON (m.subquestionid = 1062 AND a.id = m.answerid)\n" +
+            "  LEFT JOIN enums m ON (m.subquestionid = 1062 AND a.id = m.answerid)\n" +
             "  LEFT JOIN answers oml ON (oml.subquestionid = 1063 AND a.id = oml.answerid)\n" +
             "  LEFT JOIN answers om ON (om.subquestionid = 1064 AND a.id = om.answerid)\n" +
             "  LEFT JOIN ref_country c ON (a.country_id = c.country_id)\n" +
@@ -168,75 +176,170 @@ public enum Query {
     ),
 
     raw_indicator15 (
-            "WITH crops AS (\n" +
-                    "  SELECT\n" +
-                    "    c.answerid,\n" +
-                    "    c.subquestionid,\n" +
-                    "    crop_id,\n" +
-                    "    coalesce(crop_name, answer_freetext) AS crop_name_en\n" +
-                    "  FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id AND lang = 'EN')\n" +
-                    "  WHERE c.subquestionid = 1068\n" +
-                    ")\n" +
-                    "\n" +
-                    "SELECT\n" +
-                    "  co.iso                                                             AS country_iso,\n" +
-                    "  it.WIEWS_INSTCODE                                                  AS stakeholder_code,\n" +
-                    "  a.id::text                                                         AS answare_id,\n" +
-                    "  a.questionid::text                                                 AS question_id,\n" +
-                    "  a.orgid::text                                                      AS organization_id,\n" +
-                    "  a.created_by,\n" +
-                    "  a.created_date::text,\n" +
-                    "  a.modified_by,\n" +
-                    "  a.modified_date::text,\n" +
-                    "  a.iteration::text,\n" +
-                    "  a.datasource,\n" +
-                    "  c.crop_name_en,\n" +
-                    "  replace(f.answer_freetext, '\"', '''')                             AS answare,\n" +
-                    "  t_start_date.answer_freetext                                       AS start_date,\n" +
-                    "  coalesce(t_end_date.answer_freetext, t_start_date.answer_freetext) AS end_date\n" +
-                    "FROM\n" +
-                    "  (SELECT *\n" +
-                    "   FROM answer\n" +
-                    "   WHERE questionid = 12) a\n" +
-                    "  LEFT JOIN answer_detail f ON (f.answerId = a.id AND f.subquestionId = 1065)\n" +
-                    "  LEFT JOIN answer_detail t_start_date ON (t_start_date.answerId = a.id AND t_start_date.subquestionId = 1066)\n" +
-                    "  LEFT JOIN answer_detail t_end_date ON (t_end_date.answerId = a.id AND t_end_date.subquestionId = 1067)\n" +
-                    "  LEFT JOIN crops c ON (c.answerId = a.id)\n" +
-                    "  LEFT JOIN ref_instab it ON (it.id = a.orgId)\n" +
-                    "  LEFT JOIN ref_country co ON (co.country_id = a.country_id)\n" +
-                    "WHERE a.approved = 1"
+            "WITH\n" +
+            "missions AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid,\n" +
+            "    string_agg(project_code_l::text,'; ') AS mission_id,\n" +
+            "    string_agg(coalesce(project_name_l, answer_freetext),'; ') AS mission_name,\n" +
+            "    string_agg(answer_freetext_local,'; ') AS mission_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_protab rp ON (rp.id :: TEXT = c.reference_id::text)\n" +
+            "  WHERE c.subquestionid = 1065\n" +
+            "  GROUP BY answerid, subquestionid\n" +
+            "),\n" +
+            "crops AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid, crop_id,\n" +
+            "    coalesce(crop_name, answer_freetext) AS crop_name_en,\n" +
+            "    answer_freetext_local AS crop_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id::text AND lang = 'EN')\n" +
+            "  WHERE c.subquestionid = 1068\n" +
+            "),\n" +
+            "taxons AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid,\n" +
+            "    string_agg(taxon_id::text,'; ') AS taxon_id,\n" +
+            "    string_agg(coalesce(taxon, answer_freetext),'; ') AS taxon_name,\n" +
+            "    string_agg(answer_freetext_local,'; ') AS taxon_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_taxtab rt ON (taxon_id :: TEXT = c.reference_id::text)\n" +
+            "  WHERE c.subquestionid = 1069\n" +
+            "  GROUP BY answerid, subquestionid\n" +
+            "),\n" +
+            "areas AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid,\n" +
+            "    string_agg(area_id::text,'; ') AS area_id,\n" +
+            "    string_agg(coalesce(area_l, answer_freetext),'; ') AS area_name,\n" +
+            "    string_agg(answer_freetext_local,'; ') AS area_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_aretab ra ON (area_id :: TEXT = c.reference_id::text)\n" +
+            "  WHERE c.subquestionid = 1072\n" +
+            "  GROUP BY answerid, subquestionid\n" +
+            "),\n" +
+            "answers AS (\n" +
+            "  select answerid, subquestionid, answer_freetext AS value\n" +
+            "  FROM answer_detail\n" +
+            "  WHERE subquestionid IN (1066, 1067, 1070, 1071)\n" +
+            ")\n" +
+            "\n" +
+            "SELECT\n" +
+            "  a.iteration :: TEXT,\n" +
+            "  co.iso                               AS country_iso3,\n" +
+            "  co.name                              AS country,\n" +
+            "  a.orgid::text                        AS org_id,\n" +
+            "  orgname_l                            AS org_name,\n" +
+            "  a.id::text                           AS answer_id,\n" +
+            "  mission_id,\n" +
+            "  replace (mission_name,'\"','''')       AS mission_name,\n"+
+            "  replace (mission_name_local,'\"','''') AS mission_name_local,\n"+
+            "  t_start.value                        AS start_date,\n" +
+            "  coalesce(t_end.value, t_start.value) AS end_date,\n" +
+            "  crop_id,\n" +
+            "  crop_name_en                         AS crop_name,\n" +
+            "  crop_name_local,\n" +
+            "  taxon_id,\n" +
+            "  taxon_name_local,\n" +
+            "  an.value::INTEGER                    AS accessions_number,\n" +
+            "  ans.value::INTEGER                   AS secured_accessions_number,\n" +
+            "  area_id,\n" +
+            "  area_name,\n" +
+            "  area_name_local\n" +
+            "FROM answer a\n" +
+            "  LEFT JOIN answers an ON (an.subquestionid = 1070 AND a.id = an.answerid)\n" +
+            "  LEFT JOIN answers ans ON (ans.subquestionid = 1071 AND a.id = ans.answerid)\n" +
+            "  LEFT JOIN answers t_start ON (t_start.subquestionid = 1066 AND a.id = t_start.answerid)\n" +
+            "  LEFT JOIN answers t_end ON (t_end.subquestionid = 1067 AND a.id = t_end.answerid)\n" +
+            "  LEFT JOIN missions ON (missions.answerId = a.id)\n" +
+            "  LEFT JOIN crops ON (crops.answerId = a.id)\n" +
+            "  LEFT JOIN taxons ON (taxons.answerId = a.id)\n" +
+            "  LEFT JOIN areas ON (areas.answerId = a.id)\n" +
+            "  LEFT JOIN ref_instab it ON (it.id = a.orgId)\n" +
+            "  LEFT JOIN ref_country co ON (co.country_id = a.country_id)\n" +
+            "WHERE a.questionid = 12 AND a.approved = 1\n" +
+            "ORDER BY a.iteration, co.iso, a.id"
     ),
 
-    raw_indicator16 ("SELECT  *\n" +
-            "FROM\n" +
-            "  ( SELECT\n" +
-            "      a.iteration :: TEXT,\n" +
-            "      a.id                     AS answer_ID,\n" +
-            "      co.iso                   AS country,\n" +
-            "      it.wiews_instcode        AS stakeholder,\n" +
-            "      a.questionid :: TEXT  AS question_id,\n" +
-            "      c.subquestionid :: TEXT  AS subquestion_id,\n" +
-            "      CASE WHEN c.reference_id IS NOT NULL\n" +
-            "        THEN crop_name\n" +
-            "      ELSE answer_freetext END AS crop\n" +
-            "    FROM\n" +
-            "      answer a\n" +
-            "      FULL OUTER JOIN\n" +
-            "      answer_detail c\n" +
-            "        ON ( c.answerid = a.id AND\n" +
-            "             c.subquestionid IN ( 1068, 1070 ) )\n" +
-            "      FULL OUTER JOIN\n" +
-            "      ref_crop ref\n" +
-            "        ON ( ref.crop_id :: TEXT = c.reference_id :: TEXT AND\n" +
-            "             ref.lang = 'EN' )\n" +
-            "      JOIN\n" +
-            "      ref_instab it\n" +
-            "        ON ( it.id = a.orgId )\n" +
-            "      LEFT JOIN\n" +
-            "      ref_country co\n" +
-            "        ON ( co.country_id = a.country_id ) ) f\n" +
-            "WHERE\n" +
-            "  crop IS NOT NULL"),
+    raw_indicator16 (
+            "WITH\n" +
+            "missions AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid,\n" +
+            "    string_agg(project_code_l::text,'; ') AS mission_id,\n" +
+            "    string_agg(coalesce(project_name_l, answer_freetext),'; ') AS mission_name,\n" +
+            "    string_agg(answer_freetext_local,'; ') AS mission_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_protab rp ON (rp.id :: TEXT = c.reference_id::text)\n" +
+            "  WHERE c.subquestionid = 1065\n" +
+            "  GROUP BY answerid, subquestionid\n" +
+            "),\n" +
+            "crops AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid, crop_id,\n" +
+            "    coalesce(crop_name, answer_freetext) AS crop_name_en,\n" +
+            "    answer_freetext_local AS crop_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_crop rc ON (crop_id :: TEXT = c.reference_id::text AND lang = 'EN')\n" +
+            "  WHERE c.subquestionid = 1068\n" +
+            "),\n" +
+            "taxons AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid,\n" +
+            "    string_agg(taxon_id::text,'; ') AS taxon_id,\n" +
+            "    string_agg(coalesce(taxon, answer_freetext),'; ') AS taxon_name,\n" +
+            "    string_agg(answer_freetext_local,'; ') AS taxon_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_taxtab rt ON (taxon_id :: TEXT = c.reference_id::text)\n" +
+            "  WHERE c.subquestionid = 1069\n" +
+            "  GROUP BY answerid, subquestionid\n" +
+            "),\n" +
+            "areas AS (\n" +
+            "  SELECT\n" +
+            "    c.answerid, c.subquestionid,\n" +
+            "    string_agg(area_id::text,'; ') AS area_id,\n" +
+            "    string_agg(coalesce(area_l, answer_freetext),'; ') AS area_name,\n" +
+            "    string_agg(answer_freetext_local,'; ') AS area_name_local\n" +
+            "  FROM answer_detail c LEFT JOIN ref_aretab ra ON (area_id :: TEXT = c.reference_id::text)\n" +
+            "  WHERE c.subquestionid = 1072\n" +
+            "  GROUP BY answerid, subquestionid\n" +
+            "),\n" +
+            "answers AS (\n" +
+            "  select answerid, subquestionid, answer_freetext AS value\n" +
+            "  FROM answer_detail\n" +
+            "  WHERE subquestionid IN (1066, 1067, 1070, 1071)\n" +
+            ")\n" +
+            "\n" +
+            "SELECT\n" +
+            "  a.iteration :: TEXT,\n" +
+            "  co.iso                               AS country_iso3,\n" +
+            "  co.name                              AS country,\n" +
+            "  a.orgid::text                        AS org_id,\n" +
+            "  orgname_l                            AS org_name,\n" +
+            "  a.id::text                           AS answer_id,\n" +
+            "  mission_id,\n" +
+            "  replace (mission_name,'\"','''')       AS mission_name,\n"+
+            "  replace (mission_name_local,'\"','''') AS mission_name_local,\n"+
+            "  t_start.value                        AS start_date,\n" +
+            "  coalesce(t_end.value, t_start.value) AS end_date,\n" +
+            "  crop_id,\n" +
+            "  crop_name_en                         AS crop_name,\n" +
+            "  crop_name_local,\n" +
+            "  taxon_id,\n" +
+            "  taxon_name_local,\n" +
+            "  an.value::INTEGER                    AS accessions_number,\n" +
+            "  ans.value::INTEGER                   AS secured_accessions_number,\n" +
+            "  area_id,\n" +
+            "  area_name,\n" +
+            "  area_name_local\n" +
+            "FROM answer a\n" +
+            "  LEFT JOIN answers an ON (an.subquestionid = 1070 AND a.id = an.answerid)\n" +
+            "  LEFT JOIN answers ans ON (ans.subquestionid = 1071 AND a.id = ans.answerid)\n" +
+            "  LEFT JOIN answers t_start ON (t_start.subquestionid = 1066 AND a.id = t_start.answerid)\n" +
+            "  LEFT JOIN answers t_end ON (t_end.subquestionid = 1067 AND a.id = t_end.answerid)\n" +
+            "  LEFT JOIN missions ON (missions.answerId = a.id)\n" +
+            "  LEFT JOIN crops ON (crops.answerId = a.id)\n" +
+            "  LEFT JOIN taxons ON (taxons.answerId = a.id)\n" +
+            "  LEFT JOIN areas ON (areas.answerId = a.id)\n" +
+            "  LEFT JOIN ref_instab it ON (it.id = a.orgId)\n" +
+            "  LEFT JOIN ref_country co ON (co.country_id = a.country_id)\n" +
+            "WHERE a.questionid = 12 AND a.approved = 1\n" +
+            "ORDER BY a.iteration, co.iso, a.id"
+    ),
 
     raw_indicator20 (
             "SELECT\n" +

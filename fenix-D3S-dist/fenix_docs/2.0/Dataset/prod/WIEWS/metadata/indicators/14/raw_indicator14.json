@@ -24,9 +24,14 @@
         "key": true
       },
       {
-        "id" : "country",
+        "id" : "country_iso3",
         "title" : { "EN" : "Country (ISO3)"},
         "subject" : "geo",
+        "dataType" : "text"
+      },
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country"},
         "dataType" : "text"
       },
       {
@@ -36,13 +41,13 @@
         "key": true
       },
       {
-        "id" : "organization_name",
+        "id" : "org_name",
         "title" : { "EN" : "StakeHolder"},
         "dataType" : "text"
       },
       {
         "id" : "answer_id",
-        "title" : { "EN" : "ID"},
+        "title" : { "EN" : "Answer id"},
         "dataType" : "text",
         "key": true
       },

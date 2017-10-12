@@ -45,8 +45,35 @@
     {
       "name": "order",
       "parameters": {
-        "country_iso3" : "ASC",
-        "datasource" : "ASC"
+        "iteration" : "ASC",
+        "country" : "ASC",
+        "org_name" : "ASC",
+        "crop_name" : "ASC"
+      }
+    },
+    {
+      "name": "columns",
+      "parameters" : {
+        "columns" : [
+          "iteration",
+          "country",
+          "org_name",
+          "mission_id",
+          "mission_name",
+          "mission_name_local",
+          "start_date",
+          "end_date",
+          "crop_id",
+          "crop_name",
+          "crop_name_local",
+          "taxon_id",
+          "taxon_name_local",
+          "accessions_number",
+          "secured_accessions_number",
+          "area_id",
+          "area_name",
+          "area_name_local"
+        ]
       }
     }
   ]
