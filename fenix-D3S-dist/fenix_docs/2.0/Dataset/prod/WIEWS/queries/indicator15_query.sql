@@ -136,7 +136,7 @@ CREATE TABLE indicators.indicator15 AS (
           start_date         AS startdate,
           end_date           AS enddate,
           nfp_rating :: REAL AS value,
-          'per' :: TEXT      AS um,
+          'num' :: TEXT      AS um,
           1 :: INTEGER       AS rank
         FROM indicator_analysis spec
           JOIN ref_country c ON (c.country_id = spec.country_id)
@@ -256,7 +256,7 @@ CREATE TABLE indicators.indicator15 AS (
     min(startdate) AS startdate,
     max(enddate)   AS enddate,
     avg(value)     AS value,
-    'per'          AS um,
+    'num'          AS um,
     r.rank
   FROM nfp
     JOIN codelist.ref_region_country r ON (nfp.country_iso3 = r.country_iso3)

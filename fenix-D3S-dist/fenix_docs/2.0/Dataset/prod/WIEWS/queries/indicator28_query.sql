@@ -121,7 +121,7 @@ WITH raw AS ( SELECT  *
         spec.iteration :: TEXT AS iteration,
         'na' :: TEXT           AS crop,
         nfp_rating :: REAL     AS value,
-        'per' :: TEXT          AS um,
+        'num' :: TEXT          AS um,
         1 :: INTEGER           AS rank
       FROM
         indicator_analysis spec
@@ -255,11 +255,11 @@ INSERT into indicators.indicator16
     'na'::TEXT as country,
     'na'::TEXT as stakeholder,
     indicator,
-    'nfp_a'::TEXT as element,
+    'nfpa'::TEXT as element,
     iteration,
     'na'::TEXT as crop,
     avg(value) as value,
-    'per'::TEXT as um,
+    'num'::TEXT as um,
     b.rank::INTEGER
   FROM
     (SELECT * from indicators.indicator16 WHERE element='nfp') a  join

@@ -378,7 +378,7 @@ CREATE TABLE indicators.indicator3 as (
                 0                           AS sum,
                 0                           AS threatened_sum,
                 nfp_rating                  AS percentage,
-                'per'::text                         AS um
+                'num'::text                         AS um
               FROM
                 indicator_analysis spec
                 JOIN
@@ -408,7 +408,7 @@ CREATE TABLE indicators.indicator3 as (
     total
   UNION
 
-  /* WITC aggregation */
+  /* WITC aggregation
   SELECT
     '1130' AS domain,
     indicator,
@@ -426,7 +426,7 @@ CREATE TABLE indicators.indicator3 as (
     total_witc
 
   UNION
-
+*/
   /* Indicator Regional aggregation */
   SELECT
     '1130' AS domain,
@@ -461,7 +461,7 @@ CREATE TABLE indicators.indicator3 as (
     0                           AS sum,
     0                           AS threatened_sum,
     nfp_rating                  AS percentage,
-    'per'::text                   AS um
+    'num'::text                   AS um
   FROM
     indicator_analysis spec
     JOIN
@@ -499,7 +499,7 @@ CREATE TABLE indicators.indicator3 as (
         0                           AS sum,
         0                           AS threatened_sum,
         nfp_rating                  AS percentage,
-        'per'::text                         AS um
+        'num'::text                         AS um
       FROM
         indicator_analysis spec
         JOIN

@@ -137,7 +137,7 @@ CREATE TABLE indicators.indicator14 as (
         cast ('na' AS TEXT) AS stakeholder,
         cast ('na' AS TEXT) AS crop,
         value,
-        'per'               AS um
+        'num'               AS um
       FROM
         rating )x
 

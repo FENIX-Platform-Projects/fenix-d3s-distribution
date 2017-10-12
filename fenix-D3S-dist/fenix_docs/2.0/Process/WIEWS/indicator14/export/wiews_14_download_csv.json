@@ -77,7 +77,7 @@
             "element = 'stk'", "element <> 'stk'"
           ],
           "values": [
-            "@@direct 'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')'","element_en"
+            "@@direct 'Indicator (' || stakeholder || ' / ' || stakeholder_en || ')'","@@direct element_en"
           ]
         }
       }

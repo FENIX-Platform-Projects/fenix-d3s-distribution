@@ -114,7 +114,7 @@ nfp AS (
       spec.iteration :: TEXT AS iteration,
       'na' :: TEXT           AS crop,
       nfp_rating :: REAL     AS value,
-      'per' :: TEXT          AS um,
+      'num' :: TEXT          AS um,
       1 :: INTEGER           AS rank
     FROM
       indicator_analysis spec
@@ -250,11 +250,11 @@ INSERT into indicators.indicator16
     'na'::TEXT as country,
     'na'::TEXT as stakeholder,
     indicator,
-    'nfp_a'::TEXT as element,
+    'nfpa'::TEXT as element,
     iteration,
     'na'::TEXT as crop,
     avg(value) as value,
-    'per'::TEXT as um,
+    'num'::TEXT as um,
     b.rank::INTEGER
   FROM
     (SELECT * from indicators.indicator16 WHERE element='nfp') a  join
@@ -325,7 +325,7 @@ UNION
          FROM
            codelist.ref_region_country b JOIN (SELECT * from indicators.indicator16 where element='ind_a')a
              ON a.country = b.country_iso3)z
-  GROUP BY iteration, wiews_region, rank;;
+  GROUP BY iteration, wiews_region, rank;
 
 
 
