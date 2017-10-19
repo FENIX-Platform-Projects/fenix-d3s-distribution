@@ -508,6 +508,43 @@ public enum Query {
             "  LEFT JOIN crops ON (crops.answerId = a.id)\n" +
             "WHERE a.questionid = 19 AND a.approved = 1\n" +
             "ORDER BY a.iteration, c.iso, a.id"
+    ),
+
+
+    wiews_organizations (
+            "SELECT\n" +
+            "  replace(o.orgname_l,'\"','''') as name,\n" +
+            "  replace(o.orgacro_l,'\"','''') as acronym,\n" +
+            "  o.wiews_instcode as instcode,\n" +
+            "  replace(po.orgname_l,'\"','''') as parent_name,\n" +
+            "  po.wiews_instcode as parent_instcode,\n" +
+            "  replace(o.address_l,'\"','''') as address,\n" +
+            "  o.city_l as city,\n" +
+            "  c.name as country,\n" +
+            "  c.iso as country_iso3,\n" +
+            "  o.valid_id = o.id as valid_flag,\n" +
+            "  lower(replace(o.orgname_l,'\"','''')) as i_name,\n" +
+            "  lower(replace(o.orgacro_l,'\"','''')) as i_acronym,\n" +
+            "  lower(o.wiews_instcode) as i_instcode,\n" +
+            "  lower(replace(o.address_l,'\"','''')) as i_address,\n" +
+            "  lower(o.city_l) as i_city,\n" +
+            "    trim (from coalesce(lower(replace(o.orgname_l,'\"',''''))||' ','')\n" +
+            "    || coalesce(lower(replace(o.orgacro_l,'\"',''''))||' ','')\n" +
+            "    || coalesce(lower(o.wiews_instcode)||' ','')\n" +
+            "    || coalesce(lower(o.city_l)||' ','')\n" +
+            "    || coalesce(lower(c.name)||' ','')) as index,\n" +
+            "  o.zip as zip_code,\n" +
+            "  o.phone as telephone,\n" +
+            "  o.fax as fax,\n" +
+            "  o.email as email,\n" +
+            "  o.wwwaddress as website,\n" +
+            "  s.option_value as status,\n" +
+            "  o.longitude as longitude,\n" +
+            "  o.latitude as latitude\n" +
+            "FROM ref_instab o\n" +
+            "  LEFT JOIN ref_instab po ON (o.parent_id IS NOT NULL AND o.parent_id != o.id AND o.parent_id = po.id)\n" +
+            "  LEFT JOIN ref_country c ON (o.country_id = c.country_id and c.lang = 'EN')\n" +
+            "  LEFT JOIN ref_enum_options s ON (o.orgstatus = s.id and s.lang = 'EN')"
     )
 
 

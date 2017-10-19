@@ -1,0 +1,144 @@
+{
+  "uid": "wiews_organizations",
+  "title": {
+    "EN": "Wiews organizations dataset"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Wiews organizations dataset"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "name",
+        "title" : { "EN" : "Name of organization"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "acronym",
+        "title" : { "EN" : "Acronym"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "instcode",
+        "title" : { "EN" : "WIEWS instcode"},
+        "dataType" : "text",
+        "key" : true
+      },
+      {
+        "id" : "parent_name",
+        "title" : { "EN" : "Parent organization"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "parent_instcode",
+        "title" : { "EN" : "Parent organization instcode"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "address",
+        "title" : { "EN" : "Address"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "city",
+        "title" : { "EN" : "City"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "country_iso3",
+        "title" : { "EN" : "Country (ISO3)"},
+        "subject" : "geo",
+        "dataType" : "text"
+      },
+      {
+        "id" : "valid_flag",
+        "title" : { "EN" : "Valid"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "i_name",
+        "title" : { "EN" : "Name index"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "i_acronym",
+        "title" : { "EN" : "Acronym index"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "i_instcode",
+        "title" : { "EN" : "Institute code index"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "i_address",
+        "title" : { "EN" : "Address index"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "i_city",
+        "title" : { "EN" : "City index"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "freetext_index",
+        "title" : { "EN" : "Free text search index"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "zip_code",
+        "title" : { "EN" : "ZIP code"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "telephone",
+        "title" : { "EN" : "Telephone"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "fax",
+        "title" : { "EN" : "Fax"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "email",
+        "title" : { "EN" : "Email address"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "website",
+        "title" : { "EN" : "WWW address"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "status",
+        "title" : { "EN" : "Organization authority status"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "longitude",
+        "title" : { "EN" : "Longitude (decimal degrees format)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "latitude",
+        "title" : { "EN" : "Latitude (decimal degrees format)"},
+        "dataType" : "text"
+      }
+    ]
+  }
+}
