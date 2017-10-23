@@ -1,0 +1,70 @@
+{
+    "uid": "wiews_region_mapping",
+    "title": {
+      "EN": "WIEWS regions codelist mapping"
+    },
+    "meContent": {
+      "description": {
+        "EN": "Mappings between WIEWS regions and other codelists regions"
+      },
+      "resourceRepresentationType": "dataset"
+    },
+    "dsd": {
+      "contextSystem": "wiews",
+      "datasources": ["D3S"],
+      "cache":{
+        "storage":"postgres"
+      },
+
+      "columns": [
+        {
+          "id" : "w",
+          "title" : { "EN" : "WIEWS regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
+          "key": true
+        },
+        {
+          "id" : "fao",
+          "title" : { "EN" : "FAO regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_fao_region" } ] }
+        },
+        {
+          "id" : "m49",
+          "title" : { "EN" : "M49 regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] }
+        },
+        {
+          "id" : "mdg",
+          "title" : { "EN" : "MDG regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "mdg_region" } ] }
+        },
+        {
+          "id" : "sdg",
+          "title" : { "EN" : "SDG regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "sdg_region" } ] }
+        },
+        {
+          "id" : "cgrfa",
+          "title" : { "EN" : "CGRFA regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_cgrfa" } ] }
+        },
+        {
+          "id" : "itpgrfa",
+          "title" : { "EN" : "ITPGRFA regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_itpgrfa" } ] }
+        },
+        {
+          "id" : "rank",
+          "title" : { "EN" : "Index"},
+          "dataType" : "number"
+        }
+      ]
+    }
+  }

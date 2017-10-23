@@ -1,0 +1,37 @@
+{
+    "uid": "wiews_region_countries",
+    "title": {
+      "EN": "WIEWS regions countries rel"
+    },
+    "meContent": {
+      "description": {
+        "EN": "Relation between WIEWS regions and ISO3 countries"
+      },
+      "resourceRepresentationType": "dataset"
+    },
+    "dsd": {
+      "contextSystem": "wiews",
+      "datasources": ["D3S"],
+      "cache":{
+        "storage":"postgres"
+      },
+
+      "columns": [
+        {
+          "id" : "w",
+          "title" : { "EN" : "WIEWS regions"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_regions" } ] },
+          "key": true
+        },
+        {
+          "id" : "country",
+          "title" : { "EN" : "Country ISO3"},
+          "subject" : "geo",
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+          "key": true
+        }
+      ]
+    }
+  }

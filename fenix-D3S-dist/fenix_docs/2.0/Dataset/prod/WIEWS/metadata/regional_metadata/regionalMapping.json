@@ -1,0 +1,96 @@
+{
+    "uid": "wiews_regions_mapping",
+    "title": {
+      "EN": "Regional mapping"
+    },
+    "meContent": {
+      "description": {
+        "EN": "Mappings between regions and ISO3 countries"
+      },
+      "resourceRepresentationType": "dataset"
+    },
+    "dsd": {
+      "contextSystem": "wiews",
+      "datasources": ["D3S"],
+      "cache":{
+        "storage":"postgres"
+      },
+
+      "columns": [
+        {
+          "id" : "country",
+          "title" : { "EN" : "Country (ISO3)"},
+          "subject" : "geo",
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+          "key": true
+        },
+        {
+          "id" : "fao_region_l0",
+          "title" : { "EN" : "Region level 0 (FAO)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_fao_region" } ] }
+        },
+        {
+          "id" : "fao_region_l1",
+          "title" : { "EN" : "Region level 1 (FAO)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_fao_region" } ] }
+        },
+        {
+          "id" : "fao_region_l2",
+          "title" : { "EN" : "Region level 2 (FAO)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_fao_region" } ] }
+        },
+        {
+          "id" : "m49_region_l0",
+          "title" : { "EN" : "Region level 0 (M49)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] }
+        },
+        {
+          "id" : "m49_region_l1",
+          "title" : { "EN" : "Region level 1 (M49)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] }
+        },
+        {
+          "id" : "m49_region_l2",
+          "title" : { "EN" : "Region level 2 (M49)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] }
+        },
+        {
+          "id" : "m49_country",
+          "title" : { "EN" : "Country (M49)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_m49" } ] }
+        },
+        {
+          "id" : "mdg_region",
+          "title" : { "EN" : "Region level 0 (MDG)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "mdg_region" } ] }
+        },
+        {
+          "id" : "sdg_region",
+          "title" : { "EN" : "Region level 0 (SDG)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "sdg_region" } ] }
+        },
+        {
+          "id" : "itpgrfa_region",
+          "title" : { "EN" : "Special group (ITPGRFA)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_itpgrfa" } ] }
+        },
+        {
+          "id" : "cgrfa_region",
+          "title" : { "EN" : "Special group (CGRFA)"},
+          "dataType" : "code",
+          "domain" : { "codes" : [ { "idCodeList" : "wiews_cgrfa" } ] }
+        }
+      ]
+    }
+  }
