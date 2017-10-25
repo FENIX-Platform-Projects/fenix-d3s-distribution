@@ -7,6 +7,6 @@ public class OrganizationFilterParams {
     public String instcode;
     public String city;
     public String[] country_iso3;
-    public String[] categories;
+    public String[] roles;
     public Boolean valid;
 }

@@ -82,6 +82,14 @@ public class OrganizationFiltering extends org.fao.fenix.d3p.process.Process<Org
             }
             where.setCharAt(where.length()-1,')');
         }
+        if (parameters.roles!=null && parameters.roles.length>0) {
+            where.append(" AND (");
+            for (String code : parameters.roles)
+                where.append("role_").append(code).append(" OR ");
+            where.setLength(where.length()-4);
+            where.append(')');
+        }
+
         appendFreetextParameter("freetext_index", parameters.freetext, where, queryParameters, inclusive);
         appendFreetextParameter("i_name", parameters.name, where, queryParameters, inclusive);
         appendFreetextParameter("i_acronym", parameters.acronym, where, queryParameters, inclusive);

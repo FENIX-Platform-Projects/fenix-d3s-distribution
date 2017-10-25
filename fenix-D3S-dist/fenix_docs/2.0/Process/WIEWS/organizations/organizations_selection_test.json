@@ -4,6 +4,7 @@
     "sid": [ { "uid": "wiews_organizations" } ],
     "parameters": {
       "freetext" : "sfnrl usda",
+      "roles" : ["f648","f652"],
       "valid" : true
     }
   },
@@ -18,6 +19,32 @@
       "address":"ASC",
       "city":"ASC",
       "country":"ASC"
+    }
+  },
+  {
+    "name": "columns",
+    "parameters": {
+      "columns": [
+        "name",
+        "acronym",
+        "instcode",
+        "parent_instcode",
+        "parent_name",
+        "address",
+        "zip_code",
+        "city",
+        "country_iso3",
+        "country",
+        "telephone",
+        "fax",
+        "email",
+        "website",
+        "status",
+        "organization_roles",
+        "longitude",
+        "latitude",
+        "valid_instcode"
+      ]
     }
   }
 ]

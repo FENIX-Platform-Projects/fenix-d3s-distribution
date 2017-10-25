@@ -40,7 +40,7 @@
       },
       {
         "id" : "parent_instcode",
-        "title" : { "EN" : "Parent organization instcode"},
+        "title" : { "EN" : "Parent organization (Instcode)"},
         "dataType" : "text"
       },
       {
@@ -138,6 +138,96 @@
         "id" : "latitude",
         "title" : { "EN" : "Latitude (decimal degrees format)"},
         "dataType" : "text"
+      },
+      {
+        "id" : "organization_roles",
+        "title" : { "EN" : "Organization role categories"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "valid_instcode",
+        "title" : { "EN" : "Valid Instcode"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "role_f646",
+        "title" : { "EN" : "Role category 646 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f647",
+        "title" : { "EN" : "Role category 647 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f648",
+        "title" : { "EN" : "Role category 648 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f649",
+        "title" : { "EN" : "Role category 649 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f650",
+        "title" : { "EN" : "Role category 650 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f651",
+        "title" : { "EN" : "Role category 651 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f652",
+        "title" : { "EN" : "Role category 652 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f653",
+        "title" : { "EN" : "Role category 653 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f654",
+        "title" : { "EN" : "Role category 654 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f655",
+        "title" : { "EN" : "Role category 655 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f656",
+        "title" : { "EN" : "Role category 656 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f657",
+        "title" : { "EN" : "Role category 657 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f658",
+        "title" : { "EN" : "Role category 658 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f869",
+        "title" : { "EN" : "Role category 869 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f874",
+        "title" : { "EN" : "Role category 874 flag"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "role_f875",
+        "title" : { "EN" : "Role category 875 flag"},
+        "dataType" : "bool"
       }
     ]
   }

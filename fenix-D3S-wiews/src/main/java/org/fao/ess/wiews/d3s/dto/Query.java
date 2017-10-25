@@ -540,9 +540,45 @@ public enum Query {
             "  o.wwwaddress as website,\n" +
             "  s.option_value as status,\n" +
             "  o.longitude as longitude,\n" +
-            "  o.latitude as latitude\n" +
+            "  o.latitude as latitude,\n" +
+            "  CASE WHEN o.f646=1 OR o.f647=1 OR o.f648=1 OR o.f649=1 OR o.f650=1 OR o.f651=1 OR o.f652=1 OR o.f653=1 OR o.f654=1 OR o.f655=1 OR o.f656=1 OR o.f657=1 OR o.f658=1 OR o.f869=1 OR o.f874=1 OR o.f875=1 THEN substring(\n" +
+            "    CASE WHEN o.f646=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f646') ELSE '' END ||\n" +
+            "    CASE WHEN o.f647=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f647') ELSE '' END ||\n" +
+            "    CASE WHEN o.f648=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f648') ELSE '' END ||\n" +
+            "    CASE WHEN o.f649=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f649') ELSE '' END ||\n" +
+            "    CASE WHEN o.f650=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f650') ELSE '' END ||\n" +
+            "    CASE WHEN o.f651=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f651') ELSE '' END ||\n" +
+            "    CASE WHEN o.f652=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f652') ELSE '' END ||\n" +
+            "    CASE WHEN o.f653=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f653') ELSE '' END ||\n" +
+            "    CASE WHEN o.f654=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f654') ELSE '' END ||\n" +
+            "    CASE WHEN o.f655=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f655') ELSE '' END ||\n" +
+            "    CASE WHEN o.f656=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f656') ELSE '' END ||\n" +
+            "    CASE WHEN o.f657=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f657') ELSE '' END ||\n" +
+            "    CASE WHEN o.f658=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f658') ELSE '' END ||\n" +
+            "    CASE WHEN o.f869=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f869') ELSE '' END ||\n" +
+            "    CASE WHEN o.f874=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f874') ELSE '' END ||\n" +
+            "    CASE WHEN o.f875=1 THEN (SELECT '; '||label_en FROM codelist.organizations_role WHERE code = 'f875') ELSE '' END\n" +
+            "    FROM 3) ELSE NULL END AS organization_roles,\n" +
+            "  vo.wiews_instcode AS valid_instcode,\n" +
+            "  o.f646 = 1 as role_f646,\n" +
+            "  o.f647 = 1 as role_f647,\n" +
+            "  o.f648 = 1 as role_f648,\n" +
+            "  o.f649 = 1 as role_f649,\n" +
+            "  o.f650 = 1 as role_f650,\n" +
+            "  o.f651 = 1 as role_f651,\n" +
+            "  o.f652 = 1 as role_f652,\n" +
+            "  o.f653 = 1 as role_f653,\n" +
+            "  o.f654 = 1 as role_f654,\n" +
+            "  o.f655 = 1 as role_f655,\n" +
+            "  o.f656 = 1 as role_f656,\n" +
+            "  o.f657 = 1 as role_f657,\n" +
+            "  o.f658 = 1 as role_f658,\n" +
+            "  o.f869 = 1 as role_f869,\n" +
+            "  o.f874 = 1 as role_f874,\n" +
+            "  o.f875 = 1 as role_f875\n" +
             "FROM ref_instab o\n" +
             "  LEFT JOIN ref_instab po ON (o.parent_id IS NOT NULL AND o.parent_id != o.id AND o.parent_id = po.id)\n" +
+            "  LEFT JOIN ref_instab vo ON (o.valid_id IS NOT NULL AND o.valid_id = vo.id)\n" +
             "  LEFT JOIN ref_country c ON (o.country_id = c.country_id and c.lang = 'EN')\n" +
             "  LEFT JOIN ref_enum_options s ON (o.orgstatus = s.id and s.lang = 'EN')"
     )
