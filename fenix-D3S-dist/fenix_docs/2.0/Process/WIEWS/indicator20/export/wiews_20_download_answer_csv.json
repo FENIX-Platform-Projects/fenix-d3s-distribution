@@ -14,7 +14,7 @@
             "codes": [
               {
                 "uid": "ISO3",
-                "codes": [ "DEU", "ALB" ]
+                "codes": [ "ALB" ]
               }
             ]
           }
@@ -56,7 +56,9 @@
       "parameters" : {
         "columns" : [
           "iteration",
+          "country_iso3",
           "country",
+          "org_id",
           "stakeholder",
           "holdinginstitutecode",
           "accessionno",

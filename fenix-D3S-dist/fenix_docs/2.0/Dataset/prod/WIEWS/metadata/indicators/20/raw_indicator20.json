@@ -35,6 +35,11 @@
         "dataType" : "text"
       },
       {
+        "id" : "org_id",
+        "title" : { "EN" : "StakeHolder (Instcode)"},
+        "dataType" : "text"
+      },
+      {
         "id" : "stakeholder",
         "title" : { "EN" : "StakeHolder"},
         "dataType" : "text"
