@@ -2,127 +2,127 @@ DROP TABLE IF EXISTS indicators.indicator2;
 
 CREATE TABLE indicators.indicator2 as (
 
-WITH
-    raw AS (
-      SELECT a.questionid,
-        a.approved,
-        a.country_id,
-        a.iteration,
-        subquestionid,
-        answerid,
-        answer_freetext,
-        reference_id,
-        a.orgid
-      FROM   answer a
-        JOIN   answer_detail ad
-          ON     (
-          a.id = answerid )
-      WHERE  questionid = 2
-  ),
+  WITH
+      raw AS (
+        SELECT a.questionid,
+          a.approved,
+          a.country_id,
+          a.iteration,
+          subquestionid,
+          answerid,
+          answer_freetext,
+          reference_id,
+          a.orgid
+        FROM   answer a
+          JOIN   answer_detail ad
+            ON     (
+            a.id = answerid )
+        WHERE  questionid = 2
+    ),
 
-    iteration_avg AS (
+      iteration_avg AS (
+        SELECT
+          *,
+          (Date_part('year', end_date) - Date_part('year', start_date) +
+           (Date_part('month', end_date) - Date_part('month', start_date)+1) / 12) AS avg
+        FROM   iteration
+    ),
+
+      answer_1_2 AS (
+        SELECT   iteration,
+          iso AS country_iso3,
+          species,
+          varieties,
+          spec.answerid AS answer_id
+        FROM
+          ( SELECT answerid,
+              answer_freetext AS species,
+              iteration,
+              country_id
+            FROM   raw
+            WHERE  subquestionid = 1003 ) spec
+          FULL JOIN (
+                      SELECT
+                        answerid,
+                        answer_freetext :: int AS varieties
+                      FROM   raw
+                      WHERE  subquestionid = 1005 ) var
+            ON (spec.answerid = var.answerid )
+          LEFT JOIN ref_country ON ( ref_country.country_id = spec.country_id )
+        ORDER BY
+          country_iso3,
+          species
+    ),
+      total_country AS (
       SELECT
-        *,
-        (Date_part('year', end_date) - Date_part('year', start_date) +
-         (Date_part('month', end_date) - Date_part('month', start_date)+1) / 12) AS avg
-      FROM   iteration
-  ),
-
-    answer_1_2 AS (
-      SELECT   iteration,
-        iso AS country_iso3,
-        species,
-        varieties,
-        spec.answerid AS answer_id
+        '2_1'                         AS indicator,
+        iteration,
+        country_iso3                  AS country_iso3,
+        country_iso3                  AS wiews_region,
+        1                             AS rank,
+        Count (*)                     AS value,
+        ( Count (*) / b.avg ) :: REAL AS avg,
+        'num'                         AS um
       FROM
-        ( SELECT answerid,
-            answer_freetext AS species,
-            iteration,
-            country_id
-          FROM   raw
-          WHERE  subquestionid = 1003 ) spec
-        JOIN (
-               SELECT
-                 answerid,
-                 answer_freetext :: int AS varieties
-               FROM   raw
-               WHERE  subquestionid = 1005 ) var
-          ON (spec.answerid = var.answerid )
-        JOIN ref_country ON ( ref_country.country_id = spec.country_id )
-      ORDER BY
-        country_iso3,
-        species
-  ),
-    total_country AS (
-    SELECT
-      '2_1'                         AS indicator,
-      iteration,
-      country_iso3                  AS country_iso3,
-      country_iso3                  AS wiews_region,
-      1                             AS rank,
-      Count (*)                     AS value,
-      ( Count (*) / b.avg ) :: REAL AS avg,
-      'num'                         AS um
-    FROM
-      answer_1_2 a
+        answer_1_2 a
 
-      JOIN iteration_avg b ON ( a.iteration = b.current_iteration )
-    GROUP BY
-      iteration,
-      country_iso3,
-      b.avg
-
-    UNION
-
-    SELECT
-      '2_2'                               AS indicator,
-      iteration,
-      country_iso3                        AS country_iso3,
-      country_iso3                        AS wiews_region,
-      1                                   AS rank,
-      sum (varieties)                     AS value,
-      ( sum (varieties) / b.avg ) :: REAL AS avg,
-      'num'                               AS um
-    FROM
-      answer_1_2 a
-      JOIN iteration_avg b ON ( a.iteration = b.current_iteration )
-    GROUP BY
-      iteration,
-      country_iso3,
-      b.avg
-  ),
-
-  total_region as (
-      SELECT
-        '1120'::text AS domain,
-         indicator::text,
-        iteration::text,
-        b.w                                                AS wiews_region,
-        b.rank::INTEGER                                             AS rank,
-        sum(raw.value)                                     AS value,
-        avg(raw.avg)                                       AS avg
-      FROM total_country raw join codelist.ref_region_country b on (raw.country_iso3 = b.country_iso3 )
+        JOIN iteration_avg b ON ( a.iteration = b.current_iteration )
       GROUP BY
-      iteration,
-        indicator,
-        b.rank,
-        b.w
-  ),
-  nfp_rating as (
+        iteration,
+        country_iso3,
+        b.avg
+
+      UNION
+
       SELECT
-       '1120'::text            AS domain,
-       '2_1'::text        AS indicator,
-       iteration::text,
-       'nfp'::text        AS element,
-       iso::TEXT              AS country,
-       iso::TEXT              AS wiews_region,
-       1::integer         AS rank,
-       nfp_rating         AS value,
-       'num'::text        AS um
-     FROM   indicator_analysis spec
-       JOIN   ref_country ON ( ref_country.country_id = spec.country_id )
-     WHERE  indicator_id = 2
-  )
+        '2_2'                               AS indicator,
+        iteration,
+        country_iso3                        AS country_iso3,
+        country_iso3                        AS wiews_region,
+        1                                   AS rank,
+        sum (coalesce(varieties,0))         AS value,
+        ( sum (coalesce(varieties,0)) / b.avg ) :: REAL AS avg,
+        'num'                               AS um
+      FROM
+        answer_1_2 a
+        JOIN iteration_avg b ON ( a.iteration = b.current_iteration )
+      GROUP BY
+        iteration,
+        country_iso3,
+        b.avg
+    ),
+
+      total_region as (
+        SELECT
+          '1120'::text AS domain,
+          indicator::text,
+          iteration::text,
+          b.w                                                AS wiews_region,
+          b.rank::INTEGER                                             AS rank,
+          sum(raw.value)                                     AS value,
+          avg(raw.avg)                                       AS avg
+        FROM total_country raw join codelist.ref_region_country b on (raw.country_iso3 = b.country_iso3 )
+        GROUP BY
+          iteration,
+          indicator,
+          b.rank,
+          b.w
+    ),
+      nfp_rating as (
+        SELECT
+          '1120'::text            AS domain,
+          '2'::text        AS indicator,
+          iteration::text,
+          'nfp'::text        AS element,
+          iso::TEXT              AS country,
+          iso::TEXT              AS wiews_region,
+          1::integer         AS rank,
+          nfp_rating         AS value,
+          'num'::text        AS um
+        FROM   indicator_analysis spec
+          LEFT JOIN   ref_country ON ( ref_country.country_id = spec.country_id )
+        WHERE  indicator_id = 2
+    )
 
 /* species and varieties total number from different indicators by country */
 SELECT
