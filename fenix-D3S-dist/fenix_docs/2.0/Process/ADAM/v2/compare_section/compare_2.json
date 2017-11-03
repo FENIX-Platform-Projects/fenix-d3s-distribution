@@ -1,0 +1,134 @@
+[
+  {
+    "name": "filter",
+    "sid":[{"uid":"adam_compare_analysis"}],
+    "parameters": {
+      "rows": {
+        "parentsector_code": {
+          "codes": [
+            {
+              "uid": "crs_dac",
+              "version": "2016",
+              "codes": [
+                "240",
+                "311",
+                "910"
+              ]
+            }
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2015",
+              "to": "2015"
+            }
+          ]
+        }
+      },
+      "columns": [
+        "year",
+        "value",
+        "unitcode",
+        "parentsector_code"
+      ]
+    },
+    "rid":{"uid":"filter_parent"}
+  },
+  {
+    "name": "filter",
+    "sid":[{"uid":"adam_compare_analysis"}],
+    "parameters": {
+      "rows": {
+        "fao_sector": {
+          "enumeration": [
+            "1"
+          ]
+        },
+        "oda": {
+          "enumeration": [
+            "usd_commitment"
+          ]
+        },
+        "value": {
+          "number": [
+            {
+              "from": 0.00001
+            }
+          ]
+        },
+        "year": {
+          "time": [
+            {
+              "from": "2015",
+              "to": "2015"
+            }
+          ]
+        }
+      },
+      "columns": [
+        "year",
+        "value",
+        "unitcode",
+        "parentsector_code"
+      ]
+    },
+    "rid":{"uid":"filter_faosector"}
+
+  },
+
+  {
+    "name": "union",
+    "sid": [
+      {
+        "uid": "filter_parent"
+      },
+      {
+        "uid": "filter_faosector"
+      }
+    ],
+    "parameters": {},
+    "rid": {
+      "uid": "union_process"
+    }
+  },
+  {
+    "name": "group",
+    "sid": [
+    {
+      "uid": "union_process"
+    }],
+    "parameters": {
+      "by": [
+        "year",
+        "parentsector_code"
+      ],
+      "aggregations": [
+        {
+          "columns": [
+            "value"
+          ],
+          "rule": "SUM"
+        },
+        {
+          "columns": [
+            "unitcode"
+          ],
+          "rule": "MAX"
+        }
+      ]
+    }
+  }
+]
