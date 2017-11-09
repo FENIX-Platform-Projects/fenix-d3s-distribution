@@ -122,7 +122,7 @@ nfp AS (
       ref_country c
         ON ( c.country_id = spec.country_id )
     WHERE
-      indicator_id = 16
+      indicator_id = 16 and nfp_rating>0
 )
 
   /* by crop */

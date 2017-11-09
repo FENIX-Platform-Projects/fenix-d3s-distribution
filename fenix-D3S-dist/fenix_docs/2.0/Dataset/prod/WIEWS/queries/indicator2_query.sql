@@ -3,57 +3,58 @@ DROP TABLE IF EXISTS indicators.indicator2;
 CREATE TABLE indicators.indicator2 as (
 
   WITH
-      raw AS (
-        SELECT a.questionid,
-          a.approved,
-          a.country_id,
-          a.iteration,
-          subquestionid,
-          answerid,
-          answer_freetext,
-          reference_id,
-          a.orgid
-        FROM   answer a
-          JOIN   answer_detail ad
-            ON     (
-            a.id = answerid )
-        WHERE  questionid = 2
+    raw AS (
+      SELECT a.questionid,
+        a.approved,
+        a.country_id,
+        a.iteration,
+        subquestionid,
+        answerid,
+        answer_freetext,
+        reference_id,
+        a.orgid
+      FROM   answer a
+        JOIN   answer_detail ad
+          ON     (
+          a.id = answerid )
+      WHERE  questionid = 2
     ),
 
-      iteration_avg AS (
-        SELECT
-          *,
-          (Date_part('year', end_date) - Date_part('year', start_date) +
-           (Date_part('month', end_date) - Date_part('month', start_date)+1) / 12) AS avg
-        FROM   iteration
+    iteration_avg AS (
+      SELECT
+        *,
+        (Date_part('year', end_date) - Date_part('year', start_date) +
+         (Date_part('month', end_date) - Date_part('month', start_date)+1) / 12) AS avg
+      FROM   iteration
     ),
 
-      answer_1_2 AS (
-        SELECT   iteration,
-          iso AS country_iso3,
-          species,
-          varieties,
-          spec.answerid AS answer_id
-        FROM
-          ( SELECT answerid,
-              answer_freetext AS species,
-              iteration,
-              country_id
-            FROM   raw
-            WHERE  subquestionid = 1003 ) spec
-          FULL JOIN (
-                      SELECT
-                        answerid,
-                        answer_freetext :: int AS varieties
-                      FROM   raw
-                      WHERE  subquestionid = 1005 ) var
-            ON (spec.answerid = var.answerid )
-          LEFT JOIN ref_country ON ( ref_country.country_id = spec.country_id )
-        ORDER BY
-          country_iso3,
-          species
+    answer_1_2 AS (
+      SELECT   iteration,
+        iso AS country_iso3,
+        species,
+        varieties,
+        spec.answerid AS answer_id
+      FROM
+        ( SELECT answerid,
+            answer_freetext AS species,
+            iteration,
+            country_id
+          FROM   raw
+          WHERE  subquestionid = 1003 ) spec
+        FULL JOIN (
+                    SELECT
+                      answerid,
+                      answer_freetext :: int AS varieties
+                    FROM   raw
+                    WHERE  subquestionid = 1005 ) var
+          ON (spec.answerid = var.answerid )
+        LEFT JOIN ref_country ON ( ref_country.country_id = spec.country_id )
+      ORDER BY
+        country_iso3,
+        species
     ),
-      total_country AS (
+
+    total_country AS (
       SELECT
         '2_1'                         AS indicator,
         iteration,
@@ -92,36 +93,37 @@ CREATE TABLE indicators.indicator2 as (
         b.avg
     ),
 
-      total_region as (
-        SELECT
-          '1120'::text AS domain,
-          indicator::text,
-          iteration::text,
-          b.w                                                AS wiews_region,
-          b.rank::INTEGER                                             AS rank,
-          sum(raw.value)                                     AS value,
-          avg(raw.avg)                                       AS avg
-        FROM total_country raw join codelist.ref_region_country b on (raw.country_iso3 = b.country_iso3 )
-        GROUP BY
-          iteration,
-          indicator,
-          b.rank,
-          b.w
+    total_region as (
+      SELECT
+        '1120'::text AS domain,
+        indicator::text,
+        iteration::text,
+        b.w                                                AS wiews_region,
+        b.rank::INTEGER                                             AS rank,
+        sum(raw.value)                                     AS value,
+        avg(raw.avg)                                       AS avg
+      FROM total_country raw join codelist.ref_region_country b on (raw.country_iso3 = b.country_iso3 )
+      GROUP BY
+        iteration,
+        indicator,
+        b.rank,
+        b.w
     ),
-      nfp_rating as (
-        SELECT
-          '1120'::text            AS domain,
-          '2'::text        AS indicator,
-          iteration::text,
-          'nfp'::text        AS element,
-          iso::TEXT              AS country,
-          iso::TEXT              AS wiews_region,
-          1::integer         AS rank,
-          nfp_rating         AS value,
-          'num'::text        AS um
-        FROM   indicator_analysis spec
-          LEFT JOIN   ref_country ON ( ref_country.country_id = spec.country_id )
-        WHERE  indicator_id = 2
+
+    nfp_rating as (
+      SELECT
+        '1120'::text            AS domain,
+        '2'::text        AS indicator,
+        iteration::text,
+        'nfp'::text        AS element,
+        iso::TEXT              AS country,
+        iso::TEXT              AS wiews_region,
+        1::integer         AS rank,
+        nfp_rating         AS value,
+        'num'::text        AS um
+      FROM   indicator_analysis spec
+        LEFT JOIN   ref_country ON ( ref_country.country_id = spec.country_id )
+      WHERE  indicator_id = 2 and nfp_rating>0
     )
 
 /* species and varieties total number from different indicators by country */
@@ -147,7 +149,6 @@ GROUP BY
 UNION
 
 /* species and varieties average number from different indicators by country */
-
 SELECT
   '1120' AS domain,
   indicator,
@@ -167,6 +168,7 @@ GROUP BY indicator ,
   avg
 
 UNION
+
 /* nfp rating */
 SELECT
   domain,
@@ -176,12 +178,13 @@ SELECT
   country,
   wiews_region,
   rank,
-  CASE WHEN value > 0 THEN VALUE ELSE NULL END as value,
+  value,
   um
 FROM
   nfp_rating
 
 UNION
+
 /* nfp rating average by region */
 SELECT
   domain,
@@ -193,15 +196,13 @@ SELECT
   b.rank,
   avg(value) as value,
   'num' as um
-
 FROM
   nfp_rating a  join codelist.ref_region_country b on a.country = b.country_iso3
-WHERE value > 0
 GROUP BY domain, indicator, iteration, b.w, b.rank
 
-union
-/* species and varieties total number from different indicators by region */
+UNION
 
+/* species and varieties total number from different indicators by region */
 SELECT
   domain,
   indicator,
@@ -214,9 +215,10 @@ SELECT
   'num' as um
 FROM
   total_region
-UNION
-/* species and varieties total number from different indicators by region */
 
+UNION
+
+/* species and varieties total number from different indicators by region */
 SELECT
   domain,
   indicator,

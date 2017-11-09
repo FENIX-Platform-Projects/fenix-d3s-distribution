@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS indicators.indicator10;
+ DROP TABLE IF EXISTS indicators.indicator10;
 
 CREATE TABLE indicators.indicator10 as (
 

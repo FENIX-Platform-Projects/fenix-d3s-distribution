@@ -185,25 +185,28 @@ CREATE TABLE indicators.indicator3 as (
         wiews_region
     ),
 
-      nfp as (SELECT
-                '1130'                      AS domain,
-                cast (indicator_id AS TEXT) AS indicator,
-                iteration,
-                'nfp'::text as element,
-                cast (iso AS TEXT)          AS country,
-                cast (iso AS TEXT)          AS wiews_region,
-                1::INTEGER                  AS rank,
-                0                           AS sum,
-                0                           AS threatened_sum,
-                nfp_rating                  AS percentage,
-                'num'::text                         AS um
-              FROM
-                indicator_analysis spec
-                JOIN
-                ref_country
-                  ON ( ref_country.country_id = spec.country_id )
-              WHERE
-                indicator_id = 3)
+      nfp as (
+        SELECT
+          '1130'::text                AS domain,
+          cast (indicator_id AS TEXT) AS indicator,
+          iteration::text,
+          'nfp'::text as element,
+
+          cast (iso AS TEXT)          AS country,
+          cast (iso AS TEXT)          AS wiews_region,
+          1::INTEGER                  AS rank,
+          0                           AS sum,
+          0                           AS threatened_sum,
+          nfp_rating                  AS percentage,
+          'num'::text                   AS um
+        FROM
+          indicator_analysis spec
+          JOIN
+          ref_country
+            ON ( ref_country.country_id = spec.country_id )
+        WHERE
+          indicator_id = 3 AND nfp_rating>0
+    )
   /* --- START QUERY */
 
 
@@ -265,32 +268,13 @@ CREATE TABLE indicators.indicator3 as (
   UNION
 
 
-  /* analysis */
+  /* NFP */
 
-  SELECT
-    '1130'::text                AS domain,
-    cast (indicator_id AS TEXT) AS indicator,
-    iteration::text,
-    'nfp'::text as element,
-
-    cast (iso AS TEXT)          AS country,
-    cast (iso AS TEXT)          AS wiews_region,
-    1::INTEGER                  AS rank,
-    0                           AS sum,
-    0                           AS threatened_sum,
-    nfp_rating                  AS percentage,
-    'num'::text                   AS um
-  FROM
-    indicator_analysis spec
-    JOIN
-    ref_country
-      ON ( ref_country.country_id = spec.country_id )
-  WHERE
-    indicator_id = 3
+  SELECT * from nfp
 
   UNION
 
-  /* analysis regional*/
+  /* NFP regional*/
   SELECT
     domain,
     indicator,
@@ -305,27 +289,7 @@ CREATE TABLE indicators.indicator3 as (
     'per'::text                   AS um
 
   FROM
-    (
-      SELECT
-        '1130'::text                      AS domain,
-        cast (indicator_id AS TEXT) AS indicator,
-        iteration,
-        'nfp'::text as element,
-
-        cast (iso AS TEXT)          AS country,
-        cast (iso AS TEXT)          AS wiews_region,
-        0                           AS sum,
-        0                           AS threatened_sum,
-        nfp_rating                  AS percentage,
-        'num'::text                         AS um
-      FROM
-        indicator_analysis spec
-        JOIN
-        ref_country
-          ON ( ref_country.country_id = spec.country_id )
-      WHERE
-        indicator_id = 3
-    )a JOIN  codelist.ref_region_country b on (a.country = b.country_iso3 )
-  GROUP BY domain, indicator, iteration,element, w, rank
+    nfp JOIN codelist.ref_region_country b on (nfp.country = b.country_iso3 )
+  GROUP BY domain, indicator, iteration,element, w, b.rank
 
 );

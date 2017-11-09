@@ -129,7 +129,7 @@ WITH raw AS ( SELECT  *
         ref_country c
           ON ( c.country_id = spec.country_id )
       WHERE
-        indicator_id = 28
+        indicator_id = 28 AND nfp_rating>0
   )
 
 /* by crop */

@@ -5,6 +5,8 @@
     "rid" : { "uid" : "area_selection" },
     "result" : false,
     "parameters": {
+      "total": true,
+      "list" : true,
       "filter" : {
         "iso3": {
           "codes": [

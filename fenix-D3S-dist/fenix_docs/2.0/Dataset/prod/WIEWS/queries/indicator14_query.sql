@@ -9,20 +9,13 @@ CREATE TABLE indicators.indicator14 as (
         answer_freetext,
         answer_freetext_local,
         reference_id
-
       FROM
         answer a
-        JOIN
-        answer_detail ad
-          ON ( a.id = answerid )
-        JOIN
-        ref_instab c
-          ON a.orgid = c.id
-        JOIN
-        ref_country ref_c
-          ON ref_c.country_id = a.country_id
-
-      WHERE questionid = 11 and ad.subquestionid= 1058 and ref_c.lang = 'EN' ),
+        JOIN answer_detail ad ON ( a.id = answerid and ad.subquestionid= 1058)
+        LEFT JOIN ref_instab c ON (a.orgid = c.id)
+        LEFT JOIN ref_country ref_c ON (ref_c.country_id = a.country_id and ref_c.lang = 'EN')
+      WHERE questionid = 11
+  ),
 
       ind_14 as (
 
@@ -30,17 +23,17 @@ CREATE TABLE indicators.indicator14 as (
           iteration::TEXT,
           iso as country,
           stakeholder,
-          CASE
+          lower(CASE
           WHEN reference_id is null or reference_id = '0'  and answer_freetext is not null THEN answer_freetext
           WHEN reference_id is null or reference_id = '0'  and answer_freetext is null and  answer_freetext_local is not null THEN  answer_freetext_local
-          WHEN reference_id is not null then crop_name end as crop,
+          WHEN reference_id is not null then crop_name end) as crop,
           count(*) as value
         FROM
           raw a
-          FULL JOIN ( SELECT * FROM
-          ref_crop WHERE lang = 'EN')b on (a.reference_id = b.crop_id::TEXT )
+          FULL JOIN ( SELECT * FROM ref_crop WHERE lang = 'EN')b on (a.reference_id = b.crop_id::TEXT )
         WHERE iteration is not null
-        GROUP BY iteration,
+        GROUP BY
+          iteration,
           iso,
           stakeholder,
           crop),
@@ -56,7 +49,7 @@ CREATE TABLE indicators.indicator14 as (
           JOIN
           ref_country ref_c
             ON ref_c.country_id = a.country_id
-        WHERE indicator_id = 14
+        WHERE indicator_id = 14 and nfp_rating>0
     )
 
   SELECT
@@ -191,7 +184,7 @@ INSERT INTO indicators.indicator14
     avg(value) as value,
     max(um) as um
   from codelist.ref_region_country b
-    JOIN (SELECT * from indicators.indicator20 WHERE element = 'nfp')a ON a.country = b.country_iso3
+    JOIN (SELECT * from indicators.indicator14 WHERE element = 'nfp')a ON a.country = b.country_iso3
   GROUP BY
     a.iteration,
     b.w,

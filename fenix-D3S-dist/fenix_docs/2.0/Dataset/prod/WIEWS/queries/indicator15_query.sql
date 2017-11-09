@@ -141,7 +141,7 @@ CREATE TABLE indicators.indicator15 AS (
         FROM indicator_analysis spec
           JOIN ref_country c ON (c.country_id = spec.country_id)
           JOIN country_total ct ON (c.iso = ct.country_iso)
-        WHERE indicator_id = 15
+        WHERE indicator_id = 15 AND nfp_rating>0
     )
 
   --stakeholder total

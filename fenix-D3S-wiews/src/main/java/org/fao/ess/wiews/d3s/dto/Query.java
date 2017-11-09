@@ -513,7 +513,7 @@ public enum Query {
     ),
 
 
-    wiews_organizations (
+    wiews_organizations_pgsql (
             "SELECT\n" +
             "  replace(o.orgname_l,'\"','''') as name,\n" +
             "  replace(o.orgacro_l,'\"','''') as acronym,\n" +
@@ -583,6 +583,77 @@ public enum Query {
             "  LEFT JOIN ref_instab vo ON (o.valid_id IS NOT NULL AND o.valid_id = vo.id)\n" +
             "  LEFT JOIN ref_country c ON (o.country_id = c.country_id and c.lang = 'EN')\n" +
             "  LEFT JOIN ref_enum_options s ON (o.orgstatus = s.id and s.lang = 'EN')"
+    ),
+    wiews_organizations (
+            "SELECT\n" +
+            "  replace(o.orgname_l,'\\\"','''') as name,\n" +
+            "  replace(o.orgacro_l,'\\\"','''') as acronym,\n" +
+            "  o.wiews_instcode as instcode,\n" +
+            "  replace(po.orgname_l,'\\\"','''') as parent_name,\n" +
+            "  po.wiews_instcode as parent_instcode,\n" +
+            "  replace(o.address_l,'\\\"','''') as address,\n" +
+            "  o.city_l as city,\n" +
+            "  c.name as country,\n" +
+            "  c.iso as country_iso3,\n" +
+            "  o.valid_id = o.id as valid_flag,\n" +
+            "  lower(replace(o.orgname_l,'\\\"','''')) as i_name,\n" +
+            "  lower(replace(o.orgacro_l,'\\\"','''')) as i_acronym,\n" +
+            "  lower(o.wiews_instcode) as i_instcode,\n" +
+            "  lower(replace(o.address_l,'\\\"','''')) as i_address,\n" +
+            "  lower(o.city_l) as i_city,\n" +
+            "  trim(concat(coalesce(concat(lower(replace(o.orgname_l,'\\\"','''')),' '),'')\n" +
+            "             , coalesce(concat(lower(replace(o.orgacro_l,'\\\"','''')),' '),'')\n" +
+            "             , coalesce(concat(lower(o.wiews_instcode),' '),'')\n" +
+            "             , coalesce(concat(lower(o.city_l),' '),'')\n" +
+            "             , coalesce(concat(lower(c.name),' '),''))) AS ordering_index,\n" +
+            "  o.zip as zip_code,\n" +
+            "  o.phone as telephone,\n" +
+            "  o.fax as fax,\n" +
+            "  o.email as email,\n" +
+            "  o.wwwaddress as website,\n" +
+            "  s.option_value as status,\n" +
+            "  o.longitude as longitude,\n" +
+            "  o.latitude as latitude,\n" +
+            "  CASE WHEN o.f646=1 OR o.f647=1 OR o.f648=1 OR o.f649=1 OR o.f650=1 OR o.f651=1 OR o.f652=1 OR o.f653=1 OR o.f654=1 OR o.f655=1 OR o.f656=1 OR o.f657=1 OR o.f658=1 OR o.f869=1 OR o.f874=1 OR o.f875=1 THEN substring(\n" +
+            "  CASE WHEN o.f646=1 THEN '; Genebank (long term collections)' ELSE '' END ||\n" +
+            "  CASE WHEN o.f647=1 THEN '; Botanical garden' ELSE '' END ||\n" +
+            "  CASE WHEN o.f648=1 THEN '; Breeder' ELSE '' END ||\n" +
+            "  CASE WHEN o.f649=1 THEN '; Network' ELSE '' END ||\n" +
+            "  CASE WHEN o.f650=1 THEN '; Community' ELSE '' END ||\n" +
+            "  CASE WHEN o.f651=1 THEN '; Educational' ELSE '' END ||\n" +
+            "  CASE WHEN o.f652=1 THEN '; Seed producer' ELSE '' END ||\n" +
+            "  CASE WHEN o.f653=1 THEN '; Seed supplier' ELSE '' END ||\n" +
+            "  CASE WHEN o.f654=1 THEN '; Farmer community' ELSE '' END ||\n" +
+            "  CASE WHEN o.f655=1 THEN '; Research' ELSE '' END ||\n" +
+            "  CASE WHEN o.f656=1 THEN '; Extensionist' ELSE '' END ||\n" +
+            "  CASE WHEN o.f657=1 THEN '; Laboratory' ELSE '' END ||\n" +
+            "  CASE WHEN o.f658=1 THEN '; Publisher' ELSE '' END ||\n" +
+            "  CASE WHEN o.f869=1 THEN '; Administration/Policy' ELSE '' END ||\n" +
+            "  CASE WHEN o.f874=1 THEN '; Genebank (medium term collections)' ELSE '' END ||\n" +
+            "  CASE WHEN o.f875=1 THEN '; Genebank (short term collections)' ELSE '' END\n" +
+            "  FROM 3) ELSE NULL END AS organization_roles,\n" +
+            "  vo.wiews_instcode AS valid_instcode,\n" +
+            "  o.f646 = 1 as role_f646,\n" +
+            "  o.f647 = 1 as role_f647,\n" +
+            "  o.f648 = 1 as role_f648,\n" +
+            "  o.f649 = 1 as role_f649,\n" +
+            "  o.f650 = 1 as role_f650,\n" +
+            "  o.f651 = 1 as role_f651,\n" +
+            "  o.f652 = 1 as role_f652,\n" +
+            "  o.f653 = 1 as role_f653,\n" +
+            "  o.f654 = 1 as role_f654,\n" +
+            "  o.f655 = 1 as role_f655,\n" +
+            "  o.f656 = 1 as role_f656,\n" +
+            "  o.f657 = 1 as role_f657,\n" +
+            "  o.f658 = 1 as role_f658,\n" +
+            "  o.f869 = 1 as role_f869,\n" +
+            "  o.f874 = 1 as role_f874,\n" +
+            "  o.f875 = 1 as role_f875\n" +
+            "FROM instab o\n" +
+            "LEFT JOIN instab po ON (o.parent_id IS NOT NULL AND o.parent_id != o.id AND o.parent_id = po.id)\n" +
+            "LEFT JOIN instab vo ON (o.valid_id IS NOT NULL AND o.valid_id = vo.id)\n" +
+            "LEFT JOIN country c ON (o.country_id = c.country_id and c.lang = 'EN')\n" +
+            "LEFT JOIN question_type_enum_options s ON (o.orgstatus = s.id and s.lang = 'EN')"
     )
 
 

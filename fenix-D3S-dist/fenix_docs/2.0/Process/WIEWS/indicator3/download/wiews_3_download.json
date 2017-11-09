@@ -5,6 +5,8 @@
     "rid" : { "uid" : "area_selection" },
     "result" : false,
     "parameters": {
+      "total" : false,
+      "list" : true,
       "filter" : {
         "m49": {
           "codes": [

@@ -55,7 +55,7 @@ CREATE TABLE indicators.indicator24 as (
           nfp_rating :: REAL AS value
         FROM indicator_analysis spec
           JOIN ref_country c ON (c.country_id = spec.country_id)
-        WHERE indicator_id = 22
+        WHERE indicator_id = 22 AND nfp_rating>0
     )
 
   --STAKEHOLDER
