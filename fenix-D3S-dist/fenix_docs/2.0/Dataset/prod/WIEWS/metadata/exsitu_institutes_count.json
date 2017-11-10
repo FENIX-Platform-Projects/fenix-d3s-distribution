@@ -1,0 +1,50 @@
+{
+  "uid": "exsitu_institutes_count",
+  "title": {
+    "EN": "Institutes count"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Institutes count. Grouped by country"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "iteration",
+        "title" : { "EN" : "Period"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "country_iso3",
+        "title" : { "EN" : "Country (ISO3)"},
+        "subject" : "geo",
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] } ,
+        "key": true
+      },
+      {
+        "id" : "institutes_count",
+        "title" : { "EN" : "Institutes count"},
+        "dataType" : "number",
+        "subject":"value"
+      },
+      {
+        "id" : "um",
+        "title" : { "EN" : "Measurement unit"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
+        "subject":"um"
+      }
+    ]
+  }
+}

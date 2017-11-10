@@ -654,6 +654,10 @@ public enum Query {
             "LEFT JOIN instab vo ON (o.valid_id IS NOT NULL AND o.valid_id = vo.id)\n" +
             "LEFT JOIN country c ON (o.country_id = c.country_id and c.lang = 'EN')\n" +
             "LEFT JOIN question_type_enum_options s ON (o.orgstatus = s.id and s.lang = 'EN')"
+    ),
+
+    exsitu_institutes_count(
+            "SELECT iteration, country_iso3, institutes_count, um FROM sdg.exsitu_2016"
     )
 
 

@@ -1,0 +1,55 @@
+[
+  {
+    "name": "wiews_organization_filter",
+    "sid": [ { "uid": "wiews_organizations" } ],
+    "parameters": {
+      "freetext" : "ritA ora de c",
+      "name" : "ritA ora de c",
+      "acronym" : "ritA ora de c",
+      "instcode" : "ritA ora de c",
+      "city" : "ritA ora de c",
+      "country_iso3" : ["EGY","UGA"],
+      "roles" : ["f648","f652"],
+      "valid" : true
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "search_rank":"ASC",
+      "name":"ASC",
+      "acronym":"ASC",
+      "instcode":"ASC",
+      "parent_name":"ASC",
+      "address":"ASC",
+      "city":"ASC",
+      "country":"ASC"
+    }
+  },
+  {
+    "name": "columns",
+    "parameters": {
+      "columns": [
+        "name",
+        "acronym",
+        "instcode",
+        "parent_instcode",
+        "parent_name",
+        "address",
+        "zip_code",
+        "city",
+        "country_iso3",
+        "country",
+        "telephone",
+        "fax",
+        "email",
+        "website",
+        "status",
+        "organization_roles",
+        "longitude",
+        "latitude",
+        "valid_instcode"
+      ]
+    }
+  }
+]

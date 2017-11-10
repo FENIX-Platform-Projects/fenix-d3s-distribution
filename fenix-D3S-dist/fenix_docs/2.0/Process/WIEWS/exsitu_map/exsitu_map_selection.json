@@ -1,0 +1,36 @@
+[
+  {
+    "sid": [ { "uid": "exsitu_institutes_count" } ],
+    "name": "filter",
+    "parameters": {
+      "rows": {
+        "iteration": {
+          "codes": [
+            {
+              "uid": "wiews_iteration",
+              "codes": [ "1" ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "iteration":"ASC",
+      "country_iso3":"ASC"
+    }
+  },
+  {
+    "name": "columns",
+    "parameters": {
+      "columns": [
+        "iteration",
+        "country_iso3",
+        "institutes_count",
+        "um"
+      ]
+    }
+  }
+]
