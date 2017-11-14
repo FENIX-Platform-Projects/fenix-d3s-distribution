@@ -292,7 +292,7 @@ public enum Query {
             "areas AS (\n" +
             "  SELECT\n" +
             "    c.answerid, c.subquestionid,\n" +
-            "    string_agg(area_id::text,'; ') AS area_id,\n" +
+            "    string_agg(ra.id::text,'; ') AS area_id,\n" +
             "    string_agg(coalesce(area_l, answer_freetext),'; ') AS area_name,\n" +
             "    string_agg(answer_freetext_local,'; ') AS area_name_local\n" +
             "  FROM answer_detail c LEFT JOIN ref_aretab ra ON (area_id :: TEXT = c.reference_id::text)\n" +

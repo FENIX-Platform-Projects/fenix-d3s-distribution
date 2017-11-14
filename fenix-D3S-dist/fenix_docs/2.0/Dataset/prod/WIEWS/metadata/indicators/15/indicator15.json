@@ -70,17 +70,6 @@
         "key": true
       },
       {
-        "id" : "startDate",
-        "title" : { "EN" : "Start date"},
-        "dataType" : "year",
-        "subject":"time"
-      },
-      {
-        "id" : "endDate",
-        "title" : { "EN" : "End date"},
-        "dataType" : "year"
-      },
-      {
         "id" : "value",
         "title" : { "EN" : "Value"},
         "dataType" : "number",

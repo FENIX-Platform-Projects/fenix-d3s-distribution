@@ -1,331 +1,205 @@
 DROP TABLE IF EXISTS indicators.indicator16;
 
 CREATE TABLE indicators.indicator16 as (
-
-WITH raw AS ( SELECT  *
-   FROM
-     ( SELECT
-         a.iteration,
-         a.id                     AS answer_ID,
-         co.iso                   AS country,
-         it.wiews_instcode        AS stakeholder,
-         c.subquestionid :: TEXT  AS subquestion_id,
-         CASE WHEN c.reference_id IS NOT NULL
-           THEN crop_name
-         ELSE answer_freetext END AS crop
-       FROM
-         answer a
-         FULL OUTER JOIN
-         answer_detail c
-           ON ( c.answerid = a.id AND
-                c.subquestionid IN ( 1068, 1070 ) )
-         FULL OUTER JOIN
-         ref_crop ref
-           ON ( ref.crop_id :: TEXT = c.reference_id :: TEXT AND
-                ref.lang = 'EN' )
-         JOIN
-         ref_instab it
-           ON ( it.id = a.orgId )
-         LEFT JOIN
-         ref_country co
-           ON ( co.country_id = a.country_id ) ) f
-   WHERE
-     crop IS NOT NULL
-),
-
-iteration_avg AS (
-    SELECT
-      *,
-      ( Date_part ('year', end_date) - Date_part ('year', start_date) +
-        ( Date_part ('month', end_date) - Date_part ('month', start_date) + 1 ) / 12 ) AS avg
-    FROM
-      iteration      ), crops AS (
-    SELECT
-      iteration,
-      country,
-      stakeholder,
-      crop_name,
-      sum (crop_num) AS crop_num,
-      max (um)       AS um
-
-     FROM
-      ( SELECT
-          a.iteration             AS iteration,
-          a.answer_ID,
-          a.country,
-          a.stakeholder,
-          a.crop                  AS crop_name,
-          sum (b.crop :: INTEGER) AS crop_num,
-          'num' :: TEXT           AS um
-        FROM
-          ( SELECT
-              *
-            FROM
-              raw
-            WHERE
-              subquestion_id = '1068' ) a
-          JOIN
-          ( SELECT
-              *
-            FROM
-              raw
-            WHERE
-              subquestion_id = '1070' ) b
-            ON ( a.answer_id = b.answer_id AND a.iteration = b.iteration AND a.country = b.country AND
-                 a.stakeholder = b.stakeholder )
-        GROUP BY
+  WITH
+      itw AS (
+      --SELECT version AS iteration, 365.0 / (end_date - start_date) AS year_weight FROM iteration
+        SELECT version as iteration, 12.0 / (Date_part('year', end_date) * 12 + Date_part('month', end_date) - Date_part('year', start_date) * 12 + Date_part('month', start_date) - 1) AS year_weight FROM iteration
+    ),
+      raw AS (
+        SELECT
           a.iteration,
-          a.answer_ID,
-          a.country,
-          a.stakeholder,
-          a.crop
-        ORDER BY
-          country ) z
-    GROUP BY
-      iteration,
-      country,
-      stakeholder,
-      crop_name ),
-ind16 AS (
-    SELECT
-      '2140' :: TEXT AS domain,
-      country::TEXT        AS wiews_region,
-      country::TEXT,
-      stakeholder,
-      '16' :: TEXT   AS indicator,
-      'crp' :: TEXT  AS element,
-      iteration :: TEXT,
-      crop_name      AS crop,
-      crop_num       AS value,
-      um,
-      1 :: INTEGER   AS rank
-    FROM
-      crops
-),
+          a.id                                                     AS answer_ID,
+          co.iso                                                   AS country,
+          it.wiews_instcode                                        AS stakeholder,
+          ac.answer_freetext :: INTEGER                            AS accessions_number,
+          coalesce(ac.answer_freetext :: INTEGER, 0) * year_weight AS accessions_number_avg,
+          CASE WHEN cr.reference_id IS NOT NULL
+            THEN crop_name
+          ELSE cr.answer_freetext END                              AS crop_en
+        FROM
+          answer a
+          JOIN answer_detail ac ON (ac.answerid = a.id AND ac.subquestionid = 1070)
+          JOIN ref_instab it ON (it.id = a.orgId)
+          JOIN itw ON (itw.iteration = a.iteration)
+          LEFT JOIN answer_detail cr ON (cr.answerid = a.id AND cr.subquestionid = 1068)
+          LEFT JOIN ref_crop ref ON (ref.crop_id :: TEXT = cr.reference_id :: TEXT AND ref.lang = 'EN')
+          LEFT JOIN ref_country co ON (co.country_id = a.country_id)
+    ),
 
-nfp AS (
-    SELECT
-      '2140' :: TEXT         AS domain,
-      c.iso::TEXT                  AS wiews_region,
-      c.iso::TEXT                  AS country,
-      'na' :: TEXT           AS stakeholder,
-      '16' :: TEXT           AS indicator,
-      'nfp' :: TEXT          AS element,
-      spec.iteration :: TEXT AS iteration,
-      'na' :: TEXT           AS crop,
-      nfp_rating :: REAL     AS value,
-      'num' :: TEXT          AS um,
-      1 :: INTEGER           AS rank
-    FROM
-      indicator_analysis spec
-      JOIN
-      ref_country c
-        ON ( c.country_id = spec.country_id )
-    WHERE
-      indicator_id = 16 and nfp_rating>0
-)
+      stk AS (
+        SELECT
+          iteration :: TEXT,
+          country :: TEXT,
+          stakeholder,
+          sum(accessions_number)     AS accessions_number,
+          sum(accessions_number_avg) AS accessions_number_avg
+        FROM
+          raw
+        GROUP BY iteration, country, stakeholder
+    ),
 
-  /* by crop */
-select * from ind16
-UNION
+      country AS (
+        SELECT
+          iteration :: TEXT,
+          country :: TEXT,
+          sum(accessions_number)     AS accessions_number,
+          sum(accessions_number_avg) AS accessions_number_avg
+        FROM
+          stk
+        GROUP BY iteration, country
+    ),
 
-/* by nfp */
-SELECT * from nfp
-union
+      region AS (
+        SELECT
+          iteration :: TEXT,
+          w                          AS wiews_region,
+          sum(accessions_number)     AS accessions_number,
+          sum(accessions_number_avg) AS accessions_number_avg,
+          rank
+        FROM
+          country
+          JOIN codelist.ref_region_country r ON (country = r.country_iso3)
+        GROUP BY iteration, w, rank
+    ),
 
-/* by stakeholder(total) */
-SELECT
-  domain,
-  wiews_region,
-  country,
-  stakeholder,
-  indicator,
-  'stk' :: TEXT      AS element,
-  iteration,
-  'na' :: TEXT       AS crop,
-  sum(value) as value,
-  um,
-  rank
-FROM
-  ind16
-GROUP BY
-  domain,
-  wiews_region,
-  country,
-  stakeholder,
-  indicator,
-  iteration,
-  um,
-  rank
-UNION
+      nfp AS (
+        SELECT
+          c.iso :: TEXT          AS country,
+          spec.iteration :: TEXT AS iteration,
+          nfp_rating :: REAL
+        FROM
+          indicator_analysis spec
+          JOIN ref_country c ON (c.country_id = spec.country_id)
+        WHERE
+          indicator_id = 16 AND nfp_rating > 0
+    ),
 
+      nfp_region AS (
+        SELECT
+          iteration,
+          w               AS wiews_region,
+          avg(nfp_rating) AS nfp_rating,
+          rank
+        FROM
+          nfp
+          JOIN codelist.ref_region_country r ON (country = r.country_iso3)
+        GROUP BY iteration, w, rank
+    )
 
-/* by country ( total) */
-SELECT
-  domain,
-  wiews_region,
-  country,
-  'na' :: TEXT       AS stakeholder,
-  indicator,
-  'ind_t' :: TEXT      AS element,
-  iteration,
-  'na' :: TEXT       AS crop,
-  sum(value) as value,
-  um,
-  rank
-FROM
-  ind16
-GROUP BY
-  domain,
-  wiews_region,
-  country,
-  indicator,
-  iteration,
-  um,
-  rank
-UNION
-
-
-
-/* by country ( avg) */
-SELECT
-  domain,
-  wiews_region,
-  country,
-  'na' :: TEXT       AS stakeholder,
-  indicator,
-  'ind_a' :: TEXT      AS element,
-  iteration,
-  'na' :: TEXT       AS crop,
-  (sum(value)/ b.avg) as value,
-  um,
-  rank
-FROM
-  ind16 a
-  JOIN iteration_avg b on (a.iteration = b.current_iteration::TEXT)
-GROUP BY
-  domain,
-  wiews_region,
-  country,
-  indicator,
-  iteration,
-  um,
-  rank,
-  b.avg
-UNION
-
-/* by stakeholder (avg) */
-SELECT
-  domain,
-  wiews_region,
-  country,
-  stakeholder,
-  indicator,
-  'stk_a' :: TEXT      AS element,
-  iteration,
-  'na' :: TEXT       AS crop,
-  (sum(value)/ b.avg) as value,
-  um,
-  rank
-FROM
-  ind16 a
-  JOIN iteration_avg b on (a.iteration = b.current_iteration::TEXT)
-GROUP BY
-  domain,
-  wiews_region,
-  country,
-  stakeholder,
-  indicator,
-  iteration,
-  um,
-  rank,
-  b.avg);
-
-/* REGIONAL AGGREGATIONS */
-INSERT into indicators.indicator16
-/* nfp rating average by region */
- SELECT
-    domain,
-    b.w::TEXT as wiews_region,
-    'na'::TEXT as country,
-    'na'::TEXT as stakeholder,
-    indicator,
-    'nfpa'::TEXT as element,
-    iteration,
-    'na'::TEXT as crop,
-    avg(value) as value,
-    'num'::TEXT as um,
-    b.rank::INTEGER
-  FROM
-    (SELECT * from indicators.indicator16 WHERE element='nfp') a  join
-    codelist.ref_region_country b
-      on a.country = b.country_iso3
-  GROUP BY domain, indicator, iteration, b.w, b.rank
-
-UNION
-
-/* regional aggregation (TOTAL) for indicator*/
+  /* by stakeholder */
   SELECT
-    max(domain) as domain,
-    w::TEXT as wiews_region,
-    'na' :: TEXT as country,
-    'na' :: TEXT as stakeholder,
-    max(indicator) as indicator,
-    'ind_t' as element,
+    '2140' :: TEXT    AS domain,
+    country           AS wiews_region,
+    country,
+    stakeholder,
+    '16' :: TEXT      AS indicator,
+    'stk_t' :: TEXT   AS element,
     iteration,
-    'na' :: TEXT as crop,
-    sum(value) as value,
-    'num'               AS um,
-    rank as rank
-  FROM ( SELECT
-           b.w,
-           b.country_iso3,
-           b.rank,
-           b.label,
-           a.indicator,
-           a.iteration,
-           a.domain,
-           a.country,
-           a.element,
-           a.stakeholder,
-           a.crop,
-           a.value
-         FROM
-           codelist.ref_region_country b JOIN (SELECT * from indicators.indicator16 where element='ind_t')a
-             ON a.country = b.country_iso3)z
-  GROUP BY iteration, wiews_region, rank
-UNION
-
- /* regional aggregation (AVG) for indicator*/
+    'na' :: TEXT      AS crop,
+    accessions_number AS value,
+    'num'             AS um,
+    1 :: INTEGER      AS rank
+  FROM stk
+  UNION ALL
   SELECT
-    max(domain) as domain,
-    w::TEXT as wiews_region,
-    'na' :: TEXT as country,
-    'na' :: TEXT as stakeholder,
-    max(indicator) as indicator,
-    'ind_a' as element,
+    '2140' :: TEXT        AS domain,
+    country               AS wiews_region,
+    country,
+    stakeholder,
+    '16' :: TEXT          AS indicator,
+    'stk_a' :: TEXT       AS element,
     iteration,
-    'na' :: TEXT as crop,
-    sum(value) as value,
-    'num'               AS um,
-    rank as rank
-  FROM ( SELECT
-           b.w,
-           b.country_iso3,
-           b.rank,
-           b.label,
-           a.indicator,
-           a.iteration,
-           a.domain,
-           a.country,
-           a.element,
-           a.stakeholder,
-           a.crop,
-           a.value
-         FROM
-           codelist.ref_region_country b JOIN (SELECT * from indicators.indicator16 where element='ind_a')a
-             ON a.country = b.country_iso3)z
-  GROUP BY iteration, wiews_region, rank;
-
-
-
+    'na' :: TEXT          AS crop,
+    accessions_number_avg AS value,
+    'num'                 AS um,
+    1 :: INTEGER          AS rank
+  FROM stk
+  /* by country */
+  UNION ALL
+  SELECT
+    '2140' :: TEXT    AS domain,
+    country           AS wiews_region,
+    country,
+    'na' :: TEXT      AS stakeholder,
+    '16' :: TEXT      AS indicator,
+    'ind_t' :: TEXT   AS element,
+    iteration,
+    'na' :: TEXT      AS crop,
+    accessions_number AS value,
+    'num'             AS um,
+    1 :: INTEGER      AS rank
+  FROM country
+  UNION ALL
+  SELECT
+    '2140' :: TEXT        AS domain,
+    country               AS wiews_region,
+    country,
+    'na' :: TEXT          AS stakeholder,
+    '16' :: TEXT          AS indicator,
+    'ind_a' :: TEXT       AS element,
+    iteration,
+    'na' :: TEXT          AS crop,
+    accessions_number_avg AS value,
+    'num'                 AS um,
+    1 :: INTEGER          AS rank
+  FROM country
+  /* by region */
+  UNION ALL
+  SELECT
+    '2140' :: TEXT    AS domain,
+    wiews_region,
+    'na' :: TEXT      AS country,
+    'na' :: TEXT      AS stakeholder,
+    '16' :: TEXT      AS indicator,
+    'ind_t' :: TEXT   AS element,
+    iteration,
+    'na' :: TEXT      AS crop,
+    accessions_number AS value,
+    'num'             AS um,
+    rank
+  FROM region
+  UNION ALL
+  SELECT
+    '2140' :: TEXT        AS domain,
+    wiews_region,
+    'na' :: TEXT          AS country,
+    'na' :: TEXT          AS stakeholder,
+    '16' :: TEXT          AS indicator,
+    'ind_a' :: TEXT       AS element,
+    iteration,
+    'na' :: TEXT          AS crop,
+    accessions_number_avg AS value,
+    'num'                 AS um,
+    rank
+  FROM region
+  /* by nfp */
+  UNION ALL
+  SELECT
+    '2140' :: TEXT AS domain,
+    country        AS wiews_region,
+    country,
+    'na' :: TEXT   AS stakeholder,
+    '16' :: TEXT   AS indicator,
+    'nfp' :: TEXT  AS element,
+    iteration,
+    'na' :: TEXT   AS crop,
+    nfp_rating     AS value,
+    'num'          AS um,
+    1 :: INTEGER   AS rank
+  FROM nfp
+  UNION ALL
+  SELECT
+    '2140' :: TEXT AS domain,
+    wiews_region,
+    'na' :: TEXT   AS country,
+    'na' :: TEXT   AS stakeholder,
+    '16' :: TEXT   AS indicator,
+    'nfpa' :: TEXT AS element,
+    iteration,
+    'na' :: TEXT   AS crop,
+    nfp_rating     AS value,
+    'num'          AS um,
+    rank
+  FROM nfp_region
+);
