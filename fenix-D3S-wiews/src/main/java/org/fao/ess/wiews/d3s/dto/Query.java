@@ -368,9 +368,9 @@ public enum Query {
             "\n" +
             "\n" +
             "FROM answer_q14 a\n" +
-            "  JOIN ref_instab c on a.orgId = c.id\n" +
-            "  JOIN ref_country d ON (a.country_id = d.country_id and d.lang = 'EN')\n" +
-            "  JOIN ref_country ref on (a.countryoriginid = ref.country_id and ref.lang = 'EN')\n" +
+            "  LEFT JOIN ref_instab c on a.orgId = c.id\n" +
+            "  LEFT JOIN ref_country d ON (a.country_id = d.country_id and d.lang = 'EN')\n" +
+            "  LEFT JOIN ref_country ref on (a.countryoriginid = ref.country_id and ref.lang = 'EN')\n" +
             "  LEFT JOIN codelist.wiews_codelist lg on (lg.wiews_codelist_uid='wiews_germplasma' AND a.germplasmastoreid::text = lg.wiews_codelist_code)\n" +
             "  LEFT JOIN codelist.wiews_codelist lb on (lb.wiews_codelist_uid='wiews_biological' AND a.biologicalaccessionid::text = lb.wiews_codelist_code)\n" +
             "  LEFT JOIN codelist.wiews_codelist lm on (lm.wiews_codelist_uid='wiews_multilateral' AND a.multilateralsystemstatusid::text = lm.wiews_codelist_code)\n" +

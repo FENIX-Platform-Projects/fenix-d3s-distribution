@@ -17,11 +17,11 @@ CREATE TABLE indicators.indicator22 as (
         coalesce(adn.answer_freetext, '0') :: REAL AS accessions_out_of_budget,
         coalesce(add.answer_freetext, '0') :: REAL AS accessions_num
       FROM answer a
-        JOIN answer_detail adn ON (adn.subquestionid = 1090 AND a.id = adn.answerid)
-        JOIN answer_detail add ON (add.subquestionid = 1087 AND a.id = add.answerid)
-        JOIN ref_country c ON (a.country_id = c.country_id)
-        JOIN ref_instab it ON (it.id = a.orgId)
-      WHERE a.approved = 1
+        LEFT JOIN answer_detail adn ON (adn.subquestionid = 1090 AND a.id = adn.answerid)
+        LEFT JOIN answer_detail add ON (add.subquestionid = 1087 AND a.id = add.answerid)
+        LEFT JOIN ref_country c ON (a.country_id = c.country_id)
+        LEFT JOIN ref_instab it ON (it.id = a.orgId)
+      WHERE a.questionid = '15' and a.approved = 1
   ),
       stakeholder_raw AS (
         SELECT
