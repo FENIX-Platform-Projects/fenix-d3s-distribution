@@ -111,16 +111,38 @@
 
 --structure--
 csvSeparator=@
-structure=tree
+structure=table
 dateFormat=dd/mm/yyyy
-codeColumnsIndex=1,2
-titleColumnIndex_EN=3
-titleColumnIndex_FR=3
+codeColumnsIndex=1
+titleColumnIndex_EN=2
+titleColumnIndex_FR=2
 
 --data--
-@001@PPCB
-@002@Pasteurollose bovine
-@003@Charbon symptomatique
-@004@Peste Petits Ruminants
-@005@Pasteurollose ovine
-@006@Maladie Newcastle
+007@PNT
+008@PRODEFA
+009@ORGAFERT
+010@FERTINOVA
+011@Sabuyuma
+012@Nieleni
+013@Sans bétail
+014@1 – 2
+015@3 – 4
+016@5 – 9
+017@10 – 19
+018@20 – 49
+019@50 – 99
+020@100 – 199
+021@200 – 499
+022@500 – plus
+023@Crédit de campagne en espèce
+024@Crédit de campagne en nature
+025@crédit d’équipement en espèce
+026@crédit d’équipement en nature
+027@Sans parcelle
+028@Moins de 1 Ha
+029@1 à 2 Ha
+030@2 à 3 Ha
+031@3 à 5 Ha
+032@5 à 10 Ha
+033@10 à 20 Ha
+034@20 Ha et plus

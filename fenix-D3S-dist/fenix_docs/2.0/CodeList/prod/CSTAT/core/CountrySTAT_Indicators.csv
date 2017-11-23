@@ -128,9 +128,16 @@ titleColumnIndex_FR=4
 01@0104@Area Harvested@Superficie récoltée
 01@0105@Area sown@Superficie ensemencée
 01@0106@Seeds quantity@Quantité des semences
-01@0107@Number of producers@Nombres de producteurs
-01@0108@Number of operators@Nombres d'exploitants
-01@0109@Number of beneficiaries@Nombres d'attributaires
+01@0107@Producers@Producteurs
+01@0108@Operators@Exploitants
+01@0109@Number of beneficiaries@Nombres de bénéficiaires
+01@0110@Transformed quantity@Quantité transformée
+01@0111@Collected quantity@Quantité collectée
+01@0112@Quantity sold@Quantité vendue
+01@0113@Number of exploitation@Nombre d'exploitation
+01@0114@Number of plot@Nombre de parcelle
+01@0115@Owners@Propriétaires
+01@0116@Area@Superficie
 @02@Food availability@Disponibilité alimentaire
 02@0201@Protein quantity@Disponibilité de protéines en quantité
 02@0202@Lipid quantity@Disponibilité de lipides en quantité
@@ -175,6 +182,9 @@ titleColumnIndex_FR=4
 06@0606@Annual average price@Prix annuel moyen
 06@0607@Lowest price@Prix minimum
 06@0608@Highest price@Prix maximum
+06@0609@Buying price@Prix d'achat
+06@0610@Selling price@Prix de vente
+06@0611@Average monthly price@Prix moyen mensuel
 @07@Value added@Valeur ajoutée
 07@0701@Constant prices@Prix constants
 07@0702@Current prices@Prix courants
@@ -203,9 +213,16 @@ titleColumnIndex_FR=4
 10@1003@Min temperature@Température minimale
 10@1004@Drinking-water supply rate@Taux de desserte en Eau Potable
 10@1005@Basic sanitation access rate@Taux d'accès en Assainissement de base
+10@1006@Minimum height@Hauteur minimale
+10@1007@Maximum height@Hauteur maximale
+10@1008@Minimum flow@Débits minimal
+10@1009@Maximum flow@Débit maximal
+10@1010@Average flow@Débit moyen
+10@1011@Water withdrawal or amount of water withdrawn@Prélèvement d'eau ou quantité d'eau prélevée
 @11@Livestock@Elevage
 11@1101@Slaughtered animals@Animaux abattus
 11@1102@Live animals@Animaux vivants
+1102@110200@Vaccinated animals@Animaux Vaccinées
 1102@110201@Female Live Animals@Animaux vivants femelles
 1102@110202@Lactating Animals@Animaux en lactation
 1102@110203@Male Live Animals@Animaux vivants mâles
@@ -236,7 +253,6 @@ titleColumnIndex_FR=4
 1301@130101@Inland Aquaculture production@Production aquacole en eaux intérieures
 1301@130102@Marine Aquaculture production@Production aquacole en eaux marines
 1301@130104@Aquaculture production sea cucumbers@Production d'aquaculture holothuries
-
 130102@13010201@Industrial Marine Aquaculture production@Production aquacole industrielle en eaux marines
 130102@13010202@Artisanal Marine Aquaculture production@Production aquacole artisanale en eaux marines
 1301@130103@Marine/Brackish Aquaculture production@Production aquacole en eaux saumâtres
@@ -261,6 +277,11 @@ titleColumnIndex_FR=4
 @15@Education@Education
 15@1501@Literacy rate@Taux d'alphabetisation
 15@1502@Primary Literacy rate@Taux d'alphabetisation au primaire
+@16@Food Balance Sheet@Bilans Alimentaires
+16@1601@Stock variation@Variation de stock
+16@1602@Waste@Déchets
+16@1603@Other use@Autres utilisation
+16@1604@Procurement@Approvisionnement
 
 
 

@@ -129,7 +129,7 @@ titleColumnIndex_FR=4
 @0105@local currency@Monnaie locale
 @0106@index@Indice
 @0107@thousands@Miliers
-@0108@units@Unité
+@0108@units/number@Unité/Effectif
 @0109@cubic meter@Mètre cube
 @0110@kg/capita/yr@Kg/personne/an
 @0111@Kcal/capita/day@Kcal/personne/jour
@@ -167,4 +167,8 @@ titleColumnIndex_FR=4
 @0143@Local currency / 100 g@Monnaie locale/100 g
 @0144@1000 MT@1000 TM
 @0145@Local currency / 50 Kg@Monnaie locale/50 kg
-@0146@USD Millions@USD Millions
+@0146@Millions of USD@Millions de USD
+@0147@Inhabitants / year@Habitant/an
+@0148@calorie / day@calorie / jour
+@0149@protein / day@protéine / jour
+@0150@fat / day@gras / jour
