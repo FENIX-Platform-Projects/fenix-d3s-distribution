@@ -247,7 +247,7 @@ GROUP BY
 
 
 /* REGIONAL AGGREGATIONS */
-INSERT into indicators.indicator16
+INSERT into indicators.indicator28
 /* nfp rating average by region */
   SELECT
     domain,
@@ -262,7 +262,7 @@ INSERT into indicators.indicator16
     'num'::TEXT as um,
     b.rank::INTEGER
   FROM
-    (SELECT * from indicators.indicator16 WHERE element='nfp') a  join
+    (SELECT * from indicators.indicator28 WHERE element='nfp') a  join
     codelist.ref_region_country b
       on a.country = b.country_iso3
   GROUP BY domain, indicator, iteration, b.w, b.rank
@@ -296,7 +296,7 @@ INSERT into indicators.indicator16
            a.crop,
            a.value
          FROM
-           codelist.ref_region_country b JOIN (SELECT * from indicators.indicator16 where element='ind_t')a
+           codelist.ref_region_country b JOIN (SELECT * from indicators.indicator28 where element='ind_t')a
              ON a.country = b.country_iso3)z
   GROUP BY iteration, wiews_region, rank
   UNION
@@ -308,7 +308,7 @@ INSERT into indicators.indicator16
     'na' :: TEXT as country,
     'na' :: TEXT as stakeholder,
     max(indicator) as indicator,
-    'ind_t' as element,
+    'ind_a' as element,
     iteration,
     'na' :: TEXT as crop,
     sum(value) as value,
@@ -328,7 +328,7 @@ INSERT into indicators.indicator16
            a.crop,
            a.value
          FROM
-           codelist.ref_region_country b JOIN (SELECT * from indicators.indicator16 where element='ind_a')a
+           codelist.ref_region_country b JOIN (SELECT * from indicators.indicator28 where element='ind_a')a
              ON a.country = b.country_iso3)z
   GROUP BY iteration, wiews_region, rank;
 

@@ -124,8 +124,7 @@ titleColumnIndex_EN=3
 1@004@Latin America and the Caribbean
 1@005@Near East
 1@006@North America
-@007@Not a member
-@008@South West Pacific
+1@008@South West Pacific
 001@108@Burundi
 001@12@Algeria
 001@120@Cameroon
@@ -254,12 +253,6 @@ titleColumnIndex_EN=3
 005@887@Yemen
 006@124@Canada
 006@840@United States of America
-007@262@Djibouti
-007@296@Kiribati
-007@478@Mauritania
-007@499@Montenegro
-007@729@Sudan
-007@798@Tuvalu
 008@184@Cook Islands
 008@242@Fiji
 008@36@Australia
