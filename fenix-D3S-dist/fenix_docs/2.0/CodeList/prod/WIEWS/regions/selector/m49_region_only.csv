@@ -119,32 +119,61 @@ titleColumnIndex_EN=3
 
 
 --data--
-@WITC@World + International Centers
-@1@World
-1@142@Asia 
-1@150@Europe 
-1@202@Sub-Saharan Africa 
-1@21@Northern America 
-1@9@Oceania 
-1@15@Northern Africa 
-1@419@Latin America and the Caribbean 
-142@145@Western Asia 
-142@143@Central Asia 
-142@30@Eastern Asia 
-142@34@Southern Asia 
-142@35@South-eastern Asia 
-150@154@Northern Europe
-150@155@Western Europe 
-150@151@Eastern Europe 
-150@39@Southern Europe 
-202@17@Middle Africa 
-202@14@Eastern Africa 
-202@11@Western Africa 
-202@18@Southern Africa 
-419@13@Central America
-419@29@Caribbean 
-419@5@South America 
-9@54@Melanesia 
-9@53@Australia and New Zealand 
-9@61@Polynesia 
-9@57@Micronesia 
+@WITC_t@World + International Centers (total)
+@WITC@World + International Centers (list)
+@1_t@World (total)
+@1@World (list)
+@142_t@Asia (total)
+@142@Asia (list)
+@150_t@Europe (total)
+@150@Europe (list)
+@202_t@Sub-Saharan Africa (total)
+@202@Sub-Saharan Africa (list)
+@21@_tNorthern America (total)
+@21@Northern America (list)
+@9_t@Oceania (total)
+@9@Oceania (list)
+@15_t@Northern Africa (total)
+@15@Northern Africa (list)
+@419_t@Latin America and the Caribbean (total)
+@419@Latin America and the Caribbean (list)
+@145_t@Western Asia (total)
+@145@Western Asia (list)
+@143_t@Central Asia (total)
+@143@Central Asia (list)
+@30_t@Eastern Asia (total)
+@30@Eastern Asia (list)
+@34_t@Southern Asia (total)
+@34@Southern Asia (list)
+@35_t@South-eastern Asia (total)
+@35@South-eastern Asia (list)
+@154_t@Northern Europe (total)
+@154@Northern Europe (list)
+@155_t@Western Europe (total)
+@155@Western Europe (list)
+@151_t@Eastern Europe (total)
+@151@Eastern Europe (list)
+@39_t@Southern Europe (total)
+@39@Southern Europe (list)
+@17_t@Middle Africa (total)
+@17@Middle Africa (list)
+@14_t@Eastern Africa (total)
+@14@Eastern Africa (list)
+@11_t@Western Africa (total)
+@11@Western Africa (list)
+@18_t@Southern Africa (total)
+@18@Southern Africa (list)
+@13_t@Central America (total)
+@13@Central America (list)
+@29_t@Caribbean (total)
+@29@Caribbean (list)
+@5_t@South America (total)
+@5@South America (list)
+@54_t@Melanesia (total)
+@54@Melanesia (list)
+@53_t@Australia and New Zealand (total)
+@53@Australia and New Zealand (list)
+@61_t@Polynesia (total)
+@61@Polynesia (list)
+@57_t@Micronesia (total)
+@57@Micronesia (list)

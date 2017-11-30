@@ -121,12 +121,21 @@ titleColumnIndex_EN=3
 
 
 
-@1@World
-1@202@Sub-Saharan Africa
-1@419@Latin America and the Caribbean
-1@513@Northern America  and Europe
-1@53@Australia and New Zealand
-1@543@Oceania  excluding Australia and New Zealand
-1@62@Central Asia  and Southern Asia
-1@747@Western Asia  and Northern Africa
-1@753@Eastern Asia  and South-eastern Asia
+@1_t@World (total)
+@1@World (list)
+@202_t@Sub-Saharan Africa (total)
+@202@Sub-Saharan Africa (list)
+@419_t@Latin America and the Caribbean (total)
+@419@Latin America and the Caribbean (list)
+@513_t@Northern America  and Europe (total)
+@513@Northern America  and Europe (list)
+@53_t@Australia and New Zealand (total)
+@53@Australia and New Zealand (list)
+@543_t@Oceania  excluding Australia and New Zealand (total)
+@543@Oceania  excluding Australia and New Zealand (list)
+@62_t@Central Asia  and Southern Asia (total)
+@62@Central Asia  and Southern Asia (list)
+@747_t@Western Asia  and Northern Africa (total)
+@747@Western Asia  and Northern Africa (list)
+@753_t@Eastern Asia  and South-eastern Asia (total)
+@753@Eastern Asia  and South-eastern Asia (list)

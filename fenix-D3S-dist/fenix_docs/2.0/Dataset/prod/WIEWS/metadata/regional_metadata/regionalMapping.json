@@ -11,7 +11,7 @@
     },
     "dsd": {
       "contextSystem": "wiews",
-      "datasources": ["D3S"],
+      "datasources": ["wiews"],
       "cache":{
         "storage":"postgres"
       },
@@ -22,8 +22,7 @@
           "title" : { "EN" : "Country (ISO3)"},
           "subject" : "geo",
           "dataType" : "code",
-          "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
-          "key": true
+          "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] }
         },
         {
           "id" : "fao_region_l0",

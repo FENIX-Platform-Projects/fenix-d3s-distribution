@@ -41,13 +41,21 @@ public class RegionFiltering extends org.fao.fenix.d3p.process.Process<WiewsRegi
         DSDDataset dsdMapping = sourceMapping.getDsd();
         DSDDataset dsdCountries = sourceCountries.getDsd();
         //Create countries variable
-        Collection<String> list = new LinkedList<>();
         Map<String, Collection<String>> columnsCodes = getColumnsCodes(params.filter, dsdMapping);
         Collection<String> regions = getRegionCodes(tableNameMapping, columnsCodes, sourceMapping);
+/*      OLD LOGIC
+        Collection<String> list = new LinkedList<>();
         if (params.total)
             list.addAll(regions);
         if (params.list)
             list.addAll(getCountriesCode(tableNameCountries, columnsCodes, regions, sourceCountries));
+*/
+        Collection<String> list = new LinkedHashSet<>();
+        for (String region : regions)
+            if (region.endsWith("_t"))
+                list.add(region.substring(0,region.length()-2));
+        list.addAll(getCountriesCode(tableNameCountries, columnsCodes, regions, sourceCountries));
+
         setGlobalVariable("required_countries", list.toArray());
         //Create international gene banks variable when needed (to exclude them)
         setGlobalVariable("stakeholders_exclusion", getInternationalGeneBanks());

@@ -117,32 +117,61 @@ codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 
 --data--
-@5000@World
-5000@5100@Africa
-5000@5200@Americas
-5000@5300@Asia
-5000@5400@Europe
-5000@5500@Oceania
-5100@5101@Eastern Africa
-5100@5102@Middle Africa
-5100@5103@Northern Africa
-5100@5104@Southern Africa
-5100@5105@Western Africa
-5200@5203@Northern America
-5200@5204@Central America
-5200@5206@Caribbean
-5200@5207@South America
-5300@5301@Central Asia
-5300@5302@Eastern Asia
-5300@5303@Southern Asia
-5300@5304@South-Eastern Asia
-5300@5305@Western Asia
-5400@5401@Eastern Europe
-5400@5402@Northern Europe
-5400@5403@Southern Europe
-5400@5404@Western Europe
-5500@5501@Australia & New Zealand
-5500@5502@Melanesia
-5500@5503@Micronesia
-5500@5504@Polynesia
-@WITC@World + International Centers
+@5000_t@World (total)
+@5000@World (list)
+@5100_t@Africa (total)
+@5100@Africa (list)
+@5200_t@Americas (total)
+@5200@Americas (list)
+@5300_t@Asia (total)
+@5300@Asia (list)
+@5400_t@Europe (total)
+@5400@Europe (list)
+@5500_t@Oceania (total)
+@5500@Oceania (list)
+@5101_t@Eastern Africa (total)
+@5101@Eastern Africa (list)
+@5102_t@Middle Africa (total)
+@5102@Middle Africa (list)
+@5103_t@Northern Africa (total)
+@5103@Northern Africa (list)
+@5104_t@Southern Africa (total)
+@5104@Southern Africa (list)
+@5105_t@Western Africa (total)
+@5105@Western Africa (list)
+@5203_t@Northern America (total)
+@5203@Northern America (list)
+@5204_t@Central America (total)
+@5204@Central America (list)
+@5206_t@Caribbean (total)
+@5206@Caribbean (list)
+@5207_t@South America (total)
+@5207@South America (list)
+@5301_t@Central Asia (total)
+@5301@Central Asia (list)
+@5302_t@Eastern Asia (total)
+@5302@Eastern Asia (list)
+@5303_t@Southern Asia (total)
+@5303@Southern Asia (list)
+@5304_t@South-Eastern Asia (total)
+@5304@South-Eastern Asia (list)
+@5305_t@Western Asia (total)
+@5305@Western Asia (list)
+@5401_t@Eastern Europe (total)
+@5401@Eastern Europe (list)
+@5402_t@Northern Europe (total)
+@5402@Northern Europe (list)
+@5403_t@Southern Europe (total)
+@5403@Southern Europe (list)
+@5404_t@Western Europe (total)
+@5404@Western Europe (list)
+@5501_t@Australia & New Zealand (total)
+@5501@Australia & New Zealand (list)
+@5502_t@Melanesia (total)
+@5502@Melanesia (list)
+@5503_t@Micronesia (total)
+@5503@Micronesia (list)
+@5504_t@Polynesia (total)
+@5504@Polynesia (list)
+@WITC_t@World + International Centers (total)
+@WITC@World + International Centers (list)

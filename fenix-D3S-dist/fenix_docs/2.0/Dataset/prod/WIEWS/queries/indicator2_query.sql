@@ -190,7 +190,7 @@ SELECT
   domain,
   indicator,
   iteration,
-  'nfp_a' as element,
+  'nfpa' as element,
   'na' as country,
   b.w as wiews_region,
   b.rank,

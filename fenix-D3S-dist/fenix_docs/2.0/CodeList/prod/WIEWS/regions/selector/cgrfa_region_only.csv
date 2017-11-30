@@ -117,11 +117,19 @@ codeColumnsIndex=1,2
 titleColumnIndex_EN=3
 
 --data--
-@1@World
-1@001@Africa
-1@002@Asia
-1@003@Europe
-1@004@Latin America and the Caribbean
-1@005@Near East
-1@006@North America
-1@008@South West Pacific
+@1_t@World (total)
+@1@World (list)
+@001_t@Africa (total)
+@001@Africa (list)
+@002_t@Asia (total)
+@002@Asia (list)
+@003_t@Europe (total)
+@003@Europe (list)
+@004_t@Latin America and the Caribbean (total)
+@004@Latin America and the Caribbean (list)
+@005_t@Near East (total)
+@005@Near East (list)
+@006_t@North America (total)
+@006@North America (list)
+@008_t@South West Pacific (total)
+@008@South West Pacific (list)

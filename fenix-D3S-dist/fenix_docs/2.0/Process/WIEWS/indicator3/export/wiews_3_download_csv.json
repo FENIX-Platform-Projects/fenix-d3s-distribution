@@ -14,7 +14,7 @@
             "codes": [
               {
                 "uid": "wiews_m49_region_only",
-                "codes": [ "WITC","1" ]
+                "codes": [ "1_t","150" ]
               }
             ]
           }
@@ -65,7 +65,7 @@
         "iteration" : "ASC",
         "rank" : "ASC",
         "wiews_region" : "ASC",
-        "indicator" : "ASC",
+        "indicator" : "DESC",
         "element" : "ASC"
       }
     },

@@ -658,6 +658,18 @@ public enum Query {
 
     exsitu_institutes_count(
             "SELECT iteration, country_iso3, institutes_count, um FROM sdg.exsitu_2016"
+    ),
+
+    wiews_region_mapping(
+            "SELECT w, fao, m49, mdg, sdg, cgrfa, itpgrfa, rank FROM codelist.region_mapping"
+    ),
+
+    wiews_regions_mapping(
+            "SELECT iso3_country_code, faol0_code, faol1_code, faol2_code, m49l0_code, m49l1_code, m49l2_code, m49_country_code, mdg_region_code, sdg_region_code, itpgrfa_region_code, cgrfa_region_code FROM codelist.regional_mapping"
+    ),
+
+    wiews_region_countries(
+            "SELECT w, country_iso3 FROM codelist.region_countries"
     )
 
 

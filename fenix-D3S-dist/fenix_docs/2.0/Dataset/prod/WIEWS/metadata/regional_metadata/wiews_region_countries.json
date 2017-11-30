@@ -11,7 +11,7 @@
     },
     "dsd": {
       "contextSystem": "wiews",
-      "datasources": ["D3S"],
+      "datasources": ["wiews"],
       "cache":{
         "storage":"postgres"
       },
