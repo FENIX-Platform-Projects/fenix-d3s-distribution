@@ -1,5 +1,6 @@
 {
   "metadata": {
+    "uid": "002SPD016_aze_1",
     "creationDate": 1401444000000,
     "language": {
       "version": "1998",
@@ -204,7 +205,7 @@
       "datasources": [
         "D3S"
       ],
-      "contextSystem": "cstat_afg",
+      "contextSystem": "cstat_aze",
       "cache" : { "storage" : "postgres" }
     },
     "meContent": {
@@ -280,7 +281,6 @@
         }
       }
     },
-    "uid": "002SPD016",
     "meMaintenance": {
       "seUpdate": {
         "updateDate": 1435214674338
@@ -363,10 +363,7 @@
           "version": "1.0",
           "codes": [
             {
-              "code": "F",
-              "label": {
-                "EN": "Free"
-              }
+              "code": "N"
             }
           ],
           "idCodeList": "CL_CONF_STATUS"

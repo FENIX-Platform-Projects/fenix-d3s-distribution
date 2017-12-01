@@ -22,6 +22,7 @@ import java.util.*;
 @Context({
         "cstat_afg",
         "cstat_ago",
+        "cstat_aze",
         "cstat_ben",
         "cstat_bfa",
         "cstat_cmr",
@@ -188,6 +189,21 @@ public class CstatIndexer implements ResourceListener {
             indexDocument.field("index|freetext", getFreeTextValue(loadData(metadata)));
             //Other fields
             indexDocument.field("index|dsd|contextSystem", metadata.getDsd().getContextSystem());
+        }
+    }
+
+    private void updateStatusInfo(MeIdentification metadata) {
+        try {
+            if (getResourceType(metadata)==RepresentationType.dataset && isDSDAvailable(metadata)) {
+                OObjectDatabaseTx connection = crossReferences.getConnection();
+
+                ODocument indexDocument = getIndexDocument(getId(metadata), connection);
+                updateFields(metadata, indexDocument, connection);
+
+                connection.getUnderlying().save(indexDocument);
+            }
+        } catch (Exception ex) {
+            LOGGER.error("Error trying to index CountrySTAT data", ex);
         }
     }
 

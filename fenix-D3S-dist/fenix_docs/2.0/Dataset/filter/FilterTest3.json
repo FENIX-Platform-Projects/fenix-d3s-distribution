@@ -1,13 +1,18 @@
 {
-    "meContent.resourceRepresentationType" : {
-        "enumeration" : ["codelist"]
+    "dsd.contextSystem" : {
+        "enumeration": [
+            "cstat_aze"
+        ]
     },
-    "meContent.seCoverage.coverageSectors" : {
+    "meContent.resourceRepresentationType" : {
+        "enumeration" : ["dataset"]
+    },
+    "meAccessibility.seConfidentiality.confidentialityStatus" : {
         "codes" : [
             {
-                "uid" : "FENIX_Subjects",
+                "uid" : "CL_CONF_STATUS",
                 "version" : "1.0",
-                "codes" : ["06"]
+                "codes" : ["F"]
             }
         ]
     }
