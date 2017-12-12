@@ -1,7 +1,7 @@
 [
   {
     "name": "gift_population_filter",
-    "sid": [ { "uid": "GIFT_afc_000042BUR201001" } ],
+    "sid": [ { "uid": "GIFT_afc_000023BGD201001" } ],
     "parameters": {
       "item": "FOOD_AMOUNT_PROC",
       "gender": null,

@@ -1,0 +1,186 @@
+{
+  "title" : {
+    "EN" : "Total food daily average consumption by subject. Dataset is auto generated dataset for WHO-FAO GIFT processing purposes."
+  },
+  "dsd" : {
+    "cache" : {
+      "storage" : "postgres"
+    },
+    "contextSystem" : "gift_process",
+    "datasources" : [ "gift_process" ],
+    "columns" : [ {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Item"
+      },
+      "domain" : {
+        "codes" : [ {
+          "idCodeList" : "GIFT_Items",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, Items, nutritional value"
+          }
+        } ]
+      },
+      "subject" : "item",
+      "key" : true,
+      "id" : "item"
+    }, {
+      "dataType" : "text",
+      "title" : {
+        "EN" : "ID Subject"
+      },
+      "key" : true,
+      "id" : "subject"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Food group"
+      },
+      "domain" : {
+        "codes" : [ {
+          "idCodeList" : "GIFT_FoodGroups",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, food groups"
+          }
+        } ]
+      },
+      "key" : true,
+      "id" : "group_code"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Food sub-group"
+      },
+      "domain" : {
+        "codes" : [ {
+          "idCodeList" : "GIFT_FoodGroups",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, food groups"
+          }
+        } ]
+      },
+      "key" : true,
+      "id" : "subgroup_code"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Food"
+      },
+      "domain" : {
+        "codes" : [ {
+          "idCodeList" : "GIFT_Foods",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, Foods coming from the FoodEX 2 codelist"
+          }
+        } ]
+      },
+      "key" : true,
+      "id" : "foodex2_code"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "EN" : "Value"
+      },
+      "subject" : "value",
+      "id" : "value"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Unit of measure"
+      },
+      "domain" : {
+        "codes" : [ {
+          "idCodeList" : "GIFT_UM",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, Unit of measurement"
+          }
+        } ]
+      },
+      "subject" : "um",
+      "id" : "um"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Gender"
+      },
+      "domain" : {
+        "codes" : [ {
+          "idCodeList" : "GIFT_Gender",
+          "extendedName" : {
+            "EN" : "Gender"
+          }
+        } ]
+      },
+      "id" : "gender"
+    }, {
+      "dataType" : "code",
+      "title" : {
+        "EN" : "Special condition"
+      },
+      "domain" : {
+        "codes" : [ {
+          "idCodeList" : "GIFT_SpecialConditions",
+          "extendedName" : {
+            "EN" : "WHO-FAO GIFT, Special Conditions"
+          }
+        } ]
+      },
+      "key" : true,
+      "id" : "special_condition"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "EN" : "Age (years)"
+      },
+      "key" : true,
+      "id" : "age_year"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "EN" : "Age (months)"
+      },
+      "key" : true,
+      "id" : "age_month"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "EN" : "Suggested value"
+      },
+      "id" : "suggested_value"
+    }, {
+      "dataType" : "number",
+      "title" : {
+        "EN" : "Increment"
+      },
+      "id" : "increment"
+    } ]
+  },
+  "uid" : "GIFT_afc_000023BGD201001",
+  "meContent" : {
+    "resourceRepresentationType" : "dataset",
+    "resourceRepresentationTypeLabel" : {
+      "EN" : "Dataset"
+    }
+  },
+  "contacts" : [ {
+    "organization" : {
+      "EN" : "WHO-FAO"
+    },
+    "role" : "distributor",
+    "contactInfo" : {
+      "emailAddress" : "pauline.allemand@gmail.com"
+    },
+    "organizationUnit" : {
+      "EN" : "Institut de Recherche pour le DÃ©veloppement"
+    },
+    "roleLabel" : {
+      "FR" : "Distributeur",
+      "EN" : "Distributor"
+    }
+  } ],
+  "meMaintenance" : {
+    "seUpdate" : {
+      "updateDate" : 1510758381973
+    }
+  }
+}

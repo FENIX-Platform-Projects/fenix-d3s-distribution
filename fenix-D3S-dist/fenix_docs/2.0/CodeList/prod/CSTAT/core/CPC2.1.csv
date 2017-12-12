@@ -122,7 +122,6 @@ titleColumnIndex_FR=3
 
 --data--
 
-
 @0@Agriculture, forestry and fishery products
 0@01@Products of agriculture, horticulture and market gardening
 01@011@Cereals
@@ -200,11 +199,11 @@ titleColumnIndex_FR=3
 0123@01239@Other fruit-bearing vegetables
 01239@01239.01@Okra (Gombo)
 01239.01@01239.011@Dried okra (Gombo séché)
-01239@01239.02@Chayote
+01239@01239.02@Chayote 
 01239@01239.90@Other fruit-bearing vegetables n.e.c.
 012@0124@Green leguminous vegetables
 0124@01241@Beans, green
-01241@01241.01@String beans
+01241@01241.01@String beans 
 01241@01241.02@Other beans, green
 01241@01241.03@Lima beans
 0124@01242@Peas, green
@@ -229,7 +228,7 @@ titleColumnIndex_FR=3
 012@0129@Vegetables, fresh, n.e.c.
 0129@01290@Vegetables, fresh, n.e.c.
 01290@01290.01@Green corn (maize)
-01290@01290.02@Celery
+01290@01290.02@Celery 
 01290@01290.90@Other vegetables, fresh n.e.c.
 01@013@Fruits and nuts
 013@0131@Tropical and subtropical fruits
@@ -251,6 +250,7 @@ titleColumnIndex_FR=3
 01316.01@01316.013@Mangoes Kent
 01316@01316.02@Guavas
 01316@01316.03@Mangosteens
+01316@01316.04@Acca sellowiana (feijoa, pineapple guava, guavasteen)
 0131@01317@Papayas
 0131@01318@Pineapples
 0131@01319@Other tropical and subtropical fruits, n.e.c.
@@ -289,7 +289,7 @@ titleColumnIndex_FR=3
 01349@01349.20@Stone fruit, n.e.c.
 013@0135@Berries and other fruits
 0135@01351@Currants and gooseberries
-01351@01351.01@Gooseberries
+01351@01351.01@Gooseberries 
 01351@01351.02@Currants
 0135@01352@Kiwi fruit
 0135@01353@Raspberries, blackberries, mulberries and loganberries
@@ -304,7 +304,7 @@ titleColumnIndex_FR=3
 0135@01359@Other fruits, n.e.c.
 01359@01359.01@Persimmons
 01359@01359.02@Cashewapple
-01359@01359.03@Grenade
+01359@01359.03@Pomegranate
 01359@01359.02@Tamarind
 01359@01359.90@Other fruits, n.e.c.
 013@0136@Fruit seeds
@@ -318,7 +318,7 @@ titleColumnIndex_FR=3
 0137@01376@Walnuts, in shell
 0137@01377@Brazil nuts, in shell
 0137@01379@Other nuts (excluding wild edible nuts and groundnuts), in shell
-01379@01379.01@Areca nuts
+01379@01379.01@Areca nuts 
 01379@01379.02@Kola nuts
 01379@01379.90@Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.
 01@014@Oilseeds and oleaginous fruits
@@ -330,8 +330,6 @@ titleColumnIndex_FR=3
 0142@01422@Groundnuts, in shell
 0142@01422.01@small groundnuts
 0142@01422.02@big groundnuts
-
-
 014@0143@Cottonseed
 0143@01431@Cottonseed, seed for planting
 0143@01432@Cottonseed, other
@@ -350,6 +348,7 @@ titleColumnIndex_FR=3
 01449@01449.90@Other oil seeds, n.e.c.
 014@0145@Olives
 0145@01450@Olives
+0145@01451@Elaeagnus angustifolia (oleaster)
 014@0146@Coconuts, in shell
 0146@01460@Coconuts, in shell
 014@0149@Other oleaginous fruits
@@ -379,7 +378,7 @@ titleColumnIndex_FR=3
 015@0154@Yams
 0154@01540@Yams
 015@0155@Taro
-0155@01550@Taro
+0155@01550@Taro 
 015@0159@Other edible roots and tubers with high starch or inulin content
 0159@01591@Yautia
 0159@01599@Other edible roots and tubers with high starch or inulin content, n.e.c.
@@ -434,7 +433,7 @@ titleColumnIndex_FR=3
 0170@01708@Bambara beans, dry
 0170@01709@Pulses, n.e.c.
 01709@01709.01@Vetches
-01709@01709.02@Lupins
+01709@01709.02@Lupins 
 01709@01709.90@Pulses n.e.c.
 01@018@Sugar crops
 018@0180@Sugar crops
@@ -452,7 +451,7 @@ titleColumnIndex_FR=3
 0191@01919@Forage products, n.e.c.
 01919@01919.01@Beet, Beta vulgaris for forage
 01919@01919.02@Swedes (swede turnips) for forage
-01919@01919.03@Hay, non leguminous
+01919@01919.03@Hay, non leguminous 
 01919@01919.04@Sorghum for forage
 01919@01919.05@Rye grass for forage
 01919@01919.06@Grasses nes for forage
@@ -464,7 +463,7 @@ titleColumnIndex_FR=3
 01919@01919.12@Turnips for fodder
 01919@01919.13@Carrots for fodder
 01919@01919.14@Hay (Clover, Lucerne, etc.)
-01919@01919.91@Other hay n.e.c.
+01919@01919.91@Other hay n.e.c. 
 01919@01919.92@Other forage products n.e.c.
 01919@01919.93@Leaves, Tops and Vines n.e.c.
 01919@01919.94@Vegetables, roots fodder n.e.c.
@@ -485,7 +484,7 @@ titleColumnIndex_FR=3
 01929@01929.06@Coir
 01929@01929.07@Kapok fibre
 01929@01929.90@Other fibre crops n.e.c.
-01929@01929.91@Agave fibres n.e.c.
+01929@01929.91@Agave fibres n.e.c. 
 019@0193@Plants and parts of plants used primarily in perfumery, in pharmacy, or for insecticidal, fungicidal or similar purposes
 0193@01930@Plants and parts of plants used primarily in perfumery, in pharmacy, or for insecticidal, fungicidal or similar purposes
 01930@01930.01@Peppermint, spearmint
@@ -592,10 +591,10 @@ titleColumnIndex_FR=3
 0294@02942@Pulled wool, greasy, including fleece-washed pulled wool; coarse animal hair
 02942@02942.01@Pulled wool, greasy, including fleece-washed pulled wool
 02942@02942.02@Coarse goat hair
-02942@02942.90@Other coarse animal hair
+02942@02942.90@Other coarse animal hair 
 0294@02943@Fine animal hair, not carded or combed
 02943@02943.01@Fine goat hair
-02943@02943.02@Fine hair, n.e.c.
+02943@02943.02@Fine hair, n.e.c. 
 0294@02944@Silk-worm cocoons suitable for reeling
 029@0295@Hides, skins and furskins, raw
 0295@02951@Raw hides and skins of bovine animals
@@ -1567,7 +1566,7 @@ titleColumnIndex_FR=3
 2616@26160@Cotton, carded or combed
 261@2617@Jute and other textile bast fibres (except flax, true hemp and ramie), processed but not spun; tow and waste of these fibres
 2617@26170@Jute and other textile bast fibres (except flax, true hemp and ramie), processed but not spun; tow and waste of these fibres
-26170@26170.01@Jute
+26170@26170.01@Jute 
 26170@26170.02@Kenaf, and other textile bast fibres
 261@2619@Other vegetable textile fibres, processed but not spun; tow and waste of these fibres
 2619@26190@Other vegetable textile fibres, processed but not spun; tow and waste of these fibres
@@ -1577,7 +1576,7 @@ titleColumnIndex_FR=3
 26190@26190.04@Kapok fibre
 26190@26190.05@Ramie
 26190@26190.06@Sisal
-26190@26190.07@Agave fibres nes
+26190@26190.07@Agave fibres nes 
 26190@26190.08@Abaca manila hemp
 26190@26190.09@Coir
 26190@26190.90@Fibre crops nes
@@ -1820,8 +1819,8 @@ titleColumnIndex_FR=3
 3@31@Products of wood, cork, straw and plaiting materials
 31@311@Wood, sawn or chipped lengthwise, sliced or peeled, of a thickness exceeding 6 mm; railway or tramway sleepers (cross-ties) of wood, not impregnated
 311@3110@Wood, sawn or chipped lengthwise, sliced or peeled, of a thickness exceeding 6 mm; railway or tramway sleepers (cross-ties) of wood, not impregnated
-3110@31101@Wood, sawn or chipped lengthwise, sliced or peeled, of a thickness exceeding 6 mm, of coniferous wood
-3110@31102@Wood, sawn or chipped lengthwise, sliced or peeled, of a thickness exceeding 6 mm, of non-coniferous wood
+3110@31101@Wood, sawn or chipped lengthwise, sliced or peeled, of a thickness exceeding 6 mm, of coniferous wood 
+3110@31102@Wood, sawn or chipped lengthwise, sliced or peeled, of a thickness exceeding 6 mm, of non-coniferous wood 
 3110@31109@Railway or tramway sleepers (cross-ties) of wood, not impregnated
 31@312@Wood continuously shaped along any of its edges or faces; wood wool; wood flour; wood in chips or particles
 312@3121@Wood, continuously shaped along any of its edges or faces (including strips and friezes for parquet flooring, not assembled, and beadings and mouldings)
