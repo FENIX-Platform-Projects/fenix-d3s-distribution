@@ -1,7 +1,9 @@
 package org.fao.ess.d3s.cache.postgres;
 
+import org.apache.log4j.Logger;
 import org.fao.fenix.commons.find.dto.filter.*;
 import org.fao.fenix.commons.utils.CSVWriter;
+import org.fao.fenix.commons.utils.FileUtils;
 import org.fao.fenix.commons.utils.Order;
 import org.fao.fenix.commons.utils.Page;
 import org.fao.fenix.commons.utils.database.DataIterator;
@@ -11,11 +13,15 @@ import org.fao.fenix.d3s.cache.dto.dataset.Table;
 import org.fao.fenix.d3s.cache.dto.dataset.TableScope;
 import org.fao.fenix.d3s.cache.dto.dataset.Type;
 import org.fao.fenix.d3s.cache.storage.StorageName;
+import org.fao.fenix.d3s.cache.tools.Server;
 import org.postgresql.PGConnection;
 import org.postgresql.copy.CopyIn;
 import org.postgresql.copy.CopyManager;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.PushbackReader;
 import java.io.StringWriter;
 import java.sql.*;
@@ -25,10 +31,70 @@ import java.util.Date;
 @Singleton
 @StorageName("postgres")
 public class PostgresDefaultStorage extends PostgresStorage {
+    private static final Logger LOGGER = Logger.getLogger(PostgresDefaultStorage.class);
 
     private static String SCHEMA_NAME = "DATA";
     private static String TMP_TABLESPACE = "d3s_tmp";
     private final Map<String, Connection> session = new HashMap<>();
+
+    @Inject
+    private FileUtils fileUtils;
+
+    private boolean initialized = false;
+
+    //STARTUP FLOW
+    @Override
+    public void open() throws Exception {
+        open(
+                "/org/fao/ess/d3s/cache/postgres/config/postgres.properties",
+                "file:"+ Server.CONFIG_FOLDER_PATH + "postgres.properties"
+        );
+    }
+
+    private void open(String ... paths) throws Exception {
+        if (!initialized) {
+            Map<String, String> initProperties = org.fao.fenix.commons.utils.Properties.getInstance(paths).toMap();
+
+            initPool(
+                    initProperties.get("host"),
+                    initProperties.get("port"),
+                    initProperties.get("database"),
+                    initProperties.get("usr"),
+                    initProperties.get("psw"),
+                    Integer.parseInt(initProperties.containsKey("max") ? initProperties.get("max") : "0")
+            );
+
+            runScript(initProperties.get("ddl"));
+            runScript(initProperties.get("dml"));
+
+            initialized = true;
+        }
+    }
+
+    private void runScript(String resourceFilePath) throws IOException, SQLException {
+        if (resourceFilePath!=null && resourceFilePath.trim().length()>0)
+            runScript(PostgresStorage.class.getResourceAsStream(resourceFilePath));
+    }
+    private void runScript(InputStream input) throws IOException, SQLException {
+        if (input!=null) {
+            //Read script instructions
+            String script = fileUtils.readTextFile(input);
+            String[] instructions = script.split("-- command");
+            //Run safe script
+            Connection connection = null;
+            for (String command : instructions)
+                if ((command = command.trim()).length()>0)
+                    try {
+                        (connection = getConnection()).setAutoCommit(true);
+                        connection.createStatement().executeUpdate(command.trim());
+                    } catch (Exception ex) {
+                        LOGGER.warn("Postgres storage init script command error: "+ex.getMessage());
+                    } finally {
+                        if (connection!=null)
+                            connection.close();
+                    }
+        }
+    }
 
 
     //SESSION
