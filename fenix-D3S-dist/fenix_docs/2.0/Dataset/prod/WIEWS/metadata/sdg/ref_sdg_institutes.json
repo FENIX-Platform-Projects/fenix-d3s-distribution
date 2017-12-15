@@ -1,0 +1,40 @@
+{
+  "uid": "ref_sdg_institutes",
+  "title": {
+    "EN": "Institutes"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Institutes"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews_sdg"],
+    "cache":{
+      "storage":"exsitu"
+    },
+
+    "columns": [
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year"},
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "w_institute",
+        "title" : { "EN" : "Institute (ID)"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "w_institute_en",
+        "title" : { "EN" : "Institute"},
+        "dataType" : "text"
+      }
+    ]
+  }
+}

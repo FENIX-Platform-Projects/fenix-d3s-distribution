@@ -656,10 +656,6 @@ public enum Query {
             "LEFT JOIN question_type_enum_options s ON (o.orgstatus = s.id and s.lang = 'EN')"
     ),
 
-    exsitu_institutes_count(
-            "SELECT iteration, country_iso3, institutes_count, um FROM sdg.exsitu_2016"
-    ),
-
     wiews_region_mapping(
             "SELECT w, fao, m49, mdg, sdg, cgrfa, itpgrfa, rank FROM codelist.region_mapping"
     ),
@@ -670,8 +666,68 @@ public enum Query {
 
     wiews_region_countries(
             "SELECT w, country_iso3 FROM codelist.region_countries"
-    )
+    ),
 
+
+    //SDG
+    exsitu_institutes_count(
+            "SELECT\n" +
+            "  2016 as year,\n" +
+            "  nicode as country_iso3,\n" +
+            "  w_instcode,\n" +
+            "  max((CASE WHEN declatitude SIMILAR TO '\\d+.\\d+' THEN declatitude ELSE NULL END)::DOUBLE PRECISION) AS latitude,\n" +
+            "  max((CASE WHEN declongitude SIMILAR TO '\\d+.\\d+' THEN declongitude ELSE NULL END)::DOUBLE PRECISION) AS longitude,\n" +
+            "  count(DISTINCT accenumb) AS accessions_count,\n" +
+            "  count(DISTINCT genus) AS genus_count,\n" +
+            "  count(DISTINCT genus||'|'||species) AS genus_species_count,\n" +
+            "  'num' AS um\n" +
+            "FROM sdg.wiews_2016\n" +
+            "GROUP BY nicode, w_instcode\n" +
+            "UNION\n" +
+            "SELECT\n" +
+            "  2014 as year,\n" +
+            "  nicode as country_iso3,\n" +
+            "  w_instcode,\n" +
+            "  max((CASE WHEN declatitude SIMILAR TO '\\d+.\\d+' THEN declatitude ELSE NULL END)::DOUBLE PRECISION) AS latitude,\n" +
+            "  max((CASE WHEN declongitude SIMILAR TO '\\d+.\\d+' THEN declongitude ELSE NULL END)::DOUBLE PRECISION) AS longitude,\n" +
+            "  count(DISTINCT accenumb) AS accessions_count,\n" +
+            "  count(DISTINCT genus) AS genus_count,\n" +
+            "  count(DISTINCT genus||'|'||species) AS genus_species_count,\n" +
+            "  'num' AS um\n" +
+            "FROM sdg.wiews_2014\n" +
+            "GROUP BY nicode, w_instcode"
+    ),
+
+
+    exsitu_index_country(
+            "SELECT 2016 AS year, w_instcode, nicode AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item\n" +
+            "UNION ALL\n" +
+            "SELECT 2014 AS year, w_instcode, nicode AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item"
+    ),
+
+    exsitu_index_taxon(
+            "SELECT 2016 AS year, w_instcode, taxon AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item\n" +
+            "UNION ALL\n" +
+            "SELECT 2014 AS year, w_instcode, taxon AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item"
+    ),
+
+    exsitu_index_specie(
+            "SELECT 2016 AS year, w_instcode, genus||'|'||species AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item\n" +
+            "UNION ALL\n" +
+            "SELECT 2014 AS year, w_instcode, genus||'|'||species AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item"
+    ),
+
+    exsitu_index_genus(
+            "SELECT 2016 AS year, w_instcode, genus AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item\n" +
+            "UNION ALL\n" +
+            "SELECT 2014 AS year, w_instcode, genus AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item"
+    ),
+
+    exsitu_index_crop(
+            "SELECT 2016 AS year, w_instcode, cropname AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item\n" +
+            "UNION ALL\n" +
+            "SELECT 2014 AS year, w_instcode, cropname AS item FROM sdg.wiews_2016 GROUP BY w_instcode, item"
+    ),
 
 
     ;private String query;

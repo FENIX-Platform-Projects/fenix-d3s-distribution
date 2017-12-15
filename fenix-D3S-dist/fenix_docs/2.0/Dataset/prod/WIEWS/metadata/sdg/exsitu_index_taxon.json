@@ -1,0 +1,42 @@
+{
+  "uid": "exsitu_index_taxon",
+  "title": {
+    "EN": "Institutes taxons relation"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Institutes taxons relation"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year"},
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "institute",
+        "title" : { "EN" : "Institute code"},
+        "dataType" : "text",
+        "subject" : "item",
+        "key": true
+      },
+      {
+        "id" : "reference",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text",
+        "key": true
+      }
+    ]
+  }
+}

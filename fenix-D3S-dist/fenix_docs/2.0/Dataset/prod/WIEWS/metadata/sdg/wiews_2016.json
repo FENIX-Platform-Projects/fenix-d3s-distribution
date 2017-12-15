@@ -1,0 +1,122 @@
+{
+  "uid": "wiews_2016",
+  "title": {
+    "EN": "SDG 2016 data"
+  },
+  "meContent": {
+    "description": {
+      "EN": "SDG 2016 data"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews_sdg"],
+    "cache":{
+      "storage":"exsitu"
+    },
+
+    "columns": [
+      {
+        "id" : "instcode",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "w_instcode",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "accenumb",
+        "title" : { "EN" : "accenumb"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "taxon",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "genus",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "species",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "cropname",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "acqdate",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "origcty",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "sampstat",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "declatitude",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "declongitude",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "collsrc",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "storage",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "mlsstat",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "nicode",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "value",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "w_species",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "cwr",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "bool"
+      },
+      {
+        "id" : "no_cwr",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "bool"
+      }
+    ]
+  }
+}

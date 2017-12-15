@@ -67,6 +67,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.40</version>
         </dependency>
+        <!-- Wiews database as linked cache databases -->
+        <dependency>
+            <groupId>org.fao.ess</groupId>
+            <artifactId>fenix-D3S-cache-postgres</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
 
 

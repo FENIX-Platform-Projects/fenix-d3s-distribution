@@ -1,0 +1,42 @@
+{
+  "uid": "exsitu_index_crop",
+  "title": {
+    "EN": "Institutes crops relation"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Institutes crops relation"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year"},
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "institute",
+        "title" : { "EN" : "Institute code"},
+        "dataType" : "text",
+        "subject" : "item",
+        "key": true
+      },
+      {
+        "id" : "reference",
+        "title" : { "EN" : "Crop"},
+        "dataType" : "text",
+        "key": true
+      }
+    ]
+  }
+}

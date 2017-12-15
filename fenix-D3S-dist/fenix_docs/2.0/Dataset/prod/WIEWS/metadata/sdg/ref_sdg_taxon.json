@@ -1,0 +1,35 @@
+{
+  "uid": "ref_sdg_taxon",
+  "title": {
+    "EN": "Institutes taxons relation"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Institutes taxons relation"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews_sdg"],
+    "cache":{
+      "storage":"exsitu"
+    },
+
+    "columns": [
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year"},
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "taxon",
+        "title" : { "EN" : "Taxon"},
+        "dataType" : "text",
+        "key": true
+      }
+    ]
+  }
+}

@@ -101,9 +101,9 @@ titleColumnIndex_EN=3
 
 --data--
 @0@Unknown
-@1064@Wild
-@1065@Weedy
+@1064@100) Wild
+@1065@200) Weedy
 @1066@300) Traditional cultivar/Landrace
 @1067@400) Breeding/research material
 @1068@500) Advanced/Improved cultivar
-@1069@GMO
+@1069@600) GMO

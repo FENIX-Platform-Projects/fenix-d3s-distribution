@@ -1,0 +1,52 @@
+{
+  "uid": "crop_genus",
+  "title": {
+    "EN": "Crops genus species relation managed dataset"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Crops genus species relation managed dataset"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews_sdg"],
+    "cache":{
+      "storage":"exsitu"
+    },
+
+    "columns": [
+      {
+        "id" : "crop_en",
+        "title" : { "EN" : "Crop (EN)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_fr",
+        "title" : { "EN" : "Crop (FR)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "crop_es",
+        "title" : { "EN" : "Crop (ES)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "genus",
+        "title" : { "EN" : "Genus"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "species",
+        "title" : { "EN" : "Species"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "cwr",
+        "title" : { "EN" : "Crop wild relatives"},
+        "dataType" : "text"
+      }
+    ]
+  }
+}

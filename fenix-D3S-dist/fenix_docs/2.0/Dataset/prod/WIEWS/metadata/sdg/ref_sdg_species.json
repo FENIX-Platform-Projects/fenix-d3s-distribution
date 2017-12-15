@@ -1,0 +1,41 @@
+{
+  "uid": "ref_sdg_species",
+  "title": {
+    "EN": "Species"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Species"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews_sdg"],
+    "cache":{
+      "storage":"exsitu"
+    },
+
+    "columns": [
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year"},
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "genus",
+        "title" : { "EN" : "Genus"},
+        "dataType" : "text",
+        "key": true
+      },
+      {
+        "id" : "species",
+        "title" : { "EN" : "Species"},
+        "dataType" : "text",
+        "key": true
+      }
+    ]
+  }
+}

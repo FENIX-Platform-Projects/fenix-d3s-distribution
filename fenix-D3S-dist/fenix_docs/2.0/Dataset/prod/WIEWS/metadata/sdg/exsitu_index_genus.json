@@ -1,0 +1,42 @@
+{
+  "uid": "exsitu_index_genus",
+  "title": {
+    "EN": "Institutes genus relation"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Institutes genus relation"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "year",
+        "title" : { "EN" : "Year"},
+        "dataType" : "year",
+        "subject" : "time",
+        "key": true
+      },
+      {
+        "id" : "institute",
+        "title" : { "EN" : "Institute code"},
+        "dataType" : "text",
+        "subject" : "item",
+        "key": true
+      },
+      {
+        "id" : "reference",
+        "title" : { "EN" : "Genus"},
+        "dataType" : "text",
+        "key": true
+      }
+    ]
+  }
+}

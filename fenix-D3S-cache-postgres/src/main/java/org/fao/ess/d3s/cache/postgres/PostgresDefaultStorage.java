@@ -51,7 +51,7 @@ public class PostgresDefaultStorage extends PostgresStorage {
         );
     }
 
-    private void open(String ... paths) throws Exception {
+    protected void open(String ... paths) throws Exception {
         if (!initialized) {
             Map<String, String> initProperties = org.fao.fenix.commons.utils.Properties.getInstance(paths).toMap();
 

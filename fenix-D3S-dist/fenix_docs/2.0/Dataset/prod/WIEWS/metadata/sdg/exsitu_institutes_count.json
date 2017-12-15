@@ -18,10 +18,10 @@
 
     "columns": [
       {
-        "id" : "iteration",
-        "title" : { "EN" : "Period"},
-        "dataType" : "code",
-        "domain" : { "codes" : [ { "idCodeList" : "wiews_iteration" } ] } ,
+        "id" : "year",
+        "title" : { "EN" : "Year"},
+        "dataType" : "year",
+        "subject" : "time",
         "key": true
       },
       {
@@ -33,10 +33,37 @@
         "key": true
       },
       {
-        "id" : "institutes_count",
-        "title" : { "EN" : "Institutes count"},
+        "id" : "instcode",
+        "title" : { "EN" : "Institute code"},
+        "dataType" : "text",
+        "subject" : "item",
+        "key": true
+      },
+      {
+        "id" : "latitude",
+        "title" : { "EN" : "Latitude"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "longitude",
+        "title" : { "EN" : "Longitude"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_count",
+        "title" : { "EN" : "Accessions number"},
         "dataType" : "number",
-        "subject":"value"
+        "subject" : "value"
+      },
+      {
+        "id" : "genus_count",
+        "title" : { "EN" : "Genus number"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "genus_species_count",
+        "title" : { "EN" : "Species number"},
+        "dataType" : "number"
       },
       {
         "id" : "um",
