@@ -122,9 +122,9 @@ titleColumnIndex_EN=3
 
 @1@Simple random sampling
 @2@Stratified sampling
-@3@Systematic sanpling
+@3@Systematic sampling
 @4@Cluster sampling
 @5@Multistage sampling
 @6@Convenience sampling
 @7@Volontary sampling
-@8@Other (please specify)
+@8@Other

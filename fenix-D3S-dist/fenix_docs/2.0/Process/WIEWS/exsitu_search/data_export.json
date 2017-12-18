@@ -1,0 +1,49 @@
+{
+  "outConfig": {
+    "plugin": "wiewsOutputCSV"
+  },
+  "flow": [
+    {
+      "name": "wiews_exsitu_filter",
+      "sid": [ { "uid": "wiews_2014" },{ "uid": "wiews_2016" },{ "uid": "ref_sdg_institutes" },{ "uid": "ref_iso3_countries" } ],
+      "parameters": {
+        "year" : 2016,
+        "countries" : ["UGA","ITA"]
+      }
+    },
+    {
+      "name": "order",
+      "parameters": {
+        "country_en": "ASC",
+        "w_institute_en": "ASC",
+        "cropname": "ASC",
+        "taxon": "ASC"
+      }
+    },
+    {
+      "name" : "columns",
+      "rid" : { "uid" : "exsitu_data" },
+      "parameters" : {
+        "columns": [
+          "nicode",
+          "country_en",
+          "w_instcode",
+          "w_institute_en",
+          "accenumb",
+          "cropname",
+          "genus",
+          "species",
+          "taxon",
+          "acqdate",
+          "origcty",
+          "sampstat",
+          "declatitude",
+          "declongitude",
+          "collsrc",
+          "storage",
+          "mlsstat"
+        ]
+      }
+    }
+  ]
+}

@@ -26,13 +26,13 @@
       },
       {
         "id" : "w_institute",
-        "title" : { "EN" : "Institute (ID)"},
+        "title" : { "EN" : "StakeHolder (Instcode)"},
         "dataType" : "text",
         "key": true
       },
       {
         "id" : "w_institute_en",
-        "title" : { "EN" : "Institute"},
+        "title" : { "EN" : "StakeHolder"},
         "dataType" : "text"
       }
     ]

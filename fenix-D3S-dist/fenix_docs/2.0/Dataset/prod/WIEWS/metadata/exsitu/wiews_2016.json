@@ -19,103 +19,108 @@
     "columns": [
       {
         "id" : "instcode",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "StakeHolder (Instcode)"},
         "dataType" : "text"
       },
       {
         "id" : "w_instcode",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "StakeHolder (Instcode)"},
         "dataType" : "text"
       },
       {
         "id" : "accenumb",
-        "title" : { "EN" : "accenumb"},
+        "title" : { "EN" : "Accession number"},
         "dataType" : "text"
       },
       {
         "id" : "taxon",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Name of taxon"},
         "dataType" : "text"
       },
       {
         "id" : "genus",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Genus"},
         "dataType" : "text"
       },
       {
         "id" : "species",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Species"},
         "dataType" : "text"
       },
       {
         "id" : "cropname",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Name of crop"},
         "dataType" : "text"
       },
       {
         "id" : "acqdate",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Acquisition Date (YYYY/MM)"},
         "dataType" : "text"
       },
       {
         "id" : "origcty",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Country of origin"},
         "dataType" : "text"
       },
       {
         "id" : "sampstat",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Biological status of accession (ID)"},
         "dataType" : "text"
       },
       {
         "id" : "declatitude",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Latitude of collecting site (decimal degrees format)"},
         "dataType" : "text"
       },
       {
         "id" : "declongitude",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Longitude of collecting site (decimal degrees format)"},
         "dataType" : "text"
       },
       {
         "id" : "collsrc",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Collection source site"},
         "dataType" : "text"
       },
       {
         "id" : "storage",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Storage"},
         "dataType" : "text"
       },
       {
         "id" : "mlsstat",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Status under the Multilateral System"},
         "dataType" : "bool"
       },
       {
         "id" : "nicode",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Country (ISO3)"},
         "dataType" : "text"
       },
       {
         "id" : "value",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Counter"},
         "dataType" : "number"
       },
       {
         "id" : "w_species",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Species"},
         "dataType" : "text"
       },
       {
         "id" : "cwr",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Have crop wild relatives"},
         "dataType" : "bool"
       },
       {
         "id" : "no_cwr",
-        "title" : { "EN" : "Taxon"},
+        "title" : { "EN" : "Have no crop wild relatives"},
         "dataType" : "bool"
+      },
+      {
+        "id" : "sampstat_id",
+        "title" : { "EN" : "Biological status of accession (ID)"},
+        "dataType" : "text"
       }
     ]
   }

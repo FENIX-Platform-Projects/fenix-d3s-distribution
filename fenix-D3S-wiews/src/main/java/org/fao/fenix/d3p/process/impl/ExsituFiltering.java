@@ -1,7 +1,7 @@
 package org.fao.fenix.d3p.process.impl;
 
+import org.fao.fenix.commons.msd.dto.full.DSDColumn;
 import org.fao.fenix.commons.msd.dto.full.DSDDataset;
-import org.fao.fenix.commons.utils.database.DatabaseUtils;
 import org.fao.fenix.d3p.dto.*;
 import org.fao.fenix.d3p.process.dto.ExsituFilterParams;
 import org.fao.fenix.d3p.process.type.ProcessName;
@@ -13,7 +13,6 @@ import java.util.*;
 @ProcessName("wiews_exsitu_filter")
 public class ExsituFiltering extends org.fao.fenix.d3p.process.Process<ExsituFilterParams> {
     private @Inject StepFactory stepFactory;
-    private @Inject DatabaseUtils databaseUtils;
 
 
 
@@ -27,11 +26,19 @@ public class ExsituFiltering extends org.fao.fenix.d3p.process.Process<ExsituFil
             throw new BadRequestException("wiews_exsitu_filter process requires year parameter");
         if (!sources.containsKey("wiews_"+params.year))
             throw new BadRequestException("wiews_exsitu_filter process requires wiews_<year> dataset (wiews_"+params.year+")");
+        if (!sources.containsKey("ref_sdg_institutes"))
+            throw new BadRequestException("wiews_exsitu_filter process requires ref_sdg_institutes dataset");
+        if (!sources.containsKey("ref_iso3_countries"))
+            throw new BadRequestException("wiews_exsitu_filter process requires ref_iso3_countries dataset");
         Step source = sources.get("wiews_"+params.year);
-        DSDDataset dsd = source.getDsd();
+        Step sourceCountries = sources.get("ref_iso3_countries");
+        Step sourceInstitutes = sources.get("ref_sdg_institutes");
+        DSDDataset dsdCountries = sourceCountries.getDsd();
+        DSDDataset dsdInstitutes = sourceInstitutes.getDsd();
+        DSDDataset dsd = updateDSD(source.getDsd(), dsdInstitutes, dsdCountries);
         //Create query
         Collection<Object> queryParameters = new LinkedList<>();
-        String query = getQuery(params, (String)source.getData(), queryParameters);
+        String query = getQuery(params, (String)source.getData(), (String)sourceInstitutes.getData(), (String)sourceCountries.getData(), queryParameters, dsd);
         //Return step
         QueryStep step = (QueryStep)stepFactory.getInstance(StepType.query);
         step.setDsd(dsd);
@@ -41,9 +48,23 @@ public class ExsituFiltering extends org.fao.fenix.d3p.process.Process<ExsituFil
     }
 
 
+    private DSDDataset updateDSD (DSDDataset dsd,DSDDataset dsdInstitutes,DSDDataset dsdCountries) {
+        dsd.getColumns().add(dsdInstitutes.findColumn("w_institute_en"));
+        dsd.getColumns().add(dsdCountries.findColumn("country_en"));
+        return dsd;
+    }
 
-    private String getQuery(ExsituFilterParams parameters, String tableName, Collection<Object> queryParameters) {
-        StringBuilder query = new StringBuilder("SELECT * FROM ").append(tableName);
+
+    private String getQuery(ExsituFilterParams parameters, String tableName, String institutesTableName, String countriesTableName, Collection<Object> queryParameters, DSDDataset dsd) {
+        StringBuilder query = new StringBuilder("SELECT ");
+        for (DSDColumn column : dsd.getColumns())
+            query.append(column.getId()).append(',');
+        query.setCharAt(query.length()-1,' ');
+        query.append("FROM ").append(tableName);
+
+        query.append(" LEFT JOIN (SELECT * FROM ").append(institutesTableName).append(" WHERE year=?) ref_sdg_institutes_year ON (w_institute=w_instcode)");
+        queryParameters.add(parameters.year);
+        query.append(" LEFT JOIN ").append(countriesTableName).append(" ON (country=nicode)");
 
         String whereCondition = getWhereCondition(parameters, queryParameters);
         if (whereCondition!=null)
@@ -55,6 +76,10 @@ public class ExsituFiltering extends org.fao.fenix.d3p.process.Process<ExsituFil
     private String getWhereCondition (ExsituFilterParams parameters, Collection<Object> queryParameters) {
         StringBuilder where = new StringBuilder();
 
+        if (parameters.accenumb!=null) {
+            where.append(" AND accenumb=?");
+            queryParameters.add(parameters.accenumb);
+        }
         if (parameters.institutes!=null && parameters.institutes.length>0) {
             where.append(" AND w_instcode IN (");
             for (String code : parameters.institutes) {
@@ -93,14 +118,16 @@ public class ExsituFiltering extends org.fao.fenix.d3p.process.Process<ExsituFil
                         genusWhere.append("?,");
                         queryParameters.add(code);
                     }
-                    where.setCharAt(where.length() - 1, ')');
+                    genusWhere.setCharAt(genusWhere.length() - 1, ')');
                 }
-                for (Map.Entry<String, Collection<String>> genusSpecies : genusSpeciesMap.entrySet()) {
-                    for (String species : genusSpecies.getValue()) {
-                        genusWhere.append(" OR genus=? AND species=?");
-                        queryParameters.add(genusSpecies.getKey());
-                        queryParameters.add(species);
-                    }
+                if (genusSpeciesMap.size()>0) {
+                    genusWhere.append(" OR w_species IN (");
+                    for (Map.Entry<String, Collection<String>> genusSpecies : genusSpeciesMap.entrySet())
+                        for (String species : genusSpecies.getValue()) {
+                            genusWhere.append("?,");
+                            queryParameters.add(genusSpecies.getKey()+" "+species);
+                        }
+                    genusWhere.setCharAt(genusWhere.length() - 1, ')');
                 }
                 where.append(" AND (").append(genusWhere.substring(4)).append(')');
             }

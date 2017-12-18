@@ -1,0 +1,32 @@
+{
+  "uid": "ref_iso3_countries",
+  "title": {
+    "EN": "ISO3 countries code"
+  },
+  "meContent": {
+    "description": {
+      "EN": "ISO 3 countries codelist"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews_sdg"],
+    "cache":{
+      "storage":"exsitu"
+    },
+
+    "columns": [
+      {
+        "id" : "country",
+        "title" : { "EN" : "Country (ISO3)"},
+        "dataType" : "text"
+      },
+      {
+        "id" : "country_en",
+        "title" : { "EN" : "Country"},
+        "dataType" : "text"
+      }
+    ]
+  }
+}

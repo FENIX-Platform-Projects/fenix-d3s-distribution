@@ -1,0 +1,50 @@
+[
+  {
+    "name": "wiews_exsitu_filter",
+    "sid": [ { "uid": "wiews_2014" },{ "uid": "wiews_2016" },{ "uid": "ref_sdg_institutes" },{ "uid": "ref_iso3_countries" } ],
+    "parameters": {
+      "year" : 2014,
+      "countries" : ["EGY","UGA","ITA"],
+      "institutes" : ["ROM021","ITA383"],
+      "genus_species" : [["Abelmoschus","moschatus"],["Abelmoschus",null],["Abies","balsamea"]],
+      "taxons" : ["Amaranthus gangeticus", "Mentha aquatica var. glabrescens. et. germ."],
+      "sampstat" : ["1065","1066"],
+      "accenumb" : "UG0600257",
+      "mlsstat" : true,
+      "cwr" : true
+    }
+  },
+  {
+    "name": "order",
+    "parameters": {
+      "country_en": "ASC",
+      "w_institute_en": "ASC",
+      "cropname": "ASC",
+      "taxon": "ASC"
+    }
+  },
+  {
+    "name" : "columns",
+    "parameters" : {
+      "columns": [
+        "nicode",
+        "country_en",
+        "w_instcode",
+        "w_institute_en",
+        "accenumb",
+        "cropname",
+        "genus",
+        "species",
+        "taxon",
+        "acqdate",
+        "origcty",
+        "sampstat",
+        "declatitude",
+        "declongitude",
+        "collsrc",
+        "storage",
+        "mlsstat"
+      ]
+    }
+  }
+]
