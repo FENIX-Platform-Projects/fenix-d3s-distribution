@@ -1,0 +1,16 @@
+[
+  {
+    "name": "wiews_exsitu_institute_filter",
+    "sid": [ { "uid": "ref_sdg_institutes" } ],
+    "parameters": {
+      "year" : 2014,
+      "institute" : "Afghanistan"
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "w_institute_en":"ASC"
+    }
+  }
+]

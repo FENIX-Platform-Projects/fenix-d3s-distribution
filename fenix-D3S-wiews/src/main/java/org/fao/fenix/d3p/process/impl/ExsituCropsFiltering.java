@@ -69,7 +69,7 @@ public class ExsituCropsFiltering extends org.fao.fenix.d3p.process.Process<Exsi
 
     private String getWhereCondition (ExsituFilterParams parameters, Collection<Object> queryParameters) {
         StringBuilder where = new StringBuilder();
-        appendFreetextParameter("crop_en", parameters.crop, where, queryParameters, false);
+        appendFreetextParameter("crop_en", parameters.crop, where, queryParameters, true);
         return where.length()>0 ? where.substring(5) : null;
     }
 
@@ -78,7 +78,7 @@ public class ExsituCropsFiltering extends org.fao.fenix.d3p.process.Process<Exsi
             StringBuilder placeHolder = new StringBuilder();
             for (String token : parameterValue.split(" "))
                 if (token.trim().length()>=3) {
-                    placeHolder.append(inclusive ? " OR " : " AND ").append(columnName).append(" LIKE ?");
+                    placeHolder.append(inclusive ? " OR " : " AND ").append("lower(").append(columnName).append(") LIKE ?");
                     queryParameters.add('%'+token.toLowerCase().trim()+'%');
                 }
             if (placeHolder.length()>0)

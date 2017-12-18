@@ -1,0 +1,54 @@
+{
+  "outConfig": {
+    "plugin": "wiewsOutputCSV"
+  },
+  "flow": [
+    {
+      "name": "wiews_organization_filter",
+      "sid": [ { "uid": "wiews_organizations" } ],
+      "parameters": {
+        "roles" : ["f648","f652"],
+        "valid": true
+      }
+    },
+    {
+      "name": "order",
+      "parameters": {
+        "search_rank": "ASC",
+        "name": "ASC",
+        "acronym": "ASC",
+        "instcode": "ASC",
+        "parent_name": "ASC",
+        "address": "ASC",
+        "city": "ASC",
+        "country": "ASC"
+      }
+    },
+    {
+      "name": "columns",
+      "parameters": {
+        "columns": [
+          "name",
+          "acronym",
+          "instcode",
+          "parent_instcode",
+          "parent_name",
+          "address",
+          "zip_code",
+          "city",
+          "country_iso3",
+          "country",
+          "telephone",
+          "fax",
+          "email",
+          "website",
+          "status",
+          "organization_roles",
+          "longitude",
+          "latitude",
+          "valid_instcode"
+        ]
+      }
+    }
+  ]
+}

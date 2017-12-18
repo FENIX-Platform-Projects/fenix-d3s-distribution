@@ -1,0 +1,16 @@
+[
+  {
+    "name": "wiews_exsitu_genus_filter",
+    "sid": [ { "uid": "ref_sdg_species" } ],
+    "parameters": {
+      "year" : 2014,
+      "genus" : "Spartina"
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "genus":"ASC"
+    }
+  }
+]

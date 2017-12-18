@@ -31,7 +31,7 @@ public class ExsituTaxonFiltering extends org.fao.fenix.d3p.process.Process<Exsi
             throw new BadRequestException("wiews_exsitu_taxon_filter process requires ref_sdg_taxon dataset");
         if (params.year==null)
             throw new BadRequestException("wiews_exsitu_taxon_filter process requires year parameter");
-        Step source = sources.get("ref_sdg_species");
+        Step source = sources.get("ref_sdg_taxon");
         DSDDataset dsd = source.getDsd();
         //Create query
         Collection<Object> queryParameters = new LinkedList<>();
@@ -75,7 +75,7 @@ public class ExsituTaxonFiltering extends org.fao.fenix.d3p.process.Process<Exsi
         where.append("year=?");
         queryParameters.add(parameters.year);
 
-        appendFreetextParameter("taxon", parameters.taxon, where, queryParameters, false);
+        appendFreetextParameter("taxon", parameters.taxon, where, queryParameters, true);
 
         return where.length()>0 ? where.toString() : null;
     }
@@ -85,7 +85,7 @@ public class ExsituTaxonFiltering extends org.fao.fenix.d3p.process.Process<Exsi
             StringBuilder placeHolder = new StringBuilder();
             for (String token : parameterValue.split(" "))
                 if (token.trim().length()>=3) {
-                    placeHolder.append(inclusive ? " OR " : " AND ").append(columnName).append(" LIKE ?");
+                    placeHolder.append(inclusive ? " OR " : " AND ").append("lower(").append(columnName).append(") LIKE ?");
                     queryParameters.add('%'+token.toLowerCase().trim()+'%');
                 }
             if (placeHolder.length()>0)

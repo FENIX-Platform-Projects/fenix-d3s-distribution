@@ -27,11 +27,11 @@ public class ExsituInstitutesFiltering extends org.fao.fenix.d3p.process.Process
         Map<String, Step> sources = new HashMap<>();
         for (Step step : sourceStep)
             sources.put(step.getRid().getUid(), step);
-        if (!sources.containsKey("ref_sdg_taxon"))
-            throw new BadRequestException("wiews_exsitu_taxon_filter process requires ref_sdg_taxon dataset");
+        if (!sources.containsKey("ref_sdg_institutes"))
+            throw new BadRequestException("wiews_exsitu_taxon_filter process requires ref_sdg_institutes dataset");
         if (params.year==null)
             throw new BadRequestException("wiews_exsitu_taxon_filter process requires year parameter");
-        Step source = sources.get("ref_sdg_species");
+        Step source = sources.get("ref_sdg_institutes");
         DSDDataset dsd = source.getDsd();
         //Create query
         Collection<Object> queryParameters = new LinkedList<>();
@@ -77,7 +77,7 @@ public class ExsituInstitutesFiltering extends org.fao.fenix.d3p.process.Process
         where.append("year=?");
         queryParameters.add(parameters.year);
 
-        appendFreetextParameter("w_institute_en", parameters.institute, where, queryParameters, false);
+        appendFreetextParameter("w_institute_en", parameters.institute, where, queryParameters, true);
 
         return where.length()>0 ? where.toString() : null;
     }
@@ -87,7 +87,7 @@ public class ExsituInstitutesFiltering extends org.fao.fenix.d3p.process.Process
             StringBuilder placeHolder = new StringBuilder();
             for (String token : parameterValue.split(" "))
                 if (token.trim().length()>=3) {
-                    placeHolder.append(inclusive ? " OR " : " AND ").append(columnName).append(" LIKE ?");
+                    placeHolder.append(inclusive ? " OR " : " AND ").append("lower(").append(columnName).append(") LIKE ?");
                     queryParameters.add('%'+token.toLowerCase().trim()+'%');
                 }
             if (placeHolder.length()>0)

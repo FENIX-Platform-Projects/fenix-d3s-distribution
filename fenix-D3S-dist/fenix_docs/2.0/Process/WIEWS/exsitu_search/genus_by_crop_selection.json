@@ -1,0 +1,17 @@
+[
+  {
+    "name": "wiews_exsitu_crops_genus_filter",
+    "sid": [ { "uid": "crop_genus" }, { "uid": "ref_sdg_species" } ],
+    "parameters": {
+      "year" : 2014,
+      "crops" : ["Artichoke", "Apple"]
+    }
+  },
+  {
+    "name":"order",
+    "parameters":{
+      "genus" : "ASC",
+      "species" : "ASC"
+    }
+  }
+]

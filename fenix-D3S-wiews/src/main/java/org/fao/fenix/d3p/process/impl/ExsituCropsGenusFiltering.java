@@ -2,13 +2,10 @@ package org.fao.fenix.d3p.process.impl;
 
 import org.fao.fenix.commons.msd.dto.full.DSDColumn;
 import org.fao.fenix.commons.msd.dto.full.DSDDataset;
-import org.fao.fenix.commons.msd.dto.type.DataType;
 import org.fao.fenix.commons.utils.UIDUtils;
-import org.fao.fenix.commons.utils.database.DatabaseUtils;
 import org.fao.fenix.d3p.dto.*;
 import org.fao.fenix.d3p.process.dto.ExsituFilterParams;
 import org.fao.fenix.d3p.process.type.ProcessName;
-import org.fao.fenix.d3s.server.dto.DatabaseStandards;
 
 import javax.inject.Inject;
 import javax.ws.rs.BadRequestException;
@@ -67,22 +64,20 @@ public class ExsituCropsGenusFiltering extends org.fao.fenix.d3p.process.Process
 
     private String getQuery(ExsituFilterParams parameters, String crop_genus_tn, String ref_sdg_species_tn, Collection<Object> queryParameters) {
         String query =
-                "SELECT <gs>.genus, <gs>.species FROM (SELECT genus, species FROM <crop_genus> WHERE crop_en IN (<crops>) GROUP BY genus, species) <gs>\n" +
+                ("SELECT <gs>.genus, <gs>.species FROM (SELECT genus, species FROM <crop_genus> WHERE crop_en IN (<crops>) GROUP BY genus, species) <gs>\n" +
                 "JOIN (SELECT genus, species FROM <ref_sdg_species> WHERE year = ?) <r> ON (<r>.genus = <gs>.genus AND <r>.species = <gs>.species)\n" +
-                "GROUP BY <gs>.genus, <gs>.species\n" +
-                "ORDER BY <gs>.genus, <gs>.species";
-
-        query.replaceAll("<gs>",uidUtils.newId());
-        query.replaceAll("<r>",uidUtils.newId());
-        query.replaceAll("<crop_genus>",crop_genus_tn);
-        query.replaceAll("<ref_sdg_species>",ref_sdg_species_tn);
+                "GROUP BY <gs>.genus, <gs>.species")
+        .replaceAll("<gs>","D3P_"+uidUtils.newId())
+        .replaceAll("<r>","D3P_"+uidUtils.newId())
+        .replaceAll("<crop_genus>",crop_genus_tn)
+        .replaceAll("<ref_sdg_species>",ref_sdg_species_tn);
 
         StringBuilder cropsSegment = new StringBuilder();
         for (String code : parameters.crops) {
             cropsSegment.append(",?");
             queryParameters.add(code);
         }
-        query.replaceAll("<crops>",cropsSegment.substring(1));
+        query = query.replaceAll("<crops>",cropsSegment.substring(1));
 
         queryParameters.add(parameters.year);
 
