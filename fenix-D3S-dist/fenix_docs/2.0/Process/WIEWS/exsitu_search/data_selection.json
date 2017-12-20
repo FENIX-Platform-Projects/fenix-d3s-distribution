@@ -10,8 +10,8 @@
       "taxons" : ["Amaranthus gangeticus", "Mentha aquatica var. glabrescens. et. germ."],
       "sampstat" : ["1065","1066"],
       "accenumb" : "UG0600257",
-      "mlsstat" : true,
-      "cwr" : true
+      "originCountries" : ["EGY","UGA","ITA"],
+      "mlsstat" : true
     }
   },
   {

@@ -140,8 +140,13 @@ public class ExsituFiltering extends org.fao.fenix.d3p.process.Process<ExsituFil
             }
             where.setCharAt(where.length()-1,')');
         }
-        if (parameters.cwr!=null) {
-            where.append(parameters.cwr ? " AND cwr=TRUE" : " AND no_cwr=TRUE");
+        if (parameters.originCountries!=null && parameters.originCountries.length>0) {
+            where.append(" AND origcty IN (");
+            for (String code : parameters.originCountries) {
+                where.append("?,");
+                queryParameters.add(code);
+            }
+            where.setCharAt(where.length()-1,')');
         }
         if (parameters.mlsstat!=null) {
             where.append(" AND mlsstat=?");

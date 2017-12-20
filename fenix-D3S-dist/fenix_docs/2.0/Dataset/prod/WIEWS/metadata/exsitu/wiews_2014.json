@@ -108,16 +108,6 @@
         "dataType" : "text"
       },
       {
-        "id" : "cwr",
-        "title" : { "EN" : "Have crop wild relatives"},
-        "dataType" : "bool"
-      },
-      {
-        "id" : "no_cwr",
-        "title" : { "EN" : "Have no crop wild relatives"},
-        "dataType" : "bool"
-      },
-      {
         "id" : "sampstat_id",
         "title" : { "EN" : "Biological status of accession (ID)"},
         "dataType" : "text"

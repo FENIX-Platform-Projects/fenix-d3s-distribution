@@ -6,6 +6,7 @@ public class ExsituFilterParams {
     public String[] crops;
     public String crop;
     public String[] countries;
+    public String[] originCountries;
     public String[] institutes;
     public String institute;
     public String[][] genus_species;

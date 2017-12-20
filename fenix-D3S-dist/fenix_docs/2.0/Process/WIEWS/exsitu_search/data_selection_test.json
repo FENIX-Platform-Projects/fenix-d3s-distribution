@@ -4,7 +4,7 @@
     "sid": [ { "uid": "wiews_2014" },{ "uid": "wiews_2016" },{ "uid": "ref_sdg_institutes" },{ "uid": "ref_iso3_countries" } ],
     "parameters": {
       "year" : 2016,
-      "countries" : ["UGA","ITA"]
+      "originCountries" : ["UGA","ITA"]
     }
   },
   {
