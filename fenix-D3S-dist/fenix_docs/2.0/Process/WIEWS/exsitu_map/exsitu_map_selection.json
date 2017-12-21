@@ -4,13 +4,14 @@
     "name": "filter",
     "parameters": {
       "rows": {
-        "iteration": {
-          "codes": [
-            {
-              "uid": "wiews_iteration",
-              "codes": [ "1" ]
-            }
-          ]
+        "year" : {
+          "time" : [{"from" : 2016, "to" : 2016}]
+        },
+        "latitude" : {
+          "number" : [{"from" : 0}]
+        },
+        "longitude" : {
+          "number" : [{"from" : 0}]
         }
       }
     }
@@ -18,17 +19,23 @@
   {
     "name":"order",
     "parameters":{
-      "iteration":"ASC",
-      "country_iso3":"ASC"
+      "year":"ASC",
+      "country_iso3":"ASC",
+      "instcode":"ASC"
     }
   },
   {
     "name": "columns",
     "parameters": {
       "columns": [
-        "iteration",
+        "year",
         "country_iso3",
-        "institutes_count",
+        "instcode",
+        "latitude",
+        "longitude",
+        "accessions_count",
+        "genus_count",
+        "genus_species_count",
         "um"
       ]
     }

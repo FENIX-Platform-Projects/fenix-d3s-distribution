@@ -1,0 +1,76 @@
+{
+  "uid": "exsitu_institutes_count",
+  "title": {
+    "EN": "Exsitu accessions count"
+  },
+  "meContent": {
+    "description": {
+      "EN": "Exsitu accessions count"
+    },
+    "resourceRepresentationType": "dataset"
+  },
+  "dsd": {
+    "contextSystem": "wiews",
+    "datasources": ["wiews"],
+    "cache":{
+      "storage":"postgres"
+    },
+
+    "columns": [
+      {
+        "id" : "year",
+        "title" : { "EN" : "Crop (EN)"},
+        "dataType" : "year",
+        "key" : true
+      },
+      {
+        "id" : "country_iso3",
+        "title" : { "EN" : "Country (ISO3)"},
+        "subject" : "geo",
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "ISO3" } ] },
+        "key": true
+      },
+      {
+        "id" : "instcode",
+        "title" : { "EN" : "StakeHolder (Instcode)"},
+        "dataType" : "text",
+        "key" : true
+      },
+      {
+        "id" : "latitude",
+        "title" : { "EN" : "Latitude of collecting site (decimal degrees format)"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "longitude",
+        "title" : { "EN" : "Longitude of collecting site (decimal degrees format)"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "accessions_count",
+        "title" : { "EN" : "Accessions number"},
+        "dataType" : "number",
+        "subject":"value"
+      },
+      {
+        "id" : "genus_count",
+        "title" : { "EN" : "Genus number"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "genus_species_count",
+        "title" : { "EN" : "Species number"},
+        "dataType" : "number"
+      },
+      {
+        "id" : "um",
+        "title" : { "EN" : "Measurement unit"},
+        "dataType" : "code",
+        "domain" : { "codes" : [ { "idCodeList" : "wiews_um" } ] },
+        "subject":"um"
+      }
+    ]
+  }
+}
+
