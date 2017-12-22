@@ -70,10 +70,6 @@ public class ExsituCropsFiltering extends org.fao.fenix.d3p.process.Process<Exsi
     private String getWhereCondition (ExsituFilterParams parameters, Collection<Object> queryParameters) {
         StringBuilder where = new StringBuilder();
         appendFreetextParameter("crop_en", parameters.crop, where, queryParameters, true);
-        if (parameters.cwr!=null) {
-            where.append(" AND cwr = ?");
-            queryParameters.add(parameters.cwr ? "True" : "False");
-        }
         return where.length()>0 ? where.substring(5) : null;
     }
 

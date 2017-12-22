@@ -4,8 +4,7 @@
     "sid": [ { "uid": "crop_genus" } ],
     "parameters": {
       "year" : 2014,
-      "crop" : "rti",
-      "cwr" : false
+      "crop" : "Apple"
     }
   },
   {

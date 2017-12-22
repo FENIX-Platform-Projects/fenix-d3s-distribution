@@ -64,7 +64,7 @@ public class ExsituCropsGenusFiltering extends org.fao.fenix.d3p.process.Process
 
     private String getQuery(ExsituFilterParams parameters, String crop_genus_tn, String ref_sdg_species_tn, Collection<Object> queryParameters) {
         String query =
-                ("SELECT <gs>.genus, <gs>.species FROM (SELECT genus, species FROM <crop_genus> WHERE crop_en IN (<crops>) GROUP BY genus, species) <gs>\n" +
+                ("SELECT <gs>.genus, <gs>.species FROM (SELECT genus, species FROM <crop_genus> WHERE crop_en IN (<crops>) AND cwr IN (<cwr>) GROUP BY genus, species) <gs>\n" +
                 "JOIN (SELECT genus, species FROM <ref_sdg_species> WHERE year = ?) <r> ON (<r>.genus = <gs>.genus AND <r>.species = <gs>.species)\n" +
                 "GROUP BY <gs>.genus, <gs>.species")
         .replaceAll("<gs>","D3P_"+uidUtils.newId())
@@ -78,6 +78,15 @@ public class ExsituCropsGenusFiltering extends org.fao.fenix.d3p.process.Process
             queryParameters.add(code);
         }
         query = query.replaceAll("<crops>",cropsSegment.substring(1));
+
+        if (parameters.cwr!=null) {
+            query = query.replaceAll("<cwr>","?");
+            queryParameters.add(parameters.cwr ? "True" : "False");
+        } else {
+            query = query.replaceAll("<cwr>","?,?");
+            queryParameters.add("True");
+            queryParameters.add("False");
+        }
 
         queryParameters.add(parameters.year);
 
