@@ -671,31 +671,36 @@ public enum Query {
 
     //SDG
     exsitu_institutes_count(
-            "SELECT\n" +
-            "  2016 as year,\n" +
-            "  nicode as country_iso3,\n" +
+            "SELECT year,\n" +
+            "  country_iso3,\n" +
             "  w_instcode,\n" +
-            "  max((CASE WHEN declatitude SIMILAR TO '\\d+.\\d+' THEN declatitude ELSE NULL END)::DOUBLE PRECISION) AS latitude,\n" +
-            "  max((CASE WHEN declongitude SIMILAR TO '\\d+.\\d+' THEN declongitude ELSE NULL END)::DOUBLE PRECISION) AS longitude,\n" +
-            "  count(DISTINCT accenumb) AS accessions_count,\n" +
-            "  count(DISTINCT genus) AS genus_count,\n" +
-            "  count(DISTINCT genus||'|'||species) AS genus_species_count,\n" +
-            "  'num' AS um\n" +
-            "FROM sdg.wiews_2016\n" +
-            "GROUP BY nicode, w_instcode\n" +
-            "UNION\n" +
-            "SELECT\n" +
-            "  2014 as year,\n" +
-            "  nicode as country_iso3,\n" +
-            "  w_instcode,\n" +
-            "  max((CASE WHEN declatitude SIMILAR TO '\\d+.\\d+' THEN declatitude ELSE NULL END)::DOUBLE PRECISION) AS latitude,\n" +
-            "  max((CASE WHEN declongitude SIMILAR TO '\\d+.\\d+' THEN declongitude ELSE NULL END)::DOUBLE PRECISION) AS longitude,\n" +
-            "  count(DISTINCT accenumb) AS accessions_count,\n" +
-            "  count(DISTINCT genus) AS genus_count,\n" +
-            "  count(DISTINCT genus||'|'||species) AS genus_species_count,\n" +
-            "  'num' AS um\n" +
-            "FROM sdg.wiews_2014\n" +
-            "GROUP BY nicode, w_instcode"
+            "  (CASE WHEN latitude SIMILAR TO '\\d+.\\d+' THEN latitude ELSE NULL END)::DOUBLE PRECISION AS latitude,\n" +
+            "  (CASE WHEN longitude SIMILAR TO '\\d+.\\d+' THEN longitude ELSE NULL END)::DOUBLE PRECISION AS longitude,\n" +
+            "  accessions_count,\n" +
+            "  genus_count,\n" +
+            "  genus_species_count\n" +
+            "FROM (\n" +
+            "  SELECT\n" +
+            "    2016 as year,\n" +
+            "    nicode as country_iso3,\n" +
+            "    w_instcode,\n" +
+            "    count(DISTINCT accenumb) AS accessions_count,\n" +
+            "    count(DISTINCT genus) AS genus_count,\n" +
+            "    count(DISTINCT genus||'|'||species) AS genus_species_count\n" +
+            "  FROM sdg.wiews_2016\n" +
+            "  GROUP BY nicode, w_instcode\n" +
+            "  UNION\n" +
+            "  SELECT\n" +
+            "    2014 as year,\n" +
+            "    nicode as country_iso3,\n" +
+            "    w_instcode,\n" +
+            "    count(DISTINCT accenumb) AS accessions_count,\n" +
+            "    count(DISTINCT genus) AS genus_count,\n" +
+            "    count(DISTINCT genus||'|'||species) AS genus_species_count\n" +
+            "  FROM sdg.wiews_2014\n" +
+            "  GROUP BY nicode, w_instcode\n" +
+            ") raw\n" +
+            "  LEFT JOIN ref_instab ON (raw.w_instcode=ref_instab.wiews_instcode)"
     ),
 
 
