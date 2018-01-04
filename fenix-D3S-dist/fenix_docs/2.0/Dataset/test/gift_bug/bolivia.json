@@ -1,0 +1,621 @@
+{
+  "language" : {
+    "version" : "1998",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "idCodeList" : "GIFT_ISO639-2",
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    }
+  },
+  "title" : {
+    "EN" : "Bolivia - 2014 - Lund University"
+  },
+  "dsd" : {
+    "contextSystem" : "gift",
+    "datasources" : [ "D3S" ]
+  },
+  "uid" : "D3S_21794061232325714207020886619909608751",
+  "meContent" : {
+    "description" : {
+      "EN" : "The aim of the present research was: Firstly, to provide reliable data about the actual nutritional status, focused on zinc and iron deficiencies, in a population of children and adults from a rural tropical area called Chapare in Bolivia; Secondly, to determine the possible causes of the deficiencies; and thirdly, to present a sustainable dietary strategy other than the use of mineral supplements, to improve the mineral absorption in the diet commonly consumed in the area."
+    },
+    "resourceRepresentationType" : "dataset",
+    "seReferencePopulation" : {
+      "referenceArea" : {
+        "codes" : [ {
+          "code" : "5",
+          "label" : {
+            "EN" : "Other (please specify)"
+          }
+        } ],
+        "idCodeList" : "GIFT_ReferenceArea",
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, area of reference"
+        }
+      }
+    },
+    "seCoverage" : {
+      "coverageSectors" : {
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "Only rural"
+          }
+        } ],
+        "idCodeList" : "GIFT_CoverageSector",
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, coverage sectors"
+        }
+      },
+      "coverageSectorsDetails" : {
+        "EN" : ""
+      },
+      "coverageTime" : {
+        "from" : 1249077600000,
+        "to" : 1354230000000
+      },
+      "coverageGeographic" : {
+        "version" : "2014",
+        "codes" : [ {
+          "code" : "33",
+          "label" : {
+            "PT" : "Bolívia",
+            "FR" : "Bolivie (État plurinational de)",
+            "AR" : "بوليفيا (دولة - المتعددة القوميات)",
+            "EN" : "Bolivia",
+            "RU" : "Боливия (Многонациогнальное Государство)",
+            "ES" : "Bolivia (Estado Plurinacional de)",
+            "ZH" : "玻利维亚多民族国"
+          }
+        } ],
+        "idCodeList" : "GAUL0",
+        "extendedName" : {
+          "EN" : "Global administrative unit layer country level"
+        }
+      }
+    },
+    "resourceRepresentationTypeLabel" : {
+      "EN" : "Dataset"
+    }
+  },
+  "meAccessibility" : {
+    "seConfidentiality" : {
+      "confidentialityStatus" : {
+        "codes" : [ {
+          "code" : "4",
+          "label" : {
+            "EN" : "Data soon to be inserted in FAO/WHO GIFT"
+          }
+        } ],
+        "idCodeList" : "GIFT_ConfidentialityStatus",
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, available confidentiality status"
+        }
+      }
+    }
+  },
+  "languageDetails" : {
+    "EN" : ""
+  },
+  "contacts" : [ {
+    "position" : {
+      "EN" : ""
+    },
+    "organization" : {
+      "EN" : "Lund University"
+    },
+    "contactInfo" : {
+      "address" : "P.O. Box 124, SE-22100 Lund, Sweden",
+      "phone" : "",
+      "emailAddress" : "fao-who-gift@fao.org",
+      "contactInstruction" : {
+        "EN" : ""
+      }
+    },
+    "pointOfContact" : "Claudia Lazarte",
+    "specify" : {
+      "EN" : ""
+    },
+    "organizationUnit" : {
+      "EN" : "Department of Food Technology, Engineering and Nutrition"
+    }
+  } ],
+  "additions" : {
+    "DataAnalysisInformation" : {
+      "ExclusionRecruitment" : {
+        "EN" : "- For CL patients: patients with skin ulcers by another etiology (negative CL diagnosis), patients with previous leishmaniasis episodes, patients currently receiving leishmaniasis treatments or other drugs, patients with additional ML, patients with multiple CL lesions, patients taking mineral-vitamin supplements\nand pregnant or lactating women.\n- For healthy controls: subjects presenting any disease at the moment, subjects with previous leishmaniasis episodes, subjects taking drugs or mineral-vitamin supplements and pregnant or lactating women.\n- For children: children presenting any diseases at the moment of the study, children with diarrhea, and children taking drugs or mineral-vitamin supplements."
+      },
+      "ExclusionDataCleaning" : {
+        "EN" : ""
+      },
+      "MethodReporting" : {
+        "EN" : ""
+      },
+      "ReportingIndividualLevel" : {
+        "underReportingPercentage" : 0,
+        "overReportingPercentage" : 0
+      },
+      "ReportingGroupLevel" : {
+        "underReporting" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        },
+        "overReporting" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        }
+      },
+      "DataAlreadyCorrected" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "AssessmentIntake" : {
+        "EN" : "Nutrient calculations were done in a spread sheet, with the consumption data extracted from the questionnaires."
+      }
+    },
+    "sampledPopulationInformation" : {
+      "sampleSize" : 155,
+      "statisticalPopulation" : {
+        "idCodeList" : "GIFT_StatisticalPopulation",
+        "codes" : [ {
+          "code" : "2",
+          "label" : {
+            "EN" : "Specific population"
+          }
+        } ]
+      },
+      "PopulationGroups" : [ {
+        "PopulationGroupsList" : {
+          "EN" : "45 women aged 20 to 52 years"
+        }
+      }, {
+        "PopulationGroupsList" : {
+          "EN" : "32 patients with cutaneous leishmaniasis (CL) (12 females and 20 males), aged 14 to 50 years"
+        }
+      }, {
+        "PopulationGroupsList" : {
+          "EN" : "32 healthy controls (12 females and 20 males), aged 14 to 50 years (± 5 years)"
+        }
+      }, {
+        "PopulationGroupsList" : {
+          "EN" : "46 children from 4 to 13 years"
+        }
+      } ],
+      "PurposedlyGroupsDetails" : {
+        "EN" : ""
+      },
+      "MinumumAge" : 4,
+      "MaximumAge" : 52
+    },
+    "FoodCompositionInformation" : {
+      "FoodComsumption" : {
+        "EN" : "Reference data about food composition was used from National Nutrient Data Base for standard reference (USDA, 2010) and a few items from the Bolivian Food Composition Table (INLASA, 2005)."
+      },
+      "MacroDietaryComponents" : {
+        "idCodeList" : "GIFT_Macronutrients",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "Total energy"
+          }
+        }, {
+          "code" : "3",
+          "label" : {
+            "EN" : "Total protein"
+          }
+        }, {
+          "code" : "2",
+          "label" : {
+            "EN" : "Total carbohydrates"
+          }
+        }, {
+          "code" : "6",
+          "label" : {
+            "EN" : "Total fat"
+          }
+        }, {
+          "code" : "8",
+          "label" : {
+            "EN" : "Dietary fiber"
+          }
+        } ]
+      },
+      "MicroDietaryComponents" : {
+        "idCodeList" : "GIFT_Micronutrients",
+        "codes" : [ {
+          "code" : "01",
+          "label" : {
+            "EN" : "Calcium"
+          }
+        }, {
+          "code" : "02",
+          "label" : {
+            "EN" : "Iron"
+          }
+        }, {
+          "code" : "03",
+          "label" : {
+            "EN" : "Zinc"
+          }
+        }, {
+          "code" : "04",
+          "label" : {
+            "EN" : "Vitamin C"
+          }
+        }, {
+          "code" : "05",
+          "label" : {
+            "EN" : "Vitamin B1 (Thiamin)"
+          }
+        }, {
+          "code" : "06",
+          "label" : {
+            "EN" : "Vitamin B2 (Riboflavin)"
+          }
+        }, {
+          "code" : "07",
+          "label" : {
+            "EN" : "Vitamin B3 (Niacin)"
+          }
+        }, {
+          "code" : "08",
+          "label" : {
+            "EN" : "Vitamin B6 (Pyridoxine)"
+          }
+        }, {
+          "code" : "09",
+          "label" : {
+            "EN" : "Vitamin B9 (Folate)"
+          }
+        }, {
+          "code" : "10",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "11",
+          "label" : {
+            "EN" : "Vitamin A"
+          }
+        } ]
+      },
+      "MicroDietaryComponentsDetails" : [ {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Magnesium"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Phosphorus"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Copper"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Vitamin B5 (Pantothenic acid)"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Vitamin D"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Vitamin E"
+        }
+      } ]
+    },
+    "AdditionalInformation" : {
+      "VariablesAvailability" : {
+        "Age" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "Sex" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "BodyWeight" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "BodyHeight" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "PhysicalActivityLevel" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        },
+        "InterviewDate" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        },
+        "GeographicalLocalization" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        }
+      }
+    },
+    "SamplingInformation" : {
+      "typeOfCollection" : {
+        "idCodeList" : "GIFT_TypeOfCollection",
+        "codes" : [ {
+          "code" : "8",
+          "label" : {
+            "EN" : "Other (please specify)"
+          }
+        } ]
+      },
+      "SamplingInformationDetails" : {
+        "EN" : ""
+      }
+    },
+    "GeneralInformation" : {
+      "Resource" : [ {
+        "ResourceType" : {
+          "idCodeList" : "GIFT_ResourceType",
+          "codes" : [ {
+            "code" : "5",
+            "label" : {
+              "EN" : "Other type of document"
+            }
+          } ]
+        },
+        "ResourceDetails" : {
+          "EN" : "PhD thesis"
+        },
+        "ResourceCite" : {
+          "EN" : ""
+        },
+        "ResourceLink" : {
+          "EN" : "http://lup.lub.lu.se/record/4195825"
+        }
+      }, {
+        "ResourceType" : {
+          "idCodeList" : "GIFT_ResourceType",
+          "codes" : [ {
+            "code" : "3",
+            "label" : {
+              "EN" : "Scientific article"
+            }
+          } ]
+        },
+        "ResourceDetails" : {
+          "EN" : ""
+        },
+        "ResourceCite" : {
+          "EN" : ""
+        },
+        "ResourceLink" : {
+          "EN" : "https://nutritionj.biomedcentral.com/articles/10.1186/1475-2891-11-61"
+        }
+      }, {
+        "ResourceType" : {
+          "idCodeList" : "GIFT_ResourceType",
+          "codes" : [ {
+            "code" : "3",
+            "label" : {
+              "EN" : "Scientific article"
+            }
+          } ]
+        },
+        "ResourceDetails" : {
+          "EN" : ""
+        },
+        "ResourceCite" : {
+          "EN" : ""
+        },
+        "ResourceLink" : {
+          "EN" : "http://file.scirp.org/Html/9-2700978_37686.htm"
+        }
+      }, {
+        "ResourceType" : {
+          "idCodeList" : "GIFT_ResourceType",
+          "codes" : [ {
+            "code" : "3",
+            "label" : {
+              "EN" : "Scientific article"
+            }
+          } ]
+        },
+        "ResourceDetails" : {
+          "EN" : ""
+        },
+        "ResourceCite" : {
+          "EN" : ""
+        },
+        "ResourceLink" : {
+          "EN" : "http://file.scirp.org/Html/2-2701491_54922.htm"
+        }
+      } ]
+    },
+    "SurveyInformation" : {
+      "GeographicalCoverageDetails" : {
+        "EN" : "Chapare, rural tropical area"
+      },
+      "StudyAreasDetails" : {
+        "EN" : ""
+      },
+      "SeasonsCoverage" : {
+        "EN" : ""
+      },
+      "AssessmentMethod" : {
+        "idCodeList" : "GIFT_DietaryMethod",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "24-hour recall"
+          }
+        } ]
+      },
+      "AssessmentMethodDetails" : {
+        "EN" : "Food Photography 24-hours Recall method (FP 24-hR).\nDietary intake of the cutaneous leishmaniasis (CL) patients and controls was assessed during three consecutive days with the FP 24-hR. The dietary intake of the children was evaluated during two consecutive days with the FP 24-hR by the mother and the child."
+      },
+      "RepeatedDietary" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "SizeOfSample" : {
+        "EN" : ""
+      },
+      "NumberOfRepeated" : 3,
+      "SurveyAdministrationMethod" : {
+        "idCodeList" : "GIFT_DataCollection",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "Paper questionnaire"
+          }
+        } ]
+      },
+      "SurveyAdministrationMethodDetails" : {
+        "EN" : ""
+      }
+    },
+    "FoodConsumptionInformation" : {
+      "FoodCoverageTotal" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "FoodCoverageDetails" : {
+        "EN" : ""
+      },
+      "DrinkingWater" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "SupplementInformation" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "no",
+          "label" : {
+            "EN" : "No"
+          }
+        } ]
+      },
+      "SupplementInformationDetails" : {
+        "EN" : ""
+      },
+      "NumberOfFood" : 154,
+      "PortionSizes" : {
+        "EN" : "The portion sizes are estimated using the digital photographs taken by the subjects compared with standard food portions depicted in a photo atlas, previously elaborated specifically for the study area. "
+      },
+      "RecipesManagement" : {
+        "EN" : ""
+      },
+      "QuantitiesReported" : {
+        "idCodeList" : "GIFT_QuantityReporting",
+        "codes" : [ {
+          "code" : "5",
+          "label" : {
+            "EN" : "Other"
+          }
+        } ]
+      },
+      "QuantitiesReportedDetails" : {
+        "EN" : ""
+      }
+    }
+  },
+  "meInstitutionalMandate" : {
+    "legalActsAgreements" : {
+      "EN" : ""
+    },
+    "institutionalMandateDataSharing" : {
+      "EN" : ""
+    }
+  },
+  "meStatisticalProcessing" : {
+    "seDataSource" : {
+      "sePrimaryDataCollection" : {
+        "samplingProcedure" : {
+          "EN" : ""
+        }
+      },
+      "seSecondaryDataCollection" : {
+        "organization" : {
+          "EN" : "Lund University (Sweden) and San Simon University (Bolivia)"
+        }
+      }
+    },
+    "seDataCompilation" : {
+      "missingData" : {
+        "EN" : ""
+      },
+      "weights" : {
+        "EN" : ""
+      }
+    }
+  }
+}

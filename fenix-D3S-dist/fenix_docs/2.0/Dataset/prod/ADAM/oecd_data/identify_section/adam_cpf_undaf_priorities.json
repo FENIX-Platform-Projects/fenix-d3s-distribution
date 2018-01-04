@@ -1,5 +1,5 @@
 {
-  "uid": "adam_cpf_undaf_priorities",
+  "uid": "adam_cpf_undaf_priorities_table",
   "title": {
     "EN": "ADAM UNDAF (Recipient Country) and CPF (FAO) Priorities"
   },
@@ -26,7 +26,7 @@
       },
       {
         "id" : "purposecode",
-        "title" : { "EN" : "OCED DAC Sub Sector" },
+        "title" : { "EN" : "OECD DAC Sub Sector" },
         "dataType" : "code",
         "domain" : { "codes" : [ { "idCodeList" : "crs_purposes", "version" : "2016", "level" : 1 } ] } ,
         "key": true
