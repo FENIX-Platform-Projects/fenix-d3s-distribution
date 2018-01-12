@@ -21,7 +21,7 @@
      command: bash stop.sh arg1
      register: d3s_stop_debug
      args:
-         chdir: "{{ localD3S_distPath }}"
+         chdir: "{{ D3S_rootPath }}"
      ignore_errors: yes
 
    - name: "Waiting the process to stop"

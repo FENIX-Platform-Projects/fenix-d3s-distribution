@@ -17,6 +17,13 @@
     }
   },
   {
+    "name": "page",
+    "parameters": {
+      "perPage": 10,
+      "page": 1
+    }
+  },
+  {
     "name" : "columns",
     "parameters" : {
       "columns": [
@@ -40,4 +47,6 @@
       ]
     }
   }
+
+
 ]
