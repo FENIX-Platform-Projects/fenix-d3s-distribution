@@ -77,8 +77,8 @@ public class ExsituFiltering extends org.fao.fenix.d3p.process.Process<ExsituFil
         StringBuilder where = new StringBuilder();
 
         if (parameters.accenumb!=null) {
-            where.append(" AND accenumb=?");
-            queryParameters.add(parameters.accenumb);
+            where.append(" AND accenumb LIKE ?");
+            queryParameters.add('%'+parameters.accenumb.trim()+"%");
         }
         if (parameters.institutes!=null && parameters.institutes.length>0) {
             where.append(" AND w_instcode IN (");
