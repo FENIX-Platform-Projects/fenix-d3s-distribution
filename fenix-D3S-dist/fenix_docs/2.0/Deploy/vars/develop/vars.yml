@@ -1,4 +1,4 @@
 # variables
-D3S_rootPath: /D3S_rootPath
-process: d3s_process
-service: http://service/d3s_process
+D3S_rootPath: /work/fenix/dbms/D3S/D3S_2.0_Develop
+D3S_process: d3s_dev
+D3S_service: http://fenix.fao.org/d3s_dev

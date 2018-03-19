@@ -49,15 +49,15 @@
       src: "{{ localD3S_distPath }}/libs.tgz"
       dest: "{{  D3S_rootPath }}/lib/"
 
-   - name: "Create destination config folder, if it does not exist"
+   - name: "Create destination org.fao.fenix.config folder, if it does not exist"
      file:
-        path: "{{  D3S_rootPath }}/config"
+        path: "{{  D3S_rootPath }}/org.fao.fenix.config"
         state: directory
 
-   - name: "Move config datasources properties into server"
+   - name: "Move org.fao.fenix.config datasources properties into server"
      copy:
-      src: "{{ localD3S_distPath }}/config/datasources.properties"
-      dest: "{{  D3S_rootPath }}/config/datasources.properties"
+      src: "{{ localD3S_distPath }}/org.fao.fenix.config/datasources.properties"
+      dest: "{{  D3S_rootPath }}/org.fao.fenix.config/datasources.properties"
 
    - name: "Unzip libs into lib"
      unarchive:

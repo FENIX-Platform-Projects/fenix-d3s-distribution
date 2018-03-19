@@ -119,5 +119,5 @@ titleColumnIndex_EN=3
 
 --data--
 
-@1@General population
-@2@Specific population
+@1@Whole population
+@2@Specific population by age and sex groups

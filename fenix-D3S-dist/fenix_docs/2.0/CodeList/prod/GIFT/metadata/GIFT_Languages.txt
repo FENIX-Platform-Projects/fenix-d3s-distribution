@@ -126,4 +126,4 @@ titleColumnIndex_EN=3
 @fr@French
 @ru@Russian
 @es@Spanish
-@na@Other
+@na@Other (Please specify)

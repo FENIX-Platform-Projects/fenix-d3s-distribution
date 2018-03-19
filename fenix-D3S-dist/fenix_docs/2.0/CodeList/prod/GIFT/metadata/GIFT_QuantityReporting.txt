@@ -123,4 +123,4 @@ titleColumnIndex_EN=3
 @2@Edible amount consumed after processing
 @3@Total amount before processing
 @4@Total amount after processing
-@5@Other
+@5@Other (Please specify)

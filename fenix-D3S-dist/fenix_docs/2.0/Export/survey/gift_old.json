@@ -1,0 +1,23 @@
+{
+  "resource": {
+    "metadata": {
+      "uid": "D3S_20742695781619645006335830396532094326"
+    },
+    "data": []
+  },
+  "input": {
+    "plugin": "inputMD",
+    "config": {
+      "template": "gift"
+    }
+  },
+  "output": {
+    "plugin": "outputMD",
+    "config": {
+      "lang": "EN",
+      "full": false,
+      "template": "fao",
+      "fileName": "d3s_20742695781619645006335830396532094326.pdf"
+    }
+  }
+}

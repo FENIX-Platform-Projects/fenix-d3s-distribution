@@ -121,7 +121,5 @@ titleColumnIndex_EN=3
 
 @1@National
 @2@Sub-national
-@3@Community
-@4@Project area
 @5@Other (please specify)
 

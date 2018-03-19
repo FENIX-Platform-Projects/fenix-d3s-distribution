@@ -127,4 +127,4 @@ titleColumnIndex_EN=3
 @5@Multistage sampling
 @6@Convenience sampling
 @7@Volontary sampling
-@8@Other
+@8@Other (Please specify)

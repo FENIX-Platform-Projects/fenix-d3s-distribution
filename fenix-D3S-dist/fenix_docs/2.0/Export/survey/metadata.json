@@ -1,0 +1,594 @@
+{
+  "creationDate" : 1497001529000,
+  "title" : {
+    "EN" : "Algeria - 2011/2012 - University of Tlemcen"
+  },
+  "dsd" : {
+    "contextSystem" : "gift",
+    "datasources" : [ "D3S" ]
+  },
+  "uid" : "D3S_20742695781619645006335830396532094326",
+  "meContent" : {
+    "description" : {
+      "EN" : "To examine the relationship between nutritional intake based on fat intake and obesity in adolescents and to suggest recommendations to improve adolescent health and then to prevent disease in adulthood. The target population was adolescents (boys and girls) from 10 to 17 years the intermediate cycle, in the public schools of Tlemcen."
+    },
+    "resourceRepresentationType" : "dataset",
+    "seReferencePopulation" : {
+      "referenceArea" : {
+        "idCodeList" : "GIFT_ReferenceArea",
+        "codes" : [ {
+          "code" : "5",
+          "label" : {
+            "EN" : "Other (please specify)"
+          }
+        } ],
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, area of reference"
+        }
+      }
+    },
+    "seCoverage" : {
+      "coverageSectors" : {
+        "idCodeList" : "GIFT_CoverageSector",
+        "codes" : [ {
+          "code" : "3",
+          "label" : {
+            "EN" : "Both rural and urban"
+          }
+        } ],
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, coverage sectors"
+        }
+      },
+      "coverageSectorsDetails" : {
+        "EN" : ""
+      },
+      "coverageTime" : {
+        "from" : 1322694000000,
+        "to" : 1341007200000
+      },
+      "coverageGeographic" : {
+        "version" : "2014",
+        "idCodeList" : "GAUL0",
+        "codes" : [ {
+          "code" : "4",
+          "label" : {
+            "PT" : "Argélia",
+            "FR" : "Algérie",
+            "AR" : "الجزائر",
+            "EN" : "Algeria",
+            "RU" : "Алжир",
+            "ES" : "Argelia",
+            "ZH" : "阿尔及利亚"
+          }
+        } ],
+        "extendedName" : {
+          "EN" : "Global administrative unit layer country level"
+        }
+      }
+    },
+    "resourceRepresentationTypeLabel" : {
+      "EN" : "Dataset"
+    }
+  },
+  "meAccessibility" : {
+    "seConfidentiality" : {
+      "confidentialityStatus" : {
+        "idCodeList" : "GIFT_ConfidentialityStatus",
+        "codes" : [ {
+          "code" : "3",
+          "label" : {
+            "EN" : "Existing data potentially suitable to be inserted in FAO/WHO GIFT"
+          }
+        } ],
+        "extendedName" : {
+          "EN" : "WHO-FAO GIFT, available confidentiality status"
+        }
+      }
+    }
+  },
+  "languageDetails" : {
+    "EN" : ""
+  },
+  "contacts" : [ {
+    "organization" : {
+      "EN" : "Ecole de Nutrition, Université de Moncton"
+    },
+    "position" : {
+      "EN" : ""
+    },
+    "contactInfo" : {
+      "phone" : "",
+      "emailAddress" : "fao-who-gift@fao.org",
+      "contactInstruction" : {
+        "EN" : ""
+      },
+      "address" : ""
+    },
+    "pointOfContact" : "Slimane Belbraouet",
+    "specify" : {
+      "EN" : ""
+    },
+    "organizationUnit" : {
+      "EN" : ""
+    }
+  } ],
+  "additions" : {
+    "DataAnalysisInformation" : {
+      "ExclusionRecruitment" : {
+        "EN" : "Adolescents in a specific diet were not eligible"
+      },
+      "ExclusionDataCleaning" : {
+        "EN" : ""
+      },
+      "MethodReporting" : {
+        "EN" : ""
+      },
+      "ReportingIndividualLevel" : {
+        "underReportingPercentage" : 0,
+        "overReportingPercentage" : 0
+      },
+      "ReportingGroupLevel" : {
+        "underReporting" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        },
+        "overReporting" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        }
+      },
+      "DataAlreadyCorrected" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "no",
+          "label" : {
+            "EN" : "No"
+          }
+        } ]
+      },
+      "AssessmentIntake" : {
+        "EN" : ""
+      }
+    },
+    "sampledPopulationInformation" : {
+      "sampleSize" : 718,
+      "statisticalPopulation" : {
+        "idCodeList" : "GIFT_StatisticalPopulation",
+        "codes" : [ {
+          "code" : "2",
+          "label" : {
+            "EN" : "Specific population"
+          }
+        } ]
+      },
+      "PopulationGroups" : [ {
+        "PopulationGroupsList" : {
+          "EN" : "Adolescents 10-17 years old"
+        }
+      } ],
+      "PurposedlyGroupsDetails" : {
+        "EN" : ""
+      },
+      "MinumumAge" : 10,
+      "MaximumAge" : 17
+    },
+    "FoodCompositionInformation" : {
+      "FoodComsumption" : {
+        "EN" : "USDA’s nutritient database for Nutrinux® program to analyze dietary intake."
+      },
+      "MacroDietaryComponents" : {
+        "idCodeList" : "GIFT_Macronutrients",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "Total energy"
+          }
+        }, {
+          "code" : "2",
+          "label" : {
+            "EN" : "Total carbohydrates"
+          }
+        }, {
+          "code" : "3",
+          "label" : {
+            "EN" : "Total protein"
+          }
+        }, {
+          "code" : "8",
+          "label" : {
+            "EN" : "Dietary fiber"
+          }
+        }, {
+          "code" : "6",
+          "label" : {
+            "EN" : "Total fat"
+          }
+        }, {
+          "code" : "7",
+          "label" : {
+            "EN" : "Saturated fat"
+          }
+        } ]
+      },
+      "MacroDietaryComponentsDetails" : [ {
+        "MacroDietaryComponentsDetailsList" : {
+          "EN" : "Sugar"
+        }
+      }, {
+        "MacroDietaryComponentsDetailsList" : {
+          "EN" : "Monounsaturated fatty acids"
+        }
+      }, {
+        "MacroDietaryComponentsDetailsList" : {
+          "EN" : "Polyunsaturated fatty acids"
+        }
+      }, {
+        "MacroDietaryComponentsDetailsList" : {
+          "EN" : "Cholesterol"
+        }
+      }, {
+        "MacroDietaryComponentsDetailsList" : {
+          "EN" : "ALA"
+        }
+      }, {
+        "MacroDietaryComponentsDetailsList" : {
+          "EN" : "LA"
+        }
+      } ],
+      "MicroDietaryComponents" : {
+        "idCodeList" : "GIFT_Micronutrients",
+        "codes" : [ {
+          "code" : "01",
+          "label" : {
+            "EN" : "Calcium"
+          }
+        }, {
+          "code" : "02",
+          "label" : {
+            "EN" : "Iron"
+          }
+        }, {
+          "code" : "04",
+          "label" : {
+            "EN" : "Vitamin C"
+          }
+        }, {
+          "code" : "05",
+          "label" : {
+            "EN" : "Vitamin B1 (Thiamin)"
+          }
+        }, {
+          "code" : "06",
+          "label" : {
+            "EN" : "Vitamin B2 (Riboflavin)"
+          }
+        }, {
+          "code" : "07",
+          "label" : {
+            "EN" : "Vitamin B3 (Niacin)"
+          }
+        }, {
+          "code" : "08",
+          "label" : {
+            "EN" : "Vitamin B6 (Pyridoxine)"
+          }
+        }, {
+          "code" : "09",
+          "label" : {
+            "EN" : "Vitamin B9 (Folate)"
+          }
+        }, {
+          "code" : "10",
+          "label" : {
+            "EN" : "Vitamin B12 (Cobalamin)"
+          }
+        }, {
+          "code" : "11",
+          "label" : {
+            "EN" : "Vitamin A"
+          }
+        } ]
+      },
+      "MicroDietaryComponentsDetails" : [ {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Phosphorus"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Magnesium"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Sodium"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Potassium"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Vitamin E"
+        }
+      }, {
+        "MicroDietaryComponentsDetailsList" : {
+          "EN" : "Vitamin D"
+        }
+      } ]
+    },
+    "AdditionalInformation" : {
+      "VariablesAvailability" : {
+        "Age" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "Sex" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "BodyWeight" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "BodyHeight" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "PhysicalActivityLevel" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "InterviewDate" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        },
+        "GeographicalLocalization" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "no",
+            "label" : {
+              "EN" : "No"
+            }
+          } ]
+        }
+      },
+      "OtherVariablesAvailability" : {
+        "EducationLiteracy" : {
+          "idCodeList" : "YesNo",
+          "codes" : [ {
+            "code" : "yes",
+            "label" : {
+              "EN" : "Yes"
+            }
+          } ]
+        }
+      }
+    },
+    "SamplingInformation" : {
+      "typeOfCollection" : {
+        "idCodeList" : "GIFT_TypeOfCollection",
+        "codes" : [ {
+          "code" : "2",
+          "label" : {
+            "EN" : "Stratified sampling"
+          }
+        } ]
+      },
+      "SamplingInformationDetails" : {
+        "EN" : ""
+      }
+    },
+    "GeneralInformation" : {
+      "Resource" : [ {
+        "ResourceType" : {
+          "idCodeList" : "GIFT_ResourceType",
+          "codes" : [ {
+            "code" : "3",
+            "label" : {
+              "EN" : "Scientific article"
+            }
+          } ]
+        },
+        "ResourceDetails" : {
+          "EN" : ""
+        },
+        "ResourceCite" : {
+          "EN" : ""
+        },
+        "ResourceLink" : {
+          "EN" : "http://file.scirp.org/pdf/FNS_2015071715152944.pdf"
+        }
+      } ]
+    },
+    "SurveyInformation" : {
+      "GeographicalCoverageDetails" : {
+        "EN" : "Tlemcen (Western Algeria)"
+      },
+      "StudyAreasDetails" : {
+        "EN" : ""
+      },
+      "SeasonsCoverage" : {
+        "EN" : ""
+      },
+      "AssessmentMethod" : {
+        "idCodeList" : "GIFT_DietaryMethod",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "24-hour recall"
+          }
+        } ]
+      },
+      "AssessmentMethodDetails" : {
+        "EN" : "Quantitative individual 24-hour recall assisted by food records."
+      },
+      "RepeatedDietary" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "SizeOfSample" : {
+        "EN" : "100%"
+      },
+      "NumberOfRepeated" : 3,
+      "SurveyAdministrationMethod" : {
+        "idCodeList" : "GIFT_DataCollection",
+        "codes" : [ {
+          "code" : "1",
+          "label" : {
+            "EN" : "Paper questionnaire"
+          }
+        } ]
+      },
+      "SurveyAdministrationMethodDetails" : {
+        "EN" : ""
+      }
+    },
+    "FoodConsumptionInformation" : {
+      "FoodCoverageTotal" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "FoodCoverageDetails" : {
+        "EN" : ""
+      },
+      "DrinkingWater" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "yes",
+          "label" : {
+            "EN" : "Yes"
+          }
+        } ]
+      },
+      "SupplementInformation" : {
+        "idCodeList" : "YesNo",
+        "codes" : [ {
+          "code" : "no",
+          "label" : {
+            "EN" : "No"
+          }
+        } ]
+      },
+      "SupplementInformationDetails" : {
+        "EN" : ""
+      },
+      "NumberOfFood" : 1,
+      "PortionSizes" : {
+        "EN" : ""
+      },
+      "RecipesManagement" : {
+        "EN" : ""
+      },
+      "QuantitiesReported" : {
+        "idCodeList" : "GIFT_QuantityReporting",
+        "codes" : [ {
+          "code" : "5",
+          "label" : {
+            "EN" : "Other"
+          }
+        } ]
+      },
+      "QuantitiesReportedDetails" : {
+        "EN" : ""
+      }
+    }
+  },
+  "meInstitutionalMandate" : {
+    "legalActsAgreements" : {
+      "EN" : ""
+    },
+    "institutionalMandateDataSharing" : {
+      "EN" : ""
+    }
+  },
+  "meMaintenance" : {
+    "seUpdate" : {
+      "updateDate" : 1497002466905
+    }
+  },
+  "meStatisticalProcessing" : {
+    "seDataSource" : {
+      "sePrimaryDataCollection" : {
+        "samplingProcedure" : {
+          "EN" : ""
+        }
+      },
+      "seSecondaryDataCollection" : {
+        "organization" : {
+          "EN" : "University of Tlemcen"
+        }
+      }
+    },
+    "seDataCompilation" : {
+      "missingData" : {
+        "EN" : ""
+      },
+      "weights" : {
+        "EN" : ""
+      }
+    }
+  },
+  "language" : {
+    "version" : "1998",
+    "idCodeList" : "GIFT_ISO639-2",
+    "codes" : [ {
+      "code" : "eng",
+      "label" : {
+        "EN" : "English"
+      }
+    } ],
+    "extendedName" : {
+      "EN" : "International Standard Organization - Language"
+    }
+  }
+}
