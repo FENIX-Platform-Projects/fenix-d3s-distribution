@@ -1,0 +1,416 @@
+{
+    "uid": "recensement_civ",
+	"version": null,
+    "language": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "languageDetails": null,
+    "title": {
+        "EN": "Alphabetisation"
+    },
+    "creationDate": null,
+    "characterSet": {
+        "codes": [{
+            "code": "106"
+        }],
+        "idCodeList": "IANAcharacterSet",
+        "version": null
+    },
+
+    "parentIdentifiers": null,
+    "metadataStandardName": "FENIX metadata",
+    "metadataStandardVersion": "1.0",
+    "metadataLanguage": {
+        "codes": [
+            {
+                "code": "eng"
+            }
+        ],
+        "idCodeList": "ISO639-2",
+        "version": "1998"
+    },
+
+    "contacts": [
+        {
+            "organization": {
+                "EN": "FAO"
+            },
+            "organizationUnit": {
+                "EN": "ESS"
+            },
+            "name": null,
+            "position": null,
+            "role": "distributor",
+            "contactInfo": {
+                "phone ": null,
+                "address": null,
+                "emailAddress": null,
+                "hoursOfService": null,
+                "contactIntruction": null
+            }
+        }
+    ],
+    "noDataValue": null,
+
+    "meContent": {
+        "resourceRepresentationType": "codelist",
+        "keywords": [],
+        "description": null,
+        "statisticalConceptsDefinitions": null,
+        "seCoverage": {
+            "coverageSectors":
+                {
+                    "codes": [
+                        {
+                            "code": null
+                        }
+                    ],
+                    "idCodeList": null,
+                    "version": null
+                }
+        },
+        "seCodeList"  : {
+            "numberOfLevels": 1,
+            "typeOfCodeList": "list"
+        }
+
+    },
+    "meAccessibility": {
+        "seDataDissemination" : {
+            "seDistribution" : {
+                "onlineResource": null,
+                "disseminationFormat": null
+            }
+        },
+
+        "seConfidentiality" : {
+            "confidentialityStatus": {
+                "codes": [
+                    {
+                        "code": "F"
+                    }
+                ],
+                "idCodeList": "CL_CONF_STATUS",
+                "version": "1.0"
+            }
+        }
+
+
+    },
+"dsd":{
+      "contextSystem":"cstat_cog"
+   }
+}
+
+--structure--
+csvSeparator=@
+structure=tree
+dateFormat=dd/mm/yyyy
+codeColumnsIndex=1,2
+titleColumnIndex_EN=3
+titleColumnIndex_FR=3
+
+
+
+--data--
+
+@001@Types de ménages: agricoles
+@002@Types de ménages: non agricoles
+@003@Types d'actifs: agricoles
+@004@Types d'actifs: non agricoles
+@005@Moins de 25 ans
+@006@25 - 35 ans
+@007@35 - 45 ans
+@008@45 - 55 ans
+@009@55 - 65 ans
+@010@65 ans et plus
+@011@Types d'exploitations: agricoles
+@012@Types d'exploitations: non agricoles
+@013@zero
+@014@1
+@015@2
+@016@3
+@017@4 et plus
+@018@hommes seuls
+@019@femmes seules
+@020@hommes et femmes
+@021@vente
+@022@0,100
+@023@0,100 à 0,0199
+@024@0,200 à 0,499
+@025@0,500 à 0,999
+@026@1,000 à 1,999
+@027@2,000 à 2,999
+@028@3,000 à 4,999
+@029@5,000 à 9,999
+@030@10,000 et plus
+@031@ND
+@032@1-2
+@033@2-5
+@034@6-7
+@035@8-9
+@036@10 et plus
+@037@Céréales
+@038@Légumineuses
+@039@Tubercules
+@040@Légumes de type 1
+@041@Légumes de type 2
+@042@Pratique d'irrigation
+@043@Pratique de maraichage
+@044@Entreprise Individuelle
+@045@SARL Unipersonnelle (SARLU ou SUARL)
+@046@Société à Responsabilité Limitée (SARL)
+@047@Société Anonyme (SA)
+@048@Société en Nom Collectif (SNC)
+@049@Société en Commandite Simple (SCS)
+@050@Société d'économie mixte
+@051@Coopérative
+@052@Groupe d'Initiative Commune (GIC)
+@053@Groupement d'Intérêt Economique (GIE)
+@054@ONG
+@055@ND
+@056@Déclaration du chiffre d'affaire
+@057@déclaration de la masse salariale
+@058@oui
+@059@non
+@060@0
+@061@1
+@062@2
+@063@3
+@064@4
+@065@4 et +
+@066@5 et +
+@067@de 15-19
+@068@de 20-24
+@069@de 25-29
+@070@de 30-34
+@071@de 35-39
+@072@de 40-44
+@073@de 45-49
+@074@de 50-54
+@075@de 55-59
+@076@de 60-64
+@077@de 65-69
+@078@de 70-74
+@079@de 75-79
+@080@80 et plus
+@081@de 1-3
+@082@de 4-6
+@083@de 7-9
+@084@de 10-11
+@085@de 12 et +
+@086@autoconsommation et consommation à l'intérieur
+@087@exportation plus autoconsommation et exportation
+@088@Commercialisation à l'intérieur et Exportation
+@089@Autoconsommation plus Commercialisation à l'intérieur et Exportation
+@090@transformation locale
+@091@Autoconsommation et Transformation locale
+@092@Commercialisation à l'intérieur et Transformation locale
+@093@Autoconsommation plus  Commercialisation à l'intérieur et Transformation locale, Exportation plus @Transformation locale
+@094@Autoconsommation  plus Exportation et Transformation locale
+@095@Autoconsommation plus Commercialisation à l'intérieur plus Exportation et Transformation locale
+@096@ND
+@097@bovine
+@098@ovine
+@099@caprine
+@100@porcine
+@101@avicole
+@102@apicole
+@103@cobaye
+@104@agriculture
+@105@élevage
+@106@maraichage
+@107@apiculture
+@108@pêche
+@109@sylviculture
+@110@aulacoculture
+@111@autres
+@112@cueillette
+@113@exploitation forestière
+@114@bois de chauffe
+@115@charbon
+@116@maritime
+@117@continentale
+@118@maritime
+@119@continentale
+@120@Possession d'un moulin pour pâte d'arachide
+@121@Possession d'un moulin pour sakasaka
+@122@Possession d'un moulin à courges
+@123@Existence d'un magasin de stockage de produits agricoles
+@124@Existence d'une unité de commercialisation de produits d'élevage
+@125@Existence d'une aire d'abatage
+@126@Existence d'un service vétérinaire
+@127@Existence d'un point de vente du matériel d'élevage
+@128@Existence d'un débarcadère de produits de pêche
+@129@Existence non d'une unité de transformation de produits halieutiques
+@130@Existence d'une unité de commercialisation de produits halieutiques
+@131@Existence d'une unité de réparation de moteur hors-bord
+@132@Existence d'une unité de production de poissons d'élevage
+@133@Existence d'une cabine à recharge téléphonique
+@134@Existence d'un point de vente des produits pétroliers
+@135@Existence d'une aire protégée
+@136@Existence d'un étang
+@137@Existence des produits de chasse dans le village
+@138@Existence d'une faune ou troupeau
+@139@Existence des produits de cueillette
+@140@Existence d'un établissement de micro- finance
+@141@Existence d'une association des personnes handicapées (APH)
+@142@Existence d'un comité de protection de l'enfant (CPE)
+@143@Couverture par la radio étrangère
+@144@Accès à la chaîne de télévision nationale
+@145@Accès au réseau internet
+@146@Type de difficultés rencontrées
+@147@Mode d'alimentation en électricité (centrale thermique)
+@148@modernes
+@149@artisanale
+@150@Inférieur à 10
+@151@10-15
+@152@15-25
+@153@25-35
+@154@35-50
+@155@50-75
+@156@75-100
+@157@100-150
+@158@150-200
+@159@200-300
+@160@300-500
+@161@500 et plus
+@162@ND
+@163@principale
+@164@secondaire
+@165@de commerce
+@166@d'artisanat
+@167@de transformation
+@168@mutuelle
+@169@folklorique
+@170@de pêche
+@171@d'aquaculture
+@172@multifonctionnelle
+@173@culturelle
+@174@De façon régulière
+@175@De façon irrégulière
+@176@Jours de marché seulement
+@177@saison sèche
+@178@saison pluvieuse
+@179@toute saison
+@180@ND
+@181@inférieur à 10
+@182@de 10-15
+@183@15-25
+@184@25-35
+@185@35-50
+@186@50-75
+@187@75-100
+@188@100-150
+@189@150-200
+@190@200-300
+@191@300-500
+@192@500 et +
+@193@ND
+@194@1-4
+@195@5-9
+@196@10-14
+@197@15-20
+@198@20 et +
+@199@ND
+@200@Aucune source d'alimentation en électricité dans le village
+@201@SNE exclusivement
+@202@G.E privé exclusivement
+@203@SNE et G.E. privé seulement
+@204@G.E. communautaire exclusivement
+@205@SNE et G.E. communautaire  seulement
+@206@G.E. privé et G.E. communautaire seulement
+@207@SNE et G.E. privé et G.E. communautaire
+@208@GE privé et GE communautaire seulement
+@209@Plaques solaires exclusivement
+@210@SNE et Plaques solaires
+@211@G.E privé et Plaques solaires
+@212@G.E. communautaire et Plaques solaires
+@213@G.E. privé et G.E. communautaire et Plaques solaires
+@214@GE privé et GE communautaire et plaques solaires
+@215@Plate-forme exclusivement
+@216@SNE et Plate-forme
+@217@G.E. privé et G.E. communautaire et Plate-forme
+@218@G.E. privé et Plaque solaires et Plate-forme
+@219@Ets de microfinance
+@220@Radio communautaire rurale
+@221@Radio communautaire privée
+@222@Radio nationale
+@223@Radio étrangère
+@224@Télévision nationale
+@225@Télévision étrangère
+@226@Télévision privée
+@227@Internet
+@228@Réseau de téléphonie mobile
+@229@agriculture, commerce
+@230@transformation
+@231@mutuelle
+@232@agriculture pour les femmes
+@233@commerce
+@234@exploitation moderne strictement agricole
+@235@GIEC
+@236@association de prestation de service agricole
+@237@groupement de promotion féminine
+@238@Ets de microfinances pour les femmes
+@239@association des filles mères
+@240@propriétaire
+@241@gérant
+@242@Coopérative
+@243@Exploitation d'Etat
+@244@Exploitation privée
+@245@ND
+@246@Permanente
+@247@Temporaire
+@248@Mixte
+@249@ND
+@250@1 à 5 salariés
+@251@5 à 10 salariés
+@252@10 à 15 salariés
+@253@15 et plus
+@254@Non déclaré
+@255@Moins d'1 ha
+@256@1 à 2 ha
+@257@2 à 10 ha
+@258@10ha et plus
+@259@Non Déclaré
+@260@Nombre d'exploitations concernées
+@261@Superficie (En Ha)
+@262@Production (en Tonnes)
+@263@Utilisation des intrants
+@264@Utilisation de l'aliment de bétail
+@265@Utilisation des engrais
+@266@Utilisation des produits phytosanitaires
+@267@Utilisation des produits vétérinaires
+@268@Achat sur le marché national
+@269@Importation
+@270@Autoproduction
+@271@Don
+@272@Senne
+@273@Filets
+@274@Epuisette
+@275@bateaux de pêche
+@276@Paniers
+@277@bacs à tri
+@278@Balance
+@279@table de tri
+@280@Alevinières
+@281@sceaux en plastique
+@282@bacs à filet
+@283@ph mètre
+@284@sachets spéciaux à oxygène pur
+@285@fûts en plastique
+@286@véhicules frigorifiques
+@287@Broyeurs
+@288@autres matériels et équipements de pêche
+
+@289@niveau d'instruction
+@290@situation matrimoniale
+@291@groupe de superficie
+@292@objectif de la production
