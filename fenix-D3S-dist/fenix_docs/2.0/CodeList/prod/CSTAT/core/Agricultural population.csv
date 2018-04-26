@@ -136,6 +136,9 @@ titleColumnIndex_FR=4
 @6013@Offenses@Délits
 @6014@Hunting permit@Permis de chasse
 @6015@Bush fire case@Cas de feu de brousse
+@600a@prospected area@superficie prospectée
+@600b@treated area@superficie traitée
+@600c@infested area@superficie infestée
 @6016@CBPP@PPCB
 @6017@Bovine Pasteurellosis@Pasteurellose bovine
 @6018@Symptomatic anthrax@Charbon symptomatique
@@ -194,3 +197,6 @@ titleColumnIndex_FR=4
 @6074Dryers hides and skins@Séchoirs cuirs et peaux
 @6075@Dryers for leather and skins@Magasins de séchage cuirs et peaux
 @6076@Cold rooms for poultry meat@Chambres froides pour viande de volaille
+@6077@Centres@Centres
+@6078@Roads@Routes
+@6079@Markets@Marchés

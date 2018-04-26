@@ -119,4 +119,258 @@ titleColumnIndex_FR=3
 
 --data--
 
-@001@test
+@001@Age moyen
+@002@Mode
+@003@Age médian
+@004@16 - 20 ans
+@005@21 - 25 ans
+@006@26 - 30 ans
+@007@31 - 35 ans
+@008@36 - 40 ans
+@009@41 - 45 ans
+@010@46 - 50 ans
+@011@51 - 55 ans
+@012@56 - 60 ans
+@013@61 - 65 ans
+@014@Plus de 65 ans
+@015@Autochtone
+@016@Allochtone
+@017@Allogène
+@018@Naturalisé(e)
+@019@UEMOA
+@020@CEDEAO
+@021@Autre pays d'Afrique
+@022@Europe
+@023@Amérique
+@024@Asie
+@025@Océanie
+@026@Direct
+@027@Métayage
+@028@Fermage
+@029@Prêt
+@030@Autres
+@031@Parcelles non irriguées
+@032@Parcelles irriguées
+@033@Concession provisoire
+@034@Concession définitive
+@035@Certificat foncier
+@036@Titre foncier
+@037@Contrat de location
+@038@Coutumier
+@039@Sans autorisation
+@040@Cultures pures
+@041@Présence dautres bois sur la parcelle
+@042@Elevage en activité professionnelle principale
+@043@Elevage en activité « secondaire »
+@044@1-4
+@045@5-9
+@046@10-19
+@047@20-49
+@048@50-99
+@049@10-299
+@050@300-499
+@051@500-999
+@052@1000 et +
+@053@1-49
+@054@100 et +
+@055@moins de 500
+@056@500-999
+@057@1000-1999
+@058@2000-4999
+@059@5000-9999
+@060@10000-49999
+@061@50000-99999
+@062@100000 et +
+@063@Concession provisoire
+@064@Concession définitive
+@065@Certificat foncier
+@066@Titre foncier
+@067@Contrat de location
+@068@Coutumier
+@069@Sans autorisation
+@070@Pêche en Mer
+@071@Pêche en lagune
+@072@Pêche en eau continentale
+@073@Aucune embarcation
+@074@Pirogue motorisée
+@075@Pirogue non motorisée
+@076@Pisciculture
+@077@Elevage de crustacés
+@078@Elevage de mollusques
+@079@Elevage d'autres animaux aquatiques
+@080@Culture de plantes aquatiques
+@081@1
+@082@2
+@083@3
+@084@4
+@085@5
+@086@6
+@087@7
+@088@8
+@089@9
+@090@10
+@091@11
+@092@12
+@093@13
+@094@14
+@095@15+
+@096@10+
+@097@Cultures Vivrières
+@098@Cultures destinées à exportation et à industrie
+@099@Village à un seul tenant
+@100@Village avec campement
+@101@Regroupement de villages
+@102@Village situé à moins de 1km
+@103@[1-5km [
+@104@[5-10km [
+@105@[10-30km [
+@106@[30km et plus
+@107@Route bitumée
+@108@Route non bitumée ou piste
+@109@Sentier
+@110@Autres voies accès principal (par navigation et par voie ferrée)
+@111@terres en friche (Jachère)
+@112@ bois communautaires
+@113@terres réservées aux pâturages
+@114@mare / cours d'eau
+@115@Foret classée
+@116@Forets sacrée
+@117@parcs nationaux
+@118@Réglementation de la pêche
+@119@Réglementation de la chasse
+@120@Réglementation de l'exploitation du bois énergie (bois de chauffe, charbon.)
+@121@Acajou
+@122@Bete
+@123@Ako
+@124@Badi
+@125@Awalé
+@126@Eléphant
+@127@Chimpanzé
+@128@Lion
+@129@Antilope royale
+@130@Léopard
+@131@Eau de SODECI
+@132@Hydraulique villageoise améliorée (HVA)
+@133@Hydraulique villageoise (pompe villageoise, fontaine)
+@134@Puits
+@135@Rivières ou marigot ou fleuve ou lac ou marre
+@136@Retenue deau et barrage
+@137@Eau de SODECI
+@138@Hydraulique villageoise (pompe villageoise, fontaine)
+@139@Hydraulique villageoise améliorée (HVA)
+@140@Puits
+@141@Retenue deau et barrage
+@142@Rivières ou marigot ou fleuve ou lac ou marre
+@143@Villages électrifiés
+@144@Villages non électrifiés
+@145@CIE
+@146@Groupe électrogène
+@147@Energie solaire
+@148@Autre source d'énergie
+@149@Dans le village
+@150@[1-5Km [
+@151@[5-10km [
+@152@10 Km et plus
+@153@Services vétérinaires public
+@154@Services vétérinaires privés
+@155@Pharmacie vétérinaire
+@156@Aucune infrastructure d'assainissement
+@157@Latrines publiques
+@158@Dépôt d'ordures
+@159@Réseaux de téléphones mobiles
+@160@Téléphone fixe
+@161@Chaine de télévision nationale
+@162@Radio nationale
+@163@Radio communautaire / rurale
+@164@Reçoit Presse nationale écrite
+@165@Villages ne disposant d'aucune unité de conservation de produits agricoles
+@166@Villages disposant d'unité de conservation et stockage de produits agricoles
+@167@Villages disposant d'unité de conservation et stockage  de produits halieutiques
+@168@Villages disposant d'unité de conservation et stockage  de produits délevage
+@169@Villages disposant d'unité de conservation et stockage du bois
+@170@Installation d'irrigation
+@171@Unité d'entretien de matériels agricoles
+@172@Conseil agricole
+@173@Magasin de produits phytosanitaires et semences
+@174@Un ou plusieurs couloirs de passage des bovins
+@175@Coopératives
+@176@Groupe Informel
+@177@Comité de Gestion des Infrastructure
+@178@Mutuelle / Association
+@179@Coopératives
+@180@Groupe Informel
+@181@Comité de Gestion des Infrastructure
+@182@Mutuelle / Association
+@183@Agriculture
+@184@Elevage
+@185@Pêche
+@186@Aquaculture
+@187@Chasse
+@188@Artisanat
+@189@Commercialisation
+@190@Sylviculture
+@191@Transformation
+@192@Gestion d'Infrastructures socio-économiques
+@193@Protection des personnes vulnérables
+@194@Villages disposant de comités villageois de gestion du foncier rural
+@195@Villages ne disposant pas de comités villageois de gestion du foncier rural
+@196@Village avec sites communautaires
+@197@Villages sans sites communautaires
+@198@Elevages communautaires (volaille, bovins, caprins)
+@199@sites de débarquement de pêcheurs
+@200@Village avec aménagements aquacoles communautaires
+@201@Village avec sites de cultures communautaires
+@202@Village avec Etangs piscicoles ou aquacoles communautaires
+@203@Village avec sites de cultures bois communautaires
+@204@Maladies des cultures
+@205@Dégâts des prédateurs(rats, oiseaux, termites,etc.)
+@206@Sécheresse
+@207@Absence de financement
+@208@Manque de pluie
+@209@Dégâts causés par les animaux
+@210@Manque de semences améliorées ou certifiées
+@211@Appauvrissement des sols
+@212@Déforestation
+@213@Insuffisance de la main-duvre
+@214@Baisse considérable des prix des produits agricoles
+@215@Faible écoulement des produits
+@216@Pillage de récolte
+@217@Insuffisances des terres agricoles
+@218@Exode rural
+@219@Feux de brousse
+@220@Insécurité/violence
+@221@Dégâts de cultures par les exploitants forestiers
+@222@Inondation
+@223@Autres
+@224@Absence de financement
+@225@Vols d'animaux
+@226@Accès difficile aux produits vétérinaires
+@227@Prédateurs (Epervier, chacal, )
+@228@Insuffisance/Manque d'aliments de bétail
+@229@Insuffisance de pâturage
+@230@Epizooties (grippe aviaire, peste porcine)
+@231@Conflit avec les agriculteurs
+@232@Baisse considérable des prix producteurs
+@234@Absence  financement
+@235@conseil aquacole
+@236@approvisionnement des aliments
+@237@Absence infrastructures production d'alevins
+@238@Approvisionnement en alevins
+@240@Insuffisances des terres sylvicoles
+@241@Exode rural
+@242@Absence de financement
+@243@Insécurité/violence
+@244@Sécheresse
+@245@Manque de pluie
+@246@Déforestation
+@247@Manque de semences améliorée ou certifiées
+@248@Insuffisance de la main-duvre
+@249@Appauvrissement des sols
+@250@Maladies des cultures
+@251@Feux de brousse
+@252@Dégâts des prédateurs(rats, oiseaux, termites,etc)
+@253@Dégâts causés par les animaux
+@254@Baisse considérable des prix des produits agricoles
+@255@Faible écoulement des produits
+@256@Dégâts de cultures par les exploitants forestiers
+@257@Inondation
